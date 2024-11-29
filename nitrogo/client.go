@@ -26,7 +26,7 @@ type Client struct {
 	Audit             *AuditService
 	Authentication    *AuthenticationService
 	Authorization     *AuthorizationService
-	AutoScale         *AutoScaleService
+	Autoscale         *AutoscaleService
 	Azure             *AzureService
 	Basic             *BasicService
 	BFD               *BFDService
@@ -109,7 +109,7 @@ func newClient(options ...ClientOptionFunc) (*Client, error) {
 	c.Audit = &AuditService{client: c}
 	c.Authentication = &AuthenticationService{client: c}
 	c.Authorization = &AuthorizationService{client: c}
-	c.AutoScale = &AutoScaleService{client: c}
+	c.Autoscale = &AutoscaleService{client: c}
 	c.Azure = &AzureService{client: c}
 	c.Basic = &BasicService{client: c}
 	c.BFD = &BFDService{client: c}
