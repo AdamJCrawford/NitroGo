@@ -1,6 +1,6 @@
 package nitrogo
 
-// Application Level Quality of Experience configuration
+// Application Level Quality of Experience configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/appqoe/appqoe
 type AppQOEService struct {
 	client *Client
@@ -27,7 +27,7 @@ func (s *AppQOEService) CountAppQOECustomerResp()  {}
 func (s *AppQOEService) ChangeAppQOECustomerResp() {}
 
 // appqoeparameter
-// Configuration for QOS parameter resource.\
+// Configuration for QOS parameter resource.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/appqoe/appqoeparameter
 func (s *AppQOEService) UpdateAppQOEParameter() {}
 func (s *AppQOEService) UnsetAppQOEParameter()  {}
