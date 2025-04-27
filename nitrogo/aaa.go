@@ -1,5 +1,50 @@
 package nitrogo
 
+const (
+	aaaCertParamsURL                                 = "/nitro/v1/config/aaacertparams"
+	aaaGlobalAAAPreauthenticationPolicyBindingURL    = "/nitro/v1/config/aaaglobal_aaapreauthenticationpolicy_binding"
+	aaaGlobalAuthenticationNegotiateActionBindingURL = "/nitro/v1/config/aaaglobal_authenticationnegotiateaction_binding"
+	aaaGlobalBindingURL                              = "/nitro/v1/config/aaaglobal_binding"
+	aaaGroupURL                                      = "/nitro/v1/config/aaagroup"
+	aaaGroupAAAUserBindingURL                        = "/nitro/v1/config/aaagroup_aaauser_binding"
+	aaaGroupIntranetIP6BindingURL                    = "/nitro/v1/config/aaagroup_intranetip6_binding"
+	aaaGroupIntranetIPBindingURL                     = "/nitro/v1/config/aaagroup_intranetip_binding"
+	aaaGroupTMSessionPolicyBindingURL                = "/nitro/v1/config/aaagroup_tmsessionpolicy_binding"
+	aaaGroupVPNIntranetApplicationBindingURL         = "/nitro/v1/config/aaagroup_vpnintranetapplication_binding"
+	aaaGroupVPNSessionPolicyBindingURL               = "/nitro/v1/config/aaagroup_vpnsessionpolicy_binding"
+	aaaGroupVPNTrafficPolicyBindingURL               = "/nitro/v1/config/aaagroup_vpntrafficpolicy_binding "
+	aaaGroupVPNURLPolicyBindingURL                   = "/nitro/v1/config/aaagroup_vpnurlpolicy_binding"
+	aaaGroupVPNURLBindingURL                         = "/nitro/v1/config/aaagroup_vpnurl_binding"
+	aaaKCDAccountURL                                 = "/nitro/v1/config/aaakcdaccount"
+	aaaLDAPParamsURL                                 = "/nitro/v1/config/aaaldapparams"
+	aaaOTPParameterURL                               = "/nitro/v1/config/aaaotpparameter"
+	aaaParameterURL                                  = "/nitro/v1/config/aaaparameter"
+	aaapreauthenticationActionURL                    = "/nitro/v1/config/aaapreauthenticationaction"
+	aaaPreauthenticationParameterURL                 = "/nitro/v1/config/aaapreauthenticationparameter"
+	aaaPreauthenticationPolicyURL                    = "/nitro/v1/config/aaapreauthenticationpolicy"
+	aaaPreauthenticationPolicyAAAGlobalBindingURL    = "/nitro/v1/config/aaapreauthenticationpolicy_aaaglobal_binding"
+	aaaPreauthenticationPolicyBindingURL             = "/nitro/v1/config/aaapreauthenticationpolicy_binding"
+	aaaPreauthenticationPolicyVPNVServerBindingURL   = "/nitro/v1/config/aaapreauthenticationpolicy_vpnvserver_binding"
+	aaaRADIUSParamsURL                               = "/nitro/v1/config/aaaradiusparams"
+	aaaSessionURL                                    = "/nitro/v1/config/aaasession"
+	aaaSSOProfileURL                                 = "/nitro/v1/config/aaassoprofile"
+	aaaTACACSParamsURL                               = "/nitro/v1/config/aaatacacsparams"
+	aaaUserURL                                       = "/nitro/v1/config/aaauser"
+	aaaUserAAAGroupBindingURL                        = "/nitro/v1/config/aaauser_aaagroup_binding"
+	aaaUserAuditnslogPolicyBindingURL                = "/nitro/v1/config/aaauser_auditnslogpolicy_binding"
+	aaaUserAuditsyslogPolicyBindingURL               = "/nitro/v1/config/aaauser_auditsyslogpolicy_binding"
+	aaaUserAuthorizationPolicyBindingURL             = "/nitro/v1/config/aaauser_authorizationpolicy_binding"
+	aaaUserBindingURL                                = "/nitro/v1/config/aaauser_binding"
+	aaaUserIntranetIP6BindingURL                     = "/nitro/v1/config/aaauser_intranetip6_binding"
+	aaaUserIntranetIPBindingURL                      = "/nitro/v1/config/aaauser_intranetip_binding"
+	aaaUserTMSessionPolicyBindingURL                 = "/nitro/v1/config/aaauser_tmsessionpolicy_binding"
+	aaaUserVPNIntranetApplicationBindingURL          = "/nitro/v1/config/aaauser_vpnintranetapplication_binding"
+	aaaUserVPNSessionPolicyBindingURL                = "/nitro/v1/config/aaauser_vpnsessionpolicy_binding"
+	aaaUserVPNTrafficPolicyBindingURL                = "/nitro/v1/config/aaauser_vpntrafficpolicy_binding"
+	aaaUserVPNURLPolicyBindingURL                    = "/nitro/v1/config/aaauser_vpnurlpolicy_binding"
+	aaaUserVPNURLBindingURL                          = "/nitro/v1/config/aaauser_vpnurl_binding"
+)
+
 // Authentication, authorization, and accounting service configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/aaa/aaa
 type AAAService struct {
@@ -16,10 +61,10 @@ func (s *AAAService) GetAllAAACertParams() {}
 // aaaglobal_aaapreauthenticationpolicy_binding
 // Binding object showing the aaapreauthenticationpolicy that can be bound to aaaglobal.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/aaa/aaaglobal_aaapreauthenticationpolicy_binding
-func (s *AAAService) AddAAAGlobaAAAPreauthenticationPolicyBinding()    {}
-func (s *AAAService) DeleteAAAGlobaAAAPreauthenticationPolicyBinding() {}
-func (s *AAAService) GetAAAGlobaAAAPreauthenticationPolicyBinding()    {}
-func (s *AAAService) CountAAAGlobaAAAPreauthenticationPolicyBinding()  {}
+func (s *AAAService) AddAAAGlobalAAAPreauthenticationPolicyBinding()    {}
+func (s *AAAService) DeleteAAAGlobalAAAPreauthenticationPolicyBinding() {}
+func (s *AAAService) GetAAAGlobalAAAPreauthenticationPolicyBinding()    {}
+func (s *AAAService) CountAAAGlobalAAAPreauthenticationPolicyBinding()  {}
 
 // aaaglobal_authenticationnegotiataction_binding
 // Binding object showing the authenticationnegotiateaction that can be bound to aaaglobal.
@@ -323,11 +368,11 @@ func (s *AAAService) GetAAAUserBinding()    {}
 // aaauser_intranetip6_binding
 // Binding object showing the intranetip6 that can be bound to aaauser.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/aaa/aaauser_intranetip6_binding
-func (s *AAAService) AddAAAUserIntranetIP6_binding()    {}
-func (s *AAAService) DeleteAAAUserIntranetIP6_binding() {}
-func (s *AAAService) GetAllAAAUserIntranetIP6_binding() {}
-func (s *AAAService) GetAAAUserIntranetIP6_binding()    {}
-func (s *AAAService) CountAAAUserIntranetIP6_binding()  {}
+func (s *AAAService) AddAAAUserIntranetIP6Binding()    {}
+func (s *AAAService) DeleteAAAUserIntranetIP6Binding() {}
+func (s *AAAService) GetAllAAAUserIntranetIP6Binding() {}
+func (s *AAAService) GetAAAUserIntranetIP6Binding()    {}
+func (s *AAAService) CountAAAUserIntranetIP6Binding()  {}
 
 // aaauser_intranetip_binding
 // Binding object showing the intranetip that can be bound to aaauser.
