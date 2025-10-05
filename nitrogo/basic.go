@@ -1,5 +1,13 @@
 package nitrogo
 
+import (
+	"encoding/json"
+	"fmt"
+	"net/http"
+
+	"github.com/AdamJCrawford/NitroGo/nitrogo/models"
+)
+
 // Basic system configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/basic/basic
 type BasicService struct {
@@ -165,7 +173,32 @@ func (s *BasicService) CountServiceGroupBindings()  {}
 // Binding object which returns the resources bound to servicegroup.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/basic/servicegroup_binding
 func (s *BasicService) GetAllServiceGroupBinding() {}
-func (s *BasicService) GetServiceGroupBinding()    {}
+func (s *BasicService) GetServiceGroupBinding(serviceGroupName string) ([]models.ServiceGroupBinding, error) {
+	u := fmt.Sprintf("nitro/v1/config/servicegroup_binding/%s", serviceGroupName)
+	v := []models.ServiceGroupBinding{}
+
+	req, err := s.client.NewRequest(http.MethodGet, u, nil)
+	if err != nil {
+		return v, err
+	}
+
+	resp, err := s.client.Do(req)
+	if err != nil {
+		return v, err
+	}
+
+	data, err := json.Marshal(resp["servicegroup_binding"])
+	if err != nil {
+		return v, err
+	}
+
+	err = json.Unmarshal(data, &v)
+	if err != nil {
+		return v, fmt.Errorf("failed to unmarshal: %w", err)
+	}
+
+	return v, nil
+}
 
 // servicegroup_lbmonitor_binding
 // Binding object showing the lbmonitor that can be bound to servicegroup.

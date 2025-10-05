@@ -1,5 +1,13 @@
 package nitrogo
 
+import (
+	"encoding/json"
+	"fmt"
+	"net/http"
+
+	"github.com/AdamJCrawford/NitroGo/nitrogo/models"
+)
+
 // Load Balancing configuration. The load balancing methods manage the selection of an appropriate physical server in a server farm.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/lb/lb
 type LBService struct {
@@ -167,10 +175,35 @@ func (s *LBService) UpdateLBVServer()  {}
 func (s *LBService) UnsetLBVServer()   {}
 func (s *LBService) EnableLBVServer()  {}
 func (s *LBService) DisableLBVServer() {}
-func (s *LBService) GetAllLBVServer()  {}
-func (s *LBService) GetLBVServer()     {}
-func (s *LBService) CountLBVServer()   {}
-func (s *LBService) RenameLBVServer()  {}
+func (s *LBService) GetAllLBVServer() ([]models.LBVServer, error) {
+	u := "nitro/v1/config/lbvserver"
+	v := []models.LBVServer{}
+
+	req, err := s.client.NewRequest(http.MethodGet, u, nil)
+	if err != nil {
+		return v, err
+	}
+
+	resp, err := s.client.Do(req)
+	if err != nil {
+		return v, err
+	}
+
+	data, err := json.Marshal(resp["lbvserver"])
+	if err != nil {
+		return v, err
+	}
+
+	err = json.Unmarshal(data, &v)
+	if err != nil {
+		return v, fmt.Errorf("failed to unmarshal: %w", err)
+	}
+
+	return v, nil
+}
+func (s *LBService) GetLBVServer()    {}
+func (s *LBService) CountLBVServer()  {}
+func (s *LBService) RenameLBVServer() {}
 
 // lbvserver_analyticsprofile_binding
 func (s *LBService) AddLBVServerAnalyticsProfileBinding()    {}
@@ -288,8 +321,33 @@ func (s *LBService) CountLBVServerRewritePolicyBinding()  {}
 
 // lbvserver_servicegroupmember_binding
 func (s *LBService) GetAllLBVServerServiceGroupMemberBinding() {}
-func (s *LBService) GetLBVServerServiceGroupMemberBinding()    {}
-func (s *LBService) CountLBVServerServiceGroupMemberBinding()  {}
+func (s *LBService) GetLBVServerServiceGroupMemberBinding(lbvserver string) ([]models.LBVServerServiceGroupMemberBinding, error) {
+	u := fmt.Sprintf("nitro/v1/config/lbvserver_servicegroupmember_binding/%s", lbvserver)
+	v := []models.LBVServerServiceGroupMemberBinding{}
+
+	req, err := s.client.NewRequest(http.MethodGet, u, nil)
+	if err != nil {
+		return v, err
+	}
+
+	resp, err := s.client.Do(req)
+	if err != nil {
+		return v, err
+	}
+
+	data, err := json.Marshal(resp["lbvserver_servicegroupmember_binding"])
+	if err != nil {
+		return v, err
+	}
+
+	err = json.Unmarshal(data, &v)
+	if err != nil {
+		return v, fmt.Errorf("failed to unmarshal: %w", err)
+	}
+
+	return v, nil
+}
+func (s *LBService) CountLBVServerServiceGroupMemberBinding() {}
 
 // lbvserver_servicegroup_binding
 func (s *LBService) AddLBVServerServiceGroupBinding()    {}

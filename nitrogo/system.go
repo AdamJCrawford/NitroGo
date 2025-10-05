@@ -1,5 +1,13 @@
 package nitrogo
 
+import (
+	"encoding/json"
+	"fmt"
+	"net/http"
+
+	"github.com/AdamJCrawford/NitroGo/nitrogo/models"
+)
+
 // System
 // System configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/system/system
@@ -211,3 +219,33 @@ func (s *SystemService) CountSystemUserSystemCmdPolicyBinding()  {}
 func (s *SystemService) GetAllSystemUserSystemGroupBinding() {}
 func (s *SystemService) GetSystemUserSystemGroupBinding()    {}
 func (s *SystemService) CountSystemUserSystemGroupBinding()  {}
+
+// statistics
+
+// system
+func (s *SystemService) GetAllSystemStats() (models.SystemStatus, error) {
+	u := "nitro/v1/stat/system"
+	v := models.SystemStatus{}
+
+	req, err := s.client.NewRequest(http.MethodGet, u, nil)
+	if err != nil {
+		return v, err
+	}
+
+	resp, err := s.client.Do(req)
+	if err != nil {
+		return v, err
+	}
+
+	data, err := json.Marshal(resp["system"])
+	if err != nil {
+		return v, err
+	}
+
+	err = json.Unmarshal(data, &v)
+	if err != nil {
+		return v, fmt.Errorf("failed to unmarshal: %w", err)
+	}
+
+	return v, nil
+}

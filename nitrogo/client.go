@@ -1,18 +1,24 @@
 package nitrogo
 
 import (
+	"encoding/json"
+	"errors"
+	"fmt"
 	"io"
 	"net/http"
+	"time"
 )
+
+type Credential struct {
+	username string
+	password string
+}
 
 type Client struct {
 	baseURL    string
 	proxiedURL string
 
-	credential struct {
-		username string
-		password string
-	}
+	credential Credential
 
 	httpClient *http.Client
 
@@ -79,19 +85,11 @@ type Client struct {
 }
 
 func NewNitroClient(username, password string, options ...ClientOptionFunc) (*Client, error) {
-	client, err := newClient(options...)
-	if err != nil {
-		return nil, err
+	c := &Client{
+		httpClient: &http.Client{
+			Timeout: 5 * time.Second,
+		},
 	}
-
-	client.credential.username = username
-	client.credential.password = password
-
-	return client, nil
-}
-
-func newClient(options ...ClientOptionFunc) (*Client, error) {
-	c := &Client{}
 
 	for _, opt := range options {
 		if err := opt(c); err != nil {
@@ -160,10 +158,15 @@ func newClient(options ...ClientOptionFunc) (*Client, error) {
 	c.VideoOptimization = &VideoOptimizationService{client: c}
 	c.VPN = &VPNService{client: c}
 
+	c.credential.username = username
+	c.credential.password = password
+
 	return c, nil
 }
 
-func (client *Client) newRequest(method, url string, body io.Reader) (*http.Request, error) {
+// NewRequest - creates the http.Request and applies the relevant authorization
+func (c *Client) NewRequest(method, url string, body io.Reader) (*http.Request, error) {
+	url = fmt.Sprintf("%s/%s", c.baseURL, url)
 	req, err := http.NewRequest(method, url, body)
 	if err != nil {
 		return nil, err
@@ -172,17 +175,60 @@ func (client *Client) newRequest(method, url string, body io.Reader) (*http.Requ
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("Content-Type", "application/json")
 
-	if client.proxiedURL == "" {
-		req.Header.Set("X-NITRO-USER", client.credential.username)
-		req.Header.Set("X-NITRO-PASS", client.credential.password)
+	if c.proxiedURL == "" {
+		req.Header.Set("X-NITRO-USER", c.credential.username)
+		req.Header.Set("X-NITRO-PASS", c.credential.password)
 	} else {
-		req.SetBasicAuth(client.credential.username, client.credential.password)
-		req.Header.Set("_MPS_API_PROXY_MANAGED_INSTANCE_IP", client.proxiedURL)
+		req.SetBasicAuth(c.credential.username, c.credential.password)
+		req.Header.Set("_MPS_API_PROXY_MANAGED_INSTANCE_IP", c.proxiedURL)
 	}
 
 	return req, nil
 }
 
-func (client *Client) Do(req *http.Request) (*http.Response, error) {
-	return client.httpClient.Do(req)
+// Do - executes the HTTP request and unmarshals the result into r.
+func (c *Client) Do(req *http.Request) (map[string]any, error) {
+	resp, err := c.httpClient.Do(req)
+	if err != nil {
+		return nil, err
+	}
+
+	defer func() {
+		io.Copy(io.Discard, resp.Body)
+		resp.Body.Close()
+	}()
+
+	respByte, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("failed to read response body: %w", err)
+	}
+
+	if resp.StatusCode < 200 || resp.StatusCode > 299 {
+		return nil, errors.New("request returned non-200 status code")
+	}
+
+	v := map[string]any{}
+
+	return v, json.Unmarshal(respByte, &v)
+}
+
+// URL - getter for the client's baseURL
+func (c *Client) URL() string {
+	return c.baseURL
+}
+
+// Credential - getter for client's credentials
+func (c *Client) Credential() Credential {
+	return c.credential
+}
+
+// SetCredential - setter for client's credential. Handles clearing and creating a new Nitro token if present.
+func (c *Client) SetCredential(cred Credential) error {
+	c.credential = cred
+	return nil
+}
+
+// SetProxiedURL - setter for client's proxy URL. Handles clearing and creating a new Nitro token if present.
+func (c *Client) SetProxiedURL(proxy string) {
+	c.proxiedURL = proxy
 }
