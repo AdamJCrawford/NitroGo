@@ -218,9 +218,14 @@ func (c *Client) Credential() Credential {
 	return c.credential
 }
 
-// Hostname - getter for client's hostname
+// Hostname - getter for client's hostname.
 func (c *Client) Hostname() string {
 	return c.hostname
+}
+
+// ProxiedURL - getter for client's proxied URL.
+func (c *Client) ProxiedURL(proxy string) {
+	c.proxiedURL = proxy
 }
 
 // URL - getter for the client's baseURL
@@ -234,7 +239,7 @@ func (c *Client) SetCredential(cred Credential) error {
 	return nil
 }
 
-// Credential - getter for client's credentials
+// SetHostname - getter for clients's hostname
 func (c *Client) SetHostname(hostname string) {
 	c.hostname = hostname
 }
@@ -244,7 +249,7 @@ func (c *Client) SetProxiedURL(proxy string) {
 	c.proxiedURL = proxy
 }
 
-// URL - getter for the client's baseURL
+// SetURL - setter for the client's baseURL
 func (c *Client) SetURL(url string) {
 	c.baseURL = url
 }
