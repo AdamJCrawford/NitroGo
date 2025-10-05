@@ -1,8 +1,8 @@
 package nitrogo
 
 import (
+	"bytes"
 	"encoding/json"
-	"errors"
 	"fmt"
 	"io"
 	"net/http"
@@ -19,7 +19,9 @@ type Client struct {
 	hostname   string
 	proxiedURL string
 
-	credential Credential
+	credential     Credential
+	sessionid      string
+	sessionTimeOut int
 
 	httpClient *http.Client
 
@@ -166,19 +168,23 @@ func NewNitroClient(username, password string, options ...ClientOptionFunc) (*Cl
 }
 
 // NewRequest - creates the http.Request and applies the relevant authorization
-func (c *Client) NewRequest(method, url string, body io.Reader) (*http.Request, error) {
-	url = fmt.Sprintf("%s/%s", c.baseURL, url)
+func (c *Client) NewRequest(method, path string, body io.Reader) (*http.Request, error) {
+	url := fmt.Sprintf("%s/%s", c.baseURL, path)
 	req, err := http.NewRequest(method, url, body)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("failed to make new HTTP request: %w", err)
 	}
 
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("Content-Type", "application/json")
 
 	if c.proxiedURL == "" {
-		req.Header.Set("X-NITRO-USER", c.credential.username)
-		req.Header.Set("X-NITRO-PASS", c.credential.password)
+		if c.sessionid != "" {
+			req.Header.Set("Set-Cookie", fmt.Sprintf("NITRO_AUTH_TOKEN=%s", c.sessionid))
+		} else {
+			req.Header.Set("X-NITRO-USER", c.credential.username)
+			req.Header.Set("X-NITRO-PASS", c.credential.password)
+		}
 	} else {
 		req.SetBasicAuth(c.credential.username, c.credential.password)
 		req.Header.Set("_MPS_API_PROXY_MANAGED_INSTANCE_IP", c.proxiedURL)
@@ -189,9 +195,10 @@ func (c *Client) NewRequest(method, url string, body io.Reader) (*http.Request, 
 
 // Do - executes the HTTP request and unmarshals the result into r.
 func (c *Client) Do(req *http.Request) (map[string]any, error) {
+	v := map[string]any{}
 	resp, err := c.httpClient.Do(req)
 	if err != nil {
-		return nil, err
+		return v, err
 	}
 
 	defer func() {
@@ -201,16 +208,63 @@ func (c *Client) Do(req *http.Request) (map[string]any, error) {
 
 	respByte, err := io.ReadAll(resp.Body)
 	if err != nil {
-		return nil, fmt.Errorf("failed to read response body: %w", err)
+		return v, fmt.Errorf("failed to read response body: %w", err)
 	}
 
 	if resp.StatusCode < 200 || resp.StatusCode > 299 {
-		return nil, errors.New("request returned non-200 status code")
+		return v, fmt.Errorf("request returned non-200 status code: %s", string(respByte))
 	}
 
-	v := map[string]any{}
+	if len(respByte) == 0 {
+		return v, nil
+	}
 
 	return v, json.Unmarshal(respByte, &v)
+}
+
+func (c *Client) Login() error {
+	u := "nitro/v1/config/login"
+
+	login := fmt.Appendf(nil, `{"login": {"username":"%s","password":"%s","timeout":"%d"}}`, c.credential.username, c.credential.password, c.sessionTimeOut)
+
+	req, err := c.NewRequest(http.MethodPost, u, bytes.NewBuffer(login))
+	if err != nil {
+		return err
+	}
+
+	req.Header.Del("X-Nitro-User")
+	req.Header.Del("X-Nitro-Pass")
+
+	resp, err := c.Do(req)
+	if err != nil {
+		return err
+	}
+
+	var ok bool
+	c.sessionid, ok = resp["sessionid"].(string)
+	if !ok {
+		return fmt.Errorf("failed to cast sessionid '%v' to a string", resp["sessionid"])
+	}
+
+	return nil
+}
+
+func (c *Client) Logout() error {
+	u := "nitro/v1/config/logout"
+
+	logout := fmt.Appendf(nil, `{"logout": {}}`)
+
+	req, err := c.NewRequest(http.MethodPost, u, bytes.NewBuffer(logout))
+	if err != nil {
+		return err
+	}
+
+	_, err = c.Do(req)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 // Credential - getter for client's credentials
