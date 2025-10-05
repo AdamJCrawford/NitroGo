@@ -16,6 +16,7 @@ type Credential struct {
 
 type Client struct {
 	baseURL    string
+	hostname   string
 	proxiedURL string
 
 	credential Credential
@@ -212,14 +213,19 @@ func (c *Client) Do(req *http.Request) (map[string]any, error) {
 	return v, json.Unmarshal(respByte, &v)
 }
 
-// URL - getter for the client's baseURL
-func (c *Client) URL() string {
-	return c.baseURL
-}
-
 // Credential - getter for client's credentials
 func (c *Client) Credential() Credential {
 	return c.credential
+}
+
+// Hostname - getter for client's hostname
+func (c *Client) Hostname() string {
+	return c.hostname
+}
+
+// URL - getter for the client's baseURL
+func (c *Client) URL() string {
+	return c.baseURL
 }
 
 // SetCredential - setter for client's credential. Handles clearing and creating a new Nitro token if present.
@@ -228,7 +234,17 @@ func (c *Client) SetCredential(cred Credential) error {
 	return nil
 }
 
+// Credential - getter for client's credentials
+func (c *Client) SetHostname(hostname string) {
+	c.hostname = hostname
+}
+
 // SetProxiedURL - setter for client's proxy URL. Handles clearing and creating a new Nitro token if present.
 func (c *Client) SetProxiedURL(proxy string) {
 	c.proxiedURL = proxy
+}
+
+// URL - getter for the client's baseURL
+func (c *Client) SetURL(url string) {
+	c.baseURL = url
 }
