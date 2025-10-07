@@ -99,7 +99,7 @@ type LBVServer struct {
 	SoMethod                           string `json:"somethod,omitempty"`
 	SoPersistence                      string `json:"sopersistence,omitempty"`
 	SoPersistenceTimeout               string `json:"sopersistencetimeout,omitempty"`
-	SoThreshold                        int    `json:"sothreshold,omitempty"`
+	SoThreshold                        string `json:"sothreshold,omitempty"`
 	State                              string `json:"state,omitempty"`
 	TCPProbePort                       int    `json:"tcpprobeport,omitempty"`
 	TCPProfileName                     string `json:"tcpprofilename,omitempty"`

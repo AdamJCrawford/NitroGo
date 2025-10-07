@@ -4,11 +4,9 @@
 
 package models
 
-import "github.com/citrix/adc-nitro-go/resource/config/basic"
-
 type ServiceGroupBinding struct {
 	ServiceGroupName                                 string                                             `json:"servicegroupname,omitempty"`
-	ServiceGroupLBMonitorBinding                     []basic.Servicegrouplbmonitorbinding               `json:"servicegroup_lbmonitor_binding,omitempty"`
+	ServiceGroupLBMonitorBinding                     []ServiceGroupLBMonitorBinding                     `json:"servicegroup_lbmonitor_binding,omitempty"`
 	ServiceGroupServiceGroupEntityMonBindingsBinding []ServiceGroupServiceGroupEntityMonBindingsBinding `json:"servicegroup_servicegroupentitymonbindings_binding,omitempty"`
 	ServiceGroupServiceGroupMemberBinding            []ServiceGroupServiceGroupMemberBinding            `json:"servicegroup_servicegroupmember_binding,omitempty"`
 }
@@ -41,7 +39,7 @@ type ServiceGroupServiceGroupMemberBinding struct {
 	Delay                     int    `json:"delay,omitempty"`
 	Graceful                  string `json:"graceful,omitempty"`
 	Hashid                    string `json:"hashid,omitempty"`
-	Ip                        string `json:"ip,omitempty"`
+	IP                        string `json:"ip,omitempty"`
 	NameServer                string `json:"nameserver,omitempty"`
 	Order                     int    `json:"order,omitempty"`
 	OrderStr                  string `json:"orderstr,omitempty"`
@@ -54,7 +52,24 @@ type ServiceGroupServiceGroupMemberBinding struct {
 	SvcitmPriority            int    `json:"svcitmpriority,omitempty"`
 	SvrState                  string `json:"svrstate,omitempty"`
 	TicksSinceLastStateChange string `json:"tickssincelaststatechange,omitempty"`
-	TrofsDelay                string `json:"trofsdelay,omitempty"`
-	TrofsReason               string `json:"trofsreason,omitempty"`
+	TROFSDelay                string `json:"trofsdelay,omitempty"`
+	TROFSReason               string `json:"trofsreason,omitempty"`
 	Weight                    string `json:"weight,omitempty"`
+}
+
+type ServiceGroupLBMonitorBinding struct {
+	CustomServerid   string `json:"customserverid,omitempty"`
+	Dbsttl           int    `json:"dbsttl,omitempty"`
+	Hashid           int    `json:"hashid,omitempty"`
+	MonitorName      string `json:"monitor_name,omitempty"`
+	MonState         string `json:"monstate,omitempty"`
+	MonWeight        string `json:"monweight,omitempty"`
+	NameServer       string `json:"nameserver,omitempty"`
+	Order            int    `json:"order,omitempty"`
+	Passive          bool   `json:"passive,omitempty"`
+	Port             int    `json:"port,omitempty"`
+	Serverid         int    `json:"serverid,omitempty"`
+	ServiceGroupName string `json:"servicegroupname,omitempty"`
+	State            string `json:"state,omitempty"`
+	Weight           string `json:"weight,omitempty"`
 }
