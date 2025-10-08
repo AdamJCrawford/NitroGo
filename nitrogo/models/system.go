@@ -72,3 +72,10 @@ type SystemStatus struct {
 	VoltageVSen2         float64 `json:"voltagevsen2,omitempty"`
 	VoltageVTT           float64 `json:"voltagevtt,omitempty"`
 }
+
+type SystemExtraMgmtCPU struct {
+	Nodeid             int    `json:"nodeid,omitempty"`
+	ConfiguredState    string `json:"configuredstate,omitempty"`
+	EffectiveState     string `json:"effectivestate,omitempty"`
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
+}

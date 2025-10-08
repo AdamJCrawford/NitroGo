@@ -69,7 +69,32 @@ func (s *SystemService) GetAllSystemEventHistory() {}
 // systemextramgmtcpu
 func (s *SystemService) EnableSystemExtraMgmtCPU()  {}
 func (s *SystemService) DisableSystemExtraMgmtCPU() {}
-func (s *SystemService) GetAllSystemExtraMgmtCPU()  {}
+func (s *SystemService) GetAllSystemExtraMgmtCPU() (models.SystemExtraMgmtCPU, error) {
+	u := "nitro/v1/config/systemextramgmtcpu"
+	v := models.SystemExtraMgmtCPU{}
+
+	req, err := s.client.NewRequest(http.MethodGet, u, nil)
+	if err != nil {
+		return v, err
+	}
+
+	resp, err := s.client.Do(req)
+	if err != nil {
+		return v, err
+	}
+
+	data, err := json.Marshal(resp["systemextramgmtcpu"])
+	if err != nil {
+		return v, err
+	}
+
+	err = json.Unmarshal(data, &v)
+	if err != nil {
+		return v, fmt.Errorf("failed to unmarshal: %w", err)
+	}
+
+	return v, nil
+}
 
 // systemfile
 func (s *SystemService) AddSystemFile()    {}
