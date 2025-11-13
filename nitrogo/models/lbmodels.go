@@ -45,7 +45,7 @@ type LBVServer struct {
 	LBMethod                           string `json:"lbmethod,omitempty"`
 	LBProfileName                      string `json:"lbprofilename,omitempty"`
 	ListenPolicy                       string `json:"listenpolicy,omitempty"`
-	ListenPriority                     int    `json:"listenpriority,omitempty"`
+	ListenPriority                     string `json:"listenpriority,omitempty"`
 	M                                  string `json:"m,omitempty"`
 	MACModeRetainVLAN                  string `json:"macmoderetainvlan,omitempty"`
 	MaxAutoScaleMembers                string `json:"maxautoscalemembers,omitempty"`
