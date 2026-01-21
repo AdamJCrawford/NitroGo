@@ -21,7 +21,6 @@ type Client struct {
 
 	credential     Credential
 	sessionid      string
-	sessionTimeOut int
 
 	httpClient *http.Client
 
@@ -225,7 +224,7 @@ func (c *Client) Do(req *http.Request) (map[string]any, error) {
 func (c *Client) Login() error {
 	u := "nitro/v1/config/login"
 
-	login := fmt.Appendf(nil, `{"login": {"username":"%s","password":"%s","timeout":"%d"}}`, c.credential.username, c.credential.password, c.sessionTimeOut)
+	login := fmt.Appendf(nil, `{"login": {"username":"%s","password":"%s"}}`, c.credential.username, c.credential.password)
 
 	req, err := c.NewRequest(http.MethodPost, u, bytes.NewBuffer(login))
 	if err != nil {
@@ -234,6 +233,7 @@ func (c *Client) Login() error {
 
 	req.Header.Del("X-Nitro-User")
 	req.Header.Del("X-Nitro-Pass")
+	req.Header.Del("Set-Cookie")
 
 	resp, err := c.Do(req)
 	if err != nil {
