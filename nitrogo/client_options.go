@@ -25,13 +25,6 @@ func WithHTTPClient(httpClient *http.Client) ClientOptionFunc {
 	}
 }
 
-func WithSessionTimeOut(timeout int) ClientOptionFunc {
-	return func(c *Client) error {
-		c.sessionTimeOut = timeout
-		return nil
-	}
-}
-
 func WithProxiedURL(url string) ClientOptionFunc {
 	return func(c *Client) error {
 		c.proxiedURL = url
