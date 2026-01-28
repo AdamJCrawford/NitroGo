@@ -159,7 +159,7 @@ type LBVServerServiceGroupMemberBinding struct {
 	DynamicWeight     string `json:"dynamicweight,omitempty"`
 	Ipv46             string `json:"ipv46,omitempty"`
 	Name              string `json:"name,omitempty"`
-	Order             int    `json:"order,omitempty"`
+	Order             string `json:"order,omitempty"`
 	OrderStr          string `json:"orderstr,omitempty"`
 	PreferredLocation string `json:"preferredlocation,omitempty"`
 	Port              int    `json:"port,omitempty"`
