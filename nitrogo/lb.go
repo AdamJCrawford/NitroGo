@@ -177,29 +177,26 @@ func (s *LBService) EnableLBVServer()  {}
 func (s *LBService) DisableLBVServer() {}
 func (s *LBService) GetAllLBVServer() ([]models.LBVServer, error) {
 	u := "nitro/v1/config/lbvserver"
-	v := []models.LBVServer{}
 
 	req, err := s.client.NewRequest(http.MethodGet, u, nil)
 	if err != nil {
-		return v, err
+		return nil, err
 	}
 
 	resp, err := s.client.Do(req)
 	if err != nil {
-		return v, err
+		return nil, err
 	}
 
-	data, err := json.Marshal(resp["lbvserver"])
-	if err != nil {
-		return v, err
+	var result struct {
+		LBVServer []models.LBVServer `json:"lbvserver"`
 	}
 
-	err = json.Unmarshal(data, &v)
-	if err != nil {
-		return v, fmt.Errorf("failed to unmarshal: %w", err)
+	if err := json.Unmarshal(resp, &result); err != nil {
+		return nil, fmt.Errorf("failed to unmarshal: %w", err)
 	}
 
-	return v, nil
+	return result.LBVServer, nil
 }
 func (s *LBService) GetLBVServer()    {}
 func (s *LBService) CountLBVServer()  {}
@@ -323,29 +320,26 @@ func (s *LBService) CountLBVServerRewritePolicyBinding()  {}
 func (s *LBService) GetAllLBVServerServiceGroupMemberBinding() {}
 func (s *LBService) GetLBVServerServiceGroupMemberBinding(lbvserver string) ([]models.LBVServerServiceGroupMemberBinding, error) {
 	u := fmt.Sprintf("nitro/v1/config/lbvserver_servicegroupmember_binding/%s", lbvserver)
-	v := []models.LBVServerServiceGroupMemberBinding{}
 
 	req, err := s.client.NewRequest(http.MethodGet, u, nil)
 	if err != nil {
-		return v, err
+		return nil, err
 	}
 
 	resp, err := s.client.Do(req)
 	if err != nil {
-		return v, err
+		return nil, err
 	}
 
-	data, err := json.Marshal(resp["lbvserver_servicegroupmember_binding"])
-	if err != nil {
-		return v, err
+	var result struct {
+		Binding []models.LBVServerServiceGroupMemberBinding `json:"lbvserver_servicegroupmember_binding"`
 	}
 
-	err = json.Unmarshal(data, &v)
-	if err != nil {
-		return v, fmt.Errorf("failed to unmarshal: %w", err)
+	if err := json.Unmarshal(resp, &result); err != nil {
+		return nil, fmt.Errorf("failed to unmarshal: %w", err)
 	}
 
-	return v, nil
+	return result.Binding, nil
 }
 func (s *LBService) CountLBVServerServiceGroupMemberBinding() {}
 

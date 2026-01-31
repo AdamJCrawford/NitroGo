@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"strings"
 	"time"
 )
 
@@ -19,8 +20,8 @@ type Client struct {
 	hostname   string
 	proxiedURL string
 
-	credential     Credential
-	sessionid      string
+	credential Credential
+	sessionid  string
 
 	httpClient *http.Client
 
@@ -86,11 +87,12 @@ type Client struct {
 	VPN               *VPNService
 }
 
-func NewNitroClient(username, password string, options ...ClientOptionFunc) (*Client, error) {
+func NewNitroClient(host, username, password string, options ...ClientOptionFunc) (*Client, error) {
 	c := &Client{
 		httpClient: &http.Client{
-			Timeout: 5 * time.Second,
+			Timeout: 10 * time.Second,
 		},
+		baseURL: strings.TrimRight(host, "/"),
 	}
 
 	for _, opt := range options {
@@ -168,7 +170,7 @@ func NewNitroClient(username, password string, options ...ClientOptionFunc) (*Cl
 
 // NewRequest - creates the http.Request and applies the relevant authorization
 func (c *Client) NewRequest(method, path string, body io.Reader) (*http.Request, error) {
-	url := fmt.Sprintf("%s/%s", c.baseURL, path)
+	url := fmt.Sprintf("%s/%s", c.baseURL, strings.TrimLeft(path, "/"))
 	req, err := http.NewRequest(method, url, body)
 	if err != nil {
 		return nil, fmt.Errorf("failed to make new HTTP request: %w", err)
@@ -192,12 +194,11 @@ func (c *Client) NewRequest(method, path string, body io.Reader) (*http.Request,
 	return req, nil
 }
 
-// Do - executes the HTTP request and unmarshals the result into r.
-func (c *Client) Do(req *http.Request) (map[string]any, error) {
-	v := map[string]any{}
+// Do - executes the HTTP request and returns the response body.
+func (c *Client) Do(req *http.Request) ([]byte, error) {
 	resp, err := c.httpClient.Do(req)
 	if err != nil {
-		return v, err
+		return nil, err
 	}
 
 	defer func() {
@@ -207,18 +208,14 @@ func (c *Client) Do(req *http.Request) (map[string]any, error) {
 
 	respByte, err := io.ReadAll(resp.Body)
 	if err != nil {
-		return v, fmt.Errorf("failed to read response body: %w", err)
+		return nil, fmt.Errorf("failed to read response body: %w", err)
 	}
 
 	if resp.StatusCode < 200 || resp.StatusCode > 299 {
-		return v, fmt.Errorf("request returned non-200 status code: %s", string(respByte))
+		return nil, fmt.Errorf("request returned non-200 status code: %s", string(respByte))
 	}
 
-	if len(respByte) == 0 {
-		return v, nil
-	}
-
-	return v, json.Unmarshal(respByte, &v)
+	return respByte, nil
 }
 
 func (c *Client) Login() error {
@@ -235,9 +232,14 @@ func (c *Client) Login() error {
 	req.Header.Del("X-Nitro-Pass")
 	req.Header.Del("Set-Cookie")
 
-	resp, err := c.Do(req)
+	respByte, err := c.Do(req)
 	if err != nil {
 		return err
+	}
+
+	var resp map[string]any
+	if err := json.Unmarshal(respByte, &resp); err != nil {
+		return fmt.Errorf("failed to unmarshal login response: %w", err)
 	}
 
 	var ok bool
@@ -287,10 +289,9 @@ func (c *Client) URL() string {
 	return c.baseURL
 }
 
-// SetCredential - setter for client's credential. Handles clearing and creating a new Nitro token if present.
-func (c *Client) SetCredential(cred Credential) error {
+// SetCredential - setter for client's credential.
+func (c *Client) SetCredential(cred Credential) {
 	c.credential = cred
-	return nil
 }
 
 // SetHostname - getter for clients's hostname
@@ -298,12 +299,12 @@ func (c *Client) SetHostname(hostname string) {
 	c.hostname = hostname
 }
 
-// SetProxiedURL - setter for client's proxy URL. Handles clearing and creating a new Nitro token if present.
+// SetProxiedURL - setter for client's proxy URL.
 func (c *Client) SetProxiedURL(proxy string) {
 	c.proxiedURL = proxy
 }
 
 // SetURL - setter for the client's baseURL
 func (c *Client) SetURL(url string) {
-	c.baseURL = url
+	c.baseURL = strings.TrimRight(url, "/")
 }

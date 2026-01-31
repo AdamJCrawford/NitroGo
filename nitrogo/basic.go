@@ -175,29 +175,26 @@ func (s *BasicService) CountServiceGroupBindings()  {}
 func (s *BasicService) GetAllServiceGroupBinding() {}
 func (s *BasicService) GetServiceGroupBinding(serviceGroupName string) ([]models.ServiceGroupBinding, error) {
 	u := fmt.Sprintf("nitro/v1/config/servicegroup_binding/%s", serviceGroupName)
-	v := []models.ServiceGroupBinding{}
 
 	req, err := s.client.NewRequest(http.MethodGet, u, nil)
 	if err != nil {
-		return v, err
+		return nil, err
 	}
 
 	resp, err := s.client.Do(req)
 	if err != nil {
-		return v, err
+		return nil, err
 	}
 
-	data, err := json.Marshal(resp["servicegroup_binding"])
-	if err != nil {
-		return v, err
+	var result struct {
+		ServiceGroupBinding []models.ServiceGroupBinding `json:"servicegroup_binding"`
 	}
 
-	err = json.Unmarshal(data, &v)
-	if err != nil {
-		return v, fmt.Errorf("failed to unmarshal: %w", err)
+	if err := json.Unmarshal(resp, &result); err != nil {
+		return nil, fmt.Errorf("failed to unmarshal: %w", err)
 	}
 
-	return v, nil
+	return result.ServiceGroupBinding, nil
 }
 
 // servicegroup_lbmonitor_binding

@@ -71,29 +71,27 @@ func (s *SystemService) EnableSystemExtraMgmtCPU()  {}
 func (s *SystemService) DisableSystemExtraMgmtCPU() {}
 func (s *SystemService) GetAllSystemExtraMgmtCPU() (models.SystemExtraMgmtCPU, error) {
 	u := "nitro/v1/config/systemextramgmtcpu"
-	v := models.SystemExtraMgmtCPU{}
 
 	req, err := s.client.NewRequest(http.MethodGet, u, nil)
 	if err != nil {
-		return v, err
+		return models.SystemExtraMgmtCPU{}, err
 	}
 
 	resp, err := s.client.Do(req)
 	if err != nil {
-		return v, err
+		return models.SystemExtraMgmtCPU{}, err
 	}
 
-	data, err := json.Marshal(resp["systemextramgmtcpu"])
+	var result struct {
+		ExtraMgmtCPU models.SystemExtraMgmtCPU `json:"systemextramgmtcpu"`
+	}
+
+	err = json.Unmarshal(resp, &result)
 	if err != nil {
-		return v, err
+		return models.SystemExtraMgmtCPU{}, fmt.Errorf("failed to unmarshal: %w", err)
 	}
 
-	err = json.Unmarshal(data, &v)
-	if err != nil {
-		return v, fmt.Errorf("failed to unmarshal: %w", err)
-	}
-
-	return v, nil
+	return result.ExtraMgmtCPU, nil
 }
 
 // systemfile
@@ -245,32 +243,32 @@ func (s *SystemService) GetAllSystemUserSystemGroupBinding() {}
 func (s *SystemService) GetSystemUserSystemGroupBinding()    {}
 func (s *SystemService) CountSystemUserSystemGroupBinding()  {}
 
-// statistics
+////////////////
+// statistics //
+////////////////
 
 // system
 func (s *SystemService) GetAllSystemStats() (models.SystemStatus, error) {
 	u := "nitro/v1/stat/system"
-	v := models.SystemStatus{}
 
 	req, err := s.client.NewRequest(http.MethodGet, u, nil)
 	if err != nil {
-		return v, err
+		return models.SystemStatus{}, err
 	}
 
 	resp, err := s.client.Do(req)
 	if err != nil {
-		return v, err
+		return models.SystemStatus{}, err
 	}
 
-	data, err := json.Marshal(resp["system"])
+	var result struct {
+		SystemStatus models.SystemStatus `json:"system"`
+	}
+
+	err = json.Unmarshal(resp, &result)
 	if err != nil {
-		return v, err
+		return models.SystemStatus{}, fmt.Errorf("failed to unmarshal: %w", err)
 	}
 
-	err = json.Unmarshal(data, &v)
-	if err != nil {
-		return v, fmt.Errorf("failed to unmarshal: %w", err)
-	}
-
-	return v, nil
+	return result.SystemStatus, nil
 }

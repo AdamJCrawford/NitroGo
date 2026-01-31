@@ -4,13 +4,6 @@ import "net/http"
 
 type ClientOptionFunc func(*Client) error
 
-func WithBaseUrl(url string) ClientOptionFunc {
-	return func(c *Client) error {
-		c.baseURL = url
-		return nil
-	}
-}
-
 func WithHostname(hostname string) ClientOptionFunc {
 	return func(c *Client) error {
 		c.hostname = hostname
