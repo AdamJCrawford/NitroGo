@@ -1,5 +1,10 @@
 package nitrogo
 
+const (
+	dbDBProfileURL = "/nitro/v1/config/dbdbprofile"
+	dbUserURL      = "/nitro/v1/config/dbuser"
+)
+
 // All the commands associated with database user
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/db/db
 type DBService struct {

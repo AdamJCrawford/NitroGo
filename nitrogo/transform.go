@@ -1,5 +1,24 @@
 package nitrogo
 
+const (
+	transformActionURL                            = "/nitro/v1/config/transformaction"
+	transformGlobalBindingURL                     = "/nitro/v1/config/transformglobal_binding"
+	transformGlobalTransformPolicyBindingURL      = "/nitro/v1/config/transformglobal_transformpolicy_binding"
+	transformPolicyURL                            = "/nitro/v1/config/transformpolicy"
+	transformPolicyLabelURL                       = "/nitro/v1/config/transformpolicylabel"
+	transformPolicyLabelBindingURL                = "/nitro/v1/config/transformpolicylabel_binding"
+	transformPolicyLabelPolicyBindingBindingURL   = "/nitro/v1/config/transformpolicylabel_policybinding_binding"
+	transformPolicyLabelTransformPolicyBindingURL = "/nitro/v1/config/transformpolicylabel_transformpolicy_binding"
+	transformPolicyBindingURL                     = "/nitro/v1/config/transformpolicy_binding"
+	transformPolicyCSVServerBindingURL            = "/nitro/v1/config/transformpolicy_csvserver_binding"
+	transformPolicyLBVServerBindingURL            = "/nitro/v1/config/transformpolicy_lbvserver_binding"
+	transformPolicyTransformGlobalBindingURL      = "/nitro/v1/config/transformpolicy_transformglobal_binding"
+	transformPolicyTransformPolicyLabelBindingURL = "/nitro/v1/config/transformpolicy_transformpolicylabel_binding"
+	transformProfileURL                           = "/nitro/v1/config/transformprofile"
+	transformProfileBindingURL                    = "/nitro/v1/config/transformprofile_binding"
+	transformProfileTransformActionBindingURL     = "/nitro/v1/config/transformprofile_transformaction_binding"
+)
+
 // Transform
 // URL Transformation configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/transform/transform

@@ -1,5 +1,29 @@
 package nitrogo
 
+const (
+	tmFormSSOActionURL                             = "/nitro/v1/config/tmformssoaction"
+	tmGlobalAuditNSLogPolicyBindingURL             = "/nitro/v1/config/tmglobal_auditnslogpolicy_binding"
+	tmGlobalAuditSyslogPolicyBindingURL            = "/nitro/v1/config/tmglobal_auditsyslogpolicy_binding"
+	tmGlobalBindingURL                             = "/nitro/v1/config/tmglobal_binding"
+	tmGlobalTMSessionPolicyBindingURL              = "/nitro/v1/config/tmglobal_tmsessionpolicy_binding"
+	tmGlobalTMTrafficPolicyBindingURL              = "/nitro/v1/config/tmglobal_tmtrafficpolicy_binding"
+	tmSAMLSSOProfileURL                            = "/nitro/v1/config/tmsamlssoprofile"
+	tmSessionActionURL                             = "/nitro/v1/config/tmsessionaction"
+	tmSessionParameterURL                          = "/nitro/v1/config/tmsessionparameter"
+	tmSessionPolicyURL                             = "/nitro/v1/config/tmsessionpolicy"
+	tmSessionPolicyAAAGroupBindingURL              = "/nitro/v1/config/tmsessionpolicy_aaagroup_binding"
+	tmSessionPolicyAAAUserBindingURL               = "/nitro/v1/config/tmsessionpolicy_aaauser_binding"
+	tmSessionPolicyAuthenticationVServerBindingURL = "/nitro/v1/config/tmsessionpolicy_authenticationvserver_binding"
+	tmSessionPolicyBindingURL                      = "/nitro/v1/config/tmsessionpolicy_binding"
+	tmSessionPolicyTMGlobalBindingURL              = "/nitro/v1/config/tmsessionpolicy_tmglobal_binding"
+	tmTrafficActionURL                             = "/nitro/v1/config/tmtrafficaction"
+	tmTrafficPolicyURL                             = "/nitro/v1/config/tmtrafficpolicy"
+	tmTrafficPolicyBindingURL                      = "/nitro/v1/config/tmtrafficpolicy_binding"
+	tmTrafficPolicyCSVServerBindingURL             = "/nitro/v1/config/tmtrafficpolicy_csvserver_binding"
+	tmTrafficPolicyLBVServerBindingURL             = "/nitro/v1/config/tmtrafficpolicy_lbvserver_binding"
+	tmTrafficPolicyTMGlobalBindingURL              = "/nitro/v1/config/tmtrafficpolicy_tmglobal_binding"
+)
+
 // Traffic Management
 // TM session/policy configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/tm/tm

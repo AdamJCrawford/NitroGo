@@ -1,5 +1,10 @@
 package nitrogo
 
+const (
+	smppParamURL = "/nitro/v1/config/smppparam"
+	smppUserURL  = "/nitro/v1/config/smppuser"
+)
+
 // All the commands associated with SMPP.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/smpp/smpp
 type SMPPService struct {

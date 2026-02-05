@@ -10,6 +10,11 @@ import (
 	"time"
 )
 
+const (
+	loginURL  = "/nitro/v1/config/login"
+	logoutURL = "/nitro/v1/config/logout"
+)
+
 type Credential struct {
 	username string
 	password string
@@ -50,7 +55,7 @@ type Client struct {
 	DB                *DBService
 	DNS               *DNSService
 	FEO               *FEOService
-	GLSB              *GLSBService
+	GSLB              *GSLBService
 	HA                *HAService
 	ICA               *ICAService
 	IPSEC             *IPSECService
@@ -126,7 +131,7 @@ func NewNitroClient(host, username, password string, options ...ClientOptionFunc
 	c.DB = &DBService{client: c}
 	c.DNS = &DNSService{client: c}
 	c.FEO = &FEOService{client: c}
-	c.GLSB = &GLSBService{client: c}
+	c.GSLB = &GSLBService{client: c}
 	c.HA = &HAService{client: c}
 	c.ICA = &ICAService{client: c}
 	c.IPSEC = &IPSECService{client: c}
@@ -218,12 +223,11 @@ func (c *Client) Do(req *http.Request) ([]byte, error) {
 	return respByte, nil
 }
 
+// Login - creates a session for the current NetScaler
 func (c *Client) Login() error {
-	u := "nitro/v1/config/login"
-
 	login := fmt.Appendf(nil, `{"login": {"username":"%s","password":"%s"}}`, c.credential.username, c.credential.password)
 
-	req, err := c.NewRequest(http.MethodPost, u, bytes.NewBuffer(login))
+	req, err := c.NewRequest(http.MethodPost, loginURL, bytes.NewBuffer(login))
 	if err != nil {
 		return err
 	}
@@ -251,12 +255,11 @@ func (c *Client) Login() error {
 	return nil
 }
 
+// Logout - Ends the on going session with the NetScaler
 func (c *Client) Logout() error {
-	u := "nitro/v1/config/logout"
-
 	logout := fmt.Appendf(nil, `{"logout": {}}`)
 
-	req, err := c.NewRequest(http.MethodPost, u, bytes.NewBuffer(logout))
+	req, err := c.NewRequest(http.MethodPost, logoutURL, bytes.NewBuffer(logout))
 	if err != nil {
 		return err
 	}
@@ -267,11 +270,6 @@ func (c *Client) Logout() error {
 	}
 
 	return nil
-}
-
-// Credential - getter for client's credentials
-func (c *Client) Credential() Credential {
-	return c.credential
 }
 
 // Hostname - getter for client's hostname.
@@ -290,8 +288,11 @@ func (c *Client) URL() string {
 }
 
 // SetCredential - setter for client's credential.
-func (c *Client) SetCredential(cred Credential) {
-	c.credential = cred
+func (c *Client) SetCredential(username, password string) {
+	c.credential = Credential{
+		username: username,
+		password: password,
+	}
 }
 
 // SetHostname - getter for clients's hostname

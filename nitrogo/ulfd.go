@@ -1,5 +1,9 @@
 package nitrogo
 
+const (
+	ulfdServerURL = "/nitro/v1/config/ulfdserver"
+)
+
 // ULFD server configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/ulfd/ulfd
 type ULFDService struct {

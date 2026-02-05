@@ -1,5 +1,13 @@
 package nitrogo
 
+const (
+	streamIdentifierURL                     = "/nitro/v1/config/streamidentifier"
+	streamIdentifierBindingURL              = "/nitro/v1/config/streamidentifier_binding"
+	streamIdentifierStreamSessionBindingURL = "/nitro/v1/config/streamidentifier_streamsession_binding"
+	streamSelectorURL                       = "/nitro/v1/config/streamselector"
+	streamSessionURL                        = "/nitro/v1/config/streamsession"
+)
+
 // Stream configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/stream/stream
 type StreamService struct {

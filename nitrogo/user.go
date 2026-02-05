@@ -1,5 +1,10 @@
 package nitrogo
 
+const (
+	userProtocolURL = "/nitro/v1/config/userprotocol"
+	userVServerURL  = "/nitro/v1/config/uservserver"
+)
+
 // User protocol configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/user/user
 type UserService struct {

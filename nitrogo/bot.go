@@ -1,5 +1,30 @@
 package nitrogo
 
+const (
+	botGlobalBindingURL                   = "/nitro/v1/config/botglobal_binding"
+	botGlobalBotPolicyBindingURL          = "/nitro/v1/config/botglobal_botpolicy_binding"
+	botPolicyURL                          = "/nitro/v1/config/botpolicy"
+	botPolicyBindingURL                   = "/nitro/v1/config/botpolicy_binding"
+	botPolicyBotGlobalBindingURL          = "/nitro/v1/config/botpolicy_botglobal_binding"
+	botPolicyBotPolicyLabelBindingURL     = "/nitro/v1/config/botpolicy_botpolicylabel_binding"
+	botPolicyCSVServerBindingURL          = "/nitro/v1/config/botpolicy_csvserver_binding"
+	botPolicyLBVServerBindingURL          = "/nitro/v1/config/botpolicy_lbvserver_binding"
+	botPolicyLabelURL                     = "/nitro/v1/config/botpolicylabel"
+	botPolicyLabelBindingURL              = "/nitro/v1/config/botpolicylabel_binding"
+	botPolicyLabelBotPolicyBindingURL     = "/nitro/v1/config/botpolicylabel_botpolicy_binding"
+	botPolicyLabelPolicyBindingBindingURL = "/nitro/v1/config/botpolicylabel_policybinding_binding"
+	botProfileURL                         = "/nitro/v1/config/botprofile"
+	botProfileBindingURL                  = "/nitro/v1/config/botprofile_binding"
+	botProfileBlacklistBindingURL         = "/nitro/v1/config/botprofile_blacklist_binding"
+	botProfileCaptchaBindingURL           = "/nitro/v1/config/botprofile_captcha_binding"
+	botProfileIPReputationBindingURL      = "/nitro/v1/config/botprofile_ipreputation_binding"
+	botProfileRatelimitBindingURL         = "/nitro/v1/config/botprofile_ratelimit_binding"
+	botProfileTPSBindingURL               = "/nitro/v1/config/botprofile_tps_binding"
+	botProfileWhitelistBindingURL         = "/nitro/v1/config/botprofile_whitelist_binding"
+	botSettingsURL                        = "/nitro/v1/config/botsettings"
+	botSignatureURL                       = "/nitro/v1/config/botsignature"
+)
+
 // Bot Management.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/bot/bot
 type BotService struct {

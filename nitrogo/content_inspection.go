@@ -1,5 +1,24 @@
 package nitrogo
 
+const (
+	contentInspectionActionURL                                    = "/nitro/v1/config/contentinspectionaction"
+	contentInspectionCalloutURL                                   = "/nitro/v1/config/contentinspectioncallout"
+	contentInspectionGlobalBindingURL                             = "/nitro/v1/config/contentinspectionglobal_binding"
+	contentInspectionGlobalContentInspectionPolicyBindingURL      = "/nitro/v1/config/contentinspectionglobal_contentinspectionpolicy_binding"
+	contentInspectionParameterURL                                 = "/nitro/v1/config/contentinspectionparameter"
+	contentInspectionPolicyURL                                    = "/nitro/v1/config/contentinspectionpolicy"
+	contentInspectionPolicyLabelURL                               = "/nitro/v1/config/contentinspectionpolicylabel"
+	contentInspectionPolicyLabelBindingURL                        = "/nitro/v1/config/contentinspectionpolicylabel_binding"
+	contentInspectionPolicyLabelContentInspectionPolicyBindingURL = "/nitro/v1/config/contentinspectionpolicylabel_contentinspectionpolicy_binding"
+	contentInspectionPolicyLabelPolicyBindingBindingURL           = "/nitro/v1/config/contentinspectionpolicylabel_policybinding_binding"
+	contentInspectionPolicyBindingURL                             = "/nitro/v1/config/contentinspectionpolicy_binding"
+	contentInspectionPolicyContentInspectionGlobalBindingURL      = "/nitro/v1/config/contentinspectionpolicy_contentinspectionglobal_binding"
+	contentInspectionPolicyContentInspectionPolicyLabelBindingURL = "/nitro/v1/config/contentinspectionpolicy_contentinspectionpolicylabel_binding"
+	contentInspectionPolicyCSVServerBindingURL                    = "/nitro/v1/config/contentinspectionpolicy_csvserver_binding"
+	contentInspectionPolicyLBVServerBindingURL                    = "/nitro/v1/config/contentinspectionpolicy_lbvserver_binding"
+	contentInspectionProfileURL                                   = "/nitro/v1/config/contentinspectionprofile"
+)
+
 // Content Inspection
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/contentinspection/contentinspection
 type ContentInspectionService struct {

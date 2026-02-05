@@ -8,6 +8,11 @@ import (
 	"github.com/AdamJCrawford/NitroGo/nitrogo/models"
 )
 
+const (
+	systemExtraMgmtCPUURL = "/nitro/v1/config/systemextramgmtcpu"
+	systemStatsURL        = "/nitro/v1/stat/system"
+)
+
 // System
 // System configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/system/system
@@ -70,9 +75,7 @@ func (s *SystemService) GetAllSystemEventHistory() {}
 func (s *SystemService) EnableSystemExtraMgmtCPU()  {}
 func (s *SystemService) DisableSystemExtraMgmtCPU() {}
 func (s *SystemService) GetAllSystemExtraMgmtCPU() (models.SystemExtraMgmtCPU, error) {
-	u := "nitro/v1/config/systemextramgmtcpu"
-
-	req, err := s.client.NewRequest(http.MethodGet, u, nil)
+	req, err := s.client.NewRequest(http.MethodGet, systemExtraMgmtCPUURL, nil)
 	if err != nil {
 		return models.SystemExtraMgmtCPU{}, err
 	}
@@ -249,9 +252,7 @@ func (s *SystemService) CountSystemUserSystemGroupBinding()  {}
 
 // system
 func (s *SystemService) GetAllSystemStats() (models.SystemStatus, error) {
-	u := "nitro/v1/stat/system"
-
-	req, err := s.client.NewRequest(http.MethodGet, u, nil)
+	req, err := s.client.NewRequest(http.MethodGet, systemStatsURL, nil)
 	if err != nil {
 		return models.SystemStatus{}, err
 	}

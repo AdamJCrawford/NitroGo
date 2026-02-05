@@ -1,5 +1,13 @@
 package nitrogo
 
+const (
+	tunnelGlobalBindingURL                    = "/nitro/v1/config/tunnelglobal_binding"
+	tunnelGlobalTunnelTrafficPolicyBindingURL = "/nitro/v1/config/tunnelglobal_tunneltrafficpolicy_binding"
+	tunnelTrafficPolicyURL                    = "/nitro/v1/config/tunneltrafficpolicy"
+	tunnelTrafficPolicyBindingURL             = "/nitro/v1/config/tunneltrafficpolicy_binding"
+	tunnelTrafficPolicyTunnelGlobalBindingURL = "/nitro/v1/config/tunneltrafficpolicy_tunnelglobal_binding"
+)
+
 // SSL VPN Tunnel Configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/tunnel/tunnel
 type TunnelService struct {

@@ -35,7 +35,7 @@ type LBVServer struct {
 	HealthThreshold                    string `json:"healththreshold,omitempty"`
 	HTTPProfileName                    string `json:"httpprofilename,omitempty"`
 	HTTPSRedirectURL                   string `json:"httpsredirecturl,omitempty"`
-	ICMPVSRresponse                    string `json:"icmpvsrresponse,omitempty"`
+	ICMPVSRResponse                    string `json:"icmpvsrresponse,omitempty"`
 	InsertVServerIPPort                string `json:"insertvserveripport,omitempty"`
 	IPMask                             string `json:"ipmask,omitempty"`
 	IPPattern                          string `json:"ippattern,omitempty"`
@@ -113,8 +113,8 @@ type LBVServer struct {
 	VIPHeader                          string `json:"vipheader,omitempty"`
 	Weight                             int    `json:"weight,omitempty"`
 
-	ActiveAervices            string `json:"activeservices,omitempty"`
-	BackupvAerverAtatus       string `json:"backupvserverstatus,omitempty"`
+	ActiveServices            string `json:"activeservices,omitempty"`
+	BackupvServerStatus       string `json:"backupvserverstatus,omitempty"`
 	BindPoint                 string `json:"bindpoint,omitempty"`
 	CacheVServer              string `json:"cachevserver,omitempty"`
 	ConsolidatedLConn         string `json:"consolidatedlconn,omitempty"`
@@ -130,7 +130,7 @@ type LBVServer struct {
 	Health                    string `json:"health,omitempty"`
 	Homepage                  string `json:"homepage,omitempty"`
 	IPMapping                 string `json:"ipmapping,omitempty"`
-	IsGLSB                    bool   `json:"isgslb,omitempty"`
+	IsGSLB                    bool   `json:"isgslb,omitempty"`
 	LBRRReason                int    `json:"lbrrreason,omitempty"`
 	Map                       string `json:"map,omitempty"`
 	NextGenAPIResource        string `json:"_nextgenapiresource,omitempty"`

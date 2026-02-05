@@ -8,6 +8,37 @@ import (
 	"github.com/AdamJCrawford/NitroGo/nitrogo/models"
 )
 
+const (
+	dbsMonitorsURL                                      = "/nitro/v1/config/dbsmonitors"
+	extendedMemoryParamURL                              = "/nitro/v1/config/extendedmemoryparam"
+	locationURL                                         = "/nitro/v1/config/location"
+	locationDataURL                                     = "/nitro/v1/config/locationdata"
+	locationFileURL                                     = "/nitro/v1/config/locationfile"
+	locationFile6URL                                    = "/nitro/v1/config/locationfile6"
+	locationParameterURL                                = "/nitro/v1/config/locationparameter"
+	nsTraceURL                                          = "/nitro/v1/config/nstrace"
+	radiusNodeURL                                       = "/nitro/v1/config/radiusnode"
+	reportingURL                                        = "/nitro/v1/config/reporting"
+	serverURL                                           = "/nitro/v1/config/server"
+	serverBindingURL                                    = "/nitro/v1/config/server_binding"
+	serverGSLBServiceBindingURL                         = "/nitro/v1/config/server_gslbservice_binding"
+	serverGSLBServiceGroupBindingURL                    = "/nitro/v1/config/server_gslbservicegroup_binding"
+	serverServiceBindingURL                             = "/nitro/v1/config/server_service_binding"
+	serverServiceGroupBindingURL                        = "/nitro/v1/config/server_servicegroup_binding"
+	serviceURL                                          = "/nitro/v1/config/service"
+	serviceBindingURL                                   = "/nitro/v1/config/service_binding"
+	serviceGroupLBMonitorBindingURL                     = "/nitro/v1/config/servicegroup_lbmonitor_binding"
+	serviceGroupURL                                     = "/nitro/v1/config/servicegroup"
+	serviceGroupBindingURL                              = "/nitro/v1/config/servicegroup_binding"
+	serviceLBMonitorBindingURL                          = "/nitro/v1/config/service_lbmonitor_binding"
+	serviceGroupServiceGroupEntityMonBindingsBindingURL = "/nitro/v1/config/servicegroup_servicegroupentitymonbindings_binding"
+	serviceGroupServiceGroupMemberBindingURL            = "/nitro/v1/config/servicegroup_servicegroupmember_binding"
+	serviceGroupServiceGroupMemberListBinding           = "/nitro/v1/config/servicegroup_servicegoupmemberlist_binding"
+	serviceGroupBindingsURL                             = "/nitro/v1/config/servicegroupbindings"
+	svcBindingsURL                                      = "/nitro/v1/config/svcbindings"
+	vServerURL                                          = "/nitro/v1/config/vserver"
+)
+
 // Basic system configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/basic/basic
 type BasicService struct {
@@ -174,9 +205,7 @@ func (s *BasicService) CountServiceGroupBindings()  {}
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/basic/servicegroup_binding
 func (s *BasicService) GetAllServiceGroupBinding() {}
 func (s *BasicService) GetServiceGroupBinding(serviceGroupName string) ([]models.ServiceGroupBinding, error) {
-	u := fmt.Sprintf("nitro/v1/config/servicegroup_binding/%s", serviceGroupName)
-
-	req, err := s.client.NewRequest(http.MethodGet, u, nil)
+	req, err := s.client.NewRequest(http.MethodGet, fmt.Sprintf("%s/%s", serviceGroupBindingURL, serviceGroupName), nil)
 	if err != nil {
 		return nil, err
 	}

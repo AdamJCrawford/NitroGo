@@ -8,6 +8,64 @@ import (
 	"github.com/AdamJCrawford/NitroGo/nitrogo/models"
 )
 
+const (
+	lbActionURL                                         = "/nitro/v1/config/lbaction"
+	lbGlobalBindingURL                                  = "/nitro/v1/config/lbglobal_binding"
+	lbGlobalLBPolicyBindingURL                          = "/nitro/v1/config/lbglobal_lbpolicy_binding"
+	lbGroupURL                                          = "/nitro/v1/config/lbgroup"
+	lbGroupBindingURL                                   = "/nitro/v1/config/lbgroup_binding"
+	lbGroupLBVServerBindingURL                          = "/nitro/v1/config/lbgroup_lbvserver_binding"
+	lbMetricTableURL                                    = "/nitro/v1/config/lbmetrictable"
+	lbMetricTableBindingURL                             = "/nitro/v1/config/lbmetrictable_binding"
+	lbMetricTableMetricBindingURL                       = "/nitro/v1/config/lbmetrictable_metric_binding"
+	lbMonBindingsURL                                    = "/nitro/v1/config/lbmonbindings"
+	lbMonBindingsBindingURL                             = "/nitro/v1/config/lbmonbindings_binding"
+	lbMonBindingsGSLBServiceGroupBindingURL             = "/nitro/v1/config/lbmonbindings_gslbservicegroup_binding"
+	lbMonBindingsServiceBindingURL                      = "/nitro/v1/config/lbmonbindings_service_binding"
+	lbMonBindingsServiceGroupBindingURL                 = "/nitro/v1/config/lbmonbindings_servicegroup_binding"
+	lbMonitorURL                                        = "/nitro/v1/config/lbmonitor"
+	lbMonitorBindingURL                                 = "/nitro/v1/config/lbmonitor_binding"
+	lbMonitorMetricBindingURL                           = "/nitro/v1/config/lbmonitor_metric_binding"
+	lbMonitorServiceBindingURL                          = "/nitro/v1/config/lbmonitor_service_binding"
+	lbMonitorServiceGroupBindingURL                     = "/nitro/v1/config/lbmonitor_servicegroup_binding"
+	lbMonitorSSLCertKeyBindingURL                       = "/nitro/v1/config/lbmonitor_sslcertkey_binding"
+	lbParameterURL                                      = "/nitro/v1/config/lbparameter"
+	lbPersistentSessionsURL                             = "/nitro/v1/config/lbpersistentsessions"
+	lbProfileURL                                        = "/nitro/v1/config/lbprofile"
+	lbRouteURL                                          = "/nitro/v1/config/lbroute"
+	lbRoute6URL                                         = "/nitro/v1/config/lbroute6"
+	lbSIPParametersURL                                  = "/nitro/v1/config/lbsipparameters"
+	lbVServerURL                                        = "/nitro/v1/config/lbvserver"
+	lbVServerAnalyticsProfileBindingURL                 = "/nitro/v1/config/lbvserver_analyticsprofile_binding"
+	lbVServerAppFlowPolicyBindingURL                    = "/nitro/v1/config/lbvserver_appflowpolicy_binding"
+	lbVServerAppFWPolicyBindingURL                      = "/nitro/v1/config/lbvserver_appfwpolicy_binding"
+	lbVServerAppQOEPolicyBindingURL                     = "/nitro/v1/config/lbvserver_appqoepolicy_binding"
+	lbVServerAuditNSLogPolicyBindingURL                 = "/nitro/v1/config/lbvserver_auditnslogpolicy_binding"
+	lbVServerAuditSyslogPolicyBindingURL                = "/nitro/v1/config/lbvserver_auditsyslogpolicy_binding"
+	lbVServerAuthorizationPolicyBindingURL              = "/nitro/v1/config/lbvserver_authorizationpolicy_binding"
+	lbVServerBindingURL                                 = "/nitro/v1/config/lbvserver_binding"
+	lbVServerBotPolicyBindingURL                        = "/nitro/v1/config/lbvserver_botpolicy_binding"
+	lbVServerCachePolicyBindingURL                      = "/nitro/v1/config/lbvserver_cachepolicy_binding"
+	lbVServerCMPPolicyBindingURL                        = "/nitro/v1/config/lbvserver_cmppolicy_binding"
+	lbVServerContentInspectionPolicyBindingURL          = "/nitro/v1/config/lbvserver_contentinspectionpolicy_binding"
+	lbVServerCSVServerBindingURL                        = "/nitro/v1/config/lbvserver_csvserver_binding"
+	lbVServerDNSPolicy64BindingURL                      = "/nitro/v1/config/lbvserver_dnspolicy64_binding"
+	lbVServerFEOPolicyBindingURL                        = "/nitro/v1/config/lbvserver_feopolicy_binding"
+	lbVServerResponderPolicyBindingURL                  = "/nitro/v1/config/lbvserver_responderpolicy_binding"
+	lbVServerRewritePolicyBindingURL                    = "/nitro/v1/config/lbvserver_rewritepolicy_binding"
+	lbVServerServiceBindingURL                          = "/nitro/v1/config/lbvserver_service_binding"
+	lbVServerServiceGroupBindingURL                     = "/nitro/v1/config/lbvserver_servicegroup_binding"
+	lbVServerServiceGroupMemberBindingURL               = "/nitro/v1/config/lbvserver_servicegroupmember_binding"
+	lbVServerSpilloverPolicyBindingURL                  = "/nitro/v1/config/lbvserver_spilloverpolicy_binding"
+	lbVServerTMTrafficPolicyBindingURL                  = "/nitro/v1/config/lbvserver_tmtrafficpolicy_binding"
+	lbVServerTransformPolicyBindingURL                  = "/nitro/v1/config/lbvserver_transformpolicy_binding"
+	lbVServerVideoOptimizationDetectionPolicyBindingURL = "/nitro/v1/config/lbvserver_videooptimizationdetectionpolicy_binding"
+	lbVServerVideoOptimizationPacingPolicyBindingURL    = "/nitro/v1/config/lbvserver_videooptimizationpacingpolicy_binding"
+	lbWLMURL                                            = "/nitro/v1/config/lbwlm"
+	lbWLMBindingURL                                     = "/nitro/v1/config/lbwlm_binding"
+	lbWLMLBVServerBindingURL                            = "/nitro/v1/config/lbwlm_lbvserver_binding"
+)
+
 // Load Balancing configuration. The load balancing methods manage the selection of an appropriate physical server in a server farm.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/lb/lb
 type LBService struct {
@@ -176,9 +234,7 @@ func (s *LBService) UnsetLBVServer()   {}
 func (s *LBService) EnableLBVServer()  {}
 func (s *LBService) DisableLBVServer() {}
 func (s *LBService) GetAllLBVServer() ([]models.LBVServer, error) {
-	u := "nitro/v1/config/lbvserver"
-
-	req, err := s.client.NewRequest(http.MethodGet, u, nil)
+	req, err := s.client.NewRequest(http.MethodGet, lbVServerURL, nil)
 	if err != nil {
 		return nil, err
 	}
@@ -319,7 +375,7 @@ func (s *LBService) CountLBVServerRewritePolicyBinding()  {}
 // lbvserver_servicegroupmember_binding
 func (s *LBService) GetAllLBVServerServiceGroupMemberBinding() {}
 func (s *LBService) GetLBVServerServiceGroupMemberBinding(lbvserver string) ([]models.LBVServerServiceGroupMemberBinding, error) {
-	u := fmt.Sprintf("nitro/v1/config/lbvserver_servicegroupmember_binding/%s", lbvserver)
+	u := fmt.Sprintf("%s/%s", lbVServerServiceGroupMemberBindingURL, lbvserver)
 
 	req, err := s.client.NewRequest(http.MethodGet, u, nil)
 	if err != nil {

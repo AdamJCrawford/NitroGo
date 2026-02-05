@@ -1,5 +1,11 @@
 package nitrogo
 
+const (
+	rdpClientProfileURL = "/nitro/v1/config/rdpclientprofile"
+	rdpConnectionsURL   = "/nitro/v1/config/rdpconnections"
+	rdpServerProfileURL = "/nitro/v1/config/rdpserverprofile"
+)
+
 // RDP configuration
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/rdp/rdp
 type RDPService struct {

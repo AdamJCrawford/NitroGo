@@ -1,5 +1,67 @@
 package nitrogo
 
+const (
+	appFWArchiveURL                              = "/nitro/v1/config/appfwarchive"
+	appFWConfidFieldURL                          = "/nitro/v1/config/appfwconfidfield"
+	appFWCustomSettingsURL                       = "/nitro/v1/config/appfwcustomsettings"
+	appFWFieldTypeURL                            = "/nitro/v1/config/appfwfieldtype"
+	appFWGlobalAppFWPolicyBindingURL             = "/nitro/v1/config/appfwglobal_appfwpolicy_binding"
+	appFWGlobalAuditNSLogPolicyBindingURL        = "/nitro/v1/config/appfwglobal_auditnslogpolicy_binding"
+	appFWGlobalAuditSyslogPolicyBindingURL       = "/nitro/v1/config/appfwglobal_auditsyslogpolicy_binding"
+	appFWGlobalBindingURL                        = "/nitro/v1/config/appfwglobal_binding"
+	appFWHTMLErrorPageURL                        = "/nitro/v1/config/appfwhtmlerrorpage"
+	appFWJSONContentTypeURL                      = "/nitro/v1/config/appfwjsoncontenttype"
+	appFWJSONErrorPageURL                        = "/nitro/v1/config/appfwjsonerrorpage"
+	appFWLearningDataURL                         = "/nitro/v1/config/appfwlearningdata"
+	appFWLearningSettingsURL                     = "/nitro/v1/config/appfwlearningsettings"
+	appFWMultipartFormContentTypeURL             = "/nitro/v1/config/appfwmultipartformcontenttype"
+	appFWPolicyURL                               = "/nitro/v1/config/appfwpolicy"
+	appFWPolicyAppFWGlobalBindingURL             = "/nitro/v1/config/appfwpolicy_appfwglobal_binding"
+	appFWPolicyAppFWPolicyLabelBindingURL        = "/nitro/v1/config/appfwpolicy_appfwpolicylabel_binding"
+	appFWPolicyBindingURL                        = "/nitro/v1/config/appfwpolicy_binding"
+	appFWPolicyCSVServerBindingURL               = "/nitro/v1/config/appfwpolicy_csvserver_binding"
+	appFWPolicyLBVServerBindingURL               = "/nitro/v1/config/appfwpolicy_lbvserver_binding"
+	appFWPolicyLabelURL                          = "/nitro/v1/config/appfwpolicylabel"
+	appFWPolicyLabelAppFWPolicyBindingURL        = "/nitro/v1/config/appfwpolicylabel_appfwpolicy_binding"
+	appFWPolicyLabelBindingURL                   = "/nitro/v1/config/appfwpolicylabel_binding"
+	appFWPolicyLabelPolicyBindingBindingURL      = "/nitro/v1/config/appfwpolicylabel_policybinding_binding"
+	appFWProfileURL                              = "/nitro/v1/config/appfwprofile"
+	appFWProfileBindingURL                       = "/nitro/v1/config/appfwprofile_binding"
+	appFWProfileCMDInjectionBindingURL           = "/nitro/v1/config/appfwprofile_cmdinjection_binding"
+	appFWProfileContentTypeBindingURL            = "/nitro/v1/config/appfwprofile_contenttype_binding"
+	appFWProfileCookieConsistencyBindingURL      = "/nitro/v1/config/appfwprofile_cookieconsistency_binding"
+	appFWProfileCreditCardNumberBindingURL       = "/nitro/v1/config/appfwprofile_creditcardnumber_binding"
+	appFWProfileCrossSiteScriptingBindingURL     = "/nitro/v1/config/appfwprofile_crosssitescripting_binding"
+	appFWProfileCSRFTagBindingURL                = "/nitro/v1/config/appfwprofile_csrftag_binding"
+	appFWProfileDenyURLBindingURL                = "/nitro/v1/config/appfwprofile_denyurl_binding"
+	appFWProfileExcludeRESContentTypeBindingURL  = "/nitro/v1/config/appfwprofile_excluderescontenttype_binding"
+	appFWProfileFieldConsistencyBindingURL       = "/nitro/v1/config/appfwprofile_fieldconsistency_binding"
+	appFWProfileFieldFormatBindingURL            = "/nitro/v1/config/appfwprofile_fieldformat_binding"
+	appFWProfileFileUploadTypeBindingURL         = "/nitro/v1/config/appfwprofile_fileuploadtype_binding"
+	appFWProfileJSONDOSURLBindingURL             = "/nitro/v1/config/appfwprofile_jsondosurl_binding"
+	appFWProfileJSONSQLURLBindingURL             = "/nitro/v1/config/appfwprofile_jsonsqlurl_binding"
+	appFWProfileJSONXSSURLBindingURL             = "/nitro/v1/config/appfwprofile_jsonxssurl_binding"
+	appFWProfileLogExpressionBindingURL          = "/nitro/v1/config/appfwprofile_logexpression_binding"
+	appFWProfileSafeObjectBindingURL             = "/nitro/v1/config/appfwprofile_safeobject_binding"
+	appFWProfileSQLInjectionBindingURL           = "/nitro/v1/config/appfwprofile_sqlinjection_binding"
+	appFWProfileStartURLBindingURL               = "/nitro/v1/config/appfwprofile_starturl_binding"
+	appFWProfileTrustedLearningClientsBindingURL = "/nitro/v1/config/appfwprofile_trustedlearningclients_binding"
+	appFWProfileXMLAttachmentURLBindingURL       = "/nitro/v1/config/appfwprofile_xmlattachmenturl_binding"
+	appFWProfileXMLDOSURLBindingURL              = "/nitro/v1/config/appfwprofile_xmldosurl_binding"
+	appFWProfileXMLSQLInjectionBindingURL        = "/nitro/v1/config/appfwprofile_xmlsqlinjection_binding"
+	appFWProfileXMLValidationURLBindingURL       = "/nitro/v1/config/appfwprofile_xmlvalidationurl_binding"
+	appFWProfileXMLWSIURLBindingURL              = "/nitro/v1/config/appfwprofile_xmlwsiurl_binding"
+	appFWProfileXMLXSSBindingURL                 = "/nitro/v1/config/appfwprofile_xmlxss_binding"
+	appFWSettingsURL                             = "/nitro/v1/config/appfwsettings"
+	appFWSignaturesURL                           = "/nitro/v1/config/appfwsignatures"
+	appFWTransactionRecordsURL                   = "/nitro/v1/config/appfwtransactionrecords"
+	appFWURLEncodedFormContentTypeURL            = "/nitro/v1/config/appfwurlencodedformcontenttype"
+	appFWWSDLURL                                 = "/nitro/v1/config/appfwwsdl"
+	appFWXMLContentTypeURL                       = "/nitro/v1/config/appfwxmlcontenttype"
+	appFWXMLErrorPageURL                         = "/nitro/v1/config/appfwxmlerrorpage"
+	appFWXMLSchemaURL                            = "/nitro/v1/config/appfwxmlschema"
+)
+
 // Application Firewall configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/appfw/appfw
 type AppFWService struct {
@@ -183,8 +245,8 @@ func (s *AppFWService) CountAppFWPolicyAppFWPolicyLabelBinding()  {}
 // appfwpolicy_binding
 // Binding object which returns the resources bound to appfwpolicy.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/appfw/appfwpolicy_binding
-func (s *AppFWService) GetAllAppFWPolcyBinding() {}
-func (s *AppFWService) GetAppFWPolcyBinding()    {}
+func (s *AppFWService) GetAllAppFWPolicyBinding() {}
+func (s *AppFWService) GetAppFWPolicyBinding()    {}
 
 // appfwpolicy_csvserver_binding
 // Binding object showing the csvserver that can be bound to appfwpolicy.
@@ -196,9 +258,9 @@ func (s *AppFWService) CountAppFWPolicyCSVServerBinding()  {}
 // appfwpolicy_lbvserver_binding
 // Binding object showing the lbvserver that can be bound to appfwpolicy.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/appfw/appfwpolicy_lbvserver_binding
-func (s *AppFWService) GetAllAppFWPolcyLBVServerBinding() {}
-func (s *AppFWService) GetAppFWPolcyLBVServerBinding()    {}
-func (s *AppFWService) CountAppFWPolcyLBVServerBinding()  {}
+func (s *AppFWService) GetAllAppFWPolicyLBVServerBinding() {}
+func (s *AppFWService) GetAppFWPolicyLBVServerBinding()    {}
+func (s *AppFWService) CountAppFWPolicyLBVServerBinding()  {}
 
 // appfwprofile
 // Configuration for application firewall profile resource.
@@ -230,11 +292,11 @@ func (s *AppFWService) CountAppFWProfileCMDInjectionBinding()  {}
 // appfwprofile_contenttype_binding
 // Binding object showing the contenttype that can be bound to appfwprofile.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/appfw/appfwprofile_contenttype_binding
-func (s *AppFWService) AddAppFWProfileContentypeBinding()    {}
-func (s *AppFWService) DeleteAppFWProfileContentypeBinding() {}
-func (s *AppFWService) GetAllAppFWProfileContentypeBinding() {}
-func (s *AppFWService) GetAppFWProfileContentypeBinding()    {}
-func (s *AppFWService) CountAppFWProfileContentypeBinding()  {}
+func (s *AppFWService) AddAppFWProfileContentTypeBinding()    {}
+func (s *AppFWService) DeleteAppFWProfileContentTypeBinding() {}
+func (s *AppFWService) GetAllAppFWProfileContentTypeBinding() {}
+func (s *AppFWService) GetAppFWProfileContentTypeBinding()    {}
+func (s *AppFWService) CountAppFWProfileContentTypeBinding()  {}
 
 // appfwprofile_cookieconsistency_binding
 // Binding object showing the cookieconsistency that can be bound to appfwprofile.
@@ -311,11 +373,11 @@ func (s *AppFWService) CountAppFWProfileFieldFormatBinding()  {}
 // appfwprofile_fileuploadtype_binding
 // Binding object showing the fileuploadtype that can be bound to appfwprofile.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/appfw/appfwprofile_fileuploadtype_binding
-func (s *AppFWService) AddAppFWProfileFielUploadTypeBinding()    {}
-func (s *AppFWService) DeleteAppFWProfileFielUploadTypeBinding() {}
-func (s *AppFWService) GetAllAppFWProfileFielUploadTypeBinding() {}
-func (s *AppFWService) GetAppFWProfileFielUploadTypeBinding()    {}
-func (s *AppFWService) CountAppFWProfileFielUploadTypeBinding()  {}
+func (s *AppFWService) AddAppFWProfileFileUploadTypeBinding()    {}
+func (s *AppFWService) DeleteAppFWProfileFileUploadTypeBinding() {}
+func (s *AppFWService) GetAllAppFWProfileFileUploadTypeBinding() {}
+func (s *AppFWService) GetAppFWProfileFileUploadTypeBinding()    {}
+func (s *AppFWService) CountAppFWProfileFileUploadTypeBinding()  {}
 
 // appfwprofile_jsondosurl_binding
 // Binding object showing the jsondosurl that can be bound to appfwprofile.
@@ -500,10 +562,10 @@ func (s *AppFWService) GetAppFWXMLErrorPage()    {}
 func (s *AppFWService) ImportAppFWXMLErrorPage() {}
 func (s *AppFWService) ChangeAppFWXMLErrorPage() {}
 
-// appfwxmlscheme
+// appfwxmlschema
 // Configuration for XML schema resource.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/appfw/appfwxmlschema
-func (s *AppFWService) DeleteAppFWXMLScheme() {}
-func (s *AppFWService) GetAllAppFWXMLScheme() {}
-func (s *AppFWService) GetAppFWXMLScheme()    {}
-func (s *AppFWService) ImportAppFWXMLScheme() {}
+func (s *AppFWService) DeleteAppFWXMLSchema() {}
+func (s *AppFWService) GetAllAppFWXMLSchema() {}
+func (s *AppFWService) GetAppFWXMLSchema()    {}
+func (s *AppFWService) ImportAppFWXMLSchema() {}

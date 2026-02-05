@@ -1,5 +1,23 @@
 package nitrogo
 
+const (
+	cmpActionURL                          = "/nitro/v1/config/cmpaction"
+	cmpGlobalBindingURL                   = "/nitro/v1/config/cmpglobal_binding"
+	cmpGlobalCMPPolicyBindingURL          = "/nitro/v1/config/cmpglobal_cmppolicy_binding"
+	cmpParameterURL                       = "/nitro/v1/config/cmpparameter"
+	cmpPolicyURL                          = "/nitro/v1/config/cmppolicy"
+	cmpPolicyLabelURL                     = "/nitro/v1/config/cmppolicylabel"
+	cmpPolicyLabelBindingURL              = "/nitro/v1/config/cmppolicylabel_binding"
+	cmpPolicyLabelCMPPolicyBindingURL     = "/nitro/v1/config/cmppolicylabel_cmppolicy_binding"
+	cmpPolicyLabelPolicyBindingBindingURL = "/nitro/v1/config/cmppolicylabel_policybinding_binding"
+	cmpPolicyBindingURL                   = "/nitro/v1/config/cmppolicy_binding"
+	cmpPolicyCMPGlobalBindingURL          = "/nitro/v1/config/cmppolicy_cmpglobal_binding"
+	cmpPolicyCMPPolicyLabelBindingURL     = "/nitro/v1/config/cmppolicy_cmppolicylabel_binding"
+	cmpPolicyCRVServerBindingURL          = "/nitro/v1/config/cmppolicy_crvserver_binding"
+	cmpPolicyCSVServerBindingURL          = "/nitro/v1/config/cmppolicy_csvserver_binding"
+	cmpPolicyLBVServerBindingURL          = "/nitro/v1/config/cmppolicy_lbvserver_binding"
+)
+
 // Compression configuration. The system’s feature for compressing HTTP responses to compression-aware browsers.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/cmp/cmp
 type CMPService struct {

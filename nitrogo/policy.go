@@ -1,5 +1,23 @@
 package nitrogo
 
+const (
+	policyDatasetURL                 = "/nitro/v1/config/policydataset"
+	policyDatasetBindingURL          = "/nitro/v1/config/policydataset_binding"
+	policyDatasetValueBindingURL     = "/nitro/v1/config/policydataset_value_binding"
+	policyEvaluationURL              = "/nitro/v1/config/policyevaluation"
+	policyExpressionURL              = "/nitro/v1/config/policyexpression"
+	policyHTTPCalloutURL             = "/nitro/v1/config/policyhttpcallout"
+	policyMapURL                     = "/nitro/v1/config/policymap"
+	policyParamURL                   = "/nitro/v1/config/policyparam"
+	policyPATSetURL                  = "/nitro/v1/config/policypatset"
+	policyPATSetBindingURL           = "/nitro/v1/config/policypatset_binding"
+	policyPATSetPatternBindingURL    = "/nitro/v1/config/policypatset_pattern_binding"
+	policyStringMapURL               = "/nitro/v1/config/policystringmap"
+	policyStringMapBindingURL        = "/nitro/v1/config/policystringmap_binding"
+	policyStringMapPatternBindingURL = "/nitro/v1/config/policystringmap_pattern_binding"
+	policyURLSetURL                  = "/nitro/v1/config/policyurlset"
+)
+
 // Policy configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/policy/policy
 type PolicyService struct {

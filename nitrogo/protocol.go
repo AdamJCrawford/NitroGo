@@ -1,5 +1,9 @@
 package nitrogo
 
+const (
+	protocolHTTPBandURL = "/nitro/v1/config/protocolhttpband"
+)
+
 // Protocol Configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/protocol/protocol
 type ProtocolService struct {

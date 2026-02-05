@@ -1,5 +1,14 @@
 package nitrogo
 
+const (
+	spilloverActionURL                   = "/nitro/v1/config/spilloveraction"
+	spilloverPolicyURL                   = "/nitro/v1/config/spilloverpolicy"
+	spilloverPolicyBindingURL            = "/nitro/v1/config/spilloverpolicy_binding"
+	spilloverPolicyCSVServerBindingURL   = "/nitro/v1/config/spilloverpolicy_csvserver_binding"
+	spilloverPolicyGSLBVServerBindingURL = "/nitro/v1/config/spilloverpolicy_gslbvserver_binding"
+	spilloverPolicyLBVServerBindingURL   = "/nitro/v1/config/spilloverpolicy_lbvserver_binding"
+)
+
 // Spillover policies and actions.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/spillover/spillover
 type SpilloverService struct {

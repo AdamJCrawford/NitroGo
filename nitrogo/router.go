@@ -1,5 +1,9 @@
 package nitrogo
 
+const (
+	routerDynamicRoutingURL = "/nitro/v1/config/routerdynamicrouting"
+)
+
 // Router configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/router/router
 type RouterService struct {

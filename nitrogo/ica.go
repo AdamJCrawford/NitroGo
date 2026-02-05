@@ -1,5 +1,19 @@
 package nitrogo
 
+const (
+	icaAccessProfileURL           = "/nitro/v1/config/icaaccessprofile"
+	icaActionURL                  = "/nitro/v1/config/icaaction"
+	icaGlobalBindingURL           = "/nitro/v1/config/icaglobal_binding"
+	icaGlobalICAPolicyBindingURL  = "/nitro/v1/config/icaglobal_icapolicy_binding"
+	icaLatencyProfileURL          = "/nitro/v1/config/icalatencyprofile"
+	icaParameterURL               = "/nitro/v1/config/icaparameter"
+	icaPolicyURL                  = "/nitro/v1/config/icapolicy"
+	icaPolicyBindingURL           = "/nitro/v1/config/icapolicy_binding"
+	icaPolicyCRVServerBindingURL  = "/nitro/v1/config/icapolicy_crvserver_binding"
+	icaPolicyICAGlobalBindingURL  = "/nitro/v1/config/icapolicy_icaglobal_binding"
+	icaPolicyVPNVServerBindingURL = "/nitro/v1/config/icapolicy_vpnvserver_binding"
+)
+
 // ICA configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/ica/ica
 type ICAService struct {

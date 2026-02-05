@@ -1,5 +1,16 @@
 package nitrogo
 
+const (
+	callHomeURL    = "/nitro/v1/config/callhome"
+	installURL     = "/nitro/v1/config/install"
+	pingURL        = "/nitro/v1/config/ping"
+	ping6URL       = "/nitro/v1/config/ping6"
+	raidURL        = "/nitro/v1/config/raid"
+	techSupportURL = "/nitro/v1/config/techsupport"
+	traceRouteURL  = "/nitro/v1/config/traceroute"
+	traceRoute6URL = "/nitro/v1/config/traceroute6"
+)
+
 // Utilities.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/utility/utility
 type UtilityService struct {

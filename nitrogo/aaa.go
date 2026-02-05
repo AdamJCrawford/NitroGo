@@ -208,7 +208,7 @@ func (s *AAAService) CountAAAGroupVPNURLBinding()  {}
 func (s *AAAService) AddAAAKCDAccount()    {}
 func (s *AAAService) DeleteAAAKCDAccount() {}
 func (s *AAAService) UpdateAAAKCDAccount() {}
-func (s *AAAService) UpsetAAAKCDAccount()  {}
+func (s *AAAService) UnsetAAAKCDAccount()  {}
 func (s *AAAService) GetAllAAAKCDAccount() {}
 func (s *AAAService) GetAAAKCDAccount()    {}
 func (s *AAAService) CountAAAKCDAccount()  {}
@@ -249,9 +249,9 @@ func (s *AAAService) CountAAAPreauthenticationAction()  {}
 // aaapreauthenticationparameter
 // Configuration for pre authentication parameter resource.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/aaa/aaapreauthenticationparameter
-func (s *AAAService) UpdateAAAPreauthenticationParamter() {}
-func (s *AAAService) UnsetAAAPreauthenticationParamter()  {}
-func (s *AAAService) GetAllAAAPreauthenticationParamter() {}
+func (s *AAAService) UpdateAAAPreauthenticationParameter() {}
+func (s *AAAService) UnsetAAAPreauthenticationParameter()  {}
+func (s *AAAService) GetAllAAAPreauthenticationParameter() {}
 
 // aaapreauthenticationpolicy
 // Configuration for pre authentication policy resource.

@@ -1,5 +1,30 @@
 package nitrogo
 
+const (
+	clusterFilesURL                                 = "/nitro/v1/config/clusterfiles"
+	clusterInstanceURL                              = "/nitro/v1/config/clusterinstance"
+	clusterInstanceBindingURL                       = "/nitro/v1/config/clusterinstance_binding"
+	clusterInstanceClusterNodeBindingURL            = "/nitro/v1/config/clusterinstance_clusternode_binding"
+	clusterNodeURL                                  = "/nitro/v1/config/clusternode"
+	clusterNodeBindingURL                           = "/nitro/v1/config/clusternode_binding"
+	clusterNodeRouteMonitorBindingURL               = "/nitro/v1/config/clusternode_routemonitor_binding"
+	clusterNodeGroupURL                             = "/nitro/v1/config/clusternodegroup"
+	clusterNodeGroupAuthenticationVServerBindingURL = "/nitro/v1/config/clusternodegroup_authenticationvserver_binding"
+	clusterNodeGroupBindingURL                      = "/nitro/v1/config/clusternodegroup_binding"
+	clusterNodeGroupClusterNodeBindingURL           = "/nitro/v1/config/clusternodegroup_clusternode_binding"
+	clusterNodeGroupCRVServerBindingURL             = "/nitro/v1/config/clusternodegroup_crvserver_binding"
+	clusterNodeGroupCSVServerBindingURL             = "/nitro/v1/config/clusternodegroup_csvserver_binding"
+	clusterNodeGroupGSLBSiteBindingURL              = "/nitro/v1/config/clusternodegroup_gslbsite_binding"
+	clusterNodeGroupGSLBVServerBindingURL           = "/nitro/v1/config/clusternodegroup_gslbvserver_binding"
+	clusterNodeGroupLBVServerBindingURL             = "/nitro/v1/config/clusternodegroup_lbvserver_binding"
+	clusterNodeGroupNSLimitIdentifierBindingURL     = "/nitro/v1/config/clusternodegroup_nslimitidentifier_binding"
+	clusterNodeGroupServiceBindingURL               = "/nitro/v1/config/clusternodegroup_service_binding"
+	clusterNodeGroupStreamIdentifierBindingURL      = "/nitro/v1/config/clusternodegroup_streamidentifier_binding"
+	clusterNodeGroupVPNVServerBindingURL            = "/nitro/v1/config/clusternodegroup_vpnvserver_binding"
+	clusterPropStatusURL                            = "/nitro/v1/config/clusterpropstatus"
+	clusterSyncURL                                  = "/nitro/v1/config/clustersync"
+)
+
 // Configuration for 0 resource.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/cluster/cluster
 type ClusterService struct {
@@ -80,13 +105,13 @@ func (s *ClusterService) GetClusterNodeGroupCSVServerBinding()    {}
 func (s *ClusterService) CountClusterNodeGroupCSVServerBinding()  {}
 
 // clusternodegroup_gslbsite_binding
-func (s *ClusterService) AddClusterNodeGroupGLSBSiteBinding()    {}
-func (s *ClusterService) DeleteClusterNodeGroupGLSBSiteBinding() {}
-func (s *ClusterService) GetAllClusterNodeGroupGLSBSiteBinding() {}
-func (s *ClusterService) GetClusterNodeGroupGLSBSiteBinding()    {}
-func (s *ClusterService) CountClusterNodeGroupGLSBSiteBinding()  {}
+func (s *ClusterService) AddClusterNodeGroupGSLBSiteBinding()    {}
+func (s *ClusterService) DeleteClusterNodeGroupGSLBSiteBinding() {}
+func (s *ClusterService) GetAllClusterNodeGroupGSLBSiteBinding() {}
+func (s *ClusterService) GetClusterNodeGroupGSLBSiteBinding()    {}
+func (s *ClusterService) CountClusterNodeGroupGSLBSiteBinding()  {}
 
-// clusternodegroup_glsbvserver_binding
+// clusternodegroup_gslbvserver_binding
 func (s *ClusterService) AddClusterNodeGroupGSLBVServerBinding()    {}
 func (s *ClusterService) DeleteClusterNodeGroupGSLBVServerBinding() {}
 func (s *ClusterService) GetAllClusterNodeGroupGSLBVServerBinding() {}
@@ -146,6 +171,3 @@ func (s *ClusterService) ClearClusterPropStatus()  {}
 
 // clustersync
 func (s *ClusterService) ForceClusterSync() {}
-
-// cluster_grp
-// Documentation page doesn't work

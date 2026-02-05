@@ -1,5 +1,9 @@
 package nitrogo
 
+const (
+	applicationURL = "/nitro/v1/config/application"
+)
+
 // Application
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/app/app
 type AppService struct {

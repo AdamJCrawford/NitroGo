@@ -1,5 +1,44 @@
 package nitrogo
 
+const (
+	auditMessageActionURL                            = "/nitro/v1/config/auditmessageaction"
+	auditMessagesURL                                 = "/nitro/v1/config/auditmessages"
+	auditNSLogActionURL                              = "/nitro/v1/config/auditnslogaction"
+	auditNSLogGlobalAuditNSLogPolicyBindingURL       = "/nitro/v1/config/auditnslogglobal_auditnslogpolicy_binding"
+	auditNSLogGlobalBindingURL                       = "/nitro/v1/config/auditnslogglobal_binding"
+	auditNSLogParamsURL                              = "/nitro/v1/config/auditnslogparams"
+	auditNSLogPolicyURL                              = "/nitro/v1/config/auditnslogpolicy"
+	auditNSLogPolicyAAAGroupBindingURL               = "/nitro/v1/config/auditnslogpolicy_aaagroup_binding"
+	auditNSLogPolicyAAAUserBindingURL                = "/nitro/v1/config/auditnslogpolicy_aaauser_binding"
+	auditNSLogPolicyAppFWGlobalBindingURL            = "/nitro/v1/config/auditnslogpolicy_appfwglobal_binding"
+	auditNSLogPolicyAuditNSLogGlobalBindingURL       = "/nitro/v1/config/auditnslogpolicy_auditnslogglobal_binding"
+	auditNSLogPolicyAuthenticationVServerBindingURL  = "/nitro/v1/config/auditnslogpolicy_authenticationvserver_binding"
+	auditNSLogPolicyBindingURL                       = "/nitro/v1/config/auditnslogpolicy_binding"
+	auditNSLogPolicyCSVServerBindingURL              = "/nitro/v1/config/auditnslogpolicy_csvserver_binding"
+	auditNSLogPolicyLBVServerBindingURL              = "/nitro/v1/config/auditnslogpolicy_lbvserver_binding"
+	auditNSLogPolicySystemGlobalBindingURL           = "/nitro/v1/config/auditnslogpolicy_systemglobal_binding"
+	auditNSLogPolicyTMGlobalBindingURL               = "/nitro/v1/config/auditnslogpolicy_tmglobal_binding"
+	auditNSLogPolicyVPNGlobalBindingURL              = "/nitro/v1/config/auditnslogpolicy_vpnglobal_binding"
+	auditNSLogPolicyVPNVServerBindingURL             = "/nitro/v1/config/auditnslogpolicy_vpnvserver_binding"
+	auditSyslogActionURL                             = "/nitro/v1/config/auditsyslogaction"
+	auditSyslogGlobalAuditSyslogPolicyBindingURL     = "/nitro/v1/config/auditsyslogglobal_auditsyslogpolicy_binding"
+	auditSyslogGlobalBindingURL                      = "/nitro/v1/config/auditsyslogglobal_binding"
+	auditSyslogParamsURL                             = "/nitro/v1/config/auditsyslogparams"
+	auditSyslogPolicyURL                             = "/nitro/v1/config/auditsyslogpolicy"
+	auditSyslogPolicyAAAGroupBindingURL              = "/nitro/v1/config/auditsyslogpolicy_aaagroup_binding"
+	auditSyslogPolicyAAAUserBindingURL               = "/nitro/v1/config/auditsyslogpolicy_aaauser_binding"
+	auditSyslogPolicyAuditSyslogGlobalBindingURL     = "/nitro/v1/config/auditsyslogpolicy_auditsyslogglobal_binding"
+	auditSyslogPolicyAuthenticationVServerBindingURL = "/nitro/v1/config/auditsyslogpolicy_authenticationvserver_binding"
+	auditSyslogPolicyBindingURL                      = "/nitro/v1/config/auditsyslogpolicy_binding"
+	auditSyslogPolicyCSVServerBindingURL             = "/nitro/v1/config/auditsyslogpolicy_csvserver_binding"
+	auditSyslogPolicyLBVServerBindingURL             = "/nitro/v1/config/auditsyslogpolicy_lbvserver_binding"
+	auditSyslogPolicyRNATGlobalBindingURL            = "/nitro/v1/config/auditsyslogpolicy_rnatglobal_binding"
+	auditSyslogPolicySystemGlobalBindingURL          = "/nitro/v1/config/auditsyslogpolicy_systemglobal_binding"
+	auditSyslogPolicyTMGlobalBindingURL              = "/nitro/v1/config/auditsyslogpolicy_tmglobal_binding"
+	auditSyslogPolicyVPNGlobalBindingURL             = "/nitro/v1/config/auditsyslogpolicy_vpnglobal_binding"
+	auditSyslogPolicyVPNVServerBindingURL            = "/nitro/v1/config/auditsyslogpolicy_vpnvserver_binding"
+)
+
 // Audit configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/audit/audit
 type AuditService struct {
@@ -88,9 +127,9 @@ func (s *AuditService) CountAuditNSLogPolicyAppFWGlobalBinding()  {}
 // auditnslogpolicy_auditnslogglobal_binding
 // Binding object showing the auditnslogglobal that can be bound to auditnslogpolicy.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/audit/auditnslogpolicy_auditnslogglobal_binding
-func (s *AuditService) GetAllAuditLogPolicyAuditNSLogGlobalBinding() {}
-func (s *AuditService) GetAuditLogPolicyAuditNSLogGlobalBinding()    {}
-func (s *AuditService) CountAuditLogPolicyAuditNSLogGlobalBinding()  {}
+func (s *AuditService) GetAllAuditNSLogPolicyAuditNSLogGlobalBinding() {}
+func (s *AuditService) GetAuditNSLogPolicyAuditNSLogGlobalBinding()    {}
+func (s *AuditService) CountAuditNSLogPolicyAuditNSLogGlobalBinding()  {}
 
 // auditnslogpolicy_authenticationvserver_binding
 // Binding object showing the authenticationvserver that can be bound to auditnslogpolicy.

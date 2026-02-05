@@ -1,5 +1,17 @@
 package nitrogo
 
+const (
+	feoActionURL                 = "/nitro/v1/config/feoaction"
+	feoGlobalBindingURL          = "/nitro/v1/config/feoglobal_binding"
+	feoGlobalFEOPolicyBindingURL = "/nitro/v1/config/feoglobal_feopolicy_binding"
+	feoParameterURL              = "/nitro/v1/config/feoparameter"
+	feoPolicyURL                 = "/nitro/v1/config/feopolicy"
+	feoPolicyBindingURL          = "/nitro/v1/config/feopolicy_binding"
+	feoPolicyCSVServerBindingURL = "/nitro/v1/config/feopolicy_csvserver_binding"
+	feoPolicyFEOGlobalBindingURL = "/nitro/v1/config/feopolicy_feoglobal_binding"
+	feoPolicyLBVServerBindingURL = "/nitro/v1/config/feopolicy_lbvserver_binding"
+)
+
 // Front end optimization configuration. The system’s feature to optimize Web content for performance.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/feo/feo
 type FEOService struct {

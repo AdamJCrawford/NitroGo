@@ -1,5 +1,25 @@
 package nitrogo
 
+const (
+	responderActionURL                            = "/nitro/v1/config/responderaction"
+	responderGlobalBindingURL                     = "/nitro/v1/config/responderglobal_binding"
+	responderGlobalResponderPolicyBindingURL      = "/nitro/v1/config/responderglobal_responderpolicy_binding"
+	responderHTMLPageURL                          = "/nitro/v1/config/responderhtmlpage"
+	responderParamURL                             = "/nitro/v1/config/responderparam"
+	responderPolicyURL                            = "/nitro/v1/config/responderpolicy"
+	responderPolicyLabelURL                       = "/nitro/v1/config/responderpolicylabel"
+	responderPolicyLabelBindingURL                = "/nitro/v1/config/responderpolicylabel_binding"
+	responderPolicyLabelPolicyBindingBindingURL   = "/nitro/v1/config/responderpolicylabel_policybinding_binding"
+	responderPolicyLabelResponderPolicyBindingURL = "/nitro/v1/config/responderpolicylabel_responderpolicy_binding"
+	responderPolicyBindingURL                     = "/nitro/v1/config/responderpolicy_binding"
+	responderPolicyCRVServerBindingURL            = "/nitro/v1/config/responderpolicy_crvserver_binding"
+	responderPolicyCSVServerBindingURL            = "/nitro/v1/config/responderpolicy_csvserver_binding"
+	responderPolicyLBVServerBindingURL            = "/nitro/v1/config/responderpolicy_lbvserver_binding"
+	responderPolicyResponderGlobalBindingURL      = "/nitro/v1/config/responderpolicy_responderglobal_binding"
+	responderPolicyResponderPolicyLabelBindingURL = "/nitro/v1/config/responderpolicy_responderpolicylabel_binding"
+	responderPolicyVPNVServerBindingURL           = "/nitro/v1/config/responderpolicy_vpnvserver_binding"
+)
+
 // Responder configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/responder/responder
 type ResponderService struct {

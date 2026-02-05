@@ -1,5 +1,31 @@
 package nitrogo
 
+const (
+	videoOptimizationDetectionActionURL                                             = "/nitro/v1/config/videooptimizationdetectionaction"
+	videoOptimizationDetectionPolicyURL                                             = "/nitro/v1/config/videooptimizationdetectionpolicy"
+	videoOptimizationDetectionPolicyLabelURL                                        = "/nitro/v1/config/videooptimizationdetectionpolicylabel"
+	videoOptimizationDetectionPolicyLabelBindingURL                                 = "/nitro/v1/config/videooptimizationdetectionpolicylabel_binding"
+	videoOptimizationDetectionPolicyLabelPolicyBindingBindingURL                    = "/nitro/v1/config/videooptimizationdetectionpolicylabel_policybinding_binding"
+	videoOptimizationDetectionPolicyLabelVideoOptimizationDetectionPolicyBindingURL = "/nitro/v1/config/videooptimizationdetectionpolicylabel_videooptimizationdetectionpolicy_binding"
+	videoOptimizationDetectionPolicyBindingURL                                      = "/nitro/v1/config/videooptimizationdetectionpolicy_binding"
+	videoOptimizationDetectionPolicyLBVServerBindingURL                             = "/nitro/v1/config/videooptimizationdetectionpolicy_lbvserver_binding"
+	videoOptimizationDetectionPolicyVideoOptimizationGlobalDetectionBindingURL      = "/nitro/v1/config/videooptimizationdetectionpolicy_videooptimizationglobaldetection_binding"
+	videoOptimizationGlobalDetectionBindingURL                                      = "/nitro/v1/config/videooptimizationglobaldetection_binding"
+	videoOptimizationGlobalDetectionVideoOptimizationDetectionPolicyBindingURL      = "/nitro/v1/config/videooptimizationglobaldetection_videooptimizationdetectionpolicy_binding"
+	videoOptimizationGlobalPacingBindingURL                                         = "/nitro/v1/config/videooptimizationglobalpacing_binding"
+	videoOptimizationGlobalPacingVideoOptimizationPacingPolicyBindingURL            = "/nitro/v1/config/videooptimizationglobalpacing_videooptimizationpacingpolicy_binding"
+	videoOptimizationPacingActionURL                                                = "/nitro/v1/config/videooptimizationpacingaction"
+	videoOptimizationPacingPolicyURL                                                = "/nitro/v1/config/videooptimizationpacingpolicy"
+	videoOptimizationPacingPolicyLabelURL                                           = "/nitro/v1/config/videooptimizationpacingpolicylabel"
+	videoOptimizationPacingPolicyLabelBindingURL                                    = "/nitro/v1/config/videooptimizationpacingpolicylabel_binding"
+	videoOptimizationPacingPolicyLabelPolicyBindingBindingURL                       = "/nitro/v1/config/videooptimizationpacingpolicylabel_policybinding_binding"
+	videoOptimizationPacingPolicyLabelVideoOptimizationPacingPolicyBindingURL       = "/nitro/v1/config/videooptimizationpacingpolicylabel_videooptimizationpacingpolicy_binding"
+	videoOptimizationPacingPolicyBindingURL                                         = "/nitro/v1/config/videooptimizationpacingpolicy_binding"
+	videoOptimizationPacingPolicyLBVServerBindingURL                                = "/nitro/v1/config/videooptimizationpacingpolicy_lbvserver_binding"
+	videoOptimizationPacingPolicyVideoOptimizationGlobalPacingBindingURL            = "/nitro/v1/config/videooptimizationpacingpolicy_videooptimizationglobalpacing_binding"
+	videoOptimizationParameterURL                                                   = "/nitro/v1/config/videooptimizationparameter"
+)
+
 // VideoOptimization
 // Video optimization feature is used to show (i) the stats of different media types that are being served by the Citrix ADC and (ii) the details of optimization applied on ABR videos
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/videooptimization/videooptimization
