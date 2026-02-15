@@ -1,498 +1,498 @@
 package models
 
 // aaa configuration structs
-type AaagroupVpnurlpolicyBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Groupname              string `json:"groupname,omitempty"`
+type AAAGroupVPNURLPolicyBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	GroupName              string `json:"groupname,omitempty"`
 	Policy                 string `json:"policy,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 }
 
-type AaagroupVpnsessionpolicyBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Groupname              string `json:"groupname,omitempty"`
+type AAAGroupVPNSessionPolicyBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	GroupName              string `json:"groupname,omitempty"`
 	Policy                 string `json:"policy,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 }
 
-type AaagroupVpnurlBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Groupname              string `json:"groupname,omitempty"`
-	Urlname                string `json:"urlname,omitempty"`
+type AAAGroupVPNURLBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	GroupName              string `json:"groupname,omitempty"`
+	URLName                string `json:"urlname,omitempty"`
 }
 
-type Aaakcdaccount struct {
-	Cacert             string  `json:"cacert,omitempty"`
+type AAAKCDAccount struct {
+	CACert             string  `json:"cacert,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Delegateduser      string  `json:"delegateduser,omitempty"`
-	Enterpriserealm    string  `json:"enterpriserealm,omitempty"`
-	Kcdaccount         string  `json:"kcdaccount,omitempty"`
-	Kcdpassword        string  `json:"kcdpassword,omitempty"`
-	Kcdspn             string  `json:"kcdspn,omitempty"`
-	Keytab             string  `json:"keytab,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	DelegatedUser      string  `json:"delegateduser,omitempty"`
+	EnterpriseRealm    string  `json:"enterpriserealm,omitempty"`
+	KCDAccount         string  `json:"kcdaccount,omitempty"`
+	KCDPassword        string  `json:"kcdpassword,omitempty"`
+	KCDSPN             string  `json:"kcdspn,omitempty"`
+	KeyTab             string  `json:"keytab,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Principle          string  `json:"principle,omitempty"`
-	Realmstr           string  `json:"realmstr,omitempty"`
-	Saltexpression     string  `json:"saltexpression,omitempty"`
-	Servicespn         string  `json:"servicespn,omitempty"`
-	Usercert           string  `json:"usercert,omitempty"`
-	Userrealm          string  `json:"userrealm,omitempty"`
+	RealmStr           string  `json:"realmstr,omitempty"`
+	SaltExpression     string  `json:"saltexpression,omitempty"`
+	ServiceSPN         string  `json:"servicespn,omitempty"`
+	UserCert           string  `json:"usercert,omitempty"`
+	UserRealm          string  `json:"userrealm,omitempty"`
 }
 
-type AaagroupAuditnslogpolicyBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Groupname              string `json:"groupname,omitempty"`
+type AAAGroupAuditNSLogPolicyBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	GroupName              string `json:"groupname,omitempty"`
 	Policy                 string `json:"policy,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 }
 
-type AaaglobalBinding struct {
-	AaaglobalAaapreauthenticationpolicyBinding    []interface{} `json:"aaaglobal_aaapreauthenticationpolicy_binding,omitempty"`
-	AaaglobalAuthenticationnegotiateactionBinding []interface{} `json:"aaaglobal_authenticationnegotiateaction_binding,omitempty"`
+type AAAGlobalBinding struct {
+	AAAGlobalAAAPreAuthenticationPolicyBinding    []interface{} `json:"aaaglobal_aaapreauthenticationpolicy_binding,omitempty"`
+	AAAGlobalAuthenticationNegotiateActionBinding []interface{} `json:"aaaglobal_authenticationnegotiateaction_binding,omitempty"`
 }
 
-type AaagroupVpnintranetapplicationBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Groupname              string `json:"groupname,omitempty"`
-	Intranetapplication    string `json:"intranetapplication,omitempty"`
+type AAAGroupVPNIntranetApplicationBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	GroupName              string `json:"groupname,omitempty"`
+	IntranetApplication    string `json:"intranetapplication,omitempty"`
 }
 
-type AaauserVpntrafficpolicyBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	TypeField              string `json:"type,omitempty"`
-	Username               string `json:"username,omitempty"`
-}
-
-type AaauserAuditsyslogpolicyBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type AAAUserVPNTrafficPolicyBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Policy                 string `json:"policy,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 	Username               string `json:"username,omitempty"`
 }
 
-type Aaassoprofile struct {
+type AAAUserAuditSyslogPolicyBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	TypeField              string `json:"type,omitempty"`
+	Username               string `json:"username,omitempty"`
+}
+
+type AAASSOProfile struct {
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Password           string  `json:"password,omitempty"`
 	Username           string  `json:"username,omitempty"`
 }
 
-type Aaapreauthenticationparameter struct {
+type AAAPreAuthenticationParameter struct {
 	Builtin                 []string `json:"builtin,omitempty"`
-	Deletefiles             string   `json:"deletefiles,omitempty"`
+	DeleteFiles             string   `json:"deletefiles,omitempty"`
 	Feature                 string   `json:"feature,omitempty"`
-	Killprocess             string   `json:"killprocess,omitempty"`
-	Nextgenapiresource      string   `json:"_nextgenapiresource,omitempty"`
-	Preauthenticationaction string   `json:"preauthenticationaction,omitempty"`
+	KillProcess             string   `json:"killprocess,omitempty"`
+	NextGenAPIResource      string   `json:"_nextgenapiresource,omitempty"`
+	PreAuthenticationAction string   `json:"preauthenticationaction,omitempty"`
 	Rule                    string   `json:"rule,omitempty"`
 }
 
-type AaauserAuthorizationpolicyBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type AAAUserAuthorizationPolicyBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Policy                 string `json:"policy,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 	Username               string `json:"username,omitempty"`
 }
 
-type AaauserIntranetipBinding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Intranetip             string `json:"intranetip,omitempty"`
+type AAAUserIntranetIPBinding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	IntranetIP             string `json:"intranetip,omitempty"`
 	Netmask                string `json:"netmask,omitempty"`
 	Username               string `json:"username,omitempty"`
 }
 
-type AaagroupIntranetipBinding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Groupname              string `json:"groupname,omitempty"`
-	Intranetip             string `json:"intranetip,omitempty"`
+type AAAGroupIntranetIPBinding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	GroupName              string `json:"groupname,omitempty"`
+	IntranetIP             string `json:"intranetip,omitempty"`
 	Netmask                string `json:"netmask,omitempty"`
 }
 
-type AaagroupVpntrafficpolicyBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Groupname              string `json:"groupname,omitempty"`
+type AAAGroupVPNTrafficPolicyBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	GroupName              string `json:"groupname,omitempty"`
 	Policy                 string `json:"policy,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 }
 
-type AaagroupVpnsecureprivateaccessprofileBinding struct {
-	Acttype                    int    `json:"acttype,omitempty"`
-	Gotopriorityexpression     string `json:"gotopriorityexpression,omitempty"`
-	Groupname                  string `json:"groupname,omitempty"`
-	Secureprivateaccessprofile string `json:"secureprivateaccessprofile,omitempty"`
+type AAAGroupVPNSecurePrivateAccessProfileBinding struct {
+	ActType                    int    `json:"acttype,omitempty"`
+	GotoPriorityExpression     string `json:"gotopriorityexpression,omitempty"`
+	GroupName                  string `json:"groupname,omitempty"`
+	SecurePrivateAccessProfile string `json:"secureprivateaccessprofile,omitempty"`
 }
 
-type AaagroupAuditsyslogpolicyBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Groupname              string `json:"groupname,omitempty"`
+type AAAGroupAuditSyslogPolicyBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	GroupName              string `json:"groupname,omitempty"`
 	Policy                 string `json:"policy,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 }
 
-type AaauserVpnurlpolicyBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type AAAUserVPNURLPolicyBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Policy                 string `json:"policy,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 	Username               string `json:"username,omitempty"`
 }
 
-type AaauserVpnurlBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Urlname                string `json:"urlname,omitempty"`
+type AAAUserVPNURLBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	URLName                string `json:"urlname,omitempty"`
 	Username               string `json:"username,omitempty"`
 }
 
-type AaagroupIntranetip6Binding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Groupname              string `json:"groupname,omitempty"`
-	Intranetip6            string `json:"intranetip6,omitempty"`
-	Numaddr                int    `json:"numaddr,omitempty"`
+type AAAGroupIntranetIP6Binding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	GroupName              string `json:"groupname,omitempty"`
+	IntranetIP6            string `json:"intranetip6,omitempty"`
+	NumAddr                int    `json:"numaddr,omitempty"`
 }
 
-type AaagroupAaauserBinding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Groupname              string `json:"groupname,omitempty"`
+type AAAGroupAAAUserBinding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	GroupName              string `json:"groupname,omitempty"`
 	Username               string `json:"username,omitempty"`
 }
 
-type AaapreauthenticationpolicyBinding struct {
-	AaapreauthenticationpolicyAaaglobalBinding  []interface{} `json:"aaapreauthenticationpolicy_aaaglobal_binding,omitempty"`
-	AaapreauthenticationpolicyVpnvserverBinding []interface{} `json:"aaapreauthenticationpolicy_vpnvserver_binding,omitempty"`
+type AAAPreAuthenticationPolicyBinding struct {
+	AAAPreAuthenticationPolicyAAAGlobalBinding  []interface{} `json:"aaapreauthenticationpolicy_aaaglobal_binding,omitempty"`
+	AAAPreAuthenticationPolicyVPNVServerBinding []interface{} `json:"aaapreauthenticationpolicy_vpnvserver_binding,omitempty"`
 	Name                                        string        `json:"name,omitempty"`
 }
 
-type Aaacertparams struct {
-	Defaultauthenticationgroup string `json:"defaultauthenticationgroup,omitempty"`
-	Groupnamefield             string `json:"groupnamefield,omitempty"`
-	Nextgenapiresource         string `json:"_nextgenapiresource,omitempty"`
-	Twofactor                  string `json:"twofactor,omitempty"`
-	Usernamefield              string `json:"usernamefield,omitempty"`
+type AAACertParams struct {
+	DefaultAuthenticationGroup string `json:"defaultauthenticationgroup,omitempty"`
+	GroupNameField             string `json:"groupnamefield,omitempty"`
+	NextGenAPIResource         string `json:"_nextgenapiresource,omitempty"`
+	TwoFactor                  string `json:"twofactor,omitempty"`
+	UserNameField              string `json:"usernamefield,omitempty"`
 }
 
-type AaauserVpnsessionpolicyBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type AAAUserVPNSessionPolicyBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Policy                 string `json:"policy,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 	Username               string `json:"username,omitempty"`
 }
 
-type Aaaotpparameter struct {
+type AAAOTPParameter struct {
 	Encryption         string `json:"encryption,omitempty"`
-	Maxotpdevices      int    `json:"maxotpdevices,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	MaxOTPDevices      int    `json:"maxotpdevices,omitempty"`
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
 }
 
-type Aaaradiusparams struct {
+type AAARADIUSParams struct {
 	Accounting                 string   `json:"accounting,omitempty"`
 	Authentication             string   `json:"authentication,omitempty"`
-	Authservretry              int      `json:"authservretry,omitempty"`
-	Authtimeout                int      `json:"authtimeout,omitempty"`
+	AuthServRetry              int      `json:"authservretry,omitempty"`
+	AuthTimeout                int      `json:"authtimeout,omitempty"`
 	Builtin                    []string `json:"builtin,omitempty"`
-	Callingstationid           string   `json:"callingstationid,omitempty"`
-	Defaultauthenticationgroup string   `json:"defaultauthenticationgroup,omitempty"`
+	CallingStationID           string   `json:"callingstationid,omitempty"`
+	DefaultAuthenticationGroup string   `json:"defaultauthenticationgroup,omitempty"`
 	Feature                    string   `json:"feature,omitempty"`
-	Groupauthname              string   `json:"groupauthname,omitempty"`
-	Ipaddress                  string   `json:"ipaddress,omitempty"`
-	Ipattributetype            int      `json:"ipattributetype,omitempty"`
-	Ipvendorid                 int      `json:"ipvendorid,omitempty"`
-	Messageauthenticator       string   `json:"messageauthenticator,omitempty"`
-	Nextgenapiresource         string   `json:"_nextgenapiresource,omitempty"`
-	Passencoding               string   `json:"passencoding,omitempty"`
-	Pwdattributetype           int      `json:"pwdattributetype,omitempty"`
-	Pwdvendorid                int      `json:"pwdvendorid,omitempty"`
-	Radattributetype           int      `json:"radattributetype,omitempty"`
-	Radgroupseparator          string   `json:"radgroupseparator,omitempty"`
-	Radgroupsprefix            string   `json:"radgroupsprefix,omitempty"`
-	Radkey                     string   `json:"radkey,omitempty"`
-	Radnasid                   string   `json:"radnasid,omitempty"`
-	Radnasip                   string   `json:"radnasip,omitempty"`
-	Radvendorid                int      `json:"radvendorid,omitempty"`
-	Serverip                   string   `json:"serverip,omitempty"`
-	Serverport                 int      `json:"serverport,omitempty"`
-	Tunnelendpointclientip     string   `json:"tunnelendpointclientip,omitempty"`
+	GroupAuthName              string   `json:"groupauthname,omitempty"`
+	IPAddress                  string   `json:"ipaddress,omitempty"`
+	IPAttributeType            int      `json:"ipattributetype,omitempty"`
+	IPVendorID                 int      `json:"ipvendorid,omitempty"`
+	MessageAuthenticator       string   `json:"messageauthenticator,omitempty"`
+	NextGenAPIResource         string   `json:"_nextgenapiresource,omitempty"`
+	PassEncoding               string   `json:"passencoding,omitempty"`
+	PwdAttributeType           int      `json:"pwdattributetype,omitempty"`
+	PwdVendorID                int      `json:"pwdvendorid,omitempty"`
+	RadAttributeType           int      `json:"radattributetype,omitempty"`
+	RadGroupSeparator          string   `json:"radgroupseparator,omitempty"`
+	RadGroupsPrefix            string   `json:"radgroupsprefix,omitempty"`
+	RadKey                     string   `json:"radkey,omitempty"`
+	RadNASID                   string   `json:"radnasid,omitempty"`
+	RadNASIP                   string   `json:"radnasip,omitempty"`
+	RadVendorID                int      `json:"radvendorid,omitempty"`
+	ServerIP                   string   `json:"serverip,omitempty"`
+	ServerPort                 int      `json:"serverport,omitempty"`
+	TunnelEndpointClientIP     string   `json:"tunnelendpointclientip,omitempty"`
 }
 
-type AaapreauthenticationpolicyAaaglobalBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AAAPreAuthenticationPolicyAAAGlobalBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AaaglobalAuthenticationnegotiateactionBinding struct {
-	Windowsprofile string `json:"windowsprofile,omitempty"`
+type AAAGlobalAuthenticationNegotiateActionBinding struct {
+	WindowsProfile string `json:"windowsprofile,omitempty"`
 }
 
-type AaaglobalAaapreauthenticationpolicyBinding struct {
-	Bindpolicytype int      `json:"bindpolicytype,omitempty"`
+type AAAGlobalAAAPreAuthenticationPolicyBinding struct {
+	BindPolicyType int      `json:"bindpolicytype,omitempty"`
 	Builtin        []string `json:"builtin,omitempty"`
 	Policy         string   `json:"policy,omitempty"`
 	Priority       int      `json:"priority,omitempty"`
 }
 
-type AaagroupAuthorizationpolicyBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Groupname              string `json:"groupname,omitempty"`
+type AAAGroupAuthorizationPolicyBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	GroupName              string `json:"groupname,omitempty"`
 	Policy                 string `json:"policy,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 }
 
-type AaauserVpnintranetapplicationBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Intranetapplication    string `json:"intranetapplication,omitempty"`
+type AAAUserVPNIntranetApplicationBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	IntranetApplication    string `json:"intranetapplication,omitempty"`
 	Username               string `json:"username,omitempty"`
 }
 
-type Aaaparameter struct {
-	Aaadloglevel               string   `json:"aaadloglevel,omitempty"`
-	Aaadnatip                  string   `json:"aaadnatip,omitempty"`
-	Aaasessionloglevel         string   `json:"aaasessionloglevel,omitempty"`
-	Apitokencache              string   `json:"apitokencache,omitempty"`
+type AAAParameter struct {
+	AAADLogLevel               string   `json:"aaadloglevel,omitempty"`
+	AAADNATIP                  string   `json:"aaadnatip,omitempty"`
+	AAASessionLogLevel         string   `json:"aaasessionloglevel,omitempty"`
+	APITokenCache              string   `json:"apitokencache,omitempty"`
 	Builtin                    []string `json:"builtin,omitempty"`
-	Classicendpoints           string   `json:"classicendpoints,omitempty"`
-	Defaultauthtype            string   `json:"defaultauthtype,omitempty"`
-	Defaultcspheader           string   `json:"defaultcspheader,omitempty"`
-	Dynaddr                    string   `json:"dynaddr,omitempty"`
-	Enableenhancedauthfeedback string   `json:"enableenhancedauthfeedback,omitempty"`
-	Enablesessionstickiness    string   `json:"enablesessionstickiness,omitempty"`
-	Enablestaticpagecaching    string   `json:"enablestaticpagecaching,omitempty"`
-	Enhancedepa                string   `json:"enhancedepa,omitempty"`
-	Failedlogintimeout         int      `json:"failedlogintimeout,omitempty"`
+	ClassicEndpoints           string   `json:"classicendpoints,omitempty"`
+	DefaultAuthType            string   `json:"defaultauthtype,omitempty"`
+	DefaultCSPHeader           string   `json:"defaultcspheader,omitempty"`
+	DynAddr                    string   `json:"dynaddr,omitempty"`
+	EnableEnhancedAuthFeedback string   `json:"enableenhancedauthfeedback,omitempty"`
+	EnableSessionStickiness    string   `json:"enablesessionstickiness,omitempty"`
+	EnableStaticPageCaching    string   `json:"enablestaticpagecaching,omitempty"`
+	EnhancedEPA                string   `json:"enhancedepa,omitempty"`
+	FailedLoginTimeout         int      `json:"failedlogintimeout,omitempty"`
 	Feature                    string   `json:"feature,omitempty"`
-	Ftmode                     string   `json:"ftmode,omitempty"`
-	Httponlycookie             string   `json:"httponlycookie,omitempty"`
-	Loginencryption            string   `json:"loginencryption,omitempty"`
-	Maxaaausers                int      `json:"maxaaausers,omitempty"`
-	Maxkbquestions             int      `json:"maxkbquestions,omitempty"`
-	Maxloginattempts           int      `json:"maxloginattempts,omitempty"`
-	Maxsamldeflatesize         int      `json:"maxsamldeflatesize,omitempty"`
-	Nextgenapiresource         string   `json:"_nextgenapiresource,omitempty"`
-	Persistentloginattempts    string   `json:"persistentloginattempts,omitempty"`
-	Pwdexpirynotificationdays  int      `json:"pwdexpirynotificationdays,omitempty"`
-	Samesite                   string   `json:"samesite,omitempty"`
-	Securityinsights           string   `json:"securityinsights,omitempty"`
-	Tokenintrospectioninterval int      `json:"tokenintrospectioninterval,omitempty"`
-	Wafprotection              []string `json:"wafprotection,omitempty"`
-	Webviewendpoints           string   `json:"webviewendpoints,omitempty"`
+	FTMode                     string   `json:"ftmode,omitempty"`
+	HTTPOnlyCookie             string   `json:"httponlycookie,omitempty"`
+	LoginEncryption            string   `json:"loginencryption,omitempty"`
+	MaxAAAUsers                int      `json:"maxaaausers,omitempty"`
+	MaxKBQuestions             int      `json:"maxkbquestions,omitempty"`
+	MaxLoginAttempts           int      `json:"maxloginattempts,omitempty"`
+	MaxSAMLDeflateSize         int      `json:"maxsamldeflatesize,omitempty"`
+	NextGenAPIResource         string   `json:"_nextgenapiresource,omitempty"`
+	PersistentLoginAttempts    string   `json:"persistentloginattempts,omitempty"`
+	PwdExpiryNotificationDays  int      `json:"pwdexpirynotificationdays,omitempty"`
+	SameSite                   string   `json:"samesite,omitempty"`
+	SecurityInsights           string   `json:"securityinsights,omitempty"`
+	TokenIntrospectionInterval int      `json:"tokenintrospectioninterval,omitempty"`
+	WAFProtection              []string `json:"wafprotection,omitempty"`
+	WebViewEndpoints           string   `json:"webviewendpoints,omitempty"`
 }
 
-type AaauserVpnsecureprivateaccessprofileBinding struct {
-	Acttype                    int    `json:"acttype,omitempty"`
-	Gotopriorityexpression     string `json:"gotopriorityexpression,omitempty"`
-	Secureprivateaccessprofile string `json:"secureprivateaccessprofile,omitempty"`
+type AAAUserVPNSecurePrivateAccessProfileBinding struct {
+	ActType                    int    `json:"acttype,omitempty"`
+	GotoPriorityExpression     string `json:"gotopriorityexpression,omitempty"`
+	SecurePrivateAccessProfile string `json:"secureprivateaccessprofile,omitempty"`
 	Username                   string `json:"username,omitempty"`
 }
 
-type AaauserAuditnslogpolicyBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type AAAUserAuditNSLogPolicyBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Policy                 string `json:"policy,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 	Username               string `json:"username,omitempty"`
 }
 
-type AaauserBinding struct {
-	AaauserAaagroupBinding                      []interface{} `json:"aaauser_aaagroup_binding,omitempty"`
-	AaauserAuditnslogpolicyBinding              []interface{} `json:"aaauser_auditnslogpolicy_binding,omitempty"`
-	AaauserAuditsyslogpolicyBinding             []interface{} `json:"aaauser_auditsyslogpolicy_binding,omitempty"`
-	AaauserAuthorizationpolicyBinding           []interface{} `json:"aaauser_authorizationpolicy_binding,omitempty"`
-	AaauserIntranetip6Binding                   []interface{} `json:"aaauser_intranetip6_binding,omitempty"`
-	AaauserIntranetipBinding                    []interface{} `json:"aaauser_intranetip_binding,omitempty"`
-	AaauserTmsessionpolicyBinding               []interface{} `json:"aaauser_tmsessionpolicy_binding,omitempty"`
-	AaauserVpnintranetapplicationBinding        []interface{} `json:"aaauser_vpnintranetapplication_binding,omitempty"`
-	AaauserVpnsecureprivateaccessprofileBinding []interface{} `json:"aaauser_vpnsecureprivateaccessprofile_binding,omitempty"`
-	AaauserVpnsessionpolicyBinding              []interface{} `json:"aaauser_vpnsessionpolicy_binding,omitempty"`
-	AaauserVpntrafficpolicyBinding              []interface{} `json:"aaauser_vpntrafficpolicy_binding,omitempty"`
-	AaauserVpnurlBinding                        []interface{} `json:"aaauser_vpnurl_binding,omitempty"`
-	AaauserVpnurlpolicyBinding                  []interface{} `json:"aaauser_vpnurlpolicy_binding,omitempty"`
+type AAAUserBinding struct {
+	AAAUserAAAGroupBinding                      []interface{} `json:"aaauser_aaagroup_binding,omitempty"`
+	AAAUserAuditNSLogPolicyBinding              []interface{} `json:"aaauser_auditnslogpolicy_binding,omitempty"`
+	AAAUserAuditSyslogPolicyBinding             []interface{} `json:"aaauser_auditsyslogpolicy_binding,omitempty"`
+	AAAUserAuthorizationPolicyBinding           []interface{} `json:"aaauser_authorizationpolicy_binding,omitempty"`
+	AAAUserIntranetIP6Binding                   []interface{} `json:"aaauser_intranetip6_binding,omitempty"`
+	AAAUserIntranetIPBinding                    []interface{} `json:"aaauser_intranetip_binding,omitempty"`
+	AAAUserTMSessionPolicyBinding               []interface{} `json:"aaauser_tmsessionpolicy_binding,omitempty"`
+	AAAUserVPNIntranetApplicationBinding        []interface{} `json:"aaauser_vpnintranetapplication_binding,omitempty"`
+	AAAUserVPNSecurePrivateAccessProfileBinding []interface{} `json:"aaauser_vpnsecureprivateaccessprofile_binding,omitempty"`
+	AAAUserVPNSessionPolicyBinding              []interface{} `json:"aaauser_vpnsessionpolicy_binding,omitempty"`
+	AAAUserVPNTrafficPolicyBinding              []interface{} `json:"aaauser_vpntrafficpolicy_binding,omitempty"`
+	AAAUserVPNURLBinding                        []interface{} `json:"aaauser_vpnurl_binding,omitempty"`
+	AAAUserVPNURLPolicyBinding                  []interface{} `json:"aaauser_vpnurlpolicy_binding,omitempty"`
 	Username                                    string        `json:"username,omitempty"`
 }
 
-type AaagroupTmsessionpolicyBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Groupname              string `json:"groupname,omitempty"`
+type AAAGroupTMSessionPolicyBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	GroupName              string `json:"groupname,omitempty"`
 	Policy                 string `json:"policy,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 }
 
-type Aaapreauthenticationpolicy struct {
+type AAAPreAuthenticationPolicy struct {
 	Builtin            []string `json:"builtin,omitempty"`
 	Count              float64  `json:"__count,omitempty"`
 	Feature            string   `json:"feature,omitempty"`
 	Hits               int      `json:"hits,omitempty"`
 	Name               string   `json:"name,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
-	Reqaction          string   `json:"reqaction,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
+	ReqAction          string   `json:"reqaction,omitempty"`
 	Rule               string   `json:"rule,omitempty"`
 }
 
-type Aaatacacsparams struct {
+type AAATACACSParams struct {
 	Accounting                 string   `json:"accounting,omitempty"`
-	Auditfailedcmds            string   `json:"auditfailedcmds,omitempty"`
+	AuditFailedCmds            string   `json:"auditfailedcmds,omitempty"`
 	Authorization              string   `json:"authorization,omitempty"`
-	Authtimeout                int      `json:"authtimeout,omitempty"`
+	AuthTimeout                int      `json:"authtimeout,omitempty"`
 	Builtin                    []string `json:"builtin,omitempty"`
-	Defaultauthenticationgroup string   `json:"defaultauthenticationgroup,omitempty"`
+	DefaultAuthenticationGroup string   `json:"defaultauthenticationgroup,omitempty"`
 	Feature                    string   `json:"feature,omitempty"`
-	Groupattrname              string   `json:"groupattrname,omitempty"`
-	Nextgenapiresource         string   `json:"_nextgenapiresource,omitempty"`
-	Serverip                   string   `json:"serverip,omitempty"`
-	Serverport                 int      `json:"serverport,omitempty"`
-	Tacacssecret               string   `json:"tacacssecret,omitempty"`
+	GroupAttrName              string   `json:"groupattrname,omitempty"`
+	NextGenAPIResource         string   `json:"_nextgenapiresource,omitempty"`
+	ServerIP                   string   `json:"serverip,omitempty"`
+	ServerPort                 int      `json:"serverport,omitempty"`
+	TACACSSecret               string   `json:"tacacssecret,omitempty"`
 }
 
-type Aaagroup struct {
+type AAAGroup struct {
 	Count              float64 `json:"__count,omitempty"`
-	Groupname          string  `json:"groupname,omitempty"`
-	Loggedin           bool    `json:"loggedin,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	GroupName          string  `json:"groupname,omitempty"`
+	LoggedIn           bool    `json:"loggedin,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Weight             int     `json:"weight,omitempty"`
 }
 
-type AaauserTmsessionpolicyBinding struct {
-	Acttype                int    `json:"acttype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type AAAUserTMSessionPolicyBinding struct {
+	ActType                int    `json:"acttype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Policy                 string `json:"policy,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 	Username               string `json:"username,omitempty"`
 }
 
-type AaagroupBinding struct {
-	AaagroupAaauserBinding                       []interface{} `json:"aaagroup_aaauser_binding,omitempty"`
-	AaagroupAuditnslogpolicyBinding              []interface{} `json:"aaagroup_auditnslogpolicy_binding,omitempty"`
-	AaagroupAuditsyslogpolicyBinding             []interface{} `json:"aaagroup_auditsyslogpolicy_binding,omitempty"`
-	AaagroupAuthorizationpolicyBinding           []interface{} `json:"aaagroup_authorizationpolicy_binding,omitempty"`
-	AaagroupIntranetip6Binding                   []interface{} `json:"aaagroup_intranetip6_binding,omitempty"`
-	AaagroupIntranetipBinding                    []interface{} `json:"aaagroup_intranetip_binding,omitempty"`
-	AaagroupTmsessionpolicyBinding               []interface{} `json:"aaagroup_tmsessionpolicy_binding,omitempty"`
-	AaagroupVpnintranetapplicationBinding        []interface{} `json:"aaagroup_vpnintranetapplication_binding,omitempty"`
-	AaagroupVpnsecureprivateaccessprofileBinding []interface{} `json:"aaagroup_vpnsecureprivateaccessprofile_binding,omitempty"`
-	AaagroupVpnsessionpolicyBinding              []interface{} `json:"aaagroup_vpnsessionpolicy_binding,omitempty"`
-	AaagroupVpntrafficpolicyBinding              []interface{} `json:"aaagroup_vpntrafficpolicy_binding,omitempty"`
-	AaagroupVpnurlBinding                        []interface{} `json:"aaagroup_vpnurl_binding,omitempty"`
-	AaagroupVpnurlpolicyBinding                  []interface{} `json:"aaagroup_vpnurlpolicy_binding,omitempty"`
-	Groupname                                    string        `json:"groupname,omitempty"`
+type AAAGroupBinding struct {
+	AAAGroupAAAUserBinding                       []interface{} `json:"aaagroup_aaauser_binding,omitempty"`
+	AAAGroupAuditNSLogPolicyBinding              []interface{} `json:"aaagroup_auditnslogpolicy_binding,omitempty"`
+	AAAGroupAuditSyslogPolicyBinding             []interface{} `json:"aaagroup_auditsyslogpolicy_binding,omitempty"`
+	AAAGroupAuthorizationPolicyBinding           []interface{} `json:"aaagroup_authorizationpolicy_binding,omitempty"`
+	AAAGroupIntranetIP6Binding                   []interface{} `json:"aaagroup_intranetip6_binding,omitempty"`
+	AAAGroupIntranetIPBinding                    []interface{} `json:"aaagroup_intranetip_binding,omitempty"`
+	AAAGroupTMSessionPolicyBinding               []interface{} `json:"aaagroup_tmsessionpolicy_binding,omitempty"`
+	AAAGroupVPNIntranetApplicationBinding        []interface{} `json:"aaagroup_vpnintranetapplication_binding,omitempty"`
+	AAAGroupVPNSecurePrivateAccessProfileBinding []interface{} `json:"aaagroup_vpnsecureprivateaccessprofile_binding,omitempty"`
+	AAAGroupVPNSessionPolicyBinding              []interface{} `json:"aaagroup_vpnsessionpolicy_binding,omitempty"`
+	AAAGroupVPNTrafficPolicyBinding              []interface{} `json:"aaagroup_vpntrafficpolicy_binding,omitempty"`
+	AAAGroupVPNURLBinding                        []interface{} `json:"aaagroup_vpnurl_binding,omitempty"`
+	AAAGroupVPNURLPolicyBinding                  []interface{} `json:"aaagroup_vpnurlpolicy_binding,omitempty"`
+	GroupName                                    string        `json:"groupname,omitempty"`
 }
 
-type Aaasession struct {
+type AAASession struct {
 	All                bool    `json:"all,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Destip             string  `json:"destip,omitempty"`
-	Destport           int     `json:"destport,omitempty"`
-	Groupname          string  `json:"groupname,omitempty"`
-	Iip                string  `json:"iip,omitempty"`
-	Intranetip         string  `json:"intranetip,omitempty"`
-	Intranetip6        string  `json:"intranetip6,omitempty"`
-	Ipaddress          string  `json:"ipaddress,omitempty"`
+	DestIP             string  `json:"destip,omitempty"`
+	DestPort           int     `json:"destport,omitempty"`
+	GroupName          string  `json:"groupname,omitempty"`
+	IIP                string  `json:"iip,omitempty"`
+	IntranetIP         string  `json:"intranetip,omitempty"`
+	IntranetIP6        string  `json:"intranetip6,omitempty"`
+	IPAddress          string  `json:"ipaddress,omitempty"`
 	Netmask            string  `json:"netmask,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Nodeid             int     `json:"nodeid,omitempty"`
-	Peid               int     `json:"peid,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	NodeID             int     `json:"nodeid,omitempty"`
+	PEID               int     `json:"peid,omitempty"`
 	Port               int     `json:"port,omitempty"`
-	Privateip          string  `json:"privateip,omitempty"`
-	Privateport        int     `json:"privateport,omitempty"`
-	Publicip           string  `json:"publicip,omitempty"`
-	Publicport         int     `json:"publicport,omitempty"`
-	Sessionkey         string  `json:"sessionkey,omitempty"`
+	PrivateIP          string  `json:"privateip,omitempty"`
+	PrivatePort        int     `json:"privateport,omitempty"`
+	PublicIP           string  `json:"publicip,omitempty"`
+	PublicPort         int     `json:"publicport,omitempty"`
+	SessionKey         string  `json:"sessionkey,omitempty"`
 	Username           string  `json:"username,omitempty"`
 }
 
-type Aaapreauthenticationaction struct {
+type AAAPreAuthenticationAction struct {
 	Builtin                 []string `json:"builtin,omitempty"`
 	Count                   float64  `json:"__count,omitempty"`
-	Defaultepagroup         string   `json:"defaultepagroup,omitempty"`
-	Deletefiles             string   `json:"deletefiles,omitempty"`
+	DefaultEPAGroup         string   `json:"defaultepagroup,omitempty"`
+	DeleteFiles             string   `json:"deletefiles,omitempty"`
 	Feature                 string   `json:"feature,omitempty"`
-	Killprocess             string   `json:"killprocess,omitempty"`
+	KillProcess             string   `json:"killprocess,omitempty"`
 	Name                    string   `json:"name,omitempty"`
-	Nextgenapiresource      string   `json:"_nextgenapiresource,omitempty"`
-	Preauthenticationaction string   `json:"preauthenticationaction,omitempty"`
+	NextGenAPIResource      string   `json:"_nextgenapiresource,omitempty"`
+	PreAuthenticationAction string   `json:"preauthenticationaction,omitempty"`
 }
 
-type AaauserAaagroupBinding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Groupname              string `json:"groupname,omitempty"`
+type AAAUserAAAGroupBinding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	GroupName              string `json:"groupname,omitempty"`
 	Username               string `json:"username,omitempty"`
 }
 
-type Aaaldapparams struct {
-	Authtimeout                int      `json:"authtimeout,omitempty"`
+type AAALDAPParams struct {
+	AuthTimeout                int      `json:"authtimeout,omitempty"`
 	Builtin                    []string `json:"builtin,omitempty"`
-	Defaultauthenticationgroup string   `json:"defaultauthenticationgroup,omitempty"`
+	DefaultAuthenticationGroup string   `json:"defaultauthenticationgroup,omitempty"`
 	Feature                    string   `json:"feature,omitempty"`
-	Groupattrname              string   `json:"groupattrname,omitempty"`
-	Groupauthname              string   `json:"groupauthname,omitempty"`
-	Groupnameidentifier        string   `json:"groupnameidentifier,omitempty"`
-	Groupsearchattribute       string   `json:"groupsearchattribute,omitempty"`
-	Groupsearchfilter          string   `json:"groupsearchfilter,omitempty"`
-	Groupsearchsubattribute    string   `json:"groupsearchsubattribute,omitempty"`
-	Ldapbase                   string   `json:"ldapbase,omitempty"`
-	Ldapbinddn                 string   `json:"ldapbinddn,omitempty"`
-	Ldapbinddnpassword         string   `json:"ldapbinddnpassword,omitempty"`
-	Ldaploginname              string   `json:"ldaploginname,omitempty"`
-	Maxnestinglevel            int      `json:"maxnestinglevel,omitempty"`
-	Nestedgroupextraction      string   `json:"nestedgroupextraction,omitempty"`
-	Nextgenapiresource         string   `json:"_nextgenapiresource,omitempty"`
-	Passwdchange               string   `json:"passwdchange,omitempty"`
-	Searchfilter               string   `json:"searchfilter,omitempty"`
-	Sectype                    string   `json:"sectype,omitempty"`
-	Serverip                   string   `json:"serverip,omitempty"`
-	Serverport                 int      `json:"serverport,omitempty"`
-	Ssonameattribute           string   `json:"ssonameattribute,omitempty"`
-	Subattributename           string   `json:"subattributename,omitempty"`
-	Svrtype                    string   `json:"svrtype,omitempty"`
+	GroupAttrName              string   `json:"groupattrname,omitempty"`
+	GroupAuthName              string   `json:"groupauthname,omitempty"`
+	GroupNameIdentifier        string   `json:"groupnameidentifier,omitempty"`
+	GroupSearchAttribute       string   `json:"groupsearchattribute,omitempty"`
+	GroupSearchFilter          string   `json:"groupsearchfilter,omitempty"`
+	GroupSearchSubAttribute    string   `json:"groupsearchsubattribute,omitempty"`
+	LDAPBase                   string   `json:"ldapbase,omitempty"`
+	LDAPBindDN                 string   `json:"ldapbinddn,omitempty"`
+	LDAPBindDNPassword         string   `json:"ldapbinddnpassword,omitempty"`
+	LDAPLoginName              string   `json:"ldaploginname,omitempty"`
+	MaxNestingLevel            int      `json:"maxnestinglevel,omitempty"`
+	NestedGroupExtraction      string   `json:"nestedgroupextraction,omitempty"`
+	NextGenAPIResource         string   `json:"_nextgenapiresource,omitempty"`
+	PasswdChange               string   `json:"passwdchange,omitempty"`
+	SearchFilter               string   `json:"searchfilter,omitempty"`
+	SecType                    string   `json:"sectype,omitempty"`
+	ServerIP                   string   `json:"serverip,omitempty"`
+	ServerPort                 int      `json:"serverport,omitempty"`
+	SSONameAttribute           string   `json:"ssonameattribute,omitempty"`
+	SubAttributeName           string   `json:"subattributename,omitempty"`
+	SvrType                    string   `json:"svrtype,omitempty"`
 }
 
-type Aaauser struct {
+type AAAUser struct {
 	Count              float64 `json:"__count,omitempty"`
-	Loggedin           bool    `json:"loggedin,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	LoggedIn           bool    `json:"loggedin,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Password           string  `json:"password,omitempty"`
 	Username           string  `json:"username,omitempty"`
 }
 
-type AaauserIntranetip6Binding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Intranetip6            string `json:"intranetip6,omitempty"`
-	Numaddr                int    `json:"numaddr,omitempty"`
+type AAAUserIntranetIP6Binding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	IntranetIP6            string `json:"intranetip6,omitempty"`
+	NumAddr                int    `json:"numaddr,omitempty"`
 	Username               string `json:"username,omitempty"`
 }
 
-type AaapreauthenticationpolicyVpnvserverBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AAAPreAuthenticationPolicyVPNVServerBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
