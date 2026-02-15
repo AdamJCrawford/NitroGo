@@ -1,339 +1,302 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
-type Botprofileblacklistbinding struct {
-	Botblacklist        bool     `json:"bot_blacklist,omitempty"`
-	Botblacklisttype    string   `json:"bot_blacklist_type,omitempty"`
-	Botblacklistenabled string   `json:"bot_blacklist_enabled,omitempty"`
-	Botblacklistvalue   string   `json:"bot_blacklist_value,omitempty"`
-	Botblacklistaction  []string `json:"bot_blacklist_action,omitempty"`
-	Logmessage          string   `json:"logmessage,omitempty"`
-	Botbindcomment      string   `json:"bot_bind_comment,omitempty"`
-	Name                string   `json:"name,omitempty"`
+// bot configuration structs
+type Botprofile struct {
+	Addcookieflags                         string   `json:"addcookieflags,omitempty"`
+	BotEnableBlackList                     string   `json:"bot_enable_black_list,omitempty"`
+	BotEnableIpReputation                  string   `json:"bot_enable_ip_reputation,omitempty"`
+	BotEnableRateLimit                     string   `json:"bot_enable_rate_limit,omitempty"`
+	BotEnableTps                           string   `json:"bot_enable_tps,omitempty"`
+	BotEnableWhiteList                     string   `json:"bot_enable_white_list,omitempty"`
+	Builtin                                []string `json:"builtin,omitempty"`
+	Clientipexpression                     string   `json:"clientipexpression,omitempty"`
+	Comment                                string   `json:"comment,omitempty"`
+	Count                                  float64  `json:"__count,omitempty"`
+	Devicefingerprint                      string   `json:"devicefingerprint,omitempty"`
+	Devicefingerprintaction                []string `json:"devicefingerprintaction,omitempty"`
+	Devicefingerprintmobile                []string `json:"devicefingerprintmobile,omitempty"`
+	Dfprequestlimit                        int      `json:"dfprequestlimit,omitempty"`
+	Errorurl                               string   `json:"errorurl,omitempty"`
+	Feature                                string   `json:"feature,omitempty"`
+	Headlessbrowserdetection               string   `json:"headlessbrowserdetection,omitempty"`
+	Kmdetection                            string   `json:"kmdetection,omitempty"`
+	Kmeventspostbodylimit                  int      `json:"kmeventspostbodylimit,omitempty"`
+	Kmjavascriptname                       string   `json:"kmjavascriptname,omitempty"`
+	Name                                   string   `json:"name,omitempty"`
+	Nextgenapiresource                     string   `json:"_nextgenapiresource,omitempty"`
+	Sessioncookiename                      string   `json:"sessioncookiename,omitempty"`
+	Sessiontimeout                         int      `json:"sessiontimeout,omitempty"`
+	Signature                              string   `json:"signature,omitempty"`
+	Signaturemultipleuseragentheaderaction []string `json:"signaturemultipleuseragentheaderaction,omitempty"`
+	Signaturenouseragentheaderaction       []string `json:"signaturenouseragentheaderaction,omitempty"`
+	Spoofedreqaction                       []string `json:"spoofedreqaction,omitempty"`
+	Trap                                   string   `json:"trap,omitempty"`
+	Trapaction                             []string `json:"trapaction,omitempty"`
+	Trapurl                                string   `json:"trapurl,omitempty"`
+	Verboseloglevel                        string   `json:"verboseloglevel,omitempty"`
 }
 
-type Botsignature struct {
-	Src                string `json:"src,omitempty"`
-	Name               string `json:"name,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Overwrite          bool   `json:"overwrite,omitempty"`
-	Response           string `json:"response,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Botpolicybinding struct {
-	Name string `json:"name,omitempty"`
-}
-
-type Botpolicyglobalbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Activepolicy           int32  `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Botprofilecaptchabinding struct {
-	Captcharesource   bool     `json:"captcharesource,omitempty"`
-	Botcaptchaurl     string   `json:"bot_captcha_url,omitempty"`
-	Botcaptchaenabled string   `json:"bot_captcha_enabled,omitempty"`
-	Waittime          int      `json:"waittime,omitempty"`
-	Graceperiod       int      `json:"graceperiod,omitempty"`
-	Muteperiod        int      `json:"muteperiod,omitempty"`
-	Requestsizelimit  int      `json:"requestsizelimit,omitempty"`
-	Retryattempts     int      `json:"retryattempts,omitempty"`
-	Botcaptchaaction  []string `json:"bot_captcha_action,omitempty"`
-	Logmessage        string   `json:"logmessage,omitempty"`
-	Botbindcomment    string   `json:"bot_bind_comment,omitempty"`
-	Name              string   `json:"name,omitempty"`
-}
-
-type Botprofiletpsbinding struct {
-	Bottps         bool     `json:"bot_tps,omitempty"`
-	Bottpstype     string   `json:"bot_tps_type,omitempty"`
-	Threshold      int      `json:"threshold,omitempty"`
-	Percentage     int      `json:"percentage,omitempty"`
-	Bottpsaction   []string `json:"bot_tps_action,omitempty"`
-	Logmessage     string   `json:"logmessage,omitempty"`
-	Botbindcomment string   `json:"bot_bind_comment,omitempty"`
-	Bottpsenabled  string   `json:"bot_tps_enabled,omitempty"`
-	Name           string   `json:"name,omitempty"`
-}
-
-type Botpolicybotpolicylabelbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
+type BotpolicyCsvserverBinding struct {
 	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Botpolicyvserverbinding struct {
 	Boundto                string `json:"boundto,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Activepolicy           int32  `json:"activepolicy,omitempty"`
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
 	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
-}
-
-type Botpolicylabelbotpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Invokelabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
 }
 
-type Botglobalpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Type                   string `json:"type,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Numpol                 uint32 `json:"numpol,omitempty"`
-	Flowtype               uint32 `json:"flowtype,omitempty"`
-	Globalbindtype         string `json:"globalbindtype,omitempty"`
+type BotprofileKmdetectionexprBinding struct {
+	BotBindComment        string `json:"bot_bind_comment,omitempty"`
+	BotKmDetectionEnabled string `json:"bot_km_detection_enabled,omitempty"`
+	BotKmExpressionName   string `json:"bot_km_expression_name,omitempty"`
+	BotKmExpressionValue  string `json:"bot_km_expression_value,omitempty"`
+	Kmdetectionexpr       bool   `json:"kmdetectionexpr,omitempty"`
+	Logmessage            string `json:"logmessage,omitempty"`
+	Name                  string `json:"name,omitempty"`
 }
 
-type Botpolicycsvserverbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Botprofilelogexpressionbinding struct {
-	Logexpression           bool   `json:"logexpression,omitempty"`
-	Botlogexpressionname    string `json:"bot_log_expression_name,omitempty"`
-	Botlogexpressionvalue   string `json:"bot_log_expression_value,omitempty"`
-	Botlogexpressionenabled string `json:"bot_log_expression_enabled,omitempty"`
-	Botbindcomment          string `json:"bot_bind_comment,omitempty"`
-	Name                    string `json:"name,omitempty"`
-	Logmessage              string `json:"logmessage,omitempty"`
-}
-
-type Botpolicylabelpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Invokelabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Botpolicylabelpolicybindingbinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Invokelabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Botprofileratelimitbinding struct {
-	Botratelimit        bool     `json:"bot_ratelimit,omitempty"`
-	Botratelimittype    string   `json:"bot_rate_limit_type,omitempty"`
-	Botratelimitenabled string   `json:"bot_rate_limit_enabled,omitempty"`
-	Botratelimiturl     string   `json:"bot_rate_limit_url,omitempty"`
-	Cookiename          string   `json:"cookiename,omitempty"`
-	Countrycode         string   `json:"countrycode,omitempty"`
-	Rate                int      `json:"rate,omitempty"`
-	Timeslice           int      `json:"timeslice,omitempty"`
-	Limittype           string   `json:"limittype,omitempty"`
-	Condition           string   `json:"condition,omitempty"`
-	Botratelimitaction  []string `json:"bot_rate_limit_action,omitempty"`
-	Logmessage          string   `json:"logmessage,omitempty"`
-	Botbindcomment      string   `json:"bot_bind_comment,omitempty"`
-	Name                string   `json:"name,omitempty"`
-}
-
-type Botsettings struct {
-	Defaultprofile             string `json:"defaultprofile,omitempty"`
-	Defaultnonintrusiveprofile string `json:"defaultnonintrusiveprofile,omitempty"`
-	Javascriptname             string `json:"javascriptname,omitempty"`
-	Sessiontimeout             int    `json:"sessiontimeout,omitempty"`
-	Sessioncookiename          string `json:"sessioncookiename,omitempty"`
-	Dfprequestlimit            int    `json:"dfprequestlimit,omitempty"`
-	Signatureautoupdate        string `json:"signatureautoupdate,omitempty"`
-	Signatureurl               string `json:"signatureurl,omitempty"`
-	Proxyserver                string `json:"proxyserver,omitempty"`
-	Proxyport                  int    `json:"proxyport,omitempty"`
-	Trapurlautogenerate        string `json:"trapurlautogenerate,omitempty"`
-	Trapurlinterval            int    `json:"trapurlinterval,omitempty"`
-	Trapurllength              int    `json:"trapurllength,omitempty"`
-	Proxyusername              string `json:"proxyusername,omitempty"`
-	Proxypassword              string `json:"proxypassword,omitempty"`
-	Builtin                    string `json:"builtin,omitempty"`
-	Feature                    string `json:"feature,omitempty"`
-	Nextgenapiresource         string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Botpolicylabel struct {
-	Labelname          string `json:"labelname,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Newname            string `json:"newname,omitempty"`
-	Numpol             string `json:"numpol,omitempty"`
-	Hits               string `json:"hits,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Botpolicylbvserverbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Botprofilebinding struct {
-	Name string `json:"name,omitempty"`
-}
-
-type Botprofileipreputationbinding struct {
-	Botipreputation bool     `json:"bot_ipreputation,omitempty"`
+type BotprofileIpreputationBinding struct {
+	BotBindComment  string   `json:"bot_bind_comment,omitempty"`
+	BotIprepAction  []string `json:"bot_iprep_action,omitempty"`
+	BotIprepEnabled string   `json:"bot_iprep_enabled,omitempty"`
+	BotIpreputation bool     `json:"bot_ipreputation,omitempty"`
 	Category        string   `json:"category,omitempty"`
-	Botiprepenabled string   `json:"bot_iprep_enabled,omitempty"`
-	Botiprepaction  []string `json:"bot_iprep_action,omitempty"`
 	Logmessage      string   `json:"logmessage,omitempty"`
-	Botbindcomment  string   `json:"bot_bind_comment,omitempty"`
 	Name            string   `json:"name,omitempty"`
 }
 
-type Botprofiletrapinsertionurlbinding struct {
-	Trapinsertionurl           bool   `json:"trapinsertionurl,omitempty"`
-	Bottrapurl                 string `json:"bot_trap_url,omitempty"`
-	Bottrapurlinsertionenabled string `json:"bot_trap_url_insertion_enabled,omitempty"`
-	Botbindcomment             string `json:"bot_bind_comment,omitempty"`
-	Name                       string `json:"name,omitempty"`
-	Logmessage                 string `json:"logmessage,omitempty"`
+type Botsignature struct {
+	Comment            string `json:"comment,omitempty"`
+	Name               string `json:"name,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Overwrite          bool   `json:"overwrite,omitempty"`
+	Response           string `json:"response,omitempty"`
+	Src                string `json:"src,omitempty"`
 }
 
-type Botprofilewhitelistbinding struct {
-	Botwhitelist        bool   `json:"bot_whitelist,omitempty"`
-	Botwhitelisttype    string `json:"bot_whitelist_type,omitempty"`
-	Botwhitelistenabled string `json:"bot_whitelist_enabled,omitempty"`
-	Botwhitelistvalue   string `json:"bot_whitelist_value,omitempty"`
-	Log                 string `json:"log,omitempty"`
-	Logmessage          string `json:"logmessage,omitempty"`
-	Botbindcomment      string `json:"bot_bind_comment,omitempty"`
-	Name                string `json:"name,omitempty"`
-}
-
-type Botpolicylabelbinding struct {
-	Labelname string `json:"labelname,omitempty"`
-}
-
-type Botglobalbinding struct {
-}
-
-type Botglobalbotpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Type                   string `json:"type,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
+type BotpolicyLbvserverBinding struct {
+	Activepolicy           int    `json:"activepolicy,omitempty"`
+	Boundto                string `json:"boundto,omitempty"`
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
 	Labelname              string `json:"labelname,omitempty"`
-	Numpol                 int    `json:"numpol,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type Botsettings struct {
+	Builtin                    []string `json:"builtin,omitempty"`
+	Defaultnonintrusiveprofile string   `json:"defaultnonintrusiveprofile,omitempty"`
+	Defaultprofile             string   `json:"defaultprofile,omitempty"`
+	Dfprequestlimit            int      `json:"dfprequestlimit,omitempty"`
+	Feature                    string   `json:"feature,omitempty"`
+	Javascriptname             string   `json:"javascriptname,omitempty"`
+	Nextgenapiresource         string   `json:"_nextgenapiresource,omitempty"`
+	Proxypassword              string   `json:"proxypassword,omitempty"`
+	Proxyport                  int      `json:"proxyport,omitempty"`
+	Proxyserver                string   `json:"proxyserver,omitempty"`
+	Proxyusername              string   `json:"proxyusername,omitempty"`
+	Sessioncookiename          string   `json:"sessioncookiename,omitempty"`
+	Sessiontimeout             int      `json:"sessiontimeout,omitempty"`
+	Signatureautoupdate        string   `json:"signatureautoupdate,omitempty"`
+	Signatureurl               string   `json:"signatureurl,omitempty"`
+	Trapurlautogenerate        string   `json:"trapurlautogenerate,omitempty"`
+	Trapurlinterval            int      `json:"trapurlinterval,omitempty"`
+	Trapurllength              int      `json:"trapurllength,omitempty"`
+}
+
+type BotpolicylabelBinding struct {
+	BotpolicylabelBotpolicyBinding     []interface{} `json:"botpolicylabel_botpolicy_binding,omitempty"`
+	BotpolicylabelPolicybindingBinding []interface{} `json:"botpolicylabel_policybinding_binding,omitempty"`
+	Labelname                          string        `json:"labelname,omitempty"`
+}
+
+type BotglobalBotpolicyBinding struct {
 	Flowtype               int    `json:"flowtype,omitempty"`
 	Globalbindtype         string `json:"globalbindtype,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Numpol                 int    `json:"numpol,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	TypeField              string `json:"type,omitempty"`
+}
+
+type BotpolicyBinding struct {
+	BotpolicyBotglobalBinding      []interface{} `json:"botpolicy_botglobal_binding,omitempty"`
+	BotpolicyBotpolicylabelBinding []interface{} `json:"botpolicy_botpolicylabel_binding,omitempty"`
+	BotpolicyCsvserverBinding      []interface{} `json:"botpolicy_csvserver_binding,omitempty"`
+	BotpolicyLbvserverBinding      []interface{} `json:"botpolicy_lbvserver_binding,omitempty"`
+	Name                           string        `json:"name,omitempty"`
+}
+
+type BotprofileTrapinsertionurlBinding struct {
+	BotBindComment             string `json:"bot_bind_comment,omitempty"`
+	BotTrapUrl                 string `json:"bot_trap_url,omitempty"`
+	BotTrapUrlInsertionEnabled string `json:"bot_trap_url_insertion_enabled,omitempty"`
+	Logmessage                 string `json:"logmessage,omitempty"`
+	Name                       string `json:"name,omitempty"`
+	Trapinsertionurl           bool   `json:"trapinsertionurl,omitempty"`
+}
+
+type BotprofileBinding struct {
+	BotprofileBlacklistBinding        []interface{} `json:"botprofile_blacklist_binding,omitempty"`
+	BotprofileCaptchaBinding          []interface{} `json:"botprofile_captcha_binding,omitempty"`
+	BotprofileIpreputationBinding     []interface{} `json:"botprofile_ipreputation_binding,omitempty"`
+	BotprofileKmdetectionexprBinding  []interface{} `json:"botprofile_kmdetectionexpr_binding,omitempty"`
+	BotprofileLogexpressionBinding    []interface{} `json:"botprofile_logexpression_binding,omitempty"`
+	BotprofileRatelimitBinding        []interface{} `json:"botprofile_ratelimit_binding,omitempty"`
+	BotprofileTpsBinding              []interface{} `json:"botprofile_tps_binding,omitempty"`
+	BotprofileTrapinsertionurlBinding []interface{} `json:"botprofile_trapinsertionurl_binding,omitempty"`
+	BotprofileWhitelistBinding        []interface{} `json:"botprofile_whitelist_binding,omitempty"`
+	Name                              string        `json:"name,omitempty"`
 }
 
 type Botpolicy struct {
-	Name               string `json:"name,omitempty"`
-	Rule               string `json:"rule,omitempty"`
-	Profilename        string `json:"profilename,omitempty"`
-	Undefaction        string `json:"undefaction,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Logaction          string `json:"logaction,omitempty"`
-	Newname            string `json:"newname,omitempty"`
-	Hits               string `json:"hits,omitempty"`
-	Undefhits          string `json:"undefhits,omitempty"`
-	Builtin            string `json:"builtin,omitempty"`
-	Feature            string `json:"feature,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Builtin            []string `json:"builtin,omitempty"`
+	Comment            string   `json:"comment,omitempty"`
+	Count              float64  `json:"__count,omitempty"`
+	Feature            string   `json:"feature,omitempty"`
+	Hits               int      `json:"hits,omitempty"`
+	Logaction          string   `json:"logaction,omitempty"`
+	Name               string   `json:"name,omitempty"`
+	Newname            string   `json:"newname,omitempty"`
+	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	Profilename        string   `json:"profilename,omitempty"`
+	Rule               string   `json:"rule,omitempty"`
+	Undefaction        string   `json:"undefaction,omitempty"`
+	Undefhits          int      `json:"undefhits,omitempty"`
 }
 
-type Botprofilekmdetectionexprbinding struct {
-	Kmdetectionexpr       bool   `json:"kmdetectionexpr,omitempty"`
-	Botkmexpressionname   string `json:"bot_km_expression_name,omitempty"`
-	Botkmexpressionvalue  string `json:"bot_km_expression_value,omitempty"`
-	Botkmdetectionenabled string `json:"bot_km_detection_enabled,omitempty"`
-	Botbindcomment        string `json:"bot_bind_comment,omitempty"`
-	Name                  string `json:"name,omitempty"`
-	Logmessage            string `json:"logmessage,omitempty"`
-}
-
-type Botpolicybotglobalbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
+type BotpolicylabelBotpolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	InvokeLabelname        string `json:"invoke_labelname,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
+}
+
+type BotprofileWhitelistBinding struct {
+	BotBindComment      string `json:"bot_bind_comment,omitempty"`
+	BotWhitelist        bool   `json:"bot_whitelist,omitempty"`
+	BotWhitelistEnabled string `json:"bot_whitelist_enabled,omitempty"`
+	BotWhitelistType    string `json:"bot_whitelist_type,omitempty"`
+	BotWhitelistValue   string `json:"bot_whitelist_value,omitempty"`
+	Log                 string `json:"log,omitempty"`
+	Logmessage          string `json:"logmessage,omitempty"`
+	Name                string `json:"name,omitempty"`
+}
+
+type BotglobalBinding struct {
+	BotglobalBotpolicyBinding []interface{} `json:"botglobal_botpolicy_binding,omitempty"`
+}
+
+type BotprofileLogexpressionBinding struct {
+	BotBindComment          string `json:"bot_bind_comment,omitempty"`
+	BotLogExpressionEnabled string `json:"bot_log_expression_enabled,omitempty"`
+	BotLogExpressionName    string `json:"bot_log_expression_name,omitempty"`
+	BotLogExpressionValue   string `json:"bot_log_expression_value,omitempty"`
+	Logexpression           bool   `json:"logexpression,omitempty"`
+	Logmessage              string `json:"logmessage,omitempty"`
+	Name                    string `json:"name,omitempty"`
+}
+
+type Botpolicylabel struct {
+	Comment            string  `json:"comment,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Hits               int     `json:"hits,omitempty"`
+	Labelname          string  `json:"labelname,omitempty"`
+	Newname            string  `json:"newname,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Numpol             int     `json:"numpol,omitempty"`
+}
+
+type BotprofileCaptchaBinding struct {
+	BotBindComment    string   `json:"bot_bind_comment,omitempty"`
+	BotCaptchaAction  []string `json:"bot_captcha_action,omitempty"`
+	BotCaptchaEnabled string   `json:"bot_captcha_enabled,omitempty"`
+	BotCaptchaUrl     string   `json:"bot_captcha_url,omitempty"`
+	Captcharesource   bool     `json:"captcharesource,omitempty"`
+	Graceperiod       int      `json:"graceperiod,omitempty"`
+	Logmessage        string   `json:"logmessage,omitempty"`
+	Muteperiod        int      `json:"muteperiod,omitempty"`
+	Name              string   `json:"name,omitempty"`
+	Requestsizelimit  int      `json:"requestsizelimit,omitempty"`
+	Retryattempts     int      `json:"retryattempts,omitempty"`
+	Waittime          int      `json:"waittime,omitempty"`
+}
+
+type BotpolicyBotglobalBinding struct {
 	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Botpolicypolicylabelbinding struct {
 	Boundto                string `json:"boundto,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Activepolicy           int32  `json:"activepolicy,omitempty"`
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
 	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
 }
 
-type Botprofile struct {
-	Name                                   string   `json:"name,omitempty"`
-	Signature                              string   `json:"signature,omitempty"`
-	Errorurl                               string   `json:"errorurl,omitempty"`
-	Trapurl                                string   `json:"trapurl,omitempty"`
-	Comment                                string   `json:"comment,omitempty"`
-	Botenablewhitelist                     string   `json:"bot_enable_white_list,omitempty"`
-	Botenableblacklist                     string   `json:"bot_enable_black_list,omitempty"`
-	Botenableratelimit                     string   `json:"bot_enable_rate_limit,omitempty"`
-	Devicefingerprint                      string   `json:"devicefingerprint,omitempty"`
-	Devicefingerprintaction                []string `json:"devicefingerprintaction,omitempty"`
-	Botenableipreputation                  string   `json:"bot_enable_ip_reputation,omitempty"`
-	Trap                                   string   `json:"trap,omitempty"`
-	Trapaction                             []string `json:"trapaction,omitempty"`
-	Signaturenouseragentheaderaction       []string `json:"signaturenouseragentheaderaction,omitempty"`
-	Signaturemultipleuseragentheaderaction []string `json:"signaturemultipleuseragentheaderaction,omitempty"`
-	Botenabletps                           string   `json:"bot_enable_tps,omitempty"`
-	Devicefingerprintmobile                []string `json:"devicefingerprintmobile,omitempty"`
-	Headlessbrowserdetection               string   `json:"headlessbrowserdetection,omitempty"`
-	Clientipexpression                     string   `json:"clientipexpression,omitempty"`
-	Kmjavascriptname                       string   `json:"kmjavascriptname,omitempty"`
-	Kmdetection                            string   `json:"kmdetection,omitempty"`
-	Kmeventspostbodylimit                  int      `json:"kmeventspostbodylimit,omitempty"`
-	Verboseloglevel                        string   `json:"verboseloglevel,omitempty"`
-	Spoofedreqaction                       []string `json:"spoofedreqaction,omitempty"`
-	Dfprequestlimit                        int      `json:"dfprequestlimit,omitempty"`
-	Sessioncookiename                      string   `json:"sessioncookiename,omitempty"`
-	Sessiontimeout                         int      `json:"sessiontimeout,omitempty"`
-	Addcookieflags                         string   `json:"addcookieflags,omitempty"`
-	Builtin                                string   `json:"builtin,omitempty"`
-	Feature                                string   `json:"feature,omitempty"`
-	Nextgenapiresource                     string   `json:"_nextgenapiresource,omitempty"`
+type BotpolicyBotpolicylabelBinding struct {
+	Activepolicy           int    `json:"activepolicy,omitempty"`
+	Boundto                string `json:"boundto,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type BotpolicylabelPolicybindingBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	InvokeLabelname        string `json:"invoke_labelname,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type BotprofileTpsBinding struct {
+	BotBindComment string   `json:"bot_bind_comment,omitempty"`
+	BotTps         bool     `json:"bot_tps,omitempty"`
+	BotTpsAction   []string `json:"bot_tps_action,omitempty"`
+	BotTpsEnabled  string   `json:"bot_tps_enabled,omitempty"`
+	BotTpsType     string   `json:"bot_tps_type,omitempty"`
+	Logmessage     string   `json:"logmessage,omitempty"`
+	Name           string   `json:"name,omitempty"`
+	Percentage     int      `json:"percentage,omitempty"`
+	Threshold      int      `json:"threshold,omitempty"`
+}
+
+type BotprofileRatelimitBinding struct {
+	BotBindComment      string   `json:"bot_bind_comment,omitempty"`
+	BotRateLimitAction  []string `json:"bot_rate_limit_action,omitempty"`
+	BotRateLimitEnabled string   `json:"bot_rate_limit_enabled,omitempty"`
+	BotRateLimitType    string   `json:"bot_rate_limit_type,omitempty"`
+	BotRateLimitUrl     string   `json:"bot_rate_limit_url,omitempty"`
+	BotRatelimit        bool     `json:"bot_ratelimit,omitempty"`
+	Condition           string   `json:"condition,omitempty"`
+	Cookiename          string   `json:"cookiename,omitempty"`
+	Countrycode         string   `json:"countrycode,omitempty"`
+	Limittype           string   `json:"limittype,omitempty"`
+	Logmessage          string   `json:"logmessage,omitempty"`
+	Name                string   `json:"name,omitempty"`
+	Rate                int      `json:"rate,omitempty"`
+	Timeslice           int      `json:"timeslice,omitempty"`
+}
+
+type BotprofileBlacklistBinding struct {
+	BotBindComment      string   `json:"bot_bind_comment,omitempty"`
+	BotBlacklist        bool     `json:"bot_blacklist,omitempty"`
+	BotBlacklistAction  []string `json:"bot_blacklist_action,omitempty"`
+	BotBlacklistEnabled string   `json:"bot_blacklist_enabled,omitempty"`
+	BotBlacklistType    string   `json:"bot_blacklist_type,omitempty"`
+	BotBlacklistValue   string   `json:"bot_blacklist_value,omitempty"`
+	Logmessage          string   `json:"logmessage,omitempty"`
+	Name                string   `json:"name,omitempty"`
 }

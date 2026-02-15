@@ -1,23 +1,22 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
-type Azureapplication struct {
-	Name               string `json:"name,omitempty"`
-	Clientid           string `json:"clientid,omitempty"`
-	Clientsecret       string `json:"clientsecret,omitempty"`
-	Tenantid           string `json:"tenantid,omitempty"`
-	Vaultresource      string `json:"vaultresource,omitempty"`
-	Tokenendpoint      string `json:"tokenendpoint,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+// azure configuration structs
+type Azurekeyvault struct {
+	Azureapplication   string  `json:"azureapplication,omitempty"`
+	Azurevaultname     string  `json:"azurevaultname,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	State              string  `json:"state,omitempty"`
 }
 
-type Azurekeyvault struct {
-	Name               string `json:"name,omitempty"`
-	Azurevaultname     string `json:"azurevaultname,omitempty"`
-	Azureapplication   string `json:"azureapplication,omitempty"`
-	State              string `json:"state,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+type Azureapplication struct {
+	Clientid           string  `json:"clientid,omitempty"`
+	Clientsecret       string  `json:"clientsecret,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Tenantid           string  `json:"tenantid,omitempty"`
+	Tokenendpoint      string  `json:"tokenendpoint,omitempty"`
+	Vaultresource      string  `json:"vaultresource,omitempty"`
 }

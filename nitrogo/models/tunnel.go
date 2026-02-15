@@ -1,76 +1,55 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
-type Tunnelglobaltrafficpolicybinding struct {
-	Policyname             string   `json:"policyname,omitempty"`
-	Priority               uint32   `json:"priority,omitempty"`
-	State                  string   `json:"state,omitempty"`
-	Builtin                []string `json:"builtin,omitempty"`
-	Feature                string   `json:"feature,omitempty"`
-	Type                   string   `json:"type,omitempty"`
-	Numpol                 uint32   `json:"numpol,omitempty"`
-	Gotopriorityexpression string   `json:"gotopriorityexpression,omitempty"`
-	Policytype             string   `json:"policytype,omitempty"`
-	Globalbindtype         string   `json:"globalbindtype,omitempty"`
+// tunnel configuration structs
+type Tunneltrafficpolicy struct {
+	Action             string   `json:"action,omitempty"`
+	Builtin            []string `json:"builtin,omitempty"`
+	Clienttransactions int      `json:"clienttransactions,omitempty"`
+	Clientttlb         int      `json:"clientttlb,omitempty"`
+	Comment            string   `json:"comment,omitempty"`
+	Count              float64  `json:"__count,omitempty"`
+	Expressiontype     string   `json:"expressiontype,omitempty"`
+	Feature            string   `json:"feature,omitempty"`
+	Hits               int      `json:"hits,omitempty"`
+	Isdefault          bool     `json:"isdefault,omitempty"`
+	Logaction          string   `json:"logaction,omitempty"`
+	Name               string   `json:"name,omitempty"`
+	Newname            string   `json:"newname,omitempty"`
+	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	Rule               string   `json:"rule,omitempty"`
+	Rxbytes            int      `json:"rxbytes,omitempty"`
+	Servertransactions int      `json:"servertransactions,omitempty"`
+	Serverttlb         int      `json:"serverttlb,omitempty"`
+	Txbytes            int      `json:"txbytes,omitempty"`
+	Undefhits          int      `json:"undefhits,omitempty"`
 }
 
-type Tunnelglobaltunneltrafficpolicybinding struct {
+type TunnelglobalBinding struct {
+	TunnelglobalTunneltrafficpolicyBinding []interface{} `json:"tunnelglobal_tunneltrafficpolicy_binding,omitempty"`
+}
+
+type TunneltrafficpolicyBinding struct {
+	Name                                   string        `json:"name,omitempty"`
+	TunneltrafficpolicyTunnelglobalBinding []interface{} `json:"tunneltrafficpolicy_tunnelglobal_binding,omitempty"`
+}
+
+type TunneltrafficpolicyTunnelglobalBinding struct {
+	Activepolicy           int    `json:"activepolicy,omitempty"`
+	Boundto                string `json:"boundto,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type TunnelglobalTunneltrafficpolicyBinding struct {
+	Builtin                []string `json:"builtin,omitempty"`
+	Feature                string   `json:"feature,omitempty"`
+	Globalbindtype         string   `json:"globalbindtype,omitempty"`
+	Gotopriorityexpression string   `json:"gotopriorityexpression,omitempty"`
+	Numpol                 int      `json:"numpol,omitempty"`
 	Policyname             string   `json:"policyname,omitempty"`
+	Policytype             string   `json:"policytype,omitempty"`
 	Priority               int      `json:"priority,omitempty"`
 	State                  string   `json:"state,omitempty"`
-	Builtin                []string `json:"builtin,omitempty"`
-	Feature                string   `json:"feature,omitempty"`
-	Type                   string   `json:"type,omitempty"`
-	Numpol                 int      `json:"numpol,omitempty"`
-	Gotopriorityexpression string   `json:"gotopriorityexpression,omitempty"`
-	Policytype             string   `json:"policytype,omitempty"`
-	Globalbindtype         string   `json:"globalbindtype,omitempty"`
-}
-
-type Tunneltrafficpolicy struct {
-	Name               string `json:"name,omitempty"`
-	Rule               string `json:"rule,omitempty"`
-	Action             string `json:"action,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Logaction          string `json:"logaction,omitempty"`
-	Newname            string `json:"newname,omitempty"`
-	Expressiontype     string `json:"expressiontype,omitempty"`
-	Hits               string `json:"hits,omitempty"`
-	Undefhits          string `json:"undefhits,omitempty"`
-	Txbytes            string `json:"txbytes,omitempty"`
-	Rxbytes            string `json:"rxbytes,omitempty"`
-	Clientttlb         string `json:"clientttlb,omitempty"`
-	Clienttransactions string `json:"clienttransactions,omitempty"`
-	Serverttlb         string `json:"serverttlb,omitempty"`
-	Servertransactions string `json:"servertransactions,omitempty"`
-	Isdefault          string `json:"isdefault,omitempty"`
-	Builtin            string `json:"builtin,omitempty"`
-	Feature            string `json:"feature,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Tunneltrafficpolicybinding struct {
-	Name string `json:"name,omitempty"`
-}
-
-type Tunneltrafficpolicyglobalbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Activepolicy           uint32 `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Tunneltrafficpolicytunnelglobalbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Tunnelglobalbinding struct {
+	TypeField              string   `json:"type,omitempty"`
 }

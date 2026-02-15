@@ -1,118 +1,90 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
-type Authorizationpolicyaaauserbinding struct {
+// authorization configuration structs
+type AuthorizationpolicyAuthorizationpolicylabelBinding struct {
 	Boundto  string `json:"boundto,omitempty"`
+	Name     string `json:"name,omitempty"`
 	Priority int    `json:"priority,omitempty"`
-	Name     string `json:"name,omitempty"`
 }
 
-type Authorizationpolicypolicylabelbinding struct {
-	Boundto  string `json:"boundto,omitempty"`
-	Priority uint32 `json:"priority,omitempty"`
-	Name     string `json:"name,omitempty"`
-}
-
-type Authorizationpolicylabelauthorizationpolicybinding struct {
+type AuthorizationpolicylabelAuthorizationpolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	InvokeLabelname        string `json:"invoke_labelname,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
 	Policyname             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Invokelabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
 }
 
-type Authorizationpolicy struct {
-	Name               string `json:"name,omitempty"`
-	Rule               string `json:"rule,omitempty"`
-	Action             string `json:"action,omitempty"`
-	Newname            string `json:"newname,omitempty"`
-	Activepolicy       string `json:"activepolicy,omitempty"`
-	Expressiontype     string `json:"expressiontype,omitempty"`
-	Hits               string `json:"hits,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Authorizationpolicybinding struct {
-	Name string `json:"name,omitempty"`
-}
-
-type Authorizationpolicycsvserverbinding struct {
+type AuthorizationpolicyCsvserverBinding struct {
 	Boundto  string `json:"boundto,omitempty"`
+	Name     string `json:"name,omitempty"`
 	Priority int    `json:"priority,omitempty"`
-	Name     string `json:"name,omitempty"`
 }
 
-type Authorizationpolicyuserbinding struct {
+type AuthorizationpolicyBinding struct {
+	AuthorizationpolicyAaagroupBinding                 []interface{} `json:"authorizationpolicy_aaagroup_binding,omitempty"`
+	AuthorizationpolicyAaauserBinding                  []interface{} `json:"authorizationpolicy_aaauser_binding,omitempty"`
+	AuthorizationpolicyAuthorizationpolicylabelBinding []interface{} `json:"authorizationpolicy_authorizationpolicylabel_binding,omitempty"`
+	AuthorizationpolicyCsvserverBinding                []interface{} `json:"authorizationpolicy_csvserver_binding,omitempty"`
+	AuthorizationpolicyLbvserverBinding                []interface{} `json:"authorizationpolicy_lbvserver_binding,omitempty"`
+	Name                                               string        `json:"name,omitempty"`
+}
+
+type AuthorizationpolicyLbvserverBinding struct {
 	Boundto  string `json:"boundto,omitempty"`
-	Priority uint32 `json:"priority,omitempty"`
 	Name     string `json:"name,omitempty"`
-}
-
-type Authorizationaction struct {
-	Name               string `json:"name,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Authorizationpolicyauthorizationpolicylabelbinding struct {
-	Boundto  string `json:"boundto,omitempty"`
 	Priority int    `json:"priority,omitempty"`
-	Name     string `json:"name,omitempty"`
-}
-
-type Authorizationpolicylbvserverbinding struct {
-	Boundto  string `json:"boundto,omitempty"`
-	Priority int    `json:"priority,omitempty"`
-	Name     string `json:"name,omitempty"`
-}
-
-type Authorizationpolicyvserverbinding struct {
-	Boundto  string `json:"boundto,omitempty"`
-	Priority uint32 `json:"priority,omitempty"`
-	Name     string `json:"name,omitempty"`
 }
 
 type Authorizationpolicylabel struct {
-	Labelname              string `json:"labelname,omitempty"`
-	Newname                string `json:"newname,omitempty"`
-	Numpol                 string `json:"numpol,omitempty"`
-	Hits                   string `json:"hits,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               string `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Invokelabelname        string `json:"invoke_labelname,omitempty"`
-	Flowtype               string `json:"flowtype,omitempty"`
-	Description            string `json:"description,omitempty"`
-	Nextgenapiresource     string `json:"_nextgenapiresource,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	Description            string  `json:"description,omitempty"`
+	Flowtype               int     `json:"flowtype,omitempty"`
+	Gotopriorityexpression string  `json:"gotopriorityexpression,omitempty"`
+	Hits                   int     `json:"hits,omitempty"`
+	InvokeLabelname        string  `json:"invoke_labelname,omitempty"`
+	Labelname              string  `json:"labelname,omitempty"`
+	Labeltype              string  `json:"labeltype,omitempty"`
+	Newname                string  `json:"newname,omitempty"`
+	Nextgenapiresource     string  `json:"_nextgenapiresource,omitempty"`
+	Numpol                 int     `json:"numpol,omitempty"`
+	Policyname             string  `json:"policyname,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
 }
 
-type Authorizationpolicylabelbinding struct {
-	Labelname string `json:"labelname,omitempty"`
-}
-
-type Authorizationpolicylabelpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Invokelabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-}
-
-type Authorizationpolicyaaagroupbinding struct {
+type AuthorizationpolicyAaagroupBinding struct {
 	Boundto  string `json:"boundto,omitempty"`
+	Name     string `json:"name,omitempty"`
 	Priority int    `json:"priority,omitempty"`
-	Name     string `json:"name,omitempty"`
 }
 
-type Authorizationpolicygroupbinding struct {
+type Authorizationpolicy struct {
+	Action             string  `json:"action,omitempty"`
+	Activepolicy       int     `json:"activepolicy,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Expressiontype     string  `json:"expressiontype,omitempty"`
+	Hits               int     `json:"hits,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Newname            string  `json:"newname,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Rule               string  `json:"rule,omitempty"`
+}
+
+type Authorizationaction struct {
+	Count              float64 `json:"__count,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+}
+
+type AuthorizationpolicylabelBinding struct {
+	AuthorizationpolicylabelAuthorizationpolicyBinding []interface{} `json:"authorizationpolicylabel_authorizationpolicy_binding,omitempty"`
+	Labelname                                          string        `json:"labelname,omitempty"`
+}
+
+type AuthorizationpolicyAaauserBinding struct {
 	Boundto  string `json:"boundto,omitempty"`
-	Priority uint32 `json:"priority,omitempty"`
 	Name     string `json:"name,omitempty"`
+	Priority int    `json:"priority,omitempty"`
 }

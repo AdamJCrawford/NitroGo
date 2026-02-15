@@ -1,219 +1,173 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
+// cmp configuration structs
 type Cmpparameter struct {
-	Cmplevel                    string `json:"cmplevel,omitempty"`
-	Quantumsize                 int    `json:"quantumsize,omitempty"`
-	Servercmp                   string `json:"servercmp,omitempty"`
-	Heurexpiry                  string `json:"heurexpiry,omitempty"`
-	Heurexpirythres             int    `json:"heurexpirythres,omitempty"`
-	Heurexpiryhistwt            int    `json:"heurexpiryhistwt,omitempty"`
-	Minressize                  int    `json:"minressize,omitempty"`
-	Cmpbypasspct                int    `json:"cmpbypasspct,omitempty"`
-	Cmponpush                   string `json:"cmponpush,omitempty"`
-	Policytype                  string `json:"policytype,omitempty"`
-	Addvaryheader               string `json:"addvaryheader,omitempty"`
-	Varyheadervalue             string `json:"varyheadervalue,omitempty"`
-	Externalcache               string `json:"externalcache,omitempty"`
-	Randomgzipfilename          string `json:"randomgzipfilename,omitempty"`
-	Randomgzipfilenameminlength int    `json:"randomgzipfilenameminlength,omitempty"`
-	Randomgzipfilenamemaxlength int    `json:"randomgzipfilenamemaxlength,omitempty"`
-	Builtin                     string `json:"builtin,omitempty"`
-	Feature                     string `json:"feature,omitempty"`
-	Nextgenapiresource          string `json:"_nextgenapiresource,omitempty"`
+	Addvaryheader               string   `json:"addvaryheader,omitempty"`
+	Builtin                     []string `json:"builtin,omitempty"`
+	Cmpbypasspct                int      `json:"cmpbypasspct,omitempty"`
+	Cmplevel                    string   `json:"cmplevel,omitempty"`
+	Cmponpush                   string   `json:"cmponpush,omitempty"`
+	Externalcache               string   `json:"externalcache,omitempty"`
+	Feature                     string   `json:"feature,omitempty"`
+	Heurexpiry                  string   `json:"heurexpiry,omitempty"`
+	Heurexpiryhistwt            int      `json:"heurexpiryhistwt,omitempty"`
+	Heurexpirythres             int      `json:"heurexpirythres,omitempty"`
+	Minressize                  int      `json:"minressize,omitempty"`
+	Nextgenapiresource          string   `json:"_nextgenapiresource,omitempty"`
+	Policytype                  string   `json:"policytype,omitempty"`
+	Quantumsize                 int      `json:"quantumsize,omitempty"`
+	Randomgzipfilename          string   `json:"randomgzipfilename,omitempty"`
+	Randomgzipfilenamemaxlength int      `json:"randomgzipfilenamemaxlength,omitempty"`
+	Randomgzipfilenameminlength int      `json:"randomgzipfilenameminlength,omitempty"`
+	Servercmp                   string   `json:"servercmp,omitempty"`
+	Varyheadervalue             string   `json:"varyheadervalue,omitempty"`
 }
 
-type Cmppolicycmpglobalbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
+type CmpglobalBinding struct {
+	CmpglobalCmppolicyBinding []interface{} `json:"cmpglobal_cmppolicy_binding,omitempty"`
 }
 
-type Cmppolicylbvserverbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
+type CmppolicyBinding struct {
+	CmppolicyCmpglobalBinding      []interface{} `json:"cmppolicy_cmpglobal_binding,omitempty"`
+	CmppolicyCmppolicylabelBinding []interface{} `json:"cmppolicy_cmppolicylabel_binding,omitempty"`
+	CmppolicyCrvserverBinding      []interface{} `json:"cmppolicy_crvserver_binding,omitempty"`
+	CmppolicyCsvserverBinding      []interface{} `json:"cmppolicy_csvserver_binding,omitempty"`
+	CmppolicyLbvserverBinding      []interface{} `json:"cmppolicy_lbvserver_binding,omitempty"`
+	Name                           string        `json:"name,omitempty"`
 }
 
-type Cmppolicylabelpolicybindingbinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
+type CmppolicylabelPolicybindingBinding struct {
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Invokelabelname        string `json:"invoke_labelname,omitempty"`
+	InvokeLabelname        string `json:"invoke_labelname,omitempty"`
 	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
 }
 
-type Cmpglobalbinding struct {
+type CmppolicyCmppolicylabelBinding struct {
+	Activepolicy           int    `json:"activepolicy,omitempty"`
+	Boundto                string `json:"boundto,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type CmpglobalCmppolicyBinding struct {
+	Globalbindtype         string `json:"globalbindtype,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Numpol                 int    `json:"numpol,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	TypeField              string `json:"type,omitempty"`
 }
 
 type Cmppolicy struct {
-	Name               string `json:"name,omitempty"`
-	Rule               string `json:"rule,omitempty"`
-	Resaction          string `json:"resaction,omitempty"`
-	Newname            string `json:"newname,omitempty"`
-	Reqaction          string `json:"reqaction,omitempty"`
-	Hits               string `json:"hits,omitempty"`
-	Txbytes            string `json:"txbytes,omitempty"`
-	Rxbytes            string `json:"rxbytes,omitempty"`
-	Clientttlb         string `json:"clientttlb,omitempty"`
-	Clienttransactions string `json:"clienttransactions,omitempty"`
-	Serverttlb         string `json:"serverttlb,omitempty"`
-	Servertransactions string `json:"servertransactions,omitempty"`
-	Description        string `json:"description,omitempty"`
-	Builtin            string `json:"builtin,omitempty"`
-	Feature            string `json:"feature,omitempty"`
-	Isdefault          string `json:"isdefault,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Cmppolicycsvserverbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Cmppolicypolicylabelbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Activepolicy           uint32 `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Cmppolicylabel struct {
-	Labelname              string `json:"labelname,omitempty"`
-	Type                   string `json:"type,omitempty"`
-	Newname                string `json:"newname,omitempty"`
-	Numpol                 string `json:"numpol,omitempty"`
-	Hits                   string `json:"hits,omitempty"`
-	Priority               string `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Invokelabelname        string `json:"invoke_labelname,omitempty"`
-	Flowtype               string `json:"flowtype,omitempty"`
-	Description            string `json:"description,omitempty"`
-	Nextgenapiresource     string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Cmppolicylabelcmppolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Invokelabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Cmppolicylabelpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Invokelabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Cmpglobalcmppolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Type                   string `json:"type,omitempty"`
-	Numpol                 int    `json:"numpol,omitempty"`
-	Globalbindtype         string `json:"globalbindtype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Cmppolicybinding struct {
-	Name string `json:"name,omitempty"`
-}
-
-type Cmppolicycmppolicylabelbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Cmppolicycrvserverbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Cmppolicyglobalbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Activepolicy           uint32 `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
+	Builtin            []string `json:"builtin,omitempty"`
+	Clienttransactions int      `json:"clienttransactions,omitempty"`
+	Clientttlb         int      `json:"clientttlb,omitempty"`
+	Count              float64  `json:"__count,omitempty"`
+	Description        string   `json:"description,omitempty"`
+	Feature            string   `json:"feature,omitempty"`
+	Hits               int      `json:"hits,omitempty"`
+	Isdefault          bool     `json:"isdefault,omitempty"`
+	Name               string   `json:"name,omitempty"`
+	Newname            string   `json:"newname,omitempty"`
+	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	Reqaction          string   `json:"reqaction,omitempty"`
+	Resaction          string   `json:"resaction,omitempty"`
+	Rule               string   `json:"rule,omitempty"`
+	Rxbytes            int      `json:"rxbytes,omitempty"`
+	Servertransactions int      `json:"servertransactions,omitempty"`
+	Serverttlb         int      `json:"serverttlb,omitempty"`
+	Txbytes            int      `json:"txbytes,omitempty"`
 }
 
 type Cmpaction struct {
-	Name               string `json:"name,omitempty"`
-	Cmptype            string `json:"cmptype,omitempty"`
-	Addvaryheader      string `json:"addvaryheader,omitempty"`
-	Varyheadervalue    string `json:"varyheadervalue,omitempty"`
-	Deltatype          string `json:"deltatype,omitempty"`
-	Newname            string `json:"newname,omitempty"`
-	Builtin            string `json:"builtin,omitempty"`
-	Feature            string `json:"feature,omitempty"`
-	Isdefault          string `json:"isdefault,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Addvaryheader      string   `json:"addvaryheader,omitempty"`
+	Builtin            []string `json:"builtin,omitempty"`
+	Cmptype            string   `json:"cmptype,omitempty"`
+	Count              float64  `json:"__count,omitempty"`
+	Deltatype          string   `json:"deltatype,omitempty"`
+	Feature            string   `json:"feature,omitempty"`
+	Isdefault          bool     `json:"isdefault,omitempty"`
+	Name               string   `json:"name,omitempty"`
+	Newname            string   `json:"newname,omitempty"`
+	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	Varyheadervalue    string   `json:"varyheadervalue,omitempty"`
 }
 
-type Cmpglobalpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	State                  string `json:"state,omitempty"`
-	Type                   string `json:"type,omitempty"`
-	Numpol                 uint32 `json:"numpol,omitempty"`
-	Policytype             string `json:"policytype,omitempty"`
-	Globalbindtype         string `json:"globalbindtype,omitempty"`
+type CmppolicyCmpglobalBinding struct {
+	Activepolicy           int    `json:"activepolicy,omitempty"`
+	Boundto                string `json:"boundto,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type Cmppolicylabel struct {
+	Count                  float64 `json:"__count,omitempty"`
+	Description            string  `json:"description,omitempty"`
+	Flowtype               int     `json:"flowtype,omitempty"`
+	Gotopriorityexpression string  `json:"gotopriorityexpression,omitempty"`
+	Hits                   int     `json:"hits,omitempty"`
+	InvokeLabelname        string  `json:"invoke_labelname,omitempty"`
+	Labelname              string  `json:"labelname,omitempty"`
+	Labeltype              string  `json:"labeltype,omitempty"`
+	Newname                string  `json:"newname,omitempty"`
+	Nextgenapiresource     string  `json:"_nextgenapiresource,omitempty"`
+	Numpol                 int     `json:"numpol,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	TypeField              string  `json:"type,omitempty"`
+}
+
+type CmppolicyCrvserverBinding struct {
+	Activepolicy int    `json:"activepolicy,omitempty"`
+	Boundto      string `json:"boundto,omitempty"`
+	Name         string `json:"name,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
+}
+
+type CmppolicyLbvserverBinding struct {
+	Activepolicy           int    `json:"activepolicy,omitempty"`
+	Boundto                string `json:"boundto,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type CmppolicylabelCmppolicyBinding struct {
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+	InvokeLabelname        string `json:"invoke_labelname,omitempty"`
 	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
 }
 
-type Cmppolicyvserverbinding struct {
+type CmppolicyCsvserverBinding struct {
+	Activepolicy           int    `json:"activepolicy,omitempty"`
 	Boundto                string `json:"boundto,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Activepolicy           uint32 `json:"activepolicy,omitempty"`
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
 	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
 }
 
-type Cmppolicylabelbinding struct {
-	Labelname string `json:"labelname,omitempty"`
+type CmppolicylabelBinding struct {
+	CmppolicylabelCmppolicyBinding     []interface{} `json:"cmppolicylabel_cmppolicy_binding,omitempty"`
+	CmppolicylabelPolicybindingBinding []interface{} `json:"cmppolicylabel_policybinding_binding,omitempty"`
+	Labelname                          string        `json:"labelname,omitempty"`
 }

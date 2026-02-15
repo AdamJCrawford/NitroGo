@@ -1,34 +1,32 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
-type Ntpparam struct {
-	Authentication     string `json:"authentication,omitempty"`
-	Trustedkey         []int  `json:"trustedkey,omitempty"`
-	Autokeylogsec      int    `json:"autokeylogsec"`
-	Revokelogsec       int    `json:"revokelogsec"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
+// ntp configuration structs
 type Ntpserver struct {
-	Serverip           string `json:"serverip,omitempty"`
-	Servername         string `json:"servername,omitempty"`
-	Minpoll            int    `json:"minpoll,omitempty"`
-	Maxpoll            int    `json:"maxpoll,omitempty"`
-	Autokey            bool   `json:"autokey,omitempty"`
-	Key                int    `json:"key,omitempty"`
-	Preferredntpserver string `json:"preferredntpserver,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Autokey            bool    `json:"autokey,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Key                int     `json:"key,omitempty"`
+	Maxpoll            int     `json:"maxpoll,omitempty"`
+	Minpoll            int     `json:"minpoll,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Preferredntpserver string  `json:"preferredntpserver,omitempty"`
+	Serverip           string  `json:"serverip,omitempty"`
+	Servername         string  `json:"servername,omitempty"`
 }
 
-type Ntpstatus struct {
-	Response           string `json:"response,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+type Ntpparam struct {
+	Authentication     string        `json:"authentication,omitempty"`
+	Autokeylogsec      int           `json:"autokeylogsec,omitempty"`
+	Nextgenapiresource string        `json:"_nextgenapiresource,omitempty"`
+	Revokelogsec       int           `json:"revokelogsec,omitempty"`
+	Trustedkey         []interface{} `json:"trustedkey,omitempty"`
 }
 
 type Ntpsync struct {
-	State              string `json:"state,omitempty"`
 	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	State              string `json:"state,omitempty"`
+}
+
+type Ntpstatus struct {
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Response           string `json:"response,omitempty"`
 }

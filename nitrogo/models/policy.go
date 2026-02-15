@@ -1,214 +1,224 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
-type Policydataset struct {
-	Name               string `json:"name,omitempty"`
-	Type               string `json:"type,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Patsetfile         string `json:"patsetfile,omitempty"`
-	Dynamic            string `json:"dynamic,omitempty"`
-	Dynamiconly        bool   `json:"dynamiconly,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Policyhttpcallout struct {
-	Name               string   `json:"name,omitempty"`
-	Ipaddress          string   `json:"ipaddress,omitempty"`
-	Port               int      `json:"port,omitempty"`
-	Vserver            string   `json:"vserver,omitempty"`
-	Returntype         string   `json:"returntype,omitempty"`
-	Httpmethod         string   `json:"httpmethod,omitempty"`
-	Hostexpr           string   `json:"hostexpr,omitempty"`
-	Urlstemexpr        string   `json:"urlstemexpr,omitempty"`
-	Headers            []string `json:"headers,omitempty"`
-	Parameters         []string `json:"parameters,omitempty"`
-	Bodyexpr           string   `json:"bodyexpr,omitempty"`
-	Fullreqexpr        string   `json:"fullreqexpr,omitempty"`
-	Scheme             string   `json:"scheme,omitempty"`
-	Resultexpr         string   `json:"resultexpr,omitempty"`
-	Cacheforsecs       int      `json:"cacheforsecs,omitempty"`
-	Comment            string   `json:"comment,omitempty"`
-	Hits               string   `json:"hits,omitempty"`
-	Undefhits          string   `json:"undefhits,omitempty"`
-	Svrstate           string   `json:"svrstate,omitempty"`
-	Effectivestate     string   `json:"effectivestate,omitempty"`
-	Undefreason        string   `json:"undefreason,omitempty"`
-	Recursivecallout   string   `json:"recursivecallout,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
-}
-
-type Policypatsetpatternbinding struct {
-	String  string   `json:"String,omitempty"`
-	Index   int      `json:"index,omitempty"`
+// policy configuration structs
+type PolicypatsetPatternBinding struct {
+	Builtin []string `json:"builtin,omitempty"`
 	Charset string   `json:"charset,omitempty"`
 	Comment string   `json:"comment,omitempty"`
-	Builtin []string `json:"builtin,omitempty"`
 	Feature string   `json:"feature,omitempty"`
+	Index   int      `json:"index,omitempty"`
 	Name    string   `json:"name,omitempty"`
+	String  string   `json:"String,omitempty"`
+}
+
+type PolicystringmapBinding struct {
+	Name                          string        `json:"name,omitempty"`
+	PolicystringmapPatternBinding []interface{} `json:"policystringmap_pattern_binding,omitempty"`
+}
+
+type PolicydatasetBinding struct {
+	Name                      string        `json:"name,omitempty"`
+	PolicydatasetValueBinding []interface{} `json:"policydataset_value_binding,omitempty"`
+}
+
+type PolicystringmapPatternBinding struct {
+	Comment string `json:"comment,omitempty"`
+	Key     string `json:"key,omitempty"`
+	Name    string `json:"name,omitempty"`
+	Value   string `json:"value,omitempty"`
 }
 
 type Policypatsetfile struct {
-	Src                string `json:"src,omitempty"`
-	Name               string `json:"name,omitempty"`
-	Overwrite          bool   `json:"overwrite,omitempty"`
-	Delimiter          string `json:"delimiter,omitempty"`
-	Charset            string `json:"charset,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Imported           bool   `json:"imported,omitempty"`
-	Totalpatterns      string `json:"totalpatterns,omitempty"`
-	Boundpatterns      string `json:"boundpatterns,omitempty"`
-	Patsetname         string `json:"patsetname,omitempty"`
-	Bindstatuscode     string `json:"bindstatuscode,omitempty"`
-	Bindstatus         string `json:"bindstatus,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Policystringmappatternbinding struct {
-	Key     string `json:"key,omitempty"`
-	Value   string `json:"value,omitempty"`
-	Comment string `json:"comment,omitempty"`
-	Name    string `json:"name,omitempty"`
-}
-
-type Policydatasetbinding struct {
-	Name string `json:"name,omitempty"`
-}
-
-type Policyevaluation struct {
-	Expression                 string `json:"expression,omitempty"`
-	Action                     string `json:"action,omitempty"`
-	Type                       string `json:"type,omitempty"`
-	Input                      string `json:"input,omitempty"`
-	Pitmodifiedinputdata       string `json:"pitmodifiedinputdata,omitempty"`
-	Pitboolresult              string `json:"pitboolresult,omitempty"`
-	Pitnumresult               string `json:"pitnumresult,omitempty"`
-	Pitdoubleresult            string `json:"pitdoubleresult,omitempty"`
-	Pitulongresult             string `json:"pitulongresult,omitempty"`
-	Pitrefresult               string `json:"pitrefresult,omitempty"`
-	Pitoffsetresult            string `json:"pitoffsetresult,omitempty"`
-	Pitoffsetresultlen         string `json:"pitoffsetresultlen,omitempty"`
-	Istruncatedrefresult       string `json:"istruncatedrefresult,omitempty"`
-	Pitboolevaltime            string `json:"pitboolevaltime,omitempty"`
-	Pitnumevaltime             string `json:"pitnumevaltime,omitempty"`
-	Pitdoubleevaltime          string `json:"pitdoubleevaltime,omitempty"`
-	Pitulongevaltime           string `json:"pitulongevaltime,omitempty"`
-	Pitrefevaltime             string `json:"pitrefevaltime,omitempty"`
-	Pitoffsetevaltime          string `json:"pitoffsetevaltime,omitempty"`
-	Pitactionevaltime          string `json:"pitactionevaltime,omitempty"`
-	Pitoperationperformerarray string `json:"pitoperationperformerarray,omitempty"`
-	Pitoldoffsetarray          string `json:"pitoldoffsetarray,omitempty"`
-	Pitnewoffsetarray          string `json:"pitnewoffsetarray,omitempty"`
-	Pitoffsetlengtharray       string `json:"pitoffsetlengtharray,omitempty"`
-	Pitoffsetnewlengtharray    string `json:"pitoffsetnewlengtharray,omitempty"`
-	Pitboolerrorresult         string `json:"pitboolerrorresult,omitempty"`
-	Pitnumerrorresult          string `json:"pitnumerrorresult,omitempty"`
-	Pitdoubleerrorresult       string `json:"pitdoubleerrorresult,omitempty"`
-	Pitulongerrorresult        string `json:"pitulongerrorresult,omitempty"`
-	Pitreferrorresult          string `json:"pitreferrorresult,omitempty"`
-	Pitoffseterrorresult       string `json:"pitoffseterrorresult,omitempty"`
-	Pitactionerrorresult       string `json:"pitactionerrorresult,omitempty"`
-	Nextgenapiresource         string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Policyexpression struct {
-	Name                  string `json:"name,omitempty"`
-	Value                 string `json:"value,omitempty"`
-	Comment               string `json:"comment,omitempty"`
-	Clientsecuritymessage string `json:"clientsecuritymessage,omitempty"`
-	Type                  string `json:"type,omitempty"`
-	Hits                  string `json:"hits,omitempty"`
-	Pihits                string `json:"pihits,omitempty"`
-	Type1                 string `json:"type1,omitempty"`
-	Isdefault             string `json:"isdefault,omitempty"`
-	Builtin               string `json:"builtin,omitempty"`
-	Feature               string `json:"feature,omitempty"`
-	Nextgenapiresource    string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Policyparam struct {
-	Timeout            int    `json:"timeout,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Policypatset struct {
-	Name               string `json:"name,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Patsetfile         string `json:"patsetfile,omitempty"`
-	Dynamic            string `json:"dynamic,omitempty"`
-	Dynamiconly        bool   `json:"dynamiconly,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Policymap struct {
-	Mappolicyname      string `json:"mappolicyname,omitempty"`
-	Sd                 string `json:"sd,omitempty"`
-	Su                 string `json:"su,omitempty"`
-	Td                 string `json:"td,omitempty"`
-	Tu                 string `json:"tu,omitempty"`
-	Targetname         string `json:"targetname,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Policypatsetbinding struct {
-	Name string `json:"name,omitempty"`
+	Bindstatus         string  `json:"bindstatus,omitempty"`
+	Bindstatuscode     int     `json:"bindstatuscode,omitempty"`
+	Boundpatterns      int     `json:"boundpatterns,omitempty"`
+	Charset            string  `json:"charset,omitempty"`
+	Comment            string  `json:"comment,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Delimiter          string  `json:"delimiter,omitempty"`
+	Imported           bool    `json:"imported,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Overwrite          bool    `json:"overwrite,omitempty"`
+	Patsetname         string  `json:"patsetname,omitempty"`
+	Src                string  `json:"src,omitempty"`
+	Totalpatterns      int     `json:"totalpatterns,omitempty"`
 }
 
 type Policystringmap struct {
-	Name               string `json:"name,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Comment            string  `json:"comment,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+}
+
+type PolicypatsetBinding struct {
+	Name                       string        `json:"name,omitempty"`
+	PolicypatsetPatternBinding []interface{} `json:"policypatset_pattern_binding,omitempty"`
+}
+
+type PolicydatasetValueBinding struct {
+	Comment  string `json:"comment,omitempty"`
+	Endrange string `json:"endrange,omitempty"`
+	Index    int    `json:"index,omitempty"`
+	Name     string `json:"name,omitempty"`
+	Value    string `json:"value,omitempty"`
 }
 
 type Policytracing struct {
-	Filterexpr                  string `json:"filterexpr,omitempty"`
-	Protocoltype                string `json:"protocoltype,omitempty"`
-	Capturesslhandshakepolicies string `json:"capturesslhandshakepolicies,omitempty"`
-	Transactionid               string `json:"transactionid,omitempty"`
-	Detail                      string `json:"detail,omitempty"`
-	Nodeid                      int    `json:"nodeid,omitempty"`
-	Packetengineid              string `json:"packetengineid,omitempty"`
-	Clientip                    string `json:"clientip,omitempty"`
-	Destip                      string `json:"destip,omitempty"`
-	Srcport                     string `json:"srcport,omitempty"`
-	Destport                    string `json:"destport,omitempty"`
-	Transactiontime             string `json:"transactiontime,omitempty"`
-	Policytracingmodule         string `json:"policytracingmodule,omitempty"`
-	Url                         string `json:"url,omitempty"`
-	Policynames                 string `json:"policynames,omitempty"`
-	Isresponse                  string `json:"isresponse,omitempty"`
-	Isundefpolicy               string `json:"isundefpolicy,omitempty"`
-	Policytracingrecordcount    string `json:"policytracingrecordcount,omitempty"`
-	Nextgenapiresource          string `json:"_nextgenapiresource,omitempty"`
+	Capturesslhandshakepolicies string   `json:"capturesslhandshakepolicies,omitempty"`
+	Clientip                    string   `json:"clientip,omitempty"`
+	Count                       float64  `json:"__count,omitempty"`
+	Destip                      string   `json:"destip,omitempty"`
+	Destport                    int      `json:"destport,omitempty"`
+	Detail                      string   `json:"detail,omitempty"`
+	Filterexpr                  string   `json:"filterexpr,omitempty"`
+	Isresponse                  int      `json:"isresponse,omitempty"`
+	Isundefpolicy               int      `json:"isundefpolicy,omitempty"`
+	Nextgenapiresource          string   `json:"_nextgenapiresource,omitempty"`
+	Nodeid                      int      `json:"nodeid,omitempty"`
+	Packetengineid              int      `json:"packetengineid,omitempty"`
+	Policynames                 []string `json:"policynames,omitempty"`
+	Policytracingmodule         string   `json:"policytracingmodule,omitempty"`
+	Policytracingrecordcount    int      `json:"policytracingrecordcount,omitempty"`
+	Protocoltype                string   `json:"protocoltype,omitempty"`
+	Srcport                     int      `json:"srcport,omitempty"`
+	Transactionid               string   `json:"transactionid,omitempty"`
+	Transactiontime             string   `json:"transactiontime,omitempty"`
+	Url                         string   `json:"url,omitempty"`
 }
 
 type Policyurlset struct {
-	Name                string `json:"name,omitempty"`
-	Comment             string `json:"comment,omitempty"`
-	Imported            bool   `json:"imported,omitempty"`
-	Overwrite           bool   `json:"overwrite,omitempty"`
-	Delimiter           string `json:"delimiter,omitempty"`
-	Rowseparator        string `json:"rowseparator,omitempty"`
-	Url                 string `json:"url,omitempty"`
-	Interval            int    `json:"interval,omitempty"`
-	Privateset          bool   `json:"privateset,omitempty"`
-	Subdomainexactmatch bool   `json:"subdomainexactmatch,omitempty"`
-	Matchedid           int    `json:"matchedid,omitempty"`
-	Canaryurl           string `json:"canaryurl,omitempty"`
-	Patterncount        string `json:"patterncount,omitempty"`
-	Nextgenapiresource  string `json:"_nextgenapiresource,omitempty"`
+	Canaryurl           string  `json:"canaryurl,omitempty"`
+	Comment             string  `json:"comment,omitempty"`
+	Count               float64 `json:"__count,omitempty"`
+	Delimiter           string  `json:"delimiter,omitempty"`
+	Imported            bool    `json:"imported,omitempty"`
+	Interval            int     `json:"interval,omitempty"`
+	Matchedid           int     `json:"matchedid,omitempty"`
+	Name                string  `json:"name,omitempty"`
+	Nextgenapiresource  string  `json:"_nextgenapiresource,omitempty"`
+	Overwrite           bool    `json:"overwrite,omitempty"`
+	Patterncount        int     `json:"patterncount,omitempty"`
+	Privateset          bool    `json:"privateset,omitempty"`
+	Rowseparator        string  `json:"rowseparator,omitempty"`
+	Subdomainexactmatch bool    `json:"subdomainexactmatch,omitempty"`
+	Url                 string  `json:"url,omitempty"`
 }
 
-type Policydatasetvaluebinding struct {
-	Value    string `json:"value,omitempty"`
-	Index    int    `json:"index,omitempty"`
-	Comment  string `json:"comment,omitempty"`
-	Endrange string `json:"endrange,omitempty"`
-	Name     string `json:"name,omitempty"`
+type Policyevaluation struct {
+	Action                     string        `json:"action,omitempty"`
+	Count                      float64       `json:"__count,omitempty"`
+	Expression                 string        `json:"expression,omitempty"`
+	Input                      string        `json:"input,omitempty"`
+	Istruncatedrefresult       bool          `json:"istruncatedrefresult,omitempty"`
+	Nextgenapiresource         string        `json:"_nextgenapiresource,omitempty"`
+	Pitactionerrorresult       string        `json:"pitactionerrorresult,omitempty"`
+	Pitactionevaltime          int           `json:"pitactionevaltime,omitempty"`
+	Pitboolerrorresult         string        `json:"pitboolerrorresult,omitempty"`
+	Pitboolevaltime            int           `json:"pitboolevaltime,omitempty"`
+	Pitboolresult              bool          `json:"pitboolresult,omitempty"`
+	Pitdoubleerrorresult       string        `json:"pitdoubleerrorresult,omitempty"`
+	Pitdoubleevaltime          int           `json:"pitdoubleevaltime,omitempty"`
+	Pitdoubleresult            float64       `json:"pitdoubleresult,omitempty"`
+	Pitmodifiedinputdata       string        `json:"pitmodifiedinputdata,omitempty"`
+	Pitnewoffsetarray          []interface{} `json:"pitnewoffsetarray,omitempty"`
+	Pitnumerrorresult          string        `json:"pitnumerrorresult,omitempty"`
+	Pitnumevaltime             int           `json:"pitnumevaltime,omitempty"`
+	Pitnumresult               int           `json:"pitnumresult,omitempty"`
+	Pitoffseterrorresult       string        `json:"pitoffseterrorresult,omitempty"`
+	Pitoffsetevaltime          int           `json:"pitoffsetevaltime,omitempty"`
+	Pitoffsetlengtharray       []interface{} `json:"pitoffsetlengtharray,omitempty"`
+	Pitoffsetnewlengtharray    []interface{} `json:"pitoffsetnewlengtharray,omitempty"`
+	Pitoffsetresult            int           `json:"pitoffsetresult,omitempty"`
+	Pitoffsetresultlen         int           `json:"pitoffsetresultlen,omitempty"`
+	Pitoldoffsetarray          []interface{} `json:"pitoldoffsetarray,omitempty"`
+	Pitoperationperformerarray []string      `json:"pitoperationperformerarray,omitempty"`
+	Pitreferrorresult          string        `json:"pitreferrorresult,omitempty"`
+	Pitrefevaltime             int           `json:"pitrefevaltime,omitempty"`
+	Pitrefresult               string        `json:"pitrefresult,omitempty"`
+	Pitulongerrorresult        string        `json:"pitulongerrorresult,omitempty"`
+	Pitulongevaltime           int           `json:"pitulongevaltime,omitempty"`
+	Pitulongresult             int           `json:"pitulongresult,omitempty"`
+	TypeField                  string        `json:"type,omitempty"`
 }
 
-type Policystringmapbinding struct {
-	Name string `json:"name,omitempty"`
+type Policyhttpcallout struct {
+	Bodyexpr           string   `json:"bodyexpr,omitempty"`
+	Cacheforsecs       int      `json:"cacheforsecs,omitempty"`
+	Comment            string   `json:"comment,omitempty"`
+	Count              float64  `json:"__count,omitempty"`
+	Effectivestate     string   `json:"effectivestate,omitempty"`
+	Fullreqexpr        string   `json:"fullreqexpr,omitempty"`
+	Headers            []string `json:"headers,omitempty"`
+	Hits               int      `json:"hits,omitempty"`
+	Hostexpr           string   `json:"hostexpr,omitempty"`
+	Httpmethod         string   `json:"httpmethod,omitempty"`
+	Ipaddress          string   `json:"ipaddress,omitempty"`
+	Name               string   `json:"name,omitempty"`
+	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	Parameters         []string `json:"parameters,omitempty"`
+	Port               int      `json:"port,omitempty"`
+	Recursivecallout   int      `json:"recursivecallout,omitempty"`
+	Resultexpr         string   `json:"resultexpr,omitempty"`
+	Returntype         string   `json:"returntype,omitempty"`
+	Scheme             string   `json:"scheme,omitempty"`
+	Svrstate           string   `json:"svrstate,omitempty"`
+	Undefhits          int      `json:"undefhits,omitempty"`
+	Undefreason        string   `json:"undefreason,omitempty"`
+	Urlstemexpr        string   `json:"urlstemexpr,omitempty"`
+	Vserver            string   `json:"vserver,omitempty"`
+}
+
+type Policydataset struct {
+	Comment            string  `json:"comment,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Dynamic            string  `json:"dynamic,omitempty"`
+	Dynamiconly        bool    `json:"dynamiconly,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Patsetfile         string  `json:"patsetfile,omitempty"`
+	TypeField          string  `json:"type,omitempty"`
+}
+
+type Policymap struct {
+	Count              float64 `json:"__count,omitempty"`
+	Mappolicyname      string  `json:"mappolicyname,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Sd                 string  `json:"sd,omitempty"`
+	Su                 string  `json:"su,omitempty"`
+	Targetname         string  `json:"targetname,omitempty"`
+	Td                 string  `json:"td,omitempty"`
+	Tu                 string  `json:"tu,omitempty"`
+}
+
+type Policyexpression struct {
+	Builtin               []string `json:"builtin,omitempty"`
+	Clientsecuritymessage string   `json:"clientsecuritymessage,omitempty"`
+	Comment               string   `json:"comment,omitempty"`
+	Count                 float64  `json:"__count,omitempty"`
+	Feature               string   `json:"feature,omitempty"`
+	Hits                  int      `json:"hits,omitempty"`
+	Isdefault             bool     `json:"isdefault,omitempty"`
+	Name                  string   `json:"name,omitempty"`
+	Nextgenapiresource    string   `json:"_nextgenapiresource,omitempty"`
+	Pihits                int      `json:"pihits,omitempty"`
+	Type1                 string   `json:"type1,omitempty"`
+	TypeField             string   `json:"type,omitempty"`
+	Value                 string   `json:"value,omitempty"`
+}
+
+type Policypatset struct {
+	Comment            string  `json:"comment,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Dynamic            string  `json:"dynamic,omitempty"`
+	Dynamiconly        bool    `json:"dynamiconly,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Patsetfile         string  `json:"patsetfile,omitempty"`
+}
+
+type Policyparam struct {
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Timeout            int    `json:"timeout,omitempty"`
 }

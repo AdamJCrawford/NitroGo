@@ -1,54 +1,54 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
+// rdp configuration structs
 type Rdpclientprofile struct {
-	Name                 string `json:"name,omitempty"`
-	Rdpurloverride       string `json:"rdpurloverride,omitempty"`
-	Redirectclipboard    string `json:"redirectclipboard,omitempty"`
-	Redirectdrives       string `json:"redirectdrives,omitempty"`
-	Redirectprinters     string `json:"redirectprinters,omitempty"`
-	Redirectcomports     string `json:"redirectcomports,omitempty"`
-	Redirectpnpdevices   string `json:"redirectpnpdevices,omitempty"`
-	Keyboardhook         string `json:"keyboardhook,omitempty"`
-	Audiocapturemode     string `json:"audiocapturemode,omitempty"`
-	Videoplaybackmode    string `json:"videoplaybackmode,omitempty"`
-	Multimonitorsupport  string `json:"multimonitorsupport,omitempty"`
-	Rdpcookievalidity    int    `json:"rdpcookievalidity,omitempty"`
-	Addusernameinrdpfile string `json:"addusernameinrdpfile,omitempty"`
-	Rdpfilename          string `json:"rdpfilename,omitempty"`
-	Rdphost              string `json:"rdphost,omitempty"`
-	Rdplistener          string `json:"rdplistener,omitempty"`
-	Rdpcustomparams      string `json:"rdpcustomparams,omitempty"`
-	Psk                  string `json:"psk,omitempty"`
-	Randomizerdpfilename string `json:"randomizerdpfilename,omitempty"`
-	Rdplinkattribute     string `json:"rdplinkattribute,omitempty"`
-	Rdpvalidateclientip  string `json:"rdpvalidateclientip,omitempty"`
-	Builtin              string `json:"builtin,omitempty"`
-	Feature              string `json:"feature,omitempty"`
-	Nextgenapiresource   string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Rdpconnections struct {
-	Username           string `json:"username,omitempty"`
-	All                bool   `json:"all,omitempty"`
-	Endpointip         string `json:"endpointip,omitempty"`
-	Endpointport       string `json:"endpointport,omitempty"`
-	Targetip           string `json:"targetip,omitempty"`
-	Targetport         string `json:"targetport,omitempty"`
-	Peid               string `json:"peid,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Addusernameinrdpfile string   `json:"addusernameinrdpfile,omitempty"`
+	Audiocapturemode     string   `json:"audiocapturemode,omitempty"`
+	Builtin              []string `json:"builtin,omitempty"`
+	Count                float64  `json:"__count,omitempty"`
+	Feature              string   `json:"feature,omitempty"`
+	Keyboardhook         string   `json:"keyboardhook,omitempty"`
+	Multimonitorsupport  string   `json:"multimonitorsupport,omitempty"`
+	Name                 string   `json:"name,omitempty"`
+	Nextgenapiresource   string   `json:"_nextgenapiresource,omitempty"`
+	Psk                  string   `json:"psk,omitempty"`
+	Randomizerdpfilename string   `json:"randomizerdpfilename,omitempty"`
+	Rdpcookievalidity    int      `json:"rdpcookievalidity,omitempty"`
+	Rdpcustomparams      string   `json:"rdpcustomparams,omitempty"`
+	Rdpfilename          string   `json:"rdpfilename,omitempty"`
+	Rdphost              string   `json:"rdphost,omitempty"`
+	Rdplinkattribute     string   `json:"rdplinkattribute,omitempty"`
+	Rdplistener          string   `json:"rdplistener,omitempty"`
+	Rdpurloverride       string   `json:"rdpurloverride,omitempty"`
+	Rdpvalidateclientip  string   `json:"rdpvalidateclientip,omitempty"`
+	Redirectclipboard    string   `json:"redirectclipboard,omitempty"`
+	Redirectcomports     string   `json:"redirectcomports,omitempty"`
+	Redirectdrives       string   `json:"redirectdrives,omitempty"`
+	Redirectpnpdevices   string   `json:"redirectpnpdevices,omitempty"`
+	Redirectprinters     string   `json:"redirectprinters,omitempty"`
+	Videoplaybackmode    string   `json:"videoplaybackmode,omitempty"`
 }
 
 type Rdpserverprofile struct {
-	Name               string `json:"name,omitempty"`
-	Rdpip              string `json:"rdpip,omitempty"`
-	Rdpport            int    `json:"rdpport,omitempty"`
-	Psk                string `json:"psk,omitempty"`
-	Rdpredirection     string `json:"rdpredirection,omitempty"`
-	Builtin            string `json:"builtin,omitempty"`
-	Feature            string `json:"feature,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Builtin            []string `json:"builtin,omitempty"`
+	Count              float64  `json:"__count,omitempty"`
+	Feature            string   `json:"feature,omitempty"`
+	Name               string   `json:"name,omitempty"`
+	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	Psk                string   `json:"psk,omitempty"`
+	Rdpip              string   `json:"rdpip,omitempty"`
+	Rdpport            int      `json:"rdpport,omitempty"`
+	Rdpredirection     string   `json:"rdpredirection,omitempty"`
+}
+
+type Rdpconnections struct {
+	All                bool    `json:"all,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Endpointip         string  `json:"endpointip,omitempty"`
+	Endpointport       int     `json:"endpointport,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Peid               int     `json:"peid,omitempty"`
+	Targetip           string  `json:"targetip,omitempty"`
+	Targetport         int     `json:"targetport,omitempty"`
+	Username           string  `json:"username,omitempty"`
 }

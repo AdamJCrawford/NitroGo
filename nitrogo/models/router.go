@@ -1,12 +1,10 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
+// router configuration structs
 type Routerdynamicrouting struct {
-	Commandstring      string `json:"commandstring,omitempty"`
-	Nodeid             int    `json:"nodeid,omitempty"`
-	Output             string `json:"output,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Commandstring      string  `json:"commandstring,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Nodeid             int     `json:"nodeid,omitempty"`
+	Output             string  `json:"output,omitempty"`
 }

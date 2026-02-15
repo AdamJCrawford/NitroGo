@@ -1,34 +1,33 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
-type Apiprofileapispecbinding struct {
+// api configuration structs
+type Apispecfile struct {
+	Count              float64 `json:"__count,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Overwrite          bool    `json:"overwrite,omitempty"`
+	Src                string  `json:"src,omitempty"`
+}
+
+type ApiprofileApispecBinding struct {
 	Apispec string `json:"apispec,omitempty"`
 	Name    string `json:"name,omitempty"`
 }
 
-type Apiprofilebinding struct {
-	Name string `json:"name,omitempty"`
-}
-
 type Apispec struct {
-	Name               string `json:"name,omitempty"`
-	File               string `json:"file,omitempty"`
-	Type               string `json:"type,omitempty"`
-	Skipvalidation     string `json:"skipvalidation,omitempty"`
-	Encrypted          bool   `json:"encrypted,omitempty"`
-	Builtin            string `json:"builtin,omitempty"`
-	Ready              string `json:"ready,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Builtin            []string `json:"builtin,omitempty"`
+	Count              float64  `json:"__count,omitempty"`
+	Encrypted          bool     `json:"encrypted,omitempty"`
+	File               string   `json:"file,omitempty"`
+	Name               string   `json:"name,omitempty"`
+	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	Nsappversion       string   `json:"nsappversion,omitempty"`
+	Ready              string   `json:"ready,omitempty"`
+	Skipvalidation     string   `json:"skipvalidation,omitempty"`
+	TypeField          string   `json:"type,omitempty"`
 }
 
-type Apispecbinding struct {
-	Name string `json:"name,omitempty"`
-}
-
-type Apispecspecendpointbinding struct {
+type ApispecSpecendpointBinding struct {
 	Apiname     string `json:"apiname,omitempty"`
 	Apiservice  string `json:"apiservice,omitempty"`
 	Httpmethod  string `json:"httpmethod,omitempty"`
@@ -36,15 +35,19 @@ type Apispecspecendpointbinding struct {
 	Name        string `json:"name,omitempty"`
 }
 
-type Apispecfile struct {
-	Name               string `json:"name,omitempty"`
-	Src                string `json:"src,omitempty"`
-	Overwrite          bool   `json:"overwrite,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+type Apiprofile struct {
+	Apivisibility      string  `json:"apivisibility,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
 }
 
-type Apiprofile struct {
-	Name               string `json:"name,omitempty"`
-	Apivisibility      string `json:"apivisibility,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+type ApiprofileBinding struct {
+	ApiprofileApispecBinding []interface{} `json:"apiprofile_apispec_binding,omitempty"`
+	Name                     string        `json:"name,omitempty"`
+}
+
+type ApispecBinding struct {
+	ApispecSpecendpointBinding []interface{} `json:"apispec_specendpoint_binding,omitempty"`
+	Name                       string        `json:"name,omitempty"`
 }

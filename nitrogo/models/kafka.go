@@ -1,23 +1,22 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
+// kafka configuration structs
 type Kafkacluster struct {
-	Name               string `json:"name,omitempty"`
-	Activesvc          string `json:"activesvc,omitempty"`
-	Totalsvc           string `json:"totalsvc,omitempty"`
-	Topicname          string `json:"topicname,omitempty"`
-	Numtopics          string `json:"numtopics,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Activesvc          int     `json:"activesvc,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Numtopics          int     `json:"numtopics,omitempty"`
+	Topicname          string  `json:"topicname,omitempty"`
+	Totalsvc           int     `json:"totalsvc,omitempty"`
 }
 
-type Kafkaclusterbinding struct {
-	Name string `json:"name,omitempty"`
+type KafkaclusterBinding struct {
+	KafkaclusterServicegroupBinding []interface{} `json:"kafkacluster_servicegroup_binding,omitempty"`
+	Name                            string        `json:"name,omitempty"`
 }
 
-type Kafkaclusterservicegroupbinding struct {
-	Servicegroupname string `json:"servicegroupname,omitempty"`
+type KafkaclusterServicegroupBinding struct {
 	Name             string `json:"name,omitempty"`
+	Servicegroupname string `json:"servicegroupname,omitempty"`
 }

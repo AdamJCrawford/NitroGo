@@ -1,24 +1,21 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
+// protocol configuration structs
 type Protocolhttpband struct {
-	Reqbandsize        int    `json:"reqbandsize,omitempty"`
-	Respbandsize       int    `json:"respbandsize,omitempty"`
-	Type               string `json:"type,omitempty"`
-	Nodeid             int    `json:"nodeid,omitempty"`
-	Bandrange          string `json:"bandrange,omitempty"`
-	Numberofbands      string `json:"numberofbands,omitempty"`
-	Totalbandsize      string `json:"totalbandsize,omitempty"`
-	Avgbandsize        string `json:"avgbandsize,omitempty"`
-	Avgbandsizenew     string `json:"avgbandsizenew,omitempty"`
-	Banddata           string `json:"banddata,omitempty"`
-	Banddatanew        string `json:"banddatanew,omitempty"`
-	Accesscount        string `json:"accesscount,omitempty"`
-	Accessratio        string `json:"accessratio,omitempty"`
-	Accessrationew     string `json:"accessrationew,omitempty"`
-	Totals             string `json:"totals,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Accesscount        []interface{} `json:"accesscount,omitempty"`
+	Accessratio        []interface{} `json:"accessratio,omitempty"`
+	Accessrationew     []interface{} `json:"accessrationew,omitempty"`
+	Avgbandsize        []interface{} `json:"avgbandsize,omitempty"`
+	Avgbandsizenew     []interface{} `json:"avgbandsizenew,omitempty"`
+	Banddata           []interface{} `json:"banddata,omitempty"`
+	Banddatanew        []interface{} `json:"banddatanew,omitempty"`
+	Bandrange          int           `json:"bandrange,omitempty"`
+	Nextgenapiresource string        `json:"_nextgenapiresource,omitempty"`
+	Nodeid             int           `json:"nodeid,omitempty"`
+	Numberofbands      int           `json:"numberofbands,omitempty"`
+	Reqbandsize        int           `json:"reqbandsize,omitempty"`
+	Respbandsize       int           `json:"respbandsize,omitempty"`
+	Totalbandsize      []interface{} `json:"totalbandsize,omitempty"`
+	Totals             []interface{} `json:"totals,omitempty"`
+	TypeField          string        `json:"type,omitempty"`
 }

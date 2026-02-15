@@ -1,40 +1,38 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
+// ipsec configuration structs
 type Ipsecparameter struct {
-	Ikeversion            string   `json:"ikeversion,omitempty"`
 	Encalgo               []string `json:"encalgo,omitempty"`
 	Hashalgo              []string `json:"hashalgo,omitempty"`
+	Ikeretryinterval      int      `json:"ikeretryinterval,omitempty"`
+	Ikeversion            string   `json:"ikeversion,omitempty"`
 	Lifetime              int      `json:"lifetime,omitempty"`
 	Livenesscheckinterval int      `json:"livenesscheckinterval,omitempty"`
-	Replaywindowsize      int      `json:"replaywindowsize,omitempty"`
-	Ikeretryinterval      int      `json:"ikeretryinterval,omitempty"`
-	Perfectforwardsecrecy string   `json:"perfectforwardsecrecy,omitempty"`
-	Retransmissiontime    int      `json:"retransmissiontime,omitempty"`
-	Responderonly         string   `json:"responderonly,omitempty"`
 	Nextgenapiresource    string   `json:"_nextgenapiresource,omitempty"`
+	Perfectforwardsecrecy string   `json:"perfectforwardsecrecy,omitempty"`
+	Replaywindowsize      int      `json:"replaywindowsize,omitempty"`
+	Responderonly         string   `json:"responderonly,omitempty"`
+	Retransmissiontime    int      `json:"retransmissiontime,omitempty"`
 }
 
 type Ipsecprofile struct {
-	Name                  string   `json:"name,omitempty"`
-	Ikeversion            string   `json:"ikeversion,omitempty"`
+	Builtin               []string `json:"builtin,omitempty"`
+	Count                 float64  `json:"__count,omitempty"`
 	Encalgo               []string `json:"encalgo,omitempty"`
+	Feature               string   `json:"feature,omitempty"`
 	Hashalgo              []string `json:"hashalgo,omitempty"`
+	Ikeretryinterval      int      `json:"ikeretryinterval,omitempty"`
+	Ikeversion            string   `json:"ikeversion,omitempty"`
 	Lifetime              int      `json:"lifetime,omitempty"`
+	Livenesscheckinterval int      `json:"livenesscheckinterval,omitempty"`
+	Name                  string   `json:"name,omitempty"`
+	Nextgenapiresource    string   `json:"_nextgenapiresource,omitempty"`
+	Peerpublickey         string   `json:"peerpublickey,omitempty"`
+	Perfectforwardsecrecy string   `json:"perfectforwardsecrecy,omitempty"`
+	Privatekey            string   `json:"privatekey,omitempty"`
 	Psk                   string   `json:"psk,omitempty"`
 	Publickey             string   `json:"publickey,omitempty"`
-	Privatekey            string   `json:"privatekey,omitempty"`
-	Peerpublickey         string   `json:"peerpublickey,omitempty"`
-	Livenesscheckinterval int      `json:"livenesscheckinterval,omitempty"`
 	Replaywindowsize      int      `json:"replaywindowsize,omitempty"`
-	Ikeretryinterval      int      `json:"ikeretryinterval,omitempty"`
-	Retransmissiontime    int      `json:"retransmissiontime,omitempty"`
-	Perfectforwardsecrecy string   `json:"perfectforwardsecrecy,omitempty"`
 	Responderonly         string   `json:"responderonly,omitempty"`
-	Builtin               string   `json:"builtin,omitempty"`
-	Feature               string   `json:"feature,omitempty"`
-	Nextgenapiresource    string   `json:"_nextgenapiresource,omitempty"`
+	Retransmissiontime    int      `json:"retransmissiontime,omitempty"`
 }

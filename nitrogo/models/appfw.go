@@ -1,1190 +1,1167 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
-type Appfwlearningdata struct {
-	Profilename            string `json:"profilename,omitempty"`
-	Starturl               string `json:"starturl,omitempty"`
-	Cookieconsistency      string `json:"cookieconsistency,omitempty"`
-	Fieldconsistency       string `json:"fieldconsistency,omitempty"`
-	Formactionurlffc       string `json:"formactionurl_ffc,omitempty"`
-	Contenttype            string `json:"contenttype,omitempty"`
-	Crosssitescripting     string `json:"crosssitescripting,omitempty"`
-	Formactionurlxss       string `json:"formactionurl_xss,omitempty"`
-	Asscanlocationxss      string `json:"as_scan_location_xss,omitempty"`
-	Asvaluetypexss         string `json:"as_value_type_xss,omitempty"`
-	Asvalueexprxss         string `json:"as_value_expr_xss,omitempty"`
-	Sqlinjection           string `json:"sqlinjection,omitempty"`
-	Formactionurlsql       string `json:"formactionurl_sql,omitempty"`
-	Asscanlocationsql      string `json:"as_scan_location_sql,omitempty"`
-	Asvaluetypesql         string `json:"as_value_type_sql,omitempty"`
-	Asvalueexprsql         string `json:"as_value_expr_sql,omitempty"`
-	Fieldformat            string `json:"fieldformat,omitempty"`
-	Formactionurlff        string `json:"formactionurl_ff,omitempty"`
-	Csrftag                string `json:"csrftag,omitempty"`
-	Csrfformoriginurl      string `json:"csrfformoriginurl,omitempty"`
-	Creditcardnumber       string `json:"creditcardnumber,omitempty"`
-	Creditcardnumberurl    string `json:"creditcardnumberurl,omitempty"`
-	Xmldoscheck            string `json:"xmldoscheck,omitempty"`
-	Xmlwsicheck            string `json:"xmlwsicheck,omitempty"`
-	Xmlattachmentcheck     string `json:"xmlattachmentcheck,omitempty"`
-	Totalxmlrequests       bool   `json:"totalxmlrequests,omitempty"`
-	Securitycheck          string `json:"securitycheck,omitempty"`
-	Target                 string `json:"target,omitempty"`
-	Url                    string `json:"url,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Fieldtype              string `json:"fieldtype,omitempty"`
-	Fieldformatminlength   string `json:"fieldformatminlength,omitempty"`
-	Fieldformatmaxlength   string `json:"fieldformatmaxlength,omitempty"`
-	Fieldformatcharmappcre string `json:"fieldformatcharmappcre,omitempty"`
-	Valuetype              string `json:"value_type,omitempty"`
-	Value                  string `json:"value,omitempty"`
-	Hits                   string `json:"hits,omitempty"`
-	Data                   string `json:"data,omitempty"`
-	Nextgenapiresource     string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Appfwprofilefileuploadtypebinding struct {
-	Fileuploadtype            string   `json:"fileuploadtype,omitempty"`
-	Asfileuploadtypesurl      string   `json:"as_fileuploadtypes_url,omitempty"`
-	Isnameregex               string   `json:"isnameregex,omitempty"`
-	State                     string   `json:"state,omitempty"`
-	Comment                   string   `json:"comment,omitempty"`
-	Filetype                  []string `json:"filetype,omitempty"`
-	Isautodeployed            string   `json:"isautodeployed,omitempty"`
-	Alertonly                 string   `json:"alertonly,omitempty"`
-	Resourceid                string   `json:"resourceid,omitempty"`
-	Name                      string   `json:"name,omitempty"`
-	Isregexfileuploadtypesurl string   `json:"isregex_fileuploadtypes_url,omitempty"`
-	Ruletype                  string   `json:"ruletype,omitempty"`
-}
-
-type Appfwprofilerestvalidationbinding struct {
-	Restvalidation       string `json:"restvalidation,omitempty"`
-	Restvalidationaction string `json:"rest_validation_action,omitempty"`
-	State                string `json:"state,omitempty"`
-	Comment              string `json:"comment,omitempty"`
-	Isautodeployed       string `json:"isautodeployed,omitempty"`
-	Alertonly            string `json:"alertonly,omitempty"`
-	Resourceid           string `json:"resourceid,omitempty"`
-	Name                 string `json:"name,omitempty"`
-	Ruletype             string `json:"ruletype,omitempty"`
-}
-
-type Appfwxmlcontenttype struct {
-	Xmlcontenttypevalue string `json:"xmlcontenttypevalue,omitempty"`
-	Isregex             string `json:"isregex,omitempty"`
-	Builtin             string `json:"builtin,omitempty"`
-	Feature             string `json:"feature,omitempty"`
-	Nextgenapiresource  string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Appfwxmlschema struct {
-	Name               string `json:"name,omitempty"`
-	Src                string `json:"src,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Overwrite          bool   `json:"overwrite,omitempty"`
-	Response           string `json:"response,omitempty"`
+// appfw configuration structs
+type Appfwxmlerrorpage struct {
+	Comment string `json:"comment,omitempty"`
+	Name string `json:"name,omitempty"`
 	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Overwrite bool `json:"overwrite,omitempty"`
+	Response string `json:"response,omitempty"`
+	Src string `json:"src,omitempty"`
 }
 
-type Appfwprofilecontenttypebinding struct {
-	Contenttype    string `json:"contenttype,omitempty"`
-	State          string `json:"state,omitempty"`
-	Comment        string `json:"comment,omitempty"`
-	Isautodeployed string `json:"isautodeployed,omitempty"`
-	Alertonly      string `json:"alertonly,omitempty"`
-	Resourceid     string `json:"resourceid,omitempty"`
-	Name           string `json:"name,omitempty"`
-	Ruletype       string `json:"ruletype,omitempty"`
-}
-
-type Appfwprofiledenyurlbinding struct {
-	Denyurl        string `json:"denyurl,omitempty"`
-	State          string `json:"state,omitempty"`
-	Comment        string `json:"comment,omitempty"`
-	Isautodeployed string `json:"isautodeployed,omitempty"`
-	Alertonly      string `json:"alertonly,omitempty"`
-	Resourceid     string `json:"resourceid,omitempty"`
-	Name           string `json:"name,omitempty"`
-	Ruletype       string `json:"ruletype,omitempty"`
-}
-
-type Appfwmultipartformcontenttype struct {
-	Multipartformcontenttypevalue string `json:"multipartformcontenttypevalue,omitempty"`
-	Isregex                       string `json:"isregex,omitempty"`
-	Builtin                       string `json:"builtin,omitempty"`
-	Feature                       string `json:"feature,omitempty"`
-	Nextgenapiresource            string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Appfwpolicypolicylabelbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Activepolicy           int32  `json:"activepolicy,omitempty"`
+type AppfwpolicyLbvserverBinding struct {
+	Activepolicy int `json:"activepolicy,omitempty"`
+	Boundto string `json:"boundto,omitempty"`
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Appfwcustomsettings struct {
-	Name   string `json:"name,omitempty"`
-	Target string `json:"target,omitempty"`
+	Labelname string `json:"labelname,omitempty"`
+	Labeltype string `json:"labeltype,omitempty"`
+	Name string `json:"name,omitempty"`
+	Priority int `json:"priority,omitempty"`
 }
 
 type Appfwgrpcwebtextcontenttype struct {
+	Count float64 `json:"__count,omitempty"`
 	Grpcwebtextcontenttypevalue string `json:"grpcwebtextcontenttypevalue,omitempty"`
-	Isregex                     string `json:"isregex,omitempty"`
-	Nextgenapiresource          string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Appfwpolicyvpnvserverbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Appfwprofile struct {
-	Name                                       string   `json:"name,omitempty"`
-	Defaults                                   string   `json:"defaults,omitempty"`
-	Starturlaction                             []string `json:"starturlaction,omitempty"`
-	Infercontenttypexmlpayloadaction           []string `json:"infercontenttypexmlpayloadaction,omitempty"`
-	Contenttypeaction                          []string `json:"contenttypeaction,omitempty"`
-	Inspectcontenttypes                        []string `json:"inspectcontenttypes,omitempty"`
-	Starturlclosure                            string   `json:"starturlclosure,omitempty"`
-	Denyurlaction                              []string `json:"denyurlaction,omitempty"`
-	Refererheadercheck                         string   `json:"refererheadercheck,omitempty"`
-	Cookieconsistencyaction                    []string `json:"cookieconsistencyaction,omitempty"`
-	Cookiehijackingaction                      []string `json:"cookiehijackingaction,omitempty"`
-	Cookietransforms                           string   `json:"cookietransforms,omitempty"`
-	Cookieencryption                           string   `json:"cookieencryption,omitempty"`
-	Cookieproxying                             string   `json:"cookieproxying,omitempty"`
-	Addcookieflags                             string   `json:"addcookieflags,omitempty"`
-	Fieldconsistencyaction                     []string `json:"fieldconsistencyaction,omitempty"`
-	Csrftagaction                              []string `json:"csrftagaction,omitempty"`
-	Crosssitescriptingaction                   []string `json:"crosssitescriptingaction,omitempty"`
-	Crosssitescriptingtransformunsafehtml      string   `json:"crosssitescriptingtransformunsafehtml,omitempty"`
-	Crosssitescriptingcheckcompleteurls        string   `json:"crosssitescriptingcheckcompleteurls,omitempty"`
-	Sqlinjectionaction                         []string `json:"sqlinjectionaction,omitempty"`
-	Cmdinjectionaction                         []string `json:"cmdinjectionaction,omitempty"`
-	Cmdinjectiontype                           string   `json:"cmdinjectiontype,omitempty"`
-	Sqlinjectiongrammar                        string   `json:"sqlinjectiongrammar,omitempty"`
-	Cmdinjectiongrammar                        string   `json:"cmdinjectiongrammar,omitempty"`
-	Fieldscan                                  string   `json:"fieldscan,omitempty"`
-	Fieldscanlimit                             int      `json:"fieldscanlimit,omitempty"`
-	Jsonfieldscan                              string   `json:"jsonfieldscan,omitempty"`
-	Jsonfieldscanlimit                         int      `json:"jsonfieldscanlimit,omitempty"`
-	Messagescan                                string   `json:"messagescan,omitempty"`
-	Messagescanlimit                           int      `json:"messagescanlimit,omitempty"`
-	Jsonmessagescan                            string   `json:"jsonmessagescan,omitempty"`
-	Jsonmessagescanlimit                       int      `json:"jsonmessagescanlimit,omitempty"`
-	Messagescanlimitcontenttypes               []string `json:"messagescanlimitcontenttypes,omitempty"`
-	Sqlinjectiontransformspecialchars          string   `json:"sqlinjectiontransformspecialchars,omitempty"`
-	Sqlinjectiononlycheckfieldswithsqlchars    string   `json:"sqlinjectiononlycheckfieldswithsqlchars,omitempty"`
-	Sqlinjectiontype                           string   `json:"sqlinjectiontype,omitempty"`
-	Sqlinjectionchecksqlwildchars              string   `json:"sqlinjectionchecksqlwildchars,omitempty"`
-	Fieldformataction                          []string `json:"fieldformataction,omitempty"`
-	Defaultfieldformattype                     string   `json:"defaultfieldformattype,omitempty"`
-	Defaultfieldformatminlength                int      `json:"defaultfieldformatminlength,omitempty"`
-	Defaultfieldformatmaxlength                int      `json:"defaultfieldformatmaxlength,omitempty"`
-	Defaultfieldformatmaxoccurrences           int      `json:"defaultfieldformatmaxoccurrences,omitempty"`
-	Bufferoverflowaction                       []string `json:"bufferoverflowaction,omitempty"`
-	Grpcaction                                 []string `json:"grpcaction,omitempty"`
-	Restaction                                 []string `json:"restaction,omitempty"`
-	Bufferoverflowmaxurllength                 int      `json:"bufferoverflowmaxurllength,omitempty"`
-	Bufferoverflowmaxheaderlength              int      `json:"bufferoverflowmaxheaderlength,omitempty"`
-	Bufferoverflowmaxcookielength              int      `json:"bufferoverflowmaxcookielength,omitempty"`
-	Bufferoverflowmaxquerylength               int      `json:"bufferoverflowmaxquerylength,omitempty"`
-	Bufferoverflowmaxtotalheaderlength         int      `json:"bufferoverflowmaxtotalheaderlength,omitempty"`
-	Creditcardaction                           []string `json:"creditcardaction,omitempty"`
-	Creditcard                                 []string `json:"creditcard,omitempty"`
-	Creditcardmaxallowed                       int      `json:"creditcardmaxallowed,omitempty"`
-	Creditcardxout                             string   `json:"creditcardxout,omitempty"`
-	Dosecurecreditcardlogging                  string   `json:"dosecurecreditcardlogging,omitempty"`
-	Streaming                                  string   `json:"streaming,omitempty"`
-	Trace                                      string   `json:"trace,omitempty"`
-	Requestcontenttype                         string   `json:"requestcontenttype,omitempty"`
-	Responsecontenttype                        string   `json:"responsecontenttype,omitempty"`
-	Jsonerrorobject                            string   `json:"jsonerrorobject,omitempty"`
-	Apispec                                    string   `json:"apispec,omitempty"`
-	Protofileobject                            string   `json:"protofileobject,omitempty"`
-	Jsonerrorstatuscode                        int      `json:"jsonerrorstatuscode,omitempty"`
-	Jsonerrorstatusmessage                     string   `json:"jsonerrorstatusmessage,omitempty"`
-	Jsondosaction                              []string `json:"jsondosaction,omitempty"`
-	Jsonsqlinjectionaction                     []string `json:"jsonsqlinjectionaction,omitempty"`
-	Jsonsqlinjectiontype                       string   `json:"jsonsqlinjectiontype,omitempty"`
-	Jsonsqlinjectiongrammar                    string   `json:"jsonsqlinjectiongrammar,omitempty"`
-	Jsoncmdinjectionaction                     []string `json:"jsoncmdinjectionaction,omitempty"`
-	Jsoncmdinjectiontype                       string   `json:"jsoncmdinjectiontype,omitempty"`
-	Jsoncmdinjectiongrammar                    string   `json:"jsoncmdinjectiongrammar,omitempty"`
-	Jsonxssaction                              []string `json:"jsonxssaction,omitempty"`
-	Xmldosaction                               []string `json:"xmldosaction,omitempty"`
-	Xmlformataction                            []string `json:"xmlformataction,omitempty"`
-	Xmlsqlinjectionaction                      []string `json:"xmlsqlinjectionaction,omitempty"`
-	Xmlsqlinjectiononlycheckfieldswithsqlchars string   `json:"xmlsqlinjectiononlycheckfieldswithsqlchars,omitempty"`
-	Xmlsqlinjectiontype                        string   `json:"xmlsqlinjectiontype,omitempty"`
-	Xmlsqlinjectionchecksqlwildchars           string   `json:"xmlsqlinjectionchecksqlwildchars,omitempty"`
-	Xmlsqlinjectionparsecomments               string   `json:"xmlsqlinjectionparsecomments,omitempty"`
-	Xmlxssaction                               []string `json:"xmlxssaction,omitempty"`
-	Xmlwsiaction                               []string `json:"xmlwsiaction,omitempty"`
-	Xmlattachmentaction                        []string `json:"xmlattachmentaction,omitempty"`
-	Xmlvalidationaction                        []string `json:"xmlvalidationaction,omitempty"`
-	Xmlerrorobject                             string   `json:"xmlerrorobject,omitempty"`
-	Xmlerrorstatuscode                         int      `json:"xmlerrorstatuscode,omitempty"`
-	Xmlerrorstatusmessage                      string   `json:"xmlerrorstatusmessage,omitempty"`
-	Customsettings                             string   `json:"customsettings,omitempty"`
-	Signatures                                 string   `json:"signatures,omitempty"`
-	Xmlsoapfaultaction                         []string `json:"xmlsoapfaultaction,omitempty"`
-	Usehtmlerrorobject                         string   `json:"usehtmlerrorobject,omitempty"`
-	Errorurl                                   string   `json:"errorurl,omitempty"`
-	Htmlerrorobject                            string   `json:"htmlerrorobject,omitempty"`
-	Htmlerrorstatuscode                        int      `json:"htmlerrorstatuscode,omitempty"`
-	Htmlerrorstatusmessage                     string   `json:"htmlerrorstatusmessage,omitempty"`
-	Logeverypolicyhit                          string   `json:"logeverypolicyhit,omitempty"`
-	Stripcomments                              string   `json:"stripcomments,omitempty"`
-	Striphtmlcomments                          string   `json:"striphtmlcomments,omitempty"`
-	Stripxmlcomments                           string   `json:"stripxmlcomments,omitempty"`
-	Exemptclosureurlsfromsecuritychecks        string   `json:"exemptclosureurlsfromsecuritychecks,omitempty"`
-	Defaultcharset                             string   `json:"defaultcharset,omitempty"`
-	Clientipexpression                         string   `json:"clientipexpression,omitempty"`
-	Dynamiclearning                            []string `json:"dynamiclearning,omitempty"`
-	Postbodylimit                              int      `json:"postbodylimit,omitempty"`
-	Postbodylimitaction                        []string `json:"postbodylimitaction,omitempty"`
-	Postbodylimitsignature                     int      `json:"postbodylimitsignature,omitempty"`
-	Fileuploadmaxnum                           int      `json:"fileuploadmaxnum,omitempty"`
-	Canonicalizehtmlresponse                   string   `json:"canonicalizehtmlresponse,omitempty"`
-	Enableformtagging                          string   `json:"enableformtagging,omitempty"`
-	Sessionlessfieldconsistency                string   `json:"sessionlessfieldconsistency,omitempty"`
-	Sessionlessurlclosure                      string   `json:"sessionlessurlclosure,omitempty"`
-	Semicolonfieldseparator                    string   `json:"semicolonfieldseparator,omitempty"`
-	Excludefileuploadfromchecks                string   `json:"excludefileuploadfromchecks,omitempty"`
-	Sqlinjectionparsecomments                  string   `json:"sqlinjectionparsecomments,omitempty"`
-	Invalidpercenthandling                     string   `json:"invalidpercenthandling,omitempty"`
-	Type                                       []string `json:"type,omitempty"`
-	Checkrequestheaders                        string   `json:"checkrequestheaders,omitempty"`
-	Inspectquerycontenttypes                   []string `json:"inspectquerycontenttypes,omitempty"`
-	Optimizepartialreqs                        string   `json:"optimizepartialreqs,omitempty"`
-	Urldecoderequestcookies                    string   `json:"urldecoderequestcookies,omitempty"`
-	Comment                                    string   `json:"comment,omitempty"`
-	Percentdecoderecursively                   string   `json:"percentdecoderecursively,omitempty"`
-	Multipleheaderaction                       []string `json:"multipleheaderaction,omitempty"`
-	Rfcprofile                                 string   `json:"rfcprofile,omitempty"`
-	Fileuploadtypesaction                      []string `json:"fileuploadtypesaction,omitempty"`
-	Verboseloglevel                            string   `json:"verboseloglevel,omitempty"`
-	Insertcookiesamesiteattribute              string   `json:"insertcookiesamesiteattribute,omitempty"`
-	Cookiesamesiteattribute                    string   `json:"cookiesamesiteattribute,omitempty"`
-	Sqlinjectionruletype                       string   `json:"sqlinjectionruletype,omitempty"`
-	Fakeaccountdetection                       string   `json:"fakeaccountdetection,omitempty"`
-	Geolocationlogging                         string   `json:"geolocationlogging,omitempty"`
-	Ceflogging                                 string   `json:"ceflogging,omitempty"`
-	Blockkeywordaction                         []string `json:"blockkeywordaction,omitempty"`
-	Jsonblockkeywordaction                     []string `json:"jsonblockkeywordaction,omitempty"`
-	Asprofbypasslistenable                     string   `json:"as_prof_bypass_list_enable,omitempty"`
-	Asprofdenylistenable                       string   `json:"as_prof_deny_list_enable,omitempty"`
-	Sessioncookiename                          string   `json:"sessioncookiename,omitempty"`
-	Archivename                                string   `json:"archivename,omitempty"`
-	Relaxationrules                            bool     `json:"relaxationrules,omitempty"`
-	Importprofilename                          string   `json:"importprofilename,omitempty"`
-	Matchurlstring                             string   `json:"matchurlstring,omitempty"`
-	Replaceurlstring                           string   `json:"replaceurlstring,omitempty"`
-	Overwrite                                  bool     `json:"overwrite,omitempty"`
-	Augment                                    bool     `json:"augment,omitempty"`
-	State                                      string   `json:"state,omitempty"`
-	Learning                                   string   `json:"learning,omitempty"`
-	Csrftag                                    string   `json:"csrftag,omitempty"`
-	Builtin                                    string   `json:"builtin,omitempty"`
-	Nextgenapiresource                         string   `json:"_nextgenapiresource,omitempty"`
-}
-
-type Appfwglobalauditsyslogpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	State                  string `json:"state,omitempty"`
-	Type                   string `json:"type,omitempty"`
-	Policytype             string `json:"policytype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Appfwglobalbinding struct {
-}
-
-type Appfwpolicylabelpolicybindingbinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Invokelabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Appfwprofileblockkeywordbinding struct {
-	Blockkeyword                   string `json:"blockkeyword,omitempty"`
-	Asblockkeywordformurl          string `json:"as_blockkeyword_formurl,omitempty"`
-	Fieldname                      string `json:"fieldname,omitempty"`
-	Asfieldnameisregexblockkeyword string `json:"as_fieldname_isregex_blockkeyword,omitempty"`
-	Blockkeywordtype               string `json:"blockkeywordtype,omitempty"`
-	State                          string `json:"state,omitempty"`
-	Comment                        string `json:"comment,omitempty"`
-	Ruletype                       string `json:"ruletype,omitempty"`
-	Isautodeployed                 string `json:"isautodeployed,omitempty"`
-	Alertonly                      string `json:"alertonly,omitempty"`
-	Resourceid                     string `json:"resourceid,omitempty"`
-	Name                           string `json:"name,omitempty"`
-}
-
-type Appfwglobalauditnslogpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	State                  string `json:"state,omitempty"`
-	Type                   string `json:"type,omitempty"`
-	Policytype             string `json:"policytype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Appfwprofilexmlvalidationurlbinding struct {
-	Xmlvalidationurl         string `json:"xmlvalidationurl,omitempty"`
-	Xmlvalidateresponse      string `json:"xmlvalidateresponse,omitempty"`
-	Xmlwsdl                  string `json:"xmlwsdl,omitempty"`
-	Xmladditionalsoapheaders string `json:"xmladditionalsoapheaders,omitempty"`
-	Xmlendpointcheck         string `json:"xmlendpointcheck,omitempty"`
-	Xmlrequestschema         string `json:"xmlrequestschema,omitempty"`
-	Xmlresponseschema        string `json:"xmlresponseschema,omitempty"`
-	Xmlvalidatesoapenvelope  string `json:"xmlvalidatesoapenvelope,omitempty"`
-	State                    string `json:"state,omitempty"`
-	Comment                  string `json:"comment,omitempty"`
-	Isautodeployed           string `json:"isautodeployed,omitempty"`
-	Alertonly                string `json:"alertonly,omitempty"`
-	Name                     string `json:"name,omitempty"`
-	Resourceid               string `json:"resourceid,omitempty"`
-	Ruletype                 string `json:"ruletype,omitempty"`
-}
-
-type Appfwprofilexmlwsiurlbinding struct {
-	Xmlwsiurl      string `json:"xmlwsiurl,omitempty"`
-	Xmlwsichecks   string `json:"xmlwsichecks,omitempty"`
-	State          string `json:"state,omitempty"`
-	Comment        string `json:"comment,omitempty"`
-	Isautodeployed string `json:"isautodeployed,omitempty"`
-	Alertonly      string `json:"alertonly,omitempty"`
-	Name           string `json:"name,omitempty"`
-	Resourceid     string `json:"resourceid,omitempty"`
-	Ruletype       string `json:"ruletype,omitempty"`
-}
-
-type Appfwfieldtype struct {
-	Name               string `json:"name,omitempty"`
-	Regex              string `json:"regex,omitempty"`
-	Priority           int    `json:"priority,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Nocharmaps         bool   `json:"nocharmaps,omitempty"`
-	Builtin            string `json:"builtin,omitempty"`
-	Feature            string `json:"feature,omitempty"`
+	Isregex string `json:"isregex,omitempty"`
 	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
 }
 
-type Appfwglobalpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
+type AppfwglobalAppfwpolicyBinding struct {
+	Flowtype int `json:"flowtype,omitempty"`
+	Globalbindtype string `json:"globalbindtype,omitempty"`
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	State                  string `json:"state,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Numpol                 uint32 `json:"numpol,omitempty"`
-	Flowtype               uint32 `json:"flowtype,omitempty"`
-	Type                   string `json:"type,omitempty"`
-	Policytype             string `json:"policytype,omitempty"`
-	Globalbindtype         string `json:"globalbindtype,omitempty"`
+	Invoke bool `json:"invoke,omitempty"`
+	Labelname string `json:"labelname,omitempty"`
+	Labeltype string `json:"labeltype,omitempty"`
+	Numpol int `json:"numpol,omitempty"`
+	Policyname string `json:"policyname,omitempty"`
+	Policytype string `json:"policytype,omitempty"`
+	Priority int `json:"priority,omitempty"`
+	State string `json:"state,omitempty"`
+	TypeField string `json:"type,omitempty"`
 }
 
-type Appfwpolicylabelappfwpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Invokelabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Appfwprofilecreditcardnumberbinding struct {
-	Creditcardnumber    string `json:"creditcardnumber,omitempty"`
-	Creditcardnumberurl string `json:"creditcardnumberurl,omitempty"`
-	State               string `json:"state,omitempty"`
-	Comment             string `json:"comment,omitempty"`
-	Isautodeployed      string `json:"isautodeployed,omitempty"`
-	Alertonly           string `json:"alertonly,omitempty"`
-	Name                string `json:"name,omitempty"`
-	Resourceid          string `json:"resourceid,omitempty"`
-	Ruletype            string `json:"ruletype,omitempty"`
-}
-
-type Appfwpolicy struct {
-	Name               string `json:"name,omitempty"`
-	Rule               string `json:"rule,omitempty"`
-	Profilename        string `json:"profilename,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Logaction          string `json:"logaction,omitempty"`
-	Newname            string `json:"newname,omitempty"`
-	Hits               string `json:"hits,omitempty"`
-	Undefhits          string `json:"undefhits,omitempty"`
-	Policytype         string `json:"policytype,omitempty"`
-	Builtin            string `json:"builtin,omitempty"`
-	Feature            string `json:"feature,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Appfwhtmlerrorpage struct {
-	Name               string `json:"name,omitempty"`
-	Src                string `json:"src,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Overwrite          bool   `json:"overwrite,omitempty"`
-	Response           string `json:"response,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Appfwprofileappfwconfidfieldbinding struct {
-	Confidfield    string `json:"confidfield,omitempty"`
-	Isregexcffield string `json:"isregex_cffield,omitempty"`
-	Cffieldurl     string `json:"cffield_url,omitempty"`
-	State          string `json:"state,omitempty"`
-	Comment        string `json:"comment,omitempty"`
-	Isautodeployed string `json:"isautodeployed,omitempty"`
-	Alertonly      string `json:"alertonly,omitempty"`
-	Resourceid     string `json:"resourceid,omitempty"`
-	Name           string `json:"name,omitempty"`
-	Ruletype       string `json:"ruletype,omitempty"`
-}
-
-type Appfwprofilexmlxssbinding struct {
-	Xmlxss               string `json:"xmlxss,omitempty"`
-	Isregexxmlxss        string `json:"isregex_xmlxss,omitempty"`
-	Asscanlocationxmlxss string `json:"as_scan_location_xmlxss,omitempty"`
-	State                string `json:"state,omitempty"`
-	Comment              string `json:"comment,omitempty"`
-	Isautodeployed       string `json:"isautodeployed,omitempty"`
-	Alertonly            string `json:"alertonly,omitempty"`
-	Name                 string `json:"name,omitempty"`
-	Resourceid           string `json:"resourceid,omitempty"`
-	Ruletype             string `json:"ruletype,omitempty"`
-}
-
-type Appfwurlencodedformcontenttype struct {
-	Urlencodedformcontenttypevalue string `json:"urlencodedformcontenttypevalue,omitempty"`
-	Isregex                        string `json:"isregex,omitempty"`
-	Builtin                        string `json:"builtin,omitempty"`
-	Feature                        string `json:"feature,omitempty"`
-	Nextgenapiresource             string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Appfwprofilecookieconsistencybinding struct {
+type AppfwprofileCookieconsistencyBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
 	Cookieconsistency string `json:"cookieconsistency,omitempty"`
-	Isregex           string `json:"isregex,omitempty"`
-	State             string `json:"state,omitempty"`
-	Comment           string `json:"comment,omitempty"`
-	Isautodeployed    string `json:"isautodeployed,omitempty"`
-	Alertonly         string `json:"alertonly,omitempty"`
-	Resourceid        string `json:"resourceid,omitempty"`
-	Name              string `json:"name,omitempty"`
-	Ruletype          string `json:"ruletype,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Isregex string `json:"isregex,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
 }
 
-type Appfwprofilecrosssitescriptingbinding struct {
-	Crosssitescripting string `json:"crosssitescripting,omitempty"`
-	Isregexxss         string `json:"isregex_xss,omitempty"`
-	Formactionurlxss   string `json:"formactionurl_xss,omitempty"`
-	Asscanlocationxss  string `json:"as_scan_location_xss,omitempty"`
-	Asvaluetypexss     string `json:"as_value_type_xss,omitempty"`
-	Asvalueexprxss     string `json:"as_value_expr_xss,omitempty"`
-	Isvalueregexxss    string `json:"isvalueregex_xss,omitempty"`
-	State              string `json:"state,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Isautodeployed     string `json:"isautodeployed,omitempty"`
-	Alertonly          string `json:"alertonly,omitempty"`
-	Resourceid         string `json:"resourceid,omitempty"`
-	Name               string `json:"name,omitempty"`
-	Ruletype           string `json:"ruletype,omitempty"`
+type AppfwprofileXmldosurlBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+	Xmlblockdtd string `json:"xmlblockdtd,omitempty"`
+	Xmlblockexternalentities string `json:"xmlblockexternalentities,omitempty"`
+	Xmlblockpi string `json:"xmlblockpi,omitempty"`
+	Xmldosurl string `json:"xmldosurl,omitempty"`
+	Xmlmaxattributenamelength int `json:"xmlmaxattributenamelength,omitempty"`
+	Xmlmaxattributenamelengthcheck string `json:"xmlmaxattributenamelengthcheck,omitempty"`
+	Xmlmaxattributes int `json:"xmlmaxattributes,omitempty"`
+	Xmlmaxattributescheck string `json:"xmlmaxattributescheck,omitempty"`
+	Xmlmaxattributevaluelength int `json:"xmlmaxattributevaluelength,omitempty"`
+	Xmlmaxattributevaluelengthcheck string `json:"xmlmaxattributevaluelengthcheck,omitempty"`
+	Xmlmaxchardatalength int `json:"xmlmaxchardatalength,omitempty"`
+	Xmlmaxchardatalengthcheck string `json:"xmlmaxchardatalengthcheck,omitempty"`
+	Xmlmaxelementchildren int `json:"xmlmaxelementchildren,omitempty"`
+	Xmlmaxelementchildrencheck string `json:"xmlmaxelementchildrencheck,omitempty"`
+	Xmlmaxelementdepth int `json:"xmlmaxelementdepth,omitempty"`
+	Xmlmaxelementdepthcheck string `json:"xmlmaxelementdepthcheck,omitempty"`
+	Xmlmaxelementnamelength int `json:"xmlmaxelementnamelength,omitempty"`
+	Xmlmaxelementnamelengthcheck string `json:"xmlmaxelementnamelengthcheck,omitempty"`
+	Xmlmaxelements int `json:"xmlmaxelements,omitempty"`
+	Xmlmaxelementscheck string `json:"xmlmaxelementscheck,omitempty"`
+	Xmlmaxentityexpansiondepth int `json:"xmlmaxentityexpansiondepth,omitempty"`
+	Xmlmaxentityexpansiondepthcheck string `json:"xmlmaxentityexpansiondepthcheck,omitempty"`
+	Xmlmaxentityexpansions int `json:"xmlmaxentityexpansions,omitempty"`
+	Xmlmaxentityexpansionscheck string `json:"xmlmaxentityexpansionscheck,omitempty"`
+	Xmlmaxfilesize int `json:"xmlmaxfilesize,omitempty"`
+	Xmlmaxfilesizecheck string `json:"xmlmaxfilesizecheck,omitempty"`
+	Xmlmaxnamespaces int `json:"xmlmaxnamespaces,omitempty"`
+	Xmlmaxnamespacescheck string `json:"xmlmaxnamespacescheck,omitempty"`
+	Xmlmaxnamespaceurilength int `json:"xmlmaxnamespaceurilength,omitempty"`
+	Xmlmaxnamespaceurilengthcheck string `json:"xmlmaxnamespaceurilengthcheck,omitempty"`
+	Xmlmaxnodes int `json:"xmlmaxnodes,omitempty"`
+	Xmlmaxnodescheck string `json:"xmlmaxnodescheck,omitempty"`
+	Xmlmaxsoaparrayrank int `json:"xmlmaxsoaparrayrank,omitempty"`
+	Xmlmaxsoaparraysize int `json:"xmlmaxsoaparraysize,omitempty"`
+	Xmlminfilesize int `json:"xmlminfilesize,omitempty"`
+	Xmlminfilesizecheck string `json:"xmlminfilesizecheck,omitempty"`
+	Xmlsoaparraycheck string `json:"xmlsoaparraycheck,omitempty"`
 }
 
-type Appfwprofilexmlsqlinjectionbinding struct {
-	Xmlsqlinjection      string `json:"xmlsqlinjection,omitempty"`
-	Isregexxmlsql        string `json:"isregex_xmlsql,omitempty"`
-	Asscanlocationxmlsql string `json:"as_scan_location_xmlsql,omitempty"`
-	State                string `json:"state,omitempty"`
-	Comment              string `json:"comment,omitempty"`
-	Isautodeployed       string `json:"isautodeployed,omitempty"`
-	Alertonly            string `json:"alertonly,omitempty"`
-	Name                 string `json:"name,omitempty"`
-	Resourceid           string `json:"resourceid,omitempty"`
-	Ruletype             string `json:"ruletype,omitempty"`
+type AppfwprofileDenyurlBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Denyurl string `json:"denyurl,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
 }
 
 type Appfwsignatures struct {
-	Name                    string   `json:"name,omitempty"`
-	Src                     string   `json:"src,omitempty"`
-	Xslt                    string   `json:"xslt,omitempty"`
-	Comment                 string   `json:"comment,omitempty"`
-	Overwrite               bool     `json:"overwrite,omitempty"`
-	Merge                   bool     `json:"merge,omitempty"`
-	Preservedefactions      bool     `json:"preservedefactions,omitempty"`
-	Sha1                    string   `json:"sha1,omitempty"`
-	Vendortype              string   `json:"vendortype,omitempty"`
-	Autoenablenewsignatures string   `json:"autoenablenewsignatures,omitempty"`
-	Ruleid                  []int    `json:"ruleid,omitempty"`
-	Category                string   `json:"category,omitempty"`
-	Enabled                 string   `json:"enabled,omitempty"`
-	Action                  []string `json:"action,omitempty"`
-	Mergedefault            bool     `json:"mergedefault,omitempty"`
-	Response                string   `json:"response,omitempty"`
-	Encryptedversion        string   `json:"encryptedversion,omitempty"`
-	Nextgenapiresource      string   `json:"_nextgenapiresource,omitempty"`
-}
-
-type Appfwpolicylbvserverbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Appfwpolicylabelbinding struct {
-	Labelname string `json:"labelname,omitempty"`
-}
-
-type Appfwprofileexcluderescontenttypebinding struct {
-	Excluderescontenttype string `json:"excluderescontenttype,omitempty"`
-	State                 string `json:"state,omitempty"`
-	Comment               string `json:"comment,omitempty"`
-	Isautodeployed        string `json:"isautodeployed,omitempty"`
-	Alertonly             string `json:"alertonly,omitempty"`
-	Resourceid            string `json:"resourceid,omitempty"`
-	Name                  string `json:"name,omitempty"`
-	Ruletype              string `json:"ruletype,omitempty"`
-}
-
-type Appfwprofilefakeaccountbinding struct {
-	Fakeaccount      string `json:"fakeaccount,omitempty"`
-	Isfieldnameregex string `json:"isfieldnameregex,omitempty"`
-	Formurlfad       string `json:"formurl_fad,omitempty"`
-	Formexpression   string `json:"formexpression,omitempty"`
-	Tag              string `json:"tag,omitempty"`
-	State            string `json:"state,omitempty"`
-	Comment          string `json:"comment,omitempty"`
-	Isautodeployed   string `json:"isautodeployed,omitempty"`
-	Alertonly        string `json:"alertonly,omitempty"`
-	Name             string `json:"name,omitempty"`
-	Resourceid       string `json:"resourceid,omitempty"`
-	Ruletype         string `json:"ruletype,omitempty"`
-}
-
-type Appfwprofilefieldconsistencybinding struct {
-	Fieldconsistency string `json:"fieldconsistency,omitempty"`
-	Isregexffc       string `json:"isregex_ffc,omitempty"`
-	Formactionurlffc string `json:"formactionurl_ffc,omitempty"`
-	State            string `json:"state,omitempty"`
-	Comment          string `json:"comment,omitempty"`
-	Isautodeployed   string `json:"isautodeployed,omitempty"`
-	Alertonly        string `json:"alertonly,omitempty"`
-	Resourceid       string `json:"resourceid,omitempty"`
-	Name             string `json:"name,omitempty"`
-	Ruletype         string `json:"ruletype,omitempty"`
-}
-
-type Appfwprofilejsonxssurlbinding struct {
-	Jsonxssurl          string `json:"jsonxssurl,omitempty"`
-	State               string `json:"state,omitempty"`
-	Comment             string `json:"comment,omitempty"`
-	Iskeyregexjsonxss   string `json:"iskeyregex_json_xss,omitempty"`
-	Keynamejsonxss      string `json:"keyname_json_xss,omitempty"`
-	Asvaluetypejsonxss  string `json:"as_value_type_json_xss,omitempty"`
-	Asvalueexprjsonxss  string `json:"as_value_expr_json_xss,omitempty"`
-	Isvalueregexjsonxss string `json:"isvalueregex_json_xss,omitempty"`
-	Isautodeployed      string `json:"isautodeployed,omitempty"`
-	Alertonly           string `json:"alertonly,omitempty"`
-	Resourceid          string `json:"resourceid,omitempty"`
-	Name                string `json:"name,omitempty"`
-	Ruletype            string `json:"ruletype,omitempty"`
-}
-
-type Appfwprofilexmlattachmenturlbinding struct {
-	Xmlattachmenturl              string `json:"xmlattachmenturl,omitempty"`
-	Xmlmaxattachmentsizecheck     string `json:"xmlmaxattachmentsizecheck,omitempty"`
-	Xmlmaxattachmentsize          int    `json:"xmlmaxattachmentsize,omitempty"`
-	Xmlattachmentcontenttypecheck string `json:"xmlattachmentcontenttypecheck,omitempty"`
-	Xmlattachmentcontenttype      string `json:"xmlattachmentcontenttype,omitempty"`
-	State                         string `json:"state,omitempty"`
-	Comment                       string `json:"comment,omitempty"`
-	Isautodeployed                string `json:"isautodeployed,omitempty"`
-	Alertonly                     string `json:"alertonly,omitempty"`
-	Name                          string `json:"name,omitempty"`
-	Resourceid                    string `json:"resourceid,omitempty"`
-	Ruletype                      string `json:"ruletype,omitempty"`
-}
-
-type Appfwprofiledenylistbinding struct {
-	Asdenylist          string   `json:"as_deny_list,omitempty"`
-	Asdenylistvaluetype string   `json:"as_deny_list_value_type,omitempty"`
-	Asdenylistaction    []string `json:"as_deny_list_action,omitempty"`
-	Asdenylistlocation  string   `json:"as_deny_list_location,omitempty"`
-	State               string   `json:"state,omitempty"`
-	Comment             string   `json:"comment,omitempty"`
-	Isautodeployed      string   `json:"isautodeployed,omitempty"`
-	Alertonly           string   `json:"alertonly,omitempty"`
-	Resourceid          string   `json:"resourceid,omitempty"`
-	Name                string   `json:"name,omitempty"`
-	Ruletype            string   `json:"ruletype,omitempty"`
-}
-
-type Appfwprofilejsonblockkeywordbinding struct {
-	Jsonblockkeyword           string `json:"jsonblockkeyword,omitempty"`
-	Jsonblockkeywordurl        string `json:"jsonblockkeywordurl,omitempty"`
-	Keynamejsonblockkeyword    string `json:"keyname_json_blockkeyword,omitempty"`
-	Iskeyregexjsonblockkeyword string `json:"iskeyregex_json_blockkeyword,omitempty"`
-	Jsonblockkeywordtype       string `json:"jsonblockkeywordtype,omitempty"`
-	State                      string `json:"state,omitempty"`
-	Comment                    string `json:"comment,omitempty"`
-	Ruletype                   string `json:"ruletype,omitempty"`
-	Isautodeployed             string `json:"isautodeployed,omitempty"`
-	Alertonly                  string `json:"alertonly,omitempty"`
-	Resourceid                 string `json:"resourceid,omitempty"`
-	Name                       string `json:"name,omitempty"`
-}
-
-type Appfwglobalsyslogpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	State                  string `json:"state,omitempty"`
-	Type                   string `json:"type,omitempty"`
-	Policytype             string `json:"policytype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Appfwpolicyvserverbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Activepolicy           int32  `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Appfwpolicylabel struct {
-	Labelname              string `json:"labelname,omitempty"`
-	Policylabeltype        string `json:"policylabeltype,omitempty"`
-	Newname                string `json:"newname,omitempty"`
-	Numpol                 string `json:"numpol,omitempty"`
-	Hits                   string `json:"hits,omitempty"`
-	Priority               string `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Invokelabelname        string `json:"invoke_labelname,omitempty"`
-	Description            string `json:"description,omitempty"`
-	Policytype             string `json:"policytype,omitempty"`
-	Nextgenapiresource     string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Appfwpolicylabelpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Invokelabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Appfwprofilecmdinjectionbinding struct {
-	Cmdinjection      string `json:"cmdinjection,omitempty"`
-	Isregexcmd        string `json:"isregex_cmd,omitempty"`
-	Formactionurlcmd  string `json:"formactionurl_cmd,omitempty"`
-	Asscanlocationcmd string `json:"as_scan_location_cmd,omitempty"`
-	Asvaluetypecmd    string `json:"as_value_type_cmd,omitempty"`
-	Asvalueexprcmd    string `json:"as_value_expr_cmd,omitempty"`
-	Isvalueregexcmd   string `json:"isvalueregex_cmd,omitempty"`
-	State             string `json:"state,omitempty"`
-	Comment           string `json:"comment,omitempty"`
-	Isautodeployed    string `json:"isautodeployed,omitempty"`
-	Alertonly         string `json:"alertonly,omitempty"`
-	Resourceid        string `json:"resourceid,omitempty"`
-	Name              string `json:"name,omitempty"`
-	Ruletype          string `json:"ruletype,omitempty"`
-}
-
-type Appfwprofilelogexpressionbinding struct {
-	Logexpression   string `json:"logexpression,omitempty"`
-	Aslogexpression string `json:"as_logexpression,omitempty"`
-	State           string `json:"state,omitempty"`
-	Comment         string `json:"comment,omitempty"`
-	Isautodeployed  string `json:"isautodeployed,omitempty"`
-	Alertonly       string `json:"alertonly,omitempty"`
-	Name            string `json:"name,omitempty"`
-	Resourceid      string `json:"resourceid,omitempty"`
-	Ruletype        string `json:"ruletype,omitempty"`
-}
-
-type Appfwconfidfield struct {
-	Fieldname          string `json:"fieldname,omitempty"`
-	Url                string `json:"url,omitempty"`
-	Isregex            string `json:"isregex,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	State              string `json:"state,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Appfwpolicyappfwglobalbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Appfwprofilebinding struct {
+	Action []string `json:"action,omitempty"`
+	Autoenablenewsignatures string `json:"autoenablenewsignatures,omitempty"`
+	Category string `json:"category,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Enabled string `json:"enabled,omitempty"`
+	Encryptedversion int `json:"encryptedversion,omitempty"`
+	Merge bool `json:"merge,omitempty"`
+	Mergedefault bool `json:"mergedefault,omitempty"`
 	Name string `json:"name,omitempty"`
-}
-
-type Appfwprofilebypasslistbinding struct {
-	Asbypasslist          string `json:"as_bypass_list,omitempty"`
-	Asbypasslistvaluetype string `json:"as_bypass_list_value_type,omitempty"`
-	Asbypasslistaction    string `json:"as_bypass_list_action,omitempty"`
-	Asbypasslistlocation  string `json:"as_bypass_list_location,omitempty"`
-	State                 string `json:"state,omitempty"`
-	Comment               string `json:"comment,omitempty"`
-	Isautodeployed        string `json:"isautodeployed,omitempty"`
-	Alertonly             string `json:"alertonly,omitempty"`
-	Resourceid            string `json:"resourceid,omitempty"`
-	Name                  string `json:"name,omitempty"`
-	Ruletype              string `json:"ruletype,omitempty"`
-}
-
-type Appfwprofilecsrftagbinding struct {
-	Csrftag           string `json:"csrftag,omitempty"`
-	Csrfformactionurl string `json:"csrfformactionurl,omitempty"`
-	State             string `json:"state,omitempty"`
-	Comment           string `json:"comment,omitempty"`
-	Isautodeployed    string `json:"isautodeployed,omitempty"`
-	Alertonly         string `json:"alertonly,omitempty"`
-	Resourceid        string `json:"resourceid,omitempty"`
-	Name              string `json:"name,omitempty"`
-	Ruletype          string `json:"ruletype,omitempty"`
-}
-
-type Appfwtransactionrecords struct {
-	Nodeid                    int    `json:"nodeid,omitempty"`
-	Httptransactionid         string `json:"httptransactionid,omitempty"`
-	Packetengineid            string `json:"packetengineid,omitempty"`
-	Appfwsessionid            string `json:"appfwsessionid,omitempty"`
-	Profilename               string `json:"profilename,omitempty"`
-	Url                       string `json:"url,omitempty"`
-	Clientip                  string `json:"clientip,omitempty"`
-	Destip                    string `json:"destip,omitempty"`
-	Starttime                 string `json:"starttime,omitempty"`
-	Endtime                   string `json:"endtime,omitempty"`
-	Requestcontentlength      string `json:"requestcontentlength,omitempty"`
-	Requestyields             string `json:"requestyields,omitempty"`
-	Requestmaxprocessingtime  string `json:"requestmaxprocessingtime,omitempty"`
-	Responsecontentlength     string `json:"responsecontentlength,omitempty"`
-	Responseyields            string `json:"responseyields,omitempty"`
-	Responsemaxprocessingtime string `json:"responsemaxprocessingtime,omitempty"`
-	Nextgenapiresource        string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Appfwgrpcwebjsoncontenttype struct {
-	Grpcwebjsoncontenttypevalue string `json:"grpcwebjsoncontenttypevalue,omitempty"`
-	Isregex                     string `json:"isregex,omitempty"`
-	Nextgenapiresource          string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Appfwpolicyappfwpolicylabelbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Appfwprofilejsoncmdurlbinding struct {
-	Jsoncmdurl          string `json:"jsoncmdurl,omitempty"`
-	State               string `json:"state,omitempty"`
-	Comment             string `json:"comment,omitempty"`
-	Iskeyregexjsoncmd   string `json:"iskeyregex_json_cmd,omitempty"`
-	Keynamejsoncmd      string `json:"keyname_json_cmd,omitempty"`
-	Asvaluetypejsoncmd  string `json:"as_value_type_json_cmd,omitempty"`
-	Asvalueexprjsoncmd  string `json:"as_value_expr_json_cmd,omitempty"`
-	Isvalueregexjsoncmd string `json:"isvalueregex_json_cmd,omitempty"`
-	Isautodeployed      string `json:"isautodeployed,omitempty"`
-	Alertonly           string `json:"alertonly,omitempty"`
-	Resourceid          string `json:"resourceid,omitempty"`
-	Name                string `json:"name,omitempty"`
-	Ruletype            string `json:"ruletype,omitempty"`
-}
-
-type Appfwprofilejsonsqlurlbinding struct {
-	Jsonsqlurl          string `json:"jsonsqlurl,omitempty"`
-	State               string `json:"state,omitempty"`
-	Comment             string `json:"comment,omitempty"`
-	Iskeyregexjsonsql   string `json:"iskeyregex_json_sql,omitempty"`
-	Keynamejsonsql      string `json:"keyname_json_sql,omitempty"`
-	Asvaluetypejsonsql  string `json:"as_value_type_json_sql,omitempty"`
-	Asvalueexprjsonsql  string `json:"as_value_expr_json_sql,omitempty"`
-	Isvalueregexjsonsql string `json:"isvalueregex_json_sql,omitempty"`
-	Isautodeployed      string `json:"isautodeployed,omitempty"`
-	Alertonly           string `json:"alertonly,omitempty"`
-	Resourceid          string `json:"resourceid,omitempty"`
-	Name                string `json:"name,omitempty"`
-	Ruletype            string `json:"ruletype,omitempty"`
-}
-
-type Appfwprotofile struct {
-	Name               string `json:"name,omitempty"`
-	Src                string `json:"src,omitempty"`
-	Overwrite          bool   `json:"overwrite,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Response           string `json:"response,omitempty"`
 	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Overwrite bool `json:"overwrite,omitempty"`
+	Preservedefactions bool `json:"preservedefactions,omitempty"`
+	Response string `json:"response,omitempty"`
+	Ruleid []interface{} `json:"ruleid,omitempty"`
+	Sha1 string `json:"sha1,omitempty"`
+	Src string `json:"src,omitempty"`
+	Vendortype string `json:"vendortype,omitempty"`
+	Xslt string `json:"xslt,omitempty"`
 }
 
-type Appfwsettings struct {
-	Defaultprofile           string   `json:"defaultprofile,omitempty"`
-	Undefaction              string   `json:"undefaction,omitempty"`
-	Sessiontimeout           int      `json:"sessiontimeout,omitempty"`
-	Learnratelimit           int      `json:"learnratelimit,omitempty"`
-	Sessionlifetime          int      `json:"sessionlifetime"`
-	Sessioncookiename        string   `json:"sessioncookiename,omitempty"`
-	Clientiploggingheader    string   `json:"clientiploggingheader,omitempty"`
-	Importsizelimit          int      `json:"importsizelimit,omitempty"`
-	Signatureautoupdate      string   `json:"signatureautoupdate,omitempty"`
-	Signatureurl             string   `json:"signatureurl,omitempty"`
-	Cookiepostencryptprefix  string   `json:"cookiepostencryptprefix,omitempty"`
-	Logmalformedreq          string   `json:"logmalformedreq,omitempty"`
-	Geolocationlogging       string   `json:"geolocationlogging,omitempty"`
-	Ceflogging               string   `json:"ceflogging,omitempty"`
-	Entitydecoding           string   `json:"entitydecoding,omitempty"`
-	Useconfigurablesecretkey string   `json:"useconfigurablesecretkey,omitempty"`
-	Sessionlimit             int      `json:"sessionlimit"`
-	Malformedreqaction       []string `json:"malformedreqaction,omitempty"`
-	Centralizedlearning      string   `json:"centralizedlearning,omitempty"`
-	Proxyserver              string   `json:"proxyserver,omitempty"`
-	Proxyport                int      `json:"proxyport,omitempty"`
-	Proxyusername            string   `json:"proxyusername,omitempty"`
-	Proxypassword            string   `json:"proxypassword,omitempty"`
-	Cookieflags              string   `json:"cookieflags,omitempty"`
-	Learning                 string   `json:"learning,omitempty"`
-	Builtin                  string   `json:"builtin,omitempty"`
-	Feature                  string   `json:"feature,omitempty"`
-	Nextgenapiresource       string   `json:"_nextgenapiresource,omitempty"`
-}
-
-type Appfwglobalnslogpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	State                  string `json:"state,omitempty"`
-	Type                   string `json:"type,omitempty"`
-	Policytype             string `json:"policytype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Appfwjsoncontenttype struct {
-	Jsoncontenttypevalue string `json:"jsoncontenttypevalue,omitempty"`
-	Isregex              string `json:"isregex,omitempty"`
-	Builtin              string `json:"builtin,omitempty"`
-	Feature              string `json:"feature,omitempty"`
-	Nextgenapiresource   string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Appfwpolicycsvserverbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Appfwprofilestarturlbinding struct {
-	Starturl       string `json:"starturl,omitempty"`
-	State          string `json:"state,omitempty"`
-	Comment        string `json:"comment,omitempty"`
+type AppfwprofileFieldformatBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Fieldformat string `json:"fieldformat,omitempty"`
+	Fieldformatmaxlength int `json:"fieldformatmaxlength,omitempty"`
+	Fieldformatminlength int `json:"fieldformatminlength,omitempty"`
+	Fieldtype string `json:"fieldtype,omitempty"`
+	FormactionurlFf string `json:"formactionurl_ff,omitempty"`
 	Isautodeployed string `json:"isautodeployed,omitempty"`
-	Alertonly      string `json:"alertonly,omitempty"`
-	Resourceid     string `json:"resourceid,omitempty"`
-	Name           string `json:"name,omitempty"`
-	Ruletype       string `json:"ruletype,omitempty"`
-}
-
-type Appfwpolicybinding struct {
+	IsregexFf string `json:"isregex_ff,omitempty"`
 	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
 }
 
-type Appfwarchive struct {
-	Name               string `json:"name,omitempty"`
-	Target             string `json:"target,omitempty"`
-	Src                string `json:"src,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Response           string `json:"response,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Appfwglobalappfwpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	State                  string `json:"state,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Numpol                 int    `json:"numpol,omitempty"`
-	Flowtype               int    `json:"flowtype,omitempty"`
-	Type                   string `json:"type,omitempty"`
-	Policytype             string `json:"policytype,omitempty"`
-	Globalbindtype         string `json:"globalbindtype,omitempty"`
-}
-
-type Appfwgrpccontenttype struct {
-	Grpccontenttypevalue string `json:"grpccontenttypevalue,omitempty"`
-	Isregex              string `json:"isregex,omitempty"`
-	Builtin              string `json:"builtin,omitempty"`
-	Feature              string `json:"feature,omitempty"`
-	Nextgenapiresource   string `json:"_nextgenapiresource,omitempty"`
+type AppfwprofileLogexpressionBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	AsLogexpression string `json:"as_logexpression,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Logexpression string `json:"logexpression,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
 }
 
 type Appfwjsonerrorpage struct {
-	Name               string `json:"name,omitempty"`
-	Src                string `json:"src,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Overwrite          bool   `json:"overwrite,omitempty"`
-	Response           string `json:"response,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Name string `json:"name,omitempty"`
 	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Overwrite bool `json:"overwrite,omitempty"`
+	Response string `json:"response,omitempty"`
+	Src string `json:"src,omitempty"`
 }
 
-type Appfwprofiletrustedlearningclientsbinding struct {
-	Trustedlearningclients string `json:"trustedlearningclients,omitempty"`
-	State                  string `json:"state,omitempty"`
-	Comment                string `json:"comment,omitempty"`
-	Isautodeployed         string `json:"isautodeployed,omitempty"`
-	Alertonly              string `json:"alertonly,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Resourceid             string `json:"resourceid,omitempty"`
-	Ruletype               string `json:"ruletype,omitempty"`
-}
-
-type Appfwprofilexmldosurlbinding struct {
-	Xmldosurl                       string `json:"xmldosurl,omitempty"`
-	Xmlmaxelementdepthcheck         string `json:"xmlmaxelementdepthcheck,omitempty"`
-	Xmlmaxelementdepth              int    `json:"xmlmaxelementdepth,omitempty"`
-	Xmlmaxelementnamelengthcheck    string `json:"xmlmaxelementnamelengthcheck,omitempty"`
-	Xmlmaxelementnamelength         int    `json:"xmlmaxelementnamelength,omitempty"`
-	Xmlmaxelementscheck             string `json:"xmlmaxelementscheck,omitempty"`
-	Xmlmaxelements                  int    `json:"xmlmaxelements,omitempty"`
-	Xmlmaxelementchildrencheck      string `json:"xmlmaxelementchildrencheck,omitempty"`
-	Xmlmaxelementchildren           int    `json:"xmlmaxelementchildren,omitempty"`
-	Xmlmaxnodescheck                string `json:"xmlmaxnodescheck,omitempty"`
-	Xmlmaxnodes                     int    `json:"xmlmaxnodes,omitempty"`
-	Xmlmaxentityexpansionscheck     string `json:"xmlmaxentityexpansionscheck,omitempty"`
-	Xmlmaxentityexpansions          int    `json:"xmlmaxentityexpansions,omitempty"`
-	Xmlmaxentityexpansiondepthcheck string `json:"xmlmaxentityexpansiondepthcheck,omitempty"`
-	Xmlmaxentityexpansiondepth      int    `json:"xmlmaxentityexpansiondepth,omitempty"`
-	Xmlmaxattributescheck           string `json:"xmlmaxattributescheck,omitempty"`
-	Xmlmaxattributes                int    `json:"xmlmaxattributes,omitempty"`
-	Xmlmaxattributenamelengthcheck  string `json:"xmlmaxattributenamelengthcheck,omitempty"`
-	Xmlmaxattributenamelength       int    `json:"xmlmaxattributenamelength,omitempty"`
-	Xmlmaxattributevaluelengthcheck string `json:"xmlmaxattributevaluelengthcheck,omitempty"`
-	Xmlmaxattributevaluelength      int    `json:"xmlmaxattributevaluelength,omitempty"`
-	Xmlmaxnamespacescheck           string `json:"xmlmaxnamespacescheck,omitempty"`
-	Xmlmaxnamespaces                int    `json:"xmlmaxnamespaces,omitempty"`
-	Xmlmaxnamespaceurilengthcheck   string `json:"xmlmaxnamespaceurilengthcheck,omitempty"`
-	Xmlmaxnamespaceurilength        int    `json:"xmlmaxnamespaceurilength,omitempty"`
-	Xmlmaxchardatalengthcheck       string `json:"xmlmaxchardatalengthcheck,omitempty"`
-	Xmlmaxchardatalength            int    `json:"xmlmaxchardatalength,omitempty"`
-	Xmlmaxfilesizecheck             string `json:"xmlmaxfilesizecheck,omitempty"`
-	Xmlmaxfilesize                  int    `json:"xmlmaxfilesize,omitempty"`
-	Xmlminfilesizecheck             string `json:"xmlminfilesizecheck,omitempty"`
-	Xmlminfilesize                  int    `json:"xmlminfilesize,omitempty"`
-	Xmlblockpi                      string `json:"xmlblockpi,omitempty"`
-	Xmlblockdtd                     string `json:"xmlblockdtd,omitempty"`
-	Xmlblockexternalentities        string `json:"xmlblockexternalentities,omitempty"`
-	Xmlsoaparraycheck               string `json:"xmlsoaparraycheck,omitempty"`
-	Xmlmaxsoaparraysize             int    `json:"xmlmaxsoaparraysize,omitempty"`
-	Xmlmaxsoaparrayrank             int    `json:"xmlmaxsoaparrayrank,omitempty"`
-	State                           string `json:"state,omitempty"`
-	Comment                         string `json:"comment,omitempty"`
-	Isautodeployed                  string `json:"isautodeployed,omitempty"`
-	Alertonly                       string `json:"alertonly,omitempty"`
-	Name                            string `json:"name,omitempty"`
-	Resourceid                      string `json:"resourceid,omitempty"`
-	Ruletype                        string `json:"ruletype,omitempty"`
-}
-
-type Appfwprofilefieldformatbinding struct {
-	Fieldformat          string `json:"fieldformat,omitempty"`
-	Isregexff            string `json:"isregex_ff,omitempty"`
-	Formactionurlff      string `json:"formactionurl_ff,omitempty"`
-	Fieldtype            string `json:"fieldtype,omitempty"`
-	Fieldformatminlength int    `json:"fieldformatminlength,omitempty"`
-	Fieldformatmaxlength int    `json:"fieldformatmaxlength,omitempty"`
-	State                string `json:"state,omitempty"`
-	Comment              string `json:"comment,omitempty"`
-	Isautodeployed       string `json:"isautodeployed,omitempty"`
-	Alertonly            string `json:"alertonly,omitempty"`
-	Resourceid           string `json:"resourceid,omitempty"`
-	Name                 string `json:"name,omitempty"`
-	Ruletype             string `json:"ruletype,omitempty"`
-}
-
-type Appfwprofilesafeobjectbinding struct {
-	Safeobject     string   `json:"safeobject,omitempty"`
-	Asexpression   string   `json:"as_expression,omitempty"`
-	Maxmatchlength int      `json:"maxmatchlength,omitempty"`
-	Action         []string `json:"action,omitempty"`
-	State          string   `json:"state,omitempty"`
-	Comment        string   `json:"comment,omitempty"`
-	Isautodeployed string   `json:"isautodeployed,omitempty"`
-	Alertonly      string   `json:"alertonly,omitempty"`
-	Name           string   `json:"name,omitempty"`
-	Resourceid     string   `json:"resourceid,omitempty"`
-	Ruletype       string   `json:"ruletype,omitempty"`
-}
-
-type Appfwprofilesqlinjectionbinding struct {
-	Sqlinjection      string `json:"sqlinjection,omitempty"`
-	Isregexsql        string `json:"isregex_sql,omitempty"`
-	Formactionurlsql  string `json:"formactionurl_sql,omitempty"`
-	Asscanlocationsql string `json:"as_scan_location_sql,omitempty"`
-	Asvaluetypesql    string `json:"as_value_type_sql,omitempty"`
-	Asvalueexprsql    string `json:"as_value_expr_sql,omitempty"`
-	Isvalueregexsql   string `json:"isvalueregex_sql,omitempty"`
-	Ruletype          string `json:"ruletype,omitempty"`
-	State             string `json:"state,omitempty"`
-	Comment           string `json:"comment,omitempty"`
-	Isautodeployed    string `json:"isautodeployed,omitempty"`
-	Alertonly         string `json:"alertonly,omitempty"`
-	Resourceid        string `json:"resourceid,omitempty"`
-	Name              string `json:"name,omitempty"`
-}
-
-type Appfwlearningsettings struct {
-	Profilename                             string `json:"profilename,omitempty"`
-	Starturlminthreshold                    int    `json:"starturlminthreshold,omitempty"`
-	Starturlpercentthreshold                int    `json:"starturlpercentthreshold,omitempty"`
-	Cookieconsistencyminthreshold           int    `json:"cookieconsistencyminthreshold,omitempty"`
-	Cookieconsistencypercentthreshold       int    `json:"cookieconsistencypercentthreshold,omitempty"`
-	Csrftagminthreshold                     int    `json:"csrftagminthreshold,omitempty"`
-	Csrftagpercentthreshold                 int    `json:"csrftagpercentthreshold,omitempty"`
-	Fieldconsistencyminthreshold            int    `json:"fieldconsistencyminthreshold,omitempty"`
-	Fieldconsistencypercentthreshold        int    `json:"fieldconsistencypercentthreshold,omitempty"`
-	Crosssitescriptingminthreshold          int    `json:"crosssitescriptingminthreshold,omitempty"`
-	Crosssitescriptingpercentthreshold      int    `json:"crosssitescriptingpercentthreshold,omitempty"`
-	Sqlinjectionminthreshold                int    `json:"sqlinjectionminthreshold,omitempty"`
-	Sqlinjectionpercentthreshold            int    `json:"sqlinjectionpercentthreshold,omitempty"`
-	Fieldformatminthreshold                 int    `json:"fieldformatminthreshold,omitempty"`
-	Fieldformatpercentthreshold             int    `json:"fieldformatpercentthreshold,omitempty"`
-	Creditcardnumberminthreshold            int    `json:"creditcardnumberminthreshold,omitempty"`
-	Creditcardnumberpercentthreshold        int    `json:"creditcardnumberpercentthreshold,omitempty"`
-	Contenttypeminthreshold                 int    `json:"contenttypeminthreshold,omitempty"`
-	Contenttypepercentthreshold             int    `json:"contenttypepercentthreshold,omitempty"`
-	Xmlwsiminthreshold                      int    `json:"xmlwsiminthreshold,omitempty"`
-	Xmlwsipercentthreshold                  int    `json:"xmlwsipercentthreshold,omitempty"`
-	Xmlattachmentminthreshold               int    `json:"xmlattachmentminthreshold,omitempty"`
-	Xmlattachmentpercentthreshold           int    `json:"xmlattachmentpercentthreshold,omitempty"`
-	Fieldformatautodeploygraceperiod        int    `json:"fieldformatautodeploygraceperiod,omitempty"`
-	Sqlinjectionautodeploygraceperiod       int    `json:"sqlinjectionautodeploygraceperiod,omitempty"`
-	Crosssitescriptingautodeploygraceperiod int    `json:"crosssitescriptingautodeploygraceperiod,omitempty"`
-	Starturlautodeploygraceperiod           int    `json:"starturlautodeploygraceperiod,omitempty"`
-	Cookieconsistencyautodeploygraceperiod  int    `json:"cookieconsistencyautodeploygraceperiod,omitempty"`
-	Csrftagautodeploygraceperiod            int    `json:"csrftagautodeploygraceperiod,omitempty"`
-	Fieldconsistencyautodeploygraceperiod   int    `json:"fieldconsistencyautodeploygraceperiod,omitempty"`
-	Contenttypeautodeploygraceperiod        int    `json:"contenttypeautodeploygraceperiod,omitempty"`
-	Nextgenapiresource                      string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Appfwpolicyglobalbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Activepolicy           int32  `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Appfwprofilegrpcvalidationbinding struct {
-	Grpcvalidation            string `json:"grpcvalidation,omitempty"`
-	Grpcrelaxvalidationaction string `json:"grpc_relax_validation_action,omitempty"`
-	State                     string `json:"state,omitempty"`
-	Comment                   string `json:"comment,omitempty"`
-	Isautodeployed            string `json:"isautodeployed,omitempty"`
-	Alertonly                 string `json:"alertonly,omitempty"`
-	Resourceid                string `json:"resourceid,omitempty"`
-	Name                      string `json:"name,omitempty"`
-	Ruletype                  string `json:"ruletype,omitempty"`
-}
-
-type Appfwprofilejsondosurlbinding struct {
-	Jsondosurl                  string `json:"jsondosurl,omitempty"`
-	Jsonmaxdocumentlengthcheck  string `json:"jsonmaxdocumentlengthcheck,omitempty"`
-	Jsonmaxdocumentlength       int    `json:"jsonmaxdocumentlength,omitempty"`
-	Jsonmaxcontainerdepthcheck  string `json:"jsonmaxcontainerdepthcheck,omitempty"`
-	Jsonmaxcontainerdepth       int    `json:"jsonmaxcontainerdepth,omitempty"`
-	Jsonmaxobjectkeycountcheck  string `json:"jsonmaxobjectkeycountcheck,omitempty"`
-	Jsonmaxobjectkeycount       int    `json:"jsonmaxobjectkeycount,omitempty"`
+type AppfwprofileJsondosurlBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Jsondosurl string `json:"jsondosurl,omitempty"`
+	Jsonmaxarraylength int `json:"jsonmaxarraylength,omitempty"`
+	Jsonmaxarraylengthcheck string `json:"jsonmaxarraylengthcheck,omitempty"`
+	Jsonmaxcontainerdepth int `json:"jsonmaxcontainerdepth,omitempty"`
+	Jsonmaxcontainerdepthcheck string `json:"jsonmaxcontainerdepthcheck,omitempty"`
+	Jsonmaxdocumentlength int `json:"jsonmaxdocumentlength,omitempty"`
+	Jsonmaxdocumentlengthcheck string `json:"jsonmaxdocumentlengthcheck,omitempty"`
+	Jsonmaxobjectkeycount int `json:"jsonmaxobjectkeycount,omitempty"`
+	Jsonmaxobjectkeycountcheck string `json:"jsonmaxobjectkeycountcheck,omitempty"`
+	Jsonmaxobjectkeylength int `json:"jsonmaxobjectkeylength,omitempty"`
 	Jsonmaxobjectkeylengthcheck string `json:"jsonmaxobjectkeylengthcheck,omitempty"`
-	Jsonmaxobjectkeylength      int    `json:"jsonmaxobjectkeylength,omitempty"`
-	Jsonmaxarraylengthcheck     string `json:"jsonmaxarraylengthcheck,omitempty"`
-	Jsonmaxarraylength          int    `json:"jsonmaxarraylength,omitempty"`
-	Jsonmaxstringlengthcheck    string `json:"jsonmaxstringlengthcheck,omitempty"`
-	Jsonmaxstringlength         int    `json:"jsonmaxstringlength,omitempty"`
-	State                       string `json:"state,omitempty"`
-	Comment                     string `json:"comment,omitempty"`
-	Isautodeployed              string `json:"isautodeployed,omitempty"`
-	Alertonly                   string `json:"alertonly,omitempty"`
-	Resourceid                  string `json:"resourceid,omitempty"`
-	Name                        string `json:"name,omitempty"`
-	Ruletype                    string `json:"ruletype,omitempty"`
+	Jsonmaxstringlength int `json:"jsonmaxstringlength,omitempty"`
+	Jsonmaxstringlengthcheck string `json:"jsonmaxstringlengthcheck,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type Appfwpolicy struct {
+	Builtin []string `json:"builtin,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	Feature string `json:"feature,omitempty"`
+	Hits int `json:"hits,omitempty"`
+	Logaction string `json:"logaction,omitempty"`
+	Name string `json:"name,omitempty"`
+	Newname string `json:"newname,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Policytype string `json:"policytype,omitempty"`
+	Profilename string `json:"profilename,omitempty"`
+	Rule string `json:"rule,omitempty"`
+	Undefhits int `json:"undefhits,omitempty"`
+}
+
+type AppfwprofileFakeaccountBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Fakeaccount string `json:"fakeaccount,omitempty"`
+	Formexpression string `json:"formexpression,omitempty"`
+	FormurlFad string `json:"formurl_fad,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Isfieldnameregex string `json:"isfieldnameregex,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+	Tag string `json:"tag,omitempty"`
+}
+
+type AppfwprofileJsoncmdurlBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	AsValueExprJsonCmd string `json:"as_value_expr_json_cmd,omitempty"`
+	AsValueTypeJsonCmd string `json:"as_value_type_json_cmd,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	IskeyregexJsonCmd string `json:"iskeyregex_json_cmd,omitempty"`
+	IsvalueregexJsonCmd string `json:"isvalueregex_json_cmd,omitempty"`
+	Jsoncmdurl string `json:"jsoncmdurl,omitempty"`
+	KeynameJsonCmd string `json:"keyname_json_cmd,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type Appfwconfidfield struct {
+	Comment string `json:"comment,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	Fieldname string `json:"fieldname,omitempty"`
+	Isregex string `json:"isregex,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	State string `json:"state,omitempty"`
+	Url string `json:"url,omitempty"`
+}
+
+type AppfwglobalAuditnslogpolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke bool `json:"invoke,omitempty"`
+	Labelname string `json:"labelname,omitempty"`
+	Labeltype string `json:"labeltype,omitempty"`
+	Policyname string `json:"policyname,omitempty"`
+	Policytype string `json:"policytype,omitempty"`
+	Priority int `json:"priority,omitempty"`
+	State string `json:"state,omitempty"`
+	TypeField string `json:"type,omitempty"`
+}
+
+type AppfwprofileXmlvalidationurlBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+	Xmladditionalsoapheaders string `json:"xmladditionalsoapheaders,omitempty"`
+	Xmlendpointcheck string `json:"xmlendpointcheck,omitempty"`
+	Xmlrequestschema string `json:"xmlrequestschema,omitempty"`
+	Xmlresponseschema string `json:"xmlresponseschema,omitempty"`
+	Xmlvalidateresponse string `json:"xmlvalidateresponse,omitempty"`
+	Xmlvalidatesoapenvelope string `json:"xmlvalidatesoapenvelope,omitempty"`
+	Xmlvalidationurl string `json:"xmlvalidationurl,omitempty"`
+	Xmlwsdl string `json:"xmlwsdl,omitempty"`
+}
+
+type AppfwprofileAppfwconfidfieldBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	CffieldUrl string `json:"cffield_url,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Confidfield string `json:"confidfield,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	IsregexCffield string `json:"isregex_cffield,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type AppfwprofileCrosssitescriptingBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	AsScanLocationXss string `json:"as_scan_location_xss,omitempty"`
+	AsValueExprXss string `json:"as_value_expr_xss,omitempty"`
+	AsValueTypeXss string `json:"as_value_type_xss,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Crosssitescripting string `json:"crosssitescripting,omitempty"`
+	FormactionurlXss string `json:"formactionurl_xss,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	IsregexXss string `json:"isregex_xss,omitempty"`
+	IsvalueregexXss string `json:"isvalueregex_xss,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type Appfwtransactionrecords struct {
+	Appfwsessionid string `json:"appfwsessionid,omitempty"`
+	Clientip string `json:"clientip,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	Destip string `json:"destip,omitempty"`
+	Endtime string `json:"endtime,omitempty"`
+	Httptransactionid int `json:"httptransactionid,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Nodeid int `json:"nodeid,omitempty"`
+	Packetengineid int `json:"packetengineid,omitempty"`
+	Profilename string `json:"profilename,omitempty"`
+	Requestcontentlength int `json:"requestcontentlength,omitempty"`
+	Requestmaxprocessingtime int `json:"requestmaxprocessingtime,omitempty"`
+	Requestyields int `json:"requestyields,omitempty"`
+	Responsecontentlength int `json:"responsecontentlength,omitempty"`
+	Responsemaxprocessingtime int `json:"responsemaxprocessingtime,omitempty"`
+	Responseyields int `json:"responseyields,omitempty"`
+	Starttime string `json:"starttime,omitempty"`
+	Url string `json:"url,omitempty"`
+}
+
+type AppfwprofileBinding struct {
+	AppfwprofileAppfwconfidfieldBinding []interface{} `json:"appfwprofile_appfwconfidfield_binding,omitempty"`
+	AppfwprofileBlockkeywordBinding []interface{} `json:"appfwprofile_blockkeyword_binding,omitempty"`
+	AppfwprofileBypasslistBinding []interface{} `json:"appfwprofile_bypasslist_binding,omitempty"`
+	AppfwprofileCmdinjectionBinding []interface{} `json:"appfwprofile_cmdinjection_binding,omitempty"`
+	AppfwprofileContenttypeBinding []interface{} `json:"appfwprofile_contenttype_binding,omitempty"`
+	AppfwprofileCookieconsistencyBinding []interface{} `json:"appfwprofile_cookieconsistency_binding,omitempty"`
+	AppfwprofileCreditcardnumberBinding []interface{} `json:"appfwprofile_creditcardnumber_binding,omitempty"`
+	AppfwprofileCrosssitescriptingBinding []interface{} `json:"appfwprofile_crosssitescripting_binding,omitempty"`
+	AppfwprofileCsrftagBinding []interface{} `json:"appfwprofile_csrftag_binding,omitempty"`
+	AppfwprofileDenylistBinding []interface{} `json:"appfwprofile_denylist_binding,omitempty"`
+	AppfwprofileDenyurlBinding []interface{} `json:"appfwprofile_denyurl_binding,omitempty"`
+	AppfwprofileExcluderescontenttypeBinding []interface{} `json:"appfwprofile_excluderescontenttype_binding,omitempty"`
+	AppfwprofileFakeaccountBinding []interface{} `json:"appfwprofile_fakeaccount_binding,omitempty"`
+	AppfwprofileFieldconsistencyBinding []interface{} `json:"appfwprofile_fieldconsistency_binding,omitempty"`
+	AppfwprofileFieldformatBinding []interface{} `json:"appfwprofile_fieldformat_binding,omitempty"`
+	AppfwprofileFileuploadtypeBinding []interface{} `json:"appfwprofile_fileuploadtype_binding,omitempty"`
+	AppfwprofileGrpcvalidationBinding []interface{} `json:"appfwprofile_grpcvalidation_binding,omitempty"`
+	AppfwprofileJsonblockkeywordBinding []interface{} `json:"appfwprofile_jsonblockkeyword_binding,omitempty"`
+	AppfwprofileJsoncmdurlBinding []interface{} `json:"appfwprofile_jsoncmdurl_binding,omitempty"`
+	AppfwprofileJsondosurlBinding []interface{} `json:"appfwprofile_jsondosurl_binding,omitempty"`
+	AppfwprofileJsonsqlurlBinding []interface{} `json:"appfwprofile_jsonsqlurl_binding,omitempty"`
+	AppfwprofileJsonxssurlBinding []interface{} `json:"appfwprofile_jsonxssurl_binding,omitempty"`
+	AppfwprofileLogexpressionBinding []interface{} `json:"appfwprofile_logexpression_binding,omitempty"`
+	AppfwprofileRestvalidationBinding []interface{} `json:"appfwprofile_restvalidation_binding,omitempty"`
+	AppfwprofileSafeobjectBinding []interface{} `json:"appfwprofile_safeobject_binding,omitempty"`
+	AppfwprofileSqlinjectionBinding []interface{} `json:"appfwprofile_sqlinjection_binding,omitempty"`
+	AppfwprofileStarturlBinding []interface{} `json:"appfwprofile_starturl_binding,omitempty"`
+	AppfwprofileTrustedlearningclientsBinding []interface{} `json:"appfwprofile_trustedlearningclients_binding,omitempty"`
+	AppfwprofileXmlattachmenturlBinding []interface{} `json:"appfwprofile_xmlattachmenturl_binding,omitempty"`
+	AppfwprofileXmldosurlBinding []interface{} `json:"appfwprofile_xmldosurl_binding,omitempty"`
+	AppfwprofileXmlsqlinjectionBinding []interface{} `json:"appfwprofile_xmlsqlinjection_binding,omitempty"`
+	AppfwprofileXmlvalidationurlBinding []interface{} `json:"appfwprofile_xmlvalidationurl_binding,omitempty"`
+	AppfwprofileXmlwsiurlBinding []interface{} `json:"appfwprofile_xmlwsiurl_binding,omitempty"`
+	AppfwprofileXmlxssBinding []interface{} `json:"appfwprofile_xmlxss_binding,omitempty"`
+	Name string `json:"name,omitempty"`
+}
+
+type AppfwprofileCsrftagBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Csrfformactionurl string `json:"csrfformactionurl,omitempty"`
+	Csrftag string `json:"csrftag,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
 }
 
 type Appfwwsdl struct {
-	Name               string `json:"name,omitempty"`
-	Src                string `json:"src,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Overwrite          bool   `json:"overwrite,omitempty"`
-	Response           string `json:"response,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Name string `json:"name,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Overwrite bool `json:"overwrite,omitempty"`
+	Response string `json:"response,omitempty"`
+	Src string `json:"src,omitempty"`
+}
+
+type Appfwpolicylabel struct {
+	Count float64 `json:"__count,omitempty"`
+	Description string `json:"description,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Hits int `json:"hits,omitempty"`
+	InvokeLabelname string `json:"invoke_labelname,omitempty"`
+	Labelname string `json:"labelname,omitempty"`
+	Labeltype string `json:"labeltype,omitempty"`
+	Newname string `json:"newname,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Numpol int `json:"numpol,omitempty"`
+	Policylabeltype string `json:"policylabeltype,omitempty"`
+	Policytype string `json:"policytype,omitempty"`
+	Priority int `json:"priority,omitempty"`
+}
+
+type Appfwprotofile struct {
+	Comment string `json:"comment,omitempty"`
+	Name string `json:"name,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Overwrite bool `json:"overwrite,omitempty"`
+	Response string `json:"response,omitempty"`
+	Src string `json:"src,omitempty"`
+}
+
+type AppfwglobalAuditsyslogpolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke bool `json:"invoke,omitempty"`
+	Labelname string `json:"labelname,omitempty"`
+	Labeltype string `json:"labeltype,omitempty"`
+	Policyname string `json:"policyname,omitempty"`
+	Policytype string `json:"policytype,omitempty"`
+	Priority int `json:"priority,omitempty"`
+	State string `json:"state,omitempty"`
+	TypeField string `json:"type,omitempty"`
+}
+
+type AppfwglobalBinding struct {
+	AppfwglobalAppfwpolicyBinding []interface{} `json:"appfwglobal_appfwpolicy_binding,omitempty"`
+	AppfwglobalAuditnslogpolicyBinding []interface{} `json:"appfwglobal_auditnslogpolicy_binding,omitempty"`
+	AppfwglobalAuditsyslogpolicyBinding []interface{} `json:"appfwglobal_auditsyslogpolicy_binding,omitempty"`
+}
+
+type AppfwprofileJsonxssurlBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	AsValueExprJsonXss string `json:"as_value_expr_json_xss,omitempty"`
+	AsValueTypeJsonXss string `json:"as_value_type_json_xss,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	IskeyregexJsonXss string `json:"iskeyregex_json_xss,omitempty"`
+	IsvalueregexJsonXss string `json:"isvalueregex_json_xss,omitempty"`
+	Jsonxssurl string `json:"jsonxssurl,omitempty"`
+	KeynameJsonXss string `json:"keyname_json_xss,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type AppfwprofileFileuploadtypeBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	AsFileuploadtypesUrl string `json:"as_fileuploadtypes_url,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Filetype []string `json:"filetype,omitempty"`
+	Fileuploadtype string `json:"fileuploadtype,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Isnameregex string `json:"isnameregex,omitempty"`
+	IsregexFileuploadtypesUrl string `json:"isregex_fileuploadtypes_url,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type AppfwprofileXmlattachmenturlBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+	Xmlattachmentcontenttype string `json:"xmlattachmentcontenttype,omitempty"`
+	Xmlattachmentcontenttypecheck string `json:"xmlattachmentcontenttypecheck,omitempty"`
+	Xmlattachmenturl string `json:"xmlattachmenturl,omitempty"`
+	Xmlmaxattachmentsize int `json:"xmlmaxattachmentsize,omitempty"`
+	Xmlmaxattachmentsizecheck string `json:"xmlmaxattachmentsizecheck,omitempty"`
+}
+
+type Appfwurlencodedformcontenttype struct {
+	Builtin []string `json:"builtin,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	Feature string `json:"feature,omitempty"`
+	Isregex string `json:"isregex,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Urlencodedformcontenttypevalue string `json:"urlencodedformcontenttypevalue,omitempty"`
+}
+
+type AppfwpolicyBinding struct {
+	AppfwpolicyAppfwglobalBinding []interface{} `json:"appfwpolicy_appfwglobal_binding,omitempty"`
+	AppfwpolicyAppfwpolicylabelBinding []interface{} `json:"appfwpolicy_appfwpolicylabel_binding,omitempty"`
+	AppfwpolicyCsvserverBinding []interface{} `json:"appfwpolicy_csvserver_binding,omitempty"`
+	AppfwpolicyLbvserverBinding []interface{} `json:"appfwpolicy_lbvserver_binding,omitempty"`
+	AppfwpolicyVpnvserverBinding []interface{} `json:"appfwpolicy_vpnvserver_binding,omitempty"`
+	Name string `json:"name,omitempty"`
+}
+
+type AppfwprofileFieldconsistencyBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Fieldconsistency string `json:"fieldconsistency,omitempty"`
+	FormactionurlFfc string `json:"formactionurl_ffc,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	IsregexFfc string `json:"isregex_ffc,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type Appfwxmlschema struct {
+	Comment string `json:"comment,omitempty"`
+	Name string `json:"name,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Overwrite bool `json:"overwrite,omitempty"`
+	Response string `json:"response,omitempty"`
+	Src string `json:"src,omitempty"`
+}
+
+type Appfwarchive struct {
+	Comment string `json:"comment,omitempty"`
+	Name string `json:"name,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Response string `json:"response,omitempty"`
+	Src string `json:"src,omitempty"`
+	Target string `json:"target,omitempty"`
+}
+
+type AppfwpolicyAppfwpolicylabelBinding struct {
+	Activepolicy int `json:"activepolicy,omitempty"`
+	Boundto string `json:"boundto,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Labelname string `json:"labelname,omitempty"`
+	Labeltype string `json:"labeltype,omitempty"`
+	Name string `json:"name,omitempty"`
+	Priority int `json:"priority,omitempty"`
+}
+
+type AppfwprofileBlockkeywordBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	AsBlockkeywordFormurl string `json:"as_blockkeyword_formurl,omitempty"`
+	AsFieldnameIsregexBlockkeyword string `json:"as_fieldname_isregex_blockkeyword,omitempty"`
+	Blockkeyword string `json:"blockkeyword,omitempty"`
+	Blockkeywordtype string `json:"blockkeywordtype,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Fieldname string `json:"fieldname,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type Appfwsettings struct {
+	Builtin []string `json:"builtin,omitempty"`
+	Ceflogging string `json:"ceflogging,omitempty"`
+	Centralizedlearning string `json:"centralizedlearning,omitempty"`
+	Clientiploggingheader string `json:"clientiploggingheader,omitempty"`
+	Cookieflags string `json:"cookieflags,omitempty"`
+	Cookiepostencryptprefix string `json:"cookiepostencryptprefix,omitempty"`
+	Defaultprofile string `json:"defaultprofile,omitempty"`
+	Entitydecoding string `json:"entitydecoding,omitempty"`
+	Feature string `json:"feature,omitempty"`
+	Geolocationlogging string `json:"geolocationlogging,omitempty"`
+	Importsizelimit int `json:"importsizelimit,omitempty"`
+	Learning string `json:"learning,omitempty"`
+	Learnratelimit int `json:"learnratelimit,omitempty"`
+	Logmalformedreq string `json:"logmalformedreq,omitempty"`
+	Malformedreqaction []string `json:"malformedreqaction,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Proxypassword string `json:"proxypassword,omitempty"`
+	Proxyport int `json:"proxyport,omitempty"`
+	Proxyserver string `json:"proxyserver,omitempty"`
+	Proxyusername string `json:"proxyusername,omitempty"`
+	Sessioncookiename string `json:"sessioncookiename,omitempty"`
+	Sessionlifetime int `json:"sessionlifetime,omitempty"`
+	Sessionlimit int `json:"sessionlimit,omitempty"`
+	Sessiontimeout int `json:"sessiontimeout,omitempty"`
+	Signatureautoupdate string `json:"signatureautoupdate,omitempty"`
+	Signatureurl string `json:"signatureurl,omitempty"`
+	Undefaction string `json:"undefaction,omitempty"`
+	Useconfigurablesecretkey string `json:"useconfigurablesecretkey,omitempty"`
+}
+
+type AppfwpolicyCsvserverBinding struct {
+	Activepolicy int `json:"activepolicy,omitempty"`
+	Boundto string `json:"boundto,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Labelname string `json:"labelname,omitempty"`
+	Labeltype string `json:"labeltype,omitempty"`
+	Name string `json:"name,omitempty"`
+	Priority int `json:"priority,omitempty"`
+}
+
+type AppfwprofileCmdinjectionBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	AsScanLocationCmd string `json:"as_scan_location_cmd,omitempty"`
+	AsValueExprCmd string `json:"as_value_expr_cmd,omitempty"`
+	AsValueTypeCmd string `json:"as_value_type_cmd,omitempty"`
+	Cmdinjection string `json:"cmdinjection,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	FormactionurlCmd string `json:"formactionurl_cmd,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	IsregexCmd string `json:"isregex_cmd,omitempty"`
+	IsvalueregexCmd string `json:"isvalueregex_cmd,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type AppfwpolicylabelPolicybindingBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke bool `json:"invoke,omitempty"`
+	InvokeLabelname string `json:"invoke_labelname,omitempty"`
+	Labelname string `json:"labelname,omitempty"`
+	Labeltype string `json:"labeltype,omitempty"`
+	Policyname string `json:"policyname,omitempty"`
+	Priority int `json:"priority,omitempty"`
+}
+
+type AppfwprofileStarturlBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	Starturl string `json:"starturl,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type AppfwprofileJsonblockkeywordBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	IskeyregexJsonBlockkeyword string `json:"iskeyregex_json_blockkeyword,omitempty"`
+	Jsonblockkeyword string `json:"jsonblockkeyword,omitempty"`
+	Jsonblockkeywordtype string `json:"jsonblockkeywordtype,omitempty"`
+	Jsonblockkeywordurl string `json:"jsonblockkeywordurl,omitempty"`
+	KeynameJsonBlockkeyword string `json:"keyname_json_blockkeyword,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type Appfwfieldtype struct {
+	Builtin []string `json:"builtin,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	Feature string `json:"feature,omitempty"`
+	Name string `json:"name,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Nocharmaps bool `json:"nocharmaps,omitempty"`
+	Priority int `json:"priority,omitempty"`
+	Regex string `json:"regex,omitempty"`
+}
+
+type Appfwlearningdata struct {
+	AsScanLocationSql string `json:"as_scan_location_sql,omitempty"`
+	AsScanLocationXss string `json:"as_scan_location_xss,omitempty"`
+	AsValueExprSql string `json:"as_value_expr_sql,omitempty"`
+	AsValueExprXss string `json:"as_value_expr_xss,omitempty"`
+	AsValueTypeSql string `json:"as_value_type_sql,omitempty"`
+	AsValueTypeXss string `json:"as_value_type_xss,omitempty"`
+	Contenttype string `json:"contenttype,omitempty"`
+	Cookieconsistency string `json:"cookieconsistency,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	Creditcardnumber string `json:"creditcardnumber,omitempty"`
+	Creditcardnumberurl string `json:"creditcardnumberurl,omitempty"`
+	Crosssitescripting string `json:"crosssitescripting,omitempty"`
+	Csrfformoriginurl string `json:"csrfformoriginurl,omitempty"`
+	Csrftag string `json:"csrftag,omitempty"`
+	Data string `json:"data,omitempty"`
+	Fieldconsistency string `json:"fieldconsistency,omitempty"`
+	Fieldformat string `json:"fieldformat,omitempty"`
+	Fieldformatcharmappcre string `json:"fieldformatcharmappcre,omitempty"`
+	Fieldformatmaxlength int `json:"fieldformatmaxlength,omitempty"`
+	Fieldformatminlength int `json:"fieldformatminlength,omitempty"`
+	Fieldtype string `json:"fieldtype,omitempty"`
+	FormactionurlFf string `json:"formactionurl_ff,omitempty"`
+	FormactionurlFfc string `json:"formactionurl_ffc,omitempty"`
+	FormactionurlSql string `json:"formactionurl_sql,omitempty"`
+	FormactionurlXss string `json:"formactionurl_xss,omitempty"`
+	Hits int `json:"hits,omitempty"`
+	Name string `json:"name,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Profilename string `json:"profilename,omitempty"`
+	Securitycheck string `json:"securitycheck,omitempty"`
+	Sqlinjection string `json:"sqlinjection,omitempty"`
+	Starturl string `json:"starturl,omitempty"`
+	Target string `json:"target,omitempty"`
+	Totalxmlrequests bool `json:"totalxmlrequests,omitempty"`
+	Url string `json:"url,omitempty"`
+	Value string `json:"value,omitempty"`
+	ValueType string `json:"value_type,omitempty"`
+	Xmlattachmentcheck string `json:"xmlattachmentcheck,omitempty"`
+	Xmldoscheck string `json:"xmldoscheck,omitempty"`
+	Xmlwsicheck string `json:"xmlwsicheck,omitempty"`
+}
+
+type AppfwpolicylabelAppfwpolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke bool `json:"invoke,omitempty"`
+	InvokeLabelname string `json:"invoke_labelname,omitempty"`
+	Labelname string `json:"labelname,omitempty"`
+	Labeltype string `json:"labeltype,omitempty"`
+	Policyname string `json:"policyname,omitempty"`
+	Priority int `json:"priority,omitempty"`
+}
+
+type AppfwpolicyVpnvserverBinding struct {
+	Activepolicy int `json:"activepolicy,omitempty"`
+	Boundto string `json:"boundto,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Labelname string `json:"labelname,omitempty"`
+	Labeltype string `json:"labeltype,omitempty"`
+	Name string `json:"name,omitempty"`
+	Priority int `json:"priority,omitempty"`
+}
+
+type AppfwprofileXmlsqlinjectionBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	AsScanLocationXmlsql string `json:"as_scan_location_xmlsql,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	IsregexXmlsql string `json:"isregex_xmlsql,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+	Xmlsqlinjection string `json:"xmlsqlinjection,omitempty"`
+}
+
+type Appfwgrpcwebjsoncontenttype struct {
+	Count float64 `json:"__count,omitempty"`
+	Grpcwebjsoncontenttypevalue string `json:"grpcwebjsoncontenttypevalue,omitempty"`
+	Isregex string `json:"isregex,omitempty"`
 	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
 }
 
-type Appfwxmlerrorpage struct {
-	Name               string `json:"name,omitempty"`
-	Src                string `json:"src,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Overwrite          bool   `json:"overwrite,omitempty"`
-	Response           string `json:"response,omitempty"`
+type AppfwprofileTrustedlearningclientsBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+	Trustedlearningclients string `json:"trustedlearningclients,omitempty"`
+}
+
+type AppfwprofileCreditcardnumberBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Creditcardnumber string `json:"creditcardnumber,omitempty"`
+	Creditcardnumberurl string `json:"creditcardnumberurl,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type AppfwprofileExcluderescontenttypeBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Excluderescontenttype string `json:"excluderescontenttype,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type Appfwjsoncontenttype struct {
+	Builtin []string `json:"builtin,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	Feature string `json:"feature,omitempty"`
+	Isregex string `json:"isregex,omitempty"`
+	Jsoncontenttypevalue string `json:"jsoncontenttypevalue,omitempty"`
 	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+}
+
+type AppfwprofileSqlinjectionBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	AsScanLocationSql string `json:"as_scan_location_sql,omitempty"`
+	AsValueExprSql string `json:"as_value_expr_sql,omitempty"`
+	AsValueTypeSql string `json:"as_value_type_sql,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	FormactionurlSql string `json:"formactionurl_sql,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	IsregexSql string `json:"isregex_sql,omitempty"`
+	IsvalueregexSql string `json:"isvalueregex_sql,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	Sqlinjection string `json:"sqlinjection,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type AppfwprofileRestvalidationBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	RestValidationAction string `json:"rest_validation_action,omitempty"`
+	Restvalidation string `json:"restvalidation,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type Appfwgrpccontenttype struct {
+	Builtin []string `json:"builtin,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	Feature string `json:"feature,omitempty"`
+	Grpccontenttypevalue string `json:"grpccontenttypevalue,omitempty"`
+	Isregex string `json:"isregex,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+}
+
+type AppfwprofileBypasslistBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	AsBypassList string `json:"as_bypass_list,omitempty"`
+	AsBypassListAction string `json:"as_bypass_list_action,omitempty"`
+	AsBypassListLocation string `json:"as_bypass_list_location,omitempty"`
+	AsBypassListValueType string `json:"as_bypass_list_value_type,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type Appfwhtmlerrorpage struct {
+	Comment string `json:"comment,omitempty"`
+	Name string `json:"name,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Overwrite bool `json:"overwrite,omitempty"`
+	Response string `json:"response,omitempty"`
+	Src string `json:"src,omitempty"`
+}
+
+type AppfwprofileSafeobjectBinding struct {
+	Action []string `json:"action,omitempty"`
+	Alertonly string `json:"alertonly,omitempty"`
+	AsExpression string `json:"as_expression,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Maxmatchlength int `json:"maxmatchlength,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	Safeobject string `json:"safeobject,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type AppfwprofileGrpcvalidationBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	GrpcRelaxValidationAction string `json:"grpc_relax_validation_action,omitempty"`
+	Grpcvalidation string `json:"grpcvalidation,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type AppfwprofileXmlwsiurlBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+	Xmlwsichecks string `json:"xmlwsichecks,omitempty"`
+	Xmlwsiurl string `json:"xmlwsiurl,omitempty"`
+}
+
+type AppfwpolicyAppfwglobalBinding struct {
+	Activepolicy int `json:"activepolicy,omitempty"`
+	Boundto string `json:"boundto,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Labelname string `json:"labelname,omitempty"`
+	Labeltype string `json:"labeltype,omitempty"`
+	Name string `json:"name,omitempty"`
+	Priority int `json:"priority,omitempty"`
+}
+
+type AppfwprofileDenylistBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	AsDenyList string `json:"as_deny_list,omitempty"`
+	AsDenyListAction []string `json:"as_deny_list_action,omitempty"`
+	AsDenyListLocation string `json:"as_deny_list_location,omitempty"`
+	AsDenyListValueType string `json:"as_deny_list_value_type,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type AppfwpolicylabelBinding struct {
+	AppfwpolicylabelAppfwpolicyBinding []interface{} `json:"appfwpolicylabel_appfwpolicy_binding,omitempty"`
+	AppfwpolicylabelPolicybindingBinding []interface{} `json:"appfwpolicylabel_policybinding_binding,omitempty"`
+	Labelname string `json:"labelname,omitempty"`
+}
+
+type Appfwprofile struct {
+	Addcookieflags string `json:"addcookieflags,omitempty"`
+	Apispec string `json:"apispec,omitempty"`
+	Archivename string `json:"archivename,omitempty"`
+	AsProfBypassListEnable string `json:"as_prof_bypass_list_enable,omitempty"`
+	AsProfDenyListEnable string `json:"as_prof_deny_list_enable,omitempty"`
+	Augment bool `json:"augment,omitempty"`
+	Blockkeywordaction []string `json:"blockkeywordaction,omitempty"`
+	Bufferoverflowaction []string `json:"bufferoverflowaction,omitempty"`
+	Bufferoverflowmaxcookielength int `json:"bufferoverflowmaxcookielength,omitempty"`
+	Bufferoverflowmaxheaderlength int `json:"bufferoverflowmaxheaderlength,omitempty"`
+	Bufferoverflowmaxquerylength int `json:"bufferoverflowmaxquerylength,omitempty"`
+	Bufferoverflowmaxtotalheaderlength int `json:"bufferoverflowmaxtotalheaderlength,omitempty"`
+	Bufferoverflowmaxurllength int `json:"bufferoverflowmaxurllength,omitempty"`
+	Builtin bool `json:"builtin,omitempty"`
+	Canonicalizehtmlresponse string `json:"canonicalizehtmlresponse,omitempty"`
+	Ceflogging string `json:"ceflogging,omitempty"`
+	Checkrequestheaders string `json:"checkrequestheaders,omitempty"`
+	Clientipexpression string `json:"clientipexpression,omitempty"`
+	Cmdinjectionaction []string `json:"cmdinjectionaction,omitempty"`
+	Cmdinjectiongrammar string `json:"cmdinjectiongrammar,omitempty"`
+	Cmdinjectiontype string `json:"cmdinjectiontype,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Contenttypeaction []string `json:"contenttypeaction,omitempty"`
+	Cookieconsistencyaction []string `json:"cookieconsistencyaction,omitempty"`
+	Cookieencryption string `json:"cookieencryption,omitempty"`
+	Cookiehijackingaction []string `json:"cookiehijackingaction,omitempty"`
+	Cookieproxying string `json:"cookieproxying,omitempty"`
+	Cookiesamesiteattribute string `json:"cookiesamesiteattribute,omitempty"`
+	Cookietransforms string `json:"cookietransforms,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	Creditcard []string `json:"creditcard,omitempty"`
+	Creditcardaction []string `json:"creditcardaction,omitempty"`
+	Creditcardmaxallowed int `json:"creditcardmaxallowed,omitempty"`
+	Creditcardxout string `json:"creditcardxout,omitempty"`
+	Crosssitescriptingaction []string `json:"crosssitescriptingaction,omitempty"`
+	Crosssitescriptingcheckcompleteurls string `json:"crosssitescriptingcheckcompleteurls,omitempty"`
+	Crosssitescriptingtransformunsafehtml string `json:"crosssitescriptingtransformunsafehtml,omitempty"`
+	Csrftag string `json:"csrftag,omitempty"`
+	Csrftagaction []string `json:"csrftagaction,omitempty"`
+	Customsettings string `json:"customsettings,omitempty"`
+	Defaultcharset string `json:"defaultcharset,omitempty"`
+	Defaultfieldformatmaxlength int `json:"defaultfieldformatmaxlength,omitempty"`
+	Defaultfieldformatmaxoccurrences int `json:"defaultfieldformatmaxoccurrences,omitempty"`
+	Defaultfieldformatminlength int `json:"defaultfieldformatminlength,omitempty"`
+	Defaultfieldformattype string `json:"defaultfieldformattype,omitempty"`
+	Defaults string `json:"defaults,omitempty"`
+	Denyurlaction []string `json:"denyurlaction,omitempty"`
+	Dosecurecreditcardlogging string `json:"dosecurecreditcardlogging,omitempty"`
+	Dynamiclearning []string `json:"dynamiclearning,omitempty"`
+	Enableformtagging string `json:"enableformtagging,omitempty"`
+	Errorurl string `json:"errorurl,omitempty"`
+	Excludefileuploadfromchecks string `json:"excludefileuploadfromchecks,omitempty"`
+	Exemptclosureurlsfromsecuritychecks string `json:"exemptclosureurlsfromsecuritychecks,omitempty"`
+	Fakeaccountdetection string `json:"fakeaccountdetection,omitempty"`
+	Fieldconsistencyaction []string `json:"fieldconsistencyaction,omitempty"`
+	Fieldformataction []string `json:"fieldformataction,omitempty"`
+	Fieldscan string `json:"fieldscan,omitempty"`
+	Fieldscanlimit int `json:"fieldscanlimit,omitempty"`
+	Fileuploadmaxnum int `json:"fileuploadmaxnum,omitempty"`
+	Fileuploadtypesaction []string `json:"fileuploadtypesaction,omitempty"`
+	Geolocationlogging string `json:"geolocationlogging,omitempty"`
+	Grpcaction []string `json:"grpcaction,omitempty"`
+	Htmlerrorobject string `json:"htmlerrorobject,omitempty"`
+	Htmlerrorstatuscode int `json:"htmlerrorstatuscode,omitempty"`
+	Htmlerrorstatusmessage string `json:"htmlerrorstatusmessage,omitempty"`
+	Importprofilename string `json:"importprofilename,omitempty"`
+	Infercontenttypexmlpayloadaction []string `json:"infercontenttypexmlpayloadaction,omitempty"`
+	Insertcookiesamesiteattribute string `json:"insertcookiesamesiteattribute,omitempty"`
+	Inspectcontenttypes []string `json:"inspectcontenttypes,omitempty"`
+	Inspectquerycontenttypes []string `json:"inspectquerycontenttypes,omitempty"`
+	Invalidpercenthandling string `json:"invalidpercenthandling,omitempty"`
+	Jsonblockkeywordaction []string `json:"jsonblockkeywordaction,omitempty"`
+	Jsoncmdinjectionaction []string `json:"jsoncmdinjectionaction,omitempty"`
+	Jsoncmdinjectiongrammar string `json:"jsoncmdinjectiongrammar,omitempty"`
+	Jsoncmdinjectiontype string `json:"jsoncmdinjectiontype,omitempty"`
+	Jsondosaction []string `json:"jsondosaction,omitempty"`
+	Jsonerrorobject string `json:"jsonerrorobject,omitempty"`
+	Jsonerrorstatuscode int `json:"jsonerrorstatuscode,omitempty"`
+	Jsonerrorstatusmessage string `json:"jsonerrorstatusmessage,omitempty"`
+	Jsonfieldscan string `json:"jsonfieldscan,omitempty"`
+	Jsonfieldscanlimit int `json:"jsonfieldscanlimit,omitempty"`
+	Jsonmessagescan string `json:"jsonmessagescan,omitempty"`
+	Jsonmessagescanlimit int `json:"jsonmessagescanlimit,omitempty"`
+	Jsonsqlinjectionaction []string `json:"jsonsqlinjectionaction,omitempty"`
+	Jsonsqlinjectiongrammar string `json:"jsonsqlinjectiongrammar,omitempty"`
+	Jsonsqlinjectiontype string `json:"jsonsqlinjectiontype,omitempty"`
+	Jsonxssaction []string `json:"jsonxssaction,omitempty"`
+	Learning string `json:"learning,omitempty"`
+	Logeverypolicyhit string `json:"logeverypolicyhit,omitempty"`
+	Matchurlstring string `json:"matchurlstring,omitempty"`
+	Messagescan string `json:"messagescan,omitempty"`
+	Messagescanlimit int `json:"messagescanlimit,omitempty"`
+	Messagescanlimitcontenttypes []string `json:"messagescanlimitcontenttypes,omitempty"`
+	Multipleheaderaction []string `json:"multipleheaderaction,omitempty"`
+	Name string `json:"name,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Optimizepartialreqs string `json:"optimizepartialreqs,omitempty"`
+	Overwrite bool `json:"overwrite,omitempty"`
+	Percentdecoderecursively string `json:"percentdecoderecursively,omitempty"`
+	Postbodylimit int `json:"postbodylimit,omitempty"`
+	Postbodylimitaction []string `json:"postbodylimitaction,omitempty"`
+	Postbodylimitsignature int `json:"postbodylimitsignature,omitempty"`
+	Protofileobject string `json:"protofileobject,omitempty"`
+	Refererheadercheck string `json:"refererheadercheck,omitempty"`
+	Relaxationrules bool `json:"relaxationrules,omitempty"`
+	Replaceurlstring string `json:"replaceurlstring,omitempty"`
+	Requestcontenttype string `json:"requestcontenttype,omitempty"`
+	Responsecontenttype string `json:"responsecontenttype,omitempty"`
+	Restaction []string `json:"restaction,omitempty"`
+	Rfcprofile string `json:"rfcprofile,omitempty"`
+	Semicolonfieldseparator string `json:"semicolonfieldseparator,omitempty"`
+	Sessioncookiename string `json:"sessioncookiename,omitempty"`
+	Sessionlessfieldconsistency string `json:"sessionlessfieldconsistency,omitempty"`
+	Sessionlessurlclosure string `json:"sessionlessurlclosure,omitempty"`
+	Signatures string `json:"signatures,omitempty"`
+	Sqlinjectionaction []string `json:"sqlinjectionaction,omitempty"`
+	Sqlinjectionchecksqlwildchars string `json:"sqlinjectionchecksqlwildchars,omitempty"`
+	Sqlinjectiongrammar string `json:"sqlinjectiongrammar,omitempty"`
+	Sqlinjectiononlycheckfieldswithsqlchars string `json:"sqlinjectiononlycheckfieldswithsqlchars,omitempty"`
+	Sqlinjectionparsecomments string `json:"sqlinjectionparsecomments,omitempty"`
+	Sqlinjectionruletype string `json:"sqlinjectionruletype,omitempty"`
+	Sqlinjectiontransformspecialchars string `json:"sqlinjectiontransformspecialchars,omitempty"`
+	Sqlinjectiontype string `json:"sqlinjectiontype,omitempty"`
+	Starturlaction []string `json:"starturlaction,omitempty"`
+	Starturlclosure string `json:"starturlclosure,omitempty"`
+	State string `json:"state,omitempty"`
+	Streaming string `json:"streaming,omitempty"`
+	Stripcomments string `json:"stripcomments,omitempty"`
+	Striphtmlcomments string `json:"striphtmlcomments,omitempty"`
+	Stripxmlcomments string `json:"stripxmlcomments,omitempty"`
+	Trace string `json:"trace,omitempty"`
+	TypeField []string `json:"type,omitempty"`
+	Urldecoderequestcookies string `json:"urldecoderequestcookies,omitempty"`
+	Usehtmlerrorobject string `json:"usehtmlerrorobject,omitempty"`
+	Verboseloglevel string `json:"verboseloglevel,omitempty"`
+	Xmlattachmentaction []string `json:"xmlattachmentaction,omitempty"`
+	Xmldosaction []string `json:"xmldosaction,omitempty"`
+	Xmlerrorobject string `json:"xmlerrorobject,omitempty"`
+	Xmlerrorstatuscode int `json:"xmlerrorstatuscode,omitempty"`
+	Xmlerrorstatusmessage string `json:"xmlerrorstatusmessage,omitempty"`
+	Xmlformataction []string `json:"xmlformataction,omitempty"`
+	Xmlsoapfaultaction []string `json:"xmlsoapfaultaction,omitempty"`
+	Xmlsqlinjectionaction []string `json:"xmlsqlinjectionaction,omitempty"`
+	Xmlsqlinjectionchecksqlwildchars string `json:"xmlsqlinjectionchecksqlwildchars,omitempty"`
+	Xmlsqlinjectiononlycheckfieldswithsqlchars string `json:"xmlsqlinjectiononlycheckfieldswithsqlchars,omitempty"`
+	Xmlsqlinjectionparsecomments string `json:"xmlsqlinjectionparsecomments,omitempty"`
+	Xmlsqlinjectiontype string `json:"xmlsqlinjectiontype,omitempty"`
+	Xmlvalidationaction []string `json:"xmlvalidationaction,omitempty"`
+	Xmlwsiaction []string `json:"xmlwsiaction,omitempty"`
+	Xmlxssaction []string `json:"xmlxssaction,omitempty"`
+}
+
+type Appfwxmlcontenttype struct {
+	Builtin []string `json:"builtin,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	Feature string `json:"feature,omitempty"`
+	Isregex string `json:"isregex,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Xmlcontenttypevalue string `json:"xmlcontenttypevalue,omitempty"`
+}
+
+type Appfwmultipartformcontenttype struct {
+	Builtin []string `json:"builtin,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	Feature string `json:"feature,omitempty"`
+	Isregex string `json:"isregex,omitempty"`
+	Multipartformcontenttypevalue string `json:"multipartformcontenttypevalue,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+}
+
+type Appfwlearningsettings struct {
+	Contenttypeautodeploygraceperiod int `json:"contenttypeautodeploygraceperiod,omitempty"`
+	Contenttypeminthreshold int `json:"contenttypeminthreshold,omitempty"`
+	Contenttypepercentthreshold int `json:"contenttypepercentthreshold,omitempty"`
+	Cookieconsistencyautodeploygraceperiod int `json:"cookieconsistencyautodeploygraceperiod,omitempty"`
+	Cookieconsistencyminthreshold int `json:"cookieconsistencyminthreshold,omitempty"`
+	Cookieconsistencypercentthreshold int `json:"cookieconsistencypercentthreshold,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	Creditcardnumberminthreshold int `json:"creditcardnumberminthreshold,omitempty"`
+	Creditcardnumberpercentthreshold int `json:"creditcardnumberpercentthreshold,omitempty"`
+	Crosssitescriptingautodeploygraceperiod int `json:"crosssitescriptingautodeploygraceperiod,omitempty"`
+	Crosssitescriptingminthreshold int `json:"crosssitescriptingminthreshold,omitempty"`
+	Crosssitescriptingpercentthreshold int `json:"crosssitescriptingpercentthreshold,omitempty"`
+	Csrftagautodeploygraceperiod int `json:"csrftagautodeploygraceperiod,omitempty"`
+	Csrftagminthreshold int `json:"csrftagminthreshold,omitempty"`
+	Csrftagpercentthreshold int `json:"csrftagpercentthreshold,omitempty"`
+	Fieldconsistencyautodeploygraceperiod int `json:"fieldconsistencyautodeploygraceperiod,omitempty"`
+	Fieldconsistencyminthreshold int `json:"fieldconsistencyminthreshold,omitempty"`
+	Fieldconsistencypercentthreshold int `json:"fieldconsistencypercentthreshold,omitempty"`
+	Fieldformatautodeploygraceperiod int `json:"fieldformatautodeploygraceperiod,omitempty"`
+	Fieldformatminthreshold int `json:"fieldformatminthreshold,omitempty"`
+	Fieldformatpercentthreshold int `json:"fieldformatpercentthreshold,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Profilename string `json:"profilename,omitempty"`
+	Sqlinjectionautodeploygraceperiod int `json:"sqlinjectionautodeploygraceperiod,omitempty"`
+	Sqlinjectionminthreshold int `json:"sqlinjectionminthreshold,omitempty"`
+	Sqlinjectionpercentthreshold int `json:"sqlinjectionpercentthreshold,omitempty"`
+	Starturlautodeploygraceperiod int `json:"starturlautodeploygraceperiod,omitempty"`
+	Starturlminthreshold int `json:"starturlminthreshold,omitempty"`
+	Starturlpercentthreshold int `json:"starturlpercentthreshold,omitempty"`
+	Xmlattachmentminthreshold int `json:"xmlattachmentminthreshold,omitempty"`
+	Xmlattachmentpercentthreshold int `json:"xmlattachmentpercentthreshold,omitempty"`
+	Xmlwsiminthreshold int `json:"xmlwsiminthreshold,omitempty"`
+	Xmlwsipercentthreshold int `json:"xmlwsipercentthreshold,omitempty"`
+}
+
+type AppfwprofileXmlxssBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	AsScanLocationXmlxss string `json:"as_scan_location_xmlxss,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	IsregexXmlxss string `json:"isregex_xmlxss,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+	Xmlxss string `json:"xmlxss,omitempty"`
+}
+
+type AppfwprofileContenttypeBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Contenttype string `json:"contenttype,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type AppfwprofileJsonsqlurlBinding struct {
+	Alertonly string `json:"alertonly,omitempty"`
+	AsValueExprJsonSql string `json:"as_value_expr_json_sql,omitempty"`
+	AsValueTypeJsonSql string `json:"as_value_type_json_sql,omitempty"`
+	Comment string `json:"comment,omitempty"`
+	Isautodeployed string `json:"isautodeployed,omitempty"`
+	IskeyregexJsonSql string `json:"iskeyregex_json_sql,omitempty"`
+	IsvalueregexJsonSql string `json:"isvalueregex_json_sql,omitempty"`
+	Jsonsqlurl string `json:"jsonsqlurl,omitempty"`
+	KeynameJsonSql string `json:"keyname_json_sql,omitempty"`
+	Name string `json:"name,omitempty"`
+	Resourceid string `json:"resourceid,omitempty"`
+	Ruletype string `json:"ruletype,omitempty"`
+	State string `json:"state,omitempty"`
+}
+
+type Appfwcustomsettings struct {
+	Name string `json:"name,omitempty"`
+	Target string `json:"target,omitempty"`
 }

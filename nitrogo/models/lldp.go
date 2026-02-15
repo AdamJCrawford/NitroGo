@@ -1,48 +1,46 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
-type Lldpneighbors struct {
-	Ifnum              string `json:"ifnum,omitempty"`
-	Nodeid             int    `json:"nodeid,omitempty"`
-	Chassisidsubtype   string `json:"chassisidsubtype,omitempty"`
-	Chassisid          string `json:"chassisid,omitempty"`
-	Portidsubtype      string `json:"portidsubtype,omitempty"`
-	Portid             string `json:"portid,omitempty"`
-	Ttl                string `json:"ttl,omitempty"`
-	Portdescription    string `json:"portdescription,omitempty"`
-	Sys                string `json:"sys,omitempty"`
-	Sysdesc            string `json:"sysdesc,omitempty"`
-	Mgmtaddresssubtype string `json:"mgmtaddresssubtype,omitempty"`
-	Mgmtaddress        string `json:"mgmtaddress,omitempty"`
-	Iftype             string `json:"iftype,omitempty"`
-	Ifnumber           string `json:"ifnumber,omitempty"`
-	Vlan               string `json:"vlan,omitempty"`
-	Vlanid             string `json:"vlanid,omitempty"`
-	Portprotosupported string `json:"portprotosupported,omitempty"`
-	Portprotoenabled   string `json:"portprotoenabled,omitempty"`
-	Portprotoid        string `json:"portprotoid,omitempty"`
-	Portvlanid         string `json:"portvlanid,omitempty"`
-	Protocolid         string `json:"protocolid,omitempty"`
-	Linkaggrcapable    string `json:"linkaggrcapable,omitempty"`
-	Linkaggrenabled    string `json:"linkaggrenabled,omitempty"`
-	Linkaggrid         string `json:"linkaggrid,omitempty"`
-	Flag               string `json:"flag,omitempty"`
-	Syscapabilities    string `json:"syscapabilities,omitempty"`
-	Syscapenabled      string `json:"syscapenabled,omitempty"`
-	Autonegsupport     string `json:"autonegsupport,omitempty"`
-	Autonegenabled     string `json:"autonegenabled,omitempty"`
-	Autonegadvertised  string `json:"autonegadvertised,omitempty"`
-	Autonegmautype     string `json:"autonegmautype,omitempty"`
-	Mtu                string `json:"mtu,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
+// lldp configuration structs
 type Lldpparam struct {
 	Holdtimetxmult     int    `json:"holdtimetxmult,omitempty"`
-	Timer              int    `json:"timer,omitempty"`
 	Mode               string `json:"mode,omitempty"`
 	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Timer              int    `json:"timer,omitempty"`
+}
+
+type Lldpneighbors struct {
+	Autonegadvertised  string  `json:"autonegadvertised,omitempty"`
+	Autonegenabled     string  `json:"autonegenabled,omitempty"`
+	Autonegmautype     string  `json:"autonegmautype,omitempty"`
+	Autonegsupport     string  `json:"autonegsupport,omitempty"`
+	Chassisid          string  `json:"chassisid,omitempty"`
+	Chassisidsubtype   string  `json:"chassisidsubtype,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Flag               int     `json:"flag,omitempty"`
+	Ifnum              string  `json:"ifnum,omitempty"`
+	Ifnumber           int     `json:"ifnumber,omitempty"`
+	Iftype             string  `json:"iftype,omitempty"`
+	Linkaggrcapable    string  `json:"linkaggrcapable,omitempty"`
+	Linkaggrenabled    string  `json:"linkaggrenabled,omitempty"`
+	Linkaggrid         int     `json:"linkaggrid,omitempty"`
+	Mgmtaddress        string  `json:"mgmtaddress,omitempty"`
+	Mgmtaddresssubtype string  `json:"mgmtaddresssubtype,omitempty"`
+	Mtu                int     `json:"mtu,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Nodeid             int     `json:"nodeid,omitempty"`
+	Portdescription    string  `json:"portdescription,omitempty"`
+	Portid             string  `json:"portid,omitempty"`
+	Portidsubtype      string  `json:"portidsubtype,omitempty"`
+	Portprotoenabled   int     `json:"portprotoenabled,omitempty"`
+	Portprotoid        int     `json:"portprotoid,omitempty"`
+	Portprotosupported int     `json:"portprotosupported,omitempty"`
+	Portvlanid         int     `json:"portvlanid,omitempty"`
+	Protocolid         string  `json:"protocolid,omitempty"`
+	Sys                string  `json:"sys,omitempty"`
+	Syscapabilities    string  `json:"syscapabilities,omitempty"`
+	Syscapenabled      string  `json:"syscapenabled,omitempty"`
+	Sysdesc            string  `json:"sysdesc,omitempty"`
+	Ttl                int     `json:"ttl,omitempty"`
+	Vlan               string  `json:"vlan,omitempty"`
+	Vlanid             int     `json:"vlanid,omitempty"`
 }

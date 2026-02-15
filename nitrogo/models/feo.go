@@ -1,131 +1,109 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
-type Feoglobalpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
+// feo configuration structs
+type FeopolicyCsvserverBinding struct {
+	Activepolicy           int    `json:"activepolicy,omitempty"`
+	Boundto                string `json:"boundto,omitempty"`
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Type                   string `json:"type,omitempty"`
-	Numpol                 uint32 `json:"numpol,omitempty"`
-	Globalbindtype         string `json:"globalbindtype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
 }
 
-type Feoparameter struct {
-	Jpegqualitypercent int    `json:"jpegqualitypercent"`
-	Cssinlinethressize int    `json:"cssinlinethressize,omitempty"`
-	Jsinlinethressize  int    `json:"jsinlinethressize,omitempty"`
-	Imginlinethressize int    `json:"imginlinethressize,omitempty"`
-	Builtin            string `json:"builtin,omitempty"`
-	Feature            string `json:"feature,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+type FeoglobalBinding struct {
+	FeoglobalFeopolicyBinding []interface{} `json:"feoglobal_feopolicy_binding,omitempty"`
+}
+
+type FeopolicyFeoglobalBinding struct {
+	Activepolicy           int    `json:"activepolicy,omitempty"`
+	Boundto                string `json:"boundto,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type FeopolicyLbvserverBinding struct {
+	Activepolicy           int    `json:"activepolicy,omitempty"`
+	Boundto                string `json:"boundto,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
 }
 
 type Feopolicy struct {
-	Name               string `json:"name,omitempty"`
-	Rule               string `json:"rule,omitempty"`
-	Action             string `json:"action,omitempty"`
-	Builtin            string `json:"builtin,omitempty"`
-	Feature            string `json:"feature,omitempty"`
-	Hits               string `json:"hits,omitempty"`
-	Undefhits          string `json:"undefhits,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Feopolicyfeoglobalbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Feoglobalfeopolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Type                   string `json:"type,omitempty"`
-	Numpol                 int    `json:"numpol,omitempty"`
-	Globalbindtype         string `json:"globalbindtype,omitempty"`
-}
-
-type Feopolicybinding struct {
-	Name string `json:"name,omitempty"`
-}
-
-type Feopolicycsvserverbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Feopolicyglobalbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Activepolicy           int32  `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Feopolicylbvserverbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Feopolicyvserverbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Activepolicy           int32  `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
+	Action             string   `json:"action,omitempty"`
+	Builtin            []string `json:"builtin,omitempty"`
+	Count              float64  `json:"__count,omitempty"`
+	Feature            string   `json:"feature,omitempty"`
+	Hits               int      `json:"hits,omitempty"`
+	Name               string   `json:"name,omitempty"`
+	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	Rule               string   `json:"rule,omitempty"`
+	Undefhits          int      `json:"undefhits,omitempty"`
 }
 
 type Feoaction struct {
-	Name                   string   `json:"name,omitempty"`
-	Pageextendcache        bool     `json:"pageextendcache,omitempty"`
-	Cachemaxage            int      `json:"cachemaxage"`
-	Imgshrinktoattrib      bool     `json:"imgshrinktoattrib,omitempty"`
-	Imggiftopng            bool     `json:"imggiftopng,omitempty"`
-	Imgtowebp              bool     `json:"imgtowebp,omitempty"`
-	Imgtojpegxr            bool     `json:"imgtojpegxr,omitempty"`
-	Imginline              bool     `json:"imginline,omitempty"`
-	Cssimginline           bool     `json:"cssimginline,omitempty"`
-	Jpgoptimize            bool     `json:"jpgoptimize,omitempty"`
-	Imglazyload            bool     `json:"imglazyload,omitempty"`
-	Cssminify              bool     `json:"cssminify,omitempty"`
-	Cssinline              bool     `json:"cssinline,omitempty"`
-	Csscombine             bool     `json:"csscombine,omitempty"`
-	Convertimporttolink    bool     `json:"convertimporttolink,omitempty"`
-	Jsminify               bool     `json:"jsminify,omitempty"`
-	Jsinline               bool     `json:"jsinline,omitempty"`
-	Htmlminify             bool     `json:"htmlminify,omitempty"`
-	Cssmovetohead          bool     `json:"cssmovetohead,omitempty"`
-	Jsmovetoend            bool     `json:"jsmovetoend,omitempty"`
-	Domainsharding         string   `json:"domainsharding,omitempty"`
-	Dnsshards              []string `json:"dnsshards,omitempty"`
+	Builtin                []string `json:"builtin,omitempty"`
+	Cachemaxage            int      `json:"cachemaxage,omitempty"`
 	Clientsidemeasurements bool     `json:"clientsidemeasurements,omitempty"`
-	Imgadddimensions       string   `json:"imgadddimensions,omitempty"`
-	Imgshrinkformobile     string   `json:"imgshrinkformobile,omitempty"`
-	Imgweaken              string   `json:"imgweaken,omitempty"`
-	Jpgprogressive         string   `json:"jpgprogressive,omitempty"`
-	Cssflattenimports      string   `json:"cssflattenimports,omitempty"`
-	Jscombine              string   `json:"jscombine,omitempty"`
-	Htmlrmdefaultattribs   string   `json:"htmlrmdefaultattribs,omitempty"`
-	Htmlrmattribquotes     string   `json:"htmlrmattribquotes,omitempty"`
-	Htmltrimurls           string   `json:"htmltrimurls,omitempty"`
-	Hits                   string   `json:"hits,omitempty"`
-	Undefhits              string   `json:"undefhits,omitempty"`
-	Builtin                string   `json:"builtin,omitempty"`
+	Convertimporttolink    bool     `json:"convertimporttolink,omitempty"`
+	Count                  float64  `json:"__count,omitempty"`
+	Csscombine             bool     `json:"csscombine,omitempty"`
+	Cssflattenimports      bool     `json:"cssflattenimports,omitempty"`
+	Cssimginline           bool     `json:"cssimginline,omitempty"`
+	Cssinline              bool     `json:"cssinline,omitempty"`
+	Cssminify              bool     `json:"cssminify,omitempty"`
+	Cssmovetohead          bool     `json:"cssmovetohead,omitempty"`
+	Dnsshards              []string `json:"dnsshards,omitempty"`
+	Domainsharding         string   `json:"domainsharding,omitempty"`
 	Feature                string   `json:"feature,omitempty"`
+	Hits                   int      `json:"hits,omitempty"`
+	Htmlminify             bool     `json:"htmlminify,omitempty"`
+	Htmlrmattribquotes     bool     `json:"htmlrmattribquotes,omitempty"`
+	Htmlrmdefaultattribs   bool     `json:"htmlrmdefaultattribs,omitempty"`
+	Htmltrimurls           bool     `json:"htmltrimurls,omitempty"`
+	Imgadddimensions       bool     `json:"imgadddimensions,omitempty"`
+	Imggiftopng            bool     `json:"imggiftopng,omitempty"`
+	Imginline              bool     `json:"imginline,omitempty"`
+	Imglazyload            bool     `json:"imglazyload,omitempty"`
+	Imgshrinkformobile     bool     `json:"imgshrinkformobile,omitempty"`
+	Imgshrinktoattrib      bool     `json:"imgshrinktoattrib,omitempty"`
+	Imgtojpegxr            bool     `json:"imgtojpegxr,omitempty"`
+	Imgtowebp              bool     `json:"imgtowebp,omitempty"`
+	Imgweaken              bool     `json:"imgweaken,omitempty"`
+	Jpgoptimize            bool     `json:"jpgoptimize,omitempty"`
+	Jpgprogressive         bool     `json:"jpgprogressive,omitempty"`
+	Jscombine              bool     `json:"jscombine,omitempty"`
+	Jsinline               bool     `json:"jsinline,omitempty"`
+	Jsminify               bool     `json:"jsminify,omitempty"`
+	Jsmovetoend            bool     `json:"jsmovetoend,omitempty"`
+	Name                   string   `json:"name,omitempty"`
 	Nextgenapiresource     string   `json:"_nextgenapiresource,omitempty"`
+	Pageextendcache        bool     `json:"pageextendcache,omitempty"`
+	Undefhits              int      `json:"undefhits,omitempty"`
 }
 
-type Feoglobalbinding struct {
+type FeopolicyBinding struct {
+	FeopolicyCsvserverBinding []interface{} `json:"feopolicy_csvserver_binding,omitempty"`
+	FeopolicyFeoglobalBinding []interface{} `json:"feopolicy_feoglobal_binding,omitempty"`
+	FeopolicyLbvserverBinding []interface{} `json:"feopolicy_lbvserver_binding,omitempty"`
+	Name                      string        `json:"name,omitempty"`
+}
+
+type Feoparameter struct {
+	Builtin            []string `json:"builtin,omitempty"`
+	Cssinlinethressize int      `json:"cssinlinethressize,omitempty"`
+	Feature            string   `json:"feature,omitempty"`
+	Imginlinethressize int      `json:"imginlinethressize,omitempty"`
+	Jpegqualitypercent int      `json:"jpegqualitypercent,omitempty"`
+	Jsinlinethressize  int      `json:"jsinlinethressize,omitempty"`
+	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+}
+
+type FeoglobalFeopolicyBinding struct {
+	Globalbindtype         string `json:"globalbindtype,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Numpol                 int    `json:"numpol,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	TypeField              string `json:"type,omitempty"`
 }

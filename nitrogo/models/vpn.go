@@ -1,1819 +1,1441 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
-type Vpnglobalauthenticationtacacspolicybinding struct {
+// vpn configuration structs
+type VpnclientlessaccesspolicyVpnvserverBinding struct {
+	Activepolicy int    `json:"activepolicy,omitempty"`
+	Boundto      string `json:"boundto,omitempty"`
+	Name         string `json:"name,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
+}
+
+type VpnglobalAuditnslogpolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
 	Policyname             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
+}
+
+type Vpnicadtlsconnection struct {
+	Channelnumber      int     `json:"channelnumber,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Destip             string  `json:"destip,omitempty"`
+	Destport           int     `json:"destport,omitempty"`
+	Domain             string  `json:"domain,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Nodeid             int     `json:"nodeid,omitempty"`
+	Peid               int     `json:"peid,omitempty"`
+	Srcip              string  `json:"srcip,omitempty"`
+	Srcport            int     `json:"srcport,omitempty"`
+	Username           string  `json:"username,omitempty"`
+}
+
+type Vpnstoreinfo struct {
+	Count              float64 `json:"__count,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Storeapisupport    string  `json:"storeapisupport,omitempty"`
+	Storelist          string  `json:"storelist,omitempty"`
+	Storeserverissf    string  `json:"storeserverissf,omitempty"`
+	Storeserverstatus  string  `json:"storeserverstatus,omitempty"`
+	Storestatus        string  `json:"storestatus,omitempty"`
+	Url                string  `json:"url,omitempty"`
+}
+
+type VpnglobalIntranetipBinding struct {
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Intranetip             string `json:"intranetip,omitempty"`
+	Netmask                string `json:"netmask,omitempty"`
 }
 
-type Vpnglobaleulabinding struct {
-	Eula                   string `json:"eula,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type VpnurlpolicyVpnvserverBinding struct {
+	Activepolicy int    `json:"activepolicy,omitempty"`
+	Boundto      string `json:"boundto,omitempty"`
+	Name         string `json:"name,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
 }
 
-type Vpnglobalportalthemebinding struct {
-	Portaltheme            string `json:"portaltheme,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type VpnurlpolicyAaauserBinding struct {
+	Activepolicy int    `json:"activepolicy,omitempty"`
+	Boundto      string `json:"boundto,omitempty"`
+	Name         string `json:"name,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
 }
 
-type Vpnglobalstaserverbinding struct {
-	Staserver              string `json:"staserver,omitempty"`
-	Staauthid              string `json:"staauthid,omitempty"`
-	Stastate               string `json:"stastate,omitempty"`
-	Staaddresstype         string `json:"staaddresstype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type Vpneula struct {
+	Count              float64 `json:"__count,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
 }
 
-type Vpnglobalurlpolicybinding struct {
-	Policyname             string   `json:"policyname,omitempty"`
-	Priority               uint32   `json:"priority,omitempty"`
-	Gotopriorityexpression string   `json:"gotopriorityexpression,omitempty"`
-	Builtin                []string `json:"builtin,omitempty"`
-	Secondary              bool     `json:"secondary,omitempty"`
-	Groupextraction        bool     `json:"groupextraction,omitempty"`
+type VpnsessionpolicyVpnvserverBinding struct {
+	Activepolicy int    `json:"activepolicy,omitempty"`
+	Boundto      string `json:"boundto,omitempty"`
+	Name         string `json:"name,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
 }
 
-type Vpnglobaltrafficpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
+type VpnsessionpolicyBinding struct {
+	Name                              string        `json:"name,omitempty"`
+	VpnsessionpolicyAaagroupBinding   []interface{} `json:"vpnsessionpolicy_aaagroup_binding,omitempty"`
+	VpnsessionpolicyAaauserBinding    []interface{} `json:"vpnsessionpolicy_aaauser_binding,omitempty"`
+	VpnsessionpolicyVpnglobalBinding  []interface{} `json:"vpnsessionpolicy_vpnglobal_binding,omitempty"`
+	VpnsessionpolicyVpnvserverBinding []interface{} `json:"vpnsessionpolicy_vpnvserver_binding,omitempty"`
 }
 
-type Vpnportaltheme struct {
-	Name               string `json:"name,omitempty"`
-	Basetheme          string `json:"basetheme,omitempty"`
-	Feature            string `json:"feature,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpnsessionpolicybinding struct {
-	Name string `json:"name,omitempty"`
-}
-
-type Vpnvserversamlidppolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
+type VpnvserverCspolicyBinding struct {
 	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvservervpnepaprofilebinding struct {
-	Epaprofile         string `json:"epaprofile,omitempty"`
-	Acttype            int    `json:"acttype,omitempty"`
-	Name               string `json:"name,omitempty"`
-	Epaprofileoptional bool   `json:"epaprofileoptional,omitempty"`
-}
-
-type Vpnvservervpnurlbinding struct {
-	Urlname string `json:"urlname,omitempty"`
-	Acttype int    `json:"acttype,omitempty"`
-	Name    string `json:"name,omitempty"`
-}
-
-type Vpnglobalappfwpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
 }
 
-type Vpnglobalnslogpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
+type VpnvserverAuditsyslogpolicyBinding struct {
+	Acttype                int    `json:"acttype,omitempty"`
+	Bindpoint              string `json:"bindpoint,omitempty"`
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnglobalsamlpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
 	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
 }
 
-type Vpnglobalsessionpolicybinding struct {
-	Policyname             string   `json:"policyname,omitempty"`
-	Priority               uint32   `json:"priority,omitempty"`
-	Gotopriorityexpression string   `json:"gotopriorityexpression,omitempty"`
+type VpnglobalVpnclientlessaccesspolicyBinding struct {
 	Builtin                []string `json:"builtin,omitempty"`
 	Feature                string   `json:"feature,omitempty"`
-	Secondary              bool     `json:"secondary,omitempty"`
+	Globalbindtype         string   `json:"globalbindtype,omitempty"`
+	Gotopriorityexpression string   `json:"gotopriorityexpression,omitempty"`
 	Groupextraction        bool     `json:"groupextraction,omitempty"`
+	Policyname             string   `json:"policyname,omitempty"`
+	Priority               int      `json:"priority,omitempty"`
+	Secondary              bool     `json:"secondary,omitempty"`
+	TypeField              string   `json:"type,omitempty"`
 }
 
-type Vpnsessionpolicygroupbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     uint32 `json:"priority,omitempty"`
-	Activepolicy uint32 `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnvserverauthenticationcertpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Acttype                int    `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
+type VpnglobalSecureprivateaccessurlBinding struct {
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
+	Secureprivateaccessurl string `json:"secureprivateaccessurl,omitempty"`
 }
 
-type Vpnvserverprofilebinding struct {
+type VpnvserverAppcontrollerBinding struct {
+	Acttype       int    `json:"acttype,omitempty"`
+	Appcontroller string `json:"appcontroller,omitempty"`
+	Name          string `json:"name,omitempty"`
+}
+
+type VpnglobalVpnsecureprivateaccessprofileBinding struct {
+	Gotopriorityexpression     string `json:"gotopriorityexpression,omitempty"`
+	Secureprivateaccessprofile string `json:"secureprivateaccessprofile,omitempty"`
+}
+
+type VpnurlpolicyAaagroupBinding struct {
+	Activepolicy int    `json:"activepolicy,omitempty"`
+	Boundto      string `json:"boundto,omitempty"`
+	Name         string `json:"name,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
+}
+
+type VpnglobalAuthenticationcertpolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnvserverAnalyticsprofileBinding struct {
 	Analyticsprofile string `json:"analyticsprofile,omitempty"`
 	Name             string `json:"name,omitempty"`
 }
 
-type Vpngloballocalpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+type Vpnintranetapplication struct {
+	Clientapplication   []string `json:"clientapplication,omitempty"`
+	Count               float64  `json:"__count,omitempty"`
+	Destip              string   `json:"destip,omitempty"`
+	Destport            string   `json:"destport,omitempty"`
+	Hostname            string   `json:"hostname,omitempty"`
+	Interception        string   `json:"interception,omitempty"`
+	Intranetapplication string   `json:"intranetapplication,omitempty"`
+	Ipaddress           string   `json:"ipaddress,omitempty"`
+	Iprange             string   `json:"iprange,omitempty"`
+	Netmask             string   `json:"netmask,omitempty"`
+	Nextgenapiresource  string   `json:"_nextgenapiresource,omitempty"`
+	Protocol            string   `json:"protocol,omitempty"`
+	Spoofiip            string   `json:"spoofiip,omitempty"`
+	Srcip               string   `json:"srcip,omitempty"`
+	Srcport             int      `json:"srcport,omitempty"`
+}
+
+type VpnglobalVpntrafficpolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnsessionpolicyvserverbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     uint32 `json:"priority,omitempty"`
-	Activepolicy uint32 `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpntrafficpolicygroupbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     uint32 `json:"priority,omitempty"`
-	Activepolicy uint32 `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpntrafficpolicyvpnglobalbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnvserverintranetipbinding struct {
-	Intranetip string `json:"intranetip,omitempty"`
-	Netmask    string `json:"netmask,omitempty"`
-	Map        string `json:"map,omitempty"`
-	Acttype    int    `json:"acttype,omitempty"`
-	Name       string `json:"name,omitempty"`
-}
-
-type Vpnvserverldappolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Acttype                uint32 `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvservervpnintranetapplicationbinding struct {
-	Intranetapplication string `json:"intranetapplication,omitempty"`
-	Acttype             int    `json:"acttype,omitempty"`
-	Name                string `json:"name,omitempty"`
-}
-
-type Vpnglobalintranetip6binding struct {
-	Intranetip6            string `json:"intranetip6,omitempty"`
-	Numaddr                int    `json:"numaddr,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnvservercertpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Acttype                uint32 `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvservervpnnexthopserverbinding struct {
-	Nexthopserver string `json:"nexthopserver,omitempty"`
-	Acttype       int    `json:"acttype,omitempty"`
-	Name          string `json:"name,omitempty"`
-}
-
-type Vpnclientlessaccesspolicybinding struct {
-	Name string `json:"name,omitempty"`
-}
-
-type Vpnglobalauthenticationpolicybinding struct {
 	Policyname             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnpcoipconnection struct {
-	Username           string `json:"username,omitempty"`
-	Nodeid             int    `json:"nodeid,omitempty"`
-	All                bool   `json:"all,omitempty"`
-	Srcip              string `json:"srcip,omitempty"`
-	Srcport            string `json:"srcport,omitempty"`
-	Destip             string `json:"destip,omitempty"`
-	Destport           string `json:"destport,omitempty"`
-	Peid               string `json:"peid,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpnurlpolicyglobalbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     uint32 `json:"priority,omitempty"`
-	Activepolicy uint32 `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnvserverappfwpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnurlpolicyvpnvserverbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnvserver struct {
-	Name                         string `json:"name,omitempty"`
-	Servicetype                  string `json:"servicetype,omitempty"`
-	Ipv46                        string `json:"ipv46,omitempty"`
-	Range                        int    `json:"range,omitempty"`
-	Port                         int    `json:"port,omitempty"`
-	Ipset                        string `json:"ipset,omitempty"`
-	State                        string `json:"state,omitempty"`
-	Authentication               string `json:"authentication,omitempty"`
-	Doublehop                    string `json:"doublehop,omitempty"`
-	Maxaaausers                  int    `json:"maxaaausers,omitempty"`
-	Icaonly                      string `json:"icaonly,omitempty"`
-	Icaproxysessionmigration     string `json:"icaproxysessionmigration,omitempty"`
-	Dtls                         string `json:"dtls,omitempty"`
-	Loginonce                    string `json:"loginonce,omitempty"`
-	Advancedepa                  string `json:"advancedepa,omitempty"`
-	Devicecert                   string `json:"devicecert,omitempty"`
-	Certkeynames                 string `json:"certkeynames,omitempty"`
-	Downstateflush               string `json:"downstateflush,omitempty"`
-	Listenpolicy                 string `json:"listenpolicy,omitempty"`
-	Listenpriority               int    `json:"listenpriority,omitempty"`
-	Tcpprofilename               string `json:"tcpprofilename,omitempty"`
-	Httpprofilename              string `json:"httpprofilename,omitempty"`
-	Comment                      string `json:"comment,omitempty"`
-	Appflowlog                   string `json:"appflowlog,omitempty"`
-	Icmpvsrresponse              string `json:"icmpvsrresponse,omitempty"`
-	Rhistate                     string `json:"rhistate,omitempty"`
-	Netprofile                   string `json:"netprofile,omitempty"`
-	Cginfrahomepageredirect      string `json:"cginfrahomepageredirect,omitempty"`
-	Secureprivateaccess          string `json:"secureprivateaccess,omitempty"`
-	Accessrestrictedpageredirect string `json:"accessrestrictedpageredirect,omitempty"`
-	Maxloginattempts             int    `json:"maxloginattempts,omitempty"`
-	Failedlogintimeout           int    `json:"failedlogintimeout,omitempty"`
-	L2conn                       string `json:"l2conn,omitempty"`
-	Deploymenttype               string `json:"deploymenttype,omitempty"`
-	Rdpserverprofilename         string `json:"rdpserverprofilename,omitempty"`
-	Windowsepapluginupgrade      string `json:"windowsepapluginupgrade,omitempty"`
-	Linuxepapluginupgrade        string `json:"linuxepapluginupgrade,omitempty"`
-	Macepapluginupgrade          string `json:"macepapluginupgrade,omitempty"`
-	Logoutonsmartcardremoval     string `json:"logoutonsmartcardremoval,omitempty"`
-	Userdomains                  string `json:"userdomains,omitempty"`
-	Authnprofile                 string `json:"authnprofile,omitempty"`
-	Vserverfqdn                  string `json:"vserverfqdn,omitempty"`
-	Pcoipvserverprofilename      string `json:"pcoipvserverprofilename,omitempty"`
-	Samesite                     string `json:"samesite,omitempty"`
-	Quicprofilename              string `json:"quicprofilename,omitempty"`
-	Deviceposture                string `json:"deviceposture,omitempty"`
-	Newname                      string `json:"newname,omitempty"`
-	Ip                           string `json:"ip,omitempty"`
-	Value                        string `json:"value,omitempty"`
-	Type                         string `json:"type,omitempty"`
-	Curstate                     string `json:"curstate,omitempty"`
-	Status                       string `json:"status,omitempty"`
-	Cachetype                    string `json:"cachetype,omitempty"`
-	Redirect                     string `json:"redirect,omitempty"`
-	Precedence                   string `json:"precedence,omitempty"`
-	Redirecturl                  string `json:"redirecturl,omitempty"`
-	Curaaausers                  string `json:"curaaausers,omitempty"`
-	Curtotalusers                string `json:"curtotalusers,omitempty"`
-	Domain                       string `json:"domain,omitempty"`
-	Rule                         string `json:"rule,omitempty"`
-	Servicename                  string `json:"servicename,omitempty"`
-	Weight                       string `json:"weight,omitempty"`
-	Cachevserver                 string `json:"cachevserver,omitempty"`
-	Backupvserver                string `json:"backupvserver,omitempty"`
-	Clttimeout                   string `json:"clttimeout,omitempty"`
-	Somethod                     string `json:"somethod,omitempty"`
-	Sothreshold                  string `json:"sothreshold,omitempty"`
-	Sopersistence                string `json:"sopersistence,omitempty"`
-	Sopersistencetimeout         string `json:"sopersistencetimeout,omitempty"`
-	Usemip                       string `json:"usemip,omitempty"`
-	Map                          string `json:"map,omitempty"`
-	Bindpoint                    string `json:"bindpoint,omitempty"`
-	Disableprimaryondown         string `json:"disableprimaryondown,omitempty"`
-	Secondary                    string `json:"secondary,omitempty"`
-	Groupextraction              string `json:"groupextraction,omitempty"`
-	Epaprofileoptional           string `json:"epaprofileoptional,omitempty"`
-	Ngname                       string `json:"ngname,omitempty"`
-	Csvserver                    string `json:"csvserver,omitempty"`
-	Nodefaultbindings            string `json:"nodefaultbindings,omitempty"`
-	Nextgenapiresource           string `json:"_nextgenapiresource,omitempty"`
-	Response                     string `json:"response,omitempty"`
-}
-
-type Vpnvserverauthenticationdfapolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Acttype                int    `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnclientlessaccesspolicyvserverbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     uint32 `json:"priority,omitempty"`
-	Activepolicy int32  `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnglobalintranetipbinding struct {
-	Intranetip             string `json:"intranetip,omitempty"`
-	Netmask                string `json:"netmask,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnvserverauditsyslogpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Acttype                int    `json:"acttype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvservervpnportalthemebinding struct {
-	Portaltheme string `json:"portaltheme,omitempty"`
-	Acttype     int    `json:"acttype,omitempty"`
-	Name        string `json:"name,omitempty"`
-}
-
-type Vpnclientlessaccessprofile struct {
-	Profilename                    string `json:"profilename,omitempty"`
-	Urlrewritepolicylabel          string `json:"urlrewritepolicylabel,omitempty"`
-	Javascriptrewritepolicylabel   string `json:"javascriptrewritepolicylabel,omitempty"`
-	Reqhdrrewritepolicylabel       string `json:"reqhdrrewritepolicylabel,omitempty"`
-	Reshdrrewritepolicylabel       string `json:"reshdrrewritepolicylabel,omitempty"`
-	Regexforfindingurlinjavascript string `json:"regexforfindingurlinjavascript,omitempty"`
-	Regexforfindingurlincss        string `json:"regexforfindingurlincss,omitempty"`
-	Regexforfindingurlinxcomponent string `json:"regexforfindingurlinxcomponent,omitempty"`
-	Regexforfindingurlinxml        string `json:"regexforfindingurlinxml,omitempty"`
-	Regexforfindingcustomurls      string `json:"regexforfindingcustomurls,omitempty"`
-	Clientconsumedcookies          string `json:"clientconsumedcookies,omitempty"`
-	Requirepersistentcookie        string `json:"requirepersistentcookie,omitempty"`
-	Cssrewritepolicylabel          string `json:"cssrewritepolicylabel,omitempty"`
-	Xmlrewritepolicylabel          string `json:"xmlrewritepolicylabel,omitempty"`
-	Xcomponentrewritepolicylabel   string `json:"xcomponentrewritepolicylabel,omitempty"`
-	Isdefault                      string `json:"isdefault,omitempty"`
-	Description                    string `json:"description,omitempty"`
-	Builtin                        string `json:"builtin,omitempty"`
-	Feature                        string `json:"feature,omitempty"`
-	Nextgenapiresource             string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpngloballdappolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnvserverauthenticationwebauthpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Acttype                int    `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvserverbinding struct {
-	Name string `json:"name,omitempty"`
-}
-
-type Vpnvserverloginschemapolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnglobalvpnportalthemebinding struct {
-	Portaltheme            string `json:"portaltheme,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnalwaysonprofile struct {
-	Name                      string `json:"name,omitempty"`
-	Networkaccessonvpnfailure string `json:"networkaccessonvpnfailure,omitempty"`
-	Clientcontrol             string `json:"clientcontrol,omitempty"`
-	Locationbasedvpn          string `json:"locationbasedvpn,omitempty"`
-	Nextgenapiresource        string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpnglobalclientlessaccesspolicybinding struct {
-	Policyname             string   `json:"policyname,omitempty"`
-	Priority               uint32   `json:"priority,omitempty"`
-	Type                   string   `json:"type,omitempty"`
-	Gotopriorityexpression string   `json:"gotopriorityexpression,omitempty"`
-	Builtin                []string `json:"builtin,omitempty"`
-	Feature                string   `json:"feature,omitempty"`
-	Globalbindtype         string   `json:"globalbindtype,omitempty"`
-	Secondary              bool     `json:"secondary,omitempty"`
-	Groupextraction        bool     `json:"groupextraction,omitempty"`
-}
-
-type Vpnglobalvpnsessionpolicybinding struct {
-	Policyname             string   `json:"policyname,omitempty"`
-	Priority               int      `json:"priority,omitempty"`
-	Gotopriorityexpression string   `json:"gotopriorityexpression,omitempty"`
-	Builtin                []string `json:"builtin,omitempty"`
-	Feature                string   `json:"feature,omitempty"`
-	Secondary              bool     `json:"secondary,omitempty"`
-	Groupextraction        bool     `json:"groupextraction,omitempty"`
 }
 
 type Vpnurlaction struct {
-	Name               string `json:"name,omitempty"`
-	Linkname           string `json:"linkname,omitempty"`
-	Actualurl          string `json:"actualurl,omitempty"`
-	Vservername        string `json:"vservername,omitempty"`
-	Clientlessaccess   string `json:"clientlessaccess,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Iconurl            string `json:"iconurl,omitempty"`
-	Ssotype            string `json:"ssotype,omitempty"`
-	Applicationtype    string `json:"applicationtype,omitempty"`
-	Samlssoprofile     string `json:"samlssoprofile,omitempty"`
-	Newname            string `json:"newname,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Actualurl          string  `json:"actualurl,omitempty"`
+	Applicationtype    string  `json:"applicationtype,omitempty"`
+	Clientlessaccess   string  `json:"clientlessaccess,omitempty"`
+	Comment            string  `json:"comment,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Iconurl            string  `json:"iconurl,omitempty"`
+	Linkname           string  `json:"linkname,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Newname            string  `json:"newname,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Samlssoprofile     string  `json:"samlssoprofile,omitempty"`
+	Ssotype            string  `json:"ssotype,omitempty"`
+	Vservername        string  `json:"vservername,omitempty"`
 }
 
-type Vpnvserverrewritepolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
+type Vpnpcoipconnection struct {
+	All                bool    `json:"all,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Destip             string  `json:"destip,omitempty"`
+	Destport           int     `json:"destport,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Nodeid             int     `json:"nodeid,omitempty"`
+	Peid               int     `json:"peid,omitempty"`
+	Srcip              string  `json:"srcip,omitempty"`
+	Srcport            int     `json:"srcport,omitempty"`
+	Username           string  `json:"username,omitempty"`
 }
 
-type Vpnglobalauthenticationlocalpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnglobalbinding struct {
-}
-
-type Vpnintranetapplication struct {
-	Intranetapplication string   `json:"intranetapplication,omitempty"`
-	Protocol            string   `json:"protocol,omitempty"`
-	Destip              string   `json:"destip,omitempty"`
-	Netmask             string   `json:"netmask,omitempty"`
-	Iprange             string   `json:"iprange,omitempty"`
-	Hostname            string   `json:"hostname,omitempty"`
-	Clientapplication   []string `json:"clientapplication,omitempty"`
-	Spoofiip            string   `json:"spoofiip,omitempty"`
-	Destport            string   `json:"destport,omitempty"`
-	Interception        string   `json:"interception,omitempty"`
-	Srcip               string   `json:"srcip,omitempty"`
-	Srcport             int      `json:"srcport,omitempty"`
-	Ipaddress           string   `json:"ipaddress,omitempty"`
-	Nextgenapiresource  string   `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpnparameter struct {
-	Httpport                     []int    `json:"httpport,omitempty"`
-	Winsip                       string   `json:"winsip,omitempty"`
-	Dnsvservername               string   `json:"dnsvservername,omitempty"`
-	Splitdns                     string   `json:"splitdns,omitempty"`
-	Icauseraccounting            string   `json:"icauseraccounting,omitempty"`
-	Sesstimeout                  int      `json:"sesstimeout,omitempty"`
-	Clientsecurity               string   `json:"clientsecurity,omitempty"`
-	Clientsecuritygroup          string   `json:"clientsecuritygroup,omitempty"`
-	Clientsecuritymessage        string   `json:"clientsecuritymessage,omitempty"`
-	Clientsecuritylog            string   `json:"clientsecuritylog,omitempty"`
-	Smartgroup                   string   `json:"smartgroup,omitempty"`
-	Splittunnel                  string   `json:"splittunnel,omitempty"`
-	Locallanaccess               string   `json:"locallanaccess,omitempty"`
-	Rfc1918                      string   `json:"rfc1918,omitempty"`
-	Spoofiip                     string   `json:"spoofiip,omitempty"`
-	Killconnections              string   `json:"killconnections,omitempty"`
-	Transparentinterception      string   `json:"transparentinterception,omitempty"`
-	Windowsclienttype            string   `json:"windowsclienttype,omitempty"`
-	Defaultauthorizationaction   string   `json:"defaultauthorizationaction,omitempty"`
-	Authorizationgroup           string   `json:"authorizationgroup,omitempty"`
-	Clientidletimeout            int      `json:"clientidletimeout,omitempty"`
-	Proxy                        string   `json:"proxy,omitempty"`
-	Allprotocolproxy             string   `json:"allprotocolproxy,omitempty"`
-	Httpproxy                    string   `json:"httpproxy,omitempty"`
-	Ftpproxy                     string   `json:"ftpproxy,omitempty"`
-	Socksproxy                   string   `json:"socksproxy,omitempty"`
-	Gopherproxy                  string   `json:"gopherproxy,omitempty"`
-	Sslproxy                     string   `json:"sslproxy,omitempty"`
-	Proxyexception               string   `json:"proxyexception,omitempty"`
-	Proxylocalbypass             string   `json:"proxylocalbypass,omitempty"`
-	Clientcleanupprompt          string   `json:"clientcleanupprompt,omitempty"`
-	Forcecleanup                 []string `json:"forcecleanup,omitempty"`
-	Clientoptions                []string `json:"clientoptions,omitempty"`
-	Clientconfiguration          []string `json:"clientconfiguration,omitempty"`
-	Sso                          string   `json:"sso,omitempty"`
-	Ssocredential                string   `json:"ssocredential,omitempty"`
-	Windowsautologon             string   `json:"windowsautologon,omitempty"`
-	Usemip                       string   `json:"usemip,omitempty"`
-	Useiip                       string   `json:"useiip,omitempty"`
-	Clientdebug                  string   `json:"clientdebug,omitempty"`
-	Loginscript                  string   `json:"loginscript,omitempty"`
-	Logoutscript                 string   `json:"logoutscript,omitempty"`
-	Homepage                     string   `json:"homepage,omitempty"`
-	Icaproxy                     string   `json:"icaproxy,omitempty"`
-	Wihome                       string   `json:"wihome,omitempty"`
-	Wihomeaddresstype            string   `json:"wihomeaddresstype,omitempty"`
-	Citrixreceiverhome           string   `json:"citrixreceiverhome,omitempty"`
-	Wiportalmode                 string   `json:"wiportalmode,omitempty"`
-	Clientchoices                string   `json:"clientchoices,omitempty"`
-	Epaclienttype                string   `json:"epaclienttype,omitempty"`
-	Iipdnssuffix                 string   `json:"iipdnssuffix,omitempty"`
-	Forcedtimeout                int      `json:"forcedtimeout,omitempty"`
-	Forcedtimeoutwarning         int      `json:"forcedtimeoutwarning,omitempty"`
-	Ntdomain                     string   `json:"ntdomain,omitempty"`
-	Clientlessvpnmode            string   `json:"clientlessvpnmode,omitempty"`
-	Clientlessmodeurlencoding    string   `json:"clientlessmodeurlencoding,omitempty"`
-	Clientlesspersistentcookie   string   `json:"clientlesspersistentcookie,omitempty"`
-	Emailhome                    string   `json:"emailhome,omitempty"`
-	Allowedlogingroups           string   `json:"allowedlogingroups,omitempty"`
-	Encryptcsecexp               string   `json:"encryptcsecexp,omitempty"`
-	Apptokentimeout              int      `json:"apptokentimeout,omitempty"`
-	Mdxtokentimeout              int      `json:"mdxtokentimeout,omitempty"`
-	Uitheme                      string   `json:"uitheme,omitempty"`
-	Securebrowse                 string   `json:"securebrowse,omitempty"`
-	Storefronturl                string   `json:"storefronturl,omitempty"`
-	Kcdaccount                   string   `json:"kcdaccount,omitempty"`
-	Clientversions               string   `json:"clientversions,omitempty"`
-	Rdpclientprofilename         string   `json:"rdpclientprofilename,omitempty"`
-	Windowspluginupgrade         string   `json:"windowspluginupgrade,omitempty"`
-	Macpluginupgrade             string   `json:"macpluginupgrade,omitempty"`
-	Linuxpluginupgrade           string   `json:"linuxpluginupgrade,omitempty"`
-	Iconwithreceiver             string   `json:"iconwithreceiver,omitempty"`
-	Userdomains                  string   `json:"userdomains,omitempty"`
-	Icasessiontimeout            string   `json:"icasessiontimeout,omitempty"`
-	Httptrackconnproxy           string   `json:"httptrackconnproxy,omitempty"`
-	Alwaysonprofilename          string   `json:"alwaysonprofilename,omitempty"`
-	Autoproxyurl                 string   `json:"autoproxyurl,omitempty"`
-	Advancedclientlessvpnmode    string   `json:"advancedclientlessvpnmode,omitempty"`
-	Pcoipprofilename             string   `json:"pcoipprofilename,omitempty"`
-	Backendserversni             string   `json:"backendserversni,omitempty"`
-	Backendcertvalidation        string   `json:"backendcertvalidation,omitempty"`
-	Secureprivateaccess          string   `json:"secureprivateaccess,omitempty"`
-	Accessrestrictedpageredirect string   `json:"accessrestrictedpageredirect,omitempty"`
-	Fqdnspoofedip                string   `json:"fqdnspoofedip,omitempty"`
-	Netmask                      string   `json:"netmask,omitempty"`
-	Samesite                     string   `json:"samesite,omitempty"`
-	Maxiipperuser                int      `json:"maxiipperuser,omitempty"`
-	Deviceposture                string   `json:"deviceposture,omitempty"`
-	Backenddtls12                string   `json:"backenddtls12,omitempty"`
-	Name                         string   `json:"name,omitempty"`
-	Clientidletimeoutwarning     string   `json:"clientidletimeoutwarning,omitempty"`
-	Vpnsessionpolicybindtype     string   `json:"vpnsessionpolicybindtype,omitempty"`
-	Vpnsessionpolicycount        string   `json:"vpnsessionpolicycount,omitempty"`
-	Nextgenapiresource           string   `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpnvserverauthenticationnegotiatepolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Acttype                int    `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvserverauthenticationradiuspolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Acttype                int    `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvserverclientlessaccesspolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Acttype                uint32 `json:"acttype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-}
-
-type Vpnvservernslogpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Acttype                uint32 `json:"acttype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnclientlessaccesspolicyvpnglobalbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnformssoaction struct {
-	Name               string `json:"name,omitempty"`
-	Actionurl          string `json:"actionurl,omitempty"`
-	Userfield          string `json:"userfield,omitempty"`
-	Passwdfield        string `json:"passwdfield,omitempty"`
-	Ssosuccessrule     string `json:"ssosuccessrule,omitempty"`
-	Namevaluepair      string `json:"namevaluepair,omitempty"`
-	Responsesize       int    `json:"responsesize,omitempty"`
-	Nvtype             string `json:"nvtype,omitempty"`
-	Submitmethod       string `json:"submitmethod,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpnnexthopserver struct {
-	Name               string `json:"name,omitempty"`
-	Nexthopip          string `json:"nexthopip,omitempty"`
-	Nexthopfqdn        string `json:"nexthopfqdn,omitempty"`
-	Resaddresstype     string `json:"resaddresstype,omitempty"`
-	Nexthopport        int    `json:"nexthopport,omitempty"`
-	Secure             string `json:"secure,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpntrafficpolicy struct {
-	Name               string `json:"name,omitempty"`
-	Rule               string `json:"rule,omitempty"`
-	Action             string `json:"action,omitempty"`
-	Expressiontype     string `json:"expressiontype,omitempty"`
-	Hits               string `json:"hits,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpntrafficpolicyaaauserbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnurlpolicyvserverbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     uint32 `json:"priority,omitempty"`
-	Activepolicy uint32 `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnvserverappflowpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-}
-
-type Vpnvservericapolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnglobalsslcertkeybinding struct {
-	Certkeyname            string `json:"certkeyname,omitempty"`
-	Crlcheck               string `json:"crlcheck,omitempty"`
-	Ocspcheck              string `json:"ocspcheck,omitempty"`
-	Userdataencryptionkey  string `json:"userdataencryptionkey,omitempty"`
-	Cacert                 string `json:"cacert,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnglobalsyslogpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnvserverlocalpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Acttype                uint32 `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvservervpneulabinding struct {
-	Eula    string `json:"eula,omitempty"`
+type VpnvserverVpneulaBinding struct {
 	Acttype int    `json:"acttype,omitempty"`
+	Eula    string `json:"eula,omitempty"`
 	Name    string `json:"name,omitempty"`
 }
 
-type Vpnpcoipvserverprofile struct {
-	Name               string `json:"name,omitempty"`
-	Logindomain        string `json:"logindomain,omitempty"`
-	Udpport            int    `json:"udpport,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpnvservernexthopserverbinding struct {
-	Nexthopserver string `json:"nexthopserver,omitempty"`
-	Acttype       uint32 `json:"acttype,omitempty"`
-	Name          string `json:"name,omitempty"`
-}
-
-type Vpnvserverstaserverbinding struct {
-	Staserver      string `json:"staserver,omitempty"`
-	Staauthid      string `json:"staauthid,omitempty"`
-	Stastate       string `json:"stastate,omitempty"`
-	Acttype        int    `json:"acttype,omitempty"`
-	Staaddresstype string `json:"staaddresstype,omitempty"`
-	Name           string `json:"name,omitempty"`
-}
-
-type Vpnvserversyslogpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Acttype                uint32 `json:"acttype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvserverintranetip6binding struct {
-	Intranetip6 string `json:"intranetip6,omitempty"`
-	Numaddr     int    `json:"numaddr,omitempty"`
-	Acttype     int    `json:"acttype,omitempty"`
-	Name        string `json:"name,omitempty"`
-}
-
-type Vpnvservernegotiatepolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Acttype                uint32 `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvserverurlpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Acttype                uint32 `json:"acttype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvserverwebauthpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Acttype                uint32 `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnsessionpolicyglobalbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     uint32 `json:"priority,omitempty"`
-	Activepolicy uint32 `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpntrafficpolicyglobalbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     uint32 `json:"priority,omitempty"`
-	Activepolicy uint32 `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpntrafficpolicyvpnvserverbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnvserverauditnslogpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
+type VpnvserverAuthenticationnegotiatepolicyBinding struct {
 	Acttype                int    `json:"acttype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvservercachepolicybinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
 	Policy                 string `json:"policy,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
 	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-}
-
-type Vpnvserversharefileserverbinding struct {
-	Sharefile string `json:"sharefile,omitempty"`
-	Acttype   int    `json:"acttype,omitempty"`
-	Name      string `json:"name,omitempty"`
-}
-
-type Vpnurlpolicy struct {
-	Name               string `json:"name,omitempty"`
-	Rule               string `json:"rule,omitempty"`
-	Action             string `json:"action,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Logaction          string `json:"logaction,omitempty"`
-	Newname            string `json:"newname,omitempty"`
-	Builtin            string `json:"builtin,omitempty"`
-	Undefhits          string `json:"undefhits,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpnurlpolicybinding struct {
-	Name string `json:"name,omitempty"`
-}
-
-type Vpnvserverappcontrollerbinding struct {
-	Appcontroller string `json:"appcontroller,omitempty"`
-	Acttype       int    `json:"acttype,omitempty"`
-	Name          string `json:"name,omitempty"`
-}
-
-type Vpnglobalcertkeybinding struct {
-	Certkeyname            string `json:"certkeyname,omitempty"`
-	Crlcheck               string `json:"crlcheck,omitempty"`
-	Ocspcheck              string `json:"ocspcheck,omitempty"`
-	Userdataencryptionkey  string `json:"userdataencryptionkey,omitempty"`
-	Cacert                 string `json:"cacert,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnglobalvpntrafficpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-}
-
-type Vpntrafficaction struct {
-	Name               string `json:"name,omitempty"`
-	Qual               string `json:"qual,omitempty"`
-	Apptimeout         int    `json:"apptimeout,omitempty"`
-	Sso                string `json:"sso,omitempty"`
-	Hdx                string `json:"hdx,omitempty"`
-	Formssoaction      string `json:"formssoaction,omitempty"`
-	Fta                string `json:"fta,omitempty"`
-	Wanscaler          string `json:"wanscaler,omitempty"`
-	Kcdaccount         string `json:"kcdaccount,omitempty"`
-	Samlssoprofile     string `json:"samlssoprofile,omitempty"`
-	Proxy              string `json:"proxy,omitempty"`
-	Userexpression     string `json:"userexpression,omitempty"`
-	Passwdexpression   string `json:"passwdexpression,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpntrafficpolicyaaagroupbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnvserverintranetapplicationbinding struct {
-	Intranetapplication string `json:"intranetapplication,omitempty"`
-	Acttype             uint32 `json:"acttype,omitempty"`
-	Name                string `json:"name,omitempty"`
-}
-
-type Vpnicaconnection struct {
-	Username           string `json:"username,omitempty"`
-	Transproto         string `json:"transproto,omitempty"`
-	Nodeid             int    `json:"nodeid,omitempty"`
-	All                bool   `json:"all,omitempty"`
-	Domain             string `json:"domain,omitempty"`
-	Srcip              string `json:"srcip,omitempty"`
-	Srcport            string `json:"srcport,omitempty"`
-	Destip             string `json:"destip,omitempty"`
-	Destport           string `json:"destport,omitempty"`
-	Peid               string `json:"peid,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpnvserverauthenticationpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Acttype                int    `json:"acttype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvserverpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Acttype                uint32 `json:"acttype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-}
-
-type Vpnvservertrafficpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Acttype                uint32 `json:"acttype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnglobalauthenticationradiuspolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpntrafficpolicyuserbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     uint32 `json:"priority,omitempty"`
-	Activepolicy uint32 `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnvserverauthenticationloginschemapolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvserverportalthemebinding struct {
-	Portaltheme string `json:"portaltheme,omitempty"`
-	Acttype     uint32 `json:"acttype,omitempty"`
-	Name        string `json:"name,omitempty"`
-}
-
-type Vpnglobalcertpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnvserverauthenticationlocalpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Acttype                int    `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnglobalvpnintranetapplicationbinding struct {
-	Intranetapplication    string `json:"intranetapplication,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnclientlessaccesspolicy struct {
-	Name               string `json:"name,omitempty"`
-	Rule               string `json:"rule,omitempty"`
-	Profilename        string `json:"profilename,omitempty"`
-	Undefaction        string `json:"undefaction,omitempty"`
-	Hits               string `json:"hits,omitempty"`
-	Undefhits          string `json:"undefhits,omitempty"`
-	Description        string `json:"description,omitempty"`
-	Isdefault          string `json:"isdefault,omitempty"`
-	Builtin            string `json:"builtin,omitempty"`
-	Feature            string `json:"feature,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpnclientlessaccesspolicyvpnvserverbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnurlpolicygroupbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     uint32 `json:"priority,omitempty"`
-	Activepolicy uint32 `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnurlpolicyuserbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     uint32 `json:"priority,omitempty"`
-	Activepolicy uint32 `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnvserverepaprofilebinding struct {
-	Epaprofile         string `json:"epaprofile,omitempty"`
-	Acttype            uint32 `json:"acttype,omitempty"`
-	Name               string `json:"name,omitempty"`
-	Epaprofileoptional bool   `json:"epaprofileoptional,omitempty"`
-}
-
-type Vpnvservertacacspolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Acttype                uint32 `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnicadtlsconnection struct {
-	Username           string `json:"username,omitempty"`
-	Nodeid             int    `json:"nodeid,omitempty"`
-	Domain             string `json:"domain,omitempty"`
-	Srcip              string `json:"srcip,omitempty"`
-	Srcport            string `json:"srcport,omitempty"`
-	Destip             string `json:"destip,omitempty"`
-	Destport           string `json:"destport,omitempty"`
-	Channelnumber      string `json:"channelnumber,omitempty"`
-	Peid               string `json:"peid,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpnvserveraaapreauthenticationpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Acttype                int    `json:"acttype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvserverdfapolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Acttype                uint32 `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvserverpreauthenticationpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Acttype                uint32 `json:"acttype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvservervpnclientlessaccesspolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Acttype                int    `json:"acttype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-}
-
-type Vpnvservervpntrafficpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Acttype                int    `json:"acttype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnclientlessaccesspolicyglobalbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     uint32 `json:"priority,omitempty"`
-	Activepolicy int32  `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnglobaldomainbinding struct {
-	Intranetdomain         string `json:"intranetdomain,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnglobalvpnnexthopserverbinding struct {
-	Nexthopserver          string `json:"nexthopserver,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnsessionaction struct {
-	Name                       string   `json:"name,omitempty"`
-	Useraccounting             string   `json:"useraccounting,omitempty"`
-	Httpport                   []int    `json:"httpport,omitempty"`
-	Winsip                     string   `json:"winsip,omitempty"`
-	Dnsvservername             string   `json:"dnsvservername,omitempty"`
-	Splitdns                   string   `json:"splitdns,omitempty"`
-	Sesstimeout                int      `json:"sesstimeout,omitempty"`
-	Clientsecurity             string   `json:"clientsecurity,omitempty"`
-	Clientsecuritygroup        string   `json:"clientsecuritygroup,omitempty"`
-	Clientsecuritymessage      string   `json:"clientsecuritymessage,omitempty"`
-	Clientsecuritylog          string   `json:"clientsecuritylog,omitempty"`
-	Splittunnel                string   `json:"splittunnel,omitempty"`
-	Locallanaccess             string   `json:"locallanaccess,omitempty"`
-	Rfc1918                    string   `json:"rfc1918,omitempty"`
-	Spoofiip                   string   `json:"spoofiip,omitempty"`
-	Killconnections            string   `json:"killconnections,omitempty"`
-	Transparentinterception    string   `json:"transparentinterception,omitempty"`
-	Windowsclienttype          string   `json:"windowsclienttype,omitempty"`
-	Defaultauthorizationaction string   `json:"defaultauthorizationaction,omitempty"`
-	Authorizationgroup         string   `json:"authorizationgroup,omitempty"`
-	Smartgroup                 string   `json:"smartgroup,omitempty"`
-	Clientidletimeout          int      `json:"clientidletimeout,omitempty"`
-	Proxy                      string   `json:"proxy,omitempty"`
-	Allprotocolproxy           string   `json:"allprotocolproxy,omitempty"`
-	Httpproxy                  string   `json:"httpproxy,omitempty"`
-	Ftpproxy                   string   `json:"ftpproxy,omitempty"`
-	Socksproxy                 string   `json:"socksproxy,omitempty"`
-	Gopherproxy                string   `json:"gopherproxy,omitempty"`
-	Sslproxy                   string   `json:"sslproxy,omitempty"`
-	Proxyexception             string   `json:"proxyexception,omitempty"`
-	Proxylocalbypass           string   `json:"proxylocalbypass,omitempty"`
-	Clientcleanupprompt        string   `json:"clientcleanupprompt,omitempty"`
-	Forcecleanup               []string `json:"forcecleanup,omitempty"`
-	Clientoptions              string   `json:"clientoptions,omitempty"`
-	Clientconfiguration        []string `json:"clientconfiguration,omitempty"`
-	Sso                        string   `json:"sso,omitempty"`
-	Ssocredential              string   `json:"ssocredential,omitempty"`
-	Windowsautologon           string   `json:"windowsautologon,omitempty"`
-	Usemip                     string   `json:"usemip,omitempty"`
-	Useiip                     string   `json:"useiip,omitempty"`
-	Clientdebug                string   `json:"clientdebug,omitempty"`
-	Loginscript                string   `json:"loginscript,omitempty"`
-	Logoutscript               string   `json:"logoutscript,omitempty"`
-	Homepage                   string   `json:"homepage,omitempty"`
-	Icaproxy                   string   `json:"icaproxy,omitempty"`
-	Wihome                     string   `json:"wihome,omitempty"`
-	Wihomeaddresstype          string   `json:"wihomeaddresstype,omitempty"`
-	Citrixreceiverhome         string   `json:"citrixreceiverhome,omitempty"`
-	Wiportalmode               string   `json:"wiportalmode,omitempty"`
-	Clientchoices              string   `json:"clientchoices,omitempty"`
-	Epaclienttype              string   `json:"epaclienttype,omitempty"`
-	Iipdnssuffix               string   `json:"iipdnssuffix,omitempty"`
-	Forcedtimeout              int      `json:"forcedtimeout,omitempty"`
-	Forcedtimeoutwarning       int      `json:"forcedtimeoutwarning,omitempty"`
-	Ntdomain                   string   `json:"ntdomain,omitempty"`
-	Clientlessvpnmode          string   `json:"clientlessvpnmode,omitempty"`
-	Emailhome                  string   `json:"emailhome,omitempty"`
-	Clientlessmodeurlencoding  string   `json:"clientlessmodeurlencoding,omitempty"`
-	Clientlesspersistentcookie string   `json:"clientlesspersistentcookie,omitempty"`
-	Allowedlogingroups         string   `json:"allowedlogingroups,omitempty"`
-	Securebrowse               string   `json:"securebrowse,omitempty"`
-	Storefronturl              string   `json:"storefronturl,omitempty"`
-	Sfgatewayauthtype          string   `json:"sfgatewayauthtype,omitempty"`
-	Kcdaccount                 string   `json:"kcdaccount,omitempty"`
-	Rdpclientprofilename       string   `json:"rdpclientprofilename,omitempty"`
-	Windowspluginupgrade       string   `json:"windowspluginupgrade,omitempty"`
-	Macpluginupgrade           string   `json:"macpluginupgrade,omitempty"`
-	Linuxpluginupgrade         string   `json:"linuxpluginupgrade,omitempty"`
-	Iconwithreceiver           string   `json:"iconwithreceiver,omitempty"`
-	Alwaysonprofilename        string   `json:"alwaysonprofilename,omitempty"`
-	Autoproxyurl               string   `json:"autoproxyurl,omitempty"`
-	Advancedclientlessvpnmode  string   `json:"advancedclientlessvpnmode,omitempty"`
-	Pcoipprofilename           string   `json:"pcoipprofilename,omitempty"`
-	Fqdnspoofedip              string   `json:"fqdnspoofedip,omitempty"`
-	Netmask                    string   `json:"netmask,omitempty"`
-	Clientidletimeoutwarning   string   `json:"clientidletimeoutwarning,omitempty"`
-	Builtin                    string   `json:"builtin,omitempty"`
-	Feature                    string   `json:"feature,omitempty"`
-	Nextgenapiresource         string   `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpnsessionpolicyaaagroupbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnsessionpolicyuserbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     uint32 `json:"priority,omitempty"`
-	Activepolicy uint32 `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnurlpolicyaaauserbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnvserverauthenticationtacacspolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Acttype                int    `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnglobalauthenticationnegotiatepolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnglobalauthenticationsamlpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnglobalradiuspolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnvservervpnsessionpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Acttype                int    `json:"acttype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnglobalauthenticationcertpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 }
 
 type Vpnsfconfig struct {
-	Vserver            []string `json:"vserver,omitempty"`
+	Count              float64  `json:"__count,omitempty"`
 	Filename           string   `json:"filename,omitempty"`
 	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	Vserver            []string `json:"vserver,omitempty"`
 }
 
-type Vpnurlpolicyaaagroupbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+type Vpnportaltheme struct {
+	Basetheme          string  `json:"basetheme,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Feature            string  `json:"feature,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+}
+
+type VpntrafficpolicyVpnvserverBinding struct {
 	Activepolicy int    `json:"activepolicy,omitempty"`
+	Boundto      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
 }
 
-type Vpnvserversecureprivateaccessurlbinding struct {
-	Secureprivateaccessurl string `json:"secureprivateaccessurl,omitempty"`
-	Acttype                int    `json:"acttype,omitempty"`
-	Name                   string `json:"name,omitempty"`
+type VpnglobalAuthenticationldappolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
 }
 
-type Vpnpcoipprofile struct {
-	Name               string `json:"name,omitempty"`
-	Conserverurl       string `json:"conserverurl,omitempty"`
-	Icvverification    string `json:"icvverification,omitempty"`
-	Sessionidletimeout int    `json:"sessionidletimeout,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+type VpnglobalVpneulaBinding struct {
+	Eula                   string `json:"eula,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+}
+
+type Vpnparameter struct {
+	Accessrestrictedpageredirect string        `json:"accessrestrictedpageredirect,omitempty"`
+	Advancedclientlessvpnmode    string        `json:"advancedclientlessvpnmode,omitempty"`
+	Allowedlogingroups           string        `json:"allowedlogingroups,omitempty"`
+	Allprotocolproxy             string        `json:"allprotocolproxy,omitempty"`
+	Alwaysonprofilename          string        `json:"alwaysonprofilename,omitempty"`
+	Apptokentimeout              int           `json:"apptokentimeout,omitempty"`
+	Authorizationgroup           string        `json:"authorizationgroup,omitempty"`
+	Autoproxyurl                 string        `json:"autoproxyurl,omitempty"`
+	Backendcertvalidation        string        `json:"backendcertvalidation,omitempty"`
+	Backenddtls12                string        `json:"backenddtls12,omitempty"`
+	Backendserversni             string        `json:"backendserversni,omitempty"`
+	Citrixreceiverhome           string        `json:"citrixreceiverhome,omitempty"`
+	Clientchoices                string        `json:"clientchoices,omitempty"`
+	Clientcleanupprompt          string        `json:"clientcleanupprompt,omitempty"`
+	Clientconfiguration          []string      `json:"clientconfiguration,omitempty"`
+	Clientdebug                  string        `json:"clientdebug,omitempty"`
+	Clientidletimeout            int           `json:"clientidletimeout,omitempty"`
+	Clientidletimeoutwarning     int           `json:"clientidletimeoutwarning,omitempty"`
+	Clientlessmodeurlencoding    string        `json:"clientlessmodeurlencoding,omitempty"`
+	Clientlesspersistentcookie   string        `json:"clientlesspersistentcookie,omitempty"`
+	Clientlessvpnmode            string        `json:"clientlessvpnmode,omitempty"`
+	Clientoptions                []string      `json:"clientoptions,omitempty"`
+	Clientsecurity               string        `json:"clientsecurity,omitempty"`
+	Clientsecuritygroup          string        `json:"clientsecuritygroup,omitempty"`
+	Clientsecuritylog            string        `json:"clientsecuritylog,omitempty"`
+	Clientsecuritymessage        string        `json:"clientsecuritymessage,omitempty"`
+	Clientversions               string        `json:"clientversions,omitempty"`
+	Defaultauthorizationaction   string        `json:"defaultauthorizationaction,omitempty"`
+	Deviceposture                string        `json:"deviceposture,omitempty"`
+	Dnsvservername               string        `json:"dnsvservername,omitempty"`
+	Emailhome                    string        `json:"emailhome,omitempty"`
+	Encryptcsecexp               string        `json:"encryptcsecexp,omitempty"`
+	Epaclienttype                string        `json:"epaclienttype,omitempty"`
+	Forcecleanup                 []string      `json:"forcecleanup,omitempty"`
+	Forcedtimeout                int           `json:"forcedtimeout,omitempty"`
+	Forcedtimeoutwarning         int           `json:"forcedtimeoutwarning,omitempty"`
+	Fqdnspoofedip                string        `json:"fqdnspoofedip,omitempty"`
+	Ftpproxy                     string        `json:"ftpproxy,omitempty"`
+	Gopherproxy                  string        `json:"gopherproxy,omitempty"`
+	Homepage                     string        `json:"homepage,omitempty"`
+	Httpport                     []interface{} `json:"httpport,omitempty"`
+	Httpproxy                    string        `json:"httpproxy,omitempty"`
+	Httptrackconnproxy           string        `json:"httptrackconnproxy,omitempty"`
+	Icaproxy                     string        `json:"icaproxy,omitempty"`
+	Icasessiontimeout            string        `json:"icasessiontimeout,omitempty"`
+	Icauseraccounting            string        `json:"icauseraccounting,omitempty"`
+	Iconwithreceiver             string        `json:"iconwithreceiver,omitempty"`
+	Iipdnssuffix                 string        `json:"iipdnssuffix,omitempty"`
+	Kcdaccount                   string        `json:"kcdaccount,omitempty"`
+	Killconnections              string        `json:"killconnections,omitempty"`
+	Linuxpluginupgrade           string        `json:"linuxpluginupgrade,omitempty"`
+	Locallanaccess               string        `json:"locallanaccess,omitempty"`
+	Loginscript                  string        `json:"loginscript,omitempty"`
+	Logoutscript                 string        `json:"logoutscript,omitempty"`
+	Macpluginupgrade             string        `json:"macpluginupgrade,omitempty"`
+	Maxiipperuser                int           `json:"maxiipperuser,omitempty"`
+	Mdxtokentimeout              int           `json:"mdxtokentimeout,omitempty"`
+	Name                         string        `json:"name,omitempty"`
+	Netmask                      string        `json:"netmask,omitempty"`
+	Nextgenapiresource           string        `json:"_nextgenapiresource,omitempty"`
+	Ntdomain                     string        `json:"ntdomain,omitempty"`
+	Pcoipprofilename             string        `json:"pcoipprofilename,omitempty"`
+	Proxy                        string        `json:"proxy,omitempty"`
+	Proxyexception               string        `json:"proxyexception,omitempty"`
+	Proxylocalbypass             string        `json:"proxylocalbypass,omitempty"`
+	Rdpclientprofilename         string        `json:"rdpclientprofilename,omitempty"`
+	Rfc1918                      string        `json:"rfc1918,omitempty"`
+	Samesite                     string        `json:"samesite,omitempty"`
+	Securebrowse                 string        `json:"securebrowse,omitempty"`
+	Secureprivateaccess          string        `json:"secureprivateaccess,omitempty"`
+	Secureprivateaccessprofile   string        `json:"secureprivateaccessprofile,omitempty"`
+	Sesstimeout                  int           `json:"sesstimeout,omitempty"`
+	Smartgroup                   string        `json:"smartgroup,omitempty"`
+	Socksproxy                   string        `json:"socksproxy,omitempty"`
+	Splitdns                     string        `json:"splitdns,omitempty"`
+	Splittunnel                  string        `json:"splittunnel,omitempty"`
+	Spoofiip                     string        `json:"spoofiip,omitempty"`
+	Sslproxy                     string        `json:"sslproxy,omitempty"`
+	Sso                          string        `json:"sso,omitempty"`
+	Ssocredential                string        `json:"ssocredential,omitempty"`
+	Storefronturl                string        `json:"storefronturl,omitempty"`
+	Transparentinterception      string        `json:"transparentinterception,omitempty"`
+	Uitheme                      string        `json:"uitheme,omitempty"`
+	Useiip                       string        `json:"useiip,omitempty"`
+	Usemip                       string        `json:"usemip,omitempty"`
+	Userdomains                  string        `json:"userdomains,omitempty"`
+	Vpnsessionpolicybindtype     string        `json:"vpnsessionpolicybindtype,omitempty"`
+	Vpnsessionpolicycount        int           `json:"vpnsessionpolicycount,omitempty"`
+	Wihome                       string        `json:"wihome,omitempty"`
+	Wihomeaddresstype            string        `json:"wihomeaddresstype,omitempty"`
+	Windowsautologon             string        `json:"windowsautologon,omitempty"`
+	Windowsclienttype            string        `json:"windowsclienttype,omitempty"`
+	Windowspluginupgrade         string        `json:"windowspluginupgrade,omitempty"`
+	Winsip                       string        `json:"winsip,omitempty"`
+	Wiportalmode                 string        `json:"wiportalmode,omitempty"`
+}
+
+type Vpnclientlessaccessprofile struct {
+	Builtin                        []string `json:"builtin,omitempty"`
+	Clientconsumedcookies          string   `json:"clientconsumedcookies,omitempty"`
+	Count                          float64  `json:"__count,omitempty"`
+	Cssrewritepolicylabel          string   `json:"cssrewritepolicylabel,omitempty"`
+	Description                    string   `json:"description,omitempty"`
+	Feature                        string   `json:"feature,omitempty"`
+	Isdefault                      bool     `json:"isdefault,omitempty"`
+	Javascriptrewritepolicylabel   string   `json:"javascriptrewritepolicylabel,omitempty"`
+	Nextgenapiresource             string   `json:"_nextgenapiresource,omitempty"`
+	Profilename                    string   `json:"profilename,omitempty"`
+	Regexforfindingcustomurls      string   `json:"regexforfindingcustomurls,omitempty"`
+	Regexforfindingurlincss        string   `json:"regexforfindingurlincss,omitempty"`
+	Regexforfindingurlinjavascript string   `json:"regexforfindingurlinjavascript,omitempty"`
+	Regexforfindingurlinxcomponent string   `json:"regexforfindingurlinxcomponent,omitempty"`
+	Regexforfindingurlinxml        string   `json:"regexforfindingurlinxml,omitempty"`
+	Reqhdrrewritepolicylabel       string   `json:"reqhdrrewritepolicylabel,omitempty"`
+	Requirepersistentcookie        string   `json:"requirepersistentcookie,omitempty"`
+	Reshdrrewritepolicylabel       string   `json:"reshdrrewritepolicylabel,omitempty"`
+	Urlrewritepolicylabel          string   `json:"urlrewritepolicylabel,omitempty"`
+	Xcomponentrewritepolicylabel   string   `json:"xcomponentrewritepolicylabel,omitempty"`
+	Xmlrewritepolicylabel          string   `json:"xmlrewritepolicylabel,omitempty"`
 }
 
 type Vpnsamlssoprofile struct {
-	Name                        string `json:"name,omitempty"`
-	Samlsigningcertname         string `json:"samlsigningcertname,omitempty"`
-	Assertionconsumerserviceurl string `json:"assertionconsumerserviceurl,omitempty"`
-	Relaystaterule              string `json:"relaystaterule,omitempty"`
-	Sendpassword                string `json:"sendpassword,omitempty"`
-	Samlissuername              string `json:"samlissuername,omitempty"`
-	Signaturealg                string `json:"signaturealg,omitempty"`
-	Digestmethod                string `json:"digestmethod,omitempty"`
-	Audience                    string `json:"audience,omitempty"`
-	Nameidformat                string `json:"nameidformat,omitempty"`
-	Nameidexpr                  string `json:"nameidexpr,omitempty"`
-	Attribute1                  string `json:"attribute1,omitempty"`
-	Attribute1expr              string `json:"attribute1expr,omitempty"`
-	Attribute1friendlyname      string `json:"attribute1friendlyname,omitempty"`
-	Attribute1format            string `json:"attribute1format,omitempty"`
-	Attribute2                  string `json:"attribute2,omitempty"`
-	Attribute2expr              string `json:"attribute2expr,omitempty"`
-	Attribute2friendlyname      string `json:"attribute2friendlyname,omitempty"`
-	Attribute2format            string `json:"attribute2format,omitempty"`
-	Attribute3                  string `json:"attribute3,omitempty"`
-	Attribute3expr              string `json:"attribute3expr,omitempty"`
-	Attribute3friendlyname      string `json:"attribute3friendlyname,omitempty"`
-	Attribute3format            string `json:"attribute3format,omitempty"`
-	Attribute4                  string `json:"attribute4,omitempty"`
-	Attribute4expr              string `json:"attribute4expr,omitempty"`
-	Attribute4friendlyname      string `json:"attribute4friendlyname,omitempty"`
-	Attribute4format            string `json:"attribute4format,omitempty"`
-	Attribute5                  string `json:"attribute5,omitempty"`
-	Attribute5expr              string `json:"attribute5expr,omitempty"`
-	Attribute5friendlyname      string `json:"attribute5friendlyname,omitempty"`
-	Attribute5format            string `json:"attribute5format,omitempty"`
-	Attribute6                  string `json:"attribute6,omitempty"`
-	Attribute6expr              string `json:"attribute6expr,omitempty"`
-	Attribute6friendlyname      string `json:"attribute6friendlyname,omitempty"`
-	Attribute6format            string `json:"attribute6format,omitempty"`
-	Attribute7                  string `json:"attribute7,omitempty"`
-	Attribute7expr              string `json:"attribute7expr,omitempty"`
-	Attribute7friendlyname      string `json:"attribute7friendlyname,omitempty"`
-	Attribute7format            string `json:"attribute7format,omitempty"`
-	Attribute8                  string `json:"attribute8,omitempty"`
-	Attribute8expr              string `json:"attribute8expr,omitempty"`
-	Attribute8friendlyname      string `json:"attribute8friendlyname,omitempty"`
-	Attribute8format            string `json:"attribute8format,omitempty"`
-	Attribute9                  string `json:"attribute9,omitempty"`
-	Attribute9expr              string `json:"attribute9expr,omitempty"`
-	Attribute9friendlyname      string `json:"attribute9friendlyname,omitempty"`
-	Attribute9format            string `json:"attribute9format,omitempty"`
-	Attribute10                 string `json:"attribute10,omitempty"`
-	Attribute10expr             string `json:"attribute10expr,omitempty"`
-	Attribute10friendlyname     string `json:"attribute10friendlyname,omitempty"`
-	Attribute10format           string `json:"attribute10format,omitempty"`
-	Attribute11                 string `json:"attribute11,omitempty"`
-	Attribute11expr             string `json:"attribute11expr,omitempty"`
-	Attribute11friendlyname     string `json:"attribute11friendlyname,omitempty"`
-	Attribute11format           string `json:"attribute11format,omitempty"`
-	Attribute12                 string `json:"attribute12,omitempty"`
-	Attribute12expr             string `json:"attribute12expr,omitempty"`
-	Attribute12friendlyname     string `json:"attribute12friendlyname,omitempty"`
-	Attribute12format           string `json:"attribute12format,omitempty"`
-	Attribute13                 string `json:"attribute13,omitempty"`
-	Attribute13expr             string `json:"attribute13expr,omitempty"`
-	Attribute13friendlyname     string `json:"attribute13friendlyname,omitempty"`
-	Attribute13format           string `json:"attribute13format,omitempty"`
-	Attribute14                 string `json:"attribute14,omitempty"`
-	Attribute14expr             string `json:"attribute14expr,omitempty"`
-	Attribute14friendlyname     string `json:"attribute14friendlyname,omitempty"`
-	Attribute14format           string `json:"attribute14format,omitempty"`
-	Attribute15                 string `json:"attribute15,omitempty"`
-	Attribute15expr             string `json:"attribute15expr,omitempty"`
-	Attribute15friendlyname     string `json:"attribute15friendlyname,omitempty"`
-	Attribute15format           string `json:"attribute15format,omitempty"`
-	Attribute16                 string `json:"attribute16,omitempty"`
-	Attribute16expr             string `json:"attribute16expr,omitempty"`
-	Attribute16friendlyname     string `json:"attribute16friendlyname,omitempty"`
-	Attribute16format           string `json:"attribute16format,omitempty"`
-	Encryptassertion            string `json:"encryptassertion,omitempty"`
-	Samlspcertname              string `json:"samlspcertname,omitempty"`
-	Encryptionalgorithm         string `json:"encryptionalgorithm,omitempty"`
-	Skewtime                    int    `json:"skewtime,omitempty"`
-	Signassertion               string `json:"signassertion,omitempty"`
-	Signatureservice            string `json:"signatureservice,omitempty"`
-	Nextgenapiresource          string `json:"_nextgenapiresource,omitempty"`
+	Assertionconsumerserviceurl string  `json:"assertionconsumerserviceurl,omitempty"`
+	Attribute1                  string  `json:"attribute1,omitempty"`
+	Attribute10                 string  `json:"attribute10,omitempty"`
+	Attribute10expr             string  `json:"attribute10expr,omitempty"`
+	Attribute10format           string  `json:"attribute10format,omitempty"`
+	Attribute10friendlyname     string  `json:"attribute10friendlyname,omitempty"`
+	Attribute11                 string  `json:"attribute11,omitempty"`
+	Attribute11expr             string  `json:"attribute11expr,omitempty"`
+	Attribute11format           string  `json:"attribute11format,omitempty"`
+	Attribute11friendlyname     string  `json:"attribute11friendlyname,omitempty"`
+	Attribute12                 string  `json:"attribute12,omitempty"`
+	Attribute12expr             string  `json:"attribute12expr,omitempty"`
+	Attribute12format           string  `json:"attribute12format,omitempty"`
+	Attribute12friendlyname     string  `json:"attribute12friendlyname,omitempty"`
+	Attribute13                 string  `json:"attribute13,omitempty"`
+	Attribute13expr             string  `json:"attribute13expr,omitempty"`
+	Attribute13format           string  `json:"attribute13format,omitempty"`
+	Attribute13friendlyname     string  `json:"attribute13friendlyname,omitempty"`
+	Attribute14                 string  `json:"attribute14,omitempty"`
+	Attribute14expr             string  `json:"attribute14expr,omitempty"`
+	Attribute14format           string  `json:"attribute14format,omitempty"`
+	Attribute14friendlyname     string  `json:"attribute14friendlyname,omitempty"`
+	Attribute15                 string  `json:"attribute15,omitempty"`
+	Attribute15expr             string  `json:"attribute15expr,omitempty"`
+	Attribute15format           string  `json:"attribute15format,omitempty"`
+	Attribute15friendlyname     string  `json:"attribute15friendlyname,omitempty"`
+	Attribute16                 string  `json:"attribute16,omitempty"`
+	Attribute16expr             string  `json:"attribute16expr,omitempty"`
+	Attribute16format           string  `json:"attribute16format,omitempty"`
+	Attribute16friendlyname     string  `json:"attribute16friendlyname,omitempty"`
+	Attribute1expr              string  `json:"attribute1expr,omitempty"`
+	Attribute1format            string  `json:"attribute1format,omitempty"`
+	Attribute1friendlyname      string  `json:"attribute1friendlyname,omitempty"`
+	Attribute2                  string  `json:"attribute2,omitempty"`
+	Attribute2expr              string  `json:"attribute2expr,omitempty"`
+	Attribute2format            string  `json:"attribute2format,omitempty"`
+	Attribute2friendlyname      string  `json:"attribute2friendlyname,omitempty"`
+	Attribute3                  string  `json:"attribute3,omitempty"`
+	Attribute3expr              string  `json:"attribute3expr,omitempty"`
+	Attribute3format            string  `json:"attribute3format,omitempty"`
+	Attribute3friendlyname      string  `json:"attribute3friendlyname,omitempty"`
+	Attribute4                  string  `json:"attribute4,omitempty"`
+	Attribute4expr              string  `json:"attribute4expr,omitempty"`
+	Attribute4format            string  `json:"attribute4format,omitempty"`
+	Attribute4friendlyname      string  `json:"attribute4friendlyname,omitempty"`
+	Attribute5                  string  `json:"attribute5,omitempty"`
+	Attribute5expr              string  `json:"attribute5expr,omitempty"`
+	Attribute5format            string  `json:"attribute5format,omitempty"`
+	Attribute5friendlyname      string  `json:"attribute5friendlyname,omitempty"`
+	Attribute6                  string  `json:"attribute6,omitempty"`
+	Attribute6expr              string  `json:"attribute6expr,omitempty"`
+	Attribute6format            string  `json:"attribute6format,omitempty"`
+	Attribute6friendlyname      string  `json:"attribute6friendlyname,omitempty"`
+	Attribute7                  string  `json:"attribute7,omitempty"`
+	Attribute7expr              string  `json:"attribute7expr,omitempty"`
+	Attribute7format            string  `json:"attribute7format,omitempty"`
+	Attribute7friendlyname      string  `json:"attribute7friendlyname,omitempty"`
+	Attribute8                  string  `json:"attribute8,omitempty"`
+	Attribute8expr              string  `json:"attribute8expr,omitempty"`
+	Attribute8format            string  `json:"attribute8format,omitempty"`
+	Attribute8friendlyname      string  `json:"attribute8friendlyname,omitempty"`
+	Attribute9                  string  `json:"attribute9,omitempty"`
+	Attribute9expr              string  `json:"attribute9expr,omitempty"`
+	Attribute9format            string  `json:"attribute9format,omitempty"`
+	Attribute9friendlyname      string  `json:"attribute9friendlyname,omitempty"`
+	Audience                    string  `json:"audience,omitempty"`
+	Count                       float64 `json:"__count,omitempty"`
+	Digestmethod                string  `json:"digestmethod,omitempty"`
+	Encryptassertion            string  `json:"encryptassertion,omitempty"`
+	Encryptionalgorithm         string  `json:"encryptionalgorithm,omitempty"`
+	Name                        string  `json:"name,omitempty"`
+	Nameidexpr                  string  `json:"nameidexpr,omitempty"`
+	Nameidformat                string  `json:"nameidformat,omitempty"`
+	Nextgenapiresource          string  `json:"_nextgenapiresource,omitempty"`
+	Relaystaterule              string  `json:"relaystaterule,omitempty"`
+	Samlissuername              string  `json:"samlissuername,omitempty"`
+	Samlsigningcertname         string  `json:"samlsigningcertname,omitempty"`
+	Samlspcertname              string  `json:"samlspcertname,omitempty"`
+	Sendpassword                string  `json:"sendpassword,omitempty"`
+	Signassertion               string  `json:"signassertion,omitempty"`
+	Signaturealg                string  `json:"signaturealg,omitempty"`
+	Signatureservice            string  `json:"signatureservice,omitempty"`
+	Skewtime                    int     `json:"skewtime,omitempty"`
+}
+
+type VpnvserverAuditnslogpolicyBinding struct {
+	Acttype                int    `json:"acttype,omitempty"`
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnglobalVpnsessionpolicyBinding struct {
+	Builtin                []string `json:"builtin,omitempty"`
+	Feature                string   `json:"feature,omitempty"`
+	Gotopriorityexpression string   `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool     `json:"groupextraction,omitempty"`
+	Policyname             string   `json:"policyname,omitempty"`
+	Priority               int      `json:"priority,omitempty"`
+	Secondary              bool     `json:"secondary,omitempty"`
+}
+
+type Vpnpcoipvserverprofile struct {
+	Count              float64 `json:"__count,omitempty"`
+	Logindomain        string  `json:"logindomain,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Udpport            int     `json:"udpport,omitempty"`
+}
+
+type VpnsessionpolicyVpnglobalBinding struct {
+	Activepolicy int    `json:"activepolicy,omitempty"`
+	Boundto      string `json:"boundto,omitempty"`
+	Name         string `json:"name,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
+}
+
+type VpnvserverIntranetip6Binding struct {
+	Acttype     int    `json:"acttype,omitempty"`
+	Intranetip6 string `json:"intranetip6,omitempty"`
+	Name        string `json:"name,omitempty"`
+	Numaddr     int    `json:"numaddr,omitempty"`
+}
+
+type VpnvserverFeopolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnglobalAuditsyslogpolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnvserverVpnsessionpolicyBinding struct {
+	Acttype                int    `json:"acttype,omitempty"`
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnvserverVpnurlBinding struct {
+	Acttype int    `json:"acttype,omitempty"`
+	Name    string `json:"name,omitempty"`
+	Urlname string `json:"urlname,omitempty"`
+}
+
+type VpnvserverVpnurlpolicyBinding struct {
+	Acttype                int    `json:"acttype,omitempty"`
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnvserverAuthenticationwebauthpolicyBinding struct {
+	Acttype                int    `json:"acttype,omitempty"`
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type Vpnclientlessaccesspolicy struct {
+	Builtin            []string `json:"builtin,omitempty"`
+	Count              float64  `json:"__count,omitempty"`
+	Description        string   `json:"description,omitempty"`
+	Feature            string   `json:"feature,omitempty"`
+	Hits               int      `json:"hits,omitempty"`
+	Isdefault          bool     `json:"isdefault,omitempty"`
+	Name               string   `json:"name,omitempty"`
+	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	Profilename        string   `json:"profilename,omitempty"`
+	Rule               string   `json:"rule,omitempty"`
+	Undefaction        string   `json:"undefaction,omitempty"`
+	Undefhits          int      `json:"undefhits,omitempty"`
+}
+
+type VpnvserverAaapreauthenticationpolicyBinding struct {
+	Acttype                int    `json:"acttype,omitempty"`
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpntrafficpolicyBinding struct {
+	Name                              string        `json:"name,omitempty"`
+	VpntrafficpolicyAaagroupBinding   []interface{} `json:"vpntrafficpolicy_aaagroup_binding,omitempty"`
+	VpntrafficpolicyAaauserBinding    []interface{} `json:"vpntrafficpolicy_aaauser_binding,omitempty"`
+	VpntrafficpolicyVpnglobalBinding  []interface{} `json:"vpntrafficpolicy_vpnglobal_binding,omitempty"`
+	VpntrafficpolicyVpnvserverBinding []interface{} `json:"vpntrafficpolicy_vpnvserver_binding,omitempty"`
+}
+
+type VpnvserverAuthenticationsamlidppolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type Vpnnexthopserver struct {
+	Count              float64 `json:"__count,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Nexthopfqdn        string  `json:"nexthopfqdn,omitempty"`
+	Nexthopip          string  `json:"nexthopip,omitempty"`
+	Nexthopport        int     `json:"nexthopport,omitempty"`
+	Resaddresstype     string  `json:"resaddresstype,omitempty"`
+	Secure             string  `json:"secure,omitempty"`
+}
+
+type Vpnurlpolicy struct {
+	Action             string   `json:"action,omitempty"`
+	Builtin            []string `json:"builtin,omitempty"`
+	Comment            string   `json:"comment,omitempty"`
+	Count              float64  `json:"__count,omitempty"`
+	Logaction          string   `json:"logaction,omitempty"`
+	Name               string   `json:"name,omitempty"`
+	Newname            string   `json:"newname,omitempty"`
+	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	Rule               string   `json:"rule,omitempty"`
+	Undefhits          int      `json:"undefhits,omitempty"`
+}
+
+type VpnglobalVpnurlpolicyBinding struct {
+	Builtin                []string `json:"builtin,omitempty"`
+	Gotopriorityexpression string   `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool     `json:"groupextraction,omitempty"`
+	Policyname             string   `json:"policyname,omitempty"`
+	Priority               int      `json:"priority,omitempty"`
+	Secondary              bool     `json:"secondary,omitempty"`
+}
+
+type Vpnsessionpolicy struct {
+	Action             string   `json:"action,omitempty"`
+	Builtin            []string `json:"builtin,omitempty"`
+	Count              float64  `json:"__count,omitempty"`
+	Expressiontype     string   `json:"expressiontype,omitempty"`
+	Feature            string   `json:"feature,omitempty"`
+	Hits               int      `json:"hits,omitempty"`
+	Name               string   `json:"name,omitempty"`
+	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	Rule               string   `json:"rule,omitempty"`
 }
 
 type Vpnurl struct {
-	Urlname            string `json:"urlname,omitempty"`
-	Linkname           string `json:"linkname,omitempty"`
-	Actualurl          string `json:"actualurl,omitempty"`
-	Vservername        string `json:"vservername,omitempty"`
-	Clientlessaccess   string `json:"clientlessaccess,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Iconurl            string `json:"iconurl,omitempty"`
-	Ssotype            string `json:"ssotype,omitempty"`
-	Applicationtype    string `json:"applicationtype,omitempty"`
-	Samlssoprofile     string `json:"samlssoprofile,omitempty"`
-	Appjson            string `json:"appjson,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Actualurl          string  `json:"actualurl,omitempty"`
+	Appjson            string  `json:"appjson,omitempty"`
+	Applicationtype    string  `json:"applicationtype,omitempty"`
+	Clientlessaccess   string  `json:"clientlessaccess,omitempty"`
+	Comment            string  `json:"comment,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Iconurl            string  `json:"iconurl,omitempty"`
+	Linkname           string  `json:"linkname,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Samlssoprofile     string  `json:"samlssoprofile,omitempty"`
+	Ssotype            string  `json:"ssotype,omitempty"`
+	Urlname            string  `json:"urlname,omitempty"`
+	Vservername        string  `json:"vservername,omitempty"`
 }
 
-type Vpnsessionpolicyvpnvserverbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpntrafficpolicyvserverbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     uint32 `json:"priority,omitempty"`
-	Activepolicy uint32 `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnvserverfeopolicybinding struct {
+type VpnglobalAuthenticationpolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnvserverAuthenticationtacacspolicyBinding struct {
+	Acttype                int    `json:"acttype,omitempty"`
 	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
 	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
 }
 
-type Vpnvserversessionpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Acttype                uint32 `json:"acttype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
+type VpnglobalVpnnexthopserverBinding struct {
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Nexthopserver          string `json:"nexthopserver,omitempty"`
+}
+
+type VpnvserverIcapolicyBinding struct {
 	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
 }
 
-type Vpnvserverurlbinding struct {
-	Urlname string `json:"urlname,omitempty"`
-	Acttype uint32 `json:"acttype,omitempty"`
-	Name    string `json:"name,omitempty"`
+type VpnvserverAuthenticationcertpolicyBinding struct {
+	Acttype                int    `json:"acttype,omitempty"`
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
 }
 
-type Vpnglobalappcontrollerbinding struct {
+type VpnvserverAuthenticationsamlpolicyBinding struct {
+	Acttype                int    `json:"acttype,omitempty"`
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnurlpolicyVpnglobalBinding struct {
+	Activepolicy int    `json:"activepolicy,omitempty"`
+	Boundto      string `json:"boundto,omitempty"`
+	Name         string `json:"name,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
+}
+
+type VpntrafficpolicyAaagroupBinding struct {
+	Activepolicy int    `json:"activepolicy,omitempty"`
+	Boundto      string `json:"boundto,omitempty"`
+	Name         string `json:"name,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
+}
+
+type VpnvserverCachepolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnglobalVpnportalthemeBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Portaltheme            string `json:"portaltheme,omitempty"`
+}
+
+type VpnvserverSharefileserverBinding struct {
+	Acttype   int    `json:"acttype,omitempty"`
+	Name      string `json:"name,omitempty"`
+	Sharefile string `json:"sharefile,omitempty"`
+}
+
+type VpnglobalAuthenticationsamlpolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type Vpntrafficpolicy struct {
+	Action             string  `json:"action,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Expressiontype     string  `json:"expressiontype,omitempty"`
+	Hits               int     `json:"hits,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Rule               string  `json:"rule,omitempty"`
+}
+
+type VpnvserverAuthenticationloginschemapolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnvserverVpntrafficpolicyBinding struct {
+	Acttype                int    `json:"acttype,omitempty"`
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnsessionpolicyAaauserBinding struct {
+	Activepolicy int    `json:"activepolicy,omitempty"`
+	Boundto      string `json:"boundto,omitempty"`
+	Name         string `json:"name,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
+}
+
+type VpnvserverVpnintranetapplicationBinding struct {
+	Acttype             int    `json:"acttype,omitempty"`
+	Intranetapplication string `json:"intranetapplication,omitempty"`
+	Name                string `json:"name,omitempty"`
+}
+
+type VpnvserverAppflowpolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnglobalAuthenticationradiuspolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnclientlessaccesspolicyVpnglobalBinding struct {
+	Activepolicy int    `json:"activepolicy,omitempty"`
+	Boundto      string `json:"boundto,omitempty"`
+	Name         string `json:"name,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
+}
+
+type VpnglobalAuthenticationlocalpolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnglobalVpnurlBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Urlname                string `json:"urlname,omitempty"`
+}
+
+type VpnsessionpolicyAaagroupBinding struct {
+	Activepolicy int    `json:"activepolicy,omitempty"`
+	Boundto      string `json:"boundto,omitempty"`
+	Name         string `json:"name,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
+}
+
+type VpnvserverBinding struct {
+	Name                                             string        `json:"name,omitempty"`
+	VpnvserverAaapreauthenticationpolicyBinding      []interface{} `json:"vpnvserver_aaapreauthenticationpolicy_binding,omitempty"`
+	VpnvserverAnalyticsprofileBinding                []interface{} `json:"vpnvserver_analyticsprofile_binding,omitempty"`
+	VpnvserverAppcontrollerBinding                   []interface{} `json:"vpnvserver_appcontroller_binding,omitempty"`
+	VpnvserverAppflowpolicyBinding                   []interface{} `json:"vpnvserver_appflowpolicy_binding,omitempty"`
+	VpnvserverAppfwpolicyBinding                     []interface{} `json:"vpnvserver_appfwpolicy_binding,omitempty"`
+	VpnvserverAuditnslogpolicyBinding                []interface{} `json:"vpnvserver_auditnslogpolicy_binding,omitempty"`
+	VpnvserverAuditsyslogpolicyBinding               []interface{} `json:"vpnvserver_auditsyslogpolicy_binding,omitempty"`
+	VpnvserverAuthenticationcertpolicyBinding        []interface{} `json:"vpnvserver_authenticationcertpolicy_binding,omitempty"`
+	VpnvserverAuthenticationdfapolicyBinding         []interface{} `json:"vpnvserver_authenticationdfapolicy_binding,omitempty"`
+	VpnvserverAuthenticationldappolicyBinding        []interface{} `json:"vpnvserver_authenticationldappolicy_binding,omitempty"`
+	VpnvserverAuthenticationlocalpolicyBinding       []interface{} `json:"vpnvserver_authenticationlocalpolicy_binding,omitempty"`
+	VpnvserverAuthenticationloginschemapolicyBinding []interface{} `json:"vpnvserver_authenticationloginschemapolicy_binding,omitempty"`
+	VpnvserverAuthenticationnegotiatepolicyBinding   []interface{} `json:"vpnvserver_authenticationnegotiatepolicy_binding,omitempty"`
+	VpnvserverAuthenticationoauthidppolicyBinding    []interface{} `json:"vpnvserver_authenticationoauthidppolicy_binding,omitempty"`
+	VpnvserverAuthenticationpolicyBinding            []interface{} `json:"vpnvserver_authenticationpolicy_binding,omitempty"`
+	VpnvserverAuthenticationradiuspolicyBinding      []interface{} `json:"vpnvserver_authenticationradiuspolicy_binding,omitempty"`
+	VpnvserverAuthenticationsamlidppolicyBinding     []interface{} `json:"vpnvserver_authenticationsamlidppolicy_binding,omitempty"`
+	VpnvserverAuthenticationsamlpolicyBinding        []interface{} `json:"vpnvserver_authenticationsamlpolicy_binding,omitempty"`
+	VpnvserverAuthenticationtacacspolicyBinding      []interface{} `json:"vpnvserver_authenticationtacacspolicy_binding,omitempty"`
+	VpnvserverAuthenticationwebauthpolicyBinding     []interface{} `json:"vpnvserver_authenticationwebauthpolicy_binding,omitempty"`
+	VpnvserverCachepolicyBinding                     []interface{} `json:"vpnvserver_cachepolicy_binding,omitempty"`
+	VpnvserverCspolicyBinding                        []interface{} `json:"vpnvserver_cspolicy_binding,omitempty"`
+	VpnvserverFeopolicyBinding                       []interface{} `json:"vpnvserver_feopolicy_binding,omitempty"`
+	VpnvserverIcapolicyBinding                       []interface{} `json:"vpnvserver_icapolicy_binding,omitempty"`
+	VpnvserverIntranetip6Binding                     []interface{} `json:"vpnvserver_intranetip6_binding,omitempty"`
+	VpnvserverIntranetipBinding                      []interface{} `json:"vpnvserver_intranetip_binding,omitempty"`
+	VpnvserverResponderpolicyBinding                 []interface{} `json:"vpnvserver_responderpolicy_binding,omitempty"`
+	VpnvserverRewritepolicyBinding                   []interface{} `json:"vpnvserver_rewritepolicy_binding,omitempty"`
+	VpnvserverSecureprivateaccessurlBinding          []interface{} `json:"vpnvserver_secureprivateaccessurl_binding,omitempty"`
+	VpnvserverSharefileserverBinding                 []interface{} `json:"vpnvserver_sharefileserver_binding,omitempty"`
+	VpnvserverStaserverBinding                       []interface{} `json:"vpnvserver_staserver_binding,omitempty"`
+	VpnvserverVpnclientlessaccesspolicyBinding       []interface{} `json:"vpnvserver_vpnclientlessaccesspolicy_binding,omitempty"`
+	VpnvserverVpnepaprofileBinding                   []interface{} `json:"vpnvserver_vpnepaprofile_binding,omitempty"`
+	VpnvserverVpneulaBinding                         []interface{} `json:"vpnvserver_vpneula_binding,omitempty"`
+	VpnvserverVpnintranetapplicationBinding          []interface{} `json:"vpnvserver_vpnintranetapplication_binding,omitempty"`
+	VpnvserverVpnnexthopserverBinding                []interface{} `json:"vpnvserver_vpnnexthopserver_binding,omitempty"`
+	VpnvserverVpnportalthemeBinding                  []interface{} `json:"vpnvserver_vpnportaltheme_binding,omitempty"`
+	VpnvserverVpnsecureprivateaccessprofileBinding   []interface{} `json:"vpnvserver_vpnsecureprivateaccessprofile_binding,omitempty"`
+	VpnvserverVpnsessionpolicyBinding                []interface{} `json:"vpnvserver_vpnsessionpolicy_binding,omitempty"`
+	VpnvserverVpntrafficpolicyBinding                []interface{} `json:"vpnvserver_vpntrafficpolicy_binding,omitempty"`
+	VpnvserverVpnurlBinding                          []interface{} `json:"vpnvserver_vpnurl_binding,omitempty"`
+	VpnvserverVpnurlpolicyBinding                    []interface{} `json:"vpnvserver_vpnurlpolicy_binding,omitempty"`
+}
+
+type Vpnsessionaction struct {
+	Advancedclientlessvpnmode  string        `json:"advancedclientlessvpnmode,omitempty"`
+	Allowedlogingroups         string        `json:"allowedlogingroups,omitempty"`
+	Allprotocolproxy           string        `json:"allprotocolproxy,omitempty"`
+	Alwaysonprofilename        string        `json:"alwaysonprofilename,omitempty"`
+	Authorizationgroup         string        `json:"authorizationgroup,omitempty"`
+	Autoproxyurl               string        `json:"autoproxyurl,omitempty"`
+	Builtin                    []string      `json:"builtin,omitempty"`
+	Citrixreceiverhome         string        `json:"citrixreceiverhome,omitempty"`
+	Clientchoices              string        `json:"clientchoices,omitempty"`
+	Clientcleanupprompt        string        `json:"clientcleanupprompt,omitempty"`
+	Clientconfiguration        []string      `json:"clientconfiguration,omitempty"`
+	Clientdebug                string        `json:"clientdebug,omitempty"`
+	Clientidletimeout          int           `json:"clientidletimeout,omitempty"`
+	Clientidletimeoutwarning   int           `json:"clientidletimeoutwarning,omitempty"`
+	Clientlessmodeurlencoding  string        `json:"clientlessmodeurlencoding,omitempty"`
+	Clientlesspersistentcookie string        `json:"clientlesspersistentcookie,omitempty"`
+	Clientlessvpnmode          string        `json:"clientlessvpnmode,omitempty"`
+	Clientoptions              string        `json:"clientoptions,omitempty"`
+	Clientsecurity             string        `json:"clientsecurity,omitempty"`
+	Clientsecuritygroup        string        `json:"clientsecuritygroup,omitempty"`
+	Clientsecuritylog          string        `json:"clientsecuritylog,omitempty"`
+	Clientsecuritymessage      string        `json:"clientsecuritymessage,omitempty"`
+	Count                      float64       `json:"__count,omitempty"`
+	Defaultauthorizationaction string        `json:"defaultauthorizationaction,omitempty"`
+	Dnsvservername             string        `json:"dnsvservername,omitempty"`
+	Emailhome                  string        `json:"emailhome,omitempty"`
+	Epaclienttype              string        `json:"epaclienttype,omitempty"`
+	Feature                    string        `json:"feature,omitempty"`
+	Forcecleanup               []string      `json:"forcecleanup,omitempty"`
+	Forcedtimeout              int           `json:"forcedtimeout,omitempty"`
+	Forcedtimeoutwarning       int           `json:"forcedtimeoutwarning,omitempty"`
+	Fqdnspoofedip              string        `json:"fqdnspoofedip,omitempty"`
+	Ftpproxy                   string        `json:"ftpproxy,omitempty"`
+	Gopherproxy                string        `json:"gopherproxy,omitempty"`
+	Homepage                   string        `json:"homepage,omitempty"`
+	Httpport                   []interface{} `json:"httpport,omitempty"`
+	Httpproxy                  string        `json:"httpproxy,omitempty"`
+	Icaproxy                   string        `json:"icaproxy,omitempty"`
+	Iconwithreceiver           string        `json:"iconwithreceiver,omitempty"`
+	Iipdnssuffix               string        `json:"iipdnssuffix,omitempty"`
+	Kcdaccount                 string        `json:"kcdaccount,omitempty"`
+	Killconnections            string        `json:"killconnections,omitempty"`
+	Linuxpluginupgrade         string        `json:"linuxpluginupgrade,omitempty"`
+	Locallanaccess             string        `json:"locallanaccess,omitempty"`
+	Loginscript                string        `json:"loginscript,omitempty"`
+	Logoutscript               string        `json:"logoutscript,omitempty"`
+	Macpluginupgrade           string        `json:"macpluginupgrade,omitempty"`
+	Name                       string        `json:"name,omitempty"`
+	Netmask                    string        `json:"netmask,omitempty"`
+	Nextgenapiresource         string        `json:"_nextgenapiresource,omitempty"`
+	Ntdomain                   string        `json:"ntdomain,omitempty"`
+	Pcoipprofilename           string        `json:"pcoipprofilename,omitempty"`
+	Proxy                      string        `json:"proxy,omitempty"`
+	Proxyexception             string        `json:"proxyexception,omitempty"`
+	Proxylocalbypass           string        `json:"proxylocalbypass,omitempty"`
+	Rdpclientprofilename       string        `json:"rdpclientprofilename,omitempty"`
+	Rfc1918                    string        `json:"rfc1918,omitempty"`
+	Securebrowse               string        `json:"securebrowse,omitempty"`
+	Sesstimeout                int           `json:"sesstimeout,omitempty"`
+	Sfgatewayauthtype          string        `json:"sfgatewayauthtype,omitempty"`
+	Smartgroup                 string        `json:"smartgroup,omitempty"`
+	Socksproxy                 string        `json:"socksproxy,omitempty"`
+	Splitdns                   string        `json:"splitdns,omitempty"`
+	Splittunnel                string        `json:"splittunnel,omitempty"`
+	Spoofiip                   string        `json:"spoofiip,omitempty"`
+	Sslproxy                   string        `json:"sslproxy,omitempty"`
+	Sso                        string        `json:"sso,omitempty"`
+	Ssocredential              string        `json:"ssocredential,omitempty"`
+	Storefronturl              string        `json:"storefronturl,omitempty"`
+	Transparentinterception    string        `json:"transparentinterception,omitempty"`
+	Useiip                     string        `json:"useiip,omitempty"`
+	Usemip                     string        `json:"usemip,omitempty"`
+	Useraccounting             string        `json:"useraccounting,omitempty"`
+	Wihome                     string        `json:"wihome,omitempty"`
+	Wihomeaddresstype          string        `json:"wihomeaddresstype,omitempty"`
+	Windowsautologon           string        `json:"windowsautologon,omitempty"`
+	Windowsclienttype          string        `json:"windowsclienttype,omitempty"`
+	Windowspluginupgrade       string        `json:"windowspluginupgrade,omitempty"`
+	Winsip                     string        `json:"winsip,omitempty"`
+	Wiportalmode               string        `json:"wiportalmode,omitempty"`
+}
+
+type VpnvserverAuthenticationldappolicyBinding struct {
+	Acttype                int    `json:"acttype,omitempty"`
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type Vpntrafficaction struct {
+	Apptimeout         int     `json:"apptimeout,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Formssoaction      string  `json:"formssoaction,omitempty"`
+	Fta                string  `json:"fta,omitempty"`
+	Hdx                string  `json:"hdx,omitempty"`
+	Kcdaccount         string  `json:"kcdaccount,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Passwdexpression   string  `json:"passwdexpression,omitempty"`
+	Proxy              string  `json:"proxy,omitempty"`
+	Qual               string  `json:"qual,omitempty"`
+	Samlssoprofile     string  `json:"samlssoprofile,omitempty"`
+	Sso                string  `json:"sso,omitempty"`
+	Userexpression     string  `json:"userexpression,omitempty"`
+	Wanscaler          string  `json:"wanscaler,omitempty"`
+}
+
+type VpnvserverVpnsecureprivateaccessprofileBinding struct {
+	Acttype                    int    `json:"acttype,omitempty"`
+	Name                       string `json:"name,omitempty"`
+	Secureprivateaccessprofile string `json:"secureprivateaccessprofile,omitempty"`
+}
+
+type VpnvserverVpnepaprofileBinding struct {
+	Acttype            int    `json:"acttype,omitempty"`
+	Epaprofile         string `json:"epaprofile,omitempty"`
+	Epaprofileoptional bool   `json:"epaprofileoptional,omitempty"`
+	Name               string `json:"name,omitempty"`
+}
+
+type Vpnformssoaction struct {
+	Actionurl          string  `json:"actionurl,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Namevaluepair      string  `json:"namevaluepair,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Nvtype             string  `json:"nvtype,omitempty"`
+	Passwdfield        string  `json:"passwdfield,omitempty"`
+	Responsesize       int     `json:"responsesize,omitempty"`
+	Ssosuccessrule     string  `json:"ssosuccessrule,omitempty"`
+	Submitmethod       string  `json:"submitmethod,omitempty"`
+	Userfield          string  `json:"userfield,omitempty"`
+}
+
+type VpnvserverAuthenticationradiuspolicyBinding struct {
+	Acttype                int    `json:"acttype,omitempty"`
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnvserverAuthenticationlocalpolicyBinding struct {
+	Acttype                int    `json:"acttype,omitempty"`
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpntrafficpolicyVpnglobalBinding struct {
+	Activepolicy int    `json:"activepolicy,omitempty"`
+	Boundto      string `json:"boundto,omitempty"`
+	Name         string `json:"name,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
+}
+
+type VpnurlpolicyBinding struct {
+	Name                          string        `json:"name,omitempty"`
+	VpnurlpolicyAaagroupBinding   []interface{} `json:"vpnurlpolicy_aaagroup_binding,omitempty"`
+	VpnurlpolicyAaauserBinding    []interface{} `json:"vpnurlpolicy_aaauser_binding,omitempty"`
+	VpnurlpolicyVpnglobalBinding  []interface{} `json:"vpnurlpolicy_vpnglobal_binding,omitempty"`
+	VpnurlpolicyVpnvserverBinding []interface{} `json:"vpnurlpolicy_vpnvserver_binding,omitempty"`
+}
+
+type VpnvserverResponderpolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnvserverSecureprivateaccessurlBinding struct {
+	Acttype                int    `json:"acttype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Secureprivateaccessurl string `json:"secureprivateaccessurl,omitempty"`
+}
+
+type VpnvserverAuthenticationpolicyBinding struct {
+	Acttype                int    `json:"acttype,omitempty"`
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnglobalBinding struct {
+	VpnglobalAppcontrollerBinding                 []interface{} `json:"vpnglobal_appcontroller_binding,omitempty"`
+	VpnglobalAppfwpolicyBinding                   []interface{} `json:"vpnglobal_appfwpolicy_binding,omitempty"`
+	VpnglobalAuditnslogpolicyBinding              []interface{} `json:"vpnglobal_auditnslogpolicy_binding,omitempty"`
+	VpnglobalAuditsyslogpolicyBinding             []interface{} `json:"vpnglobal_auditsyslogpolicy_binding,omitempty"`
+	VpnglobalAuthenticationcertpolicyBinding      []interface{} `json:"vpnglobal_authenticationcertpolicy_binding,omitempty"`
+	VpnglobalAuthenticationldappolicyBinding      []interface{} `json:"vpnglobal_authenticationldappolicy_binding,omitempty"`
+	VpnglobalAuthenticationlocalpolicyBinding     []interface{} `json:"vpnglobal_authenticationlocalpolicy_binding,omitempty"`
+	VpnglobalAuthenticationnegotiatepolicyBinding []interface{} `json:"vpnglobal_authenticationnegotiatepolicy_binding,omitempty"`
+	VpnglobalAuthenticationpolicyBinding          []interface{} `json:"vpnglobal_authenticationpolicy_binding,omitempty"`
+	VpnglobalAuthenticationradiuspolicyBinding    []interface{} `json:"vpnglobal_authenticationradiuspolicy_binding,omitempty"`
+	VpnglobalAuthenticationsamlpolicyBinding      []interface{} `json:"vpnglobal_authenticationsamlpolicy_binding,omitempty"`
+	VpnglobalAuthenticationtacacspolicyBinding    []interface{} `json:"vpnglobal_authenticationtacacspolicy_binding,omitempty"`
+	VpnglobalGslbdomainBinding                    []interface{} `json:"vpnglobal_gslbdomain_binding,omitempty"`
+	VpnglobalIntranetip6Binding                   []interface{} `json:"vpnglobal_intranetip6_binding,omitempty"`
+	VpnglobalIntranetipBinding                    []interface{} `json:"vpnglobal_intranetip_binding,omitempty"`
+	VpnglobalSecureprivateaccessurlBinding        []interface{} `json:"vpnglobal_secureprivateaccessurl_binding,omitempty"`
+	VpnglobalSharefileserverBinding               []interface{} `json:"vpnglobal_sharefileserver_binding,omitempty"`
+	VpnglobalSslcertkeyBinding                    []interface{} `json:"vpnglobal_sslcertkey_binding,omitempty"`
+	VpnglobalStaserverBinding                     []interface{} `json:"vpnglobal_staserver_binding,omitempty"`
+	VpnglobalVpnclientlessaccesspolicyBinding     []interface{} `json:"vpnglobal_vpnclientlessaccesspolicy_binding,omitempty"`
+	VpnglobalVpneulaBinding                       []interface{} `json:"vpnglobal_vpneula_binding,omitempty"`
+	VpnglobalVpnintranetapplicationBinding        []interface{} `json:"vpnglobal_vpnintranetapplication_binding,omitempty"`
+	VpnglobalVpnnexthopserverBinding              []interface{} `json:"vpnglobal_vpnnexthopserver_binding,omitempty"`
+	VpnglobalVpnportalthemeBinding                []interface{} `json:"vpnglobal_vpnportaltheme_binding,omitempty"`
+	VpnglobalVpnsecureprivateaccessprofileBinding []interface{} `json:"vpnglobal_vpnsecureprivateaccessprofile_binding,omitempty"`
+	VpnglobalVpnsessionpolicyBinding              []interface{} `json:"vpnglobal_vpnsessionpolicy_binding,omitempty"`
+	VpnglobalVpntrafficpolicyBinding              []interface{} `json:"vpnglobal_vpntrafficpolicy_binding,omitempty"`
+	VpnglobalVpnurlBinding                        []interface{} `json:"vpnglobal_vpnurl_binding,omitempty"`
+	VpnglobalVpnurlpolicyBinding                  []interface{} `json:"vpnglobal_vpnurlpolicy_binding,omitempty"`
+}
+
+type VpnglobalAppcontrollerBinding struct {
 	Appcontroller          string `json:"appcontroller,omitempty"`
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 }
 
-type Vpnglobalsecureprivateaccessurlbinding struct {
-	Secureprivateaccessurl string `json:"secureprivateaccessurl,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnglobalvpnurlpolicybinding struct {
-	Policyname             string   `json:"policyname,omitempty"`
-	Priority               int      `json:"priority,omitempty"`
-	Gotopriorityexpression string   `json:"gotopriorityexpression,omitempty"`
-	Builtin                []string `json:"builtin,omitempty"`
-	Secondary              bool     `json:"secondary,omitempty"`
-	Groupextraction        bool     `json:"groupextraction,omitempty"`
-}
-
-type Vpnsessionpolicy struct {
-	Name               string `json:"name,omitempty"`
-	Rule               string `json:"rule,omitempty"`
-	Action             string `json:"action,omitempty"`
-	Builtin            string `json:"builtin,omitempty"`
-	Feature            string `json:"feature,omitempty"`
-	Expressiontype     string `json:"expressiontype,omitempty"`
-	Hits               string `json:"hits,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpnsessionpolicyvpnglobalbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnvserveroauthidppolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvserverradiuspolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Acttype                uint32 `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvserversamlpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Acttype                uint32 `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnglobalauditnslogpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnglobalintranetapplicationbinding struct {
-	Intranetapplication    string `json:"intranetapplication,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnglobalpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnglobalurlbinding struct {
-	Urlname                string `json:"urlname,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnstoreinfo struct {
-	Url                string `json:"url,omitempty"`
-	Storeserverstatus  string `json:"storeserverstatus,omitempty"`
-	Storeserverissf    string `json:"storeserverissf,omitempty"`
-	Storeapisupport    string `json:"storeapisupport,omitempty"`
-	Storelist          string `json:"storelist,omitempty"`
-	Storestatus        string `json:"storestatus,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpnvserverresponderpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-}
-
-type Vpnvservervpnurlpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type VpnvserverAuthenticationdfapolicyBinding struct {
 	Acttype                int    `json:"acttype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
 	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type Vpnpcoipprofile struct {
+	Conserverurl       string  `json:"conserverurl,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Icvverification    string  `json:"icvverification,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Sessionidletimeout int     `json:"sessionidletimeout,omitempty"`
+}
+
+type VpnglobalSharefileserverBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Sharefile              string `json:"sharefile,omitempty"`
+}
+
+type VpntrafficpolicyAaauserBinding struct {
+	Activepolicy int    `json:"activepolicy,omitempty"`
+	Boundto      string `json:"boundto,omitempty"`
+	Name         string `json:"name,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
+}
+
+type Vpnalwaysonprofile struct {
+	Clientcontrol             string  `json:"clientcontrol,omitempty"`
+	Count                     float64 `json:"__count,omitempty"`
+	Locationbasedvpn          string  `json:"locationbasedvpn,omitempty"`
+	Name                      string  `json:"name,omitempty"`
+	Networkaccessonvpnfailure string  `json:"networkaccessonvpnfailure,omitempty"`
+	Nextgenapiresource        string  `json:"_nextgenapiresource,omitempty"`
+}
+
+type VpnvserverVpnnexthopserverBinding struct {
+	Acttype       int    `json:"acttype,omitempty"`
+	Name          string `json:"name,omitempty"`
+	Nexthopserver string `json:"nexthopserver,omitempty"`
+}
+
+type VpnglobalAppfwpolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnvserverStaserverBinding struct {
+	Acttype        int    `json:"acttype,omitempty"`
+	Name           string `json:"name,omitempty"`
+	Staaddresstype string `json:"staaddresstype,omitempty"`
+	Staauthid      string `json:"staauthid,omitempty"`
+	Staserver      string `json:"staserver,omitempty"`
+	Stastate       string `json:"stastate,omitempty"`
+}
+
+type VpnglobalVpnintranetapplicationBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Intranetapplication    string `json:"intranetapplication,omitempty"`
+}
+
+type VpnvserverIntranetipBinding struct {
+	Acttype    int    `json:"acttype,omitempty"`
+	Intranetip string `json:"intranetip,omitempty"`
+	MapField   string `json:"map,omitempty"`
+	Name       string `json:"name,omitempty"`
+	Netmask    string `json:"netmask,omitempty"`
+}
+
+type VpnclientlessaccesspolicyBinding struct {
+	Name                                       string        `json:"name,omitempty"`
+	VpnclientlessaccesspolicyVpnglobalBinding  []interface{} `json:"vpnclientlessaccesspolicy_vpnglobal_binding,omitempty"`
+	VpnclientlessaccesspolicyVpnvserverBinding []interface{} `json:"vpnclientlessaccesspolicy_vpnvserver_binding,omitempty"`
+}
+
+type VpnglobalAuthenticationnegotiatepolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnglobalAuthenticationtacacspolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnglobalIntranetip6Binding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Intranetip6            string `json:"intranetip6,omitempty"`
+	Numaddr                int    `json:"numaddr,omitempty"`
+}
+
+type Vpnvserver struct {
+	Accessrestrictedpageredirect string  `json:"accessrestrictedpageredirect,omitempty"`
+	Advancedepa                  string  `json:"advancedepa,omitempty"`
+	Appflowlog                   string  `json:"appflowlog,omitempty"`
+	Authentication               string  `json:"authentication,omitempty"`
+	Authnprofile                 string  `json:"authnprofile,omitempty"`
+	Backupvserver                string  `json:"backupvserver,omitempty"`
+	Bindpoint                    string  `json:"bindpoint,omitempty"`
+	Cachetype                    string  `json:"cachetype,omitempty"`
+	Cachevserver                 string  `json:"cachevserver,omitempty"`
+	Certkeynames                 string  `json:"certkeynames,omitempty"`
+	Cginfrahomepageredirect      string  `json:"cginfrahomepageredirect,omitempty"`
+	Clttimeout                   int     `json:"clttimeout,omitempty"`
+	Comment                      string  `json:"comment,omitempty"`
+	Count                        float64 `json:"__count,omitempty"`
+	Csvserver                    string  `json:"csvserver,omitempty"`
+	Curaaausers                  int     `json:"curaaausers,omitempty"`
+	Curstate                     string  `json:"curstate,omitempty"`
+	Curtotalusers                int     `json:"curtotalusers,omitempty"`
+	Deploymenttype               string  `json:"deploymenttype,omitempty"`
+	Devicecert                   string  `json:"devicecert,omitempty"`
+	Deviceposture                string  `json:"deviceposture,omitempty"`
+	Disableprimaryondown         string  `json:"disableprimaryondown,omitempty"`
+	Domain                       string  `json:"domain,omitempty"`
+	Doublehop                    string  `json:"doublehop,omitempty"`
+	Downstateflush               string  `json:"downstateflush,omitempty"`
+	Dtls                         string  `json:"dtls,omitempty"`
+	Epaprofileoptional           bool    `json:"epaprofileoptional,omitempty"`
+	Failedlogintimeout           int     `json:"failedlogintimeout,omitempty"`
+	Groupextraction              bool    `json:"groupextraction,omitempty"`
+	Httpprofilename              string  `json:"httpprofilename,omitempty"`
+	Icaonly                      string  `json:"icaonly,omitempty"`
+	Icaproxysessionmigration     string  `json:"icaproxysessionmigration,omitempty"`
+	Icmpvsrresponse              string  `json:"icmpvsrresponse,omitempty"`
+	Ip                           string  `json:"ip,omitempty"`
+	Ipset                        string  `json:"ipset,omitempty"`
+	Ipv46                        string  `json:"ipv46,omitempty"`
+	L2conn                       string  `json:"l2conn,omitempty"`
+	Linuxepapluginupgrade        string  `json:"linuxepapluginupgrade,omitempty"`
+	Listenpolicy                 string  `json:"listenpolicy,omitempty"`
+	Listenpriority               int     `json:"listenpriority,omitempty"`
+	Loginonce                    string  `json:"loginonce,omitempty"`
+	Logoutonsmartcardremoval     string  `json:"logoutonsmartcardremoval,omitempty"`
+	Macepapluginupgrade          string  `json:"macepapluginupgrade,omitempty"`
+	MapField                     string  `json:"map,omitempty"`
+	Maxaaausers                  int     `json:"maxaaausers,omitempty"`
+	Maxloginattempts             int     `json:"maxloginattempts,omitempty"`
+	Name                         string  `json:"name,omitempty"`
+	Netprofile                   string  `json:"netprofile,omitempty"`
+	Newname                      string  `json:"newname,omitempty"`
+	Nextgenapiresource           string  `json:"_nextgenapiresource,omitempty"`
+	Ngname                       string  `json:"ngname,omitempty"`
+	Nodefaultbindings            string  `json:"nodefaultbindings,omitempty"`
+	Pcoipvserverprofilename      string  `json:"pcoipvserverprofilename,omitempty"`
+	Port                         int     `json:"port,omitempty"`
+	Precedence                   string  `json:"precedence,omitempty"`
+	Quicprofilename              string  `json:"quicprofilename,omitempty"`
+	Range                        int     `json:"range,omitempty"`
+	Rdpserverprofilename         string  `json:"rdpserverprofilename,omitempty"`
+	Redirect                     string  `json:"redirect,omitempty"`
+	Redirecturl                  string  `json:"redirecturl,omitempty"`
+	Response                     string  `json:"response,omitempty"`
+	Rhistate                     string  `json:"rhistate,omitempty"`
+	Rule                         string  `json:"rule,omitempty"`
+	Samesite                     string  `json:"samesite,omitempty"`
+	Secondary                    bool    `json:"secondary,omitempty"`
+	Secureprivateaccess          string  `json:"secureprivateaccess,omitempty"`
+	Servicename                  string  `json:"servicename,omitempty"`
+	Servicetype                  string  `json:"servicetype,omitempty"`
+	Somethod                     string  `json:"somethod,omitempty"`
+	Sopersistence                string  `json:"sopersistence,omitempty"`
+	Sopersistencetimeout         int     `json:"sopersistencetimeout,omitempty"`
+	Sothreshold                  int     `json:"sothreshold,omitempty"`
+	State                        string  `json:"state,omitempty"`
+	Status                       int     `json:"status,omitempty"`
+	Tcpprofilename               string  `json:"tcpprofilename,omitempty"`
+	TypeField                    string  `json:"type,omitempty"`
+	Usemip                       string  `json:"usemip,omitempty"`
+	Userdomains                  string  `json:"userdomains,omitempty"`
+	Value                        string  `json:"value,omitempty"`
+	Vserverfqdn                  string  `json:"vserverfqdn,omitempty"`
+	Weight                       int     `json:"weight,omitempty"`
+	Windowsepapluginupgrade      string  `json:"windowsepapluginupgrade,omitempty"`
+}
+
+type VpnglobalSslcertkeyBinding struct {
+	Cacert                 string `json:"cacert,omitempty"`
+	Certkeyname            string `json:"certkeyname,omitempty"`
+	Crlcheck               string `json:"crlcheck,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Ocspcheck              string `json:"ocspcheck,omitempty"`
+	Userdataencryptionkey  string `json:"userdataencryptionkey,omitempty"`
+}
+
+type VpnvserverAppfwpolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type Vpnicaconnection struct {
+	All                bool    `json:"all,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Destip             string  `json:"destip,omitempty"`
+	Destport           int     `json:"destport,omitempty"`
+	Domain             string  `json:"domain,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Nodeid             int     `json:"nodeid,omitempty"`
+	Peid               int     `json:"peid,omitempty"`
+	Productname        string  `json:"productname,omitempty"`
+	Srcip              string  `json:"srcip,omitempty"`
+	Srcport            int     `json:"srcport,omitempty"`
+	Tenantname         string  `json:"tenantname,omitempty"`
+	Transproto         string  `json:"transproto,omitempty"`
+	Username           string  `json:"username,omitempty"`
+}
+
+type VpnvserverRewritepolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnvserverAuthenticationoauthidppolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Groupextraction        bool   `json:"groupextraction,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Policy                 string `json:"policy,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	Secondary              bool   `json:"secondary,omitempty"`
+}
+
+type VpnglobalStaserverBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Staaddresstype         string `json:"staaddresstype,omitempty"`
+	Staauthid              string `json:"staauthid,omitempty"`
+	Staserver              string `json:"staserver,omitempty"`
+	Stastate               string `json:"stastate,omitempty"`
+}
+
+type Vpnsecureprivateaccessprofile struct {
+	Accessrestrictedpageredirect string  `json:"accessrestrictedpageredirect,omitempty"`
+	Chromeenterprisepremiummode  string  `json:"chromeenterprisepremiummode,omitempty"`
+	Clouddeployment              string  `json:"clouddeployment,omitempty"`
+	Count                        float64 `json:"__count,omitempty"`
+	Customerid                   string  `json:"customerid,omitempty"`
+	Name                         string  `json:"name,omitempty"`
+	Nextgenapiresource           string  `json:"_nextgenapiresource,omitempty"`
+	Url                          string  `json:"url,omitempty"`
 }
 
 type Vpnepaprofile struct {
-	Name               string `json:"name,omitempty"`
-	Filename           string `json:"filename,omitempty"`
-	Data               string `json:"data,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Data               string  `json:"data,omitempty"`
+	Filename           string  `json:"filename,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
 }
 
-type Vpnglobalnegotiatepolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
+type VpnvserverVpnportalthemeBinding struct {
+	Acttype     int    `json:"acttype,omitempty"`
+	Name        string `json:"name,omitempty"`
+	Portaltheme string `json:"portaltheme,omitempty"`
+}
+
+type VpnglobalDomainBinding struct {
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Intranetdomain         string `json:"intranetdomain,omitempty"`
 }
 
-type Vpnglobalnexthopserverbinding struct {
-	Nexthopserver          string `json:"nexthopserver,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnglobaltacacspolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnglobalvpneulabinding struct {
-	Eula                   string `json:"eula,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnsessionpolicyaaauserbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnvservercspolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvservereulabinding struct {
-	Eula    string `json:"eula,omitempty"`
-	Acttype uint32 `json:"acttype,omitempty"`
-	Name    string `json:"name,omitempty"`
-}
-
-type Vpnglobalsharefileserverbinding struct {
-	Sharefile              string `json:"sharefile,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnglobalvpnclientlessaccesspolicybinding struct {
-	Policyname             string   `json:"policyname,omitempty"`
-	Priority               int      `json:"priority,omitempty"`
-	Type                   string   `json:"type,omitempty"`
-	Gotopriorityexpression string   `json:"gotopriorityexpression,omitempty"`
-	Builtin                []string `json:"builtin,omitempty"`
-	Feature                string   `json:"feature,omitempty"`
-	Globalbindtype         string   `json:"globalbindtype,omitempty"`
-	Secondary              bool     `json:"secondary,omitempty"`
-	Groupextraction        bool     `json:"groupextraction,omitempty"`
-}
-
-type Vpnglobalvpnurlbinding struct {
-	Urlname                string `json:"urlname,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpntrafficpolicybinding struct {
-	Name string `json:"name,omitempty"`
-}
-
-type Vpnvserverauthenticationldappolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
+type VpnvserverVpnclientlessaccesspolicyBinding struct {
 	Acttype                int    `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	Groupextraction        bool   `json:"groupextraction,omitempty"`
 	Name                   string `json:"name,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvserverauthenticationoauthidppolicybinding struct {
 	Policy                 string `json:"policy,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
 	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvserverauthenticationsamlidppolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnvserverauthenticationsamlpolicybinding struct {
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Acttype                int    `json:"acttype,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-}
-
-type Vpnurlpolicyvpnglobalbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Name         string `json:"name,omitempty"`
-}
-
-type Vpnvserveranalyticsprofilebinding struct {
-	Analyticsprofile string `json:"analyticsprofile,omitempty"`
-	Name             string `json:"name,omitempty"`
-}
-
-type Vpneula struct {
-	Name               string `json:"name,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Vpnglobalauditsyslogpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-}
-
-type Vpnglobalauthenticationldappolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
-	Groupextraction        bool   `json:"groupextraction,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 }

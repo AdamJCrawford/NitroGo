@@ -1,1109 +1,1006 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2026
-
 package models
 
-type Lbvserverfilterpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Sc                     string `json:"sc,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+// lb configuration structs
+type LbvserverRewritepolicyBinding struct {
 	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Lbpolicygslbvserverbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Lbvserverprofilebinding struct {
-	Analyticsprofile string `json:"analyticsprofile,omitempty"`
-	Name             string `json:"name,omitempty"`
-}
-
-type Lbvserverservicebinding struct {
-	Servicename       string `json:"servicename,omitempty"`
-	Ipv46             string `json:"ipv46,omitempty"`
-	Port              int    `json:"port,omitempty"`
-	Servicetype       string `json:"servicetype,omitempty"`
-	Curstate          string `json:"curstate,omitempty"`
-	Weight            int    `json:"weight,omitempty"`
-	Dynamicweight     int    `json:"dynamicweight,omitempty"`
-	Cookieipport      string `json:"cookieipport,omitempty"`
-	Vserverid         string `json:"vserverid,omitempty"`
-	Vsvrbindsvcip     string `json:"vsvrbindsvcip,omitempty"`
-	Vsvrbindsvcport   int    `json:"vsvrbindsvcport,omitempty"`
-	Preferredlocation string `json:"preferredlocation,omitempty"`
-	Order             int    `json:"order,omitempty"`
-	Orderstr          string `json:"orderstr,omitempty"`
-	Name              string `json:"name,omitempty"`
-	Servicegroupname  string `json:"servicegroupname,omitempty"`
-}
-
-type Lbvservertransformpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
 	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Order                  int    `json:"order,omitempty"`
-}
-
-type Lbvservervideooptimizationpacingpolicybinding struct {
 	Policyname             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+}
+
+type LbvserverFeopolicyBinding struct {
 	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
 	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Order                  int    `json:"order,omitempty"`
-}
-
-type Lbmetrictablebinding struct {
-	Metrictable string `json:"metrictable,omitempty"`
-}
-
-type Lbmonbindingsgslbservicegroupbinding struct {
-	Servicegroupname          string `json:"servicegroupname,omitempty"`
-	Servicetype               string `json:"servicetype,omitempty"`
-	Boundservicegroupsvrstate string `json:"boundservicegroupsvrstate,omitempty"`
-	Monstate                  string `json:"monstate,omitempty"`
-	Monitorname               string `json:"monitorname,omitempty"`
-}
-
-type Lbmonitorservicegroupbinding struct {
-	Monitorname      string `json:"monitorname,omitempty"`
-	Servicename      string `json:"servicename,omitempty"`
-	Dupstate         string `json:"dup_state,omitempty"`
-	Dupweight        int    `json:"dup_weight,omitempty"`
-	Servicegroupname string `json:"servicegroupname,omitempty"`
-	State            string `json:"state,omitempty"`
-	Weight           int    `json:"weight,omitempty"`
-}
-
-type Lbsipparameters struct {
-	Rnatsrcport         int    `json:"rnatsrcport,omitempty"`
-	Rnatdstport         int    `json:"rnatdstport,omitempty"`
-	Retrydur            int    `json:"retrydur,omitempty"`
-	Addrportvip         string `json:"addrportvip,omitempty"`
-	Sip503ratethreshold int    `json:"sip503ratethreshold,omitempty"`
-	Rnatsecuresrcport   int    `json:"rnatsecuresrcport,omitempty"`
-	Rnatsecuredstport   int    `json:"rnatsecuredstport,omitempty"`
-	Builtin             string `json:"builtin,omitempty"`
-	Feature             string `json:"feature,omitempty"`
-	Nextgenapiresource  string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Lbmonbindingsservicebinding struct {
-	Servicename string `json:"servicename,omitempty"`
-	Ipaddress   string `json:"ipaddress,omitempty"`
-	Port        int    `json:"port,omitempty"`
-	Servicetype string `json:"servicetype,omitempty"`
-	Svrstate    string `json:"svrstate,omitempty"`
-	Monsvcstate string `json:"monsvcstate,omitempty"`
-	Monitorname string `json:"monitorname,omitempty"`
-}
-
-type Lbvserverauditnslogpolicybinding struct {
 	Policyname             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Order                  int    `json:"order,omitempty"`
-}
-
-type Lbmetrictable struct {
-	Metrictable        string `json:"metrictable,omitempty"`
-	Metric             string `json:"metric,omitempty"`
-	Snmpoid            string `json:"Snmpoid,omitempty"`
-	Metrictype         string `json:"metrictype,omitempty"`
-	Builtin            string `json:"builtin,omitempty"`
-	Feature            string `json:"feature,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Lbparameter struct {
-	Httponlycookieflag            string `json:"httponlycookieflag,omitempty"`
-	Usesecuredpersistencecookie   string `json:"usesecuredpersistencecookie,omitempty"`
-	Useencryptedpersistencecookie string `json:"useencryptedpersistencecookie,omitempty"`
-	Cookiepassphrase              string `json:"cookiepassphrase,omitempty"`
-	Consolidatedlconn             string `json:"consolidatedlconn,omitempty"`
-	Useportforhashlb              string `json:"useportforhashlb,omitempty"`
-	Preferdirectroute             string `json:"preferdirectroute,omitempty"`
-	Startuprrfactor               int    `json:"startuprrfactor,omitempty"`
-	Monitorskipmaxclient          string `json:"monitorskipmaxclient,omitempty"`
-	Monitorconnectionclose        string `json:"monitorconnectionclose,omitempty"`
-	Vserverspecificmac            string `json:"vserverspecificmac,omitempty"`
-	Allowboundsvcremoval          string `json:"allowboundsvcremoval,omitempty"`
-	Retainservicestate            string `json:"retainservicestate,omitempty"`
-	Dbsttl                        int    `json:"dbsttl,omitempty"`
-	Maxpipelinenat                int    `json:"maxpipelinenat,omitempty"`
-	Literaladccookieattribute     string `json:"literaladccookieattribute,omitempty"`
-	Computedadccookieattribute    string `json:"computedadccookieattribute,omitempty"`
-	Storemqttclientidandusername  string `json:"storemqttclientidandusername,omitempty"`
-	Dropmqttjumbomessage          string `json:"dropmqttjumbomessage,omitempty"`
-	Lbhashalgorithm               string `json:"lbhashalgorithm,omitempty"`
-	Lbhashfingers                 int    `json:"lbhashfingers,omitempty"`
-	Undefaction                   string `json:"undefaction,omitempty"`
-	Proximityfromself             string `json:"proximityfromself,omitempty"`
-	Sessionsthreshold             string `json:"sessionsthreshold,omitempty"`
-	Builtin                       string `json:"builtin,omitempty"`
-	Feature                       string `json:"feature,omitempty"`
-	Adccookieattributewarningmsg  string `json:"adccookieattributewarningmsg,omitempty"`
-	Lbhashalgowinsize             string `json:"lbhashalgowinsize,omitempty"`
-	Overridepersistencyfororder   string `json:"overridepersistencyfororder,omitempty"`
-	Nextgenapiresource            string `json:"_nextgenapiresource,omitempty"`
-}
-
-type LBVServer struct {
-	ADFSProxyProfile                   string `json:"adfsproxyprofile,omitempty"`
-	ActiveServices                     string `json:"activeservices,omitempty"`
-	APIProfile                         string `json:"apiprofile,omitempty"`
-	AppFlowLog                         string `json:"appflowlog,omitempty"`
-	Authentication                     string `json:"authentication,omitempty"`
-	AuthenticationHost                 string `json:"authenticationhost,omitempty"`
-	Authn401                           string `json:"authn401,omitempty"`
-	AuthnProfile                       string `json:"authnprofile,omitempty"`
-	AuthnVSName                        string `json:"authnvsname,omitempty"`
-	BackupLBMethod                     string `json:"backuplbmethod,omitempty"`
-	BackupPersistenceTimeout           int    `json:"backuppersistencetimeout,omitempty"`
-	BackupVServer                      string `json:"backupvserver,omitempty"`
-	BackupvServerStatus                string `json:"backupvserverstatus,omitempty"`
-	BindPoint                          string `json:"bindpoint,omitempty"`
-	BypassAAAA                         string `json:"bypassaaaa,omitempty"`
-	Cacheable                          string `json:"cacheable,omitempty"`
-	CacheVServer                       string `json:"cachevserver,omitempty"`
-	CltTimeOut                         string `json:"clttimeout,omitempty"`
-	Comment                            string `json:"comment,omitempty"`
-	ConnFailOver                       string `json:"connfailover,omitempty"`
-	ConsolidatedLConn                  string `json:"consolidatedlconn,omitempty"`
-	ConsolidatedLConngbl               string `json:"consolidatedlconngbl,omitempty"`
-	CookieDomain                       string `json:"cookiedomain,omitempty"`
-	CookieName                         string `json:"cookiename,omitempty"`
-	CurrentactiveOrder                 string `json:"currentactiveorder,omitempty"`
-	CurState                           string `json:"curstate,omitempty"`
-	DataLength                         string `json:"datalength,omitempty"`
-	DataOffset                         string `json:"dataoffset,omitempty"`
-	DbProfileName                      string `json:"dbprofilename,omitempty"`
-	DbsLB                              string `json:"dbslb,omitempty"`
-	DisablePrimaryOnDown               string `json:"disableprimaryondown,omitempty"`
-	DNS64                              string `json:"dns64,omitempty"`
-	DNSOverHTTPS                       string `json:"dnsoverhttps,omitempty"`
-	DNSProfileName                     string `json:"dnsprofilename,omitempty"`
-	DNSVServerName                     string `json:"dnsvservername,omitempty"`
-	Domain                             string `json:"domain,omitempty"`
-	DownStateFlush                     string `json:"downstateflush,omitempty"`
-	EffectiveState                     string `json:"effectivestate,omitempty"`
-	GroupName                          string `json:"groupname,omitempty"`
-	Gt2GB                              string `json:"gt2gb,omitempty"`
-	HashLength                         int    `json:"hashlength,omitempty"`
-	Health                             string `json:"health,omitempty"`
-	HealthThreshold                    string `json:"healththreshold,omitempty"`
-	Homepage                           string `json:"homepage,omitempty"`
-	HTTPProfileName                    string `json:"httpprofilename,omitempty"`
-	HTTPSRedirectURL                   string `json:"httpsredirecturl,omitempty"`
-	ICMPVSRResponse                    string `json:"icmpvsrresponse,omitempty"`
-	InsertVServerIPPort                string `json:"insertvserveripport,omitempty"`
-	IPMapping                          string `json:"ipmapping,omitempty"`
-	IPMask                             string `json:"ipmask,omitempty"`
-	IPPattern                          string `json:"ippattern,omitempty"`
-	IPSet                              string `json:"ipset,omitempty"`
-	IPv46                              string `json:"ipv46,omitempty"`
-	IsGSLB                             bool   `json:"isgslb,omitempty"`
-	L2Conn                             string `json:"l2conn,omitempty"`
-	LBMethod                           string `json:"lbmethod,omitempty"`
-	LBProfileName                      string `json:"lbprofilename,omitempty"`
-	LBRRReason                         int    `json:"lbrrreason,omitempty"`
-	ListenPolicy                       string `json:"listenpolicy,omitempty"`
-	ListenPriority                     string `json:"listenpriority,omitempty"`
-	M                                  string `json:"m,omitempty"`
-	MACModeRetainVLAN                  string `json:"macmoderetainvlan,omitempty"`
-	Map                                string `json:"map,omitempty"`
-	MaxAutoScaleMembers                string `json:"maxautoscalemembers,omitempty"`
-	MinAutoScaleMembers                string `json:"minautoscalemembers,omitempty"`
-	MSSQLServerVersion                 string `json:"mssqlserverversion,omitempty"`
-	MySQLCharacterSet                  int    `json:"mysqlcharacterset,omitempty"`
-	MySQLProtocolVersion               int    `json:"mysqlprotocolversion,omitempty"`
-	MySQLServerCapabilities            int    `json:"mysqlservercapabilities,omitempty"`
-	MySQLServerVersion                 string `json:"mysqlserverversion,omitempty"`
-	Name                               string `json:"name,omitempty"`
-	Netmask                            string `json:"netmask,omitempty"`
-	NetProfile                         string `json:"netprofile,omitempty"`
-	NewName                            string `json:"newname,omitempty"`
-	NewServiceRequest                  int    `json:"newservicerequest,omitempty"`
-	NewServiceRequestIncrementInterval int    `json:"newservicerequestincrementinterval,omitempty"`
-	NewserviceRequestUnit              string `json:"newservicerequestunit,omitempty"`
-	NextGenAPIResource                 string `json:"_nextgenapiresource,omitempty"`
-	NGName                             string `json:"ngname,omitempty"`
-	NodeFaultBindings                  string `json:"nodefaultbindings,omitempty"`
-	OracleServerVersion                string `json:"oracleserverversion,omitempty"`
-	Order                              int    `json:"order,omitempty"`
-	OrderThreshold                     string `json:"orderthreshold,omitempty"`
-	PersistAVPNO                       []int  `json:"persistavpno,omitempty"`
-	PersistenceBackup                  string `json:"persistencebackup,omitempty"`
-	PersistenceType                    string `json:"persistencetype,omitempty"`
-	PersistMask                        string `json:"persistmask,omitempty"`
-	Port                               int    `json:"port,omitempty"`
-	Precedence                         string `json:"precedence,omitempty"`
-	ProbePort                          int    `json:"probeport,omitempty"`
-	ProbeProtocol                      string `json:"probeprotocol,omitempty"`
-	ProbeSuccessResponsecode           string `json:"probesuccessresponsecode,omitempty"`
-	ProcessLocal                       string `json:"processlocal,omitempty"`
-	Push                               string `json:"push,omitempty"`
-	PushLabel                          string `json:"pushlabel,omitempty"`
-	PushMultiClients                   string `json:"pushmulticlients,omitempty"`
-	PushVServer                        string `json:"pushvserver,omitempty"`
-	QUICBridgeProfileName              string `json:"quicbridgeprofilename,omitempty"`
-	QUICProfileName                    string `json:"quicprofilename,omitempty"`
-	Range                              string `json:"range,omitempty"`
-	RecursionAvailable                 string `json:"recursionavailable,omitempty"`
-	Redirect                           string `json:"redirect,omitempty"`
-	RedirectFromPort                   int    `json:"redirectfromport,omitempty"`
-	RedirectPortRewrite                string `json:"redirectportrewrite,omitempty"`
-	RedirURL                           string `json:"redirurl,omitempty"`
-	RedirURLFlags                      bool   `json:"redirurlflags,omitempty"`
-	Resrule                            string `json:"resrule,omitempty"`
-	RetainConnectionsonCluster         string `json:"retainconnectionsoncluster,omitempty"`
-	RHIState                           string `json:"rhistate,omitempty"`
-	RTSPNAT                            string `json:"rtspnat,omitempty"`
-	Rule                               string `json:"rule,omitempty"`
-	Ruletype                           string `json:"ruletype,omitempty"`
-	ServiceName                        string `json:"servicename,omitempty"`
-	ServiceType                        string `json:"servicetype,omitempty"`
-	Sessionless                        string `json:"sessionless,omitempty"`
-	SkipPersistency                    string `json:"skippersistency,omitempty"`
-	SoBackupAction                     string `json:"sobackupaction,omitempty"`
-	SoMethod                           string `json:"somethod,omitempty"`
-	SoPersistence                      string `json:"sopersistence,omitempty"`
-	SoPersistenceTimeout               string `json:"sopersistencetimeout,omitempty"`
-	SoThreshold                        string `json:"sothreshold,omitempty"`
-	State                              string `json:"state,omitempty"`
-	StateChangeTimeMsec                string `json:"statechangetimemsec,omitempty"`
-	StateChangeTimeSec                 string `json:"statechangetimesec,omitempty"`
-	StateChangeTimeSeconds             string `json:"statechangetimeseconds,omitempty"`
-	Status                             int    `json:"status,omitempty"`
-	TCPProbePort                       int    `json:"tcpprobeport,omitempty"`
-	TCPProfileName                     string `json:"tcpprofilename,omitempty"`
-	Td                                 string `json:"td,omitempty"`
-	ThresholdValue                     int    `json:"thresholdvalue,omitempty"`
-	TicksSinceLastStateChange          string `json:"tickssincelaststatechange,omitempty"`
-	Timeout                            int    `json:"timeout,omitempty"`
-	ToggleOrder                        string `json:"toggleorder,omitempty"`
-	TOSID                              int    `json:"tosid,omitempty"`
-	TotalServices                      string `json:"totalservices,omitempty"`
-	TROFSPersistence                   string `json:"trofspersistence,omitempty"`
-	Type                               string `json:"type,omitempty"`
-	V6NetMaskLen                       int    `json:"v6netmasklen,omitempty"`
-	V6PersistMaskLen                   string `json:"v6persistmasklen,omitempty"`
-	Value                              string `json:"value,omitempty"`
-	Version                            int    `json:"version,omitempty"`
-	VIPHeader                          string `json:"vipheader,omitempty"`
-	VSvrDynConnsoThreshold             string `json:"vsvrdynconnsothreshold,omitempty"`
-	Weight                             int    `json:"weight,omitempty"`
-}
-
-type Lbvserverauditsyslogpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Order                  int    `json:"order,omitempty"`
-}
-
-type Lbpolicy struct {
-	Name               string `json:"name,omitempty"`
-	Rule               string `json:"rule,omitempty"`
-	Action             string `json:"action,omitempty"`
-	Undefaction        string `json:"undefaction,omitempty"`
-	Logaction          string `json:"logaction,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Newname            string `json:"newname,omitempty"`
-	Hits               string `json:"hits,omitempty"`
-	Undefhits          string `json:"undefhits,omitempty"`
-	Feature            string `json:"feature,omitempty"`
-	Builtin            string `json:"builtin,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Lbgroupbinding struct {
-	Name string `json:"name,omitempty"`
-}
-
-type Lbpolicylabellbpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Invokelabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Lbvserverappqoepolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Order                  int    `json:"order,omitempty"`
-}
-
-type Lbvserverdnspolicy64binding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Order                  int    `json:"order,omitempty"`
-}
-
-type Lbvserverscpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Lbvserversyslogpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Sc                     string `json:"sc,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Lbmonitorcertkeybinding struct {
-	Certkeyname string `json:"certkeyname,omitempty"`
-	Ca          bool   `json:"ca,omitempty"`
-	Crlcheck    string `json:"crlcheck,omitempty"`
-	Ocspcheck   string `json:"ocspcheck,omitempty"`
-	Monitorname string `json:"monitorname,omitempty"`
-}
-
-type Lbpolicybinding struct {
-	Name string `json:"name,omitempty"`
-}
-
-type Lbwlmbinding struct {
-	Wlmname string `json:"wlmname,omitempty"`
-}
-
-type Lbvservercachepolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Order                  int    `json:"order,omitempty"`
-}
-
-type Lbmonitorservicebinding struct {
-	Monitorname      string `json:"monitorname,omitempty"`
-	Servicename      string `json:"servicename,omitempty"`
-	Dupstate         string `json:"dup_state,omitempty"`
-	Dupweight        int    `json:"dup_weight,omitempty"`
-	Servicegroupname string `json:"servicegroupname,omitempty"`
-	State            string `json:"state,omitempty"`
-	Weight           int    `json:"weight,omitempty"`
-}
-
-type Lbpolicylbglobalbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Lbprofile struct {
-	Lbprofilename                 string `json:"lbprofilename,omitempty"`
-	Dbslb                         string `json:"dbslb,omitempty"`
-	Processlocal                  string `json:"processlocal,omitempty"`
-	Httponlycookieflag            string `json:"httponlycookieflag,omitempty"`
-	Cookiepassphrase              string `json:"cookiepassphrase,omitempty"`
-	Usesecuredpersistencecookie   string `json:"usesecuredpersistencecookie,omitempty"`
-	Useencryptedpersistencecookie string `json:"useencryptedpersistencecookie,omitempty"`
-	Literaladccookieattribute     string `json:"literaladccookieattribute,omitempty"`
-	Computedadccookieattribute    string `json:"computedadccookieattribute,omitempty"`
-	Storemqttclientidandusername  string `json:"storemqttclientidandusername,omitempty"`
-	Lbhashalgorithm               string `json:"lbhashalgorithm,omitempty"`
-	Lbhashfingers                 int    `json:"lbhashfingers,omitempty"`
-	Proximityfromself             string `json:"proximityfromself,omitempty"`
-	Vsvrcount                     string `json:"vsvrcount,omitempty"`
-	Adccookieattributewarningmsg  string `json:"adccookieattributewarningmsg,omitempty"`
-	Lbhashalgowinsize             string `json:"lbhashalgowinsize,omitempty"`
-	Nextgenapiresource            string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Lbvserveranalyticsprofilebinding struct {
-	Analyticsprofile string `json:"analyticsprofile,omitempty"`
-	Name             string `json:"name,omitempty"`
-	Order            int    `json:"order,omitempty"`
-}
-
-type Lbvservercsvserverbinding struct {
-	Cachevserver  string `json:"cachevserver,omitempty"`
-	Policyname    string `json:"policyname,omitempty"`
-	Cachetype     string `json:"cachetype,omitempty"`
-	Priority      int    `json:"priority,omitempty"`
-	Hits          int    `json:"hits,omitempty"`
-	Pipolicyhits  int    `json:"pipolicyhits,omitempty"`
-	Policysubtype int    `json:"policysubtype,omitempty"`
-	Name          string `json:"name,omitempty"`
-	Order         int    `json:"order,omitempty"`
-}
-
-type Lbvserverdetectionpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Lbvserverdospolicybinding struct {
-	Policyname string `json:"policyname,omitempty"`
-	Priority   int    `json:"priority,omitempty"`
-	Name       string `json:"name,omitempty"`
-}
-
-type Lbvserverspilloverpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Order                  int    `json:"order,omitempty"`
-}
-
-type Lbwlm struct {
-	Wlmname            string `json:"wlmname,omitempty"`
-	Ipaddress          string `json:"ipaddress,omitempty"`
-	Port               int    `json:"port,omitempty"`
-	Lbuid              string `json:"lbuid,omitempty"`
-	Katimeout          int    `json:"katimeout,omitempty"`
-	Secure             string `json:"secure,omitempty"`
-	State              string `json:"state,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Lbgloballbpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Type                   string `json:"type,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Numpol                 int    `json:"numpol,omitempty"`
-	Flowtype               int    `json:"flowtype,omitempty"`
-	Globalbindtype         string `json:"globalbindtype,omitempty"`
-}
-
-type Lbmetrictablemetricbinding struct {
-	Metric      string `json:"metric,omitempty"`
-	Snmpoid     string `json:"Snmpoid,omitempty"`
-	Metrictype  string `json:"metrictype,omitempty"`
-	Metrictable string `json:"metrictable,omitempty"`
-}
-
-type Lbmonitormetricbinding struct {
-	Metric          string `json:"metric,omitempty"`
-	Metrictable     string `json:"metrictable,omitempty"`
-	Metricunit      string `json:"metric_unit,omitempty"`
-	Metricweight    int    `json:"metricweight,omitempty"`
-	Metricthreshold int    `json:"metricthreshold,omitempty"`
-	Monitorname     string `json:"monitorname,omitempty"`
-}
-
-type Lbpersistentsessions struct {
-	Vserver              string `json:"vserver,omitempty"`
-	Nodeid               int    `json:"nodeid,omitempty"`
-	Persistenceparameter string `json:"persistenceparameter,omitempty"`
-	Type                 string `json:"type,omitempty"`
-	Typestring           string `json:"typestring,omitempty"`
-	Srcip                string `json:"srcip,omitempty"`
-	Srcipv6              string `json:"srcipv6,omitempty"`
-	Destip               string `json:"destip,omitempty"`
-	Destipv6             string `json:"destipv6,omitempty"`
-	Flags                string `json:"flags,omitempty"`
-	Destport             string `json:"destport,omitempty"`
-	Vservername          string `json:"vservername,omitempty"`
-	Timeout              string `json:"timeout,omitempty"`
-	Referencecount       string `json:"referencecount,omitempty"`
-	Persistenceparam     string `json:"persistenceparam,omitempty"`
-	Cnamepersparam       string `json:"cnamepersparam,omitempty"`
-	Nextgenapiresource   string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Lbroute6 struct {
-	Network            string `json:"network,omitempty"`
-	Gatewayname        string `json:"gatewayname,omitempty"`
-	Td                 int    `json:"td,omitempty"`
-	Flags              string `json:"flags,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Lbvserverpacingpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Lbvserverpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Sc                     string `json:"sc,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Lbvserverresponderpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Order                  int    `json:"order,omitempty"`
-}
-
-type Lbgroup struct {
-	Name                     string `json:"name,omitempty"`
-	Persistencetype          string `json:"persistencetype,omitempty"`
-	Persistencebackup        string `json:"persistencebackup,omitempty"`
-	Backuppersistencetimeout int    `json:"backuppersistencetimeout,omitempty"`
-	Persistmask              string `json:"persistmask,omitempty"`
-	Cookiename               string `json:"cookiename,omitempty"`
-	V6persistmasklen         int    `json:"v6persistmasklen,omitempty"`
-	Cookiedomain             string `json:"cookiedomain,omitempty"`
-	Timeout                  int    `json:"timeout,omitempty"`
-	Rule                     string `json:"rule,omitempty"`
-	Mastervserver            string `json:"mastervserver,omitempty"`
-	Usevserverpersistency    string `json:"usevserverpersistency,omitempty"`
-	Newname                  string `json:"newname,omitempty"`
-	Td                       string `json:"td,omitempty"`
-	Nextgenapiresource       string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Lbvserverservicegroupbinding struct {
-	Servicegroupname string `json:"servicegroupname,omitempty"`
-	Servicename      string `json:"servicename,omitempty"`
-	Order            int    `json:"order,omitempty"`
-	Name             string `json:"name,omitempty"`
-	Weight           int    `json:"weight,omitempty"`
-}
-
-type Lbvservertrafficpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Lbvservervideooptimizationdetectionpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Order                  int    `json:"order,omitempty"`
-}
-
-type Lbwlmlbvserverbinding struct {
-	Vservername string `json:"vservername,omitempty"`
-	Wlmname     string `json:"wlmname,omitempty"`
-}
-
-type Lbwlmvserverbinding struct {
-	Vservername string `json:"vservername,omitempty"`
-	Wlmname     string `json:"wlmname,omitempty"`
-}
-
-type Lbvservercmppolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Order                  int    `json:"order,omitempty"`
-}
-
-type Lbvserverpolicy64binding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Lbpolicylabelpolicybindingbinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Invokelabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Lbvserverappflowpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Order                  int    `json:"order,omitempty"`
-}
-
-type Lbvserverauthorizationpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Order                  int    `json:"order,omitempty"`
-}
-
-type Lbvservernslogpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               uint32 `json:"priority,omitempty"`
-	Sc                     string `json:"sc,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Lbvservertmtrafficpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Order                  int    `json:"order,omitempty"`
-}
-
-type Lbvservervserverbinding struct {
-	Cachevserver  string `json:"cachevserver,omitempty"`
-	Policyname    string `json:"policyname,omitempty"`
-	Cachetype     string `json:"cachetype,omitempty"`
-	Priority      uint32 `json:"priority,omitempty"`
-	Hits          uint32 `json:"hits,omitempty"`
-	Pipolicyhits  uint32 `json:"pipolicyhits,omitempty"`
-	Policysubtype uint32 `json:"policysubtype,omitempty"`
-	Name          string `json:"name,omitempty"`
-	Labelname     string `json:"labelname,omitempty"`
-}
-
-type Lbaction struct {
-	Name               string `json:"name,omitempty"`
-	Type               string `json:"type,omitempty"`
-	Value              []int  `json:"value,omitempty"`
-	Comment            string `json:"comment,omitempty"`
-	Newname            string `json:"newname,omitempty"`
-	Hits               string `json:"hits,omitempty"`
-	Referencecount     string `json:"referencecount,omitempty"`
-	Undefhits          string `json:"undefhits,omitempty"`
-	Feature            string `json:"feature,omitempty"`
-	Builtin            string `json:"builtin,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Lbglobalbinding struct {
-}
-
-type Lbgroupvserverbinding struct {
-	Vservername string `json:"vservername,omitempty"`
-	Name        string `json:"name,omitempty"`
-}
-
-type Lbmonitor struct {
-	Monitorname                      string   `json:"monitorname,omitempty"`
-	Type                             string   `json:"type,omitempty"`
-	Action                           string   `json:"action,omitempty"`
-	Respcode                         []string `json:"respcode,omitempty"`
-	Httprequest                      string   `json:"httprequest,omitempty"`
-	Rtsprequest                      string   `json:"rtsprequest,omitempty"`
-	Customheaders                    string   `json:"customheaders,omitempty"`
-	Maxforwards                      int      `json:"maxforwards,omitempty"`
-	Sipmethod                        string   `json:"sipmethod,omitempty"`
-	Sipuri                           string   `json:"sipuri,omitempty"`
-	Sipreguri                        string   `json:"sipreguri,omitempty"`
-	Send                             string   `json:"send,omitempty"`
-	Recv                             string   `json:"recv,omitempty"`
-	Query                            string   `json:"query,omitempty"`
-	Querytype                        string   `json:"querytype,omitempty"`
-	Scriptname                       string   `json:"scriptname,omitempty"`
-	Scriptargs                       string   `json:"scriptargs,omitempty"`
-	Secureargs                       string   `json:"secureargs,omitempty"`
-	Dispatcherip                     string   `json:"dispatcherip,omitempty"`
-	Dispatcherport                   int      `json:"dispatcherport,omitempty"`
-	Username                         string   `json:"username,omitempty"`
-	Password                         string   `json:"password,omitempty"`
-	Secondarypassword                string   `json:"secondarypassword,omitempty"`
-	Logonpointname                   string   `json:"logonpointname,omitempty"`
-	Lasversion                       string   `json:"lasversion,omitempty"`
-	Radkey                           string   `json:"radkey,omitempty"`
-	Radnasid                         string   `json:"radnasid,omitempty"`
-	Radnasip                         string   `json:"radnasip,omitempty"`
-	Radaccounttype                   int      `json:"radaccounttype,omitempty"`
-	Radframedip                      string   `json:"radframedip,omitempty"`
-	Radapn                           string   `json:"radapn,omitempty"`
-	Radmsisdn                        string   `json:"radmsisdn,omitempty"`
-	Radaccountsession                string   `json:"radaccountsession,omitempty"`
-	Lrtm                             string   `json:"lrtm,omitempty"`
-	Deviation                        int      `json:"deviation"`
-	Units1                           string   `json:"units1,omitempty"`
-	Interval                         int      `json:"interval,omitempty"`
-	Units3                           string   `json:"units3,omitempty"`
-	Resptimeout                      int      `json:"resptimeout,omitempty"`
-	Units4                           string   `json:"units4,omitempty"`
-	Resptimeoutthresh                int      `json:"resptimeoutthresh,omitempty"`
-	Retries                          int      `json:"retries,omitempty"`
-	Failureretries                   int      `json:"failureretries,omitempty"`
-	Alertretries                     int      `json:"alertretries,omitempty"`
-	Successretries                   int      `json:"successretries,omitempty"`
-	Downtime                         int      `json:"downtime,omitempty"`
-	Units2                           string   `json:"units2,omitempty"`
-	Destip                           string   `json:"destip,omitempty"`
-	Destport                         int      `json:"destport,omitempty"`
-	State                            string   `json:"state,omitempty"`
-	Reverse                          string   `json:"reverse,omitempty"`
-	Transparent                      string   `json:"transparent,omitempty"`
-	Iptunnel                         string   `json:"iptunnel,omitempty"`
-	Tos                              string   `json:"tos,omitempty"`
-	Tosid                            int      `json:"tosid,omitempty"`
-	Secure                           string   `json:"secure,omitempty"`
-	Validatecred                     string   `json:"validatecred,omitempty"`
-	Domain                           string   `json:"domain,omitempty"`
-	Ipaddress                        []string `json:"ipaddress,omitempty"`
-	Group                            string   `json:"group,omitempty"`
-	Filename                         string   `json:"filename,omitempty"`
-	Basedn                           string   `json:"basedn,omitempty"`
-	Binddn                           string   `json:"binddn,omitempty"`
-	Filter                           string   `json:"filter,omitempty"`
-	Attribute                        string   `json:"attribute,omitempty"`
-	Database                         string   `json:"database,omitempty"`
-	Oraclesid                        string   `json:"oraclesid,omitempty"`
-	Sqlquery                         string   `json:"sqlquery,omitempty"`
-	Evalrule                         string   `json:"evalrule,omitempty"`
-	Mssqlprotocolversion             string   `json:"mssqlprotocolversion,omitempty"`
-	Snmpoid                          string   `json:"Snmpoid,omitempty"`
-	Snmpcommunity                    string   `json:"snmpcommunity,omitempty"`
-	Snmpthreshold                    string   `json:"snmpthreshold,omitempty"`
-	Snmpversion                      string   `json:"snmpversion,omitempty"`
-	Metrictable                      string   `json:"metrictable,omitempty"`
-	Application                      string   `json:"application,omitempty"`
-	Sitepath                         string   `json:"sitepath,omitempty"`
-	Storename                        string   `json:"storename,omitempty"`
-	Storefrontacctservice            string   `json:"storefrontacctservice,omitempty"`
-	Hostname                         string   `json:"hostname,omitempty"`
-	Netprofile                       string   `json:"netprofile,omitempty"`
-	Originhost                       string   `json:"originhost,omitempty"`
-	Originrealm                      string   `json:"originrealm,omitempty"`
-	Hostipaddress                    string   `json:"hostipaddress,omitempty"`
-	Vendorid                         int      `json:"vendorid,omitempty"`
-	Productname                      string   `json:"productname,omitempty"`
-	Firmwarerevision                 int      `json:"firmwarerevision,omitempty"`
-	Authapplicationid                []int    `json:"authapplicationid,omitempty"`
-	Acctapplicationid                []int    `json:"acctapplicationid,omitempty"`
-	Inbandsecurityid                 string   `json:"inbandsecurityid,omitempty"`
-	Supportedvendorids               []int    `json:"supportedvendorids,omitempty"`
-	Vendorspecificvendorid           int      `json:"vendorspecificvendorid,omitempty"`
-	Vendorspecificauthapplicationids []int    `json:"vendorspecificauthapplicationids,omitempty"`
-	Vendorspecificacctapplicationids []int    `json:"vendorspecificacctapplicationids,omitempty"`
-	Kcdaccount                       string   `json:"kcdaccount,omitempty"`
-	Storedb                          string   `json:"storedb,omitempty"`
-	Storefrontcheckbackendservices   string   `json:"storefrontcheckbackendservices,omitempty"`
-	Trofscode                        int      `json:"trofscode,omitempty"`
-	Trofsstring                      string   `json:"trofsstring,omitempty"`
-	Sslprofile                       string   `json:"sslprofile,omitempty"`
-	Mqttclientidentifier             string   `json:"mqttclientidentifier,omitempty"`
-	Mqttversion                      int      `json:"mqttversion,omitempty"`
-	Grpchealthcheck                  string   `json:"grpchealthcheck,omitempty"`
-	Grpcstatuscode                   []int    `json:"grpcstatuscode,omitempty"`
-	Grpcservicename                  string   `json:"grpcservicename,omitempty"`
-	Metric                           string   `json:"metric,omitempty"`
-	Metricthreshold                  int      `json:"metricthreshold,omitempty"`
-	Metricweight                     int      `json:"metricweight,omitempty"`
-	Servicename                      string   `json:"servicename,omitempty"`
-	Servicegroupname                 string   `json:"servicegroupname,omitempty"`
-	Lrtmconf                         string   `json:"lrtmconf,omitempty"`
-	Lrtmconfstr                      string   `json:"lrtmconfstr,omitempty"`
-	Dynamicresponsetimeout           string   `json:"dynamicresponsetimeout,omitempty"`
-	Dynamicinterval                  string   `json:"dynamicinterval,omitempty"`
-	Multimetrictable                 string   `json:"multimetrictable,omitempty"`
-	Dupstate                         string   `json:"dup_state,omitempty"`
-	Dupweight                        string   `json:"dup_weight,omitempty"`
-	Weight                           string   `json:"weight,omitempty"`
-	Nextgenapiresource               string   `json:"_nextgenapiresource,omitempty"`
-}
-
-type Lbmonitorbinding struct {
-	Monitorname string `json:"monitorname,omitempty"`
-}
-
-type Lbmonitorsslcertkeybinding struct {
-	Certkeyname string `json:"certkeyname,omitempty"`
-	Ca          bool   `json:"ca,omitempty"`
-	Crlcheck    string `json:"crlcheck,omitempty"`
-	Ocspcheck   string `json:"ocspcheck,omitempty"`
-	Monitorname string `json:"monitorname,omitempty"`
-}
-
-type Lbpolicylabelbinding struct {
-	Labelname string `json:"labelname,omitempty"`
-}
-
-type Lbvserverappfwpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Order                  int    `json:"order,omitempty"`
-}
-
-type Lbpolicylbpolicylabelbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-}
-
-type Lbvserverlbpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Order                  int    `json:"order,omitempty"`
-}
-
-type Lbvserverrewritepolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Order                  int    `json:"order,omitempty"`
-}
-
-type LBVServerServiceGroupMemberBinding struct {
-	CookieIPPort      string `json:"cookieipport,omitempty"`
-	CookieName        string `json:"cookiename,omitempty"`
-	CurState          string `json:"curstate,omitempty"`
-	DynamicWeight     string `json:"dynamicweight,omitempty"`
-	Ipv46             string `json:"ipv46,omitempty"`
-	Name              string `json:"name,omitempty"`
-	Order             string `json:"order,omitempty"`
-	OrderStr          string `json:"orderstr,omitempty"`
-	Port              int    `json:"port,omitempty"`
-	PreferredLocation string `json:"preferredlocation,omitempty"`
-	ServiceGroupName  string `json:"servicegroupname,omitempty"`
-	ServiceType       string `json:"servicetype,omitempty"`
-	VServerid         string `json:"vserverid,omitempty"`
-	Weight            string `json:"weight,omitempty"`
-}
-
-type Lbmonbindingsbinding struct {
-	Monitorname string `json:"monitorname,omitempty"`
-}
-
-type Lbmonbindingsservicegroupbinding struct {
-	Servicegroupname          string `json:"servicegroupname,omitempty"`
-	Servicetype               string `json:"servicetype,omitempty"`
-	Boundservicegroupsvrstate string `json:"boundservicegroupsvrstate,omitempty"`
-	Monstate                  string `json:"monstate,omitempty"`
-	Monitorname               string `json:"monitorname,omitempty"`
-}
-
-type Lbroute struct {
-	Network            string `json:"network,omitempty"`
-	Netmask            string `json:"netmask,omitempty"`
-	Gatewayname        string `json:"gatewayname,omitempty"`
-	Td                 int    `json:"td,omitempty"`
-	Flags              string `json:"flags,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-}
-
-type Lbvserverbinding struct {
-	Name string `json:"name,omitempty"`
-}
-
-type Lbvserverpqpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-}
-
-type Lbgrouplbvserverbinding struct {
-	Vservername string `json:"vservername,omitempty"`
-	Name        string `json:"name,omitempty"`
 }
 
 type Lbmonbindings struct {
-	Monitorname               string `json:"monitorname,omitempty"`
-	Type                      string `json:"type,omitempty"`
-	State                     string `json:"state,omitempty"`
-	Boundservicegroupsvrstate string `json:"boundservicegroupsvrstate,omitempty"`
-	Nextgenapiresource        string `json:"_nextgenapiresource,omitempty"`
+	Boundservicegroupsvrstate string  `json:"boundservicegroupsvrstate,omitempty"`
+	Count                     float64 `json:"__count,omitempty"`
+	Monitorname               string  `json:"monitorname,omitempty"`
+	Nextgenapiresource        string  `json:"_nextgenapiresource,omitempty"`
+	State                     string  `json:"state,omitempty"`
+	TypeField                 string  `json:"type,omitempty"`
 }
 
-type Lbpolicylbvserverbinding struct {
-	Boundto                string `json:"boundto,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Activepolicy           int    `json:"activepolicy,omitempty"`
+type LbvserverCsvserverBinding struct {
+	Cachetype     string `json:"cachetype,omitempty"`
+	Cachevserver  string `json:"cachevserver,omitempty"`
+	Hits          int    `json:"hits,omitempty"`
+	Name          string `json:"name,omitempty"`
+	Order         int    `json:"order,omitempty"`
+	Pipolicyhits  int    `json:"pipolicyhits,omitempty"`
+	Policyname    string `json:"policyname,omitempty"`
+	Policysubtype int    `json:"policysubtype,omitempty"`
+	Priority      int    `json:"priority,omitempty"`
+}
+
+type LbmonitorBinding struct {
+	LbmonitorMetricBinding     []interface{} `json:"lbmonitor_metric_binding,omitempty"`
+	LbmonitorSslcertkeyBinding []interface{} `json:"lbmonitor_sslcertkey_binding,omitempty"`
+	Monitorname                string        `json:"monitorname,omitempty"`
+}
+
+type LbmonbindingsBinding struct {
+	LbmonbindingsGslbservicegroupBinding []interface{} `json:"lbmonbindings_gslbservicegroup_binding,omitempty"`
+	LbmonbindingsServiceBinding          []interface{} `json:"lbmonbindings_service_binding,omitempty"`
+	LbmonbindingsServicegroupBinding     []interface{} `json:"lbmonbindings_servicegroup_binding,omitempty"`
+	Monitorname                          string        `json:"monitorname,omitempty"`
+}
+
+type LbvserverBotpolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
 	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type Lbroute6 struct {
+	Count              float64 `json:"__count,omitempty"`
+	Flags              string  `json:"flags,omitempty"`
+	Gatewayname        string  `json:"gatewayname,omitempty"`
+	Network            string  `json:"network,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Td                 int     `json:"td,omitempty"`
+}
+
+type LbpolicyGslbvserverBinding struct {
+	Activepolicy           int    `json:"activepolicy,omitempty"`
+	Boundto                string `json:"boundto,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type LbvserverResponderpolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type LbmonbindingsServiceBinding struct {
+	Ipaddress   string `json:"ipaddress,omitempty"`
+	Monitorname string `json:"monitorname,omitempty"`
+	Monsvcstate string `json:"monsvcstate,omitempty"`
+	Port        int    `json:"port,omitempty"`
+	Servicename string `json:"servicename,omitempty"`
+	Servicetype string `json:"servicetype,omitempty"`
+	Svrstate    string `json:"svrstate,omitempty"`
+}
+
+type LbvserverTransformpolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type Lbaction struct {
+	Builtin            []string      `json:"builtin,omitempty"`
+	Comment            string        `json:"comment,omitempty"`
+	Count              float64       `json:"__count,omitempty"`
+	Feature            string        `json:"feature,omitempty"`
+	Hits               int           `json:"hits,omitempty"`
+	Name               string        `json:"name,omitempty"`
+	Newname            string        `json:"newname,omitempty"`
+	Nextgenapiresource string        `json:"_nextgenapiresource,omitempty"`
+	Referencecount     int           `json:"referencecount,omitempty"`
+	TypeField          string        `json:"type,omitempty"`
+	Undefhits          int           `json:"undefhits,omitempty"`
+	Value              []interface{} `json:"value,omitempty"`
+}
+
+type LbvserverAuditsyslogpolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type LbglobalBinding struct {
+	LbglobalLbpolicyBinding []interface{} `json:"lbglobal_lbpolicy_binding,omitempty"`
+}
+
+type LbvserverAppflowpolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type Lbroute struct {
+	Count              float64 `json:"__count,omitempty"`
+	Flags              string  `json:"flags,omitempty"`
+	Gatewayname        string  `json:"gatewayname,omitempty"`
+	Netmask            string  `json:"netmask,omitempty"`
+	Network            string  `json:"network,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Td                 int     `json:"td,omitempty"`
+}
+
+type LbmonitorServiceBinding struct {
+	DupState         string `json:"dup_state,omitempty"`
+	DupWeight        int    `json:"dup_weight,omitempty"`
+	Monitorname      string `json:"monitorname,omitempty"`
+	Servicegroupname string `json:"servicegroupname,omitempty"`
+	Servicename      string `json:"servicename,omitempty"`
+	State            string `json:"state,omitempty"`
+	Weight           int    `json:"weight,omitempty"`
+}
+
+type LbvserverAppfwpolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type LbvserverCachepolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type LbvserverBinding struct {
+	LbvserverAnalyticsprofileBinding                 []interface{} `json:"lbvserver_analyticsprofile_binding,omitempty"`
+	LbvserverAppflowpolicyBinding                    []interface{} `json:"lbvserver_appflowpolicy_binding,omitempty"`
+	LbvserverAppfwpolicyBinding                      []interface{} `json:"lbvserver_appfwpolicy_binding,omitempty"`
+	LbvserverAppqoepolicyBinding                     []interface{} `json:"lbvserver_appqoepolicy_binding,omitempty"`
+	LbvserverAuditnslogpolicyBinding                 []interface{} `json:"lbvserver_auditnslogpolicy_binding,omitempty"`
+	LbvserverAuditsyslogpolicyBinding                []interface{} `json:"lbvserver_auditsyslogpolicy_binding,omitempty"`
+	LbvserverAuthorizationpolicyBinding              []interface{} `json:"lbvserver_authorizationpolicy_binding,omitempty"`
+	LbvserverBotpolicyBinding                        []interface{} `json:"lbvserver_botpolicy_binding,omitempty"`
+	LbvserverCachepolicyBinding                      []interface{} `json:"lbvserver_cachepolicy_binding,omitempty"`
+	LbvserverCmppolicyBinding                        []interface{} `json:"lbvserver_cmppolicy_binding,omitempty"`
+	LbvserverContentinspectionpolicyBinding          []interface{} `json:"lbvserver_contentinspectionpolicy_binding,omitempty"`
+	LbvserverCsvserverBinding                        []interface{} `json:"lbvserver_csvserver_binding,omitempty"`
+	LbvserverDnspolicy64Binding                      []interface{} `json:"lbvserver_dnspolicy64_binding,omitempty"`
+	LbvserverFeopolicyBinding                        []interface{} `json:"lbvserver_feopolicy_binding,omitempty"`
+	LbvserverLbpolicyBinding                         []interface{} `json:"lbvserver_lbpolicy_binding,omitempty"`
+	LbvserverResponderpolicyBinding                  []interface{} `json:"lbvserver_responderpolicy_binding,omitempty"`
+	LbvserverRewritepolicyBinding                    []interface{} `json:"lbvserver_rewritepolicy_binding,omitempty"`
+	LbvserverServiceBinding                          []interface{} `json:"lbvserver_service_binding,omitempty"`
+	LbvserverServicegroupBinding                     []interface{} `json:"lbvserver_servicegroup_binding,omitempty"`
+	LbvserverServicegroupmemberBinding               []interface{} `json:"lbvserver_servicegroupmember_binding,omitempty"`
+	LbvserverSpilloverpolicyBinding                  []interface{} `json:"lbvserver_spilloverpolicy_binding,omitempty"`
+	LbvserverTmtrafficpolicyBinding                  []interface{} `json:"lbvserver_tmtrafficpolicy_binding,omitempty"`
+	LbvserverTransformpolicyBinding                  []interface{} `json:"lbvserver_transformpolicy_binding,omitempty"`
+	LbvserverVideooptimizationdetectionpolicyBinding []interface{} `json:"lbvserver_videooptimizationdetectionpolicy_binding,omitempty"`
+	LbvserverVideooptimizationpacingpolicyBinding    []interface{} `json:"lbvserver_videooptimizationpacingpolicy_binding,omitempty"`
+	Name                                             string        `json:"name,omitempty"`
+}
+
+type LbpolicylabelPolicybindingBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	InvokeLabelname        string `json:"invoke_labelname,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type LbvserverContentinspectionpolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type LbglobalLbpolicyBinding struct {
+	Flowtype               int    `json:"flowtype,omitempty"`
+	Globalbindtype         string `json:"globalbindtype,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Numpol                 int    `json:"numpol,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+	TypeField              string `json:"type,omitempty"`
+}
+
+type LbvserverServiceBinding struct {
+	Cookieipport      string `json:"cookieipport,omitempty"`
+	Cookiename        string `json:"cookiename,omitempty"`
+	Curstate          string `json:"curstate,omitempty"`
+	Dynamicweight     int    `json:"dynamicweight,omitempty"`
+	Ipv46             string `json:"ipv46,omitempty"`
+	Name              string `json:"name,omitempty"`
+	Order             int    `json:"order,omitempty"`
+	Orderstr          string `json:"orderstr,omitempty"`
+	Port              int    `json:"port,omitempty"`
+	Preferredlocation string `json:"preferredlocation,omitempty"`
+	Servicegroupname  string `json:"servicegroupname,omitempty"`
+	Servicename       string `json:"servicename,omitempty"`
+	Servicetype       string `json:"servicetype,omitempty"`
+	Vserverid         string `json:"vserverid,omitempty"`
+	Vsvrbindsvcip     string `json:"vsvrbindsvcip,omitempty"`
+	Vsvrbindsvcport   int    `json:"vsvrbindsvcport,omitempty"`
+	Weight            int    `json:"weight,omitempty"`
+}
+
+type LbvserverAppqoepolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type LbpolicyLbglobalBinding struct {
+	Activepolicy           int    `json:"activepolicy,omitempty"`
+	Boundto                string `json:"boundto,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type Lbgroup struct {
+	Backuppersistencetimeout int     `json:"backuppersistencetimeout,omitempty"`
+	Cookiedomain             string  `json:"cookiedomain,omitempty"`
+	Cookiename               string  `json:"cookiename,omitempty"`
+	Count                    float64 `json:"__count,omitempty"`
+	Mastervserver            string  `json:"mastervserver,omitempty"`
+	Name                     string  `json:"name,omitempty"`
+	Newname                  string  `json:"newname,omitempty"`
+	Nextgenapiresource       string  `json:"_nextgenapiresource,omitempty"`
+	Persistencebackup        string  `json:"persistencebackup,omitempty"`
+	Persistencetype          string  `json:"persistencetype,omitempty"`
+	Persistmask              string  `json:"persistmask,omitempty"`
+	Rule                     string  `json:"rule,omitempty"`
+	Td                       int     `json:"td,omitempty"`
+	Timeout                  int     `json:"timeout,omitempty"`
+	Usevserverpersistency    string  `json:"usevserverpersistency,omitempty"`
+	V6persistmasklen         int     `json:"v6persistmasklen,omitempty"`
+}
+
+type LbpolicylabelLbpolicyBinding struct {
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	InvokeLabelname        string `json:"invoke_labelname,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type Lbsipparameters struct {
+	Addrportvip         string   `json:"addrportvip,omitempty"`
+	Builtin             []string `json:"builtin,omitempty"`
+	Feature             string   `json:"feature,omitempty"`
+	Nextgenapiresource  string   `json:"_nextgenapiresource,omitempty"`
+	Retrydur            int      `json:"retrydur,omitempty"`
+	Rnatdstport         int      `json:"rnatdstport,omitempty"`
+	Rnatsecuredstport   int      `json:"rnatsecuredstport,omitempty"`
+	Rnatsecuresrcport   int      `json:"rnatsecuresrcport,omitempty"`
+	Rnatsrcport         int      `json:"rnatsrcport,omitempty"`
+	Sip503ratethreshold int      `json:"sip503ratethreshold,omitempty"`
+}
+
+type LbvserverAnalyticsprofileBinding struct {
+	Analyticsprofile string `json:"analyticsprofile,omitempty"`
+	Name             string `json:"name,omitempty"`
+	Order            int    `json:"order,omitempty"`
+}
+
+type LbwlmLbvserverBinding struct {
+	Vservername string `json:"vservername,omitempty"`
+	Wlmname     string `json:"wlmname,omitempty"`
+}
+
+type LbvserverCmppolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type LBVServer struct {
+	Activeservices                     int           `json:"activeservices,omitempty"`
+	Adfsproxyprofile                   string        `json:"adfsproxyprofile,omitempty"`
+	Apiprofile                         string        `json:"apiprofile,omitempty"`
+	Appflowlog                         string        `json:"appflowlog,omitempty"`
+	Authentication                     string        `json:"authentication,omitempty"`
+	Authenticationhost                 string        `json:"authenticationhost,omitempty"`
+	Authn401                           string        `json:"authn401,omitempty"`
+	Authnprofile                       string        `json:"authnprofile,omitempty"`
+	Authnvsname                        string        `json:"authnvsname,omitempty"`
+	Backuplbmethod                     string        `json:"backuplbmethod,omitempty"`
+	Backuppersistencetimeout           int           `json:"backuppersistencetimeout,omitempty"`
+	Backupvserver                      string        `json:"backupvserver,omitempty"`
+	Backupvserverstatus                string        `json:"backupvserverstatus,omitempty"`
+	Bindpoint                          string        `json:"bindpoint,omitempty"`
+	Bypassaaaa                         string        `json:"bypassaaaa,omitempty"`
+	Cacheable                          string        `json:"cacheable,omitempty"`
+	Cachevserver                       string        `json:"cachevserver,omitempty"`
+	Clttimeout                         int           `json:"clttimeout,omitempty"`
+	Comment                            string        `json:"comment,omitempty"`
+	Connfailover                       string        `json:"connfailover,omitempty"`
+	Consolidatedlconn                  string        `json:"consolidatedlconn,omitempty"`
+	Consolidatedlconngbl               string        `json:"consolidatedlconngbl,omitempty"`
+	Cookiedomain                       string        `json:"cookiedomain,omitempty"`
+	Cookiename                         string        `json:"cookiename,omitempty"`
+	Count                              float64       `json:"__count,omitempty"`
+	Currentactiveorder                 string        `json:"currentactiveorder,omitempty"`
+	Curstate                           string        `json:"curstate,omitempty"`
+	Datalength                         int           `json:"datalength,omitempty"`
+	Dataoffset                         int           `json:"dataoffset,omitempty"`
+	Dbprofilename                      string        `json:"dbprofilename,omitempty"`
+	Dbslb                              string        `json:"dbslb,omitempty"`
+	Disableprimaryondown               string        `json:"disableprimaryondown,omitempty"`
+	Dns64                              string        `json:"dns64,omitempty"`
+	Dnsoverhttps                       string        `json:"dnsoverhttps,omitempty"`
+	Dnsprofilename                     string        `json:"dnsprofilename,omitempty"`
+	Dnsvservername                     string        `json:"dnsvservername,omitempty"`
+	Domain                             string        `json:"domain,omitempty"`
+	Downstateflush                     string        `json:"downstateflush,omitempty"`
+	Effectivestate                     string        `json:"effectivestate,omitempty"`
+	Groupname                          string        `json:"groupname,omitempty"`
+	Gt2gb                              string        `json:"gt2gb,omitempty"`
+	Hashlength                         int           `json:"hashlength,omitempty"`
+	Health                             int           `json:"health,omitempty"`
+	Healththreshold                    int           `json:"healththreshold,omitempty"`
+	Homepage                           string        `json:"homepage,omitempty"`
+	Httpprofilename                    string        `json:"httpprofilename,omitempty"`
+	Httpsredirecturl                   string        `json:"httpsredirecturl,omitempty"`
+	Icmpvsrresponse                    string        `json:"icmpvsrresponse,omitempty"`
+	Insertvserveripport                string        `json:"insertvserveripport,omitempty"`
+	Ipmapping                          string        `json:"ipmapping,omitempty"`
+	Ipmask                             string        `json:"ipmask,omitempty"`
+	Ippattern                          string        `json:"ippattern,omitempty"`
+	Ipset                              string        `json:"ipset,omitempty"`
+	Ipv46                              string        `json:"ipv46,omitempty"`
+	Isgslb                             bool          `json:"isgslb,omitempty"`
+	L2conn                             string        `json:"l2conn,omitempty"`
+	Lbmethod                           string        `json:"lbmethod,omitempty"`
+	Lbprofilename                      string        `json:"lbprofilename,omitempty"`
+	Lbrrreason                         int           `json:"lbrrreason,omitempty"`
+	Listenpolicy                       string        `json:"listenpolicy,omitempty"`
+	Listenpriority                     int           `json:"listenpriority,omitempty"`
+	M                                  string        `json:"m,omitempty"`
+	Macmoderetainvlan                  string        `json:"macmoderetainvlan,omitempty"`
+	MapField                           string        `json:"map,omitempty"`
+	Maxautoscalemembers                int           `json:"maxautoscalemembers,omitempty"`
+	Minautoscalemembers                int           `json:"minautoscalemembers,omitempty"`
+	Mssqlserverversion                 string        `json:"mssqlserverversion,omitempty"`
+	Mysqlcharacterset                  int           `json:"mysqlcharacterset,omitempty"`
+	Mysqlprotocolversion               int           `json:"mysqlprotocolversion,omitempty"`
+	Mysqlservercapabilities            int           `json:"mysqlservercapabilities,omitempty"`
+	Mysqlserverversion                 string        `json:"mysqlserverversion,omitempty"`
+	Name                               string        `json:"name,omitempty"`
+	Netmask                            string        `json:"netmask,omitempty"`
+	Netprofile                         string        `json:"netprofile,omitempty"`
+	Newname                            string        `json:"newname,omitempty"`
+	Newservicerequest                  int           `json:"newservicerequest,omitempty"`
+	Newservicerequestincrementinterval int           `json:"newservicerequestincrementinterval,omitempty"`
+	Newservicerequestunit              string        `json:"newservicerequestunit,omitempty"`
+	Nextgenapiresource                 string        `json:"_nextgenapiresource,omitempty"`
+	Ngname                             string        `json:"ngname,omitempty"`
+	Nodefaultbindings                  string        `json:"nodefaultbindings,omitempty"`
+	Oracleserverversion                string        `json:"oracleserverversion,omitempty"`
+	Order                              int           `json:"order,omitempty"`
+	Orderthreshold                     int           `json:"orderthreshold,omitempty"`
+	Persistavpno                       []interface{} `json:"persistavpno,omitempty"`
+	Persistencebackup                  string        `json:"persistencebackup,omitempty"`
+	Persistencetype                    string        `json:"persistencetype,omitempty"`
+	Persistmask                        string        `json:"persistmask,omitempty"`
+	Port                               int           `json:"port,omitempty"`
+	Precedence                         string        `json:"precedence,omitempty"`
+	Probeport                          int           `json:"probeport,omitempty"`
+	Probeprotocol                      string        `json:"probeprotocol,omitempty"`
+	Probesuccessresponsecode           string        `json:"probesuccessresponsecode,omitempty"`
+	Processlocal                       string        `json:"processlocal,omitempty"`
+	Push                               string        `json:"push,omitempty"`
+	Pushlabel                          string        `json:"pushlabel,omitempty"`
+	Pushmulticlients                   string        `json:"pushmulticlients,omitempty"`
+	Pushvserver                        string        `json:"pushvserver,omitempty"`
+	Quicbridgeprofilename              string        `json:"quicbridgeprofilename,omitempty"`
+	Quicprofilename                    string        `json:"quicprofilename,omitempty"`
+	Range                              int           `json:"range,omitempty"`
+	Recursionavailable                 string        `json:"recursionavailable,omitempty"`
+	Redirect                           string        `json:"redirect,omitempty"`
+	Redirectfromport                   int           `json:"redirectfromport,omitempty"`
+	Redirectportrewrite                string        `json:"redirectportrewrite,omitempty"`
+	Redirurl                           string        `json:"redirurl,omitempty"`
+	Redirurlflags                      bool          `json:"redirurlflags,omitempty"`
+	Resrule                            string        `json:"resrule,omitempty"`
+	Retainconnectionsoncluster         string        `json:"retainconnectionsoncluster,omitempty"`
+	Rhistate                           string        `json:"rhistate,omitempty"`
+	Rtspnat                            string        `json:"rtspnat,omitempty"`
+	Rule                               string        `json:"rule,omitempty"`
+	Ruletype                           int           `json:"ruletype,omitempty"`
+	Servicename                        string        `json:"servicename,omitempty"`
+	Servicetype                        string        `json:"servicetype,omitempty"`
+	Sessionless                        string        `json:"sessionless,omitempty"`
+	Skippersistency                    string        `json:"skippersistency,omitempty"`
+	Sobackupaction                     string        `json:"sobackupaction,omitempty"`
+	Somethod                           string        `json:"somethod,omitempty"`
+	Sopersistence                      string        `json:"sopersistence,omitempty"`
+	Sopersistencetimeout               int           `json:"sopersistencetimeout,omitempty"`
+	Sothreshold                        int           `json:"sothreshold,omitempty"`
+	State                              string        `json:"state,omitempty"`
+	Statechangetimemsec                int           `json:"statechangetimemsec,omitempty"`
+	Statechangetimesec                 string        `json:"statechangetimesec,omitempty"`
+	Statechangetimeseconds             int           `json:"statechangetimeseconds,omitempty"`
+	Status                             int           `json:"status,omitempty"`
+	Tcpprobeport                       int           `json:"tcpprobeport,omitempty"`
+	Tcpprofilename                     string        `json:"tcpprofilename,omitempty"`
+	Td                                 int           `json:"td,omitempty"`
+	Thresholdvalue                     int           `json:"thresholdvalue,omitempty"`
+	Tickssincelaststatechange          int           `json:"tickssincelaststatechange,omitempty"`
+	Timeout                            int           `json:"timeout,omitempty"`
+	Toggleorder                        string        `json:"toggleorder,omitempty"`
+	Tosid                              int           `json:"tosid,omitempty"`
+	Totalservices                      int           `json:"totalservices,omitempty"`
+	Trofspersistence                   string        `json:"trofspersistence,omitempty"`
+	TypeField                          string        `json:"type,omitempty"`
+	V6netmasklen                       int           `json:"v6netmasklen,omitempty"`
+	V6persistmasklen                   int           `json:"v6persistmasklen,omitempty"`
+	Value                              string        `json:"value,omitempty"`
+	Version                            int           `json:"version,omitempty"`
+	Vipheader                          string        `json:"vipheader,omitempty"`
+	Vsvrdynconnsothreshold             int           `json:"vsvrdynconnsothreshold,omitempty"`
+	Weight                             int           `json:"weight,omitempty"`
+}
+
+type LbvserverTmtrafficpolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type Lbmonitor struct {
+	Acctapplicationid                []interface{} `json:"acctapplicationid,omitempty"`
+	Action                           string        `json:"action,omitempty"`
+	Alertretries                     int           `json:"alertretries,omitempty"`
+	Application                      string        `json:"application,omitempty"`
+	Attribute                        string        `json:"attribute,omitempty"`
+	Authapplicationid                []interface{} `json:"authapplicationid,omitempty"`
+	Basedn                           string        `json:"basedn,omitempty"`
+	Binddn                           string        `json:"binddn,omitempty"`
+	Count                            float64       `json:"__count,omitempty"`
+	Customheaders                    string        `json:"customheaders,omitempty"`
+	Database                         string        `json:"database,omitempty"`
+	Destip                           string        `json:"destip,omitempty"`
+	Destport                         int           `json:"destport,omitempty"`
+	Deviation                        int           `json:"deviation,omitempty"`
+	Dispatcherip                     string        `json:"dispatcherip,omitempty"`
+	Dispatcherport                   int           `json:"dispatcherport,omitempty"`
+	Domain                           string        `json:"domain,omitempty"`
+	Downtime                         int           `json:"downtime,omitempty"`
+	DupState                         string        `json:"dup_state,omitempty"`
+	DupWeight                        int           `json:"dup_weight,omitempty"`
+	Dynamicinterval                  int           `json:"dynamicinterval,omitempty"`
+	Dynamicresponsetimeout           int           `json:"dynamicresponsetimeout,omitempty"`
+	Evalrule                         string        `json:"evalrule,omitempty"`
+	Failureretries                   int           `json:"failureretries,omitempty"`
+	Filename                         string        `json:"filename,omitempty"`
+	Filter                           string        `json:"filter,omitempty"`
+	Firmwarerevision                 int           `json:"firmwarerevision,omitempty"`
+	Group                            string        `json:"group,omitempty"`
+	Grpchealthcheck                  string        `json:"grpchealthcheck,omitempty"`
+	Grpcservicename                  string        `json:"grpcservicename,omitempty"`
+	Grpcstatuscode                   []interface{} `json:"grpcstatuscode,omitempty"`
+	Hostipaddress                    string        `json:"hostipaddress,omitempty"`
+	Hostname                         string        `json:"hostname,omitempty"`
+	Httprequest                      string        `json:"httprequest,omitempty"`
+	Inbandsecurityid                 string        `json:"inbandsecurityid,omitempty"`
+	Interval                         int           `json:"interval,omitempty"`
+	Ipaddress                        []string      `json:"ipaddress,omitempty"`
+	Iptunnel                         string        `json:"iptunnel,omitempty"`
+	Kcdaccount                       string        `json:"kcdaccount,omitempty"`
+	Lasversion                       string        `json:"lasversion,omitempty"`
+	Logonpointname                   string        `json:"logonpointname,omitempty"`
+	Lrtm                             string        `json:"lrtm,omitempty"`
+	Lrtmconf                         int           `json:"lrtmconf,omitempty"`
+	Lrtmconfstr                      string        `json:"lrtmconfstr,omitempty"`
+	Maxforwards                      int           `json:"maxforwards,omitempty"`
+	Metric                           string        `json:"metric,omitempty"`
+	Metrictable                      string        `json:"metrictable,omitempty"`
+	Metricthreshold                  int           `json:"metricthreshold,omitempty"`
+	Metricweight                     int           `json:"metricweight,omitempty"`
+	Monitorname                      string        `json:"monitorname,omitempty"`
+	Mqttclientidentifier             string        `json:"mqttclientidentifier,omitempty"`
+	Mqttversion                      int           `json:"mqttversion,omitempty"`
+	Mssqlprotocolversion             string        `json:"mssqlprotocolversion,omitempty"`
+	Multimetrictable                 []string      `json:"multimetrictable,omitempty"`
+	Netprofile                       string        `json:"netprofile,omitempty"`
+	Nextgenapiresource               string        `json:"_nextgenapiresource,omitempty"`
+	Oraclesid                        string        `json:"oraclesid,omitempty"`
+	Originhost                       string        `json:"originhost,omitempty"`
+	Originrealm                      string        `json:"originrealm,omitempty"`
+	Password                         string        `json:"password,omitempty"`
+	Productname                      string        `json:"productname,omitempty"`
+	Query                            string        `json:"query,omitempty"`
+	Querytype                        string        `json:"querytype,omitempty"`
+	Radaccountsession                string        `json:"radaccountsession,omitempty"`
+	Radaccounttype                   int           `json:"radaccounttype,omitempty"`
+	Radapn                           string        `json:"radapn,omitempty"`
+	Radframedip                      string        `json:"radframedip,omitempty"`
+	Radkey                           string        `json:"radkey,omitempty"`
+	Radmsisdn                        string        `json:"radmsisdn,omitempty"`
+	Radnasid                         string        `json:"radnasid,omitempty"`
+	Radnasip                         string        `json:"radnasip,omitempty"`
+	Recv                             string        `json:"recv,omitempty"`
+	Respcode                         []string      `json:"respcode,omitempty"`
+	Resptimeout                      int           `json:"resptimeout,omitempty"`
+	Resptimeoutthresh                int           `json:"resptimeoutthresh,omitempty"`
+	Retries                          int           `json:"retries,omitempty"`
+	Reverse                          string        `json:"reverse,omitempty"`
+	Rtsprequest                      string        `json:"rtsprequest,omitempty"`
+	Scriptargs                       string        `json:"scriptargs,omitempty"`
+	Scriptname                       string        `json:"scriptname,omitempty"`
+	Secondarypassword                string        `json:"secondarypassword,omitempty"`
+	Secure                           string        `json:"secure,omitempty"`
+	Secureargs                       string        `json:"secureargs,omitempty"`
+	Send                             string        `json:"send,omitempty"`
+	Servicegroupname                 string        `json:"servicegroupname,omitempty"`
+	Servicename                      string        `json:"servicename,omitempty"`
+	Sipmethod                        string        `json:"sipmethod,omitempty"`
+	Sipreguri                        string        `json:"sipreguri,omitempty"`
+	Sipuri                           string        `json:"sipuri,omitempty"`
+	Sitepath                         string        `json:"sitepath,omitempty"`
+	Snmpcommunity                    string        `json:"snmpcommunity,omitempty"`
+	Snmpoid                          string        `json:"Snmpoid,omitempty"`
+	Snmpthreshold                    string        `json:"snmpthreshold,omitempty"`
+	Snmpversion                      string        `json:"snmpversion,omitempty"`
+	Sqlquery                         string        `json:"sqlquery,omitempty"`
+	Sslprofile                       string        `json:"sslprofile,omitempty"`
+	State                            string        `json:"state,omitempty"`
+	Storedb                          string        `json:"storedb,omitempty"`
+	Storefrontacctservice            string        `json:"storefrontacctservice,omitempty"`
+	Storefrontcheckbackendservices   string        `json:"storefrontcheckbackendservices,omitempty"`
+	Storename                        string        `json:"storename,omitempty"`
+	Successretries                   int           `json:"successretries,omitempty"`
+	Supportedvendorids               []interface{} `json:"supportedvendorids,omitempty"`
+	Tos                              string        `json:"tos,omitempty"`
+	Tosid                            int           `json:"tosid,omitempty"`
+	Transparent                      string        `json:"transparent,omitempty"`
+	Trofscode                        int           `json:"trofscode,omitempty"`
+	Trofsstring                      string        `json:"trofsstring,omitempty"`
+	TypeField                        string        `json:"type,omitempty"`
+	Units1                           string        `json:"units1,omitempty"`
+	Units2                           string        `json:"units2,omitempty"`
+	Units3                           string        `json:"units3,omitempty"`
+	Units4                           string        `json:"units4,omitempty"`
+	Username                         string        `json:"username,omitempty"`
+	Validatecred                     string        `json:"validatecred,omitempty"`
+	Vendorid                         int           `json:"vendorid,omitempty"`
+	Vendorspecificacctapplicationids []interface{} `json:"vendorspecificacctapplicationids,omitempty"`
+	Vendorspecificauthapplicationids []interface{} `json:"vendorspecificauthapplicationids,omitempty"`
+	Vendorspecificvendorid           int           `json:"vendorspecificvendorid,omitempty"`
+	Weight                           int           `json:"weight,omitempty"`
+}
+
+type Lbprofile struct {
+	Adccookieattributewarningmsg  string  `json:"adccookieattributewarningmsg,omitempty"`
+	Computedadccookieattribute    string  `json:"computedadccookieattribute,omitempty"`
+	Cookiepassphrase              string  `json:"cookiepassphrase,omitempty"`
+	Count                         float64 `json:"__count,omitempty"`
+	Dbslb                         string  `json:"dbslb,omitempty"`
+	Httponlycookieflag            string  `json:"httponlycookieflag,omitempty"`
+	Lbhashalgorithm               string  `json:"lbhashalgorithm,omitempty"`
+	Lbhashalgowinsize             int     `json:"lbhashalgowinsize,omitempty"`
+	Lbhashfingers                 int     `json:"lbhashfingers,omitempty"`
+	Lbprofilename                 string  `json:"lbprofilename,omitempty"`
+	Literaladccookieattribute     string  `json:"literaladccookieattribute,omitempty"`
+	Nextgenapiresource            string  `json:"_nextgenapiresource,omitempty"`
+	Processlocal                  string  `json:"processlocal,omitempty"`
+	Proximityfromself             string  `json:"proximityfromself,omitempty"`
+	Storemqttclientidandusername  string  `json:"storemqttclientidandusername,omitempty"`
+	Useencryptedpersistencecookie string  `json:"useencryptedpersistencecookie,omitempty"`
+	Usesecuredpersistencecookie   string  `json:"usesecuredpersistencecookie,omitempty"`
+	Vsvrcount                     int     `json:"vsvrcount,omitempty"`
+}
+
+type LbvserverServicegroupBinding struct {
+	Name             string `json:"name,omitempty"`
+	Order            int    `json:"order,omitempty"`
+	Servicegroupname string `json:"servicegroupname,omitempty"`
+	Servicename      string `json:"servicename,omitempty"`
+	Weight           int    `json:"weight,omitempty"`
+}
+
+type LbwlmBinding struct {
+	LbwlmLbvserverBinding []interface{} `json:"lbwlm_lbvserver_binding,omitempty"`
+	Wlmname               string        `json:"wlmname,omitempty"`
+}
+
+type LbmonbindingsGslbservicegroupBinding struct {
+	Boundservicegroupsvrstate string `json:"boundservicegroupsvrstate,omitempty"`
+	Monitorname               string `json:"monitorname,omitempty"`
+	Monstate                  string `json:"monstate,omitempty"`
+	Servicegroupname          string `json:"servicegroupname,omitempty"`
+	Servicetype               string `json:"servicetype,omitempty"`
+}
+
+type Lbpolicy struct {
+	Action             string   `json:"action,omitempty"`
+	Builtin            []string `json:"builtin,omitempty"`
+	Comment            string   `json:"comment,omitempty"`
+	Count              float64  `json:"__count,omitempty"`
+	Feature            string   `json:"feature,omitempty"`
+	Hits               int      `json:"hits,omitempty"`
+	Logaction          string   `json:"logaction,omitempty"`
+	Name               string   `json:"name,omitempty"`
+	Newname            string   `json:"newname,omitempty"`
+	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	Rule               string   `json:"rule,omitempty"`
+	Undefaction        string   `json:"undefaction,omitempty"`
+	Undefhits          int      `json:"undefhits,omitempty"`
+}
+
+type LbmonitorServicegroupBinding struct {
+	DupState         string `json:"dup_state,omitempty"`
+	DupWeight        int    `json:"dup_weight,omitempty"`
+	Monitorname      string `json:"monitorname,omitempty"`
+	Servicegroupname string `json:"servicegroupname,omitempty"`
+	Servicename      string `json:"servicename,omitempty"`
+	State            string `json:"state,omitempty"`
+	Weight           int    `json:"weight,omitempty"`
+}
+
+type LbvserverSpilloverpolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type Lbwlm struct {
+	Count              float64 `json:"__count,omitempty"`
+	Ipaddress          string  `json:"ipaddress,omitempty"`
+	Katimeout          int     `json:"katimeout,omitempty"`
+	Lbuid              string  `json:"lbuid,omitempty"`
+	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	Port               int     `json:"port,omitempty"`
+	Secure             string  `json:"secure,omitempty"`
+	State              string  `json:"state,omitempty"`
+	Wlmname            string  `json:"wlmname,omitempty"`
+}
+
+type LbgroupLbvserverBinding struct {
+	Name        string `json:"name,omitempty"`
+	Vservername string `json:"vservername,omitempty"`
+}
+
+type LbmetrictableBinding struct {
+	LbmetrictableMetricBinding []interface{} `json:"lbmetrictable_metric_binding,omitempty"`
+	Metrictable                string        `json:"metrictable,omitempty"`
+}
+
+type Lbpersistentsessions struct {
+	Cnamepersparam       string  `json:"cnamepersparam,omitempty"`
+	Count                float64 `json:"__count,omitempty"`
+	Destip               string  `json:"destip,omitempty"`
+	Destipv6             string  `json:"destipv6,omitempty"`
+	Destport             int     `json:"destport,omitempty"`
+	Flags                bool    `json:"flags,omitempty"`
+	Nextgenapiresource   string  `json:"_nextgenapiresource,omitempty"`
+	Nodeid               int     `json:"nodeid,omitempty"`
+	Persistenceparam     string  `json:"persistenceparam,omitempty"`
+	Persistenceparameter string  `json:"persistenceparameter,omitempty"`
+	Referencecount       int     `json:"referencecount,omitempty"`
+	Srcip                string  `json:"srcip,omitempty"`
+	Srcipv6              string  `json:"srcipv6,omitempty"`
+	Timeout              int     `json:"timeout,omitempty"`
+	TypeField            int     `json:"type,omitempty"`
+	Typestring           string  `json:"typestring,omitempty"`
+	Vserver              string  `json:"vserver,omitempty"`
+	Vservername          string  `json:"vservername,omitempty"`
+}
+
+type LbpolicyLbvserverBinding struct {
+	Activepolicy           int    `json:"activepolicy,omitempty"`
+	Boundto                string `json:"boundto,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type LbvserverAuditnslogpolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type LbpolicylabelBinding struct {
+	Labelname                         string        `json:"labelname,omitempty"`
+	LbpolicylabelLbpolicyBinding      []interface{} `json:"lbpolicylabel_lbpolicy_binding,omitempty"`
+	LbpolicylabelPolicybindingBinding []interface{} `json:"lbpolicylabel_policybinding_binding,omitempty"`
+}
+
+type LbmetrictableMetricBinding struct {
+	Metric      string `json:"metric,omitempty"`
+	Metrictable string `json:"metrictable,omitempty"`
+	Metrictype  string `json:"metrictype,omitempty"`
+	Snmpoid     string `json:"Snmpoid,omitempty"`
+}
+
+type LbvserverDnspolicy64Binding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type LbvserverVideooptimizationpacingpolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type LbpolicyLbpolicylabelBinding struct {
+	Activepolicy           int    `json:"activepolicy,omitempty"`
+	Boundto                string `json:"boundto,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type LbmonbindingsServicegroupBinding struct {
+	Boundservicegroupsvrstate string `json:"boundservicegroupsvrstate,omitempty"`
+	Monitorname               string `json:"monitorname,omitempty"`
+	Monstate                  string `json:"monstate,omitempty"`
+	Servicegroupname          string `json:"servicegroupname,omitempty"`
+	Servicetype               string `json:"servicetype,omitempty"`
+}
+
+type LbmonitorSslcertkeyBinding struct {
+	Ca          bool   `json:"ca,omitempty"`
+	Certkeyname string `json:"certkeyname,omitempty"`
+	Crlcheck    string `json:"crlcheck,omitempty"`
+	Monitorname string `json:"monitorname,omitempty"`
+	Ocspcheck   string `json:"ocspcheck,omitempty"`
+}
+
+type LbvserverAuthorizationpolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
+}
+
+type LbvserverVideooptimizationdetectionpolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               int    `json:"priority,omitempty"`
 }
 
 type Lbpolicylabel struct {
-	Labelname              string `json:"labelname,omitempty"`
-	Policylabeltype        string `json:"policylabeltype,omitempty"`
-	Comment                string `json:"comment,omitempty"`
-	Newname                string `json:"newname,omitempty"`
-	Numpol                 string `json:"numpol,omitempty"`
-	Hits                   string `json:"hits,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Invokelabelname        string `json:"invoke_labelname,omitempty"`
-	Nextgenapiresource     string `json:"_nextgenapiresource,omitempty"`
+	Comment                string  `json:"comment,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	Gotopriorityexpression string  `json:"gotopriorityexpression,omitempty"`
+	Hits                   int     `json:"hits,omitempty"`
+	InvokeLabelname        string  `json:"invoke_labelname,omitempty"`
+	Labelname              string  `json:"labelname,omitempty"`
+	Labeltype              string  `json:"labeltype,omitempty"`
+	Newname                string  `json:"newname,omitempty"`
+	Nextgenapiresource     string  `json:"_nextgenapiresource,omitempty"`
+	Numpol                 int     `json:"numpol,omitempty"`
+	Policylabeltype        string  `json:"policylabeltype,omitempty"`
 }
 
-type Lbvserverbotpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Order                  int    `json:"order,omitempty"`
+type LbpolicyBinding struct {
+	LbpolicyGslbvserverBinding   []interface{} `json:"lbpolicy_gslbvserver_binding,omitempty"`
+	LbpolicyLbglobalBinding      []interface{} `json:"lbpolicy_lbglobal_binding,omitempty"`
+	LbpolicyLbpolicylabelBinding []interface{} `json:"lbpolicy_lbpolicylabel_binding,omitempty"`
+	LbpolicyLbvserverBinding     []interface{} `json:"lbpolicy_lbvserver_binding,omitempty"`
+	Name                         string        `json:"name,omitempty"`
 }
 
-type Lbvservercontentinspectionpolicybinding struct {
-	Policyname             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Order                  int    `json:"order,omitempty"`
+type LbmonitorMetricBinding struct {
+	Metric          string `json:"metric,omitempty"`
+	MetricUnit      string `json:"metric_unit,omitempty"`
+	Metrictable     string `json:"metrictable,omitempty"`
+	Metricthreshold int    `json:"metricthreshold,omitempty"`
+	Metricweight    int    `json:"metricweight,omitempty"`
+	Monitorname     string `json:"monitorname,omitempty"`
 }
 
-type Lbvserverfeopolicybinding struct {
+type LbvserverLbpolicyBinding struct {
+	Bindpoint              string `json:"bindpoint,omitempty"`
+	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+	Invoke                 bool   `json:"invoke,omitempty"`
+	Labelname              string `json:"labelname,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Order                  int    `json:"order,omitempty"`
 	Policyname             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Bindpoint              string `json:"bindpoint,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Invoke                 bool   `json:"invoke,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Order                  int    `json:"order,omitempty"`
+}
+
+type LbgroupBinding struct {
+	LbgroupLbvserverBinding []interface{} `json:"lbgroup_lbvserver_binding,omitempty"`
+	Name                    string        `json:"name,omitempty"`
+}
+
+type Lbparameter struct {
+	Adccookieattributewarningmsg  string   `json:"adccookieattributewarningmsg,omitempty"`
+	Allowboundsvcremoval          string   `json:"allowboundsvcremoval,omitempty"`
+	Builtin                       []string `json:"builtin,omitempty"`
+	Computedadccookieattribute    string   `json:"computedadccookieattribute,omitempty"`
+	Consolidatedlconn             string   `json:"consolidatedlconn,omitempty"`
+	Cookiepassphrase              string   `json:"cookiepassphrase,omitempty"`
+	Dbsttl                        int      `json:"dbsttl,omitempty"`
+	Dropmqttjumbomessage          string   `json:"dropmqttjumbomessage,omitempty"`
+	Feature                       string   `json:"feature,omitempty"`
+	Httponlycookieflag            string   `json:"httponlycookieflag,omitempty"`
+	Lbhashalgorithm               string   `json:"lbhashalgorithm,omitempty"`
+	Lbhashalgowinsize             int      `json:"lbhashalgowinsize,omitempty"`
+	Lbhashfingers                 int      `json:"lbhashfingers,omitempty"`
+	Literaladccookieattribute     string   `json:"literaladccookieattribute,omitempty"`
+	Maxpipelinenat                int      `json:"maxpipelinenat,omitempty"`
+	Monitorconnectionclose        string   `json:"monitorconnectionclose,omitempty"`
+	Monitorskipmaxclient          string   `json:"monitorskipmaxclient,omitempty"`
+	Nextgenapiresource            string   `json:"_nextgenapiresource,omitempty"`
+	Overridepersistencyfororder   string   `json:"overridepersistencyfororder,omitempty"`
+	Preferdirectroute             string   `json:"preferdirectroute,omitempty"`
+	Proximityfromself             string   `json:"proximityfromself,omitempty"`
+	Radiusmessageauthenticator    string   `json:"radiusmessageauthenticator,omitempty"`
+	Retainservicestate            string   `json:"retainservicestate,omitempty"`
+	Sessionsthreshold             int      `json:"sessionsthreshold,omitempty"`
+	Startuprrfactor               int      `json:"startuprrfactor,omitempty"`
+	Storemqttclientidandusername  string   `json:"storemqttclientidandusername,omitempty"`
+	Undefaction                   string   `json:"undefaction,omitempty"`
+	Useencryptedpersistencecookie string   `json:"useencryptedpersistencecookie,omitempty"`
+	Useportforhashlb              string   `json:"useportforhashlb,omitempty"`
+	Usesecuredpersistencecookie   string   `json:"usesecuredpersistencecookie,omitempty"`
+	Vserverspecificmac            string   `json:"vserverspecificmac,omitempty"`
+}
+
+type LBVServerServiceGroupMemberBinding struct {
+	Cookieipport      string `json:"cookieipport,omitempty"`
+	Cookiename        string `json:"cookiename,omitempty"`
+	Curstate          string `json:"curstate,omitempty"`
+	Dynamicweight     int    `json:"dynamicweight,omitempty"`
+	Ipv46             string `json:"ipv46,omitempty"`
+	Name              string `json:"name,omitempty"`
+	Order             int    `json:"order,omitempty"`
+	Orderstr          string `json:"orderstr,omitempty"`
+	Port              int    `json:"port,omitempty"`
+	Preferredlocation string `json:"preferredlocation,omitempty"`
+	Servicegroupname  string `json:"servicegroupname,omitempty"`
+	Servicetype       string `json:"servicetype,omitempty"`
+	Vserverid         string `json:"vserverid,omitempty"`
+	Weight            int    `json:"weight,omitempty"`
+}
+
+type Lbmetrictable struct {
+	Builtin            []string `json:"builtin,omitempty"`
+	Count              float64  `json:"__count,omitempty"`
+	Feature            string   `json:"feature,omitempty"`
+	Metric             string   `json:"metric,omitempty"`
+	Metrictable        string   `json:"metrictable,omitempty"`
+	Metrictype         string   `json:"metrictype,omitempty"`
+	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	Snmpoid            string   `json:"Snmpoid,omitempty"`
 }
