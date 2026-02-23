@@ -1,38 +1,38 @@
 package models
 
 // ipsec configuration structs
-type Ipsecparameter struct {
-	Encalgo               []string `json:"encalgo,omitempty"`
-	Hashalgo              []string `json:"hashalgo,omitempty"`
-	Ikeretryinterval      int      `json:"ikeretryinterval,omitempty"`
-	Ikeversion            string   `json:"ikeversion,omitempty"`
+type IPSECParameter struct {
+	EncAlgo               []string `json:"encalgo,omitempty"`
+	HashAlgo              []string `json:"hashalgo,omitempty"`
+	IKERetryInterval      int      `json:"ikeretryinterval,omitempty"`
+	IKEVersion            string   `json:"ikeversion,omitempty"`
 	Lifetime              int      `json:"lifetime,omitempty"`
-	Livenesscheckinterval int      `json:"livenesscheckinterval,omitempty"`
-	Nextgenapiresource    string   `json:"_nextgenapiresource,omitempty"`
-	Perfectforwardsecrecy string   `json:"perfectforwardsecrecy,omitempty"`
-	Replaywindowsize      int      `json:"replaywindowsize,omitempty"`
-	Responderonly         string   `json:"responderonly,omitempty"`
-	Retransmissiontime    int      `json:"retransmissiontime,omitempty"`
+	LivenessCheckInterval int      `json:"livenesscheckinterval,omitempty"`
+	NextGenAPIResource    string   `json:"_nextgenapiresource,omitempty"`
+	PerfectForwardSecrecy string   `json:"perfectforwardsecrecy,omitempty"`
+	ReplayWindowSize      int      `json:"replaywindowsize,omitempty"`
+	ResponderOnly         string   `json:"responderonly,omitempty"`
+	RetransmissionTime    int      `json:"retransmissiontime,omitempty"`
 }
 
-type Ipsecprofile struct {
+type IPSECProfile struct {
 	Builtin               []string `json:"builtin,omitempty"`
 	Count                 float64  `json:"__count,omitempty"`
-	Encalgo               []string `json:"encalgo,omitempty"`
+	EncAlgo               []string `json:"encalgo,omitempty"`
 	Feature               string   `json:"feature,omitempty"`
-	Hashalgo              []string `json:"hashalgo,omitempty"`
-	Ikeretryinterval      int      `json:"ikeretryinterval,omitempty"`
-	Ikeversion            string   `json:"ikeversion,omitempty"`
+	HashAlgo              []string `json:"hashalgo,omitempty"`
+	IKERetryInterval      int      `json:"ikeretryinterval,omitempty"`
+	IKEVersion            string   `json:"ikeversion,omitempty"`
 	Lifetime              int      `json:"lifetime,omitempty"`
-	Livenesscheckinterval int      `json:"livenesscheckinterval,omitempty"`
+	LivenessCheckInterval int      `json:"livenesscheckinterval,omitempty"`
 	Name                  string   `json:"name,omitempty"`
-	Nextgenapiresource    string   `json:"_nextgenapiresource,omitempty"`
-	Peerpublickey         string   `json:"peerpublickey,omitempty"`
-	Perfectforwardsecrecy string   `json:"perfectforwardsecrecy,omitempty"`
-	Privatekey            string   `json:"privatekey,omitempty"`
-	Psk                   string   `json:"psk,omitempty"`
-	Publickey             string   `json:"publickey,omitempty"`
-	Replaywindowsize      int      `json:"replaywindowsize,omitempty"`
-	Responderonly         string   `json:"responderonly,omitempty"`
-	Retransmissiontime    int      `json:"retransmissiontime,omitempty"`
+	NextGenAPIResource    string   `json:"_nextgenapiresource,omitempty"`
+	PeerPublicKey         string   `json:"peerpublickey,omitempty"`
+	PerfectForwardSecrecy string   `json:"perfectforwardsecrecy,omitempty"`
+	PrivateKey            string   `json:"privatekey,omitempty"`
+	PSK                   string   `json:"psk,omitempty"`
+	PublicKey             string   `json:"publickey,omitempty"`
+	ReplayWindowSize      int      `json:"replaywindowsize,omitempty"`
+	ResponderOnly         string   `json:"responderonly,omitempty"`
+	RetransmissionTime    int      `json:"retransmissiontime,omitempty"`
 }

@@ -1,57 +1,57 @@
 package models
 
 // analytics configuration structs
-type AnalyticsglobalAnalyticsprofileBinding struct {
-	Analyticsprofile string `json:"analyticsprofile,omitempty"`
+type AnalyticsGlobalAnalyticsProfileBinding struct {
+	AnalyticsProfile string `json:"analyticsprofile,omitempty"`
 }
 
-type AnalyticsglobalBinding struct {
-	AnalyticsglobalAnalyticsprofileBinding []interface{} `json:"analyticsglobal_analyticsprofile_binding,omitempty"`
+type AnalyticsGlobalBinding struct {
+	AnalyticsGlobalAnalyticsProfileBinding []interface{} `json:"analyticsglobal_analyticsprofile_binding,omitempty"`
 }
 
-type Analyticsprofile struct {
-	Allhttpheaders               string   `json:"allhttpheaders,omitempty"`
-	Analyticsauthtoken           string   `json:"analyticsauthtoken,omitempty"`
-	Analyticsendpointcontenttype string   `json:"analyticsendpointcontenttype,omitempty"`
-	Analyticsendpointmetadata    string   `json:"analyticsendpointmetadata,omitempty"`
-	Analyticsendpointurl         string   `json:"analyticsendpointurl,omitempty"`
-	Auditlogs                    string   `json:"auditlogs,omitempty"`
+type AnalyticsProfile struct {
+	AllHTTPHeaders               string   `json:"allhttpheaders,omitempty"`
+	AnalyticsAuthToken           string   `json:"analyticsauthtoken,omitempty"`
+	AnalyticsEndpointContentType string   `json:"analyticsendpointcontenttype,omitempty"`
+	AnalyticsEndpointMetadata    string   `json:"analyticsendpointmetadata,omitempty"`
+	AnalyticsEndpointURL         string   `json:"analyticsendpointurl,omitempty"`
+	AuditLogs                    string   `json:"auditlogs,omitempty"`
 	Collectors                   string   `json:"collectors,omitempty"`
 	Count                        float64  `json:"__count,omitempty"`
-	Cqareporting                 string   `json:"cqareporting,omitempty"`
-	Dataformatfile               string   `json:"dataformatfile,omitempty"`
+	CQAReporting                 string   `json:"cqareporting,omitempty"`
+	DataFormatFile               string   `json:"dataformatfile,omitempty"`
 	Events                       string   `json:"events,omitempty"`
-	Grpcstatus                   string   `json:"grpcstatus,omitempty"`
-	Httpauthentication           string   `json:"httpauthentication,omitempty"`
-	Httpclientsidemeasurements   string   `json:"httpclientsidemeasurements,omitempty"`
-	Httpcontenttype              string   `json:"httpcontenttype,omitempty"`
-	Httpcookie                   string   `json:"httpcookie,omitempty"`
-	Httpcustomheaders            []string `json:"httpcustomheaders,omitempty"`
-	Httpdomainname               string   `json:"httpdomainname,omitempty"`
-	Httphost                     string   `json:"httphost,omitempty"`
-	Httplocation                 string   `json:"httplocation,omitempty"`
-	Httpmethod                   string   `json:"httpmethod,omitempty"`
-	Httppagetracking             string   `json:"httppagetracking,omitempty"`
-	Httpreferer                  string   `json:"httpreferer,omitempty"`
-	Httpsetcookie                string   `json:"httpsetcookie,omitempty"`
-	Httpsetcookie2               string   `json:"httpsetcookie2,omitempty"`
-	Httpurl                      string   `json:"httpurl,omitempty"`
-	Httpurlquery                 string   `json:"httpurlquery,omitempty"`
-	Httpuseragent                string   `json:"httpuseragent,omitempty"`
-	Httpvia                      string   `json:"httpvia,omitempty"`
-	Httpxforwardedforheader      string   `json:"httpxforwardedforheader,omitempty"`
-	Integratedcache              string   `json:"integratedcache,omitempty"`
-	Managementlog                []string `json:"managementlog,omitempty"`
+	GRPCStatus                   string   `json:"grpcstatus,omitempty"`
+	HTTPAuthentication           string   `json:"httpauthentication,omitempty"`
+	HTTPClientSideMeasurements   string   `json:"httpclientsidemeasurements,omitempty"`
+	HTTPContentType              string   `json:"httpcontenttype,omitempty"`
+	HTTPCookie                   string   `json:"httpcookie,omitempty"`
+	HTTPCustomHeaders            []string `json:"httpcustomheaders,omitempty"`
+	HTTPDomainName               string   `json:"httpdomainname,omitempty"`
+	HTTPHost                     string   `json:"httphost,omitempty"`
+	HTTPLocation                 string   `json:"httplocation,omitempty"`
+	HTTPMethod                   string   `json:"httpmethod,omitempty"`
+	HTTPPageTracking             string   `json:"httppagetracking,omitempty"`
+	HTTPReferer                  string   `json:"httpreferer,omitempty"`
+	HTTPSetCookie                string   `json:"httpsetcookie,omitempty"`
+	HTTPSetCookie2               string   `json:"httpsetcookie2,omitempty"`
+	HTTPURL                      string   `json:"httpurl,omitempty"`
+	HTTPURLQuery                 string   `json:"httpurlquery,omitempty"`
+	HTTPUserAgent                string   `json:"httpuseragent,omitempty"`
+	HTTPVia                      string   `json:"httpvia,omitempty"`
+	HTTPXForwardedForHeader      string   `json:"httpxforwardedforheader,omitempty"`
+	IntegratedCache              string   `json:"integratedcache,omitempty"`
+	ManagementLog                []string `json:"managementlog,omitempty"`
 	Metrics                      string   `json:"metrics,omitempty"`
-	Metricsexportfrequency       int      `json:"metricsexportfrequency,omitempty"`
+	MetricsExportFrequency       int      `json:"metricsexportfrequency,omitempty"`
 	Name                         string   `json:"name,omitempty"`
-	Nextgenapiresource           string   `json:"_nextgenapiresource,omitempty"`
-	Outputmode                   string   `json:"outputmode,omitempty"`
-	Refcnt                       int      `json:"refcnt,omitempty"`
-	Schemafile                   string   `json:"schemafile,omitempty"`
-	Servemode                    string   `json:"servemode,omitempty"`
-	Tcpburstreporting            string   `json:"tcpburstreporting,omitempty"`
-	Topn                         string   `json:"topn,omitempty"`
+	NextGenAPIResource           string   `json:"_nextgenapiresource,omitempty"`
+	OutputMode                   string   `json:"outputmode,omitempty"`
+	RefCnt                       int      `json:"refcnt,omitempty"`
+	SchemaFile                   string   `json:"schemafile,omitempty"`
+	ServeMode                    string   `json:"servemode,omitempty"`
+	TCPBurstReporting            string   `json:"tcpburstreporting,omitempty"`
+	TopN                         string   `json:"topn,omitempty"`
 	TypeField                    string   `json:"type,omitempty"`
-	Urlcategory                  string   `json:"urlcategory,omitempty"`
+	URLCategory                  string   `json:"urlcategory,omitempty"`
 }

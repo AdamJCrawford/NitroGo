@@ -1,175 +1,175 @@
 package models
 
 // transform configuration structs
-type TransformpolicyCsvserverBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+type TransformPolicyCSVServerBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type TransformprofileBinding struct {
+type TransformProfileBinding struct {
 	Name                                   string        `json:"name,omitempty"`
-	TransformprofileTransformactionBinding []interface{} `json:"transformprofile_transformaction_binding,omitempty"`
+	TransformProfileTransformActionBinding []interface{} `json:"transformprofile_transformaction_binding,omitempty"`
 }
 
-type TransformpolicyBinding struct {
+type TransformPolicyBinding struct {
 	Name                                       string        `json:"name,omitempty"`
-	TransformpolicyCsvserverBinding            []interface{} `json:"transformpolicy_csvserver_binding,omitempty"`
-	TransformpolicyLbvserverBinding            []interface{} `json:"transformpolicy_lbvserver_binding,omitempty"`
-	TransformpolicyTransformglobalBinding      []interface{} `json:"transformpolicy_transformglobal_binding,omitempty"`
-	TransformpolicyTransformpolicylabelBinding []interface{} `json:"transformpolicy_transformpolicylabel_binding,omitempty"`
+	TransformPolicyCSVServerBinding            []interface{} `json:"transformpolicy_csvserver_binding,omitempty"`
+	TransformPolicyLBVServerBinding            []interface{} `json:"transformpolicy_lbvserver_binding,omitempty"`
+	TransformPolicyTransformGlobalBinding      []interface{} `json:"transformpolicy_transformglobal_binding,omitempty"`
+	TransformPolicyTransformPolicyLabelBinding []interface{} `json:"transformpolicy_transformpolicylabel_binding,omitempty"`
 }
 
-type Transformpolicylabel struct {
+type TransformPolicyLabel struct {
 	Count                  float64 `json:"__count,omitempty"`
 	Description            string  `json:"description,omitempty"`
-	Gotopriorityexpression string  `json:"gotopriorityexpression,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
 	Hits                   int     `json:"hits,omitempty"`
-	InvokeLabelname        string  `json:"invoke_labelname,omitempty"`
-	Labelname              string  `json:"labelname,omitempty"`
-	Labeltype              string  `json:"labeltype,omitempty"`
-	Newname                string  `json:"newname,omitempty"`
-	Nextgenapiresource     string  `json:"_nextgenapiresource,omitempty"`
-	Numpol                 int     `json:"numpol,omitempty"`
-	Policylabeltype        string  `json:"policylabeltype,omitempty"`
+	InvokeLabelName        string  `json:"invoke_labelname,omitempty"`
+	LabelName              string  `json:"labelname,omitempty"`
+	LabelType              string  `json:"labeltype,omitempty"`
+	NewName                string  `json:"newname,omitempty"`
+	NextGenAPIResource     string  `json:"_nextgenapiresource,omitempty"`
+	NumPol                 int     `json:"numpol,omitempty"`
+	PolicyLabelType        string  `json:"policylabeltype,omitempty"`
 	Priority               int     `json:"priority,omitempty"`
 }
 
-type TransformpolicyTransformpolicylabelBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+type TransformPolicyTransformPolicyLabelBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type TransformpolicylabelTransformpolicyBinding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type TransformPolicyLabelTransformPolicyBinding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	InvokeLabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+	InvokeLabelName        string `json:"invoke_labelname,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type Transformpolicy struct {
+type TransformPolicy struct {
 	Builtin            []string `json:"builtin,omitempty"`
 	Comment            string   `json:"comment,omitempty"`
 	Count              float64  `json:"__count,omitempty"`
 	Feature            string   `json:"feature,omitempty"`
 	Hits               int      `json:"hits,omitempty"`
-	Isdefault          bool     `json:"isdefault,omitempty"`
-	Logaction          string   `json:"logaction,omitempty"`
+	IsDefault          bool     `json:"isdefault,omitempty"`
+	LogAction          string   `json:"logaction,omitempty"`
 	Name               string   `json:"name,omitempty"`
-	Newname            string   `json:"newname,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
-	Profilename        string   `json:"profilename,omitempty"`
+	NewName            string   `json:"newname,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
+	ProfileName        string   `json:"profilename,omitempty"`
 	Rule               string   `json:"rule,omitempty"`
 }
 
-type Transformprofile struct {
-	Additionalreqheaderslist       string  `json:"additionalreqheaderslist,omitempty"`
-	Additionalrespheaderslist      string  `json:"additionalrespheaderslist,omitempty"`
+type TransformProfile struct {
+	AdditionalReqHeadersList       string  `json:"additionalreqheaderslist,omitempty"`
+	AdditionalRespHeadersList      string  `json:"additionalrespheaderslist,omitempty"`
 	Comment                        string  `json:"comment,omitempty"`
 	Count                          float64 `json:"__count,omitempty"`
 	Name                           string  `json:"name,omitempty"`
-	Nextgenapiresource             string  `json:"_nextgenapiresource,omitempty"`
-	Onlytransformabsurlinbody      string  `json:"onlytransformabsurlinbody,omitempty"`
-	Regexforfindingurlincss        string  `json:"regexforfindingurlincss,omitempty"`
-	Regexforfindingurlinjavascript string  `json:"regexforfindingurlinjavascript,omitempty"`
-	Regexforfindingurlinxcomponent string  `json:"regexforfindingurlinxcomponent,omitempty"`
-	Regexforfindingurlinxml        string  `json:"regexforfindingurlinxml,omitempty"`
+	NextGenAPIResource             string  `json:"_nextgenapiresource,omitempty"`
+	OnlyTransformAbsURLInBody      string  `json:"onlytransformabsurlinbody,omitempty"`
+	RegexForFindingURLInCSS        string  `json:"regexforfindingurlincss,omitempty"`
+	RegexForFindingURLInJavascript string  `json:"regexforfindingurlinjavascript,omitempty"`
+	RegexForFindingURLInXComponent string  `json:"regexforfindingurlinxcomponent,omitempty"`
+	RegexForFindingURLInXML        string  `json:"regexforfindingurlinxml,omitempty"`
 	TypeField                      string  `json:"type,omitempty"`
 }
 
-type TransformglobalTransformpolicyBinding struct {
-	Flowtype               int    `json:"flowtype,omitempty"`
-	Globalbindtype         string `json:"globalbindtype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type TransformGlobalTransformPolicyBinding struct {
+	FlowType               int    `json:"flowtype,omitempty"`
+	GlobalBindType         string `json:"globalbindtype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Numpol                 int    `json:"numpol,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	NumPol                 int    `json:"numpol,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 }
 
-type TransformpolicyLbvserverBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+type TransformPolicyLBVServerBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type Transformaction struct {
+type TransformAction struct {
 	Comment            string  `json:"comment,omitempty"`
-	Continuematching   string  `json:"continuematching,omitempty"`
-	Cookiedomainfrom   string  `json:"cookiedomainfrom,omitempty"`
-	Cookiedomaininto   string  `json:"cookiedomaininto,omitempty"`
+	ContinueMatching   string  `json:"continuematching,omitempty"`
+	CookieDomainFrom   string  `json:"cookiedomainfrom,omitempty"`
+	CookieDomainInto   string  `json:"cookiedomaininto,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Priority           int     `json:"priority,omitempty"`
-	Profilename        string  `json:"profilename,omitempty"`
-	Requrlfrom         string  `json:"requrlfrom,omitempty"`
-	Requrlinto         string  `json:"requrlinto,omitempty"`
-	Resurlfrom         string  `json:"resurlfrom,omitempty"`
-	Resurlinto         string  `json:"resurlinto,omitempty"`
+	ProfileName        string  `json:"profilename,omitempty"`
+	ReqURLFrom         string  `json:"requrlfrom,omitempty"`
+	ReqURLInto         string  `json:"requrlinto,omitempty"`
+	ResURLFrom         string  `json:"resurlfrom,omitempty"`
+	ResURLInto         string  `json:"resurlinto,omitempty"`
 	State              string  `json:"state,omitempty"`
 }
 
-type TransformpolicylabelBinding struct {
-	Labelname                                  string        `json:"labelname,omitempty"`
-	TransformpolicylabelPolicybindingBinding   []interface{} `json:"transformpolicylabel_policybinding_binding,omitempty"`
-	TransformpolicylabelTransformpolicyBinding []interface{} `json:"transformpolicylabel_transformpolicy_binding,omitempty"`
+type TransformPolicyLabelBinding struct {
+	LabelName                                  string        `json:"labelname,omitempty"`
+	TransformPolicyLabelPolicyBindingBinding   []interface{} `json:"transformpolicylabel_policybinding_binding,omitempty"`
+	TransformPolicyLabelTransformPolicyBinding []interface{} `json:"transformpolicylabel_transformpolicy_binding,omitempty"`
 }
 
-type TransformglobalBinding struct {
-	TransformglobalTransformpolicyBinding []interface{} `json:"transformglobal_transformpolicy_binding,omitempty"`
+type TransformGlobalBinding struct {
+	TransformGlobalTransformPolicyBinding []interface{} `json:"transformglobal_transformpolicy_binding,omitempty"`
 }
 
-type TransformprofileTransformactionBinding struct {
-	Actioncomment    string `json:"actioncomment,omitempty"`
-	Actionname       string `json:"actionname,omitempty"`
-	Cookiedomainfrom string `json:"cookiedomainfrom,omitempty"`
-	Cookiedomaininto string `json:"cookiedomaininto,omitempty"`
+type TransformProfileTransformActionBinding struct {
+	ActionComment    string `json:"actioncomment,omitempty"`
+	ActionName       string `json:"actionname,omitempty"`
+	CookieDomainFrom string `json:"cookiedomainfrom,omitempty"`
+	CookieDomainInto string `json:"cookiedomaininto,omitempty"`
 	Name             string `json:"name,omitempty"`
 	Priority         int    `json:"priority,omitempty"`
-	Profilename      string `json:"profilename,omitempty"`
-	Requrlfrom       string `json:"requrlfrom,omitempty"`
-	Requrlinto       string `json:"requrlinto,omitempty"`
-	Resurlfrom       string `json:"resurlfrom,omitempty"`
-	Resurlinto       string `json:"resurlinto,omitempty"`
+	ProfileName      string `json:"profilename,omitempty"`
+	ReqURLFrom       string `json:"requrlfrom,omitempty"`
+	ReqURLInto       string `json:"requrlinto,omitempty"`
+	ResURLFrom       string `json:"resurlfrom,omitempty"`
+	ResURLInto       string `json:"resurlinto,omitempty"`
 	State            string `json:"state,omitempty"`
 }
 
-type TransformpolicylabelPolicybindingBinding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type TransformPolicyLabelPolicyBindingBinding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	InvokeLabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+	InvokeLabelName        string `json:"invoke_labelname,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type TransformpolicyTransformglobalBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+type TransformPolicyTransformGlobalBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }

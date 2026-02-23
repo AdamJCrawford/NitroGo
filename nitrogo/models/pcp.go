@@ -1,41 +1,41 @@
 package models
 
 // pcp configuration structs
-type Pcpserver struct {
+type PCPServer struct {
 	Count              float64 `json:"__count,omitempty"`
-	Ipaddress          string  `json:"ipaddress,omitempty"`
+	IPAddress          string  `json:"ipaddress,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Pcpprofile         string  `json:"pcpprofile,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	PCPProfile         string  `json:"pcpprofile,omitempty"`
 	Port               int     `json:"port,omitempty"`
 }
 
-type Pcpmap struct {
+type PCPMap struct {
 	Count              float64 `json:"__count,omitempty"`
-	Nattype            string  `json:"nattype,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Pcpaddr            int     `json:"pcpaddr,omitempty"`
-	Pcpdstip           string  `json:"pcpdstip,omitempty"`
-	Pcpdstport         int     `json:"pcpdstport,omitempty"`
-	Pcplifetime        int     `json:"pcplifetime,omitempty"`
-	Pcpnatip           string  `json:"pcpnatip,omitempty"`
-	Pcpnatport         int     `json:"pcpnatport,omitempty"`
-	Pcpnounce          int     `json:"pcpnounce,omitempty"`
-	Pcpprotocol        string  `json:"pcpprotocol,omitempty"`
-	Pcprefcnt          int     `json:"pcprefcnt,omitempty"`
-	Pcpsrcip           string  `json:"pcpsrcip,omitempty"`
-	Pcpsrcport         int     `json:"pcpsrcport,omitempty"`
-	Subscrip           string  `json:"subscrip,omitempty"`
+	NatType            string  `json:"nattype,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	PCPAddr            int     `json:"pcpaddr,omitempty"`
+	PCPDstIP           string  `json:"pcpdstip,omitempty"`
+	PCPDstPort         int     `json:"pcpdstport,omitempty"`
+	PCPLifetime        int     `json:"pcplifetime,omitempty"`
+	PCPNatIP           string  `json:"pcpnatip,omitempty"`
+	PCPNatPort         int     `json:"pcpnatport,omitempty"`
+	PCPNounce          int     `json:"pcpnounce,omitempty"`
+	PCPProtocol        string  `json:"pcpprotocol,omitempty"`
+	PCPRefCnt          int     `json:"pcprefcnt,omitempty"`
+	PCPSrcIP           string  `json:"pcpsrcip,omitempty"`
+	PCPSrcPort         int     `json:"pcpsrcport,omitempty"`
+	SubscrIP           string  `json:"subscrip,omitempty"`
 }
 
-type Pcpprofile struct {
-	Announcemulticount int     `json:"announcemulticount,omitempty"`
+type PCPProfile struct {
+	AnnounceMultiCount int     `json:"announcemulticount,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
 	Mapping            string  `json:"mapping,omitempty"`
-	Maxmaplife         int     `json:"maxmaplife,omitempty"`
-	Minmaplife         int     `json:"minmaplife,omitempty"`
+	MaxMapLife         int     `json:"maxmaplife,omitempty"`
+	MinMapLife         int     `json:"minmaplife,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Peer               string  `json:"peer,omitempty"`
-	Thirdparty         string  `json:"thirdparty,omitempty"`
+	ThirdParty         string  `json:"thirdparty,omitempty"`
 }

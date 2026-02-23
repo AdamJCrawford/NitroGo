@@ -1,389 +1,389 @@
 package models
 
 // lsn configuration structs
-type LsngroupLsnlogprofileBinding struct {
-	Groupname      string `json:"groupname,omitempty"`
-	Logprofilename string `json:"logprofilename,omitempty"`
+type LSNGroupLSNLogProfileBinding struct {
+	GroupName      string `json:"groupname,omitempty"`
+	LogProfileName string `json:"logprofilename,omitempty"`
 }
 
-type LsnclientNsaclBinding struct {
-	Aclname    string `json:"aclname,omitempty"`
-	Clientname string `json:"clientname,omitempty"`
-	Td         int    `json:"td,omitempty"`
+type LSNClientNSACLBinding struct {
+	ACLName    string `json:"aclname,omitempty"`
+	ClientName string `json:"clientname,omitempty"`
+	TD         int    `json:"td,omitempty"`
 }
 
-type Lsnip6profile struct {
+type LSNIP6Profile struct {
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Natprefix          string  `json:"natprefix,omitempty"`
+	NatPrefix          string  `json:"natprefix,omitempty"`
 	Network6           string  `json:"network6,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	TypeField          string  `json:"type,omitempty"`
 }
 
-type LsngroupLsnhttphdrlogprofileBinding struct {
-	Groupname             string `json:"groupname,omitempty"`
-	Httphdrlogprofilename string `json:"httphdrlogprofilename,omitempty"`
+type LSNGroupLSNHTTPHdrLogProfileBinding struct {
+	GroupName             string `json:"groupname,omitempty"`
+	HTTPHdrLogProfileName string `json:"httphdrlogprofilename,omitempty"`
 }
 
-type LsngroupLsntransportprofileBinding struct {
-	Groupname            string `json:"groupname,omitempty"`
-	Transportprofilename string `json:"transportprofilename,omitempty"`
+type LSNGroupLSNTransportProfileBinding struct {
+	GroupName            string `json:"groupname,omitempty"`
+	TransportProfileName string `json:"transportprofilename,omitempty"`
 }
 
-type Lsnappsattributes struct {
+type LSNAppsAttributes struct {
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Port               string  `json:"port,omitempty"`
-	Sessiontimeout     int     `json:"sessiontimeout,omitempty"`
-	Transportprotocol  string  `json:"transportprotocol,omitempty"`
+	SessionTimeout     int     `json:"sessiontimeout,omitempty"`
+	TransportProtocol  string  `json:"transportprotocol,omitempty"`
 }
 
-type LsngroupLsnrtspalgprofileBinding struct {
-	Groupname          string `json:"groupname,omitempty"`
-	Rtspalgprofilename string `json:"rtspalgprofilename,omitempty"`
+type LSNGroupLSNRTSPALGProfileBinding struct {
+	GroupName          string `json:"groupname,omitempty"`
+	RTSPALGProfileName string `json:"rtspalgprofilename,omitempty"`
 }
 
-type Lsnclient struct {
-	Clientname         string  `json:"clientname,omitempty"`
+type LSNClient struct {
+	ClientName         string  `json:"clientname,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 }
 
-type LsnclientNsacl6Binding struct {
-	Acl6name   string `json:"acl6name,omitempty"`
-	Clientname string `json:"clientname,omitempty"`
-	Td         int    `json:"td,omitempty"`
+type LSNClientNSACL6Binding struct {
+	ACL6Name   string `json:"acl6name,omitempty"`
+	ClientName string `json:"clientname,omitempty"`
+	TD         int    `json:"td,omitempty"`
 }
 
-type Lsnparameter struct {
-	Maxmemlimit          int    `json:"maxmemlimit,omitempty"`
-	Memlimit             int    `json:"memlimit,omitempty"`
-	Memlimitactive       int    `json:"memlimitactive,omitempty"`
-	Nextgenapiresource   string `json:"_nextgenapiresource,omitempty"`
-	Sessionsync          string `json:"sessionsync,omitempty"`
-	Subscrsessionremoval string `json:"subscrsessionremoval,omitempty"`
+type LSNParameter struct {
+	MaxMemLimit          int    `json:"maxmemlimit,omitempty"`
+	MemLimit             int    `json:"memlimit,omitempty"`
+	MemLimitActive       int    `json:"memlimitactive,omitempty"`
+	NextGenAPIResource   string `json:"_nextgenapiresource,omitempty"`
+	SessionSync          string `json:"sessionsync,omitempty"`
+	SubscrSessionRemoval string `json:"subscrsessionremoval,omitempty"`
 }
 
-type LsnclientNetworkBinding struct {
-	Clientname string `json:"clientname,omitempty"`
+type LSNClientNetworkBinding struct {
+	ClientName string `json:"clientname,omitempty"`
 	Netmask    string `json:"netmask,omitempty"`
 	Network    string `json:"network,omitempty"`
-	Td         int    `json:"td,omitempty"`
+	TD         int    `json:"td,omitempty"`
 }
 
-type LsnclientNetwork6Binding struct {
-	Clientname string `json:"clientname,omitempty"`
+type LSNClientNetwork6Binding struct {
+	ClientName string `json:"clientname,omitempty"`
 	Netmask    string `json:"netmask,omitempty"`
 	Network    string `json:"network,omitempty"`
 	Network6   string `json:"network6,omitempty"`
-	Td         int    `json:"td,omitempty"`
+	TD         int    `json:"td,omitempty"`
 }
 
-type LsnappsprofilePortBinding struct {
-	Appsprofilename string `json:"appsprofilename,omitempty"`
-	Lsnport         string `json:"lsnport,omitempty"`
+type LSNAppsProfilePortBinding struct {
+	AppsProfileName string `json:"appsprofilename,omitempty"`
+	LSNPort         string `json:"lsnport,omitempty"`
 }
 
-type Lsnsession struct {
-	Clientname         string  `json:"clientname,omitempty"`
+type LSNSession struct {
+	ClientName         string  `json:"clientname,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Destip             string  `json:"destip,omitempty"`
-	Destport           int     `json:"destport,omitempty"`
-	Dsttd              int     `json:"dsttd,omitempty"`
-	Ipv6address        string  `json:"ipv6address,omitempty"`
-	Natip              string  `json:"natip,omitempty"`
-	Natport            int     `json:"natport,omitempty"`
-	Natport2           int     `json:"natport2,omitempty"`
-	Natprefix          string  `json:"natprefix,omitempty"`
-	Nattype            string  `json:"nattype,omitempty"`
+	DestIP             string  `json:"destip,omitempty"`
+	DestPort           int     `json:"destport,omitempty"`
+	DstTD              int     `json:"dsttd,omitempty"`
+	IPv6Address        string  `json:"ipv6address,omitempty"`
+	NatIP              string  `json:"natip,omitempty"`
+	NatPort            int     `json:"natport,omitempty"`
+	NatPort2           int     `json:"natport2,omitempty"`
+	NatPrefix          string  `json:"natprefix,omitempty"`
+	NatType            string  `json:"nattype,omitempty"`
 	Netmask            string  `json:"netmask,omitempty"`
 	Network            string  `json:"network,omitempty"`
 	Network6           string  `json:"network6,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Nodeid             int     `json:"nodeid,omitempty"`
-	Sessionestdir      string  `json:"sessionestdir,omitempty"`
-	Srctd              int     `json:"srctd,omitempty"`
-	Subscrip           string  `json:"subscrip,omitempty"`
-	Subscrport         int     `json:"subscrport,omitempty"`
-	Td                 int     `json:"td,omitempty"`
-	Transportprotocol  string  `json:"transportprotocol,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	NodeID             int     `json:"nodeid,omitempty"`
+	SessionEstDir      string  `json:"sessionestdir,omitempty"`
+	SrcTD              int     `json:"srctd,omitempty"`
+	SubscrIP           string  `json:"subscrip,omitempty"`
+	SubscrPort         int     `json:"subscrport,omitempty"`
+	TD                 int     `json:"td,omitempty"`
+	TransportProtocol  string  `json:"transportprotocol,omitempty"`
 }
 
-type Lsnsipalgprofile struct {
+type LSNSIPALGProfile struct {
 	Count                  float64 `json:"__count,omitempty"`
-	Datasessionidletimeout int     `json:"datasessionidletimeout,omitempty"`
-	Nextgenapiresource     string  `json:"_nextgenapiresource,omitempty"`
-	Opencontactpinhole     string  `json:"opencontactpinhole,omitempty"`
-	Openrecordroutepinhole string  `json:"openrecordroutepinhole,omitempty"`
-	Openregisterpinhole    string  `json:"openregisterpinhole,omitempty"`
-	Openroutepinhole       string  `json:"openroutepinhole,omitempty"`
-	Openviapinhole         string  `json:"openviapinhole,omitempty"`
-	Registrationtimeout    int     `json:"registrationtimeout,omitempty"`
-	Rport                  string  `json:"rport,omitempty"`
-	Sipalgprofilename      string  `json:"sipalgprofilename,omitempty"`
-	Sipdstportrange        string  `json:"sipdstportrange,omitempty"`
-	Sipsessiontimeout      int     `json:"sipsessiontimeout,omitempty"`
-	Sipsrcportrange        string  `json:"sipsrcportrange,omitempty"`
-	Siptransportprotocol   string  `json:"siptransportprotocol,omitempty"`
+	DataSessionIdleTimeout int     `json:"datasessionidletimeout,omitempty"`
+	NextGenAPIResource     string  `json:"_nextgenapiresource,omitempty"`
+	OpenContactPinhole     string  `json:"opencontactpinhole,omitempty"`
+	OpenRecordRoutePinhole string  `json:"openrecordroutepinhole,omitempty"`
+	OpenRegisterPinhole    string  `json:"openregisterpinhole,omitempty"`
+	OpenRoutePinhole       string  `json:"openroutepinhole,omitempty"`
+	OpenViaPinhole         string  `json:"openviapinhole,omitempty"`
+	RegistrationTimeout    int     `json:"registrationtimeout,omitempty"`
+	RPort                  string  `json:"rport,omitempty"`
+	SIPALGProfileName      string  `json:"sipalgprofilename,omitempty"`
+	SIPDstPortRange        string  `json:"sipdstportrange,omitempty"`
+	SIPSessionTimeout      int     `json:"sipsessiontimeout,omitempty"`
+	SIPSrcPortRange        string  `json:"sipsrcportrange,omitempty"`
+	SIPTransportProtocol   string  `json:"siptransportprotocol,omitempty"`
 }
 
-type LsnrtspalgsessionBinding struct {
-	LsnrtspalgsessionDatachannelBinding []interface{} `json:"lsnrtspalgsession_datachannel_binding,omitempty"`
-	Sessionid                           string        `json:"sessionid,omitempty"`
+type LSNRTSPALGSessionBinding struct {
+	LSNRTSPALGSessionDataChannelBinding []interface{} `json:"lsnrtspalgsession_datachannel_binding,omitempty"`
+	SessionID                           string        `json:"sessionid,omitempty"`
 }
 
-type Lsnlogprofile struct {
-	Analyticsprofile   string  `json:"analyticsprofile,omitempty"`
+type LSNLogProfile struct {
+	AnalyticsProfile   string  `json:"analyticsprofile,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Logcompact         string  `json:"logcompact,omitempty"`
-	Logipfix           string  `json:"logipfix,omitempty"`
-	Logprofilename     string  `json:"logprofilename,omitempty"`
-	Logsessdeletion    string  `json:"logsessdeletion,omitempty"`
-	Logsubscrinfo      string  `json:"logsubscrinfo,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	LogCompact         string  `json:"logcompact,omitempty"`
+	LogIPFIX           string  `json:"logipfix,omitempty"`
+	LogProfileName     string  `json:"logprofilename,omitempty"`
+	LogSessDeletion    string  `json:"logsessdeletion,omitempty"`
+	LogSubscrInfo      string  `json:"logsubscrinfo,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 }
 
-type LsngroupIpsecalgprofileBinding struct {
-	Groupname       string `json:"groupname,omitempty"`
-	Ipsecalgprofile string `json:"ipsecalgprofile,omitempty"`
+type LSNGroupIPSECALGProfileBinding struct {
+	GroupName       string `json:"groupname,omitempty"`
+	IPSECALGProfile string `json:"ipsecalgprofile,omitempty"`
 }
 
-type Lsngroup struct {
-	Allocpolicy        string  `json:"allocpolicy,omitempty"`
-	Clientname         string  `json:"clientname,omitempty"`
+type LSNGroup struct {
+	AllocPolicy        string  `json:"allocpolicy,omitempty"`
+	ClientName         string  `json:"clientname,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Ftp                string  `json:"ftp,omitempty"`
-	Ftpcm              string  `json:"ftpcm,omitempty"`
-	Groupid            int     `json:"groupid,omitempty"`
-	Groupname          string  `json:"groupname,omitempty"`
-	Ip6profile         string  `json:"ip6profile,omitempty"`
+	FTP                string  `json:"ftp,omitempty"`
+	FTPCM              string  `json:"ftpcm,omitempty"`
+	GroupID            int     `json:"groupid,omitempty"`
+	GroupName          string  `json:"groupname,omitempty"`
+	IP6Profile         string  `json:"ip6profile,omitempty"`
 	Logging            string  `json:"logging,omitempty"`
-	Nattype            string  `json:"nattype,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Portblocksize      int     `json:"portblocksize,omitempty"`
-	Pptp               string  `json:"pptp,omitempty"`
-	Rtspalg            string  `json:"rtspalg,omitempty"`
-	Sessionlogging     string  `json:"sessionlogging,omitempty"`
-	Sessionsync        string  `json:"sessionsync,omitempty"`
-	Sipalg             string  `json:"sipalg,omitempty"`
-	Snmptraplimit      int     `json:"snmptraplimit,omitempty"`
+	NatType            string  `json:"nattype,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	PortBlockSize      int     `json:"portblocksize,omitempty"`
+	PPTP               string  `json:"pptp,omitempty"`
+	RTSPALG            string  `json:"rtspalg,omitempty"`
+	SessionLogging     string  `json:"sessionlogging,omitempty"`
+	SessionSync        string  `json:"sessionsync,omitempty"`
+	SIPALG             string  `json:"sipalg,omitempty"`
+	SNMPTrapLimit      int     `json:"snmptraplimit,omitempty"`
 }
 
-type Lsnstatic struct {
+type LSNStatic struct {
 	Count              float64 `json:"__count,omitempty"`
-	Destip             string  `json:"destip,omitempty"`
-	Dsttd              int     `json:"dsttd,omitempty"`
+	DestIP             string  `json:"destip,omitempty"`
+	DstTD              int     `json:"dsttd,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Natip              string  `json:"natip,omitempty"`
-	Natport            int     `json:"natport,omitempty"`
-	Nattype            string  `json:"nattype,omitempty"`
+	NatIP              string  `json:"natip,omitempty"`
+	NatPort            int     `json:"natport,omitempty"`
+	NatType            string  `json:"nattype,omitempty"`
 	Network6           string  `json:"network6,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Status             string  `json:"status,omitempty"`
-	Subscrip           string  `json:"subscrip,omitempty"`
-	Subscrport         int     `json:"subscrport,omitempty"`
-	Td                 int     `json:"td,omitempty"`
-	Transportprotocol  string  `json:"transportprotocol,omitempty"`
+	SubscrIP           string  `json:"subscrip,omitempty"`
+	SubscrPort         int     `json:"subscrport,omitempty"`
+	TD                 int     `json:"td,omitempty"`
+	TransportProtocol  string  `json:"transportprotocol,omitempty"`
 }
 
-type Lsntransportprofile struct {
+type LSNTransportProfile struct {
 	Count                float64 `json:"__count,omitempty"`
-	Finrsttimeout        int     `json:"finrsttimeout,omitempty"`
-	Groupsessionlimit    int     `json:"groupsessionlimit,omitempty"`
-	Nextgenapiresource   string  `json:"_nextgenapiresource,omitempty"`
-	Portpreserveparity   string  `json:"portpreserveparity,omitempty"`
-	Portpreserverange    string  `json:"portpreserverange,omitempty"`
-	Portquota            int     `json:"portquota,omitempty"`
-	Sessionquota         int     `json:"sessionquota,omitempty"`
-	Sessiontimeout       int     `json:"sessiontimeout,omitempty"`
-	Stuntimeout          int     `json:"stuntimeout,omitempty"`
-	Syncheck             string  `json:"syncheck,omitempty"`
-	Synidletimeout       int     `json:"synidletimeout,omitempty"`
-	Transportprofilename string  `json:"transportprofilename,omitempty"`
-	Transportprotocol    string  `json:"transportprotocol,omitempty"`
+	FinRstTimeout        int     `json:"finrsttimeout,omitempty"`
+	GroupSessionLimit    int     `json:"groupsessionlimit,omitempty"`
+	NextGenAPIResource   string  `json:"_nextgenapiresource,omitempty"`
+	PortPreserveParity   string  `json:"portpreserveparity,omitempty"`
+	PortPreserveRange    string  `json:"portpreserverange,omitempty"`
+	PortQuota            int     `json:"portquota,omitempty"`
+	SessionQuota         int     `json:"sessionquota,omitempty"`
+	SessionTimeout       int     `json:"sessiontimeout,omitempty"`
+	STUNTimeout          int     `json:"stuntimeout,omitempty"`
+	SynCheck             string  `json:"syncheck,omitempty"`
+	SynIdleTimeout       int     `json:"synidletimeout,omitempty"`
+	TransportProfileName string  `json:"transportprofilename,omitempty"`
+	TransportProtocol    string  `json:"transportprotocol,omitempty"`
 }
 
-type LsnsipalgcallDatachannelBinding struct {
-	Callid          string `json:"callid,omitempty"`
-	Channelflags    int    `json:"channelflags,omitempty"`
-	Channelip       string `json:"channelip,omitempty"`
-	Channelnatip    string `json:"channelnatip,omitempty"`
-	Channelnatport  int    `json:"channelnatport,omitempty"`
-	Channelport     int    `json:"channelport,omitempty"`
-	Channelprotocol string `json:"channelprotocol,omitempty"`
-	Channeltimeout  int    `json:"channeltimeout,omitempty"`
+type LSNSIPALGCallDataChannelBinding struct {
+	CallID          string `json:"callid,omitempty"`
+	ChannelFlags    int    `json:"channelflags,omitempty"`
+	ChannelIP       string `json:"channelip,omitempty"`
+	ChannelNatIP    string `json:"channelnatip,omitempty"`
+	ChannelNatPort  int    `json:"channelnatport,omitempty"`
+	ChannelPort     int    `json:"channelport,omitempty"`
+	ChannelProtocol string `json:"channelprotocol,omitempty"`
+	ChannelTimeout  int    `json:"channeltimeout,omitempty"`
 }
 
-type LsnappsprofileBinding struct {
-	Appsprofilename                        string        `json:"appsprofilename,omitempty"`
-	LsnappsprofileLsnappsattributesBinding []interface{} `json:"lsnappsprofile_lsnappsattributes_binding,omitempty"`
-	LsnappsprofilePortBinding              []interface{} `json:"lsnappsprofile_port_binding,omitempty"`
+type LSNAppsProfileBinding struct {
+	AppsProfileName                        string        `json:"appsprofilename,omitempty"`
+	LSNAppsProfileLSNAppsAttributesBinding []interface{} `json:"lsnappsprofile_lsnappsattributes_binding,omitempty"`
+	LSNAppsProfilePortBinding              []interface{} `json:"lsnappsprofile_port_binding,omitempty"`
 }
 
-type Lsnpool struct {
+type LSNPool struct {
 	Count               float64 `json:"__count,omitempty"`
-	Maxportrealloctmq   int     `json:"maxportrealloctmq,omitempty"`
-	Nattype             string  `json:"nattype,omitempty"`
-	Nextgenapiresource  string  `json:"_nextgenapiresource,omitempty"`
-	Poolname            string  `json:"poolname,omitempty"`
-	Portblockallocation string  `json:"portblockallocation,omitempty"`
-	Portrealloctimeout  int     `json:"portrealloctimeout,omitempty"`
+	MaxPortReallocTMQ   int     `json:"maxportrealloctmq,omitempty"`
+	NatType             string  `json:"nattype,omitempty"`
+	NextGenAPIResource  string  `json:"_nextgenapiresource,omitempty"`
+	PoolName            string  `json:"poolname,omitempty"`
+	PortBlockAllocation string  `json:"portblockallocation,omitempty"`
+	PortReallocTimeout  int     `json:"portrealloctimeout,omitempty"`
 }
 
-type LsnappsprofileLsnappsattributesBinding struct {
-	Appsattributesname string `json:"appsattributesname,omitempty"`
-	Appsprofilename    string `json:"appsprofilename,omitempty"`
+type LSNAppsProfileLSNAppsAttributesBinding struct {
+	AppsAttributesName string `json:"appsattributesname,omitempty"`
+	AppsProfileName    string `json:"appsprofilename,omitempty"`
 }
 
-type LsngroupBinding struct {
-	Groupname                           string        `json:"groupname,omitempty"`
-	LsngroupIpsecalgprofileBinding      []interface{} `json:"lsngroup_ipsecalgprofile_binding,omitempty"`
-	LsngroupLsnappsprofileBinding       []interface{} `json:"lsngroup_lsnappsprofile_binding,omitempty"`
-	LsngroupLsnhttphdrlogprofileBinding []interface{} `json:"lsngroup_lsnhttphdrlogprofile_binding,omitempty"`
-	LsngroupLsnlogprofileBinding        []interface{} `json:"lsngroup_lsnlogprofile_binding,omitempty"`
-	LsngroupLsnpoolBinding              []interface{} `json:"lsngroup_lsnpool_binding,omitempty"`
-	LsngroupLsnrtspalgprofileBinding    []interface{} `json:"lsngroup_lsnrtspalgprofile_binding,omitempty"`
-	LsngroupLsnsipalgprofileBinding     []interface{} `json:"lsngroup_lsnsipalgprofile_binding,omitempty"`
-	LsngroupLsntransportprofileBinding  []interface{} `json:"lsngroup_lsntransportprofile_binding,omitempty"`
-	LsngroupPcpserverBinding            []interface{} `json:"lsngroup_pcpserver_binding,omitempty"`
+type LSNGroupBinding struct {
+	GroupName                           string        `json:"groupname,omitempty"`
+	LSNGroupIPSECALGProfileBinding      []interface{} `json:"lsngroup_ipsecalgprofile_binding,omitempty"`
+	LSNGroupLSNAppsProfileBinding       []interface{} `json:"lsngroup_lsnappsprofile_binding,omitempty"`
+	LSNGroupLSNHTTPHdrLogProfileBinding []interface{} `json:"lsngroup_lsnhttphdrlogprofile_binding,omitempty"`
+	LSNGroupLSNLogProfileBinding        []interface{} `json:"lsngroup_lsnlogprofile_binding,omitempty"`
+	LSNGroupLSNPoolBinding              []interface{} `json:"lsngroup_lsnpool_binding,omitempty"`
+	LSNGroupLSNRTSPALGProfileBinding    []interface{} `json:"lsngroup_lsnrtspalgprofile_binding,omitempty"`
+	LSNGroupLSNSIPALGProfileBinding     []interface{} `json:"lsngroup_lsnsipalgprofile_binding,omitempty"`
+	LSNGroupLSNTransportProfileBinding  []interface{} `json:"lsngroup_lsntransportprofile_binding,omitempty"`
+	LSNGroupPCPServerBinding            []interface{} `json:"lsngroup_pcpserver_binding,omitempty"`
 }
 
-type LsnpoolBinding struct {
-	LsnpoolLsnipBinding []interface{} `json:"lsnpool_lsnip_binding,omitempty"`
-	Poolname            string        `json:"poolname,omitempty"`
+type LSNPoolBinding struct {
+	LSNPoolLSNIPBinding []interface{} `json:"lsnpool_lsnip_binding,omitempty"`
+	PoolName            string        `json:"poolname,omitempty"`
 }
 
-type Lsndeterministicnat struct {
-	Clientname         string  `json:"clientname,omitempty"`
+type LSNDeterministicNAT struct {
+	ClientName         string  `json:"clientname,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Firstport          int     `json:"firstport,omitempty"`
-	Lastport           int     `json:"lastport,omitempty"`
-	Natip              string  `json:"natip,omitempty"`
-	Natip2             string  `json:"natip2,omitempty"`
-	Natprefix          string  `json:"natprefix,omitempty"`
-	Nattype            string  `json:"nattype,omitempty"`
+	FirstPort          int     `json:"firstport,omitempty"`
+	LastPort           int     `json:"lastport,omitempty"`
+	NatIP              string  `json:"natip,omitempty"`
+	NatIP2             string  `json:"natip2,omitempty"`
+	NatPrefix          string  `json:"natprefix,omitempty"`
+	NatType            string  `json:"nattype,omitempty"`
 	Network6           string  `json:"network6,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Srctd              int     `json:"srctd,omitempty"`
-	Subscrip           string  `json:"subscrip,omitempty"`
-	Subscrip2          string  `json:"subscrip2,omitempty"`
-	Td                 int     `json:"td,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	SrcTD              int     `json:"srctd,omitempty"`
+	SubscrIP           string  `json:"subscrip,omitempty"`
+	SubscrIP2          string  `json:"subscrip2,omitempty"`
+	TD                 int     `json:"td,omitempty"`
 }
 
-type LsngroupLsnappsprofileBinding struct {
-	Appsprofilename string `json:"appsprofilename,omitempty"`
-	Groupname       string `json:"groupname,omitempty"`
+type LSNGroupLSNAppsProfileBinding struct {
+	AppsProfileName string `json:"appsprofilename,omitempty"`
+	GroupName       string `json:"groupname,omitempty"`
 }
 
-type LsnsipalgcallBinding struct {
-	Callid                             string        `json:"callid,omitempty"`
-	LsnsipalgcallControlchannelBinding []interface{} `json:"lsnsipalgcall_controlchannel_binding,omitempty"`
-	LsnsipalgcallDatachannelBinding    []interface{} `json:"lsnsipalgcall_datachannel_binding,omitempty"`
+type LSNSIPALGCallBinding struct {
+	CallID                             string        `json:"callid,omitempty"`
+	LSNSIPALGCallControlChannelBinding []interface{} `json:"lsnsipalgcall_controlchannel_binding,omitempty"`
+	LSNSIPALGCallDataChannelBinding    []interface{} `json:"lsnsipalgcall_datachannel_binding,omitempty"`
 }
 
-type Lsnappsprofile struct {
-	Appsprofilename    string  `json:"appsprofilename,omitempty"`
+type LSNAppsProfile struct {
+	AppsProfileName    string  `json:"appsprofilename,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
 	Filtering          string  `json:"filtering,omitempty"`
-	Ippooling          string  `json:"ippooling,omitempty"`
-	L2info             string  `json:"l2info,omitempty"`
+	IPPooling          string  `json:"ippooling,omitempty"`
+	L2Info             string  `json:"l2info,omitempty"`
 	Mapping            string  `json:"mapping,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Tcpproxy           string  `json:"tcpproxy,omitempty"`
-	Td                 int     `json:"td,omitempty"`
-	Transportprotocol  string  `json:"transportprotocol,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	TCPProxy           string  `json:"tcpproxy,omitempty"`
+	TD                 int     `json:"td,omitempty"`
+	TransportProtocol  string  `json:"transportprotocol,omitempty"`
 }
 
-type Lsnhttphdrlogprofile struct {
+type LSNHTTPHdrLogProfile struct {
 	Count                 float64 `json:"__count,omitempty"`
-	Httphdrlogprofilename string  `json:"httphdrlogprofilename,omitempty"`
-	Loghost               string  `json:"loghost,omitempty"`
-	Logmethod             string  `json:"logmethod,omitempty"`
-	Logurl                string  `json:"logurl,omitempty"`
-	Logversion            string  `json:"logversion,omitempty"`
-	Nextgenapiresource    string  `json:"_nextgenapiresource,omitempty"`
+	HTTPHdrLogProfileName string  `json:"httphdrlogprofilename,omitempty"`
+	LogHost               string  `json:"loghost,omitempty"`
+	LogMethod             string  `json:"logmethod,omitempty"`
+	LogURL                string  `json:"logurl,omitempty"`
+	LogVersion            string  `json:"logversion,omitempty"`
+	NextGenAPIResource    string  `json:"_nextgenapiresource,omitempty"`
 }
 
-type LsnsipalgcallControlchannelBinding struct {
-	Callid          string `json:"callid,omitempty"`
-	Channelflags    int    `json:"channelflags,omitempty"`
-	Channelip       string `json:"channelip,omitempty"`
-	Channelnatip    string `json:"channelnatip,omitempty"`
-	Channelnatport  int    `json:"channelnatport,omitempty"`
-	Channelport     int    `json:"channelport,omitempty"`
-	Channelprotocol string `json:"channelprotocol,omitempty"`
-	Channeltimeout  int    `json:"channeltimeout,omitempty"`
+type LSNSIPALGCallControlChannelBinding struct {
+	CallID          string `json:"callid,omitempty"`
+	ChannelFlags    int    `json:"channelflags,omitempty"`
+	ChannelIP       string `json:"channelip,omitempty"`
+	ChannelNatIP    string `json:"channelnatip,omitempty"`
+	ChannelNatPort  int    `json:"channelnatport,omitempty"`
+	ChannelPort     int    `json:"channelport,omitempty"`
+	ChannelProtocol string `json:"channelprotocol,omitempty"`
+	ChannelTimeout  int    `json:"channeltimeout,omitempty"`
 }
 
-type LsngroupLsnpoolBinding struct {
-	Groupname string `json:"groupname,omitempty"`
-	Poolname  string `json:"poolname,omitempty"`
+type LSNGroupLSNPoolBinding struct {
+	GroupName string `json:"groupname,omitempty"`
+	PoolName  string `json:"poolname,omitempty"`
 }
 
-type Lsnsipalgcall struct {
-	Callflags          int     `json:"callflags,omitempty"`
-	Callid             string  `json:"callid,omitempty"`
-	Callrefcount       int     `json:"callrefcount,omitempty"`
-	Calltimer          int     `json:"calltimer,omitempty"`
+type LSNSIPALGCall struct {
+	CallFlags          int     `json:"callflags,omitempty"`
+	CallID             string  `json:"callid,omitempty"`
+	CallRefCount       int     `json:"callrefcount,omitempty"`
+	CallTimer          int     `json:"calltimer,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Nodeid             int     `json:"nodeid,omitempty"`
-	Xlatip             string  `json:"xlatip,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	NodeID             int     `json:"nodeid,omitempty"`
+	XlatIP             string  `json:"xlatip,omitempty"`
 }
 
-type LsnpoolLsnipBinding struct {
-	Lsnip     string `json:"lsnip,omitempty"`
-	Ownernode int    `json:"ownernode,omitempty"`
-	Poolname  string `json:"poolname,omitempty"`
+type LSNPoolLSNIPBinding struct {
+	LSNIP     string `json:"lsnip,omitempty"`
+	OwnerNode int    `json:"ownernode,omitempty"`
+	PoolName  string `json:"poolname,omitempty"`
 }
 
-type Lsnrtspalgsession struct {
-	Callflags          int     `json:"callflags,omitempty"`
-	Callrefcount       int     `json:"callrefcount,omitempty"`
-	Calltimer          int     `json:"calltimer,omitempty"`
+type LSNRTSPALGSession struct {
+	CallFlags          int     `json:"callflags,omitempty"`
+	CallRefCount       int     `json:"callrefcount,omitempty"`
+	CallTimer          int     `json:"calltimer,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Nodeid             int     `json:"nodeid,omitempty"`
-	Sessionid          string  `json:"sessionid,omitempty"`
-	Xlatip             string  `json:"xlatip,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	NodeID             int     `json:"nodeid,omitempty"`
+	SessionID          string  `json:"sessionid,omitempty"`
+	XlatIP             string  `json:"xlatip,omitempty"`
 }
 
-type Lsnrtspalgprofile struct {
+type LSNRTSPALGProfile struct {
 	Count                 float64 `json:"__count,omitempty"`
-	Nextgenapiresource    string  `json:"_nextgenapiresource,omitempty"`
-	Rtspalgprofilename    string  `json:"rtspalgprofilename,omitempty"`
-	Rtspidletimeout       int     `json:"rtspidletimeout,omitempty"`
-	Rtspportrange         string  `json:"rtspportrange,omitempty"`
-	Rtsptransportprotocol string  `json:"rtsptransportprotocol,omitempty"`
+	NextGenAPIResource    string  `json:"_nextgenapiresource,omitempty"`
+	RTSPALGProfileName    string  `json:"rtspalgprofilename,omitempty"`
+	RTSPIdleTimeout       int     `json:"rtspidletimeout,omitempty"`
+	RTSPPortRange         string  `json:"rtspportrange,omitempty"`
+	RTSPTransportProtocol string  `json:"rtsptransportprotocol,omitempty"`
 }
 
-type LsngroupPcpserverBinding struct {
-	Groupname string `json:"groupname,omitempty"`
-	Pcpserver string `json:"pcpserver,omitempty"`
+type LSNGroupPCPServerBinding struct {
+	GroupName string `json:"groupname,omitempty"`
+	PCPServer string `json:"pcpserver,omitempty"`
 }
 
-type LsnclientBinding struct {
-	Clientname               string        `json:"clientname,omitempty"`
-	LsnclientNetwork6Binding []interface{} `json:"lsnclient_network6_binding,omitempty"`
-	LsnclientNetworkBinding  []interface{} `json:"lsnclient_network_binding,omitempty"`
-	LsnclientNsacl6Binding   []interface{} `json:"lsnclient_nsacl6_binding,omitempty"`
-	LsnclientNsaclBinding    []interface{} `json:"lsnclient_nsacl_binding,omitempty"`
+type LSNClientBinding struct {
+	ClientName               string        `json:"clientname,omitempty"`
+	LSNClientNetwork6Binding []interface{} `json:"lsnclient_network6_binding,omitempty"`
+	LSNClientNetworkBinding  []interface{} `json:"lsnclient_network_binding,omitempty"`
+	LSNClientNSACL6Binding   []interface{} `json:"lsnclient_nsacl6_binding,omitempty"`
+	LSNClientNSACLBinding    []interface{} `json:"lsnclient_nsacl_binding,omitempty"`
 }
 
-type LsnrtspalgsessionDatachannelBinding struct {
-	Channelflags    int    `json:"channelflags,omitempty"`
-	Channelip       string `json:"channelip,omitempty"`
-	Channelnatip    string `json:"channelnatip,omitempty"`
-	Channelnatport  int    `json:"channelnatport,omitempty"`
-	Channelport     int    `json:"channelport,omitempty"`
-	Channelprotocol string `json:"channelprotocol,omitempty"`
-	Channeltimeout  int    `json:"channeltimeout,omitempty"`
-	Sessionid       string `json:"sessionid,omitempty"`
+type LSNRTSPALGSessionDataChannelBinding struct {
+	ChannelFlags    int    `json:"channelflags,omitempty"`
+	ChannelIP       string `json:"channelip,omitempty"`
+	ChannelNatIP    string `json:"channelnatip,omitempty"`
+	ChannelNatPort  int    `json:"channelnatport,omitempty"`
+	ChannelPort     int    `json:"channelport,omitempty"`
+	ChannelProtocol string `json:"channelprotocol,omitempty"`
+	ChannelTimeout  int    `json:"channeltimeout,omitempty"`
+	SessionID       string `json:"sessionid,omitempty"`
 }
 
-type LsngroupLsnsipalgprofileBinding struct {
-	Groupname         string `json:"groupname,omitempty"`
-	Sipalgprofilename string `json:"sipalgprofilename,omitempty"`
+type LSNGroupLSNSIPALGProfileBinding struct {
+	GroupName         string `json:"groupname,omitempty"`
+	SIPALGProfileName string `json:"sipalgprofilename,omitempty"`
 }

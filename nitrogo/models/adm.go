@@ -1,8 +1,8 @@
 package models
 
 // adm configuration structs
-type Admparameter struct {
-	Admserviceconnect  string `json:"admserviceconnect,omitempty"`
-	Lowtouchonboard    string `json:"lowtouchonboard,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+type ADMParameter struct {
+	ADMServiceConnect  string `json:"admserviceconnect,omitempty"`
+	LowTouchOnBoard    string `json:"lowtouchonboard,omitempty"`
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
 }

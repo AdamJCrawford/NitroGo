@@ -1,91 +1,91 @@
 package models
 
 // subscriber configuration structs
-type Subscribersessions struct {
-	Avpdisplaybuffer    string   `json:"avpdisplaybuffer,omitempty"`
+type SubscriberSessions struct {
+	AVPDisplayBuffer    string   `json:"avpdisplaybuffer,omitempty"`
 	Count               float64  `json:"__count,omitempty"`
 	Flags               int      `json:"flags,omitempty"`
-	Idlettl             int      `json:"idlettl,omitempty"`
-	Ip                  string   `json:"ip,omitempty"`
-	Nextgenapiresource  string   `json:"_nextgenapiresource,omitempty"`
-	Nodeid              int      `json:"nodeid,omitempty"`
-	Servicepath         string   `json:"servicepath,omitempty"`
-	Subscriberrules     []string `json:"subscriberrules,omitempty"`
-	Subscriptionidtype  string   `json:"subscriptionidtype,omitempty"`
-	Subscriptionidvalue string   `json:"subscriptionidvalue,omitempty"`
-	Ttl                 int      `json:"ttl,omitempty"`
-	Vlan                int      `json:"vlan,omitempty"`
+	IdleTTL             int      `json:"idlettl,omitempty"`
+	IP                  string   `json:"ip,omitempty"`
+	NextGenAPIResource  string   `json:"_nextgenapiresource,omitempty"`
+	NodeID              int      `json:"nodeid,omitempty"`
+	ServicePath         string   `json:"servicepath,omitempty"`
+	SubscriberRules     []string `json:"subscriberrules,omitempty"`
+	SubscriptionIDType  string   `json:"subscriptionidtype,omitempty"`
+	SubscriptionIDValue string   `json:"subscriptionidvalue,omitempty"`
+	TTL                 int      `json:"ttl,omitempty"`
+	VLAN                int      `json:"vlan,omitempty"`
 }
 
-type Subscribergxinterface struct {
-	Cerrequesttimeout         int           `json:"cerrequesttimeout,omitempty"`
-	Gxreportingavp1           []interface{} `json:"gxreportingavp1,omitempty"`
-	Gxreportingavp1type       string        `json:"gxreportingavp1type,omitempty"`
-	Gxreportingavp1vendorid   int           `json:"gxreportingavp1vendorid,omitempty"`
-	Gxreportingavp2           []interface{} `json:"gxreportingavp2,omitempty"`
-	Gxreportingavp2type       string        `json:"gxreportingavp2type,omitempty"`
-	Gxreportingavp2vendorid   int           `json:"gxreportingavp2vendorid,omitempty"`
-	Gxreportingavp3           []interface{} `json:"gxreportingavp3,omitempty"`
-	Gxreportingavp3type       string        `json:"gxreportingavp3type,omitempty"`
-	Gxreportingavp3vendorid   int           `json:"gxreportingavp3vendorid,omitempty"`
-	Gxreportingavp4           []interface{} `json:"gxreportingavp4,omitempty"`
-	Gxreportingavp4type       string        `json:"gxreportingavp4type,omitempty"`
-	Gxreportingavp4vendorid   int           `json:"gxreportingavp4vendorid,omitempty"`
-	Gxreportingavp5           []interface{} `json:"gxreportingavp5,omitempty"`
-	Gxreportingavp5type       string        `json:"gxreportingavp5type,omitempty"`
-	Gxreportingavp5vendorid   int           `json:"gxreportingavp5vendorid,omitempty"`
-	Healthcheck               string        `json:"healthcheck,omitempty"`
-	Healthcheckttl            int           `json:"healthcheckttl,omitempty"`
-	Holdonsubscriberabsence   string        `json:"holdonsubscriberabsence,omitempty"`
+type SubscriberGxInterface struct {
+	CerRequestTimeout         int           `json:"cerrequesttimeout,omitempty"`
+	GxReportingAVP1           []interface{} `json:"gxreportingavp1,omitempty"`
+	GxReportingAVP1Type       string        `json:"gxreportingavp1type,omitempty"`
+	GxReportingAVP1VendorID   int           `json:"gxreportingavp1vendorid,omitempty"`
+	GxReportingAVP2           []interface{} `json:"gxreportingavp2,omitempty"`
+	GxReportingAVP2Type       string        `json:"gxreportingavp2type,omitempty"`
+	GxReportingAVP2VendorID   int           `json:"gxreportingavp2vendorid,omitempty"`
+	GxReportingAVP3           []interface{} `json:"gxreportingavp3,omitempty"`
+	GxReportingAVP3Type       string        `json:"gxreportingavp3type,omitempty"`
+	GxReportingAVP3VendorID   int           `json:"gxreportingavp3vendorid,omitempty"`
+	GxReportingAVP4           []interface{} `json:"gxreportingavp4,omitempty"`
+	GxReportingAVP4Type       string        `json:"gxreportingavp4type,omitempty"`
+	GxReportingAVP4VendorID   int           `json:"gxreportingavp4vendorid,omitempty"`
+	GxReportingAVP5           []interface{} `json:"gxreportingavp5,omitempty"`
+	GxReportingAVP5Type       string        `json:"gxreportingavp5type,omitempty"`
+	GxReportingAVP5VendorID   int           `json:"gxreportingavp5vendorid,omitempty"`
+	HealthCheck               string        `json:"healthcheck,omitempty"`
+	HealthCheckTTL            int           `json:"healthcheckttl,omitempty"`
+	HoldOnSubscriberAbsence   string        `json:"holdonsubscriberabsence,omitempty"`
 	Identity                  string        `json:"identity,omitempty"`
-	Idlettl                   int           `json:"idlettl,omitempty"`
-	Negativettl               int           `json:"negativettl,omitempty"`
-	Negativettllimitedsuccess string        `json:"negativettllimitedsuccess,omitempty"`
-	Nextgenapiresource        string        `json:"_nextgenapiresource,omitempty"`
-	Nodeid                    int           `json:"nodeid,omitempty"`
-	Pcrfrealm                 string        `json:"pcrfrealm,omitempty"`
-	Purgesdbongxfailure       string        `json:"purgesdbongxfailure,omitempty"`
+	IdleTTL                   int           `json:"idlettl,omitempty"`
+	NegativeTTL               int           `json:"negativettl,omitempty"`
+	NegativeTTLLimitedSuccess string        `json:"negativettllimitedsuccess,omitempty"`
+	NextGenAPIResource        string        `json:"_nextgenapiresource,omitempty"`
+	NodeID                    int           `json:"nodeid,omitempty"`
+	PCRFRealm                 string        `json:"pcrfrealm,omitempty"`
+	PurgeSDBOnGxFailure       string        `json:"purgesdbongxfailure,omitempty"`
 	Realm                     string        `json:"realm,omitempty"`
-	Requestretryattempts      int           `json:"requestretryattempts,omitempty"`
-	Requesttimeout            int           `json:"requesttimeout,omitempty"`
-	Revalidationtimeout       int           `json:"revalidationtimeout,omitempty"`
+	RequestRetryAttempts      int           `json:"requestretryattempts,omitempty"`
+	RequestTimeout            int           `json:"requesttimeout,omitempty"`
+	RevalidationTimeout       int           `json:"revalidationtimeout,omitempty"`
 	Service                   string        `json:"service,omitempty"`
-	Servicepathavp            []interface{} `json:"servicepathavp,omitempty"`
-	Servicepathinfomode       string        `json:"servicepathinfomode,omitempty"`
-	Servicepathvendorid       int           `json:"servicepathvendorid,omitempty"`
+	ServicePathAVP            []interface{} `json:"servicepathavp,omitempty"`
+	ServicePathInfoMode       string        `json:"servicepathinfomode,omitempty"`
+	ServicePathVendorID       int           `json:"servicepathvendorid,omitempty"`
 	Status                    string        `json:"status,omitempty"`
-	Svrstate                  string        `json:"svrstate,omitempty"`
-	Vserver                   string        `json:"vserver,omitempty"`
+	SvrState                  string        `json:"svrstate,omitempty"`
+	VServer                   string        `json:"vserver,omitempty"`
 }
 
-type Subscriberprofile struct {
-	Avpdisplaybuffer    string   `json:"avpdisplaybuffer,omitempty"`
+type SubscriberProfile struct {
+	AVPDisplayBuffer    string   `json:"avpdisplaybuffer,omitempty"`
 	Count               float64  `json:"__count,omitempty"`
 	Flags               int      `json:"flags,omitempty"`
-	Ip                  string   `json:"ip,omitempty"`
-	Nextgenapiresource  string   `json:"_nextgenapiresource,omitempty"`
-	Servicepath         string   `json:"servicepath,omitempty"`
-	Subscriberrules     []string `json:"subscriberrules,omitempty"`
-	Subscriptionidtype  string   `json:"subscriptionidtype,omitempty"`
-	Subscriptionidvalue string   `json:"subscriptionidvalue,omitempty"`
-	Ttl                 int      `json:"ttl,omitempty"`
-	Vlan                int      `json:"vlan,omitempty"`
+	IP                  string   `json:"ip,omitempty"`
+	NextGenAPIResource  string   `json:"_nextgenapiresource,omitempty"`
+	ServicePath         string   `json:"servicepath,omitempty"`
+	SubscriberRules     []string `json:"subscriberrules,omitempty"`
+	SubscriptionIDType  string   `json:"subscriptionidtype,omitempty"`
+	SubscriptionIDValue string   `json:"subscriptionidvalue,omitempty"`
+	TTL                 int      `json:"ttl,omitempty"`
+	VLAN                int      `json:"vlan,omitempty"`
 }
 
-type Subscriberparam struct {
+type SubscriberParam struct {
 	Builtin              []string      `json:"builtin,omitempty"`
 	Feature              string        `json:"feature,omitempty"`
-	Idleaction           string        `json:"idleaction,omitempty"`
-	Idlettl              int           `json:"idlettl,omitempty"`
-	Interfacetype        string        `json:"interfacetype,omitempty"`
-	Ipv6prefixlookuplist []interface{} `json:"ipv6prefixlookuplist,omitempty"`
-	Keytype              string        `json:"keytype,omitempty"`
-	Nextgenapiresource   string        `json:"_nextgenapiresource,omitempty"`
+	IdleAction           string        `json:"idleaction,omitempty"`
+	IdleTTL              int           `json:"idlettl,omitempty"`
+	InterfaceType        string        `json:"interfacetype,omitempty"`
+	IPv6PrefixLookupList []interface{} `json:"ipv6prefixlookuplist,omitempty"`
+	KeyType              string        `json:"keytype,omitempty"`
+	NextGenAPIResource   string        `json:"_nextgenapiresource,omitempty"`
 }
 
-type Subscriberradiusinterface struct {
-	Listeningservice     string `json:"listeningservice,omitempty"`
-	Nextgenapiresource   string `json:"_nextgenapiresource,omitempty"`
-	Radiusinterimasstart string `json:"radiusinterimasstart,omitempty"`
-	Svrstate             string `json:"svrstate,omitempty"`
+type SubscriberRadiusInterface struct {
+	ListeningService     string `json:"listeningservice,omitempty"`
+	NextGenAPIResource   string `json:"_nextgenapiresource,omitempty"`
+	RadiusInterimAsStart string `json:"radiusinterimasstart,omitempty"`
+	SvrState             string `json:"svrstate,omitempty"`
 }

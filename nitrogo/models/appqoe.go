@@ -1,61 +1,61 @@
 package models
 
 // appqoe configuration structs
-type Appqoecustomresp struct {
+type AppQOECustomResp struct {
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Src                string  `json:"src,omitempty"`
 }
 
-type AppqoepolicyLbvserverBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Bindpriority           int    `json:"bindpriority,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type AppQOEPolicyLBVServerBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BindPriority           int    `json:"bindpriority,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Name                   string `json:"name,omitempty"`
 }
 
-type Appqoeparameter struct {
-	Avgwaitingclient    int    `json:"avgwaitingclient,omitempty"`
-	Dosattackthresh     int    `json:"dosattackthresh,omitempty"`
-	Maxaltrespbandwidth int    `json:"maxaltrespbandwidth,omitempty"`
-	Nextgenapiresource  string `json:"_nextgenapiresource,omitempty"`
-	Sessionlife         int    `json:"sessionlife,omitempty"`
+type AppQOEParameter struct {
+	AvgWaitingClient    int    `json:"avgwaitingclient,omitempty"`
+	DosAttackThresh     int    `json:"dosattackthresh,omitempty"`
+	MaxAltRespBandwidth int    `json:"maxaltrespbandwidth,omitempty"`
+	NextGenAPIResource  string `json:"_nextgenapiresource,omitempty"`
+	SessionLife         int    `json:"sessionlife,omitempty"`
 }
 
-type Appqoeaction struct {
-	Altcontentpath     string  `json:"altcontentpath,omitempty"`
-	Altcontentsvcname  string  `json:"altcontentsvcname,omitempty"`
+type AppQOEAction struct {
+	AltContentPath     string  `json:"altcontentpath,omitempty"`
+	AltContentSvcName  string  `json:"altcontentsvcname,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Customfile         string  `json:"customfile,omitempty"`
+	CustomFile         string  `json:"customfile,omitempty"`
 	Delay              int     `json:"delay,omitempty"`
-	Dosaction          string  `json:"dosaction,omitempty"`
-	Dostrigexpression  string  `json:"dostrigexpression,omitempty"`
+	DosAction          string  `json:"dosaction,omitempty"`
+	DosTrigExpression  string  `json:"dostrigexpression,omitempty"`
 	Hits               int     `json:"hits,omitempty"`
-	Maxconn            int     `json:"maxconn,omitempty"`
+	MaxConn            int     `json:"maxconn,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Numretries         int     `json:"numretries,omitempty"`
-	Polqdepth          int     `json:"polqdepth,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	NumRetries         int     `json:"numretries,omitempty"`
+	PolQDepth          int     `json:"polqdepth,omitempty"`
 	Priority           string  `json:"priority,omitempty"`
-	Priqdepth          int     `json:"priqdepth,omitempty"`
-	Respondwith        string  `json:"respondwith,omitempty"`
-	Retryonreset       string  `json:"retryonreset,omitempty"`
-	Retryontimeout     int     `json:"retryontimeout,omitempty"`
-	Tcpprofile         string  `json:"tcpprofile,omitempty"`
+	PriQDepth          int     `json:"priqdepth,omitempty"`
+	RespondWith        string  `json:"respondwith,omitempty"`
+	RetryOnReset       string  `json:"retryonreset,omitempty"`
+	RetryOnTimeout     int     `json:"retryontimeout,omitempty"`
+	TCPProfile         string  `json:"tcpprofile,omitempty"`
 }
 
-type AppqoepolicyBinding struct {
-	AppqoepolicyLbvserverBinding []interface{} `json:"appqoepolicy_lbvserver_binding,omitempty"`
+type AppQOEPolicyBinding struct {
+	AppQOEPolicyLBVServerBinding []interface{} `json:"appqoepolicy_lbvserver_binding,omitempty"`
 	Name                         string        `json:"name,omitempty"`
 }
 
-type Appqoepolicy struct {
+type AppQOEPolicy struct {
 	Action             string  `json:"action,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
 	Hits               int     `json:"hits,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Rule               string  `json:"rule,omitempty"`
 }

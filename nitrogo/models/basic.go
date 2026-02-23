@@ -1,58 +1,58 @@
 package models
 
 // basic configuration structs
-type ServerGslbservicegroupBinding struct {
-	Appflowlog       string `json:"appflowlog,omitempty"`
-	Boundtd          int    `json:"boundtd,omitempty"`
-	Cip              string `json:"cip,omitempty"`
-	Cipheader        string `json:"cipheader,omitempty"`
-	Clttimeout       int    `json:"clttimeout,omitempty"`
-	Customserverid   string `json:"customserverid,omitempty"`
-	Downstateflush   string `json:"downstateflush,omitempty"`
+type ServerGSLBServiceGroupBinding struct {
+	AppFlowLog       string `json:"appflowlog,omitempty"`
+	BoundTD          int    `json:"boundtd,omitempty"`
+	CIP              string `json:"cip,omitempty"`
+	CIPHeader        string `json:"cipheader,omitempty"`
+	CltTimeout       int    `json:"clttimeout,omitempty"`
+	CustomServerID   string `json:"customserverid,omitempty"`
+	DownStateFlush   string `json:"downstateflush,omitempty"`
 	DupPort          int    `json:"dup_port,omitempty"`
-	DupSvctype       string `json:"dup_svctype,omitempty"`
-	Maxbandwidth     int    `json:"maxbandwidth,omitempty"`
-	Maxclient        int    `json:"maxclient,omitempty"`
-	Maxreq           int    `json:"maxreq,omitempty"`
-	Monthreshold     int    `json:"monthreshold,omitempty"`
+	DupSvcType       string `json:"dup_svctype,omitempty"`
+	MaxBandwidth     int    `json:"maxbandwidth,omitempty"`
+	MaxClient        int    `json:"maxclient,omitempty"`
+	MaxReq           int    `json:"maxreq,omitempty"`
+	MonThreshold     int    `json:"monthreshold,omitempty"`
 	Name             string `json:"name,omitempty"`
 	Port             int    `json:"port,omitempty"`
-	Servicegroupname string `json:"servicegroupname,omitempty"`
-	Serviceipaddress string `json:"serviceipaddress,omitempty"`
-	Serviceipstr     string `json:"serviceipstr,omitempty"`
-	Svctype          string `json:"svctype,omitempty"`
-	Svrcfgflags      int    `json:"svrcfgflags,omitempty"`
-	Svrstate         string `json:"svrstate,omitempty"`
-	Svrtimeout       int    `json:"svrtimeout,omitempty"`
+	ServiceGroupName string `json:"servicegroupname,omitempty"`
+	ServiceIPAddress string `json:"serviceipaddress,omitempty"`
+	ServiceIPStr     string `json:"serviceipstr,omitempty"`
+	SvcType          string `json:"svctype,omitempty"`
+	SvrCfgFlags      int    `json:"svrcfgflags,omitempty"`
+	SvrState         string `json:"svrstate,omitempty"`
+	SvrTimeout       int    `json:"svrtimeout,omitempty"`
 }
 
 type ServerServiceBinding struct {
 	Name             string `json:"name,omitempty"`
 	Port             int    `json:"port,omitempty"`
-	Serviceipaddress string `json:"serviceipaddress,omitempty"`
-	Serviceipstr     string `json:"serviceipstr,omitempty"`
-	Servicename      string `json:"servicename,omitempty"`
-	Svctype          string `json:"svctype,omitempty"`
-	Svrstate         string `json:"svrstate,omitempty"`
+	ServiceIPAddress string `json:"serviceipaddress,omitempty"`
+	ServiceIPStr     string `json:"serviceipstr,omitempty"`
+	ServiceName      string `json:"servicename,omitempty"`
+	SvcType          string `json:"svctype,omitempty"`
+	SvrState         string `json:"svrstate,omitempty"`
 }
 
-type Servicegroupbindings struct {
+type ServiceGroupBindings struct {
 	Count              float64 `json:"__count,omitempty"`
-	Ipaddress          string  `json:"ipaddress,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	IPAddress          string  `json:"ipaddress,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Port               int     `json:"port,omitempty"`
-	Servicegroupname   string  `json:"servicegroupname,omitempty"`
+	ServiceGroupName   string  `json:"servicegroupname,omitempty"`
 	State              string  `json:"state,omitempty"`
-	Svrstate           string  `json:"svrstate,omitempty"`
-	Vservername        string  `json:"vservername,omitempty"`
+	SvrState           string  `json:"svrstate,omitempty"`
+	VServerName        string  `json:"vservername,omitempty"`
 }
 
-type Locationparameter struct {
+type LocationParameter struct {
 	Builtin            []string `json:"builtin,omitempty"`
 	Context            string   `json:"context,omitempty"`
 	Custom             int      `json:"custom,omitempty"`
 	Custom6            int      `json:"custom6,omitempty"`
-	Databasemode       string   `json:"databasemode,omitempty"`
+	DatabaseMode       string   `json:"databasemode,omitempty"`
 	Entries            int      `json:"entries,omitempty"`
 	Entries6           int      `json:"entries6,omitempty"`
 	Errors             int      `json:"errors,omitempty"`
@@ -65,16 +65,16 @@ type Locationparameter struct {
 	Lines              int      `json:"lines,omitempty"`
 	Lines6             int      `json:"lines6,omitempty"`
 	Loading            string   `json:"loading,omitempty"`
-	Locationfile       string   `json:"Locationfile,omitempty"`
-	Locationfile6      string   `json:"locationfile6,omitempty"`
-	Matchwildcardtoany string   `json:"matchwildcardtoany,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
-	Q1label            string   `json:"q1label,omitempty"`
-	Q2label            string   `json:"q2label,omitempty"`
-	Q3label            string   `json:"q3label,omitempty"`
-	Q4label            string   `json:"q4label,omitempty"`
-	Q5label            string   `json:"q5label,omitempty"`
-	Q6label            string   `json:"q6label,omitempty"`
+	LocationFile       string   `json:"Locationfile,omitempty"`
+	LocationFile6      string   `json:"locationfile6,omitempty"`
+	MatchWildcardToAny string   `json:"matchwildcardtoany,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
+	Q1Label            string   `json:"q1label,omitempty"`
+	Q2Label            string   `json:"q2label,omitempty"`
+	Q3Label            string   `json:"q3label,omitempty"`
+	Q4Label            string   `json:"q4label,omitempty"`
+	Q5Label            string   `json:"q5label,omitempty"`
+	Q6Label            string   `json:"q6label,omitempty"`
 	Static             int      `json:"Static,omitempty"`
 	Static6            int      `json:"static6,omitempty"`
 	Status             int      `json:"status,omitempty"`
@@ -82,467 +82,467 @@ type Locationparameter struct {
 	Warnings6          int      `json:"warnings6,omitempty"`
 }
 
-type Locationdata struct {
+type LocationData struct {
 }
 
-type ServicegroupServicegroupentitymonbindingsBinding struct {
-	Customserverid             string `json:"customserverid,omitempty"`
-	Dbsttl                     int    `json:"dbsttl,omitempty"`
-	Hashid                     int    `json:"hashid,omitempty"`
-	Lastresponse               string `json:"lastresponse,omitempty"`
+type ServiceGroupServiceGroupEntityMonBindingsBinding struct {
+	CustomServerID             string `json:"customserverid,omitempty"`
+	DBSTTL                     int    `json:"dbsttl,omitempty"`
+	HashID                     int    `json:"hashid,omitempty"`
+	LastResponse               string `json:"lastresponse,omitempty"`
 	MonitorName                string `json:"monitor_name,omitempty"`
 	MonitorState               string `json:"monitor_state,omitempty"`
-	Monitorcurrentfailedprobes int    `json:"monitorcurrentfailedprobes,omitempty"`
-	Monitortotalfailedprobes   int    `json:"monitortotalfailedprobes,omitempty"`
-	Monitortotalprobes         int    `json:"monitortotalprobes,omitempty"`
-	Nameserver                 string `json:"nameserver,omitempty"`
+	MonitorCurrentFailedProbes int    `json:"monitorcurrentfailedprobes,omitempty"`
+	MonitorTotalFailedProbes   int    `json:"monitortotalfailedprobes,omitempty"`
+	MonitorTotalProbes         int    `json:"monitortotalprobes,omitempty"`
+	NameServer                 string `json:"nameserver,omitempty"`
 	Order                      int    `json:"order,omitempty"`
 	Passive                    bool   `json:"passive,omitempty"`
 	Port                       int    `json:"port,omitempty"`
-	Responsetime               int    `json:"responsetime,omitempty"`
-	Serverid                   int    `json:"serverid,omitempty"`
-	Servicegroupentname2       string `json:"servicegroupentname2,omitempty"`
-	Servicegroupname           string `json:"servicegroupname,omitempty"`
+	ResponseTime               int    `json:"responsetime,omitempty"`
+	ServerID                   int    `json:"serverid,omitempty"`
+	ServiceGroupEntName2       string `json:"servicegroupentname2,omitempty"`
+	ServiceGroupName           string `json:"servicegroupname,omitempty"`
 	State                      string `json:"state,omitempty"`
 	Weight                     int    `json:"weight,omitempty"`
 }
 
 type ServiceGroupBinding struct {
-	ServicegroupLbmonitorBinding                     []interface{} `json:"servicegroup_lbmonitor_binding,omitempty"`
-	ServicegroupServicegroupentitymonbindingsBinding []interface{} `json:"servicegroup_servicegroupentitymonbindings_binding,omitempty"`
-	ServicegroupServicegroupmemberBinding            []interface{} `json:"servicegroup_servicegroupmember_binding,omitempty"`
-	Servicegroupname                                 string        `json:"servicegroupname,omitempty"`
+	ServiceGroupLBMonitorBinding                     []interface{} `json:"servicegroup_lbmonitor_binding,omitempty"`
+	ServiceGroupServiceGroupEntityMonBindingsBinding []interface{} `json:"servicegroup_servicegroupentitymonbindings_binding,omitempty"`
+	ServiceGroupServiceGroupMemberBinding            []interface{} `json:"servicegroup_servicegroupmember_binding,omitempty"`
+	ServiceGroupName                                 string        `json:"servicegroupname,omitempty"`
 }
 
-type ServicegroupLbmonitorBinding struct {
-	Customserverid   string `json:"customserverid,omitempty"`
-	Dbsttl           int    `json:"dbsttl,omitempty"`
-	Hashid           int    `json:"hashid,omitempty"`
+type ServiceGroupLBMonitorBinding struct {
+	CustomServerID   string `json:"customserverid,omitempty"`
+	DBSTTL           int    `json:"dbsttl,omitempty"`
+	HashID           int    `json:"hashid,omitempty"`
 	MonitorName      string `json:"monitor_name,omitempty"`
-	Monstate         string `json:"monstate,omitempty"`
-	Monweight        int    `json:"monweight,omitempty"`
-	Nameserver       string `json:"nameserver,omitempty"`
+	MonState         string `json:"monstate,omitempty"`
+	MonWeight        int    `json:"monweight,omitempty"`
+	NameServer       string `json:"nameserver,omitempty"`
 	Order            int    `json:"order,omitempty"`
 	Passive          bool   `json:"passive,omitempty"`
 	Port             int    `json:"port,omitempty"`
-	Serverid         int    `json:"serverid,omitempty"`
-	Servicegroupname string `json:"servicegroupname,omitempty"`
+	ServerID         int    `json:"serverid,omitempty"`
+	ServiceGroupName string `json:"servicegroupname,omitempty"`
 	State            string `json:"state,omitempty"`
 	Weight           int    `json:"weight,omitempty"`
 }
 
 type ServiceBinding struct {
 	Name                    string        `json:"name,omitempty"`
-	ServiceLbmonitorBinding []interface{} `json:"service_lbmonitor_binding,omitempty"`
+	ServiceLBMonitorBinding []interface{} `json:"service_lbmonitor_binding,omitempty"`
 }
 
-type Radiusnode struct {
+type RADIUSNode struct {
 	Count              float64 `json:"__count,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Nodeprefix         string  `json:"nodeprefix,omitempty"`
-	Radkey             string  `json:"radkey,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	NodePrefix         string  `json:"nodeprefix,omitempty"`
+	RADKey             string  `json:"radkey,omitempty"`
 }
 
-type Svcbindings struct {
+type SVCBindings struct {
 	Count              float64 `json:"__count,omitempty"`
-	Ipaddress          string  `json:"ipaddress,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	IPAddress          string  `json:"ipaddress,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Port               int     `json:"port,omitempty"`
-	Servicename        string  `json:"servicename,omitempty"`
-	Svrstate           string  `json:"svrstate,omitempty"`
-	Vservername        string  `json:"vservername,omitempty"`
+	ServiceName        string  `json:"servicename,omitempty"`
+	SvrState           string  `json:"svrstate,omitempty"`
+	VServerName        string  `json:"vservername,omitempty"`
 }
 
-type ServicegroupServicegroupmemberBinding struct {
-	Customserverid            string `json:"customserverid,omitempty"`
-	Dbsttl                    int    `json:"dbsttl,omitempty"`
+type ServiceGroupServiceGroupMemberBinding struct {
+	CustomServerID            string `json:"customserverid,omitempty"`
+	DBSTTL                    int    `json:"dbsttl,omitempty"`
 	Delay                     int    `json:"delay,omitempty"`
 	Graceful                  string `json:"graceful,omitempty"`
-	Hashid                    int    `json:"hashid,omitempty"`
-	Ip                        string `json:"ip,omitempty"`
-	Nameserver                string `json:"nameserver,omitempty"`
+	HashID                    int    `json:"hashid,omitempty"`
+	IP                        string `json:"ip,omitempty"`
+	NameServer                string `json:"nameserver,omitempty"`
 	Order                     int    `json:"order,omitempty"`
-	Orderstr                  string `json:"orderstr,omitempty"`
+	OrderStr                  string `json:"orderstr,omitempty"`
 	Port                      int    `json:"port,omitempty"`
-	Serverid                  int    `json:"serverid,omitempty"`
-	Servername                string `json:"servername,omitempty"`
-	Servicegroupname          string `json:"servicegroupname,omitempty"`
+	ServerID                  int    `json:"serverid,omitempty"`
+	ServerName                string `json:"servername,omitempty"`
+	ServiceGroupName          string `json:"servicegroupname,omitempty"`
 	State                     string `json:"state,omitempty"`
-	Statechangetimesec        string `json:"statechangetimesec,omitempty"`
-	Svcitmpriority            int    `json:"svcitmpriority,omitempty"`
-	Svrstate                  string `json:"svrstate,omitempty"`
-	Tickssincelaststatechange int    `json:"tickssincelaststatechange,omitempty"`
-	Trofsdelay                int    `json:"trofsdelay,omitempty"`
-	Trofsreason               string `json:"trofsreason,omitempty"`
+	StateChangeTimeSec        string `json:"statechangetimesec,omitempty"`
+	SvcItmPriority            int    `json:"svcitmpriority,omitempty"`
+	SvrState                  string `json:"svrstate,omitempty"`
+	TicksSinceLastStateChange int    `json:"tickssincelaststatechange,omitempty"`
+	TROFSDelay                int    `json:"trofsdelay,omitempty"`
+	TROFSReason               string `json:"trofsreason,omitempty"`
 	Weight                    int    `json:"weight,omitempty"`
 }
 
-type Vserver struct {
-	Backupvserver        string `json:"backupvserver,omitempty"`
+type VServer struct {
+	BackupVServer        string `json:"backupvserver,omitempty"`
 	Cacheable            string `json:"cacheable,omitempty"`
-	Clttimeout           int    `json:"clttimeout,omitempty"`
+	CltTimeout           int    `json:"clttimeout,omitempty"`
 	Name                 string `json:"name,omitempty"`
-	Pushvserver          string `json:"pushvserver,omitempty"`
-	Redirecturl          string `json:"redirecturl,omitempty"`
-	Somethod             string `json:"somethod,omitempty"`
-	Sopersistence        string `json:"sopersistence,omitempty"`
-	Sopersistencetimeout int    `json:"sopersistencetimeout,omitempty"`
-	Sothreshold          int    `json:"sothreshold,omitempty"`
+	PushVServer          string `json:"pushvserver,omitempty"`
+	RedirectURL          string `json:"redirecturl,omitempty"`
+	SOMethod             string `json:"somethod,omitempty"`
+	SOPersistence        string `json:"sopersistence,omitempty"`
+	SOPersistenceTimeout int    `json:"sopersistencetimeout,omitempty"`
+	SOThreshold          int    `json:"sothreshold,omitempty"`
 }
 
-type Nstrace struct {
-	Capdroppkt         string        `json:"capdroppkt,omitempty"`
-	Capsslkeys         string        `json:"capsslkeys,omitempty"`
-	Doruntimecleanup   string        `json:"doruntimecleanup,omitempty"`
-	Fileid             string        `json:"fileid,omitempty"`
-	Filename           string        `json:"filename,omitempty"`
-	Filesize           int           `json:"filesize,omitempty"`
+type NSTrace struct {
+	CapDropPkt         string        `json:"capdroppkt,omitempty"`
+	CapSSLKeys         string        `json:"capsslkeys,omitempty"`
+	DoRuntimeCleanup   string        `json:"doruntimecleanup,omitempty"`
+	FileID             string        `json:"fileid,omitempty"`
+	FileName           string        `json:"filename,omitempty"`
+	FileSize           int           `json:"filesize,omitempty"`
 	Filter             string        `json:"filter,omitempty"`
-	Inmemorytrace      string        `json:"inmemorytrace,omitempty"`
+	InMemoryTrace      string        `json:"inmemorytrace,omitempty"`
 	Link               string        `json:"link,omitempty"`
 	Merge              string        `json:"merge,omitempty"`
 	Mode               []string      `json:"mode,omitempty"`
-	Nextgenapiresource string        `json:"_nextgenapiresource,omitempty"`
-	Nf                 int           `json:"nf,omitempty"`
-	Nodeid             int           `json:"nodeid,omitempty"`
+	NextGenAPIResource string        `json:"_nextgenapiresource,omitempty"`
+	NF                 int           `json:"nf,omitempty"`
+	NodeID             int           `json:"nodeid,omitempty"`
 	Nodes              []interface{} `json:"nodes,omitempty"`
-	Pernic             string        `json:"pernic,omitempty"`
+	PerNIC             string        `json:"pernic,omitempty"`
 	Scope              string        `json:"scope,omitempty"`
 	Size               int           `json:"size,omitempty"`
-	Skiplocalssh       string        `json:"skiplocalssh,omitempty"`
-	Skiprpc            string        `json:"skiprpc,omitempty"`
+	SkipLocalSSH       string        `json:"skiplocalssh,omitempty"`
+	SkipRPC            string        `json:"skiprpc,omitempty"`
 	State              string        `json:"state,omitempty"`
 	Time               int           `json:"time,omitempty"`
-	Tracebuffers       int           `json:"tracebuffers,omitempty"`
-	Traceformat        string        `json:"traceformat,omitempty"`
-	Tracelocation      string        `json:"tracelocation,omitempty"`
+	TraceBuffers       int           `json:"tracebuffers,omitempty"`
+	TraceFormat        string        `json:"traceformat,omitempty"`
+	TraceLocation      string        `json:"tracelocation,omitempty"`
 }
 
-type Locationfile struct {
-	Curlocfilestatus   string `json:"curlocfilestatus,omitempty"`
+type LocationFile struct {
+	CurLocFileStatus   string `json:"curlocfilestatus,omitempty"`
 	Format             string `json:"format,omitempty"`
-	Locationfile       string `json:"Locationfile,omitempty"`
-	Locfilestatusstr   string `json:"locfilestatusstr,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-	Prevlocationfile   string `json:"prevlocationfile,omitempty"`
-	Prevlocfileformat  string `json:"prevlocfileformat,omitempty"`
-	Prevlocfilestatus  string `json:"prevlocfilestatus,omitempty"`
+	LocationFile       string `json:"Locationfile,omitempty"`
+	LocFileStatusStr   string `json:"locfilestatusstr,omitempty"`
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
+	PrevLocationFile   string `json:"prevlocationfile,omitempty"`
+	PrevLocFileFormat  string `json:"prevlocfileformat,omitempty"`
+	PrevLocFileStatus  string `json:"prevlocfilestatus,omitempty"`
 	Src                string `json:"src,omitempty"`
 }
 
-type ServerGslbserviceBinding struct {
+type ServerGSLBServiceBinding struct {
 	Name             string `json:"name,omitempty"`
 	Port             int    `json:"port,omitempty"`
-	Serviceipaddress string `json:"serviceipaddress,omitempty"`
-	Serviceipstr     string `json:"serviceipstr,omitempty"`
-	Servicename      string `json:"servicename,omitempty"`
-	Svctype          string `json:"svctype,omitempty"`
-	Svrstate         string `json:"svrstate,omitempty"`
+	ServiceIPAddress string `json:"serviceipaddress,omitempty"`
+	ServiceIPStr     string `json:"serviceipstr,omitempty"`
+	ServiceName      string `json:"servicename,omitempty"`
+	SvcType          string `json:"svctype,omitempty"`
+	SvrState         string `json:"svrstate,omitempty"`
 }
 
-type Extendedmemoryparam struct {
-	Maxmemlimit        int    `json:"maxmemlimit,omitempty"`
-	Memlimit           int    `json:"memlimit,omitempty"`
-	Memlimitactive     int    `json:"memlimitactive,omitempty"`
-	Minrequiredmemory  int    `json:"minrequiredmemory,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+type ExtendedMemoryParam struct {
+	MaxMemLimit        int    `json:"maxmemlimit,omitempty"`
+	MemLimit           int    `json:"memlimit,omitempty"`
+	MemLimitActive     int    `json:"memlimitactive,omitempty"`
+	MinRequiredMemory  int    `json:"minrequiredmemory,omitempty"`
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
 }
 
 type Service struct {
-	Accessdown                   string   `json:"accessdown,omitempty"`
+	AccessDown                   string   `json:"accessdown,omitempty"`
 	All                          bool     `json:"all,omitempty"`
-	Appflowlog                   string   `json:"appflowlog,omitempty"`
+	AppFlowLog                   string   `json:"appflowlog,omitempty"`
 	Builtin                      []string `json:"builtin,omitempty"`
 	Cacheable                    string   `json:"cacheable,omitempty"`
-	Cachetype                    string   `json:"cachetype,omitempty"`
-	Cip                          string   `json:"cip,omitempty"`
-	Cipheader                    string   `json:"cipheader,omitempty"`
-	Cka                          string   `json:"cka,omitempty"`
-	Cleartextport                int      `json:"cleartextport,omitempty"`
-	Clmonowner                   int      `json:"clmonowner,omitempty"`
-	Clmonview                    int      `json:"clmonview,omitempty"`
-	Clttimeout                   int      `json:"clttimeout,omitempty"`
-	Cmp                          string   `json:"cmp,omitempty"`
+	CacheType                    string   `json:"cachetype,omitempty"`
+	CIP                          string   `json:"cip,omitempty"`
+	CIPHeader                    string   `json:"cipheader,omitempty"`
+	CKA                          string   `json:"cka,omitempty"`
+	ClearTextPort                int      `json:"cleartextport,omitempty"`
+	ClMonOwner                   int      `json:"clmonowner,omitempty"`
+	ClMonView                    int      `json:"clmonview,omitempty"`
+	CltTimeout                   int      `json:"clttimeout,omitempty"`
+	CMP                          string   `json:"cmp,omitempty"`
 	Comment                      string   `json:"comment,omitempty"`
-	Contentinspectionprofilename string   `json:"contentinspectionprofilename,omitempty"`
+	ContentInspectionProfileName string   `json:"contentinspectionprofilename,omitempty"`
 	Count                        float64  `json:"__count,omitempty"`
-	Customserverid               string   `json:"customserverid,omitempty"`
+	CustomServerID               string   `json:"customserverid,omitempty"`
 	Delay                        int      `json:"delay,omitempty"`
-	Dnsprofilename               string   `json:"dnsprofilename,omitempty"`
-	Downstateflush               string   `json:"downstateflush,omitempty"`
+	DNSProfileName               string   `json:"dnsprofilename,omitempty"`
+	DownStateFlush               string   `json:"downstateflush,omitempty"`
 	DupState                     string   `json:"dup_state,omitempty"`
 	Feature                      string   `json:"feature,omitempty"`
 	Graceful                     string   `json:"graceful,omitempty"`
-	Gslb                         string   `json:"gslb,omitempty"`
-	Hashid                       int      `json:"hashid,omitempty"`
-	Healthmonitor                string   `json:"healthmonitor,omitempty"`
-	Httpprofilename              string   `json:"httpprofilename,omitempty"`
+	GSLB                         string   `json:"gslb,omitempty"`
+	HashID                       int      `json:"hashid,omitempty"`
+	HealthMonitor                string   `json:"healthmonitor,omitempty"`
+	HTTPProfileName              string   `json:"httpprofilename,omitempty"`
 	Internal                     bool     `json:"Internal,omitempty"`
-	Ip                           string   `json:"ip,omitempty"`
-	Ipaddress                    string   `json:"ipaddress,omitempty"`
-	Lastresponse                 string   `json:"lastresponse,omitempty"`
-	Maxbandwidth                 int      `json:"maxbandwidth,omitempty"`
-	Maxclient                    int      `json:"maxclient,omitempty"`
-	Maxreq                       int      `json:"maxreq,omitempty"`
-	Monconnectionclose           string   `json:"monconnectionclose,omitempty"`
+	IP                           string   `json:"ip,omitempty"`
+	IPAddress                    string   `json:"ipaddress,omitempty"`
+	LastResponse                 string   `json:"lastresponse,omitempty"`
+	MaxBandwidth                 int      `json:"maxbandwidth,omitempty"`
+	MaxClient                    int      `json:"maxclient,omitempty"`
+	MaxReq                       int      `json:"maxreq,omitempty"`
+	MonConnectionClose           string   `json:"monconnectionclose,omitempty"`
 	MonitorNameSvc               string   `json:"monitor_name_svc,omitempty"`
 	MonitorState                 string   `json:"monitor_state,omitempty"`
-	Monstatcode                  int      `json:"monstatcode,omitempty"`
-	Monstatparam1                int      `json:"monstatparam1,omitempty"`
-	Monstatparam2                int      `json:"monstatparam2,omitempty"`
-	Monstatparam3                int      `json:"monstatparam3,omitempty"`
-	Monthreshold                 int      `json:"monthreshold,omitempty"`
-	Monuserstatusmesg            string   `json:"monuserstatusmesg,omitempty"`
+	MonStatCode                  int      `json:"monstatcode,omitempty"`
+	MonStatParam1                int      `json:"monstatparam1,omitempty"`
+	MonStatParam2                int      `json:"monstatparam2,omitempty"`
+	MonStatParam3                int      `json:"monstatparam3,omitempty"`
+	MonThreshold                 int      `json:"monthreshold,omitempty"`
+	MonUserStatusMesg            string   `json:"monuserstatusmesg,omitempty"`
 	Name                         string   `json:"name,omitempty"`
-	Netprofile                   string   `json:"netprofile,omitempty"`
-	Newname                      string   `json:"newname,omitempty"`
-	Nextgenapiresource           string   `json:"_nextgenapiresource,omitempty"`
-	Nodefaultbindings            string   `json:"nodefaultbindings,omitempty"`
-	Numofconnections             int      `json:"numofconnections,omitempty"`
-	Oracleserverversion          string   `json:"oracleserverversion,omitempty"`
-	Pathmonitor                  string   `json:"pathmonitor,omitempty"`
-	Pathmonitorindv              string   `json:"pathmonitorindv,omitempty"`
-	Policyname                   string   `json:"policyname,omitempty"`
+	NetProfile                   string   `json:"netprofile,omitempty"`
+	NewName                      string   `json:"newname,omitempty"`
+	NextGenAPIResource           string   `json:"_nextgenapiresource,omitempty"`
+	NoDefaultBindings            string   `json:"nodefaultbindings,omitempty"`
+	NumOfConnections             int      `json:"numofconnections,omitempty"`
+	OracleServerVersion          string   `json:"oracleserverversion,omitempty"`
+	PathMonitor                  string   `json:"pathmonitor,omitempty"`
+	PathMonitorIndv              string   `json:"pathmonitorindv,omitempty"`
+	PolicyName                   string   `json:"policyname,omitempty"`
 	Port                         int      `json:"port,omitempty"`
-	Processlocal                 string   `json:"processlocal,omitempty"`
-	Publicip                     string   `json:"publicip,omitempty"`
-	Publicport                   int      `json:"publicport,omitempty"`
-	Quicprofilename              string   `json:"quicprofilename,omitempty"`
-	Responsetime                 int      `json:"responsetime,omitempty"`
-	Rtspsessionidremap           string   `json:"rtspsessionidremap,omitempty"`
-	Serverid                     int      `json:"serverid,omitempty"`
-	Servername                   string   `json:"servername,omitempty"`
-	Serviceconftype              bool     `json:"serviceconftype,omitempty"`
-	Serviceconftype2             string   `json:"serviceconftype2,omitempty"`
-	Serviceipstr                 string   `json:"serviceipstr,omitempty"`
-	Servicetype                  string   `json:"servicetype,omitempty"`
-	Sp                           string   `json:"sp,omitempty"`
+	ProcessLocal                 string   `json:"processlocal,omitempty"`
+	PublicIP                     string   `json:"publicip,omitempty"`
+	PublicPort                   int      `json:"publicport,omitempty"`
+	QUICProfileName              string   `json:"quicprofilename,omitempty"`
+	ResponseTime                 int      `json:"responsetime,omitempty"`
+	RTSPSessionIDRemap           string   `json:"rtspsessionidremap,omitempty"`
+	ServerID                     int      `json:"serverid,omitempty"`
+	ServerName                   string   `json:"servername,omitempty"`
+	ServiceConfType              bool     `json:"serviceconftype,omitempty"`
+	ServiceConfType2             string   `json:"serviceconftype2,omitempty"`
+	ServiceIPStr                 string   `json:"serviceipstr,omitempty"`
+	ServiceType                  string   `json:"servicetype,omitempty"`
+	SP                           string   `json:"sp,omitempty"`
 	State                        string   `json:"state,omitempty"`
-	Statechangetimemsec          int      `json:"statechangetimemsec,omitempty"`
-	Statechangetimesec           string   `json:"statechangetimesec,omitempty"`
-	Stateupdatereason            int      `json:"stateupdatereason,omitempty"`
-	Svrstate                     string   `json:"svrstate,omitempty"`
-	Svrtimeout                   int      `json:"svrtimeout,omitempty"`
-	Tcpb                         string   `json:"tcpb,omitempty"`
-	Tcpprofilename               string   `json:"tcpprofilename,omitempty"`
-	Td                           int      `json:"td,omitempty"`
-	Tickssincelaststatechange    int      `json:"tickssincelaststatechange,omitempty"`
-	Useproxyport                 string   `json:"useproxyport,omitempty"`
-	Usip                         string   `json:"usip,omitempty"`
+	StateChangeTimeMsec          int      `json:"statechangetimemsec,omitempty"`
+	StateChangeTimeSec           string   `json:"statechangetimesec,omitempty"`
+	StateUpdateReason            int      `json:"stateupdatereason,omitempty"`
+	SvrState                     string   `json:"svrstate,omitempty"`
+	SvrTimeout                   int      `json:"svrtimeout,omitempty"`
+	TCPB                         string   `json:"tcpb,omitempty"`
+	TCPProfileName               string   `json:"tcpprofilename,omitempty"`
+	TD                           int      `json:"td,omitempty"`
+	TicksSinceLastStateChange    int      `json:"tickssincelaststatechange,omitempty"`
+	UseProxyPort                 string   `json:"useproxyport,omitempty"`
+	USIP                         string   `json:"usip,omitempty"`
 	Value                        string   `json:"value,omitempty"`
 	Weight                       int      `json:"weight,omitempty"`
 }
 
-type ServerServicegroupBinding struct {
-	Appflowlog           string `json:"appflowlog,omitempty"`
-	Boundtd              int    `json:"boundtd,omitempty"`
+type ServerServiceGroupBinding struct {
+	AppFlowLog           string `json:"appflowlog,omitempty"`
+	BoundTD              int    `json:"boundtd,omitempty"`
 	Cacheable            string `json:"cacheable,omitempty"`
-	Cip                  string `json:"cip,omitempty"`
-	Cipheader            string `json:"cipheader,omitempty"`
-	Cka                  string `json:"cka,omitempty"`
-	Clttimeout           int    `json:"clttimeout,omitempty"`
-	Cmp                  string `json:"cmp,omitempty"`
-	Customserverid       string `json:"customserverid,omitempty"`
-	Downstateflush       string `json:"downstateflush,omitempty"`
+	CIP                  string `json:"cip,omitempty"`
+	CIPHeader            string `json:"cipheader,omitempty"`
+	CKA                  string `json:"cka,omitempty"`
+	CltTimeout           int    `json:"clttimeout,omitempty"`
+	CMP                  string `json:"cmp,omitempty"`
+	CustomServerID       string `json:"customserverid,omitempty"`
+	DownStateFlush       string `json:"downstateflush,omitempty"`
 	DupPort              int    `json:"dup_port,omitempty"`
-	DupSvctype           string `json:"dup_svctype,omitempty"`
-	Maxbandwidth         int    `json:"maxbandwidth,omitempty"`
-	Maxclient            int    `json:"maxclient,omitempty"`
-	Maxreq               int    `json:"maxreq,omitempty"`
-	Monthreshold         int    `json:"monthreshold,omitempty"`
+	DupSvcType           string `json:"dup_svctype,omitempty"`
+	MaxBandwidth         int    `json:"maxbandwidth,omitempty"`
+	MaxClient            int    `json:"maxclient,omitempty"`
+	MaxReq               int    `json:"maxreq,omitempty"`
+	MonThreshold         int    `json:"monthreshold,omitempty"`
 	Name                 string `json:"name,omitempty"`
 	Port                 int    `json:"port,omitempty"`
-	Servicegroupentname2 string `json:"servicegroupentname2,omitempty"`
-	Servicegroupname     string `json:"servicegroupname,omitempty"`
-	Serviceipaddress     string `json:"serviceipaddress,omitempty"`
-	Serviceipstr         string `json:"serviceipstr,omitempty"`
-	Sp                   string `json:"sp,omitempty"`
-	Svcitmactsvcs        int    `json:"svcitmactsvcs,omitempty"`
-	Svcitmboundsvcs      int    `json:"svcitmboundsvcs,omitempty"`
-	Svcitmpriority       int    `json:"svcitmpriority,omitempty"`
-	Svctype              string `json:"svctype,omitempty"`
-	Svrcfgflags          int    `json:"svrcfgflags,omitempty"`
-	Svrstate             string `json:"svrstate,omitempty"`
-	Svrtimeout           int    `json:"svrtimeout,omitempty"`
-	Tcpb                 string `json:"tcpb,omitempty"`
-	Usip                 string `json:"usip,omitempty"`
+	ServiceGroupEntName2 string `json:"servicegroupentname2,omitempty"`
+	ServiceGroupName     string `json:"servicegroupname,omitempty"`
+	ServiceIPAddress     string `json:"serviceipaddress,omitempty"`
+	ServiceIPStr         string `json:"serviceipstr,omitempty"`
+	SP                   string `json:"sp,omitempty"`
+	SvcItmActSvcs        int    `json:"svcitmactsvcs,omitempty"`
+	SvcItmBoundSvcs      int    `json:"svcitmboundsvcs,omitempty"`
+	SvcItmPriority       int    `json:"svcitmpriority,omitempty"`
+	SvcType              string `json:"svctype,omitempty"`
+	SvrCfgFlags          int    `json:"svrcfgflags,omitempty"`
+	SvrState             string `json:"svrstate,omitempty"`
+	SvrTimeout           int    `json:"svrtimeout,omitempty"`
+	TCPB                 string `json:"tcpb,omitempty"`
+	USIP                 string `json:"usip,omitempty"`
 	Weight               int    `json:"weight,omitempty"`
 }
 
-type Dbsmonitors struct {
+type DBSMonitors struct {
 }
 
-type Locationfile6 struct {
+type LocationFile6 struct {
 	Count              float64 `json:"__count,omitempty"`
-	Curlocfilestatus   string  `json:"curlocfilestatus,omitempty"`
+	CurLocFileStatus   string  `json:"curlocfilestatus,omitempty"`
 	Format             string  `json:"format,omitempty"`
-	Locationfile       string  `json:"Locationfile,omitempty"`
-	Locfilestatusstr   string  `json:"locfilestatusstr,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Prevlocationfile   string  `json:"prevlocationfile,omitempty"`
-	Prevlocfileformat  string  `json:"prevlocfileformat,omitempty"`
-	Prevlocfilestatus  string  `json:"prevlocfilestatus,omitempty"`
+	LocationFile       string  `json:"Locationfile,omitempty"`
+	LocFileStatusStr   string  `json:"locfilestatusstr,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	PrevLocationFile   string  `json:"prevlocationfile,omitempty"`
+	PrevLocFileFormat  string  `json:"prevlocfileformat,omitempty"`
+	PrevLocFileStatus  string  `json:"prevlocfilestatus,omitempty"`
 	Src                string  `json:"src,omitempty"`
 }
 
-type Servicegroup struct {
-	Appflowlog                 string  `json:"appflowlog,omitempty"`
-	Autodelayedtrofs           string  `json:"autodelayedtrofs,omitempty"`
-	Autodisabledelay           int     `json:"autodisabledelay,omitempty"`
-	Autodisablegraceful        string  `json:"autodisablegraceful,omitempty"`
-	Autoscale                  string  `json:"autoscale,omitempty"`
+type ServiceGroup struct {
+	AppFlowLog                 string  `json:"appflowlog,omitempty"`
+	AutoDelayedTROFS           string  `json:"autodelayedtrofs,omitempty"`
+	AutoDisableDelay           int     `json:"autodisabledelay,omitempty"`
+	AutoDisableGraceful        string  `json:"autodisablegraceful,omitempty"`
+	AutoScale                  string  `json:"autoscale,omitempty"`
 	Bootstrap                  string  `json:"bootstrap,omitempty"`
 	Cacheable                  string  `json:"cacheable,omitempty"`
-	Cachetype                  string  `json:"cachetype,omitempty"`
-	Cip                        string  `json:"cip,omitempty"`
-	Cipheader                  string  `json:"cipheader,omitempty"`
-	Cka                        string  `json:"cka,omitempty"`
-	Clmonowner                 int     `json:"clmonowner,omitempty"`
-	Clmonview                  int     `json:"clmonview,omitempty"`
-	Clttimeout                 int     `json:"clttimeout,omitempty"`
-	Cmp                        string  `json:"cmp,omitempty"`
+	CacheType                  string  `json:"cachetype,omitempty"`
+	CIP                        string  `json:"cip,omitempty"`
+	CIPHeader                  string  `json:"cipheader,omitempty"`
+	CKA                        string  `json:"cka,omitempty"`
+	ClMonOwner                 int     `json:"clmonowner,omitempty"`
+	ClMonView                  int     `json:"clmonview,omitempty"`
+	CltTimeout                 int     `json:"clttimeout,omitempty"`
+	CMP                        string  `json:"cmp,omitempty"`
 	Comment                    string  `json:"comment,omitempty"`
 	Count                      float64 `json:"__count,omitempty"`
-	Customserverid             string  `json:"customserverid,omitempty"`
-	Dbsttl                     int     `json:"dbsttl,omitempty"`
+	CustomServerID             string  `json:"customserverid,omitempty"`
+	DBSTTL                     int     `json:"dbsttl,omitempty"`
 	Delay                      int     `json:"delay,omitempty"`
-	Downstateflush             string  `json:"downstateflush,omitempty"`
+	DownStateFlush             string  `json:"downstateflush,omitempty"`
 	DupWeight                  int     `json:"dup_weight,omitempty"`
 	Graceful                   string  `json:"graceful,omitempty"`
-	Groupcount                 int     `json:"groupcount,omitempty"`
-	Hashid                     int     `json:"hashid,omitempty"`
-	Healthmonitor              string  `json:"healthmonitor,omitempty"`
-	Httpprofilename            string  `json:"httpprofilename,omitempty"`
-	Includemembers             bool    `json:"includemembers,omitempty"`
-	Ip                         string  `json:"ip,omitempty"`
-	Maxbandwidth               int     `json:"maxbandwidth,omitempty"`
-	Maxclient                  int     `json:"maxclient,omitempty"`
-	Maxreq                     int     `json:"maxreq,omitempty"`
-	Memberport                 int     `json:"memberport,omitempty"`
-	Monconnectionclose         string  `json:"monconnectionclose,omitempty"`
+	GroupCount                 int     `json:"groupcount,omitempty"`
+	HashID                     int     `json:"hashid,omitempty"`
+	HealthMonitor              string  `json:"healthmonitor,omitempty"`
+	HTTPProfileName            string  `json:"httpprofilename,omitempty"`
+	IncludeMembers             bool    `json:"includemembers,omitempty"`
+	IP                         string  `json:"ip,omitempty"`
+	MaxBandwidth               int     `json:"maxbandwidth,omitempty"`
+	MaxClient                  int     `json:"maxclient,omitempty"`
+	MaxReq                     int     `json:"maxreq,omitempty"`
+	MemberPort                 int     `json:"memberport,omitempty"`
+	MonConnectionClose         string  `json:"monconnectionclose,omitempty"`
 	MonitorNameSvc             string  `json:"monitor_name_svc,omitempty"`
-	Monstatcode                int     `json:"monstatcode,omitempty"`
-	Monstatparam1              int     `json:"monstatparam1,omitempty"`
-	Monstatparam2              int     `json:"monstatparam2,omitempty"`
-	Monstatparam3              int     `json:"monstatparam3,omitempty"`
-	Monthreshold               int     `json:"monthreshold,omitempty"`
-	Monuserstatusmesg          string  `json:"monuserstatusmesg,omitempty"`
-	Nameserver                 string  `json:"nameserver,omitempty"`
-	Netprofile                 string  `json:"netprofile,omitempty"`
-	Newname                    string  `json:"newname,omitempty"`
-	Nextgenapiresource         string  `json:"_nextgenapiresource,omitempty"`
-	Nodefaultbindings          string  `json:"nodefaultbindings,omitempty"`
-	Numofconnections           int     `json:"numofconnections,omitempty"`
+	MonStatCode                int     `json:"monstatcode,omitempty"`
+	MonStatParam1              int     `json:"monstatparam1,omitempty"`
+	MonStatParam2              int     `json:"monstatparam2,omitempty"`
+	MonStatParam3              int     `json:"monstatparam3,omitempty"`
+	MonThreshold               int     `json:"monthreshold,omitempty"`
+	MonUserStatusMesg          string  `json:"monuserstatusmesg,omitempty"`
+	NameServer                 string  `json:"nameserver,omitempty"`
+	NetProfile                 string  `json:"netprofile,omitempty"`
+	NewName                    string  `json:"newname,omitempty"`
+	NextGenAPIResource         string  `json:"_nextgenapiresource,omitempty"`
+	NoDefaultBindings          string  `json:"nodefaultbindings,omitempty"`
+	NumOfConnections           int     `json:"numofconnections,omitempty"`
 	Order                      int     `json:"order,omitempty"`
-	Pathmonitor                string  `json:"pathmonitor,omitempty"`
-	Pathmonitorindv            string  `json:"pathmonitorindv,omitempty"`
+	PathMonitor                string  `json:"pathmonitor,omitempty"`
+	PathMonitorIndv            string  `json:"pathmonitorindv,omitempty"`
 	Port                       int     `json:"port,omitempty"`
-	Quicprofilename            string  `json:"quicprofilename,omitempty"`
-	Rtspsessionidremap         string  `json:"rtspsessionidremap,omitempty"`
-	Serverid                   int     `json:"serverid,omitempty"`
-	Servername                 string  `json:"servername,omitempty"`
-	Serviceconftype            bool    `json:"serviceconftype,omitempty"`
-	Servicegroupeffectivestate string  `json:"servicegroupeffectivestate,omitempty"`
-	Servicegroupname           string  `json:"servicegroupname,omitempty"`
-	Serviceipstr               string  `json:"serviceipstr,omitempty"`
-	Servicetype                string  `json:"servicetype,omitempty"`
-	Sp                         string  `json:"sp,omitempty"`
+	QUICProfileName            string  `json:"quicprofilename,omitempty"`
+	RTSPSessionIDRemap         string  `json:"rtspsessionidremap,omitempty"`
+	ServerID                   int     `json:"serverid,omitempty"`
+	ServerName                 string  `json:"servername,omitempty"`
+	ServiceConfType            bool    `json:"serviceconftype,omitempty"`
+	ServiceGroupEffectiveState string  `json:"servicegroupeffectivestate,omitempty"`
+	ServiceGroupName           string  `json:"servicegroupname,omitempty"`
+	ServiceIPStr               string  `json:"serviceipstr,omitempty"`
+	ServiceType                string  `json:"servicetype,omitempty"`
+	SP                         string  `json:"sp,omitempty"`
 	State                      string  `json:"state,omitempty"`
-	Statechangetimemsec        int     `json:"statechangetimemsec,omitempty"`
-	Stateupdatereason          int     `json:"stateupdatereason,omitempty"`
-	Svcitmactsvcs              int     `json:"svcitmactsvcs,omitempty"`
-	Svcitmboundsvcs            int     `json:"svcitmboundsvcs,omitempty"`
-	Svrstate                   string  `json:"svrstate,omitempty"`
-	Svrtimeout                 int     `json:"svrtimeout,omitempty"`
-	Tcpb                       string  `json:"tcpb,omitempty"`
-	Tcpprofilename             string  `json:"tcpprofilename,omitempty"`
-	Td                         int     `json:"td,omitempty"`
-	Topicname                  string  `json:"topicname,omitempty"`
-	Useproxyport               string  `json:"useproxyport,omitempty"`
-	Usip                       string  `json:"usip,omitempty"`
+	StateChangeTimeMsec        int     `json:"statechangetimemsec,omitempty"`
+	StateUpdateReason          int     `json:"stateupdatereason,omitempty"`
+	SvcItmActSvcs              int     `json:"svcitmactsvcs,omitempty"`
+	SvcItmBoundSvcs            int     `json:"svcitmboundsvcs,omitempty"`
+	SvrState                   string  `json:"svrstate,omitempty"`
+	SvrTimeout                 int     `json:"svrtimeout,omitempty"`
+	TCPB                       string  `json:"tcpb,omitempty"`
+	TCPProfileName             string  `json:"tcpprofilename,omitempty"`
+	TD                         int     `json:"td,omitempty"`
+	TopicName                  string  `json:"topicname,omitempty"`
+	UseProxyPort               string  `json:"useproxyport,omitempty"`
+	USIP                       string  `json:"usip,omitempty"`
 	Value                      string  `json:"value,omitempty"`
 	Weight                     int     `json:"weight,omitempty"`
 }
 
 type ServerBinding struct {
 	Name                          string        `json:"name,omitempty"`
-	ServerGslbserviceBinding      []interface{} `json:"server_gslbservice_binding,omitempty"`
-	ServerGslbservicegroupBinding []interface{} `json:"server_gslbservicegroup_binding,omitempty"`
+	ServerGSLBServiceBinding      []interface{} `json:"server_gslbservice_binding,omitempty"`
+	ServerGSLBServiceGroupBinding []interface{} `json:"server_gslbservicegroup_binding,omitempty"`
 	ServerServiceBinding          []interface{} `json:"server_service_binding,omitempty"`
-	ServerServicegroupBinding     []interface{} `json:"server_servicegroup_binding,omitempty"`
+	ServerServiceGroupBinding     []interface{} `json:"server_servicegroup_binding,omitempty"`
 }
 
-type ServiceLbmonitorBinding struct {
+type ServiceLBMonitorBinding struct {
 	DupState                   string `json:"dup_state,omitempty"`
 	DupWeight                  int    `json:"dup_weight,omitempty"`
-	Failedprobes               int    `json:"failedprobes,omitempty"`
-	Lastresponse               string `json:"lastresponse,omitempty"`
+	FailedProbes               int    `json:"failedprobes,omitempty"`
+	LastResponse               string `json:"lastresponse,omitempty"`
 	MonitorName                string `json:"monitor_name,omitempty"`
 	MonitorState               string `json:"monitor_state,omitempty"`
-	Monitorcurrentfailedprobes int    `json:"monitorcurrentfailedprobes,omitempty"`
-	Monitortotalfailedprobes   int    `json:"monitortotalfailedprobes,omitempty"`
-	Monitortotalprobes         int    `json:"monitortotalprobes,omitempty"`
-	Monstatcode                int    `json:"monstatcode,omitempty"`
-	Monstate                   string `json:"monstate,omitempty"`
-	Monstatparam1              int    `json:"monstatparam1,omitempty"`
-	Monstatparam2              int    `json:"monstatparam2,omitempty"`
-	Monstatparam3              int    `json:"monstatparam3,omitempty"`
+	MonitorCurrentFailedProbes int    `json:"monitorcurrentfailedprobes,omitempty"`
+	MonitorTotalFailedProbes   int    `json:"monitortotalfailedprobes,omitempty"`
+	MonitorTotalProbes         int    `json:"monitortotalprobes,omitempty"`
+	MonStatCode                int    `json:"monstatcode,omitempty"`
+	MonState                   string `json:"monstate,omitempty"`
+	MonStatParam1              int    `json:"monstatparam1,omitempty"`
+	MonStatParam2              int    `json:"monstatparam2,omitempty"`
+	MonStatParam3              int    `json:"monstatparam3,omitempty"`
 	Name                       string `json:"name,omitempty"`
 	Passive                    bool   `json:"passive,omitempty"`
-	Responsetime               int    `json:"responsetime,omitempty"`
-	Totalfailedprobes          int    `json:"totalfailedprobes,omitempty"`
-	Totalprobes                int    `json:"totalprobes,omitempty"`
+	ResponseTime               int    `json:"responsetime,omitempty"`
+	TotalFailedProbes          int    `json:"totalfailedprobes,omitempty"`
+	TotalProbes                int    `json:"totalprobes,omitempty"`
 	Weight                     int    `json:"weight,omitempty"`
 }
 
-type ServicegroupServicegroupmemberlistBinding struct {
-	Failedmembers    []interface{} `json:"failedmembers,omitempty"`
+type ServiceGroupServiceGroupMemberListBinding struct {
+	FailedMembers    []interface{} `json:"failedmembers,omitempty"`
 	Members          []interface{} `json:"members,omitempty"`
-	Servicegroupname string        `json:"servicegroupname,omitempty"`
+	ServiceGroupName string        `json:"servicegroupname,omitempty"`
 }
 
 type Server struct {
-	Autoscale                 string  `json:"autoscale,omitempty"`
+	AutoScale                 string  `json:"autoscale,omitempty"`
 	Cacheable                 string  `json:"cacheable,omitempty"`
-	Cka                       string  `json:"cka,omitempty"`
-	Cmp                       string  `json:"cmp,omitempty"`
+	CKA                       string  `json:"cka,omitempty"`
+	CMP                       string  `json:"cmp,omitempty"`
 	Comment                   string  `json:"comment,omitempty"`
 	Count                     float64 `json:"__count,omitempty"`
 	Delay                     int     `json:"delay,omitempty"`
 	Domain                    string  `json:"domain,omitempty"`
-	Domainresolvenow          bool    `json:"domainresolvenow,omitempty"`
-	Domainresolveretry        int     `json:"domainresolveretry,omitempty"`
+	DomainResolveNow          bool    `json:"domainresolvenow,omitempty"`
+	DomainResolveRetry        int     `json:"domainresolveretry,omitempty"`
 	Graceful                  string  `json:"graceful,omitempty"`
 	Internal                  bool    `json:"Internal,omitempty"`
-	Ipaddress                 string  `json:"ipaddress,omitempty"`
-	Ipv6address               string  `json:"ipv6address,omitempty"`
+	IPAddress                 string  `json:"ipaddress,omitempty"`
+	IPv6Address               string  `json:"ipv6address,omitempty"`
 	Name                      string  `json:"name,omitempty"`
-	Newname                   string  `json:"newname,omitempty"`
-	Nextgenapiresource        string  `json:"_nextgenapiresource,omitempty"`
-	Querytype                 string  `json:"querytype,omitempty"`
-	Sp                        string  `json:"sp,omitempty"`
+	NewName                   string  `json:"newname,omitempty"`
+	NextGenAPIResource        string  `json:"_nextgenapiresource,omitempty"`
+	QueryType                 string  `json:"querytype,omitempty"`
+	SP                        string  `json:"sp,omitempty"`
 	State                     string  `json:"state,omitempty"`
-	Statechangetimesec        string  `json:"statechangetimesec,omitempty"`
-	Tcpb                      string  `json:"tcpb,omitempty"`
-	Td                        int     `json:"td,omitempty"`
-	Tickssincelaststatechange int     `json:"tickssincelaststatechange,omitempty"`
-	Translationip             string  `json:"translationip,omitempty"`
-	Translationmask           string  `json:"translationmask,omitempty"`
-	Usip                      string  `json:"usip,omitempty"`
+	StateChangeTimeSec        string  `json:"statechangetimesec,omitempty"`
+	TCPB                      string  `json:"tcpb,omitempty"`
+	TD                        int     `json:"td,omitempty"`
+	TicksSinceLastStateChange int     `json:"tickssincelaststatechange,omitempty"`
+	TranslationIP             string  `json:"translationip,omitempty"`
+	TranslationMask           string  `json:"translationmask,omitempty"`
+	USIP                      string  `json:"usip,omitempty"`
 }
 
 type Location struct {
 	Count              float64 `json:"__count,omitempty"`
-	Ipfrom             string  `json:"ipfrom,omitempty"`
-	Ipto               string  `json:"ipto,omitempty"`
+	IPFrom             string  `json:"ipfrom,omitempty"`
+	IPTo               string  `json:"ipto,omitempty"`
 	Latitude           int     `json:"latitude,omitempty"`
 	Longitude          int     `json:"longitude,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Preferredlocation  string  `json:"preferredlocation,omitempty"`
-	Q1label            string  `json:"q1label,omitempty"`
-	Q2label            string  `json:"q2label,omitempty"`
-	Q3label            string  `json:"q3label,omitempty"`
-	Q4label            string  `json:"q4label,omitempty"`
-	Q5label            string  `json:"q5label,omitempty"`
-	Q6label            string  `json:"q6label,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	PreferredLocation  string  `json:"preferredlocation,omitempty"`
+	Q1Label            string  `json:"q1label,omitempty"`
+	Q2Label            string  `json:"q2label,omitempty"`
+	Q3Label            string  `json:"q3label,omitempty"`
+	Q4Label            string  `json:"q4label,omitempty"`
+	Q5Label            string  `json:"q5label,omitempty"`
+	Q6Label            string  `json:"q6label,omitempty"`
 }

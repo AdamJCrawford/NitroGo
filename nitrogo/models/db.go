@@ -1,22 +1,22 @@
 package models
 
 // db configuration structs
-type Dbuser struct {
+type DBUser struct {
 	Count              float64 `json:"__count,omitempty"`
-	Loggedin           bool    `json:"loggedin,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	LoggedIn           bool    `json:"loggedin,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Password           string  `json:"password,omitempty"`
 	Username           string  `json:"username,omitempty"`
 }
 
-type Dbdbprofile struct {
-	Conmultiplex           string  `json:"conmultiplex,omitempty"`
+type DBDBProfile struct {
+	ConMultiplex           string  `json:"conmultiplex,omitempty"`
 	Count                  float64 `json:"__count,omitempty"`
-	Enablecachingconmuxoff string  `json:"enablecachingconmuxoff,omitempty"`
-	Interpretquery         string  `json:"interpretquery,omitempty"`
-	Kcdaccount             string  `json:"kcdaccount,omitempty"`
+	EnableCachingConMuxOff string  `json:"enablecachingconmuxoff,omitempty"`
+	InterpretQuery         string  `json:"interpretquery,omitempty"`
+	KCDAccount             string  `json:"kcdaccount,omitempty"`
 	Name                   string  `json:"name,omitempty"`
-	Nextgenapiresource     string  `json:"_nextgenapiresource,omitempty"`
-	Refcnt                 int     `json:"refcnt,omitempty"`
+	NextGenAPIResource     string  `json:"_nextgenapiresource,omitempty"`
+	RefCnt                 int     `json:"refcnt,omitempty"`
 	Stickiness             string  `json:"stickiness,omitempty"`
 }

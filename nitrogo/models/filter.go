@@ -4,52 +4,52 @@
 
 package models
 
-type Filterpolicyfilterglobalbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
+type FilterPolicyFilterGlobalBinding struct {
+	BoundTo      string `json:"boundto,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
+	ActivePolicy int    `json:"activepolicy,omitempty"`
 	Name         string `json:"name,omitempty"`
 }
 
-type Filterprebodyinjection struct {
-	Prebody   string `json:"prebody,omitempty"`
-	Systemiid string `json:"systemiid,omitempty"`
+type FilterPreBodyInjection struct {
+	PreBody   string `json:"prebody,omitempty"`
+	SystemIID string `json:"systemiid,omitempty"`
 }
 
-type Filterglobalbinding struct {
+type FilterGlobalBinding struct {
 }
 
-type Filterglobalfilterpolicybinding struct {
-	Policyname string `json:"policyname,omitempty"`
+type FilterGlobalFilterPolicyBinding struct {
+	PolicyName string `json:"policyname,omitempty"`
 	Priority   int    `json:"priority,omitempty"`
 	State      string `json:"state,omitempty"`
 }
 
-type Filterpolicy struct {
+type FilterPolicy struct {
 	Name      string `json:"name,omitempty"`
 	Rule      string `json:"rule,omitempty"`
-	Reqaction string `json:"reqaction,omitempty"`
-	Resaction string `json:"resaction,omitempty"`
+	ReqAction string `json:"reqaction,omitempty"`
+	ResAction string `json:"resaction,omitempty"`
 	Hits      string `json:"hits,omitempty"`
 }
 
-type Filterpolicylbvserverbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
+type FilterPolicyLBVServerBinding struct {
+	BoundTo      string `json:"boundto,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
+	ActivePolicy int    `json:"activepolicy,omitempty"`
 	Name         string `json:"name,omitempty"`
 }
 
-type Filterhtmlinjectionparameter struct {
+type FilterHTMLInjectionParameter struct {
 	Rate          int    `json:"rate,omitempty"`
 	Frequency     int    `json:"frequency,omitempty"`
 	Strict        string `json:"strict,omitempty"`
-	Htmlsearchlen int    `json:"htmlsearchlen,omitempty"`
+	HTMLSearchLen int    `json:"htmlsearchlen,omitempty"`
 	Builtin       string `json:"builtin,omitempty"`
 	Feature       string `json:"feature,omitempty"`
 }
 
-type Filterhtmlinjectionvariable struct {
+type FilterHTMLInjectionVariable struct {
 	Variable string `json:"variable,omitempty"`
 	Value    string `json:"value,omitempty"`
 	Builtin  string `json:"builtin,omitempty"`
@@ -57,57 +57,57 @@ type Filterhtmlinjectionvariable struct {
 	Type     string `json:"type,omitempty"`
 }
 
-type Filteraction struct {
+type FilterAction struct {
 	Name        string `json:"name,omitempty"`
 	Qual        string `json:"qual,omitempty"`
-	Servicename string `json:"servicename,omitempty"`
+	ServiceName string `json:"servicename,omitempty"`
 	Value       string `json:"value,omitempty"`
-	Respcode    int    `json:"respcode,omitempty"`
+	RespCode    int    `json:"respcode,omitempty"`
 	Page        string `json:"page,omitempty"`
-	Isdefault   string `json:"isdefault,omitempty"`
+	IsDefault   string `json:"isdefault,omitempty"`
 	Builtin     string `json:"builtin,omitempty"`
 	Feature     string `json:"feature,omitempty"`
 }
 
-type Filterpolicyglobalbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
+type FilterPolicyGlobalBinding struct {
+	BoundTo      string `json:"boundto,omitempty"`
 	Priority     uint32 `json:"priority,omitempty"`
-	Activepolicy uint32 `json:"activepolicy,omitempty"`
+	ActivePolicy uint32 `json:"activepolicy,omitempty"`
 	Name         string `json:"name,omitempty"`
 }
 
-type Filterpolicyvserverbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
+type FilterPolicyVServerBinding struct {
+	BoundTo      string `json:"boundto,omitempty"`
 	Priority     uint32 `json:"priority,omitempty"`
-	Activepolicy uint32 `json:"activepolicy,omitempty"`
+	ActivePolicy uint32 `json:"activepolicy,omitempty"`
 	Name         string `json:"name,omitempty"`
 }
 
-type Filterpostbodyinjection struct {
-	Postbody  string `json:"postbody,omitempty"`
-	Systemiid string `json:"systemiid,omitempty"`
+type FilterPostBodyInjection struct {
+	PostBody  string `json:"postbody,omitempty"`
+	SystemIID string `json:"systemiid,omitempty"`
 }
 
-type Filterglobalpolicybinding struct {
-	Policyname string `json:"policyname,omitempty"`
+type FilterGlobalPolicyBinding struct {
+	PolicyName string `json:"policyname,omitempty"`
 	Priority   uint32 `json:"priority,omitempty"`
 	State      string `json:"state,omitempty"`
 }
 
-type Filterpolicybinding struct {
+type FilterPolicyBinding struct {
 	Name string `json:"name,omitempty"`
 }
 
-type Filterpolicycrvserverbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
+type FilterPolicyCRVServerBinding struct {
+	BoundTo      string `json:"boundto,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
+	ActivePolicy int    `json:"activepolicy,omitempty"`
 	Name         string `json:"name,omitempty"`
 }
 
-type Filterpolicycsvserverbinding struct {
-	Boundto      string `json:"boundto,omitempty"`
+type FilterPolicyCSVServerBinding struct {
+	BoundTo      string `json:"boundto,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
-	Activepolicy int    `json:"activepolicy,omitempty"`
+	ActivePolicy int    `json:"activepolicy,omitempty"`
 	Name         string `json:"name,omitempty"`
 }

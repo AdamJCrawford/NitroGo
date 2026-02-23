@@ -1,304 +1,304 @@
 package models
 
 // cache configuration structs
-type CachepolicyCsvserverBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+type CachePolicyCSVServerBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type CacheglobalBinding struct {
-	CacheglobalCachepolicyBinding []interface{} `json:"cacheglobal_cachepolicy_binding,omitempty"`
+type CacheGlobalBinding struct {
+	CacheGlobalCachePolicyBinding []interface{} `json:"cacheglobal_cachepolicy_binding,omitempty"`
 }
 
-type CachepolicyCachepolicylabelBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+type CachePolicyCachePolicyLabelBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type Cachepolicy struct {
+type CachePolicy struct {
 	Action             string   `json:"action,omitempty"`
 	Builtin            []string `json:"builtin,omitempty"`
 	Count              float64  `json:"__count,omitempty"`
 	Feature            string   `json:"feature,omitempty"`
 	Flags              int      `json:"flags,omitempty"`
 	Hits               int      `json:"hits,omitempty"`
-	Invalgroups        []string `json:"invalgroups,omitempty"`
-	Invalobjects       []string `json:"invalobjects,omitempty"`
-	Newname            string   `json:"newname,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
-	Policyname         string   `json:"policyname,omitempty"`
+	InvalGroups        []string `json:"invalgroups,omitempty"`
+	InvalObjects       []string `json:"invalobjects,omitempty"`
+	NewName            string   `json:"newname,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
+	PolicyName         string   `json:"policyname,omitempty"`
 	Rule               string   `json:"rule,omitempty"`
-	Storeingroup       string   `json:"storeingroup,omitempty"`
-	Undefaction        string   `json:"undefaction,omitempty"`
-	Undefhits          int      `json:"undefhits,omitempty"`
+	StoreInGroup       string   `json:"storeingroup,omitempty"`
+	UndefAction        string   `json:"undefaction,omitempty"`
+	UndefHits          int      `json:"undefhits,omitempty"`
 }
 
-type CachepolicyCacheglobalBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+type CachePolicyCacheGlobalBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type CachepolicyLbvserverBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+type CachePolicyLBVServerBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type Cacheparameter struct {
-	Cacheevictionpolicy string `json:"cacheevictionpolicy,omitempty"`
-	Disklimit           int    `json:"disklimit,omitempty"`
-	Enablebypass        string `json:"enablebypass,omitempty"`
-	Enablehaobjpersist  string `json:"enablehaobjpersist,omitempty"`
-	Maxdisklimit        int    `json:"maxdisklimit,omitempty"`
-	Maxmemlimit         int    `json:"maxmemlimit,omitempty"`
-	Maxpostlen          int    `json:"maxpostlen,omitempty"`
-	Memlimit            int    `json:"memlimit,omitempty"`
-	Memlimitactive      int    `json:"memlimitactive,omitempty"`
-	Nextgenapiresource  string `json:"_nextgenapiresource,omitempty"`
-	Prefetchcur         int    `json:"prefetchcur,omitempty"`
-	Prefetchmaxpending  int    `json:"prefetchmaxpending,omitempty"`
-	Undefaction         string `json:"undefaction,omitempty"`
-	Verifyusing         string `json:"verifyusing,omitempty"`
+type CacheParameter struct {
+	CacheEvictionPolicy string `json:"cacheevictionpolicy,omitempty"`
+	DiskLimit           int    `json:"disklimit,omitempty"`
+	EnableBypass        string `json:"enablebypass,omitempty"`
+	EnableHAObjPersist  string `json:"enablehaobjpersist,omitempty"`
+	MaxDiskLimit        int    `json:"maxdisklimit,omitempty"`
+	MaxMemLimit         int    `json:"maxmemlimit,omitempty"`
+	MaxPostLen          int    `json:"maxpostlen,omitempty"`
+	MemLimit            int    `json:"memlimit,omitempty"`
+	MemLimitActive      int    `json:"memlimitactive,omitempty"`
+	NextGenAPIResource  string `json:"_nextgenapiresource,omitempty"`
+	PrefetchCur         int    `json:"prefetchcur,omitempty"`
+	PrefetchMaxPending  int    `json:"prefetchmaxpending,omitempty"`
+	UndefAction         string `json:"undefaction,omitempty"`
+	VerifyUsing         string `json:"verifyusing,omitempty"`
 	Via                 string `json:"via,omitempty"`
 }
 
-type CachepolicylabelPolicybindingBinding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type CachePolicyLabelPolicyBindingBinding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	InvokeLabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+	InvokeLabelName        string `json:"invoke_labelname,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type CachepolicyBinding struct {
-	CachepolicyCacheglobalBinding      []interface{} `json:"cachepolicy_cacheglobal_binding,omitempty"`
-	CachepolicyCachepolicylabelBinding []interface{} `json:"cachepolicy_cachepolicylabel_binding,omitempty"`
-	CachepolicyCsvserverBinding        []interface{} `json:"cachepolicy_csvserver_binding,omitempty"`
-	CachepolicyLbvserverBinding        []interface{} `json:"cachepolicy_lbvserver_binding,omitempty"`
-	Policyname                         string        `json:"policyname,omitempty"`
+type CachePolicyBinding struct {
+	CachePolicyCacheGlobalBinding      []interface{} `json:"cachepolicy_cacheglobal_binding,omitempty"`
+	CachePolicyCachePolicyLabelBinding []interface{} `json:"cachepolicy_cachepolicylabel_binding,omitempty"`
+	CachePolicyCSVServerBinding        []interface{} `json:"cachepolicy_csvserver_binding,omitempty"`
+	CachePolicyLBVServerBinding        []interface{} `json:"cachepolicy_lbvserver_binding,omitempty"`
+	PolicyName                         string        `json:"policyname,omitempty"`
 }
 
-type Cacheselector struct {
+type CacheSelector struct {
 	Builtin            []string `json:"builtin,omitempty"`
 	Count              float64  `json:"__count,omitempty"`
 	Feature            string   `json:"feature,omitempty"`
 	Flags              int      `json:"flags,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
 	Rule               []string `json:"rule,omitempty"`
-	Selectorname       string   `json:"selectorname,omitempty"`
+	SelectorName       string   `json:"selectorname,omitempty"`
 }
 
-type Cachepolicylabel struct {
+type CachePolicyLabel struct {
 	Builtin                []string `json:"builtin,omitempty"`
 	Count                  float64  `json:"__count,omitempty"`
 	Evaluates              string   `json:"evaluates,omitempty"`
 	Feature                string   `json:"feature,omitempty"`
-	Flowtype               int      `json:"flowtype,omitempty"`
-	Gotopriorityexpression string   `json:"gotopriorityexpression,omitempty"`
+	FlowType               int      `json:"flowtype,omitempty"`
+	GotoPriorityExpression string   `json:"gotopriorityexpression,omitempty"`
 	Hits                   int      `json:"hits,omitempty"`
-	InvokeLabelname        string   `json:"invoke_labelname,omitempty"`
-	Labelname              string   `json:"labelname,omitempty"`
-	Labeltype              string   `json:"labeltype,omitempty"`
-	Newname                string   `json:"newname,omitempty"`
-	Nextgenapiresource     string   `json:"_nextgenapiresource,omitempty"`
-	Numpol                 int      `json:"numpol,omitempty"`
+	InvokeLabelName        string   `json:"invoke_labelname,omitempty"`
+	LabelName              string   `json:"labelname,omitempty"`
+	LabelType              string   `json:"labeltype,omitempty"`
+	NewName                string   `json:"newname,omitempty"`
+	NextGenAPIResource     string   `json:"_nextgenapiresource,omitempty"`
+	NumPol                 int      `json:"numpol,omitempty"`
 	Priority               int      `json:"priority,omitempty"`
 }
 
-type CacheglobalCachepolicyBinding struct {
-	Flowtype               int    `json:"flowtype,omitempty"`
-	Globalbindtype         string `json:"globalbindtype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type CacheGlobalCachePolicyBinding struct {
+	FlowType               int    `json:"flowtype,omitempty"`
+	GlobalBindType         string `json:"globalbindtype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Numpol                 int    `json:"numpol,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	NumPol                 int    `json:"numpol,omitempty"`
 	Policy                 string `json:"policy,omitempty"`
-	Precededefrules        string `json:"precededefrules,omitempty"`
+	PrecedeDefRules        string `json:"precededefrules,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 }
 
-type Cacheobject struct {
-	Cachecellappfwmetadataexists string   `json:"cachecellappfwmetadataexists,omitempty"`
-	Cachecellbasefile            string   `json:"cachecellbasefile,omitempty"`
-	Cachecellcomplex             string   `json:"cachecellcomplex,omitempty"`
-	Cachecellcompressionformat   string   `json:"cachecellcompressionformat,omitempty"`
-	Cachecellcurmisses           int      `json:"cachecellcurmisses,omitempty"`
-	Cachecellcurreaders          int      `json:"cachecellcurreaders,omitempty"`
-	Cachecelldestipverified      string   `json:"cachecelldestipverified,omitempty"`
-	Cachecelldhits               int      `json:"cachecelldhits,omitempty"`
-	Cachecelletaginserted        string   `json:"cachecelletaginserted,omitempty"`
-	Cachecellexpires             int      `json:"cachecellexpires,omitempty"`
-	Cachecellexpiresmillisec     int      `json:"cachecellexpiresmillisec,omitempty"`
-	Cachecellfwpxyobj            string   `json:"cachecellfwpxyobj,omitempty"`
-	Cachecellhits                int      `json:"cachecellhits,omitempty"`
-	Cachecellhttp11              string   `json:"cachecellhttp11,omitempty"`
-	Cachecellminhit              int      `json:"cachecellminhit,omitempty"`
-	Cachecellminhitflag          string   `json:"cachecellminhitflag,omitempty"`
-	Cachecellmisses              int      `json:"cachecellmisses,omitempty"`
-	Cachecellpolleverytime       string   `json:"cachecellpolleverytime,omitempty"`
-	Cachecellreadywithlastbyte   string   `json:"cachecellreadywithlastbyte,omitempty"`
-	Cachecellreqtime             int      `json:"cachecellreqtime,omitempty"`
-	Cachecellresbadsize          string   `json:"cachecellresbadsize,omitempty"`
-	Cachecellrestime             int      `json:"cachecellrestime,omitempty"`
-	Cachecellweaketag            string   `json:"cachecellweaketag,omitempty"`
-	Cachecontrol                 string   `json:"cachecontrol,omitempty"`
-	Cachecurage                  int      `json:"cachecurage,omitempty"`
-	Cachedirname                 string   `json:"cachedirname,omitempty"`
-	Cacheetag                    string   `json:"cacheetag,omitempty"`
-	Cachefilename                string   `json:"cachefilename,omitempty"`
-	Cacheindisk                  string   `json:"cacheindisk,omitempty"`
-	Cacheinmemory                string   `json:"cacheinmemory,omitempty"`
-	Cacheinsecondary             string   `json:"cacheinsecondary,omitempty"`
-	Cacheresdate                 string   `json:"cacheresdate,omitempty"`
-	Cachereshdrsize              int      `json:"cachereshdrsize,omitempty"`
-	Cachereslastmod              string   `json:"cachereslastmod,omitempty"`
-	Cacheressize                 int      `json:"cacheressize,omitempty"`
-	Cacheurls                    string   `json:"cacheurls,omitempty"`
-	Ceflags                      int      `json:"ceflags,omitempty"`
-	Contentgroup                 string   `json:"contentgroup,omitempty"`
+type CacheObject struct {
+	CacheCellAppFWMetadataExists string   `json:"cachecellappfwmetadataexists,omitempty"`
+	CacheCellBaseFile            string   `json:"cachecellbasefile,omitempty"`
+	CacheCellComplex             string   `json:"cachecellcomplex,omitempty"`
+	CacheCellCompressionFormat   string   `json:"cachecellcompressionformat,omitempty"`
+	CacheCellCurMisses           int      `json:"cachecellcurmisses,omitempty"`
+	CacheCellCurReaders          int      `json:"cachecellcurreaders,omitempty"`
+	CacheCellDestIPVerified      string   `json:"cachecelldestipverified,omitempty"`
+	CacheCellDHits               int      `json:"cachecelldhits,omitempty"`
+	CacheCellETagInserted        string   `json:"cachecelletaginserted,omitempty"`
+	CacheCellExpires             int      `json:"cachecellexpires,omitempty"`
+	CacheCellExpiresMillisec     int      `json:"cachecellexpiresmillisec,omitempty"`
+	CacheCellFWPxyObj            string   `json:"cachecellfwpxyobj,omitempty"`
+	CacheCellHits                int      `json:"cachecellhits,omitempty"`
+	CacheCellHTTP11              string   `json:"cachecellhttp11,omitempty"`
+	CacheCellMinHit              int      `json:"cachecellminhit,omitempty"`
+	CacheCellMinHitFlag          string   `json:"cachecellminhitflag,omitempty"`
+	CacheCellMisses              int      `json:"cachecellmisses,omitempty"`
+	CacheCellPollEveryTime       string   `json:"cachecellpolleverytime,omitempty"`
+	CacheCellReadyWithLastByte   string   `json:"cachecellreadywithlastbyte,omitempty"`
+	CacheCellReqTime             int      `json:"cachecellreqtime,omitempty"`
+	CacheCellResBadSize          string   `json:"cachecellresbadsize,omitempty"`
+	CacheCellResTime             int      `json:"cachecellrestime,omitempty"`
+	CacheCellWeakETag            string   `json:"cachecellweaketag,omitempty"`
+	CacheControl                 string   `json:"cachecontrol,omitempty"`
+	CacheCurAge                  int      `json:"cachecurage,omitempty"`
+	CacheDirName                 string   `json:"cachedirname,omitempty"`
+	CacheETag                    string   `json:"cacheetag,omitempty"`
+	CacheFileName                string   `json:"cachefilename,omitempty"`
+	CacheInDisk                  string   `json:"cacheindisk,omitempty"`
+	CacheInMemory                string   `json:"cacheinmemory,omitempty"`
+	CacheInSecondary             string   `json:"cacheinsecondary,omitempty"`
+	CacheResDate                 string   `json:"cacheresdate,omitempty"`
+	CacheResHdrSize              int      `json:"cachereshdrsize,omitempty"`
+	CacheResLastMod              string   `json:"cachereslastmod,omitempty"`
+	CacheResSize                 int      `json:"cacheressize,omitempty"`
+	CacheURLs                    string   `json:"cacheurls,omitempty"`
+	CEFlags                      int      `json:"ceflags,omitempty"`
+	ContentGroup                 string   `json:"contentgroup,omitempty"`
 	Count                        float64  `json:"__count,omitempty"`
-	Destipv46                    string   `json:"destipv46,omitempty"`
-	Destport                     int      `json:"destport,omitempty"`
+	DestIPv46                    string   `json:"destipv46,omitempty"`
+	DestPort                     int      `json:"destport,omitempty"`
 	Flushed                      string   `json:"flushed,omitempty"`
 	Group                        string   `json:"group,omitempty"`
-	Groupname                    string   `json:"groupname,omitempty"`
-	Hitparams                    []string `json:"hitparams,omitempty"`
-	Hitvalues                    []string `json:"hitvalues,omitempty"`
+	GroupName                    string   `json:"groupname,omitempty"`
+	HitParams                    []string `json:"hitparams,omitempty"`
+	HitValues                    []string `json:"hitvalues,omitempty"`
 	Host                         string   `json:"host,omitempty"`
-	Httpcalloutcell              string   `json:"httpcalloutcell,omitempty"`
-	Httpcalloutname              string   `json:"httpcalloutname,omitempty"`
-	Httpcalloutresult            string   `json:"httpcalloutresult,omitempty"`
-	Httpmethod                   string   `json:"httpmethod,omitempty"`
-	Httpstatus                   int      `json:"httpstatus,omitempty"`
-	Httpstatusoutput             int      `json:"httpstatusoutput,omitempty"`
-	Ignoremarkerobjects          string   `json:"ignoremarkerobjects,omitempty"`
-	Includenotreadyobjects       string   `json:"includenotreadyobjects,omitempty"`
+	HTTPCalloutCell              string   `json:"httpcalloutcell,omitempty"`
+	HTTPCalloutName              string   `json:"httpcalloutname,omitempty"`
+	HTTPCalloutResult            string   `json:"httpcalloutresult,omitempty"`
+	HTTPMethod                   string   `json:"httpmethod,omitempty"`
+	HTTPStatus                   int      `json:"httpstatus,omitempty"`
+	HTTPStatusOutput             int      `json:"httpstatusoutput,omitempty"`
+	IgnoreMarkerObjects          string   `json:"ignoremarkerobjects,omitempty"`
+	IncludeNotReadyObjects       string   `json:"includenotreadyobjects,omitempty"`
 	Locator                      int      `json:"locator,omitempty"`
-	Locatorshow                  int      `json:"locatorshow,omitempty"`
-	Markerreason                 string   `json:"markerreason,omitempty"`
-	Nextgenapiresource           string   `json:"_nextgenapiresource,omitempty"`
-	Nodeid                       int      `json:"nodeid,omitempty"`
+	LocatorShow                  int      `json:"locatorshow,omitempty"`
+	MarkerReason                 string   `json:"markerreason,omitempty"`
+	NextGenAPIResource           string   `json:"_nextgenapiresource,omitempty"`
+	NodeID                       int      `json:"nodeid,omitempty"`
 	Policy                       int      `json:"policy,omitempty"`
-	Policyname                   string   `json:"policyname,omitempty"`
+	PolicyName                   string   `json:"policyname,omitempty"`
 	Port                         int      `json:"port,omitempty"`
 	Prefetch                     string   `json:"prefetch,omitempty"`
-	Prefetchperiod               int      `json:"prefetchperiod,omitempty"`
-	Prefetchperiodmillisec       int      `json:"prefetchperiodmillisec,omitempty"`
-	Returntype                   string   `json:"returntype,omitempty"`
+	PrefetchPeriod               int      `json:"prefetchperiod,omitempty"`
+	PrefetchPeriodMillisec       int      `json:"prefetchperiodmillisec,omitempty"`
+	ReturnType                   string   `json:"returntype,omitempty"`
 	Rule                         []string `json:"rule,omitempty"`
-	Selectorname                 []string `json:"selectorname,omitempty"`
-	Selectorvalue                []string `json:"selectorvalue,omitempty"`
-	Tosecondary                  string   `json:"tosecondary,omitempty"`
-	Totalobjs                    int      `json:"totalobjs,omitempty"`
-	Url                          string   `json:"url,omitempty"`
-	Warnbucketskip               int      `json:"warnbucketskip,omitempty"`
+	SelectorName                 []string `json:"selectorname,omitempty"`
+	SelectorValue                []string `json:"selectorvalue,omitempty"`
+	ToSecondary                  string   `json:"tosecondary,omitempty"`
+	TotalObjs                    int      `json:"totalobjs,omitempty"`
+	URL                          string   `json:"url,omitempty"`
+	WarnBucketSkip               int      `json:"warnbucketskip,omitempty"`
 }
 
-type CachepolicylabelBinding struct {
-	CachepolicylabelCachepolicyBinding   []interface{} `json:"cachepolicylabel_cachepolicy_binding,omitempty"`
-	CachepolicylabelPolicybindingBinding []interface{} `json:"cachepolicylabel_policybinding_binding,omitempty"`
-	Labelname                            string        `json:"labelname,omitempty"`
+type CachePolicyLabelBinding struct {
+	CachePolicyLabelCachePolicyBinding   []interface{} `json:"cachepolicylabel_cachepolicy_binding,omitempty"`
+	CachePolicyLabelPolicyBindingBinding []interface{} `json:"cachepolicylabel_policybinding_binding,omitempty"`
+	LabelName                            string        `json:"labelname,omitempty"`
 }
 
-type CachepolicylabelCachepolicyBinding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type CachePolicyLabelCachePolicyBinding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	InvokeLabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+	InvokeLabelName        string `json:"invoke_labelname,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type Cachecontentgroup struct {
-	Absexpiry              []string `json:"absexpiry,omitempty"`
-	Absexpirygmt           []string `json:"absexpirygmt,omitempty"`
-	Alwaysevalpolicies     string   `json:"alwaysevalpolicies,omitempty"`
+type CacheContentGroup struct {
+	AbsExpiry              []string `json:"absexpiry,omitempty"`
+	AbsExpiryGMT           []string `json:"absexpirygmt,omitempty"`
+	AlwaysEvalPolicies     string   `json:"alwaysevalpolicies,omitempty"`
 	Builtin                []string `json:"builtin,omitempty"`
-	Cache304hits           int      `json:"cache304hits,omitempty"`
-	Cachecells             int      `json:"cachecells,omitempty"`
-	Cachecontrol           string   `json:"cachecontrol,omitempty"`
-	Cachegroupincarnation  int      `json:"cachegroupincarnation,omitempty"`
-	Cachenon304hits        int      `json:"cachenon304hits,omitempty"`
-	Cachenuminvalpolicy    int      `json:"cachenuminvalpolicy,omitempty"`
+	Cache304Hits           int      `json:"cache304hits,omitempty"`
+	CacheCells             int      `json:"cachecells,omitempty"`
+	CacheControl           string   `json:"cachecontrol,omitempty"`
+	CacheGroupIncarnation  int      `json:"cachegroupincarnation,omitempty"`
+	CacheNon304Hits        int      `json:"cachenon304hits,omitempty"`
+	CacheNumInvalPolicy    int      `json:"cachenuminvalpolicy,omitempty"`
 	Count                  float64  `json:"__count,omitempty"`
-	Disklimit              int      `json:"disklimit,omitempty"`
-	Expireatlastbyte       string   `json:"expireatlastbyte,omitempty"`
+	DiskLimit              int      `json:"disklimit,omitempty"`
+	ExpireAtLastByte       string   `json:"expireatlastbyte,omitempty"`
 	Feature                string   `json:"feature,omitempty"`
 	Flags                  int      `json:"flags,omitempty"`
-	Flashcache             string   `json:"flashcache,omitempty"`
-	Heurexpiryparam        int      `json:"heurexpiryparam,omitempty"`
-	Hitparams              []string `json:"hitparams,omitempty"`
-	Hitselector            string   `json:"hitselector,omitempty"`
+	FlashCache             string   `json:"flashcache,omitempty"`
+	HeurExpiryParam        int      `json:"heurexpiryparam,omitempty"`
+	HitParams              []string `json:"hitparams,omitempty"`
+	HitSelector            string   `json:"hitselector,omitempty"`
 	Host                   string   `json:"host,omitempty"`
-	Ignoreparamvaluecase   string   `json:"ignoreparamvaluecase,omitempty"`
-	Ignorereloadreq        string   `json:"ignorereloadreq,omitempty"`
-	Ignorereqcachinghdrs   string   `json:"ignorereqcachinghdrs,omitempty"`
-	Insertage              string   `json:"insertage,omitempty"`
-	Insertetag             string   `json:"insertetag,omitempty"`
-	Insertvia              string   `json:"insertvia,omitempty"`
-	Invalparams            []string `json:"invalparams,omitempty"`
-	Invalrestrictedtohost  string   `json:"invalrestrictedtohost,omitempty"`
-	Invalselector          string   `json:"invalselector,omitempty"`
-	Lazydnsresolve         string   `json:"lazydnsresolve,omitempty"`
-	Markercells            int      `json:"markercells,omitempty"`
-	Matchcookies           string   `json:"matchcookies,omitempty"`
-	Maxressize             int      `json:"maxressize,omitempty"`
-	Memdusage              int      `json:"memdusage,omitempty"`
-	Memlimit               int      `json:"memlimit,omitempty"`
-	Memusage               int      `json:"memusage,omitempty"`
-	Minhits                int      `json:"minhits,omitempty"`
-	Minressize             int      `json:"minressize,omitempty"`
+	IgnoreParamValueCase   string   `json:"ignoreparamvaluecase,omitempty"`
+	IgnoreReloadReq        string   `json:"ignorereloadreq,omitempty"`
+	IgnoreReqCachingHdrs   string   `json:"ignorereqcachinghdrs,omitempty"`
+	InsertAge              string   `json:"insertage,omitempty"`
+	InsertETag             string   `json:"insertetag,omitempty"`
+	InsertVia              string   `json:"insertvia,omitempty"`
+	InvalParams            []string `json:"invalparams,omitempty"`
+	InvalRestrictedToHost  string   `json:"invalrestrictedtohost,omitempty"`
+	InvalSelector          string   `json:"invalselector,omitempty"`
+	LazyDNSResolve         string   `json:"lazydnsresolve,omitempty"`
+	MarkerCells            int      `json:"markercells,omitempty"`
+	MatchCookies           string   `json:"matchcookies,omitempty"`
+	MaxResSize             int      `json:"maxressize,omitempty"`
+	MemDUsage              int      `json:"memdusage,omitempty"`
+	MemLimit               int      `json:"memlimit,omitempty"`
+	MemUsage               int      `json:"memusage,omitempty"`
+	MinHits                int      `json:"minhits,omitempty"`
+	MinResSize             int      `json:"minressize,omitempty"`
 	Name                   string   `json:"name,omitempty"`
-	Nextgenapiresource     string   `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource     string   `json:"_nextgenapiresource,omitempty"`
 	Persist                string   `json:"persist,omitempty"`
-	Persistha              string   `json:"persistha,omitempty"`
+	PersistHA              string   `json:"persistha,omitempty"`
 	Pinned                 string   `json:"pinned,omitempty"`
-	Policyname             []string `json:"policyname,omitempty"`
-	Polleverytime          string   `json:"polleverytime,omitempty"`
+	PolicyName             []string `json:"policyname,omitempty"`
+	PollEveryTime          string   `json:"polleverytime,omitempty"`
 	Prefetch               string   `json:"prefetch,omitempty"`
-	Prefetchcur            int      `json:"prefetchcur,omitempty"`
-	Prefetchmaxpending     int      `json:"prefetchmaxpending,omitempty"`
-	Prefetchperiod         int      `json:"prefetchperiod,omitempty"`
-	Prefetchperiodmillisec int      `json:"prefetchperiodmillisec,omitempty"`
+	PrefetchCur            int      `json:"prefetchcur,omitempty"`
+	PrefetchMaxPending     int      `json:"prefetchmaxpending,omitempty"`
+	PrefetchPeriod         int      `json:"prefetchperiod,omitempty"`
+	PrefetchPeriodMillisec int      `json:"prefetchperiodmillisec,omitempty"`
 	Query                  string   `json:"query,omitempty"`
-	Quickabortsize         int      `json:"quickabortsize,omitempty"`
-	Relexpiry              int      `json:"relexpiry,omitempty"`
-	Relexpirymillisec      int      `json:"relexpirymillisec,omitempty"`
-	Removecookies          string   `json:"removecookies,omitempty"`
-	Selectorvalue          string   `json:"selectorvalue,omitempty"`
-	Tosecondary            string   `json:"tosecondary,omitempty"`
+	QuickAbortSize         int      `json:"quickabortsize,omitempty"`
+	RelExpiry              int      `json:"relexpiry,omitempty"`
+	RelExpiryMillisec      int      `json:"relexpirymillisec,omitempty"`
+	RemoveCookies          string   `json:"removecookies,omitempty"`
+	SelectorValue          string   `json:"selectorvalue,omitempty"`
+	ToSecondary            string   `json:"tosecondary,omitempty"`
 	TypeField              string   `json:"type,omitempty"`
-	Weaknegrelexpiry       int      `json:"weaknegrelexpiry,omitempty"`
-	Weakposrelexpiry       int      `json:"weakposrelexpiry,omitempty"`
+	WeakNegRelExpiry       int      `json:"weaknegrelexpiry,omitempty"`
+	WeakPosRelExpiry       int      `json:"weakposrelexpiry,omitempty"`
 }
 
-type Cacheforwardproxy struct {
+type CacheForwardProxy struct {
 	Count              float64 `json:"__count,omitempty"`
-	Ipaddress          string  `json:"ipaddress,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	IPAddress          string  `json:"ipaddress,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Port               int     `json:"port,omitempty"`
 }

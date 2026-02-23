@@ -1,11 +1,11 @@
 package models
 
 // endpoint configuration structs
-type Endpointinfo struct {
+type EndpointInfo struct {
 	Count              float64 `json:"__count,omitempty"`
-	Endpointkind       string  `json:"endpointkind,omitempty"`
-	Endpointlabelsjson string  `json:"endpointlabelsjson,omitempty"`
-	Endpointmetadata   string  `json:"endpointmetadata,omitempty"`
-	Endpointname       string  `json:"endpointname,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	EndpointKind       string  `json:"endpointkind,omitempty"`
+	EndpointLabelsJSON string  `json:"endpointlabelsjson,omitempty"`
+	EndpointMetadata   string  `json:"endpointmetadata,omitempty"`
+	EndpointName       string  `json:"endpointname,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 }

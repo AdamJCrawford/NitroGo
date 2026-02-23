@@ -1,51 +1,51 @@
 package models
 
 // stream configuration structs
-type Streamsession struct {
+type StreamSession struct {
 	Name string `json:"name,omitempty"`
 }
 
-type Streamidentifier struct {
-	Acceptancethreshold     string   `json:"acceptancethreshold,omitempty"`
-	Appflowlog              string   `json:"appflowlog,omitempty"`
-	Breachthreshold         int      `json:"breachthreshold,omitempty"`
+type StreamIdentifier struct {
+	AcceptanceThreshold     string   `json:"acceptancethreshold,omitempty"`
+	AppFlowLog              string   `json:"appflowlog,omitempty"`
+	BreachThreshold         int      `json:"breachthreshold,omitempty"`
 	Count                   float64  `json:"__count,omitempty"`
 	Interval                int      `json:"interval,omitempty"`
 	Log                     string   `json:"log,omitempty"`
-	Loginterval             int      `json:"loginterval,omitempty"`
-	Loglimit                int      `json:"loglimit,omitempty"`
-	Maxtransactionthreshold int      `json:"maxtransactionthreshold,omitempty"`
-	Mintransactionthreshold int      `json:"mintransactionthreshold,omitempty"`
+	LogInterval             int      `json:"loginterval,omitempty"`
+	LogLimit                int      `json:"loglimit,omitempty"`
+	MaxTransactionThreshold int      `json:"maxtransactionthreshold,omitempty"`
+	MinTransactionThreshold int      `json:"mintransactionthreshold,omitempty"`
 	Name                    string   `json:"name,omitempty"`
-	Nextgenapiresource      string   `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource      string   `json:"_nextgenapiresource,omitempty"`
 	Rule                    []string `json:"rule,omitempty"`
-	Samplecount             int      `json:"samplecount,omitempty"`
-	Selectorname            string   `json:"selectorname,omitempty"`
-	Snmptrap                string   `json:"snmptrap,omitempty"`
+	SampleCount             int      `json:"samplecount,omitempty"`
+	SelectorName            string   `json:"selectorname,omitempty"`
+	SNMPTrap                string   `json:"snmptrap,omitempty"`
 	Sort                    string   `json:"sort,omitempty"`
-	Trackackonlypackets     string   `json:"trackackonlypackets,omitempty"`
-	Tracktransactions       string   `json:"tracktransactions,omitempty"`
+	TrackAckOnlyPackets     string   `json:"trackackonlypackets,omitempty"`
+	TrackTransactions       string   `json:"tracktransactions,omitempty"`
 }
 
-type StreamidentifierBinding struct {
+type StreamIdentifierBinding struct {
 	Name                                    string        `json:"name,omitempty"`
-	StreamidentifierAnalyticsprofileBinding []interface{} `json:"streamidentifier_analyticsprofile_binding,omitempty"`
-	StreamidentifierStreamsessionBinding    []interface{} `json:"streamidentifier_streamsession_binding,omitempty"`
+	StreamIdentifierAnalyticsProfileBinding []interface{} `json:"streamidentifier_analyticsprofile_binding,omitempty"`
+	StreamIdentifierStreamSessionBinding    []interface{} `json:"streamidentifier_streamsession_binding,omitempty"`
 }
 
-type StreamidentifierAnalyticsprofileBinding struct {
-	Analyticsprofile string `json:"analyticsprofile,omitempty"`
+type StreamIdentifierAnalyticsProfileBinding struct {
+	AnalyticsProfile string `json:"analyticsprofile,omitempty"`
 	Name             string `json:"name,omitempty"`
 }
 
-type Streamselector struct {
+type StreamSelector struct {
 	Count              float64  `json:"__count,omitempty"`
 	Name               string   `json:"name,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
 	Rule               []string `json:"rule,omitempty"`
 }
 
-type StreamidentifierStreamsessionBinding struct {
-	Analyticsprofile string `json:"analyticsprofile,omitempty"`
+type StreamIdentifierStreamSessionBinding struct {
+	AnalyticsProfile string `json:"analyticsprofile,omitempty"`
 	Name             string `json:"name,omitempty"`
 }

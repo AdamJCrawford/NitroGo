@@ -4,20 +4,20 @@
 
 package models
 
-type Scpolicy struct {
+type SCPolicy struct {
 	Name              string `json:"name,omitempty"`
-	Url               string `json:"url,omitempty"`
+	URL               string `json:"url,omitempty"`
 	Rule              string `json:"rule,omitempty"`
 	Delay             int    `json:"delay,omitempty"`
-	Maxconn           int    `json:"maxconn,omitempty"`
+	MaxConn           int    `json:"maxconn,omitempty"`
 	Action            string `json:"action,omitempty"`
-	Altcontentsvcname string `json:"altcontentsvcname,omitempty"`
-	Altcontentpath    string `json:"altcontentpath,omitempty"`
+	AltContentSvcName string `json:"altcontentsvcname,omitempty"`
+	AltContentPath    string `json:"altcontentpath,omitempty"`
 }
 
-type Scparameter struct {
-	Sessionlife int    `json:"sessionlife,omitempty"`
-	Vsr         string `json:"vsr,omitempty"`
+type SCParameter struct {
+	SessionLife int    `json:"sessionlife,omitempty"`
+	VSR         string `json:"vsr,omitempty"`
 	Builtin     string `json:"builtin,omitempty"`
 	Feature     string `json:"feature,omitempty"`
 }

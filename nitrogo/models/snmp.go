@@ -1,137 +1,137 @@
 package models
 
 // snmp configuration structs
-type Snmpmanager struct {
+type SNMPManager struct {
 	Count              float64 `json:"__count,omitempty"`
 	Domain             string  `json:"domain,omitempty"`
-	Domainresolveretry int     `json:"domainresolveretry,omitempty"`
-	Ip                 string  `json:"ip,omitempty"`
-	Ipaddress          string  `json:"ipaddress,omitempty"`
+	DomainResolveRetry int     `json:"domainresolveretry,omitempty"`
+	IP                 string  `json:"ip,omitempty"`
+	IPAddress          string  `json:"ipaddress,omitempty"`
 	Netmask            string  `json:"netmask,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 }
 
-type Snmpalarm struct {
+type SNMPAlarm struct {
 	Count              float64 `json:"__count,omitempty"`
 	Logging            string  `json:"logging,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Normalvalue        int     `json:"normalvalue,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	NormalValue        int     `json:"normalvalue,omitempty"`
 	Severity           string  `json:"severity,omitempty"`
 	State              string  `json:"state,omitempty"`
-	Thresholdvalue     int     `json:"thresholdvalue,omitempty"`
+	ThresholdValue     int     `json:"thresholdvalue,omitempty"`
 	Time               int     `json:"time,omitempty"`
 	Timeout            int     `json:"timeout,omitempty"`
-	Trapname           string  `json:"trapname,omitempty"`
+	TrapName           string  `json:"trapname,omitempty"`
 }
 
-type Snmpoption struct {
-	Customtrap           string `json:"customtrap,omitempty"`
-	Nextgenapiresource   string `json:"_nextgenapiresource,omitempty"`
-	Partitionnameintrap  string `json:"partitionnameintrap,omitempty"`
-	Severityinfointrap   string `json:"severityinfointrap,omitempty"`
-	Snmpset              string `json:"snmpset,omitempty"`
-	Snmptraplogging      string `json:"snmptraplogging,omitempty"`
-	Snmptraplogginglevel string `json:"snmptraplogginglevel,omitempty"`
+type SNMPOption struct {
+	CustomTrap           string `json:"customtrap,omitempty"`
+	NextGenAPIResource   string `json:"_nextgenapiresource,omitempty"`
+	PartitionNameInTrap  string `json:"partitionnameintrap,omitempty"`
+	SeverityInfoInTrap   string `json:"severityinfointrap,omitempty"`
+	SNMPSet              string `json:"snmpset,omitempty"`
+	SNMPTrapLogging      string `json:"snmptraplogging,omitempty"`
+	SNMPTrapLoggingLevel string `json:"snmptraplogginglevel,omitempty"`
 }
 
-type Snmpengineid struct {
+type SNMPEngineID struct {
 	Count              float64 `json:"__count,omitempty"`
-	Defaultengineid    string  `json:"defaultengineid,omitempty"`
-	Engineid           string  `json:"engineid,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Ownernode          int     `json:"ownernode,omitempty"`
+	DefaultEngineID    string  `json:"defaultengineid,omitempty"`
+	EngineID           string  `json:"engineid,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	OwnerNode          int     `json:"ownernode,omitempty"`
 }
 
-type Snmpmib struct {
+type SNMPMIB struct {
 	Contact            string  `json:"contact,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Customid           string  `json:"customid,omitempty"`
+	CustomID           string  `json:"customid,omitempty"`
 	Location           string  `json:"location,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Ownernode          int     `json:"ownernode,omitempty"`
-	Sysdesc            string  `json:"sysdesc,omitempty"`
-	Sysoid             string  `json:"sysoid,omitempty"`
-	Sysservices        int     `json:"sysservices,omitempty"`
-	Sysuptime          int     `json:"sysuptime,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	OwnerNode          int     `json:"ownernode,omitempty"`
+	SysDesc            string  `json:"sysdesc,omitempty"`
+	SysOID             string  `json:"sysoid,omitempty"`
+	SysServices        int     `json:"sysservices,omitempty"`
+	SysUptime          int     `json:"sysuptime,omitempty"`
 }
 
-type Snmpcommunity struct {
-	Communityname      string  `json:"communityname,omitempty"`
+type SNMPCommunity struct {
+	CommunityName      string  `json:"communityname,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Permissions        string  `json:"permissions,omitempty"`
 }
 
-type SnmptrapBinding struct {
-	SnmptrapSnmpuserBinding []interface{} `json:"snmptrap_snmpuser_binding,omitempty"`
-	Td                      int           `json:"td,omitempty"`
-	Trapclass               string        `json:"trapclass,omitempty"`
-	Trapdestination         string        `json:"trapdestination,omitempty"`
+type SNMPTrapBinding struct {
+	SNMPTrapSNMPUserBinding []interface{} `json:"snmptrap_snmpuser_binding,omitempty"`
+	TD                      int           `json:"td,omitempty"`
+	TrapClass               string        `json:"trapclass,omitempty"`
+	TrapDestination         string        `json:"trapdestination,omitempty"`
 	Version                 string        `json:"version,omitempty"`
 }
 
-type Snmpuser struct {
-	Authpasswd         string  `json:"authpasswd,omitempty"`
-	Authtype           string  `json:"authtype,omitempty"`
+type SNMPUser struct {
+	AuthPasswd         string  `json:"authpasswd,omitempty"`
+	AuthType           string  `json:"authtype,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Engineid           string  `json:"engineid,omitempty"`
+	EngineID           string  `json:"engineid,omitempty"`
 	Group              string  `json:"group,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Privpasswd         string  `json:"privpasswd,omitempty"`
-	Privtype           string  `json:"privtype,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	PrivPasswd         string  `json:"privpasswd,omitempty"`
+	PrivType           string  `json:"privtype,omitempty"`
 	Status             string  `json:"status,omitempty"`
-	Storagetype        string  `json:"storagetype,omitempty"`
+	StorageType        string  `json:"storagetype,omitempty"`
 }
 
-type Snmpgroup struct {
+type SNMPGroup struct {
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Readviewname       string  `json:"readviewname,omitempty"`
-	Securitylevel      string  `json:"securitylevel,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	ReadViewName       string  `json:"readviewname,omitempty"`
+	SecurityLevel      string  `json:"securitylevel,omitempty"`
 	Status             string  `json:"status,omitempty"`
-	Storagetype        string  `json:"storagetype,omitempty"`
+	StorageType        string  `json:"storagetype,omitempty"`
 }
 
-type Snmptrap struct {
-	Allpartitions      string  `json:"allpartitions,omitempty"`
-	Communityname      string  `json:"communityname,omitempty"`
+type SNMPTrap struct {
+	AllPartitions      string  `json:"allpartitions,omitempty"`
+	CommunityName      string  `json:"communityname,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Destport           int     `json:"destport,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	DestPort           int     `json:"destport,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Severity           string  `json:"severity,omitempty"`
-	Srcip              string  `json:"srcip,omitempty"`
-	Td                 int     `json:"td,omitempty"`
-	Trapclass          string  `json:"trapclass,omitempty"`
-	Trapdestination    string  `json:"trapdestination,omitempty"`
+	SrcIP              string  `json:"srcip,omitempty"`
+	TD                 int     `json:"td,omitempty"`
+	TrapClass          string  `json:"trapclass,omitempty"`
+	TrapDestination    string  `json:"trapdestination,omitempty"`
 	Version            string  `json:"version,omitempty"`
 }
 
-type SnmptrapSnmpuserBinding struct {
-	Securitylevel   string `json:"securitylevel,omitempty"`
-	Td              int    `json:"td,omitempty"`
-	Trapclass       string `json:"trapclass,omitempty"`
-	Trapdestination string `json:"trapdestination,omitempty"`
+type SNMPTrapSNMPUserBinding struct {
+	SecurityLevel   string `json:"securitylevel,omitempty"`
+	TD              int    `json:"td,omitempty"`
+	TrapClass       string `json:"trapclass,omitempty"`
+	TrapDestination string `json:"trapdestination,omitempty"`
 	Username        string `json:"username,omitempty"`
 	Version         string `json:"version,omitempty"`
 }
 
-type Snmpoid struct {
+type SNMPOID struct {
 	Count              float64 `json:"__count,omitempty"`
-	Entitytype         string  `json:"entitytype,omitempty"`
+	EntityType         string  `json:"entitytype,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Snmpoid            string  `json:"Snmpoid,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	SNMPOID            string  `json:"Snmpoid,omitempty"`
 }
 
-type Snmpview struct {
+type SNMPView struct {
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Status             string  `json:"status,omitempty"`
-	Storagetype        string  `json:"storagetype,omitempty"`
+	StorageType        string  `json:"storagetype,omitempty"`
 	Subtree            string  `json:"subtree,omitempty"`
 	TypeField          string  `json:"type,omitempty"`
 }

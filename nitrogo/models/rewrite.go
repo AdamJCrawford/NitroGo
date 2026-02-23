@@ -1,11 +1,11 @@
 package models
 
 // rewrite configuration structs
-type RewriteglobalBinding struct {
-	RewriteglobalRewritepolicyBinding []interface{} `json:"rewriteglobal_rewritepolicy_binding,omitempty"`
+type RewriteGlobalBinding struct {
+	RewriteGlobalRewritePolicyBinding []interface{} `json:"rewriteglobal_rewritepolicy_binding,omitempty"`
 }
 
-type Rewritepolicy struct {
+type RewritePolicy struct {
 	Action             string   `json:"action,omitempty"`
 	Builtin            []string `json:"builtin,omitempty"`
 	Comment            string   `json:"comment,omitempty"`
@@ -13,156 +13,156 @@ type Rewritepolicy struct {
 	Description        string   `json:"description,omitempty"`
 	Feature            string   `json:"feature,omitempty"`
 	Hits               int      `json:"hits,omitempty"`
-	Isdefault          bool     `json:"isdefault,omitempty"`
-	Logaction          string   `json:"logaction,omitempty"`
+	IsDefault          bool     `json:"isdefault,omitempty"`
+	LogAction          string   `json:"logaction,omitempty"`
 	Name               string   `json:"name,omitempty"`
-	Newname            string   `json:"newname,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	NewName            string   `json:"newname,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
 	Rule               string   `json:"rule,omitempty"`
-	Undefaction        string   `json:"undefaction,omitempty"`
-	Undefhits          int      `json:"undefhits,omitempty"`
+	UndefAction        string   `json:"undefaction,omitempty"`
+	UndefHits          int      `json:"undefhits,omitempty"`
 }
 
-type Rewriteaction struct {
+type RewriteAction struct {
 	Builtin            []string `json:"builtin,omitempty"`
 	Comment            string   `json:"comment,omitempty"`
 	Count              float64  `json:"__count,omitempty"`
 	Description        string   `json:"description,omitempty"`
 	Feature            string   `json:"feature,omitempty"`
 	Hits               int      `json:"hits,omitempty"`
-	Isdefault          bool     `json:"isdefault,omitempty"`
+	IsDefault          bool     `json:"isdefault,omitempty"`
 	Name               string   `json:"name,omitempty"`
-	Newname            string   `json:"newname,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
-	Referencecount     int      `json:"referencecount,omitempty"`
-	Refinesearch       string   `json:"refinesearch,omitempty"`
+	NewName            string   `json:"newname,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
+	ReferenceCount     int      `json:"referencecount,omitempty"`
+	RefineSearch       string   `json:"refinesearch,omitempty"`
 	Search             string   `json:"search,omitempty"`
-	Stringbuilderexpr  string   `json:"stringbuilderexpr,omitempty"`
+	StringBuilderExpr  string   `json:"stringbuilderexpr,omitempty"`
 	Target             string   `json:"target,omitempty"`
 	TypeField          string   `json:"type,omitempty"`
-	Undefhits          int      `json:"undefhits,omitempty"`
+	UndefHits          int      `json:"undefhits,omitempty"`
 }
 
-type RewritepolicyVpnvserverBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+type RewritePolicyVPNVServerBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type RewritepolicyLbvserverBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+type RewritePolicyLBVServerBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type RewritepolicylabelRewritepolicyBinding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type RewritePolicyLabelRewritePolicyBinding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	InvokeLabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+	InvokeLabelName        string `json:"invoke_labelname,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type RewritepolicylabelBinding struct {
-	Labelname                              string        `json:"labelname,omitempty"`
-	RewritepolicylabelPolicybindingBinding []interface{} `json:"rewritepolicylabel_policybinding_binding,omitempty"`
-	RewritepolicylabelRewritepolicyBinding []interface{} `json:"rewritepolicylabel_rewritepolicy_binding,omitempty"`
+type RewritePolicyLabelBinding struct {
+	LabelName                              string        `json:"labelname,omitempty"`
+	RewritePolicyLabelPolicyBindingBinding []interface{} `json:"rewritepolicylabel_policybinding_binding,omitempty"`
+	RewritePolicyLabelRewritePolicyBinding []interface{} `json:"rewritepolicylabel_rewritepolicy_binding,omitempty"`
 }
 
-type RewritepolicyCsvserverBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+type RewritePolicyCSVServerBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type RewritepolicyRewriteglobalBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+type RewritePolicyRewriteGlobalBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type RewritepolicyBinding struct {
+type RewritePolicyBinding struct {
 	Name                                   string        `json:"name,omitempty"`
-	RewritepolicyCsvserverBinding          []interface{} `json:"rewritepolicy_csvserver_binding,omitempty"`
-	RewritepolicyLbvserverBinding          []interface{} `json:"rewritepolicy_lbvserver_binding,omitempty"`
-	RewritepolicyRewriteglobalBinding      []interface{} `json:"rewritepolicy_rewriteglobal_binding,omitempty"`
-	RewritepolicyRewritepolicylabelBinding []interface{} `json:"rewritepolicy_rewritepolicylabel_binding,omitempty"`
-	RewritepolicyVpnvserverBinding         []interface{} `json:"rewritepolicy_vpnvserver_binding,omitempty"`
+	RewritePolicyCSVServerBinding          []interface{} `json:"rewritepolicy_csvserver_binding,omitempty"`
+	RewritePolicyLBVServerBinding          []interface{} `json:"rewritepolicy_lbvserver_binding,omitempty"`
+	RewritePolicyRewriteGlobalBinding      []interface{} `json:"rewritepolicy_rewriteglobal_binding,omitempty"`
+	RewritePolicyRewritePolicyLabelBinding []interface{} `json:"rewritepolicy_rewritepolicylabel_binding,omitempty"`
+	RewritePolicyVPNVServerBinding         []interface{} `json:"rewritepolicy_vpnvserver_binding,omitempty"`
 }
 
-type Rewriteparam struct {
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+type RewriteParam struct {
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
 	Timeout            int    `json:"timeout,omitempty"`
-	Undefaction        string `json:"undefaction,omitempty"`
+	UndefAction        string `json:"undefaction,omitempty"`
 }
 
-type Rewritepolicylabel struct {
+type RewritePolicyLabel struct {
 	Builtin                []string `json:"builtin,omitempty"`
 	Comment                string   `json:"comment,omitempty"`
 	Count                  float64  `json:"__count,omitempty"`
 	Description            string   `json:"description,omitempty"`
 	Feature                string   `json:"feature,omitempty"`
-	Flowtype               int      `json:"flowtype,omitempty"`
-	Gotopriorityexpression string   `json:"gotopriorityexpression,omitempty"`
+	FlowType               int      `json:"flowtype,omitempty"`
+	GotoPriorityExpression string   `json:"gotopriorityexpression,omitempty"`
 	Hits                   int      `json:"hits,omitempty"`
-	InvokeLabelname        string   `json:"invoke_labelname,omitempty"`
-	Isdefault              bool     `json:"isdefault,omitempty"`
-	Labelname              string   `json:"labelname,omitempty"`
-	Labeltype              string   `json:"labeltype,omitempty"`
-	Newname                string   `json:"newname,omitempty"`
-	Nextgenapiresource     string   `json:"_nextgenapiresource,omitempty"`
-	Numpol                 int      `json:"numpol,omitempty"`
+	InvokeLabelName        string   `json:"invoke_labelname,omitempty"`
+	IsDefault              bool     `json:"isdefault,omitempty"`
+	LabelName              string   `json:"labelname,omitempty"`
+	LabelType              string   `json:"labeltype,omitempty"`
+	NewName                string   `json:"newname,omitempty"`
+	NextGenAPIResource     string   `json:"_nextgenapiresource,omitempty"`
+	NumPol                 int      `json:"numpol,omitempty"`
 	Priority               int      `json:"priority,omitempty"`
 	Transform              string   `json:"transform,omitempty"`
 }
 
-type RewritepolicyRewritepolicylabelBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+type RewritePolicyRewritePolicyLabelBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type RewriteglobalRewritepolicyBinding struct {
-	Flowtype               int    `json:"flowtype,omitempty"`
-	Globalbindtype         string `json:"globalbindtype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type RewriteGlobalRewritePolicyBinding struct {
+	FlowType               int    `json:"flowtype,omitempty"`
+	GlobalBindType         string `json:"globalbindtype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Numpol                 int    `json:"numpol,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	NumPol                 int    `json:"numpol,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 }
 
-type RewritepolicylabelPolicybindingBinding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type RewritePolicyLabelPolicyBindingBinding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	InvokeLabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+	InvokeLabelName        string `json:"invoke_labelname,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }

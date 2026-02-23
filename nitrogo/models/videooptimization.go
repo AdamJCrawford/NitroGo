@@ -1,234 +1,234 @@
 package models
 
 // videooptimization configuration structs
-type VideooptimizationglobalpacingBinding struct {
-	VideooptimizationglobalpacingVideooptimizationpacingpolicyBinding []interface{} `json:"videooptimizationglobalpacing_videooptimizationpacingpolicy_binding,omitempty"`
+type VideoOptimizationGlobalPacingBinding struct {
+	VideoOptimizationGlobalPacingVideoOptimizationPacingPolicyBinding []interface{} `json:"videooptimizationglobalpacing_videooptimizationpacingpolicy_binding,omitempty"`
 }
 
-type Videooptimizationparameter struct {
-	Nextgenapiresource       string  `json:"_nextgenapiresource,omitempty"`
-	Quicpacingrate           int     `json:"quicpacingrate,omitempty"`
-	Randomsamplingpercentage float64 `json:"randomsamplingpercentage,omitempty"`
+type VideoOptimizationParameter struct {
+	NextGenAPIResource       string  `json:"_nextgenapiresource,omitempty"`
+	QUICPacingRate           int     `json:"quicpacingrate,omitempty"`
+	RandomSamplingPercentage float64 `json:"randomsamplingpercentage,omitempty"`
 }
 
-type VideooptimizationpacingpolicylabelBinding struct {
-	Labelname                                                              string        `json:"labelname,omitempty"`
-	VideooptimizationpacingpolicylabelPolicybindingBinding                 []interface{} `json:"videooptimizationpacingpolicylabel_policybinding_binding,omitempty"`
-	VideooptimizationpacingpolicylabelVideooptimizationpacingpolicyBinding []interface{} `json:"videooptimizationpacingpolicylabel_videooptimizationpacingpolicy_binding,omitempty"`
+type VideoOptimizationPacingPolicyLabelBinding struct {
+	LabelName                                                              string        `json:"labelname,omitempty"`
+	VideoOptimizationPacingPolicyLabelPolicyBindingBinding                 []interface{} `json:"videooptimizationpacingpolicylabel_policybinding_binding,omitempty"`
+	VideoOptimizationPacingPolicyLabelVideoOptimizationPacingPolicyBinding []interface{} `json:"videooptimizationpacingpolicylabel_videooptimizationpacingpolicy_binding,omitempty"`
 }
 
-type Videooptimizationpacingaction struct {
+type VideoOptimizationPacingAction struct {
 	Builtin            []string `json:"builtin,omitempty"`
 	Comment            string   `json:"comment,omitempty"`
 	Count              float64  `json:"__count,omitempty"`
 	Feature            string   `json:"feature,omitempty"`
 	Hits               int      `json:"hits,omitempty"`
 	Name               string   `json:"name,omitempty"`
-	Newname            string   `json:"newname,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	NewName            string   `json:"newname,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
 	Rate               int      `json:"rate,omitempty"`
-	Referencecount     int      `json:"referencecount,omitempty"`
-	Undefhits          int      `json:"undefhits,omitempty"`
+	ReferenceCount     int      `json:"referencecount,omitempty"`
+	UndefHits          int      `json:"undefhits,omitempty"`
 }
 
-type Videooptimizationdetectionpolicylabel struct {
+type VideoOptimizationDetectionPolicyLabel struct {
 	Comment                string  `json:"comment,omitempty"`
 	Count                  float64 `json:"__count,omitempty"`
-	Gotopriorityexpression string  `json:"gotopriorityexpression,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
 	Hits                   int     `json:"hits,omitempty"`
-	InvokeLabelname        string  `json:"invoke_labelname,omitempty"`
-	Labelname              string  `json:"labelname,omitempty"`
-	Labeltype              string  `json:"labeltype,omitempty"`
-	Newname                string  `json:"newname,omitempty"`
-	Nextgenapiresource     string  `json:"_nextgenapiresource,omitempty"`
-	Numpol                 int     `json:"numpol,omitempty"`
-	Policylabeltype        string  `json:"policylabeltype,omitempty"`
+	InvokeLabelName        string  `json:"invoke_labelname,omitempty"`
+	LabelName              string  `json:"labelname,omitempty"`
+	LabelType              string  `json:"labeltype,omitempty"`
+	NewName                string  `json:"newname,omitempty"`
+	NextGenAPIResource     string  `json:"_nextgenapiresource,omitempty"`
+	NumPol                 int     `json:"numpol,omitempty"`
+	PolicyLabelType        string  `json:"policylabeltype,omitempty"`
 	Priority               int     `json:"priority,omitempty"`
 }
 
-type VideooptimizationglobaldetectionVideooptimizationdetectionpolicyBinding struct {
-	Globalbindtype         string `json:"globalbindtype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type VideoOptimizationGlobalDetectionVideoOptimizationDetectionPolicyBinding struct {
+	GlobalBindType         string `json:"globalbindtype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Numpol                 int    `json:"numpol,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	NumPol                 int    `json:"numpol,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 }
 
-type VideooptimizationdetectionpolicyLbvserverBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+type VideoOptimizationDetectionPolicyLBVServerBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type VideooptimizationpacingpolicyLbvserverBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+type VideoOptimizationPacingPolicyLBVServerBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type Videooptimizationpacingpolicy struct {
+type VideoOptimizationPacingPolicy struct {
 	Action             string   `json:"action,omitempty"`
 	Builtin            []string `json:"builtin,omitempty"`
 	Comment            string   `json:"comment,omitempty"`
 	Count              float64  `json:"__count,omitempty"`
 	Feature            string   `json:"feature,omitempty"`
 	Hits               int      `json:"hits,omitempty"`
-	Logaction          string   `json:"logaction,omitempty"`
+	LogAction          string   `json:"logaction,omitempty"`
 	Name               string   `json:"name,omitempty"`
-	Newname            string   `json:"newname,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	NewName            string   `json:"newname,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
 	Rule               string   `json:"rule,omitempty"`
-	Undefaction        string   `json:"undefaction,omitempty"`
-	Undefhits          int      `json:"undefhits,omitempty"`
+	UndefAction        string   `json:"undefaction,omitempty"`
+	UndefHits          int      `json:"undefhits,omitempty"`
 }
 
-type VideooptimizationdetectionpolicylabelPolicybindingBinding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type VideoOptimizationDetectionPolicyLabelPolicyBindingBinding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	InvokeLabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+	InvokeLabelName        string `json:"invoke_labelname,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type VideooptimizationdetectionpolicyBinding struct {
+type VideoOptimizationDetectionPolicyBinding struct {
 	Name                                                                    string        `json:"name,omitempty"`
-	VideooptimizationdetectionpolicyLbvserverBinding                        []interface{} `json:"videooptimizationdetectionpolicy_lbvserver_binding,omitempty"`
-	VideooptimizationdetectionpolicyVideooptimizationglobaldetectionBinding []interface{} `json:"videooptimizationdetectionpolicy_videooptimizationglobaldetection_binding,omitempty"`
+	VideoOptimizationDetectionPolicyLBVServerBinding                        []interface{} `json:"videooptimizationdetectionpolicy_lbvserver_binding,omitempty"`
+	VideoOptimizationDetectionPolicyVideoOptimizationGlobalDetectionBinding []interface{} `json:"videooptimizationdetectionpolicy_videooptimizationglobaldetection_binding,omitempty"`
 }
 
-type VideooptimizationglobalpacingVideooptimizationpacingpolicyBinding struct {
-	Globalbindtype         string `json:"globalbindtype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type VideoOptimizationGlobalPacingVideoOptimizationPacingPolicyBinding struct {
+	GlobalBindType         string `json:"globalbindtype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Numpol                 int    `json:"numpol,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	NumPol                 int    `json:"numpol,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 }
 
-type VideooptimizationpacingpolicyBinding struct {
+type VideoOptimizationPacingPolicyBinding struct {
 	Name                                                              string        `json:"name,omitempty"`
-	VideooptimizationpacingpolicyLbvserverBinding                     []interface{} `json:"videooptimizationpacingpolicy_lbvserver_binding,omitempty"`
-	VideooptimizationpacingpolicyVideooptimizationglobalpacingBinding []interface{} `json:"videooptimizationpacingpolicy_videooptimizationglobalpacing_binding,omitempty"`
+	VideoOptimizationPacingPolicyLBVServerBinding                     []interface{} `json:"videooptimizationpacingpolicy_lbvserver_binding,omitempty"`
+	VideoOptimizationPacingPolicyVideoOptimizationGlobalPacingBinding []interface{} `json:"videooptimizationpacingpolicy_videooptimizationglobalpacing_binding,omitempty"`
 }
 
-type VideooptimizationdetectionpolicylabelBinding struct {
-	Labelname                                                                    string        `json:"labelname,omitempty"`
-	VideooptimizationdetectionpolicylabelPolicybindingBinding                    []interface{} `json:"videooptimizationdetectionpolicylabel_policybinding_binding,omitempty"`
-	VideooptimizationdetectionpolicylabelVideooptimizationdetectionpolicyBinding []interface{} `json:"videooptimizationdetectionpolicylabel_videooptimizationdetectionpolicy_binding,omitempty"`
+type VideoOptimizationDetectionPolicyLabelBinding struct {
+	LabelName                                                                    string        `json:"labelname,omitempty"`
+	VideoOptimizationDetectionPolicyLabelPolicyBindingBinding                    []interface{} `json:"videooptimizationdetectionpolicylabel_policybinding_binding,omitempty"`
+	VideoOptimizationDetectionPolicyLabelVideoOptimizationDetectionPolicyBinding []interface{} `json:"videooptimizationdetectionpolicylabel_videooptimizationdetectionpolicy_binding,omitempty"`
 }
 
-type VideooptimizationglobaldetectionBinding struct {
-	VideooptimizationglobaldetectionVideooptimizationdetectionpolicyBinding []interface{} `json:"videooptimizationglobaldetection_videooptimizationdetectionpolicy_binding,omitempty"`
+type VideoOptimizationGlobalDetectionBinding struct {
+	VideoOptimizationGlobalDetectionVideoOptimizationDetectionPolicyBinding []interface{} `json:"videooptimizationglobaldetection_videooptimizationdetectionpolicy_binding,omitempty"`
 }
 
-type VideooptimizationpacingpolicylabelPolicybindingBinding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type VideoOptimizationPacingPolicyLabelPolicyBindingBinding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	InvokeLabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+	InvokeLabelName        string `json:"invoke_labelname,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type VideooptimizationdetectionpolicylabelVideooptimizationdetectionpolicyBinding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type VideoOptimizationDetectionPolicyLabelVideoOptimizationDetectionPolicyBinding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	InvokeLabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+	InvokeLabelName        string `json:"invoke_labelname,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type Videooptimizationdetectionaction struct {
+type VideoOptimizationDetectionAction struct {
 	Builtin            []string `json:"builtin,omitempty"`
 	Comment            string   `json:"comment,omitempty"`
 	Count              float64  `json:"__count,omitempty"`
 	Feature            string   `json:"feature,omitempty"`
 	Hits               int      `json:"hits,omitempty"`
 	Name               string   `json:"name,omitempty"`
-	Newname            string   `json:"newname,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
-	Referencecount     int      `json:"referencecount,omitempty"`
+	NewName            string   `json:"newname,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
+	ReferenceCount     int      `json:"referencecount,omitempty"`
 	TypeField          string   `json:"type,omitempty"`
-	Undefhits          int      `json:"undefhits,omitempty"`
+	UndefHits          int      `json:"undefhits,omitempty"`
 }
 
-type VideooptimizationpacingpolicyVideooptimizationglobalpacingBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+type VideoOptimizationPacingPolicyVideoOptimizationGlobalPacingBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type VideooptimizationpacingpolicylabelVideooptimizationpacingpolicyBinding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type VideoOptimizationPacingPolicyLabelVideoOptimizationPacingPolicyBinding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Invoke                 bool   `json:"invoke,omitempty"`
-	InvokeLabelname        string `json:"invoke_labelname,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+	InvokeLabelName        string `json:"invoke_labelname,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type Videooptimizationdetectionpolicy struct {
+type VideoOptimizationDetectionPolicy struct {
 	Action             string   `json:"action,omitempty"`
 	Builtin            []string `json:"builtin,omitempty"`
 	Comment            string   `json:"comment,omitempty"`
 	Count              float64  `json:"__count,omitempty"`
 	Feature            string   `json:"feature,omitempty"`
 	Hits               int      `json:"hits,omitempty"`
-	Logaction          string   `json:"logaction,omitempty"`
+	LogAction          string   `json:"logaction,omitempty"`
 	Name               string   `json:"name,omitempty"`
-	Newname            string   `json:"newname,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	NewName            string   `json:"newname,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
 	Rule               string   `json:"rule,omitempty"`
-	Undefaction        string   `json:"undefaction,omitempty"`
-	Undefhits          int      `json:"undefhits,omitempty"`
+	UndefAction        string   `json:"undefaction,omitempty"`
+	UndefHits          int      `json:"undefhits,omitempty"`
 }
 
-type Videooptimizationpacingpolicylabel struct {
+type VideoOptimizationPacingPolicyLabel struct {
 	Comment                string  `json:"comment,omitempty"`
 	Count                  float64 `json:"__count,omitempty"`
-	Gotopriorityexpression string  `json:"gotopriorityexpression,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
 	Hits                   int     `json:"hits,omitempty"`
-	InvokeLabelname        string  `json:"invoke_labelname,omitempty"`
-	Labelname              string  `json:"labelname,omitempty"`
-	Labeltype              string  `json:"labeltype,omitempty"`
-	Newname                string  `json:"newname,omitempty"`
-	Nextgenapiresource     string  `json:"_nextgenapiresource,omitempty"`
-	Numpol                 int     `json:"numpol,omitempty"`
-	Policylabeltype        string  `json:"policylabeltype,omitempty"`
+	InvokeLabelName        string  `json:"invoke_labelname,omitempty"`
+	LabelName              string  `json:"labelname,omitempty"`
+	LabelType              string  `json:"labeltype,omitempty"`
+	NewName                string  `json:"newname,omitempty"`
+	NextGenAPIResource     string  `json:"_nextgenapiresource,omitempty"`
+	NumPol                 int     `json:"numpol,omitempty"`
+	PolicyLabelType        string  `json:"policylabeltype,omitempty"`
 	Priority               int     `json:"priority,omitempty"`
 }
 
-type VideooptimizationdetectionpolicyVideooptimizationglobaldetectionBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+type VideoOptimizationDetectionPolicyVideoOptimizationGlobalDetectionBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }

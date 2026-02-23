@@ -1,11 +1,11 @@
 package models
 
 // quicbridge configuration structs
-type Quicbridgeprofile struct {
+type QUICBridgeProfile struct {
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Refcnt             int     `json:"refcnt,omitempty"`
-	Routingalgorithm   string  `json:"routingalgorithm,omitempty"`
-	Serveridlength     int     `json:"serveridlength,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	RefCnt             int     `json:"refcnt,omitempty"`
+	RoutingAlgorithm   string  `json:"routingalgorithm,omitempty"`
+	ServerIDLength     int     `json:"serveridlength,omitempty"`
 }

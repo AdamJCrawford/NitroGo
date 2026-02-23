@@ -1,373 +1,373 @@
 package models
 
 // audit configuration structs
-type Auditsyslogaction struct {
-	Acl                  string   `json:"acl,omitempty"`
-	Alg                  string   `json:"alg,omitempty"`
-	Appflowexport        string   `json:"appflowexport,omitempty"`
+type AuditSyslogAction struct {
+	ACL                  string   `json:"acl,omitempty"`
+	ALG                  string   `json:"alg,omitempty"`
+	AppFlowExport        string   `json:"appflowexport,omitempty"`
 	Builtin              []string `json:"builtin,omitempty"`
-	Contentinspectionlog string   `json:"contentinspectionlog,omitempty"`
+	ContentInspectionLog string   `json:"contentinspectionlog,omitempty"`
 	Count                float64  `json:"__count,omitempty"`
-	Dateformat           string   `json:"dateformat,omitempty"`
-	Dns                  string   `json:"dns,omitempty"`
-	Domainresolvenow     bool     `json:"domainresolvenow,omitempty"`
-	Domainresolveretry   int      `json:"domainresolveretry,omitempty"`
+	DateFormat           string   `json:"dateformat,omitempty"`
+	DNS                  string   `json:"dns,omitempty"`
+	DomainResolveNow     bool     `json:"domainresolvenow,omitempty"`
+	DomainResolveRetry   int      `json:"domainresolveretry,omitempty"`
 	Feature              string   `json:"feature,omitempty"`
-	Httpauthtoken        string   `json:"httpauthtoken,omitempty"`
-	Httpendpointurl      string   `json:"httpendpointurl,omitempty"`
-	Ip                   string   `json:"ip,omitempty"`
-	Lbvservername        string   `json:"lbvservername,omitempty"`
-	Logfacility          string   `json:"logfacility,omitempty"`
-	Loglevel             []string `json:"loglevel,omitempty"`
-	Lsn                  string   `json:"lsn,omitempty"`
-	Managementlog        []string `json:"managementlog,omitempty"`
-	Maxlogdatasizetohold int      `json:"maxlogdatasizetohold,omitempty"`
-	Mgmtloglevel         []string `json:"mgmtloglevel,omitempty"`
+	HTTPAuthToken        string   `json:"httpauthtoken,omitempty"`
+	HTTPEndpointURL      string   `json:"httpendpointurl,omitempty"`
+	IP                   string   `json:"ip,omitempty"`
+	LBVServerName        string   `json:"lbvservername,omitempty"`
+	LogFacility          string   `json:"logfacility,omitempty"`
+	LogLevel             []string `json:"loglevel,omitempty"`
+	LSN                  string   `json:"lsn,omitempty"`
+	ManagementLog        []string `json:"managementlog,omitempty"`
+	MaxLogDataSizeToHold int      `json:"maxlogdatasizetohold,omitempty"`
+	MgmtLogLevel         []string `json:"mgmtloglevel,omitempty"`
 	Name                 string   `json:"name,omitempty"`
-	Netprofile           string   `json:"netprofile,omitempty"`
-	Nextgenapiresource   string   `json:"_nextgenapiresource,omitempty"`
-	Protocolviolations   string   `json:"protocolviolations,omitempty"`
-	Serverdomainname     string   `json:"serverdomainname,omitempty"`
-	Serverip             string   `json:"serverip,omitempty"`
-	Serverport           int      `json:"serverport,omitempty"`
-	Sslinterception      string   `json:"sslinterception,omitempty"`
-	Streamanalytics      string   `json:"streamanalytics,omitempty"`
-	Subscriberlog        string   `json:"subscriberlog,omitempty"`
-	Syslogcompliance     string   `json:"syslogcompliance,omitempty"`
-	Tcp                  string   `json:"tcp,omitempty"`
-	Tcpprofilename       string   `json:"tcpprofilename,omitempty"`
-	Timezone             string   `json:"timezone,omitempty"`
+	NetProfile           string   `json:"netprofile,omitempty"`
+	NextGenAPIResource   string   `json:"_nextgenapiresource,omitempty"`
+	ProtocolViolations   string   `json:"protocolviolations,omitempty"`
+	ServerDomainName     string   `json:"serverdomainname,omitempty"`
+	ServerIP             string   `json:"serverip,omitempty"`
+	ServerPort           int      `json:"serverport,omitempty"`
+	SSLInterception      string   `json:"sslinterception,omitempty"`
+	StreamAnalytics      string   `json:"streamanalytics,omitempty"`
+	SubscriberLog        string   `json:"subscriberlog,omitempty"`
+	SyslogCompliance     string   `json:"syslogcompliance,omitempty"`
+	TCP                  string   `json:"tcp,omitempty"`
+	TCPProfileName       string   `json:"tcpprofilename,omitempty"`
+	TimeZone             string   `json:"timezone,omitempty"`
 	Transport            string   `json:"transport,omitempty"`
-	Urlfiltering         string   `json:"urlfiltering,omitempty"`
-	Userdefinedauditlog  string   `json:"userdefinedauditlog,omitempty"`
+	URLFiltering         string   `json:"urlfiltering,omitempty"`
+	UserDefinedAuditLog  string   `json:"userdefinedauditlog,omitempty"`
 }
 
-type Auditsyslogparams struct {
-	Acl                  string   `json:"acl,omitempty"`
-	Alg                  string   `json:"alg,omitempty"`
-	Appflowexport        string   `json:"appflowexport,omitempty"`
+type AuditSyslogParams struct {
+	ACL                  string   `json:"acl,omitempty"`
+	ALG                  string   `json:"alg,omitempty"`
+	AppFlowExport        string   `json:"appflowexport,omitempty"`
 	Builtin              []string `json:"builtin,omitempty"`
-	Contentinspectionlog string   `json:"contentinspectionlog,omitempty"`
-	Dateformat           string   `json:"dateformat,omitempty"`
-	Dns                  string   `json:"dns,omitempty"`
+	ContentInspectionLog string   `json:"contentinspectionlog,omitempty"`
+	DateFormat           string   `json:"dateformat,omitempty"`
+	DNS                  string   `json:"dns,omitempty"`
 	Feature              string   `json:"feature,omitempty"`
-	Logfacility          string   `json:"logfacility,omitempty"`
-	Loglevel             []string `json:"loglevel,omitempty"`
-	Lsn                  string   `json:"lsn,omitempty"`
-	Nextgenapiresource   string   `json:"_nextgenapiresource,omitempty"`
-	Protocolviolations   string   `json:"protocolviolations,omitempty"`
-	Serverip             string   `json:"serverip,omitempty"`
-	Serverport           int      `json:"serverport,omitempty"`
-	Sslinterception      string   `json:"sslinterception,omitempty"`
-	Streamanalytics      string   `json:"streamanalytics,omitempty"`
-	Subscriberlog        string   `json:"subscriberlog,omitempty"`
-	Tcp                  string   `json:"tcp,omitempty"`
-	Timezone             string   `json:"timezone,omitempty"`
-	Urlfiltering         string   `json:"urlfiltering,omitempty"`
-	Userdefinedauditlog  string   `json:"userdefinedauditlog,omitempty"`
+	LogFacility          string   `json:"logfacility,omitempty"`
+	LogLevel             []string `json:"loglevel,omitempty"`
+	LSN                  string   `json:"lsn,omitempty"`
+	NextGenAPIResource   string   `json:"_nextgenapiresource,omitempty"`
+	ProtocolViolations   string   `json:"protocolviolations,omitempty"`
+	ServerIP             string   `json:"serverip,omitempty"`
+	ServerPort           int      `json:"serverport,omitempty"`
+	SSLInterception      string   `json:"sslinterception,omitempty"`
+	StreamAnalytics      string   `json:"streamanalytics,omitempty"`
+	SubscriberLog        string   `json:"subscriberlog,omitempty"`
+	TCP                  string   `json:"tcp,omitempty"`
+	TimeZone             string   `json:"timezone,omitempty"`
+	URLFiltering         string   `json:"urlfiltering,omitempty"`
+	UserDefinedAuditLog  string   `json:"userdefinedauditlog,omitempty"`
 }
 
-type AuditsyslogpolicyVpnvserverBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditSyslogPolicyVPNVServerBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditnslogpolicyAuditnslogglobalBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditNSLogPolicyAuditNSLogGlobalBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditsyslogpolicyAaagroupBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditSyslogPolicyAAAGroupBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditsyslogpolicyRnatglobalBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditSyslogPolicyRNATGlobalBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditnslogpolicyVpnvserverBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditNSLogPolicyVPNVServerBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditnslogpolicyAuthenticationvserverBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditNSLogPolicyAuthenticationVServerBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditnslogpolicyVpnglobalBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditNSLogPolicyVPNGlobalBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditnslogpolicyTmglobalBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditNSLogPolicyTMGlobalBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditnslogpolicyLbvserverBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditNSLogPolicyLBVServerBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type Auditnslogaction struct {
-	Acl                  string   `json:"acl,omitempty"`
-	Alg                  string   `json:"alg,omitempty"`
-	Appflowexport        string   `json:"appflowexport,omitempty"`
+type AuditNSLogAction struct {
+	ACL                  string   `json:"acl,omitempty"`
+	ALG                  string   `json:"alg,omitempty"`
+	AppFlowExport        string   `json:"appflowexport,omitempty"`
 	Builtin              []string `json:"builtin,omitempty"`
-	Contentinspectionlog string   `json:"contentinspectionlog,omitempty"`
+	ContentInspectionLog string   `json:"contentinspectionlog,omitempty"`
 	Count                float64  `json:"__count,omitempty"`
-	Dateformat           string   `json:"dateformat,omitempty"`
-	Domainresolvenow     bool     `json:"domainresolvenow,omitempty"`
-	Domainresolveretry   int      `json:"domainresolveretry,omitempty"`
+	DateFormat           string   `json:"dateformat,omitempty"`
+	DomainResolveNow     bool     `json:"domainresolvenow,omitempty"`
+	DomainResolveRetry   int      `json:"domainresolveretry,omitempty"`
 	Feature              string   `json:"feature,omitempty"`
-	Ip                   string   `json:"ip,omitempty"`
-	Logfacility          string   `json:"logfacility,omitempty"`
-	Loglevel             []string `json:"loglevel,omitempty"`
-	Lsn                  string   `json:"lsn,omitempty"`
+	IP                   string   `json:"ip,omitempty"`
+	LogFacility          string   `json:"logfacility,omitempty"`
+	LogLevel             []string `json:"loglevel,omitempty"`
+	LSN                  string   `json:"lsn,omitempty"`
 	Name                 string   `json:"name,omitempty"`
-	Nextgenapiresource   string   `json:"_nextgenapiresource,omitempty"`
-	Protocolviolations   string   `json:"protocolviolations,omitempty"`
-	Serverdomainname     string   `json:"serverdomainname,omitempty"`
-	Serverip             string   `json:"serverip,omitempty"`
-	Serverport           int      `json:"serverport,omitempty"`
-	Sslinterception      string   `json:"sslinterception,omitempty"`
-	Subscriberlog        string   `json:"subscriberlog,omitempty"`
-	Tcp                  string   `json:"tcp,omitempty"`
-	Timezone             string   `json:"timezone,omitempty"`
-	Urlfiltering         string   `json:"urlfiltering,omitempty"`
-	Userdefinedauditlog  string   `json:"userdefinedauditlog,omitempty"`
+	NextGenAPIResource   string   `json:"_nextgenapiresource,omitempty"`
+	ProtocolViolations   string   `json:"protocolviolations,omitempty"`
+	ServerDomainName     string   `json:"serverdomainname,omitempty"`
+	ServerIP             string   `json:"serverip,omitempty"`
+	ServerPort           int      `json:"serverport,omitempty"`
+	SSLInterception      string   `json:"sslinterception,omitempty"`
+	SubscriberLog        string   `json:"subscriberlog,omitempty"`
+	TCP                  string   `json:"tcp,omitempty"`
+	TimeZone             string   `json:"timezone,omitempty"`
+	URLFiltering         string   `json:"urlfiltering,omitempty"`
+	UserDefinedAuditLog  string   `json:"userdefinedauditlog,omitempty"`
 }
 
-type Auditsyslogpolicy struct {
+type AuditSyslogPolicy struct {
 	Action             string   `json:"action,omitempty"`
 	Builtin            []string `json:"builtin,omitempty"`
 	Count              float64  `json:"__count,omitempty"`
-	Expressiontype     string   `json:"expressiontype,omitempty"`
+	ExpressionType     string   `json:"expressiontype,omitempty"`
 	Feature            string   `json:"feature,omitempty"`
 	Name               string   `json:"name,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
 	Rule               string   `json:"rule,omitempty"`
 }
 
-type Auditmessageaction struct {
-	Bypasssafetycheck  string  `json:"bypasssafetycheck,omitempty"`
+type AuditMessageAction struct {
+	BypassSafetyCheck  string  `json:"bypasssafetycheck,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
 	Hits               int     `json:"hits,omitempty"`
-	Loglevel           string  `json:"loglevel,omitempty"`
-	Loglevel1          string  `json:"loglevel1,omitempty"`
-	Logtonewnslog      string  `json:"logtonewnslog,omitempty"`
+	LogLevel           string  `json:"loglevel,omitempty"`
+	LogLevel1          string  `json:"loglevel1,omitempty"`
+	LogToNewNSLog      string  `json:"logtonewnslog,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Referencecount     int     `json:"referencecount,omitempty"`
-	Stringbuilderexpr  string  `json:"stringbuilderexpr,omitempty"`
-	Undefhits          int     `json:"undefhits,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	ReferenceCount     int     `json:"referencecount,omitempty"`
+	StringBuilderExpr  string  `json:"stringbuilderexpr,omitempty"`
+	UndefHits          int     `json:"undefhits,omitempty"`
 }
 
-type AuditsyslogpolicyVpnglobalBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditSyslogPolicyVPNGlobalBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type Auditmessages struct {
+type AuditMessages struct {
 	Count              float64  `json:"__count,omitempty"`
-	Loglevel           []string `json:"loglevel,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
-	Numofmesgs         int      `json:"numofmesgs,omitempty"`
+	LogLevel           []string `json:"loglevel,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
+	NumOfMesgs         int      `json:"numofmesgs,omitempty"`
 	Value              string   `json:"value,omitempty"`
 }
 
-type Auditnslogpolicy struct {
+type AuditNSLogPolicy struct {
 	Action             string   `json:"action,omitempty"`
 	Builtin            []string `json:"builtin,omitempty"`
 	Count              float64  `json:"__count,omitempty"`
-	Expressiontype     string   `json:"expressiontype,omitempty"`
+	ExpressionType     string   `json:"expressiontype,omitempty"`
 	Feature            string   `json:"feature,omitempty"`
 	Name               string   `json:"name,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
 	Rule               string   `json:"rule,omitempty"`
 }
 
-type AuditnslogglobalAuditnslogpolicyBinding struct {
+type AuditNSLogGlobalAuditNSLogPolicyBinding struct {
 	Builtin        []string `json:"builtin,omitempty"`
-	Globalbindtype string   `json:"globalbindtype,omitempty"`
-	Numpol         int      `json:"numpol,omitempty"`
-	Policyname     string   `json:"policyname,omitempty"`
+	GlobalBindType string   `json:"globalbindtype,omitempty"`
+	NumPol         int      `json:"numpol,omitempty"`
+	PolicyName     string   `json:"policyname,omitempty"`
 	Priority       int      `json:"priority,omitempty"`
 }
 
-type AuditnslogpolicySystemglobalBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditNSLogPolicySystemGlobalBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditsyslogpolicySystemglobalBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditSyslogPolicySystemGlobalBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditnslogpolicyAppfwglobalBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditNSLogPolicyAppFWGlobalBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditsyslogpolicyTmglobalBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditSyslogPolicyTMGlobalBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditnslogpolicyBinding struct {
-	AuditnslogpolicyAaagroupBinding              []interface{} `json:"auditnslogpolicy_aaagroup_binding,omitempty"`
-	AuditnslogpolicyAaauserBinding               []interface{} `json:"auditnslogpolicy_aaauser_binding,omitempty"`
-	AuditnslogpolicyAppfwglobalBinding           []interface{} `json:"auditnslogpolicy_appfwglobal_binding,omitempty"`
-	AuditnslogpolicyAuditnslogglobalBinding      []interface{} `json:"auditnslogpolicy_auditnslogglobal_binding,omitempty"`
-	AuditnslogpolicyAuthenticationvserverBinding []interface{} `json:"auditnslogpolicy_authenticationvserver_binding,omitempty"`
-	AuditnslogpolicyCsvserverBinding             []interface{} `json:"auditnslogpolicy_csvserver_binding,omitempty"`
-	AuditnslogpolicyLbvserverBinding             []interface{} `json:"auditnslogpolicy_lbvserver_binding,omitempty"`
-	AuditnslogpolicySystemglobalBinding          []interface{} `json:"auditnslogpolicy_systemglobal_binding,omitempty"`
-	AuditnslogpolicyTmglobalBinding              []interface{} `json:"auditnslogpolicy_tmglobal_binding,omitempty"`
-	AuditnslogpolicyVpnglobalBinding             []interface{} `json:"auditnslogpolicy_vpnglobal_binding,omitempty"`
-	AuditnslogpolicyVpnvserverBinding            []interface{} `json:"auditnslogpolicy_vpnvserver_binding,omitempty"`
+type AuditNSLogPolicyBinding struct {
+	AuditNSLogPolicyAAAGroupBinding              []interface{} `json:"auditnslogpolicy_aaagroup_binding,omitempty"`
+	AuditNSLogPolicyAAAUserBinding               []interface{} `json:"auditnslogpolicy_aaauser_binding,omitempty"`
+	AuditNSLogPolicyAppFWGlobalBinding           []interface{} `json:"auditnslogpolicy_appfwglobal_binding,omitempty"`
+	AuditNSLogPolicyAuditNSLogGlobalBinding      []interface{} `json:"auditnslogpolicy_auditnslogglobal_binding,omitempty"`
+	AuditNSLogPolicyAuthenticationVServerBinding []interface{} `json:"auditnslogpolicy_authenticationvserver_binding,omitempty"`
+	AuditNSLogPolicyCSVServerBinding             []interface{} `json:"auditnslogpolicy_csvserver_binding,omitempty"`
+	AuditNSLogPolicyLBVServerBinding             []interface{} `json:"auditnslogpolicy_lbvserver_binding,omitempty"`
+	AuditNSLogPolicySystemGlobalBinding          []interface{} `json:"auditnslogpolicy_systemglobal_binding,omitempty"`
+	AuditNSLogPolicyTMGlobalBinding              []interface{} `json:"auditnslogpolicy_tmglobal_binding,omitempty"`
+	AuditNSLogPolicyVPNGlobalBinding             []interface{} `json:"auditnslogpolicy_vpnglobal_binding,omitempty"`
+	AuditNSLogPolicyVPNVServerBinding            []interface{} `json:"auditnslogpolicy_vpnvserver_binding,omitempty"`
 	Name                                         string        `json:"name,omitempty"`
 }
 
-type AuditsyslogpolicyBinding struct {
-	AuditsyslogpolicyAaagroupBinding              []interface{} `json:"auditsyslogpolicy_aaagroup_binding,omitempty"`
-	AuditsyslogpolicyAaauserBinding               []interface{} `json:"auditsyslogpolicy_aaauser_binding,omitempty"`
-	AuditsyslogpolicyAuditsyslogglobalBinding     []interface{} `json:"auditsyslogpolicy_auditsyslogglobal_binding,omitempty"`
-	AuditsyslogpolicyAuthenticationvserverBinding []interface{} `json:"auditsyslogpolicy_authenticationvserver_binding,omitempty"`
-	AuditsyslogpolicyCsvserverBinding             []interface{} `json:"auditsyslogpolicy_csvserver_binding,omitempty"`
-	AuditsyslogpolicyLbvserverBinding             []interface{} `json:"auditsyslogpolicy_lbvserver_binding,omitempty"`
-	AuditsyslogpolicyRnatglobalBinding            []interface{} `json:"auditsyslogpolicy_rnatglobal_binding,omitempty"`
-	AuditsyslogpolicySystemglobalBinding          []interface{} `json:"auditsyslogpolicy_systemglobal_binding,omitempty"`
-	AuditsyslogpolicyTmglobalBinding              []interface{} `json:"auditsyslogpolicy_tmglobal_binding,omitempty"`
-	AuditsyslogpolicyVpnglobalBinding             []interface{} `json:"auditsyslogpolicy_vpnglobal_binding,omitempty"`
-	AuditsyslogpolicyVpnvserverBinding            []interface{} `json:"auditsyslogpolicy_vpnvserver_binding,omitempty"`
+type AuditSyslogPolicyBinding struct {
+	AuditSyslogPolicyAAAGroupBinding              []interface{} `json:"auditsyslogpolicy_aaagroup_binding,omitempty"`
+	AuditSyslogPolicyAAAUserBinding               []interface{} `json:"auditsyslogpolicy_aaauser_binding,omitempty"`
+	AuditSyslogPolicyAuditSyslogGlobalBinding     []interface{} `json:"auditsyslogpolicy_auditsyslogglobal_binding,omitempty"`
+	AuditSyslogPolicyAuthenticationVServerBinding []interface{} `json:"auditsyslogpolicy_authenticationvserver_binding,omitempty"`
+	AuditSyslogPolicyCSVServerBinding             []interface{} `json:"auditsyslogpolicy_csvserver_binding,omitempty"`
+	AuditSyslogPolicyLBVServerBinding             []interface{} `json:"auditsyslogpolicy_lbvserver_binding,omitempty"`
+	AuditSyslogPolicyRNATGlobalBinding            []interface{} `json:"auditsyslogpolicy_rnatglobal_binding,omitempty"`
+	AuditSyslogPolicySystemGlobalBinding          []interface{} `json:"auditsyslogpolicy_systemglobal_binding,omitempty"`
+	AuditSyslogPolicyTMGlobalBinding              []interface{} `json:"auditsyslogpolicy_tmglobal_binding,omitempty"`
+	AuditSyslogPolicyVPNGlobalBinding             []interface{} `json:"auditsyslogpolicy_vpnglobal_binding,omitempty"`
+	AuditSyslogPolicyVPNVServerBinding            []interface{} `json:"auditsyslogpolicy_vpnvserver_binding,omitempty"`
 	Name                                          string        `json:"name,omitempty"`
 }
 
-type AuditsyslogglobalAuditsyslogpolicyBinding struct {
+type AuditSyslogGlobalAuditSyslogPolicyBinding struct {
 	Builtin        []string `json:"builtin,omitempty"`
 	Feature        string   `json:"feature,omitempty"`
-	Globalbindtype string   `json:"globalbindtype,omitempty"`
-	Numpol         int      `json:"numpol,omitempty"`
-	Policyname     string   `json:"policyname,omitempty"`
+	GlobalBindType string   `json:"globalbindtype,omitempty"`
+	NumPol         int      `json:"numpol,omitempty"`
+	PolicyName     string   `json:"policyname,omitempty"`
 	Priority       int      `json:"priority,omitempty"`
 }
 
-type AuditsyslogglobalBinding struct {
-	AuditsyslogglobalAuditsyslogpolicyBinding []interface{} `json:"auditsyslogglobal_auditsyslogpolicy_binding,omitempty"`
+type AuditSyslogGlobalBinding struct {
+	AuditSyslogGlobalAuditSyslogPolicyBinding []interface{} `json:"auditsyslogglobal_auditsyslogpolicy_binding,omitempty"`
 }
 
-type AuditsyslogpolicyCsvserverBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditSyslogPolicyCSVServerBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditnslogpolicyAaagroupBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditNSLogPolicyAAAGroupBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditsyslogpolicyLbvserverBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditSyslogPolicyLBVServerBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditnslogpolicyAaauserBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditNSLogPolicyAAAUserBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditsyslogpolicyAuditsyslogglobalBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditSyslogPolicyAuditSyslogGlobalBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type Auditnslogparams struct {
-	Acl                  string   `json:"acl,omitempty"`
-	Alg                  string   `json:"alg,omitempty"`
-	Appflowexport        string   `json:"appflowexport,omitempty"`
+type AuditNSLogParams struct {
+	ACL                  string   `json:"acl,omitempty"`
+	ALG                  string   `json:"alg,omitempty"`
+	AppFlowExport        string   `json:"appflowexport,omitempty"`
 	Builtin              []string `json:"builtin,omitempty"`
-	Contentinspectionlog string   `json:"contentinspectionlog,omitempty"`
-	Dateformat           string   `json:"dateformat,omitempty"`
+	ContentInspectionLog string   `json:"contentinspectionlog,omitempty"`
+	DateFormat           string   `json:"dateformat,omitempty"`
 	Feature              string   `json:"feature,omitempty"`
-	Logfacility          string   `json:"logfacility,omitempty"`
-	Loglevel             []string `json:"loglevel,omitempty"`
-	Lsn                  string   `json:"lsn,omitempty"`
-	Nextgenapiresource   string   `json:"_nextgenapiresource,omitempty"`
-	Protocolviolations   string   `json:"protocolviolations,omitempty"`
-	Serverip             string   `json:"serverip,omitempty"`
-	Serverport           int      `json:"serverport,omitempty"`
-	Sslinterception      string   `json:"sslinterception,omitempty"`
-	Subscriberlog        string   `json:"subscriberlog,omitempty"`
-	Tcp                  string   `json:"tcp,omitempty"`
-	Timezone             string   `json:"timezone,omitempty"`
-	Urlfiltering         string   `json:"urlfiltering,omitempty"`
-	Userdefinedauditlog  string   `json:"userdefinedauditlog,omitempty"`
+	LogFacility          string   `json:"logfacility,omitempty"`
+	LogLevel             []string `json:"loglevel,omitempty"`
+	LSN                  string   `json:"lsn,omitempty"`
+	NextGenAPIResource   string   `json:"_nextgenapiresource,omitempty"`
+	ProtocolViolations   string   `json:"protocolviolations,omitempty"`
+	ServerIP             string   `json:"serverip,omitempty"`
+	ServerPort           int      `json:"serverport,omitempty"`
+	SSLInterception      string   `json:"sslinterception,omitempty"`
+	SubscriberLog        string   `json:"subscriberlog,omitempty"`
+	TCP                  string   `json:"tcp,omitempty"`
+	TimeZone             string   `json:"timezone,omitempty"`
+	URLFiltering         string   `json:"urlfiltering,omitempty"`
+	UserDefinedAuditLog  string   `json:"userdefinedauditlog,omitempty"`
 }
 
-type AuditnslogpolicyCsvserverBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditNSLogPolicyCSVServerBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditsyslogpolicyAaauserBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditSyslogPolicyAAAUserBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type AuditnslogglobalBinding struct {
-	AuditnslogglobalAuditnslogpolicyBinding []interface{} `json:"auditnslogglobal_auditnslogpolicy_binding,omitempty"`
+type AuditNSLogGlobalBinding struct {
+	AuditNSLogGlobalAuditNSLogPolicyBinding []interface{} `json:"auditnslogglobal_auditnslogpolicy_binding,omitempty"`
 }
 
-type AuditsyslogpolicyAuthenticationvserverBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type AuditSyslogPolicyAuthenticationVServerBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }

@@ -1,17 +1,17 @@
 package models
 
 // spillover configuration structs
-type SpilloverpolicyGslbvserverBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+type SpilloverPolicyGSLBVServerBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type Spilloverpolicy struct {
+type SpilloverPolicy struct {
 	Action             string   `json:"action,omitempty"`
 	Builtin            []string `json:"builtin,omitempty"`
 	Comment            string   `json:"comment,omitempty"`
@@ -19,45 +19,45 @@ type Spilloverpolicy struct {
 	Feature            string   `json:"feature,omitempty"`
 	Hits               int      `json:"hits,omitempty"`
 	Name               string   `json:"name,omitempty"`
-	Newname            string   `json:"newname,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	NewName            string   `json:"newname,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
 	Rule               string   `json:"rule,omitempty"`
-	Undefhits          int      `json:"undefhits,omitempty"`
+	UndefHits          int      `json:"undefhits,omitempty"`
 }
 
-type SpilloverpolicyLbvserverBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+type SpilloverPolicyLBVServerBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type SpilloverpolicyBinding struct {
+type SpilloverPolicyBinding struct {
 	Name                              string        `json:"name,omitempty"`
-	SpilloverpolicyCsvserverBinding   []interface{} `json:"spilloverpolicy_csvserver_binding,omitempty"`
-	SpilloverpolicyGslbvserverBinding []interface{} `json:"spilloverpolicy_gslbvserver_binding,omitempty"`
-	SpilloverpolicyLbvserverBinding   []interface{} `json:"spilloverpolicy_lbvserver_binding,omitempty"`
+	SpilloverPolicyCSVServerBinding   []interface{} `json:"spilloverpolicy_csvserver_binding,omitempty"`
+	SpilloverPolicyGSLBVServerBinding []interface{} `json:"spilloverpolicy_gslbvserver_binding,omitempty"`
+	SpilloverPolicyLBVServerBinding   []interface{} `json:"spilloverpolicy_lbvserver_binding,omitempty"`
 }
 
-type Spilloveraction struct {
+type SpilloverAction struct {
 	Action             string   `json:"action,omitempty"`
 	Builtin            []string `json:"builtin,omitempty"`
 	Count              float64  `json:"__count,omitempty"`
 	Feature            string   `json:"feature,omitempty"`
 	Name               string   `json:"name,omitempty"`
-	Newname            string   `json:"newname,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	NewName            string   `json:"newname,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
 }
 
-type SpilloverpolicyCsvserverBinding struct {
-	Activepolicy           int    `json:"activepolicy,omitempty"`
-	Boundto                string `json:"boundto,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labelname              string `json:"labelname,omitempty"`
-	Labeltype              string `json:"labeltype,omitempty"`
+type SpilloverPolicyCSVServerBinding struct {
+	ActivePolicy           int    `json:"activepolicy,omitempty"`
+	BoundTo                string `json:"boundto,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	LabelName              string `json:"labelname,omitempty"`
+	LabelType              string `json:"labeltype,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }

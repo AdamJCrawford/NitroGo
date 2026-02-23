@@ -4,23 +4,23 @@
 
 package models
 
-type Pqbinding struct {
-	Vservername string `json:"vservername,omitempty"`
-	Policyname  string `json:"policyname,omitempty"`
+type PQBinding struct {
+	VServerName string `json:"vservername,omitempty"`
+	PolicyName  string `json:"policyname,omitempty"`
 	Rule        string `json:"rule,omitempty"`
 	Priority    string `json:"priority,omitempty"`
 	Weight      string `json:"weight,omitempty"`
-	Qdepth      string `json:"qdepth,omitempty"`
-	Polqdepth   string `json:"polqdepth,omitempty"`
+	QDepth      string `json:"qdepth,omitempty"`
+	PolQDepth   string `json:"polqdepth,omitempty"`
 	Hits        string `json:"hits,omitempty"`
 }
 
-type Pqpolicy struct {
-	Policyname string `json:"policyname,omitempty"`
+type PQPolicy struct {
+	PolicyName string `json:"policyname,omitempty"`
 	Rule       string `json:"rule,omitempty"`
 	Priority   int    `json:"priority,omitempty"`
 	Weight     int    `json:"weight,omitempty"`
-	Qdepth     int    `json:"qdepth,omitempty"`
-	Polqdepth  int    `json:"polqdepth,omitempty"`
+	QDepth     int    `json:"qdepth,omitempty"`
+	PolQDepth  int    `json:"polqdepth,omitempty"`
 	Hits       string `json:"hits,omitempty"`
 }

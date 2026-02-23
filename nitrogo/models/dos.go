@@ -4,8 +4,8 @@
 
 package models
 
-type Dospolicy struct {
+type DOSPolicy struct {
 	Name          string `json:"name,omitempty"`
-	Qdepth        int    `json:"qdepth,omitempty"`
-	Cltdetectrate int    `json:"cltdetectrate,omitempty"`
+	QDepth        int    `json:"qdepth,omitempty"`
+	CltDetectRate int    `json:"cltdetectrate,omitempty"`
 }

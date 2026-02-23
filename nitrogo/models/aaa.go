@@ -6,7 +6,7 @@ type AAACertParams struct {
 	GroupNameField             string `json:"groupnamefield,omitempty"`
 	NextGenAPIResource         string `json:"_nextgenapiresource,omitempty"`
 	TwoFactor                  string `json:"twofactor,omitempty"`
-	UserNameField              string `json:"usernamefield,omitempty"`
+	UsernameField              string `json:"usernamefield,omitempty"`
 }
 
 type AAAGlobalAAAPreAuthenticationPolicyBinding struct {

@@ -1,100 +1,100 @@
 package models
 
 // ha configuration structs
-type Hasyncfailures struct {
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+type HASyncFailures struct {
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
 	Response           string `json:"response,omitempty"`
 }
 
-type HanodeRoutemonitor6Binding struct {
+type HANodeRouteMonitor6Binding struct {
 	Flags             int    `json:"flags,omitempty"`
-	Id                int    `json:"id,omitempty"`
+	ID                int    `json:"id,omitempty"`
 	Netmask           string `json:"netmask,omitempty"`
-	Routemonitor      string `json:"routemonitor,omitempty"`
-	Routemonitorstate string `json:"routemonitorstate,omitempty"`
+	RouteMonitor      string `json:"routemonitor,omitempty"`
+	RouteMonitorState string `json:"routemonitorstate,omitempty"`
 }
 
-type HanodeRoutemonitorBinding struct {
+type HANodeRouteMonitorBinding struct {
 	Flags             int    `json:"flags,omitempty"`
-	Id                int    `json:"id,omitempty"`
+	ID                int    `json:"id,omitempty"`
 	Netmask           string `json:"netmask,omitempty"`
-	Routemonitor      string `json:"routemonitor,omitempty"`
-	Routemonitorstate string `json:"routemonitorstate,omitempty"`
+	RouteMonitor      string `json:"routemonitor,omitempty"`
+	RouteMonitorState string `json:"routemonitorstate,omitempty"`
 }
 
-type Hafiles struct {
+type HAFiles struct {
 	Mode []string `json:"mode,omitempty"`
 }
 
-type HanodeCiBinding struct {
-	Enaifaces    string `json:"enaifaces,omitempty"`
-	Id           int    `json:"id,omitempty"`
-	Routemonitor string `json:"routemonitor,omitempty"`
+type HANodeCIBinding struct {
+	EnaIfaces    string `json:"enaifaces,omitempty"`
+	ID           int    `json:"id,omitempty"`
+	RouteMonitor string `json:"routemonitor,omitempty"`
 }
 
-type Hafailover struct {
+type HAFailover struct {
 	Force bool `json:"force,omitempty"`
 }
 
-type Hanode struct {
-	Completedfliptime    int     `json:"completedfliptime,omitempty"`
+type HANode struct {
+	CompletedFlipTime    int     `json:"completedfliptime,omitempty"`
 	Count                float64 `json:"__count,omitempty"`
-	Curflips             int     `json:"curflips,omitempty"`
-	Deadinterval         int     `json:"deadinterval,omitempty"`
-	Disifaces            string  `json:"disifaces,omitempty"`
-	Enaifaces            string  `json:"enaifaces,omitempty"`
-	Failsafe             string  `json:"failsafe,omitempty"`
+	CurFlips             int     `json:"curflips,omitempty"`
+	DeadInterval         int     `json:"deadinterval,omitempty"`
+	DisIfaces            string  `json:"disifaces,omitempty"`
+	EnaIfaces            string  `json:"enaifaces,omitempty"`
+	FailSafe             string  `json:"failsafe,omitempty"`
 	Flags                int     `json:"flags,omitempty"`
-	Haheartbeatifaces    string  `json:"haheartbeatifaces,omitempty"`
-	Hamonifaces          string  `json:"hamonifaces,omitempty"`
-	Haprop               string  `json:"haprop,omitempty"`
-	Hastatus             string  `json:"hastatus,omitempty"`
-	Hasync               string  `json:"hasync,omitempty"`
-	Hasyncfailurereason  string  `json:"hasyncfailurereason,omitempty"`
-	Hellointerval        int     `json:"hellointerval,omitempty"`
-	Id                   int     `json:"id,omitempty"`
+	HAHeartbeatIfaces    string  `json:"haheartbeatifaces,omitempty"`
+	HAMonIfaces          string  `json:"hamonifaces,omitempty"`
+	HAProp               string  `json:"haprop,omitempty"`
+	HAStatus             string  `json:"hastatus,omitempty"`
+	HASync               string  `json:"hasync,omitempty"`
+	HASyncFailureReason  string  `json:"hasyncfailurereason,omitempty"`
+	HelloInterval        int     `json:"hellointerval,omitempty"`
+	ID                   int     `json:"id,omitempty"`
 	Ifaces               string  `json:"ifaces,omitempty"`
 	Inc                  string  `json:"inc,omitempty"`
-	Ipaddress            string  `json:"ipaddress,omitempty"`
-	Masterstatetime      int     `json:"masterstatetime,omitempty"`
-	Maxflips             int     `json:"maxflips,omitempty"`
-	Maxfliptime          int     `json:"maxfliptime,omitempty"`
+	IPAddress            string  `json:"ipaddress,omitempty"`
+	MasterStateTime      int     `json:"masterstatetime,omitempty"`
+	MaxFlips             int     `json:"maxflips,omitempty"`
+	MaxFlipTime          int     `json:"maxfliptime,omitempty"`
 	Name                 string  `json:"name,omitempty"`
 	Netmask              string  `json:"netmask,omitempty"`
-	Nextgenapiresource   string  `json:"_nextgenapiresource,omitempty"`
-	Pfifaces             string  `json:"pfifaces,omitempty"`
-	Routemonitor         string  `json:"routemonitor,omitempty"`
-	Routemonitorstate    string  `json:"routemonitorstate,omitempty"`
-	Rpcnodepassword      string  `json:"rpcnodepassword,omitempty"`
-	Ssl2                 string  `json:"ssl2,omitempty"`
+	NextGenAPIResource   string  `json:"_nextgenapiresource,omitempty"`
+	PFIfaces             string  `json:"pfifaces,omitempty"`
+	RouteMonitor         string  `json:"routemonitor,omitempty"`
+	RouteMonitorState    string  `json:"routemonitorstate,omitempty"`
+	RPCNodePassword      string  `json:"rpcnodepassword,omitempty"`
+	SSL2                 string  `json:"ssl2,omitempty"`
 	State                string  `json:"state,omitempty"`
-	Syncstatusstrictmode string  `json:"syncstatusstrictmode,omitempty"`
-	Syncvlan             int     `json:"syncvlan,omitempty"`
+	SyncStatusStrictMode string  `json:"syncstatusstrictmode,omitempty"`
+	SyncVLAN             int     `json:"syncvlan,omitempty"`
 }
 
-type HanodeFisBinding struct {
-	Enaifaces    string `json:"enaifaces,omitempty"`
-	Id           int    `json:"id,omitempty"`
+type HANodeFISBinding struct {
+	EnaIfaces    string `json:"enaifaces,omitempty"`
+	ID           int    `json:"id,omitempty"`
 	Name         string `json:"name,omitempty"`
-	Routemonitor string `json:"routemonitor,omitempty"`
+	RouteMonitor string `json:"routemonitor,omitempty"`
 }
 
-type HanodeBinding struct {
-	HanodeCiBinding                       []interface{} `json:"hanode_ci_binding,omitempty"`
-	HanodeFisBinding                      []interface{} `json:"hanode_fis_binding,omitempty"`
-	HanodePartialfailureinterfacesBinding []interface{} `json:"hanode_partialfailureinterfaces_binding,omitempty"`
-	HanodeRoutemonitor6Binding            []interface{} `json:"hanode_routemonitor6_binding,omitempty"`
-	HanodeRoutemonitorBinding             []interface{} `json:"hanode_routemonitor_binding,omitempty"`
-	Id                                    int           `json:"id,omitempty"`
+type HANodeBinding struct {
+	HANodeCIBinding                       []interface{} `json:"hanode_ci_binding,omitempty"`
+	HANodeFISBinding                      []interface{} `json:"hanode_fis_binding,omitempty"`
+	HANodePartialFailureInterfacesBinding []interface{} `json:"hanode_partialfailureinterfaces_binding,omitempty"`
+	HANodeRouteMonitor6Binding            []interface{} `json:"hanode_routemonitor6_binding,omitempty"`
+	HANodeRouteMonitorBinding             []interface{} `json:"hanode_routemonitor_binding,omitempty"`
+	ID                                    int           `json:"id,omitempty"`
 }
 
-type HanodePartialfailureinterfacesBinding struct {
-	Id           int    `json:"id,omitempty"`
-	Pfifaces     string `json:"pfifaces,omitempty"`
-	Routemonitor string `json:"routemonitor,omitempty"`
+type HANodePartialFailureInterfacesBinding struct {
+	ID           int    `json:"id,omitempty"`
+	PFIfaces     string `json:"pfifaces,omitempty"`
+	RouteMonitor string `json:"routemonitor,omitempty"`
 }
 
-type Hasync struct {
+type HASync struct {
 	Force bool   `json:"force,omitempty"`
 	Save  string `json:"save,omitempty"`
 }

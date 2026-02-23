@@ -2,17 +2,17 @@ package models
 
 // utility configuration structs
 type Raid struct {
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
 }
 
 type Install struct {
 	A               bool   `json:"a,omitempty"`
 	Async           bool   `json:"Async,omitempty"`
-	Enhancedupgrade bool   `json:"enhancedupgrade,omitempty"`
-	Id              int    `json:"id,omitempty"`
+	EnhancedUpgrade bool   `json:"enhancedupgrade,omitempty"`
+	ID              int    `json:"id,omitempty"`
 	L               bool   `json:"l,omitempty"`
-	Resizeswapvar   bool   `json:"resizeswapvar,omitempty"`
-	Url             string `json:"url,omitempty"`
+	ResizeSwapVar   bool   `json:"resizeswapvar,omitempty"`
+	URL             string `json:"url,omitempty"`
 	Y               bool   `json:"y,omitempty"`
 }
 
@@ -22,7 +22,7 @@ type Traceroute6 struct {
 	M         int    `json:"m,omitempty"`
 	N         bool   `json:"n,omitempty"`
 	P         int    `json:"p,omitempty"`
-	Packetlen int    `json:"packetlen,omitempty"`
+	PacketLen int    `json:"packetlen,omitempty"`
 	Q         int    `json:"q,omitempty"`
 	R         bool   `json:"r,omitempty"`
 	Response  string `json:"response,omitempty"`
@@ -47,19 +47,19 @@ type Ping struct {
 	T1       int    `json:"t,omitempty"`
 }
 
-type Techsupport struct {
-	Adss               bool          `json:"adss,omitempty"`
-	Authtoken          string        `json:"authtoken,omitempty"`
-	Casenumber         string        `json:"casenumber,omitempty"`
+type TechSupport struct {
+	ADSS               bool          `json:"adss,omitempty"`
+	AuthToken          string        `json:"authtoken,omitempty"`
+	CaseNumber         string        `json:"casenumber,omitempty"`
 	Description        string        `json:"description,omitempty"`
 	File               string        `json:"file,omitempty"`
-	Nextgenapiresource string        `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string        `json:"_nextgenapiresource,omitempty"`
 	Nodes              []interface{} `json:"nodes,omitempty"`
-	Partitionname      string        `json:"partitionname,omitempty"`
+	PartitionName      string        `json:"partitionname,omitempty"`
 	Proxy              string        `json:"proxy,omitempty"`
 	Response           string        `json:"response,omitempty"`
 	Scope              string        `json:"scope,omitempty"`
-	Servername         string        `json:"servername,omitempty"`
+	ServerName         string        `json:"servername,omitempty"`
 	Time               string        `json:"time,omitempty"`
 	Upload             bool          `json:"upload,omitempty"`
 }
@@ -71,7 +71,7 @@ type Traceroute struct {
 	N         bool   `json:"n,omitempty"`
 	P         string `json:"P,omitempty"`
 	P1        int    `json:"p,omitempty"`
-	Packetlen int    `json:"packetlen,omitempty"`
+	PacketLen int    `json:"packetlen,omitempty"`
 	Q         int    `json:"q,omitempty"`
 	R         bool   `json:"r,omitempty"`
 	Response  string `json:"response,omitempty"`
@@ -83,41 +83,41 @@ type Traceroute struct {
 	W         int    `json:"w,omitempty"`
 }
 
-type Callhome struct {
-	Anomalydetection     string   `json:"anomalydetection,omitempty"`
-	Callhomestatus       []string `json:"callhomestatus,omitempty"`
-	Emailaddress         string   `json:"emailaddress,omitempty"`
-	Flashfirstfail       string   `json:"flashfirstfail,omitempty"`
-	Flashlatestfailure   string   `json:"flashlatestfailure,omitempty"`
-	Hbcustominterval     int      `json:"hbcustominterval,omitempty"`
-	Hddfirstfail         string   `json:"hddfirstfail,omitempty"`
-	Hddlatestfailure     string   `json:"hddlatestfailure,omitempty"`
-	Ipaddress            string   `json:"ipaddress,omitempty"`
-	Memthrefirstanomaly  string   `json:"memthrefirstanomaly,omitempty"`
-	Memthrelatestanomaly string   `json:"memthrelatestanomaly,omitempty"`
+type CallHome struct {
+	AnomalyDetection     string   `json:"anomalydetection,omitempty"`
+	CallHomeStatus       []string `json:"callhomestatus,omitempty"`
+	EmailAddress         string   `json:"emailaddress,omitempty"`
+	FlashFirstFail       string   `json:"flashfirstfail,omitempty"`
+	FlashLatestFailure   string   `json:"flashlatestfailure,omitempty"`
+	HBCustomInterval     int      `json:"hbcustominterval,omitempty"`
+	HDDFirstFail         string   `json:"hddfirstfail,omitempty"`
+	HDDLatestFailure     string   `json:"hddlatestfailure,omitempty"`
+	IPAddress            string   `json:"ipaddress,omitempty"`
+	MemThreFirstAnomaly  string   `json:"memthrefirstanomaly,omitempty"`
+	MemThreLatestAnomaly string   `json:"memthrelatestanomaly,omitempty"`
 	Mode                 string   `json:"mode,omitempty"`
-	Nextgenapiresource   string   `json:"_nextgenapiresource,omitempty"`
-	Nodeid               int      `json:"nodeid,omitempty"`
+	NextGenAPIResource   string   `json:"_nextgenapiresource,omitempty"`
+	NodeID               int      `json:"nodeid,omitempty"`
 	Port                 int      `json:"port,omitempty"`
-	Powfirstfail         string   `json:"powfirstfail,omitempty"`
-	Powlatestfailure     string   `json:"powlatestfailure,omitempty"`
-	Proxyauthservice     string   `json:"proxyauthservice,omitempty"`
-	Proxymode            string   `json:"proxymode,omitempty"`
-	Restartlatestfail    string   `json:"restartlatestfail,omitempty"`
-	Rlfirsthighdrop      string   `json:"rlfirsthighdrop,omitempty"`
-	Rllatesthighdrop     string   `json:"rllatesthighdrop,omitempty"`
-	Sslcardfirstfailure  string   `json:"sslcardfirstfailure,omitempty"`
-	Sslcardlatestfailure string   `json:"sslcardlatestfailure,omitempty"`
+	PowFirstFail         string   `json:"powfirstfail,omitempty"`
+	PowLatestFailure     string   `json:"powlatestfailure,omitempty"`
+	ProxyAuthService     string   `json:"proxyauthservice,omitempty"`
+	ProxyMode            string   `json:"proxymode,omitempty"`
+	RestartLatestFail    string   `json:"restartlatestfail,omitempty"`
+	RLFirstHighDrop      string   `json:"rlfirsthighdrop,omitempty"`
+	RLLatestHighDrop     string   `json:"rllatesthighdrop,omitempty"`
+	SSLCardFirstFailure  string   `json:"sslcardfirstfailure,omitempty"`
+	SSLCardLatestFailure string   `json:"sslcardlatestfailure,omitempty"`
 }
 
-type Filesystemencryption struct {
-	Effectivestate     string `json:"effectivestate,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-	Nodeid             int    `json:"nodeid,omitempty"`
-	Ntimes0flash       int    `json:"ntimes0flash,omitempty"`
-	Ntimes0var         int    `json:"ntimes0var,omitempty"`
+type FileSystemEncryption struct {
+	EffectiveState     string `json:"effectivestate,omitempty"`
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
+	NodeID             int    `json:"nodeid,omitempty"`
+	NTimes0Flash       int    `json:"ntimes0flash,omitempty"`
+	NTimes0Var         int    `json:"ntimes0var,omitempty"`
 	Passphrase         string `json:"passphrase,omitempty"`
-	Supportedstate     string `json:"supportedstate,omitempty"`
+	SupportedState     string `json:"supportedstate,omitempty"`
 }
 
 type Ping6 struct {

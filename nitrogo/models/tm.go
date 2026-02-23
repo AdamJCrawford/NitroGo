@@ -1,278 +1,278 @@
 package models
 
 // tm configuration structs
-type Tmformssoaction struct {
-	Actionurl          string  `json:"actionurl,omitempty"`
+type TMFormSSOAction struct {
+	ActionURL          string  `json:"actionurl,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Namevaluepair      string  `json:"namevaluepair,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Nvtype             string  `json:"nvtype,omitempty"`
-	Passwdfield        string  `json:"passwdfield,omitempty"`
-	Responsesize       int     `json:"responsesize,omitempty"`
-	Ssosuccessrule     string  `json:"ssosuccessrule,omitempty"`
-	Submitmethod       string  `json:"submitmethod,omitempty"`
-	Userfield          string  `json:"userfield,omitempty"`
+	NameValuePair      string  `json:"namevaluepair,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	NVType             string  `json:"nvtype,omitempty"`
+	PasswdField        string  `json:"passwdfield,omitempty"`
+	ResponseSize       int     `json:"responsesize,omitempty"`
+	SSOSuccessRule     string  `json:"ssosuccessrule,omitempty"`
+	SubmitMethod       string  `json:"submitmethod,omitempty"`
+	UserField          string  `json:"userfield,omitempty"`
 }
 
-type TmtrafficpolicyLbvserverBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type TMTrafficPolicyLBVServerBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type Tmtrafficpolicy struct {
+type TMTrafficPolicy struct {
 	Action             string  `json:"action,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
 	Hits               int     `json:"hits,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Rule               string  `json:"rule,omitempty"`
 }
 
-type TmglobalTmtrafficpolicyBinding struct {
-	Bindpolicytype         int    `json:"bindpolicytype,omitempty"`
-	Globalbindtype         string `json:"globalbindtype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+type TMGlobalTMTrafficPolicyBinding struct {
+	BindPolicyType         int    `json:"bindpolicytype,omitempty"`
+	GlobalBindType         string `json:"globalbindtype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 }
 
-type TmglobalBinding struct {
-	TmglobalAuditnslogpolicyBinding  []interface{} `json:"tmglobal_auditnslogpolicy_binding,omitempty"`
-	TmglobalAuditsyslogpolicyBinding []interface{} `json:"tmglobal_auditsyslogpolicy_binding,omitempty"`
-	TmglobalTmsessionpolicyBinding   []interface{} `json:"tmglobal_tmsessionpolicy_binding,omitempty"`
-	TmglobalTmtrafficpolicyBinding   []interface{} `json:"tmglobal_tmtrafficpolicy_binding,omitempty"`
+type TMGlobalBinding struct {
+	TMGlobalAuditNSLogPolicyBinding  []interface{} `json:"tmglobal_auditnslogpolicy_binding,omitempty"`
+	TMGlobalAuditSyslogPolicyBinding []interface{} `json:"tmglobal_auditsyslogpolicy_binding,omitempty"`
+	TMGlobalTMSessionPolicyBinding   []interface{} `json:"tmglobal_tmsessionpolicy_binding,omitempty"`
+	TMGlobalTMTrafficPolicyBinding   []interface{} `json:"tmglobal_tmtrafficpolicy_binding,omitempty"`
 }
 
-type TmtrafficpolicyBinding struct {
+type TMTrafficPolicyBinding struct {
 	Name                            string        `json:"name,omitempty"`
-	TmtrafficpolicyCsvserverBinding []interface{} `json:"tmtrafficpolicy_csvserver_binding,omitempty"`
-	TmtrafficpolicyLbvserverBinding []interface{} `json:"tmtrafficpolicy_lbvserver_binding,omitempty"`
-	TmtrafficpolicyTmglobalBinding  []interface{} `json:"tmtrafficpolicy_tmglobal_binding,omitempty"`
+	TMTrafficPolicyCSVServerBinding []interface{} `json:"tmtrafficpolicy_csvserver_binding,omitempty"`
+	TMTrafficPolicyLBVServerBinding []interface{} `json:"tmtrafficpolicy_lbvserver_binding,omitempty"`
+	TMTrafficPolicyTMGlobalBinding  []interface{} `json:"tmtrafficpolicy_tmglobal_binding,omitempty"`
 }
 
-type Tmsessionpolicy struct {
+type TMSessionPolicy struct {
 	Action                 string   `json:"action,omitempty"`
 	Builtin                []string `json:"builtin,omitempty"`
 	Count                  float64  `json:"__count,omitempty"`
-	Expressiontype         string   `json:"expressiontype,omitempty"`
+	ExpressionType         string   `json:"expressiontype,omitempty"`
 	Feature                string   `json:"feature,omitempty"`
-	Gotopriorityexpression string   `json:"gotopriorityexpression,omitempty"`
+	GotoPriorityExpression string   `json:"gotopriorityexpression,omitempty"`
 	Hits                   int      `json:"hits,omitempty"`
 	Name                   string   `json:"name,omitempty"`
-	Nextgenapiresource     string   `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource     string   `json:"_nextgenapiresource,omitempty"`
 	Rule                   string   `json:"rule,omitempty"`
 }
 
-type TmtrafficpolicyCsvserverBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type TMTrafficPolicyCSVServerBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type TmsessionpolicyTmglobalBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type TMSessionPolicyTMGlobalBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type Tmsessionparameter struct {
-	Defaultauthorizationaction string `json:"defaultauthorizationaction,omitempty"`
+type TMSessionParameter struct {
+	DefaultAuthorizationAction string `json:"defaultauthorizationaction,omitempty"`
 	Homepage                   string `json:"homepage,omitempty"`
-	Httponlycookie             string `json:"httponlycookie,omitempty"`
-	Kcdaccount                 string `json:"kcdaccount,omitempty"`
+	HTTPOnlyCookie             string `json:"httponlycookie,omitempty"`
+	KCDAccount                 string `json:"kcdaccount,omitempty"`
 	Name                       string `json:"name,omitempty"`
-	Nextgenapiresource         string `json:"_nextgenapiresource,omitempty"`
-	Persistentcookie           string `json:"persistentcookie,omitempty"`
-	Persistentcookievalidity   int    `json:"persistentcookievalidity,omitempty"`
-	Sesstimeout                int    `json:"sesstimeout,omitempty"`
-	Sso                        string `json:"sso,omitempty"`
-	Ssocredential              string `json:"ssocredential,omitempty"`
-	Ssodomain                  string `json:"ssodomain,omitempty"`
-	Tmsessionpolicybindtype    string `json:"tmsessionpolicybindtype,omitempty"`
-	Tmsessionpolicycount       int    `json:"tmsessionpolicycount,omitempty"`
+	NextGenAPIResource         string `json:"_nextgenapiresource,omitempty"`
+	PersistentCookie           string `json:"persistentcookie,omitempty"`
+	PersistentCookieValidity   int    `json:"persistentcookievalidity,omitempty"`
+	SessTimeout                int    `json:"sesstimeout,omitempty"`
+	SSO                        string `json:"sso,omitempty"`
+	SSOCredential              string `json:"ssocredential,omitempty"`
+	SSODomain                  string `json:"ssodomain,omitempty"`
+	TMSessionPolicyBindType    string `json:"tmsessionpolicybindtype,omitempty"`
+	TMSessionPolicyCount       int    `json:"tmsessionpolicycount,omitempty"`
 }
 
-type TmglobalAuditnslogpolicyBinding struct {
-	Bindpolicytype         int    `json:"bindpolicytype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+type TMGlobalAuditNSLogPolicyBinding struct {
+	BindPolicyType         int    `json:"bindpolicytype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type Tmtrafficaction struct {
-	Apptimeout         int     `json:"apptimeout,omitempty"`
+type TMTrafficAction struct {
+	AppTimeout         int     `json:"apptimeout,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Forcedtimeout      string  `json:"forcedtimeout,omitempty"`
-	Forcedtimeoutval   int     `json:"forcedtimeoutval,omitempty"`
-	Formssoaction      string  `json:"formssoaction,omitempty"`
-	Initiatelogout     string  `json:"initiatelogout,omitempty"`
-	Kcdaccount         string  `json:"kcdaccount,omitempty"`
+	ForcedTimeout      string  `json:"forcedtimeout,omitempty"`
+	ForcedTimeoutVal   int     `json:"forcedtimeoutval,omitempty"`
+	FormSSOAction      string  `json:"formssoaction,omitempty"`
+	InitiateLogout     string  `json:"initiatelogout,omitempty"`
+	KCDAccount         string  `json:"kcdaccount,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Passwdexpression   string  `json:"passwdexpression,omitempty"`
-	Persistentcookie   string  `json:"persistentcookie,omitempty"`
-	Samlssoprofile     string  `json:"samlssoprofile,omitempty"`
-	Sso                string  `json:"sso,omitempty"`
-	Userexpression     string  `json:"userexpression,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	PasswdExpression   string  `json:"passwdexpression,omitempty"`
+	PersistentCookie   string  `json:"persistentcookie,omitempty"`
+	SAMLSSOProfile     string  `json:"samlssoprofile,omitempty"`
+	SSO                string  `json:"sso,omitempty"`
+	UserExpression     string  `json:"userexpression,omitempty"`
 }
 
-type TmsessionpolicyBinding struct {
+type TMSessionPolicyBinding struct {
 	Name                                        string        `json:"name,omitempty"`
-	TmsessionpolicyAaagroupBinding              []interface{} `json:"tmsessionpolicy_aaagroup_binding,omitempty"`
-	TmsessionpolicyAaauserBinding               []interface{} `json:"tmsessionpolicy_aaauser_binding,omitempty"`
-	TmsessionpolicyAuthenticationvserverBinding []interface{} `json:"tmsessionpolicy_authenticationvserver_binding,omitempty"`
-	TmsessionpolicyTmglobalBinding              []interface{} `json:"tmsessionpolicy_tmglobal_binding,omitempty"`
+	TMSessionPolicyAAAGroupBinding              []interface{} `json:"tmsessionpolicy_aaagroup_binding,omitempty"`
+	TMSessionPolicyAAAUserBinding               []interface{} `json:"tmsessionpolicy_aaauser_binding,omitempty"`
+	TMSessionPolicyAuthenticationVServerBinding []interface{} `json:"tmsessionpolicy_authenticationvserver_binding,omitempty"`
+	TMSessionPolicyTMGlobalBinding              []interface{} `json:"tmsessionpolicy_tmglobal_binding,omitempty"`
 }
 
-type TmsessionpolicyAaagroupBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type TMSessionPolicyAAAGroupBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type TmtrafficpolicyTmglobalBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type TMTrafficPolicyTMGlobalBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type TmglobalTmsessionpolicyBinding struct {
-	Bindpolicytype         int      `json:"bindpolicytype,omitempty"`
+type TMGlobalTMSessionPolicyBinding struct {
+	BindPolicyType         int      `json:"bindpolicytype,omitempty"`
 	Builtin                []string `json:"builtin,omitempty"`
 	Feature                string   `json:"feature,omitempty"`
-	Gotopriorityexpression string   `json:"gotopriorityexpression,omitempty"`
-	Policyname             string   `json:"policyname,omitempty"`
+	GotoPriorityExpression string   `json:"gotopriorityexpression,omitempty"`
+	PolicyName             string   `json:"policyname,omitempty"`
 	Priority               int      `json:"priority,omitempty"`
 }
 
-type TmglobalAuditsyslogpolicyBinding struct {
-	Bindpolicytype         int    `json:"bindpolicytype,omitempty"`
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+type TMGlobalAuditSyslogPolicyBinding struct {
+	BindPolicyType         int    `json:"bindpolicytype,omitempty"`
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 }
 
-type Tmsamlssoprofile struct {
-	Assertionconsumerserviceurl string  `json:"assertionconsumerserviceurl,omitempty"`
+type TMSAMLSSOProfile struct {
+	AssertionConsumerServiceURL string  `json:"assertionconsumerserviceurl,omitempty"`
 	Attribute1                  string  `json:"attribute1,omitempty"`
 	Attribute10                 string  `json:"attribute10,omitempty"`
-	Attribute10expr             string  `json:"attribute10expr,omitempty"`
-	Attribute10format           string  `json:"attribute10format,omitempty"`
-	Attribute10friendlyname     string  `json:"attribute10friendlyname,omitempty"`
+	Attribute10Expr             string  `json:"attribute10expr,omitempty"`
+	Attribute10Format           string  `json:"attribute10format,omitempty"`
+	Attribute10FriendlyName     string  `json:"attribute10friendlyname,omitempty"`
 	Attribute11                 string  `json:"attribute11,omitempty"`
-	Attribute11expr             string  `json:"attribute11expr,omitempty"`
-	Attribute11format           string  `json:"attribute11format,omitempty"`
-	Attribute11friendlyname     string  `json:"attribute11friendlyname,omitempty"`
+	Attribute11Expr             string  `json:"attribute11expr,omitempty"`
+	Attribute11Format           string  `json:"attribute11format,omitempty"`
+	Attribute11FriendlyName     string  `json:"attribute11friendlyname,omitempty"`
 	Attribute12                 string  `json:"attribute12,omitempty"`
-	Attribute12expr             string  `json:"attribute12expr,omitempty"`
-	Attribute12format           string  `json:"attribute12format,omitempty"`
-	Attribute12friendlyname     string  `json:"attribute12friendlyname,omitempty"`
+	Attribute12Expr             string  `json:"attribute12expr,omitempty"`
+	Attribute12Format           string  `json:"attribute12format,omitempty"`
+	Attribute12FriendlyName     string  `json:"attribute12friendlyname,omitempty"`
 	Attribute13                 string  `json:"attribute13,omitempty"`
-	Attribute13expr             string  `json:"attribute13expr,omitempty"`
-	Attribute13format           string  `json:"attribute13format,omitempty"`
-	Attribute13friendlyname     string  `json:"attribute13friendlyname,omitempty"`
+	Attribute13Expr             string  `json:"attribute13expr,omitempty"`
+	Attribute13Format           string  `json:"attribute13format,omitempty"`
+	Attribute13FriendlyName     string  `json:"attribute13friendlyname,omitempty"`
 	Attribute14                 string  `json:"attribute14,omitempty"`
-	Attribute14expr             string  `json:"attribute14expr,omitempty"`
-	Attribute14format           string  `json:"attribute14format,omitempty"`
-	Attribute14friendlyname     string  `json:"attribute14friendlyname,omitempty"`
+	Attribute14Expr             string  `json:"attribute14expr,omitempty"`
+	Attribute14Format           string  `json:"attribute14format,omitempty"`
+	Attribute14FriendlyName     string  `json:"attribute14friendlyname,omitempty"`
 	Attribute15                 string  `json:"attribute15,omitempty"`
-	Attribute15expr             string  `json:"attribute15expr,omitempty"`
-	Attribute15format           string  `json:"attribute15format,omitempty"`
-	Attribute15friendlyname     string  `json:"attribute15friendlyname,omitempty"`
+	Attribute15Expr             string  `json:"attribute15expr,omitempty"`
+	Attribute15Format           string  `json:"attribute15format,omitempty"`
+	Attribute15FriendlyName     string  `json:"attribute15friendlyname,omitempty"`
 	Attribute16                 string  `json:"attribute16,omitempty"`
-	Attribute16expr             string  `json:"attribute16expr,omitempty"`
-	Attribute16format           string  `json:"attribute16format,omitempty"`
-	Attribute16friendlyname     string  `json:"attribute16friendlyname,omitempty"`
-	Attribute1expr              string  `json:"attribute1expr,omitempty"`
-	Attribute1format            string  `json:"attribute1format,omitempty"`
-	Attribute1friendlyname      string  `json:"attribute1friendlyname,omitempty"`
+	Attribute16Expr             string  `json:"attribute16expr,omitempty"`
+	Attribute16Format           string  `json:"attribute16format,omitempty"`
+	Attribute16FriendlyName     string  `json:"attribute16friendlyname,omitempty"`
+	Attribute1Expr              string  `json:"attribute1expr,omitempty"`
+	Attribute1Format            string  `json:"attribute1format,omitempty"`
+	Attribute1FriendlyName      string  `json:"attribute1friendlyname,omitempty"`
 	Attribute2                  string  `json:"attribute2,omitempty"`
-	Attribute2expr              string  `json:"attribute2expr,omitempty"`
-	Attribute2format            string  `json:"attribute2format,omitempty"`
-	Attribute2friendlyname      string  `json:"attribute2friendlyname,omitempty"`
+	Attribute2Expr              string  `json:"attribute2expr,omitempty"`
+	Attribute2Format            string  `json:"attribute2format,omitempty"`
+	Attribute2FriendlyName      string  `json:"attribute2friendlyname,omitempty"`
 	Attribute3                  string  `json:"attribute3,omitempty"`
-	Attribute3expr              string  `json:"attribute3expr,omitempty"`
-	Attribute3format            string  `json:"attribute3format,omitempty"`
-	Attribute3friendlyname      string  `json:"attribute3friendlyname,omitempty"`
+	Attribute3Expr              string  `json:"attribute3expr,omitempty"`
+	Attribute3Format            string  `json:"attribute3format,omitempty"`
+	Attribute3FriendlyName      string  `json:"attribute3friendlyname,omitempty"`
 	Attribute4                  string  `json:"attribute4,omitempty"`
-	Attribute4expr              string  `json:"attribute4expr,omitempty"`
-	Attribute4format            string  `json:"attribute4format,omitempty"`
-	Attribute4friendlyname      string  `json:"attribute4friendlyname,omitempty"`
+	Attribute4Expr              string  `json:"attribute4expr,omitempty"`
+	Attribute4Format            string  `json:"attribute4format,omitempty"`
+	Attribute4FriendlyName      string  `json:"attribute4friendlyname,omitempty"`
 	Attribute5                  string  `json:"attribute5,omitempty"`
-	Attribute5expr              string  `json:"attribute5expr,omitempty"`
-	Attribute5format            string  `json:"attribute5format,omitempty"`
-	Attribute5friendlyname      string  `json:"attribute5friendlyname,omitempty"`
+	Attribute5Expr              string  `json:"attribute5expr,omitempty"`
+	Attribute5Format            string  `json:"attribute5format,omitempty"`
+	Attribute5FriendlyName      string  `json:"attribute5friendlyname,omitempty"`
 	Attribute6                  string  `json:"attribute6,omitempty"`
-	Attribute6expr              string  `json:"attribute6expr,omitempty"`
-	Attribute6format            string  `json:"attribute6format,omitempty"`
-	Attribute6friendlyname      string  `json:"attribute6friendlyname,omitempty"`
+	Attribute6Expr              string  `json:"attribute6expr,omitempty"`
+	Attribute6Format            string  `json:"attribute6format,omitempty"`
+	Attribute6FriendlyName      string  `json:"attribute6friendlyname,omitempty"`
 	Attribute7                  string  `json:"attribute7,omitempty"`
-	Attribute7expr              string  `json:"attribute7expr,omitempty"`
-	Attribute7format            string  `json:"attribute7format,omitempty"`
-	Attribute7friendlyname      string  `json:"attribute7friendlyname,omitempty"`
+	Attribute7Expr              string  `json:"attribute7expr,omitempty"`
+	Attribute7Format            string  `json:"attribute7format,omitempty"`
+	Attribute7FriendlyName      string  `json:"attribute7friendlyname,omitempty"`
 	Attribute8                  string  `json:"attribute8,omitempty"`
-	Attribute8expr              string  `json:"attribute8expr,omitempty"`
-	Attribute8format            string  `json:"attribute8format,omitempty"`
-	Attribute8friendlyname      string  `json:"attribute8friendlyname,omitempty"`
+	Attribute8Expr              string  `json:"attribute8expr,omitempty"`
+	Attribute8Format            string  `json:"attribute8format,omitempty"`
+	Attribute8FriendlyName      string  `json:"attribute8friendlyname,omitempty"`
 	Attribute9                  string  `json:"attribute9,omitempty"`
-	Attribute9expr              string  `json:"attribute9expr,omitempty"`
-	Attribute9format            string  `json:"attribute9format,omitempty"`
-	Attribute9friendlyname      string  `json:"attribute9friendlyname,omitempty"`
+	Attribute9Expr              string  `json:"attribute9expr,omitempty"`
+	Attribute9Format            string  `json:"attribute9format,omitempty"`
+	Attribute9FriendlyName      string  `json:"attribute9friendlyname,omitempty"`
 	Audience                    string  `json:"audience,omitempty"`
 	Count                       float64 `json:"__count,omitempty"`
-	Digestmethod                string  `json:"digestmethod,omitempty"`
-	Encryptassertion            string  `json:"encryptassertion,omitempty"`
-	Encryptionalgorithm         string  `json:"encryptionalgorithm,omitempty"`
+	DigestMethod                string  `json:"digestmethod,omitempty"`
+	EncryptAssertion            string  `json:"encryptassertion,omitempty"`
+	EncryptionAlgorithm         string  `json:"encryptionalgorithm,omitempty"`
 	Name                        string  `json:"name,omitempty"`
-	Nameidexpr                  string  `json:"nameidexpr,omitempty"`
-	Nameidformat                string  `json:"nameidformat,omitempty"`
-	Nextgenapiresource          string  `json:"_nextgenapiresource,omitempty"`
-	Relaystaterule              string  `json:"relaystaterule,omitempty"`
-	Samlissuername              string  `json:"samlissuername,omitempty"`
-	Samlsigningcertname         string  `json:"samlsigningcertname,omitempty"`
-	Samlspcertname              string  `json:"samlspcertname,omitempty"`
-	Sendpassword                string  `json:"sendpassword,omitempty"`
-	Signassertion               string  `json:"signassertion,omitempty"`
-	Signaturealg                string  `json:"signaturealg,omitempty"`
-	Skewtime                    int     `json:"skewtime,omitempty"`
+	NameIDExpr                  string  `json:"nameidexpr,omitempty"`
+	NameIDFormat                string  `json:"nameidformat,omitempty"`
+	NextGenAPIResource          string  `json:"_nextgenapiresource,omitempty"`
+	RelayStateRule              string  `json:"relaystaterule,omitempty"`
+	SAMLIssuerName              string  `json:"samlissuername,omitempty"`
+	SAMLSigningCertName         string  `json:"samlsigningcertname,omitempty"`
+	SAMLSPCertName              string  `json:"samlspcertname,omitempty"`
+	SendPassword                string  `json:"sendpassword,omitempty"`
+	SignAssertion               string  `json:"signassertion,omitempty"`
+	SignatureAlg                string  `json:"signaturealg,omitempty"`
+	SkewTime                    int     `json:"skewtime,omitempty"`
 }
 
-type Tmsessionaction struct {
+type TMSessionAction struct {
 	Builtin                    []string `json:"builtin,omitempty"`
 	Count                      float64  `json:"__count,omitempty"`
-	Defaultauthorizationaction string   `json:"defaultauthorizationaction,omitempty"`
+	DefaultAuthorizationAction string   `json:"defaultauthorizationaction,omitempty"`
 	Feature                    string   `json:"feature,omitempty"`
 	Homepage                   string   `json:"homepage,omitempty"`
-	Httponlycookie             string   `json:"httponlycookie,omitempty"`
-	Kcdaccount                 string   `json:"kcdaccount,omitempty"`
+	HTTPOnlyCookie             string   `json:"httponlycookie,omitempty"`
+	KCDAccount                 string   `json:"kcdaccount,omitempty"`
 	Name                       string   `json:"name,omitempty"`
-	Nextgenapiresource         string   `json:"_nextgenapiresource,omitempty"`
-	Persistentcookie           string   `json:"persistentcookie,omitempty"`
-	Persistentcookievalidity   int      `json:"persistentcookievalidity,omitempty"`
-	Sesstimeout                int      `json:"sesstimeout,omitempty"`
-	Sso                        string   `json:"sso,omitempty"`
-	Ssocredential              string   `json:"ssocredential,omitempty"`
-	Ssodomain                  string   `json:"ssodomain,omitempty"`
+	NextGenAPIResource         string   `json:"_nextgenapiresource,omitempty"`
+	PersistentCookie           string   `json:"persistentcookie,omitempty"`
+	PersistentCookieValidity   int      `json:"persistentcookievalidity,omitempty"`
+	SessTimeout                int      `json:"sesstimeout,omitempty"`
+	SSO                        string   `json:"sso,omitempty"`
+	SSOCredential              string   `json:"ssocredential,omitempty"`
+	SSODomain                  string   `json:"ssodomain,omitempty"`
 }
 
-type TmsessionpolicyAuthenticationvserverBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type TMSessionPolicyAuthenticationVServerBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }
 
-type TmsessionpolicyAaauserBinding struct {
-	Activepolicy int    `json:"activepolicy,omitempty"`
-	Boundto      string `json:"boundto,omitempty"`
+type TMSessionPolicyAAAUserBinding struct {
+	ActivePolicy int    `json:"activepolicy,omitempty"`
+	BoundTo      string `json:"boundto,omitempty"`
 	Name         string `json:"name,omitempty"`
 	Priority     int    `json:"priority,omitempty"`
 }

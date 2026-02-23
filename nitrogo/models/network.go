@@ -2,535 +2,535 @@ package models
 
 // network configuration structs
 type ChannelInterfaceBinding struct {
-	Id           string   `json:"id,omitempty"`
-	Ifnum        []string `json:"ifnum,omitempty"`
-	Lamode       string   `json:"lamode,omitempty"`
-	Lractiveintf int      `json:"lractiveintf,omitempty"`
-	Slaveduplex  int      `json:"slaveduplex,omitempty"`
-	Slaveflowctl int      `json:"slaveflowctl,omitempty"`
-	Slavemedia   int      `json:"slavemedia,omitempty"`
-	Slavespeed   int      `json:"slavespeed,omitempty"`
-	Slavestate   int      `json:"slavestate,omitempty"`
-	Slavetime    int      `json:"slavetime,omitempty"`
-	Svmcmd       int      `json:"svmcmd,omitempty"`
+	ID           string   `json:"id,omitempty"`
+	IFNum        []string `json:"ifnum,omitempty"`
+	LAMode       string   `json:"lamode,omitempty"`
+	LRActiveIntf int      `json:"lractiveintf,omitempty"`
+	SlaveDuplex  int      `json:"slaveduplex,omitempty"`
+	SlaveFlowCtl int      `json:"slaveflowctl,omitempty"`
+	SlaveMedia   int      `json:"slavemedia,omitempty"`
+	SlaveSpeed   int      `json:"slavespeed,omitempty"`
+	SlaveState   int      `json:"slavestate,omitempty"`
+	SlaveTime    int      `json:"slavetime,omitempty"`
+	SVMCmd       int      `json:"svmcmd,omitempty"`
 }
 
-type Mapdmr struct {
-	Bripv6prefix       string  `json:"bripv6prefix,omitempty"`
+type MapDMR struct {
+	BRIPv6Prefix       string  `json:"bripv6prefix,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 }
 
-type Rnat6Binding struct {
+type RNAT6Binding struct {
 	Name              string        `json:"name,omitempty"`
-	Rnat6Nsip6Binding []interface{} `json:"rnat6_nsip6_binding,omitempty"`
+	RNAT6NSIP6Binding []interface{} `json:"rnat6_nsip6_binding,omitempty"`
 }
 
-type VlanNsip6Binding struct {
-	Id         int    `json:"id,omitempty"`
-	Ipaddress  string `json:"ipaddress,omitempty"`
+type VLANNSIP6Binding struct {
+	ID         int    `json:"id,omitempty"`
+	IPAddress  string `json:"ipaddress,omitempty"`
 	Netmask    string `json:"netmask,omitempty"`
-	Ownergroup string `json:"ownergroup,omitempty"`
-	Td         int    `json:"td,omitempty"`
+	OwnerGroup string `json:"ownergroup,omitempty"`
+	TD         int    `json:"td,omitempty"`
 }
 
-type Nd6ravariablesOnlinkipv6prefixBinding struct {
-	Ipv6prefix string `json:"ipv6prefix,omitempty"`
-	Vlan       int    `json:"vlan,omitempty"`
+type ND6RAVariablesOnLinkIPv6PrefixBinding struct {
+	IPv6Prefix string `json:"ipv6prefix,omitempty"`
+	VLAN       int    `json:"vlan,omitempty"`
 }
 
-type Ptp struct {
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+type PTP struct {
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
 	State              string `json:"state,omitempty"`
 }
 
-type RnatNsipBinding struct {
+type RNATNSIPBinding struct {
 	Name       string `json:"name,omitempty"`
-	Natip      string `json:"natip,omitempty"`
-	Ownergroup string `json:"ownergroup,omitempty"`
-	Td         int    `json:"td,omitempty"`
+	NatIP      string `json:"natip,omitempty"`
+	OwnerGroup string `json:"ownergroup,omitempty"`
+	TD         int    `json:"td,omitempty"`
 }
 
-type Vrid6 struct {
+type VRID6 struct {
 	All                  bool    `json:"all,omitempty"`
 	Count                float64 `json:"__count,omitempty"`
-	Effectivepriority    int     `json:"effectivepriority,omitempty"`
+	EffectivePriority    int     `json:"effectivepriority,omitempty"`
 	Flags                int     `json:"flags,omitempty"`
-	Id                   int     `json:"id,omitempty"`
+	ID                   int     `json:"id,omitempty"`
 	Ifaces               string  `json:"ifaces,omitempty"`
-	Ifnum                string  `json:"ifnum,omitempty"`
-	Ipaddress            string  `json:"ipaddress,omitempty"`
-	Nextgenapiresource   string  `json:"_nextgenapiresource,omitempty"`
-	Operationalownernode int     `json:"operationalownernode,omitempty"`
-	Ownernode            int     `json:"ownernode,omitempty"`
+	IFNum                string  `json:"ifnum,omitempty"`
+	IPAddress            string  `json:"ipaddress,omitempty"`
+	NextGenAPIResource   string  `json:"_nextgenapiresource,omitempty"`
+	OperationalOwnerNode int     `json:"operationalownernode,omitempty"`
+	OwnerNode            int     `json:"ownernode,omitempty"`
 	Preemption           string  `json:"preemption,omitempty"`
-	Preemptiondelaytimer int     `json:"preemptiondelaytimer,omitempty"`
+	PreemptionDelayTimer int     `json:"preemptiondelaytimer,omitempty"`
 	Priority             int     `json:"priority,omitempty"`
 	Sharing              string  `json:"sharing,omitempty"`
 	State                int     `json:"state,omitempty"`
-	Trackifnumpriority   int     `json:"trackifnumpriority,omitempty"`
+	TrackIFNumPriority   int     `json:"trackifnumpriority,omitempty"`
 	Tracking             string  `json:"tracking,omitempty"`
 	TypeField            string  `json:"type,omitempty"`
 }
 
-type NetprofileNatruleBinding struct {
+type NetProfileNATRuleBinding struct {
 	Name      string `json:"name,omitempty"`
-	Natrule   string `json:"natrule,omitempty"`
+	NATRule   string `json:"natrule,omitempty"`
 	Netmask   string `json:"netmask,omitempty"`
-	Rewriteip string `json:"rewriteip,omitempty"`
+	RewriteIP string `json:"rewriteip,omitempty"`
 }
 
-type Iptunnel struct {
+type IPTunnel struct {
 	Channel            int      `json:"channel,omitempty"`
 	Count              float64  `json:"__count,omitempty"`
-	Destport           int      `json:"destport,omitempty"`
-	Encapip            string   `json:"encapip,omitempty"`
-	Grepayload         string   `json:"grepayload,omitempty"`
-	Ipsecprofilename   string   `json:"ipsecprofilename,omitempty"`
-	Ipsectunnelstatus  string   `json:"ipsectunnelstatus,omitempty"`
+	DestPort           int      `json:"destport,omitempty"`
+	EncapIP            string   `json:"encapip,omitempty"`
+	GREPayload         string   `json:"grepayload,omitempty"`
+	IPSECProfileName   string   `json:"ipsecprofilename,omitempty"`
+	IPSECTunnelStatus  string   `json:"ipsectunnelstatus,omitempty"`
 	Local              string   `json:"local,omitempty"`
 	Name               string   `json:"name,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
-	Ownergroup         string   `json:"ownergroup,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
+	OwnerGroup         string   `json:"ownergroup,omitempty"`
 	Protocol           string   `json:"protocol,omitempty"`
-	Refcnt             int      `json:"refcnt,omitempty"`
+	RefCnt             int      `json:"refcnt,omitempty"`
 	Remote             string   `json:"remote,omitempty"`
-	Remotesubnetmask   string   `json:"remotesubnetmask,omitempty"`
-	Sysname            string   `json:"sysname,omitempty"`
-	Tosinherit         string   `json:"tosinherit,omitempty"`
-	Tunneltype         []string `json:"tunneltype,omitempty"`
+	RemoteSubnetMask   string   `json:"remotesubnetmask,omitempty"`
+	SysName            string   `json:"sysname,omitempty"`
+	TOSInherit         string   `json:"tosinherit,omitempty"`
+	TunnelType         []string `json:"tunneltype,omitempty"`
 	TypeField          int      `json:"type,omitempty"`
-	Vlan               int      `json:"vlan,omitempty"`
-	Vlantagging        string   `json:"vlantagging,omitempty"`
-	Vnid               int      `json:"vnid,omitempty"`
+	VLAN               int      `json:"vlan,omitempty"`
+	VLANTagging        string   `json:"vlantagging,omitempty"`
+	VNID               int      `json:"vnid,omitempty"`
 }
 
-type NetprofileSrcportsetBinding struct {
+type NetProfileSrcPortSetBinding struct {
 	Name         string `json:"name,omitempty"`
-	Srcportrange string `json:"srcportrange,omitempty"`
+	SrcPortRange string `json:"srcportrange,omitempty"`
 }
 
-type L2param struct {
-	Bdggrpproxyarp          string `json:"bdggrpproxyarp,omitempty"`
-	Bdgsetting              string `json:"bdgsetting,omitempty"`
-	Bridgeagetimeout        int    `json:"bridgeagetimeout,omitempty"`
-	Garponvridintf          string `json:"garponvridintf,omitempty"`
-	Garpreply               string `json:"garpreply,omitempty"`
-	Macmodefwdmypkt         string `json:"macmodefwdmypkt,omitempty"`
-	Maxbridgecollision      int    `json:"maxbridgecollision,omitempty"`
-	Mbfinstlearning         string `json:"mbfinstlearning,omitempty"`
-	Mbfpeermacupdate        int    `json:"mbfpeermacupdate,omitempty"`
-	Nextgenapiresource      string `json:"_nextgenapiresource,omitempty"`
-	Proxyarp                string `json:"proxyarp,omitempty"`
-	Returntoethernetsender  string `json:"returntoethernetsender,omitempty"`
-	Rstintfonhafo           string `json:"rstintfonhafo,omitempty"`
-	Skipproxyingbsdtraffic  string `json:"skipproxyingbsdtraffic,omitempty"`
-	Stopmacmoveupdate       string `json:"stopmacmoveupdate,omitempty"`
-	Usemymac                string `json:"usemymac,omitempty"`
-	Usenetprofilebsdtraffic string `json:"usenetprofilebsdtraffic,omitempty"`
+type L2Param struct {
+	BdgGrpProxyARP          string `json:"bdggrpproxyarp,omitempty"`
+	BdgSetting              string `json:"bdgsetting,omitempty"`
+	BridgeAgeTimeout        int    `json:"bridgeagetimeout,omitempty"`
+	GARPOnVRIDIntf          string `json:"garponvridintf,omitempty"`
+	GARPReply               string `json:"garpreply,omitempty"`
+	MacModeFwdMyPkt         string `json:"macmodefwdmypkt,omitempty"`
+	MaxBridgeCollision      int    `json:"maxbridgecollision,omitempty"`
+	MBFInstLearning         string `json:"mbfinstlearning,omitempty"`
+	MBFPeerMACUpdate        int    `json:"mbfpeermacupdate,omitempty"`
+	NextGenAPIResource      string `json:"_nextgenapiresource,omitempty"`
+	ProxyARP                string `json:"proxyarp,omitempty"`
+	ReturnToEthernetSender  string `json:"returntoethernetsender,omitempty"`
+	RstIntfOnHAFO           string `json:"rstintfonhafo,omitempty"`
+	SkipProxyingBSDTraffic  string `json:"skipproxyingbsdtraffic,omitempty"`
+	StopMACMoveUpdate       string `json:"stopmacmoveupdate,omitempty"`
+	UseMyMAC                string `json:"usemymac,omitempty"`
+	UseNetProfileBSDTraffic string `json:"usenetprofilebsdtraffic,omitempty"`
 }
 
-type Nd6ravariablesBinding struct {
-	Nd6ravariablesOnlinkipv6prefixBinding []interface{} `json:"nd6ravariables_onlinkipv6prefix_binding,omitempty"`
-	Vlan                                  int           `json:"vlan,omitempty"`
+type ND6RAVariablesBinding struct {
+	ND6RAVariablesOnLinkIPv6PrefixBinding []interface{} `json:"nd6ravariables_onlinkipv6prefix_binding,omitempty"`
+	VLAN                                  int           `json:"vlan,omitempty"`
 }
 
-type Bridgegroup struct {
+type BridgeGroup struct {
 	Count              float64 `json:"__count,omitempty"`
-	Dynamicrouting     string  `json:"dynamicrouting,omitempty"`
+	DynamicRouting     string  `json:"dynamicrouting,omitempty"`
 	Flags              bool    `json:"flags,omitempty"`
-	Id                 int     `json:"id,omitempty"`
+	ID                 int     `json:"id,omitempty"`
 	Ifaces             string  `json:"ifaces,omitempty"`
-	Ipv6dynamicrouting string  `json:"ipv6dynamicrouting,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Partitionname      string  `json:"partitionname,omitempty"`
-	Portbitmap         int     `json:"portbitmap,omitempty"`
-	Rnat               bool    `json:"rnat,omitempty"`
-	Tagbitmap          int     `json:"tagbitmap,omitempty"`
-	Tagifaces          string  `json:"tagifaces,omitempty"`
+	IPv6DynamicRouting string  `json:"ipv6dynamicrouting,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	PartitionName      string  `json:"partitionname,omitempty"`
+	PortBitmap         int     `json:"portbitmap,omitempty"`
+	RNAT               bool    `json:"rnat,omitempty"`
+	TagBitmap          int     `json:"tagbitmap,omitempty"`
+	TagIfaces          string  `json:"tagifaces,omitempty"`
 }
 
-type IpsetNsip6Binding struct {
-	Ipaddress string `json:"ipaddress,omitempty"`
+type IPSetNSIP6Binding struct {
+	IPAddress string `json:"ipaddress,omitempty"`
 	Name      string `json:"name,omitempty"`
 }
 
-type Vrid6ChannelBinding struct {
+type VRID6ChannelBinding struct {
 	Flags int    `json:"flags,omitempty"`
-	Id    int    `json:"id,omitempty"`
-	Ifnum string `json:"ifnum,omitempty"`
-	Vlan  int    `json:"vlan,omitempty"`
+	ID    int    `json:"id,omitempty"`
+	IFNum string `json:"ifnum,omitempty"`
+	VLAN  int    `json:"vlan,omitempty"`
 }
 
 type ChannelBinding struct {
 	ChannelInterfaceBinding []interface{} `json:"channel_interface_binding,omitempty"`
-	Id                      string        `json:"id,omitempty"`
+	ID                      string        `json:"id,omitempty"`
 }
 
-type Rnat6 struct {
-	Acl6name           string  `json:"acl6name,omitempty"`
+type RNAT6 struct {
+	ACL6Name           string  `json:"acl6name,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
 	Network            string  `json:"network,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Ownergroup         string  `json:"ownergroup,omitempty"`
-	Redirectport       int     `json:"redirectport,omitempty"`
-	Srcippersistency   string  `json:"srcippersistency,omitempty"`
-	Td                 int     `json:"td,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	OwnerGroup         string  `json:"ownergroup,omitempty"`
+	RedirectPort       int     `json:"redirectport,omitempty"`
+	SrcIPPersistency   string  `json:"srcippersistency,omitempty"`
+	TD                 int     `json:"td,omitempty"`
 }
 
-type BridgegroupNsip6Binding struct {
-	Id         int    `json:"id,omitempty"`
-	Ipaddress  string `json:"ipaddress,omitempty"`
+type BridgeGroupNSIP6Binding struct {
+	ID         int    `json:"id,omitempty"`
+	IPAddress  string `json:"ipaddress,omitempty"`
 	Netmask    string `json:"netmask,omitempty"`
-	Ownergroup string `json:"ownergroup,omitempty"`
-	Rnat       bool   `json:"rnat,omitempty"`
-	Td         int    `json:"td,omitempty"`
+	OwnerGroup string `json:"ownergroup,omitempty"`
+	RNAT       bool   `json:"rnat,omitempty"`
+	TD         int    `json:"td,omitempty"`
 }
 
-type BridgegroupVlanBinding struct {
-	Id   int  `json:"id,omitempty"`
-	Rnat bool `json:"rnat,omitempty"`
-	Vlan int  `json:"vlan,omitempty"`
+type BridgeGroupVLANBinding struct {
+	ID   int  `json:"id,omitempty"`
+	RNAT bool `json:"rnat,omitempty"`
+	VLAN int  `json:"vlan,omitempty"`
 }
 
-type Nd6ravariables struct {
-	Ceaserouteradv           string  `json:"ceaserouteradv,omitempty"`
+type ND6RAVariables struct {
+	CeaseRouterAdv           string  `json:"ceaserouteradv,omitempty"`
 	Count                    float64 `json:"__count,omitempty"`
-	Currhoplimit             int     `json:"currhoplimit,omitempty"`
-	Defaultlifetime          int     `json:"defaultlifetime,omitempty"`
-	Lastrtadvtime            int     `json:"lastrtadvtime,omitempty"`
-	Linkmtu                  int     `json:"linkmtu,omitempty"`
-	Managedaddrconfig        string  `json:"managedaddrconfig,omitempty"`
-	Maxrtadvinterval         int     `json:"maxrtadvinterval,omitempty"`
-	Minrtadvinterval         int     `json:"minrtadvinterval,omitempty"`
-	Nextgenapiresource       string  `json:"_nextgenapiresource,omitempty"`
-	Nextrtadvdelay           int     `json:"nextrtadvdelay,omitempty"`
-	Onlyunicastrtadvresponse string  `json:"onlyunicastrtadvresponse,omitempty"`
-	Otheraddrconfig          string  `json:"otheraddrconfig,omitempty"`
-	Reachabletime            int     `json:"reachabletime,omitempty"`
-	Retranstime              int     `json:"retranstime,omitempty"`
-	Sendrouteradv            string  `json:"sendrouteradv,omitempty"`
-	Srclinklayeraddroption   string  `json:"srclinklayeraddroption,omitempty"`
-	Vlan                     int     `json:"vlan,omitempty"`
+	CurrHopLimit             int     `json:"currhoplimit,omitempty"`
+	DefaultLifetime          int     `json:"defaultlifetime,omitempty"`
+	LastRtAdvTime            int     `json:"lastrtadvtime,omitempty"`
+	LinkMTU                  int     `json:"linkmtu,omitempty"`
+	ManagedAddrConfig        string  `json:"managedaddrconfig,omitempty"`
+	MaxRtAdvInterval         int     `json:"maxrtadvinterval,omitempty"`
+	MinRtAdvInterval         int     `json:"minrtadvinterval,omitempty"`
+	NextGenAPIResource       string  `json:"_nextgenapiresource,omitempty"`
+	NextRtAdvDelay           int     `json:"nextrtadvdelay,omitempty"`
+	OnlyUnicastRtAdvResponse string  `json:"onlyunicastrtadvresponse,omitempty"`
+	OtherAddrConfig          string  `json:"otheraddrconfig,omitempty"`
+	ReachableTime            int     `json:"reachabletime,omitempty"`
+	RetransTime              int     `json:"retranstime,omitempty"`
+	SendRouterAdv            string  `json:"sendrouteradv,omitempty"`
+	SrcLinkLayerAddrOption   string  `json:"srclinklayeraddroption,omitempty"`
+	VLAN                     int     `json:"vlan,omitempty"`
 }
 
-type VridNsipBinding struct {
+type VRIDNSIPBinding struct {
 	Flags     int    `json:"flags,omitempty"`
-	Id        int    `json:"id,omitempty"`
-	Ipaddress string `json:"ipaddress,omitempty"`
+	ID        int    `json:"id,omitempty"`
+	IPAddress string `json:"ipaddress,omitempty"`
 }
 
-type VlanInterfaceBinding struct {
-	Id         int    `json:"id,omitempty"`
-	Ifnum      string `json:"ifnum,omitempty"`
-	Ownergroup string `json:"ownergroup,omitempty"`
+type VLANInterfaceBinding struct {
+	ID         int    `json:"id,omitempty"`
+	IFNum      string `json:"ifnum,omitempty"`
+	OwnerGroup string `json:"ownergroup,omitempty"`
 	Tagged     bool   `json:"tagged,omitempty"`
 }
 
-type Ip6tunnelparam struct {
-	Dropfrag             string `json:"dropfrag,omitempty"`
-	Dropfragcputhreshold int    `json:"dropfragcputhreshold,omitempty"`
-	Nextgenapiresource   string `json:"_nextgenapiresource,omitempty"`
-	Srcip                string `json:"srcip,omitempty"`
-	Srciproundrobin      string `json:"srciproundrobin,omitempty"`
-	Useclientsourceipv6  string `json:"useclientsourceipv6,omitempty"`
+type IP6TunnelParam struct {
+	DropFrag             string `json:"dropfrag,omitempty"`
+	DropFragCPUThreshold int    `json:"dropfragcputhreshold,omitempty"`
+	NextGenAPIResource   string `json:"_nextgenapiresource,omitempty"`
+	SrcIP                string `json:"srcip,omitempty"`
+	SrcIPRoundRobin      string `json:"srciproundrobin,omitempty"`
+	UseClientSourceIP    string `json:"useclientsourceipv6,omitempty"`
 }
 
-type Vrid6TrackinterfaceBinding struct {
+type VRID6TrackInterfaceBinding struct {
 	Flags      int    `json:"flags,omitempty"`
-	Id         int    `json:"id,omitempty"`
-	Trackifnum string `json:"trackifnum,omitempty"`
+	ID         int    `json:"id,omitempty"`
+	TrackIFNum string `json:"trackifnum,omitempty"`
 }
 
-type RnatglobalAuditsyslogpolicyBinding struct {
+type RNATGlobalAuditSyslogPolicyBinding struct {
 	All      bool   `json:"all,omitempty"`
 	Policy   string `json:"policy,omitempty"`
 	Priority int    `json:"priority,omitempty"`
 }
 
-type Arpparam struct {
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-	Spoofvalidation    string `json:"spoofvalidation,omitempty"`
+type ARPParam struct {
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
+	SpoofValidation    string `json:"spoofvalidation,omitempty"`
 	Timeout            int    `json:"timeout,omitempty"`
 }
 
 type Channel struct {
-	Actflowctl                string   `json:"actflowctl,omitempty"`
-	Actspeed                  string   `json:"actspeed,omitempty"`
-	Actthroughput             int      `json:"actthroughput,omitempty"`
-	Actualmtu                 int      `json:"actualmtu,omitempty"`
+	ActFlowCtl                string   `json:"actflowctl,omitempty"`
+	ActSpeed                  string   `json:"actspeed,omitempty"`
+	ActThroughput             int      `json:"actthroughput,omitempty"`
+	ActualMTU                 int      `json:"actualmtu,omitempty"`
 	Autoneg                   int      `json:"autoneg,omitempty"`
-	Autonegresult             int      `json:"autonegresult,omitempty"`
+	AutonegResult             int      `json:"autonegresult,omitempty"`
 	Backplane                 string   `json:"backplane,omitempty"`
-	Bandwidthhigh             int      `json:"bandwidthhigh,omitempty"`
-	Bandwidthnormal           int      `json:"bandwidthnormal,omitempty"`
-	Bdgmuted                  int      `json:"bdgmuted,omitempty"`
-	Cleartime                 int      `json:"cleartime,omitempty"`
-	Conndistr                 string   `json:"conndistr,omitempty"`
+	BandwidthHigh             int      `json:"bandwidthhigh,omitempty"`
+	BandwidthNormal           int      `json:"bandwidthnormal,omitempty"`
+	BdgMuted                  int      `json:"bdgmuted,omitempty"`
+	ClearTime                 int      `json:"cleartime,omitempty"`
+	ConnDistr                 string   `json:"conndistr,omitempty"`
 	Count                     float64  `json:"__count,omitempty"`
 	Description               string   `json:"description,omitempty"`
-	Devicename                string   `json:"devicename,omitempty"`
+	DeviceName                string   `json:"devicename,omitempty"`
 	Downtime                  int      `json:"downtime,omitempty"`
 	Duplex                    string   `json:"duplex,omitempty"`
-	Fctls                     int      `json:"fctls,omitempty"`
+	FCtls                     int      `json:"fctls,omitempty"`
 	Flags                     int      `json:"flags,omitempty"`
-	Flowctl                   string   `json:"flowctl,omitempty"`
-	Haheartbeat               string   `json:"haheartbeat,omitempty"`
-	Hamonitor                 string   `json:"hamonitor,omitempty"`
-	Hangdetect                int      `json:"hangdetect,omitempty"`
-	Hangreset                 int      `json:"hangreset,omitempty"`
+	FlowCtl                   string   `json:"flowctl,omitempty"`
+	HAHeartbeat               string   `json:"haheartbeat,omitempty"`
+	HAMonitor                 string   `json:"hamonitor,omitempty"`
+	HangDetect                int      `json:"hangdetect,omitempty"`
+	HangReset                 int      `json:"hangreset,omitempty"`
 	Hangs                     int      `json:"hangs,omitempty"`
-	Id                        string   `json:"id,omitempty"`
-	Ifalias                   string   `json:"ifalias,omitempty"`
-	Ifnum                     []string `json:"ifnum,omitempty"`
-	Indisc                    int      `json:"indisc,omitempty"`
-	Intfstate                 int      `json:"intfstate,omitempty"`
-	Lacpactoraggregation      string   `json:"lacpactoraggregation,omitempty"`
-	Lacpactorcollecting       string   `json:"lacpactorcollecting,omitempty"`
-	Lacpactordistributing     string   `json:"lacpactordistributing,omitempty"`
-	Lacpactorinsync           string   `json:"lacpactorinsync,omitempty"`
-	Lacpactorportno           int      `json:"lacpactorportno,omitempty"`
-	Lacpactorpriority         int      `json:"lacpactorpriority,omitempty"`
-	Lacpmode                  string   `json:"lacpmode,omitempty"`
-	Lacppartneraggregation    string   `json:"lacppartneraggregation,omitempty"`
-	Lacppartnercollecting     string   `json:"lacppartnercollecting,omitempty"`
-	Lacppartnerdefaulted      string   `json:"lacppartnerdefaulted,omitempty"`
-	Lacppartnerdistributing   string   `json:"lacppartnerdistributing,omitempty"`
-	Lacppartnerexpired        string   `json:"lacppartnerexpired,omitempty"`
-	Lacppartnerinsync         string   `json:"lacppartnerinsync,omitempty"`
-	Lacppartnerkey            int      `json:"lacppartnerkey,omitempty"`
-	Lacppartnerportno         int      `json:"lacppartnerportno,omitempty"`
-	Lacppartnerpriority       int      `json:"lacppartnerpriority,omitempty"`
-	Lacppartnerstate          string   `json:"lacppartnerstate,omitempty"`
-	Lacppartnersystemmac      string   `json:"lacppartnersystemmac,omitempty"`
-	Lacppartnersystempriority int      `json:"lacppartnersystempriority,omitempty"`
-	Lacppartnertimeout        string   `json:"lacppartnertimeout,omitempty"`
-	Lacpportmuxstate          string   `json:"lacpportmuxstate,omitempty"`
-	Lacpportrxstat            string   `json:"lacpportrxstat,omitempty"`
-	Lacpportselectstate       string   `json:"lacpportselectstate,omitempty"`
-	Lacptimeout               string   `json:"lacptimeout,omitempty"`
-	Lamac                     string   `json:"lamac,omitempty"`
-	Lamode                    string   `json:"lamode,omitempty"`
-	Linkredundancy            string   `json:"linkredundancy,omitempty"`
-	Linkstate                 int      `json:"linkstate,omitempty"`
-	Lldpmode                  string   `json:"lldpmode,omitempty"`
-	Lrminthroughput           int      `json:"lrminthroughput,omitempty"`
-	Mac                       string   `json:"mac,omitempty"`
-	Macdistr                  string   `json:"macdistr,omitempty"`
+	ID                        string   `json:"id,omitempty"`
+	IFAlias                   string   `json:"ifalias,omitempty"`
+	IFNum                     []string `json:"ifnum,omitempty"`
+	InDisc                    int      `json:"indisc,omitempty"`
+	IntfState                 int      `json:"intfstate,omitempty"`
+	LACPActorAggregation      string   `json:"lacpactoraggregation,omitempty"`
+	LACPActorCollecting       string   `json:"lacpactorcollecting,omitempty"`
+	LACPActorDistributing     string   `json:"lacpactordistributing,omitempty"`
+	LACPActorInSync           string   `json:"lacpactorinsync,omitempty"`
+	LACPActorPortNo           int      `json:"lacpactorportno,omitempty"`
+	LACPActorPriority         int      `json:"lacpactorpriority,omitempty"`
+	LACPMode                  string   `json:"lacpmode,omitempty"`
+	LACPPartnerAggregation    string   `json:"lacppartneraggregation,omitempty"`
+	LACPPartnerCollecting     string   `json:"lacppartnercollecting,omitempty"`
+	LACPPartnerDefaulted      string   `json:"lacppartnerdefaulted,omitempty"`
+	LACPPartnerDistributing   string   `json:"lacppartnerdistributing,omitempty"`
+	LACPPartnerExpired        string   `json:"lacppartnerexpired,omitempty"`
+	LACPPartnerInSync         string   `json:"lacppartnerinsync,omitempty"`
+	LACPPartnerKey            int      `json:"lacppartnerkey,omitempty"`
+	LACPPartnerPortNo         int      `json:"lacppartnerportno,omitempty"`
+	LACPPartnerPriority       int      `json:"lacppartnerpriority,omitempty"`
+	LACPPartnerState          string   `json:"lacppartnerstate,omitempty"`
+	LACPPartnerSystemMAC      string   `json:"lacppartnersystemmac,omitempty"`
+	LACPPartnerSystemPriority int      `json:"lacppartnersystempriority,omitempty"`
+	LACPPartnerTimeout        string   `json:"lacppartnertimeout,omitempty"`
+	LACPPortMuxState          string   `json:"lacpportmuxstate,omitempty"`
+	LACPPortRxStat            string   `json:"lacpportrxstat,omitempty"`
+	LACPPortSelectState       string   `json:"lacpportselectstate,omitempty"`
+	LACPTimeout               string   `json:"lacptimeout,omitempty"`
+	LAMAC                     string   `json:"lamac,omitempty"`
+	LAMode                    string   `json:"lamode,omitempty"`
+	LinkRedundancy            string   `json:"linkredundancy,omitempty"`
+	LinkState                 int      `json:"linkstate,omitempty"`
+	LLDPMode                  string   `json:"lldpmode,omitempty"`
+	LRMinThroughput           int      `json:"lrminthroughput,omitempty"`
+	MAC                       string   `json:"mac,omitempty"`
+	MACDistr                  string   `json:"macdistr,omitempty"`
 	Media                     string   `json:"media,omitempty"`
 	Mode                      string   `json:"mode,omitempty"`
-	Mtu                       int      `json:"mtu,omitempty"`
-	Nextgenapiresource        string   `json:"_nextgenapiresource,omitempty"`
-	Outdisc                   int      `json:"outdisc,omitempty"`
-	Reqduplex                 string   `json:"reqduplex,omitempty"`
-	Reqflowcontrol            string   `json:"reqflowcontrol,omitempty"`
-	Reqmedia                  string   `json:"reqmedia,omitempty"`
-	Reqspeed                  string   `json:"reqspeed,omitempty"`
-	Reqthroughput             int      `json:"reqthroughput,omitempty"`
-	Rxbytes                   int      `json:"rxbytes,omitempty"`
-	Rxdrops                   int      `json:"rxdrops,omitempty"`
-	Rxerrors                  int      `json:"rxerrors,omitempty"`
-	Rxpackets                 int      `json:"rxpackets,omitempty"`
-	Rxstalls                  int      `json:"rxstalls,omitempty"`
+	MTU                       int      `json:"mtu,omitempty"`
+	NextGenAPIResource        string   `json:"_nextgenapiresource,omitempty"`
+	OutDisc                   int      `json:"outdisc,omitempty"`
+	ReqDuplex                 string   `json:"reqduplex,omitempty"`
+	ReqFlowControl            string   `json:"reqflowcontrol,omitempty"`
+	ReqMedia                  string   `json:"reqmedia,omitempty"`
+	ReqSpeed                  string   `json:"reqspeed,omitempty"`
+	ReqThroughput             int      `json:"reqthroughput,omitempty"`
+	RxBytes                   int      `json:"rxbytes,omitempty"`
+	RxDrops                   int      `json:"rxdrops,omitempty"`
+	RxErrors                  int      `json:"rxerrors,omitempty"`
+	RxPackets                 int      `json:"rxpackets,omitempty"`
+	RxStalls                  int      `json:"rxstalls,omitempty"`
 	Speed                     string   `json:"speed,omitempty"`
 	State                     string   `json:"state,omitempty"`
-	Stsstalls                 int      `json:"stsstalls,omitempty"`
-	Tagall                    string   `json:"tagall,omitempty"`
+	StsStalls                 int      `json:"stsstalls,omitempty"`
+	TagAll                    string   `json:"tagall,omitempty"`
 	Tagged                    int      `json:"tagged,omitempty"`
-	Taggedany                 int      `json:"taggedany,omitempty"`
-	Taggedautolearn           int      `json:"taggedautolearn,omitempty"`
+	TaggedAny                 int      `json:"taggedany,omitempty"`
+	TaggedAutoLearn           int      `json:"taggedautolearn,omitempty"`
 	Throughput                int      `json:"throughput,omitempty"`
 	Trunk                     string   `json:"trunk,omitempty"`
-	Txbytes                   int      `json:"txbytes,omitempty"`
-	Txdrops                   int      `json:"txdrops,omitempty"`
-	Txerrors                  int      `json:"txerrors,omitempty"`
-	Txpackets                 int      `json:"txpackets,omitempty"`
-	Txstalls                  int      `json:"txstalls,omitempty"`
+	TxBytes                   int      `json:"txbytes,omitempty"`
+	TxDrops                   int      `json:"txdrops,omitempty"`
+	TxErrors                  int      `json:"txerrors,omitempty"`
+	TxPackets                 int      `json:"txpackets,omitempty"`
+	TxStalls                  int      `json:"txstalls,omitempty"`
 	Unit                      int      `json:"unit,omitempty"`
 	Uptime                    int      `json:"uptime,omitempty"`
-	Vlan                      int      `json:"vlan,omitempty"`
-	Vmac                      string   `json:"vmac,omitempty"`
-	Vmac6                     string   `json:"vmac6,omitempty"`
+	VLAN                      int      `json:"vlan,omitempty"`
+	VMAC                      string   `json:"vmac,omitempty"`
+	VMAC6                     string   `json:"vmac6,omitempty"`
 }
 
-type Netprofile struct {
-	Badipactionthreshold           int      `json:"badipactionthreshold,omitempty"`
+type NetProfile struct {
+	BadIPActionThreshold           int      `json:"badipactionthreshold,omitempty"`
 	Count                          float64  `json:"__count,omitempty"`
-	Mbf                            string   `json:"mbf,omitempty"`
+	MBF                            string   `json:"mbf,omitempty"`
 	Name                           string   `json:"name,omitempty"`
-	Nextgenapiresource             string   `json:"_nextgenapiresource,omitempty"`
-	Overridelsn                    string   `json:"overridelsn,omitempty"`
-	Proxyprotocol                  string   `json:"proxyprotocol,omitempty"`
-	Proxyprotocolaftertlshandshake string   `json:"proxyprotocolaftertlshandshake,omitempty"`
-	Proxyprotocoltlvoptions        []string `json:"proxyprotocoltlvoptions,omitempty"`
-	Proxyprotocoltxversion         string   `json:"proxyprotocoltxversion,omitempty"`
-	Srcip                          string   `json:"srcip,omitempty"`
-	Srcippersistency               string   `json:"srcippersistency,omitempty"`
-	Td                             int      `json:"td,omitempty"`
+	NextGenAPIResource             string   `json:"_nextgenapiresource,omitempty"`
+	OverrideLSN                    string   `json:"overridelsn,omitempty"`
+	ProxyProtocol                  string   `json:"proxyprotocol,omitempty"`
+	ProxyProtocolAfterTLSHandshake string   `json:"proxyprotocolaftertlshandshake,omitempty"`
+	ProxyProtocolTLVOptions        []string `json:"proxyprotocoltlvoptions,omitempty"`
+	ProxyProtocolTxVersion         string   `json:"proxyprotocoltxversion,omitempty"`
+	SrcIP                          string   `json:"srcip,omitempty"`
+	SrcIPPersistency               string   `json:"srcippersistency,omitempty"`
+	TD                             int      `json:"td,omitempty"`
 }
 
-type VxlanNsipBinding struct {
-	Id        int    `json:"id,omitempty"`
-	Ipaddress string `json:"ipaddress,omitempty"`
+type VXLANNSIPBinding struct {
+	ID        int    `json:"id,omitempty"`
+	IPAddress string `json:"ipaddress,omitempty"`
 	Netmask   string `json:"netmask,omitempty"`
 }
 
-type Rnat struct {
-	Aclname            string  `json:"aclname,omitempty"`
-	Connfailover       string  `json:"connfailover,omitempty"`
+type RNAT struct {
+	ACLName            string  `json:"aclname,omitempty"`
+	ConnFailover       string  `json:"connfailover,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Natip              string  `json:"natip,omitempty"`
+	NatIP              string  `json:"natip,omitempty"`
 	Netmask            string  `json:"netmask,omitempty"`
 	Network            string  `json:"network,omitempty"`
-	Newname            string  `json:"newname,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Ownergroup         string  `json:"ownergroup,omitempty"`
-	Redirectport       int     `json:"redirectport,omitempty"`
-	Srcippersistency   string  `json:"srcippersistency,omitempty"`
-	Td                 int     `json:"td,omitempty"`
-	Useproxyport       string  `json:"useproxyport,omitempty"`
+	NewName            string  `json:"newname,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	OwnerGroup         string  `json:"ownergroup,omitempty"`
+	RedirectPort       int     `json:"redirectport,omitempty"`
+	SrcIPPersistency   string  `json:"srcippersistency,omitempty"`
+	TD                 int     `json:"td,omitempty"`
+	UseProxyPort       string  `json:"useproxyport,omitempty"`
 }
 
-type Appalgparam struct {
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-	Pptpgreidletimeout int    `json:"pptpgreidletimeout,omitempty"`
+type AppALGParam struct {
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
+	PPTPGREIdleTimeout int    `json:"pptpgreidletimeout,omitempty"`
 }
 
-type Iptunnelparam struct {
-	Dropfrag             string `json:"dropfrag,omitempty"`
-	Dropfragcputhreshold int    `json:"dropfragcputhreshold,omitempty"`
-	Enablestrictrx       string `json:"enablestrictrx,omitempty"`
-	Enablestricttx       string `json:"enablestricttx,omitempty"`
-	Mac                  string `json:"mac,omitempty"`
-	Nextgenapiresource   string `json:"_nextgenapiresource,omitempty"`
-	Srcip                string `json:"srcip,omitempty"`
-	Srciproundrobin      string `json:"srciproundrobin,omitempty"`
-	Useclientsourceip    string `json:"useclientsourceip,omitempty"`
+type IPTunnelParam struct {
+	DropFrag             string `json:"dropfrag,omitempty"`
+	DropFragCPUThreshold int    `json:"dropfragcputhreshold,omitempty"`
+	EnableStrictRx       string `json:"enablestrictrx,omitempty"`
+	EnableStrictTx       string `json:"enablestricttx,omitempty"`
+	MAC                  string `json:"mac,omitempty"`
+	NextGenAPIResource   string `json:"_nextgenapiresource,omitempty"`
+	SrcIP                string `json:"srcip,omitempty"`
+	SrcIPRoundRobin      string `json:"srciproundrobin,omitempty"`
+	UseClientSourceIP    string `json:"useclientsourceip,omitempty"`
 }
 
-type VridNsip6Binding struct {
+type VRIDNSIP6Binding struct {
 	Flags     int    `json:"flags,omitempty"`
-	Id        int    `json:"id,omitempty"`
-	Ipaddress string `json:"ipaddress,omitempty"`
+	ID        int    `json:"id,omitempty"`
+	IPAddress string `json:"ipaddress,omitempty"`
 }
 
-type BridgegroupBinding struct {
-	BridgegroupNsip6Binding []interface{} `json:"bridgegroup_nsip6_binding,omitempty"`
-	BridgegroupNsipBinding  []interface{} `json:"bridgegroup_nsip_binding,omitempty"`
-	BridgegroupVlanBinding  []interface{} `json:"bridgegroup_vlan_binding,omitempty"`
-	Id                      int           `json:"id,omitempty"`
+type BridgeGroupBinding struct {
+	BridgeGroupNSIP6Binding []interface{} `json:"bridgegroup_nsip6_binding,omitempty"`
+	BridgeGroupNSIPBinding  []interface{} `json:"bridgegroup_nsip_binding,omitempty"`
+	BridgeGroupVLANBinding  []interface{} `json:"bridgegroup_vlan_binding,omitempty"`
+	ID                      int           `json:"id,omitempty"`
 }
 
-type Ipset struct {
+type IPSet struct {
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Td                 int     `json:"td,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	TD                 int     `json:"td,omitempty"`
 }
 
-type Arp struct {
+type ARP struct {
 	All                bool    `json:"all,omitempty"`
 	Channel            int     `json:"channel,omitempty"`
-	Controlplane       bool    `json:"controlplane,omitempty"`
+	ControlPlane       bool    `json:"controlplane,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
 	Flags              int     `json:"flags,omitempty"`
-	Ifnum              string  `json:"ifnum,omitempty"`
-	Ipaddress          string  `json:"ipaddress,omitempty"`
-	Mac                string  `json:"mac,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Nodeid             int     `json:"nodeid,omitempty"`
-	Ownernode          int     `json:"ownernode,omitempty"`
+	IFNum              string  `json:"ifnum,omitempty"`
+	IPAddress          string  `json:"ipaddress,omitempty"`
+	MAC                string  `json:"mac,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	NodeID             int     `json:"nodeid,omitempty"`
+	OwnerNode          int     `json:"ownernode,omitempty"`
 	State              int     `json:"state,omitempty"`
-	Td                 int     `json:"td,omitempty"`
+	TD                 int     `json:"td,omitempty"`
 	Timeout            int     `json:"timeout,omitempty"`
 	TypeField          string  `json:"type,omitempty"`
-	Vlan               int     `json:"vlan,omitempty"`
-	Vtep               string  `json:"vtep,omitempty"`
-	Vxlan              int     `json:"vxlan,omitempty"`
+	VLAN               int     `json:"vlan,omitempty"`
+	VTEP               string  `json:"vtep,omitempty"`
+	VXLAN              int     `json:"vxlan,omitempty"`
 }
 
-type Inatparam struct {
+type INATParam struct {
 	Count              float64 `json:"__count,omitempty"`
-	Nat46fragheader    string  `json:"nat46fragheader,omitempty"`
-	Nat46ignoretos     string  `json:"nat46ignoretos,omitempty"`
-	Nat46v6mtu         int     `json:"nat46v6mtu,omitempty"`
-	Nat46v6prefix      string  `json:"nat46v6prefix,omitempty"`
-	Nat46zerochecksum  string  `json:"nat46zerochecksum,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Td                 int     `json:"td,omitempty"`
+	Nat46FragHeader    string  `json:"nat46fragheader,omitempty"`
+	Nat46IgnoreTOS     string  `json:"nat46ignoretos,omitempty"`
+	Nat46V6MTU         int     `json:"nat46v6mtu,omitempty"`
+	Nat46V6Prefix      string  `json:"nat46v6prefix,omitempty"`
+	Nat46ZeroChecksum  string  `json:"nat46zerochecksum,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	TD                 int     `json:"td,omitempty"`
 }
 
-type L3param struct {
-	Acllogtime           int    `json:"acllogtime,omitempty"`
-	Allowclasseipv4      string `json:"allowclasseipv4,omitempty"`
-	Dropdfflag           string `json:"dropdfflag,omitempty"`
-	Dropipfragments      string `json:"dropipfragments,omitempty"`
-	Dynamicrouting       string `json:"dynamicrouting,omitempty"`
-	Externalloopback     string `json:"externalloopback,omitempty"`
-	Forwardicmpfragments string `json:"forwardicmpfragments,omitempty"`
-	Icmpgenratethreshold int    `json:"icmpgenratethreshold,omitempty"`
-	Implicitaclallow     string `json:"implicitaclallow,omitempty"`
-	Implicitpbr          string `json:"implicitpbr,omitempty"`
-	Ipv6dynamicrouting   string `json:"ipv6dynamicrouting,omitempty"`
-	Miproundrobin        string `json:"miproundrobin,omitempty"`
-	Nextgenapiresource   string `json:"_nextgenapiresource,omitempty"`
-	Overridernat         string `json:"overridernat,omitempty"`
-	Srcnat               string `json:"srcnat,omitempty"`
-	Tnlpmtuwoconn        string `json:"tnlpmtuwoconn,omitempty"`
-	Usipserverstraypkt   string `json:"usipserverstraypkt,omitempty"`
+type L3Param struct {
+	ACLLogTime           int    `json:"acllogtime,omitempty"`
+	AllowClassEIPv4      string `json:"allowclasseipv4,omitempty"`
+	DropDFFlag           string `json:"dropdfflag,omitempty"`
+	DropIPFragments      string `json:"dropipfragments,omitempty"`
+	DynamicRouting       string `json:"dynamicrouting,omitempty"`
+	ExternalLoopback     string `json:"externalloopback,omitempty"`
+	ForwardICMPFragments string `json:"forwardicmpfragments,omitempty"`
+	ICMPGenRateThreshold int    `json:"icmpgenratethreshold,omitempty"`
+	ImplicitACLAllow     string `json:"implicitaclallow,omitempty"`
+	ImplicitPBR          string `json:"implicitpbr,omitempty"`
+	IPv6DynamicRouting   string `json:"ipv6dynamicrouting,omitempty"`
+	MIPRoundRobin        string `json:"miproundrobin,omitempty"`
+	NextGenAPIResource   string `json:"_nextgenapiresource,omitempty"`
+	OverrideRNAT         string `json:"overridernat,omitempty"`
+	SrcNat               string `json:"srcnat,omitempty"`
+	TNLPmtuWOConn        string `json:"tnlpmtuwoconn,omitempty"`
+	USIPServerStrayPkt   string `json:"usipserverstraypkt,omitempty"`
 }
 
-type Nat64param struct {
+type NAT64Param struct {
 	Count              float64 `json:"__count,omitempty"`
-	Nat64fragheader    string  `json:"nat64fragheader,omitempty"`
-	Nat64ignoretos     string  `json:"nat64ignoretos,omitempty"`
-	Nat64v6mtu         int     `json:"nat64v6mtu,omitempty"`
-	Nat64zerochecksum  string  `json:"nat64zerochecksum,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Td                 int     `json:"td,omitempty"`
+	Nat64FragHeader    string  `json:"nat64fragheader,omitempty"`
+	Nat64IgnoreTOS     string  `json:"nat64ignoretos,omitempty"`
+	Nat64V6MTU         int     `json:"nat64v6mtu,omitempty"`
+	Nat64ZeroChecksum  string  `json:"nat64zerochecksum,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	TD                 int     `json:"td,omitempty"`
 }
 
-type Lacp struct {
-	Clustermac         string  `json:"clustermac,omitempty"`
-	Clustersyspriority int     `json:"clustersyspriority,omitempty"`
+type LACP struct {
+	ClusterMAC         string  `json:"clustermac,omitempty"`
+	ClusterSysPriority int     `json:"clustersyspriority,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Devicename         string  `json:"devicename,omitempty"`
+	DeviceName         string  `json:"devicename,omitempty"`
 	Flags              int     `json:"flags,omitempty"`
-	Lacpkey            int     `json:"lacpkey,omitempty"`
-	Mac                string  `json:"mac,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Ownernode          int     `json:"ownernode,omitempty"`
-	Syspriority        int     `json:"syspriority,omitempty"`
+	LACPKey            int     `json:"lacpkey,omitempty"`
+	MAC                string  `json:"mac,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	OwnerNode          int     `json:"ownernode,omitempty"`
+	SysPriority        int     `json:"syspriority,omitempty"`
 }
 
-type Mapdomain struct {
+type MapDomain struct {
 	Count              float64 `json:"__count,omitempty"`
-	Mapdmrname         string  `json:"mapdmrname,omitempty"`
+	MapDMRName         string  `json:"mapdmrname,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 }
 
-type Forwardingsession struct {
-	Acl6name           string  `json:"acl6name,omitempty"`
-	Aclname            string  `json:"aclname,omitempty"`
-	Connfailover       string  `json:"connfailover,omitempty"`
+type ForwardingSession struct {
+	ACL6Name           string  `json:"acl6name,omitempty"`
+	ACLName            string  `json:"aclname,omitempty"`
+	ConnFailover       string  `json:"connfailover,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
 	Netmask            string  `json:"netmask,omitempty"`
 	Network            string  `json:"network,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Processlocal       string  `json:"processlocal,omitempty"`
-	Sourceroutecache   string  `json:"sourceroutecache,omitempty"`
-	Td                 int     `json:"td,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	ProcessLocal       string  `json:"processlocal,omitempty"`
+	SourceRouteCache   string  `json:"sourceroutecache,omitempty"`
+	TD                 int     `json:"td,omitempty"`
 }
 
 type Route6 struct {
 	Active             bool     `json:"active,omitempty"`
 	Advertise          string   `json:"advertise,omitempty"`
-	Bgp                bool     `json:"bgp,omitempty"`
+	BGP                bool     `json:"bgp,omitempty"`
 	Connected          bool     `json:"connected,omitempty"`
 	Cost               int      `json:"cost,omitempty"`
 	Count              float64  `json:"__count,omitempty"`
@@ -539,721 +539,723 @@ type Route6 struct {
 	Detail             bool     `json:"detail,omitempty"`
 	Distance           int      `json:"distance,omitempty"`
 	Dynamic            bool     `json:"dynamic,omitempty"`
-	Failedprobes       int      `json:"failedprobes,omitempty"`
+	FailedProbes       int      `json:"failedprobes,omitempty"`
 	Flags              bool     `json:"flags,omitempty"`
 	Gateway            string   `json:"gateway,omitempty"`
-	Gatewayname        string   `json:"gatewayname,omitempty"`
-	Isis               bool     `json:"isis,omitempty"`
+	GatewayName        string   `json:"gatewayname,omitempty"`
+	ISIS               bool     `json:"isis,omitempty"`
 	Mgmt               bool     `json:"mgmt,omitempty"`
 	Monitor            string   `json:"monitor,omitempty"`
-	Monstatcode        int      `json:"monstatcode,omitempty"`
-	Monstatparam1      int      `json:"monstatparam1,omitempty"`
-	Monstatparam2      int      `json:"monstatparam2,omitempty"`
-	Monstatparam3      int      `json:"monstatparam3,omitempty"`
-	Msr                string   `json:"msr,omitempty"`
+	MonStatCode        int      `json:"monstatcode,omitempty"`
+	MonStatParam1      int      `json:"monstatparam1,omitempty"`
+	MonStatParam2      int      `json:"monstatparam2,omitempty"`
+	MonStatParam3      int      `json:"monstatparam3,omitempty"`
+	MSR                string   `json:"msr,omitempty"`
 	Network            string   `json:"network,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
-	Ospfv3             bool     `json:"ospfv3,omitempty"`
-	Ownergroup         string   `json:"ownergroup,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
+	OSPFv3             bool     `json:"ospfv3,omitempty"`
+	OwnerGroup         string   `json:"ownergroup,omitempty"`
 	Permanent          bool     `json:"permanent,omitempty"`
-	Raroute            bool     `json:"raroute,omitempty"`
+	RARoute            bool     `json:"raroute,omitempty"`
 	Retain             int      `json:"retain,omitempty"`
-	Rip                bool     `json:"rip,omitempty"`
-	Routeowners        []string `json:"routeowners,omitempty"`
-	Routetype          string   `json:"routetype,omitempty"`
+	RIP                bool     `json:"rip,omitempty"`
+	RouteOwners        []string `json:"routeowners,omitempty"`
+	RouteType          string   `json:"routetype,omitempty"`
 	State              int      `json:"state,omitempty"`
 	Static             bool     `json:"Static,omitempty"`
-	Td                 int      `json:"td,omitempty"`
-	Totalfailedprobes  int      `json:"totalfailedprobes,omitempty"`
-	Totalprobes        int      `json:"totalprobes,omitempty"`
+	TD                 int      `json:"td,omitempty"`
+	TotalFailedProbes  int      `json:"totalfailedprobes,omitempty"`
+	TotalProbes        int      `json:"totalprobes,omitempty"`
 	TypeField          bool     `json:"type,omitempty"`
-	Vlan               int      `json:"vlan,omitempty"`
-	Vxlan              int      `json:"vxlan,omitempty"`
+	VLAN               int      `json:"vlan,omitempty"`
+	VXLAN              int      `json:"vxlan,omitempty"`
 	Weight             int      `json:"weight,omitempty"`
 }
 
-type VlanLinksetBinding struct {
-	Id         int    `json:"id,omitempty"`
-	Ifnum      string `json:"ifnum,omitempty"`
-	Ownergroup string `json:"ownergroup,omitempty"`
+type VLANLinkSetBinding struct {
+	ID         int    `json:"id,omitempty"`
+	IFNum      string `json:"ifnum,omitempty"`
+	OwnerGroup string `json:"ownergroup,omitempty"`
 	Tagged     bool   `json:"tagged,omitempty"`
 }
 
-type VlanChannelBinding struct {
-	Id         int    `json:"id,omitempty"`
-	Ifnum      string `json:"ifnum,omitempty"`
-	Ownergroup string `json:"ownergroup,omitempty"`
+type VLANChannelBinding struct {
+	ID         int    `json:"id,omitempty"`
+	IFNum      string `json:"ifnum,omitempty"`
+	OwnerGroup string `json:"ownergroup,omitempty"`
 	Tagged     bool   `json:"tagged,omitempty"`
 }
 
-type FisBinding struct {
-	FisChannelBinding []interface{} `json:"fis_channel_binding,omitempty"`
+type FISBinding struct {
+	FISChannelBinding []interface{} `json:"fis_channel_binding,omitempty"`
 	Name              string        `json:"name,omitempty"`
 }
 
-type VxlanIptunnelBinding struct {
-	Id     int    `json:"id,omitempty"`
+type VXLANIPTunnelBinding struct {
+	ID     int    `json:"id,omitempty"`
 	Tunnel string `json:"tunnel,omitempty"`
 }
 
-type NetprofileBinding struct {
+type NetProfileBinding struct {
 	Name                        string        `json:"name,omitempty"`
-	NetprofileNatruleBinding    []interface{} `json:"netprofile_natrule_binding,omitempty"`
-	NetprofileSrcportsetBinding []interface{} `json:"netprofile_srcportset_binding,omitempty"`
+	NetProfileNATRuleBinding    []interface{} `json:"netprofile_natrule_binding,omitempty"`
+	NetProfileSrcPortSetBinding []interface{} `json:"netprofile_srcportset_binding,omitempty"`
 }
 
-type VxlanvlanmapVxlanBinding struct {
+type VXLANVLANMapVXLANBinding struct {
 	Name  string   `json:"name,omitempty"`
-	Vlan  []string `json:"vlan,omitempty"`
-	Vxlan int      `json:"vxlan,omitempty"`
+	VLAN  []string `json:"vlan,omitempty"`
+	VXLAN int      `json:"vxlan,omitempty"`
 }
 
-type Netbridge struct {
+type NetBridge struct {
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Vxlanvlanmap       string  `json:"vxlanvlanmap,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	VXLANVLANMap       string  `json:"vxlanvlanmap,omitempty"`
 }
 
-type Vridparam struct {
-	Deadinterval       int    `json:"deadinterval,omitempty"`
-	Hellointerval      int    `json:"hellointerval,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-	Sendtomaster       string `json:"sendtomaster,omitempty"`
+type VRIDParam struct {
+	DeadInterval       int    `json:"deadinterval,omitempty"`
+	HelloInterval      int    `json:"hellointerval,omitempty"`
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
+	SendToMaster       string `json:"sendtomaster,omitempty"`
 }
 
-type VxlanSrcipBinding struct {
-	Id    int    `json:"id,omitempty"`
-	Srcip string `json:"srcip,omitempty"`
+type VXLANSrcIPBinding struct {
+	ID    int    `json:"id,omitempty"`
+	SrcIP string `json:"srcip,omitempty"`
 }
 
-type IpsetBinding struct {
-	IpsetNsip6Binding []interface{} `json:"ipset_nsip6_binding,omitempty"`
-	IpsetNsipBinding  []interface{} `json:"ipset_nsip_binding,omitempty"`
+type IPSetBinding struct {
+	IPSetNSIP6Binding []interface{} `json:"ipset_nsip6_binding,omitempty"`
+	IPSetNSIPBinding  []interface{} `json:"ipset_nsip_binding,omitempty"`
 	Name              string        `json:"name,omitempty"`
 }
 
-type Nat64 struct {
-	Acl6name           string  `json:"acl6name,omitempty"`
+type NAT64 struct {
+	ACL6Name           string  `json:"acl6name,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Netprofile         string  `json:"netprofile,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NetProfile         string  `json:"netprofile,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 }
 
-type Rnatsession struct {
-	Aclname string `json:"aclname,omitempty"`
-	Natip   string `json:"natip,omitempty"`
+type RNATSession struct {
+	ACLName string `json:"aclname,omitempty"`
+	NatIP   string `json:"natip,omitempty"`
 	Netmask string `json:"netmask,omitempty"`
 	Network string `json:"network,omitempty"`
 }
 
-type Vxlan struct {
+type VXLAN struct {
 	Count              float64 `json:"__count,omitempty"`
-	Dynamicrouting     string  `json:"dynamicrouting,omitempty"`
-	Id                 int     `json:"id,omitempty"`
-	Innervlantagging   string  `json:"innervlantagging,omitempty"`
-	Ipv6dynamicrouting string  `json:"ipv6dynamicrouting,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Partitionname      string  `json:"partitionname,omitempty"`
+	DynamicRouting     string  `json:"dynamicrouting,omitempty"`
+	ID                 int     `json:"id,omitempty"`
+	InnerVLANTagging   string  `json:"innervlantagging,omitempty"`
+	IPv6DynamicRouting string  `json:"ipv6dynamicrouting,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	PartitionName      string  `json:"partitionname,omitempty"`
 	Port               int     `json:"port,omitempty"`
 	Protocol           string  `json:"protocol,omitempty"`
-	Td                 int     `json:"td,omitempty"`
+	TD                 int     `json:"td,omitempty"`
 	TypeField          string  `json:"type,omitempty"`
-	Vlan               int     `json:"vlan,omitempty"`
+	VLAN               int     `json:"vlan,omitempty"`
 }
 
-type FisInterfaceBinding struct {
-	Ifnum     string `json:"ifnum,omitempty"`
+type FISInterfaceBinding struct {
+	IFNum     string `json:"ifnum,omitempty"`
 	Name      string `json:"name,omitempty"`
-	Ownernode int    `json:"ownernode,omitempty"`
+	OwnerNode int    `json:"ownernode,omitempty"`
 }
 
-type VridChannelBinding struct {
+type VRIDChannelBinding struct {
 	Flags int    `json:"flags,omitempty"`
-	Id    int    `json:"id,omitempty"`
-	Ifnum string `json:"ifnum,omitempty"`
-	Vlan  int    `json:"vlan,omitempty"`
+	ID    int    `json:"id,omitempty"`
+	IFNum string `json:"ifnum,omitempty"`
+	VLAN  int    `json:"vlan,omitempty"`
 }
 
-type VridBinding struct {
-	Id                        int           `json:"id,omitempty"`
-	VridChannelBinding        []interface{} `json:"vrid_channel_binding,omitempty"`
-	VridInterfaceBinding      []interface{} `json:"vrid_interface_binding,omitempty"`
-	VridNsip6Binding          []interface{} `json:"vrid_nsip6_binding,omitempty"`
-	VridNsipBinding           []interface{} `json:"vrid_nsip_binding,omitempty"`
-	VridTrackinterfaceBinding []interface{} `json:"vrid_trackinterface_binding,omitempty"`
+type VRIDBinding struct {
+	ID                        int           `json:"id,omitempty"`
+	VRIDChannelBinding        []interface{} `json:"vrid_channel_binding,omitempty"`
+	VRIDInterfaceBinding      []interface{} `json:"vrid_interface_binding,omitempty"`
+	VRIDNSIP6Binding          []interface{} `json:"vrid_nsip6_binding,omitempty"`
+	VRIDNSIPBinding           []interface{} `json:"vrid_nsip_binding,omitempty"`
+	VRIDTrackInterfaceBinding []interface{} `json:"vrid_trackinterface_binding,omitempty"`
 }
 
-type NetbridgeIptunnelBinding struct {
+type NetBridgeIPTunnelBinding struct {
 	Name   string `json:"name,omitempty"`
 	Tunnel string `json:"tunnel,omitempty"`
 }
 
-type IpsetNsipBinding struct {
-	Ipaddress string `json:"ipaddress,omitempty"`
+type IPSetNSIPBinding struct {
+	IPAddress string `json:"ipaddress,omitempty"`
 	Name      string `json:"name,omitempty"`
 }
 
-type VlanNsipBinding struct {
-	Id         int    `json:"id,omitempty"`
-	Ipaddress  string `json:"ipaddress,omitempty"`
+type VLANNSIPBinding struct {
+	ID         int    `json:"id,omitempty"`
+	IPAddress  string `json:"ipaddress,omitempty"`
 	Netmask    string `json:"netmask,omitempty"`
-	Ownergroup string `json:"ownergroup,omitempty"`
-	Td         int    `json:"td,omitempty"`
+	OwnerGroup string `json:"ownergroup,omitempty"`
+	TD         int    `json:"td,omitempty"`
 }
 
-type LinksetInterfaceBinding struct {
-	Id    string `json:"id,omitempty"`
-	Ifnum string `json:"ifnum,omitempty"`
+type LinkSetInterfaceBinding struct {
+	ID    string `json:"id,omitempty"`
+	IFNum string `json:"ifnum,omitempty"`
 }
 
-type VridTrackinterfaceBinding struct {
+type VRIDTrackInterfaceBinding struct {
 	Flags      int    `json:"flags,omitempty"`
-	Id         int    `json:"id,omitempty"`
-	Trackifnum string `json:"trackifnum,omitempty"`
+	ID         int    `json:"id,omitempty"`
+	TrackIFNum string `json:"trackifnum,omitempty"`
 }
 
-type Vrid6Binding struct {
-	Id                         int           `json:"id,omitempty"`
-	Vrid6ChannelBinding        []interface{} `json:"vrid6_channel_binding,omitempty"`
-	Vrid6InterfaceBinding      []interface{} `json:"vrid6_interface_binding,omitempty"`
-	Vrid6Nsip6Binding          []interface{} `json:"vrid6_nsip6_binding,omitempty"`
-	Vrid6NsipBinding           []interface{} `json:"vrid6_nsip_binding,omitempty"`
-	Vrid6TrackinterfaceBinding []interface{} `json:"vrid6_trackinterface_binding,omitempty"`
+type VRID6Binding struct {
+	ID                         int           `json:"id,omitempty"`
+	VRID6ChannelBinding        []interface{} `json:"vrid6_channel_binding,omitempty"`
+	VRID6InterfaceBinding      []interface{} `json:"vrid6_interface_binding,omitempty"`
+	VRID6NSIP6Binding          []interface{} `json:"vrid6_nsip6_binding,omitempty"`
+	VRID6NSIPBinding           []interface{} `json:"vrid6_nsip_binding,omitempty"`
+	VRID6TrackInterfaceBinding []interface{} `json:"vrid6_trackinterface_binding,omitempty"`
 }
 
-type NetbridgeNsipBinding struct {
-	Ipaddress string `json:"ipaddress,omitempty"`
+type NetBridgeNSIPBinding struct {
+	IPAddress string `json:"ipaddress,omitempty"`
 	Name      string `json:"name,omitempty"`
 	Netmask   string `json:"netmask,omitempty"`
 }
 
-type Rsskeytype struct {
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-	Rsstype            string `json:"rsstype,omitempty"`
+type RSSKeyType struct {
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
+	RSSType            string `json:"rsstype,omitempty"`
 }
 
-type MapbmrBmrv4networkBinding struct {
+type MapBMRBMRV4NetworkBinding struct {
 	Name    string `json:"name,omitempty"`
 	Netmask string `json:"netmask,omitempty"`
 	Network string `json:"network,omitempty"`
 }
 
-type Rnat6Nsip6Binding struct {
+type RNAT6NSIP6Binding struct {
 	Name       string `json:"name,omitempty"`
-	Natip6     string `json:"natip6,omitempty"`
-	Ownergroup string `json:"ownergroup,omitempty"`
-	Td         int    `json:"td,omitempty"`
+	NatIP6     string `json:"natip6,omitempty"`
+	OwnerGroup string `json:"ownergroup,omitempty"`
+	TD         int    `json:"td,omitempty"`
 }
 
 type Route struct {
 	Adv                bool     `json:"adv,omitempty"`
-	Advbgp             bool     `json:"advbgp,omitempty"`
+	AdvBGP             bool     `json:"advbgp,omitempty"`
 	Advertise          string   `json:"advertise,omitempty"`
-	Advisis            bool     `json:"advisis,omitempty"`
-	Advospf            bool     `json:"advospf,omitempty"`
-	Advrip             bool     `json:"advrip,omitempty"`
-	Bgp                bool     `json:"bgp,omitempty"`
+	AdvISIS            bool     `json:"advisis,omitempty"`
+	AdvOSPF            bool     `json:"advospf,omitempty"`
+	AdvRIP             bool     `json:"advrip,omitempty"`
+	BGP                bool     `json:"bgp,omitempty"`
 	Cost               int      `json:"cost,omitempty"`
 	Cost1              int      `json:"cost1,omitempty"`
 	Count              float64  `json:"__count,omitempty"`
 	Data               bool     `json:"data,omitempty"`
 	Data0              bool     `json:"data0,omitempty"`
 	Detail             bool     `json:"detail,omitempty"`
-	Dhcp               bool     `json:"dhcp,omitempty"`
+	DHCP               bool     `json:"dhcp,omitempty"`
 	Direct             bool     `json:"direct,omitempty"`
 	Distance           int      `json:"distance,omitempty"`
 	Dynamic            bool     `json:"dynamic,omitempty"`
-	Failedprobes       int      `json:"failedprobes,omitempty"`
+	FailedProbes       int      `json:"failedprobes,omitempty"`
 	Flags              bool     `json:"flags,omitempty"`
 	Gateway            string   `json:"gateway,omitempty"`
-	Gatewayname        string   `json:"gatewayname,omitempty"`
-	Isis               bool     `json:"isis,omitempty"`
-	Lbroute            bool     `json:"lbroute,omitempty"`
+	GatewayName        string   `json:"gatewayname,omitempty"`
+	ISIS               bool     `json:"isis,omitempty"`
+	LBRoute            bool     `json:"lbroute,omitempty"`
 	Mgmt               bool     `json:"mgmt,omitempty"`
 	Monitor            string   `json:"monitor,omitempty"`
-	Monstatcode        int      `json:"monstatcode,omitempty"`
-	Monstatparam1      int      `json:"monstatparam1,omitempty"`
-	Monstatparam2      int      `json:"monstatparam2,omitempty"`
-	Monstatparam3      int      `json:"monstatparam3,omitempty"`
-	Msr                string   `json:"msr,omitempty"`
-	Nat                bool     `json:"nat,omitempty"`
+	MonStatCode        int      `json:"monstatcode,omitempty"`
+	MonStatParam1      int      `json:"monstatparam1,omitempty"`
+	MonStatParam2      int      `json:"monstatparam2,omitempty"`
+	MonStatParam3      int      `json:"monstatparam3,omitempty"`
+	MSR                string   `json:"msr,omitempty"`
+	NAT                bool     `json:"nat,omitempty"`
 	Netmask            string   `json:"netmask,omitempty"`
 	Network            string   `json:"network,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
-	Ospf               bool     `json:"ospf,omitempty"`
-	Ownergroup         string   `json:"ownergroup,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
+	OSPF               bool     `json:"ospf,omitempty"`
+	OwnerGroup         string   `json:"ownergroup,omitempty"`
 	Permanent          bool     `json:"permanent,omitempty"`
 	Protocol           []string `json:"protocol,omitempty"`
 	Retain             int      `json:"retain,omitempty"`
-	Rip                bool     `json:"rip,omitempty"`
-	Routeowners        []string `json:"routeowners,omitempty"`
-	Routetype          string   `json:"routetype,omitempty"`
+	RIP                bool     `json:"rip,omitempty"`
+	RouteOwners        []string `json:"routeowners,omitempty"`
+	RouteType          string   `json:"routetype,omitempty"`
 	State              int      `json:"state,omitempty"`
 	Static             bool     `json:"Static,omitempty"`
-	Td                 int      `json:"td,omitempty"`
-	Totalfailedprobes  int      `json:"totalfailedprobes,omitempty"`
-	Totalprobes        int      `json:"totalprobes,omitempty"`
+	TD                 int      `json:"td,omitempty"`
+	TotalFailedProbes  int      `json:"totalfailedprobes,omitempty"`
+	TotalProbes        int      `json:"totalprobes,omitempty"`
 	Tunnel             bool     `json:"tunnel,omitempty"`
 	TypeField          bool     `json:"type,omitempty"`
-	Vlan               int      `json:"vlan,omitempty"`
+	VLAN               int      `json:"vlan,omitempty"`
 	Weight             int      `json:"weight,omitempty"`
 }
 
-type NetbridgeBinding struct {
+type NetBridgeBinding struct {
 	Name                     string        `json:"name,omitempty"`
-	NetbridgeIptunnelBinding []interface{} `json:"netbridge_iptunnel_binding,omitempty"`
-	NetbridgeNsip6Binding    []interface{} `json:"netbridge_nsip6_binding,omitempty"`
-	NetbridgeNsipBinding     []interface{} `json:"netbridge_nsip_binding,omitempty"`
-	NetbridgeVlanBinding     []interface{} `json:"netbridge_vlan_binding,omitempty"`
+	NetBridgeIPTunnelBinding []interface{} `json:"netbridge_iptunnel_binding,omitempty"`
+	NetBridgeNSIP6Binding    []interface{} `json:"netbridge_nsip6_binding,omitempty"`
+	NetBridgeNSIPBinding     []interface{} `json:"netbridge_nsip_binding,omitempty"`
+	NetBridgeVLANBinding     []interface{} `json:"netbridge_vlan_binding,omitempty"`
 }
 
-type LinksetChannelBinding struct {
-	Id    string `json:"id,omitempty"`
-	Ifnum string `json:"ifnum,omitempty"`
+type LinkSetChannelBinding struct {
+	ID    string `json:"id,omitempty"`
+	IFNum string `json:"ifnum,omitempty"`
 }
 
-type Ip6tunnel struct {
+type IP6Tunnel struct {
 	Count              float64 `json:"__count,omitempty"`
-	Encapip            string  `json:"encapip,omitempty"`
+	EncapIP            string  `json:"encapip,omitempty"`
 	Local              string  `json:"local,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Ownergroup         string  `json:"ownergroup,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	OwnerGroup         string  `json:"ownergroup,omitempty"`
 	Remote             string  `json:"remote,omitempty"`
-	Remoteip           string  `json:"remoteip,omitempty"`
+	RemoteIP           string  `json:"remoteip,omitempty"`
 	TypeField          int     `json:"type,omitempty"`
 }
 
-type L4param struct {
-	L2connmethod       string `json:"l2connmethod,omitempty"`
-	L4switch           string `json:"l4switch,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+type L4Param struct {
+	L2ConnMethod       string `json:"l2connmethod,omitempty"`
+	L4Switch           string `json:"l4switch,omitempty"`
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
 }
 
-type Vxlanvlanmap struct {
+type VXLANVLANMap struct {
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 }
 
-type MapbmrBinding struct {
-	MapbmrBmrv4networkBinding []interface{} `json:"mapbmr_bmrv4network_binding,omitempty"`
+type MapBMRBinding struct {
+	MapBMRBMRV4NetworkBinding []interface{} `json:"mapbmr_bmrv4network_binding,omitempty"`
 	Name                      string        `json:"name,omitempty"`
 }
 
-type VridInterfaceBinding struct {
+type VRIDInterfaceBinding struct {
 	Flags int    `json:"flags,omitempty"`
-	Id    int    `json:"id,omitempty"`
-	Ifnum string `json:"ifnum,omitempty"`
-	Vlan  int    `json:"vlan,omitempty"`
+	ID    int    `json:"id,omitempty"`
+	IFNum string `json:"ifnum,omitempty"`
+	VLAN  int    `json:"vlan,omitempty"`
 }
 
-type Bridgetable struct {
-	Bridgeage          int     `json:"bridgeage,omitempty"`
+type BridgeTable struct {
+	BridgeAge          int     `json:"bridgeage,omitempty"`
 	Channel            int     `json:"channel,omitempty"`
-	Controlplane       bool    `json:"controlplane,omitempty"`
+	ControlPlane       bool    `json:"controlplane,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Devicevlan         int     `json:"devicevlan,omitempty"`
+	DeviceVLAN         int     `json:"devicevlan,omitempty"`
 	Flags              int     `json:"flags,omitempty"`
-	Ifnum              string  `json:"ifnum,omitempty"`
-	Mac                string  `json:"mac,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Nodeid             int     `json:"nodeid,omitempty"`
+	IFNum              string  `json:"ifnum,omitempty"`
+	MAC                string  `json:"mac,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	NodeID             int     `json:"nodeid,omitempty"`
 	TypeField          string  `json:"type,omitempty"`
-	Vlan               int     `json:"vlan,omitempty"`
-	Vni                int     `json:"vni,omitempty"`
-	Vtep               string  `json:"vtep,omitempty"`
-	Vxlan              int     `json:"vxlan,omitempty"`
+	VLAN               int     `json:"vlan,omitempty"`
+	VNI                int     `json:"vni,omitempty"`
+	VTEP               string  `json:"vtep,omitempty"`
+	VXLAN              int     `json:"vxlan,omitempty"`
 }
 
-type VxlanvlanmapBinding struct {
+type VXLANVLANMapBinding struct {
 	Name                     string        `json:"name,omitempty"`
-	VxlanvlanmapVxlanBinding []interface{} `json:"vxlanvlanmap_vxlan_binding,omitempty"`
+	VXLANVLANMapVXLANBinding []interface{} `json:"vxlanvlanmap_vxlan_binding,omitempty"`
 }
 
-type Vrid struct {
+type VRID struct {
 	All                  bool    `json:"all,omitempty"`
 	Count                float64 `json:"__count,omitempty"`
-	Effectivepriority    int     `json:"effectivepriority,omitempty"`
+	EffectivePriority    int     `json:"effectivepriority,omitempty"`
 	Flags                int     `json:"flags,omitempty"`
-	Id                   int     `json:"id,omitempty"`
+	ID                   int     `json:"id,omitempty"`
 	Ifaces               string  `json:"ifaces,omitempty"`
-	Ipaddress            string  `json:"ipaddress,omitempty"`
-	Nextgenapiresource   string  `json:"_nextgenapiresource,omitempty"`
-	Operationalownernode int     `json:"operationalownernode,omitempty"`
-	Ownernode            int     `json:"ownernode,omitempty"`
+	IPAddress            string  `json:"ipaddress,omitempty"`
+	NextGenAPIResource   string  `json:"_nextgenapiresource,omitempty"`
+	OperationalOwnerNode int     `json:"operationalownernode,omitempty"`
+	OwnerNode            int     `json:"ownernode,omitempty"`
 	Preemption           string  `json:"preemption,omitempty"`
-	Preemptiondelaytimer int     `json:"preemptiondelaytimer,omitempty"`
+	PreemptionDelayTimer int     `json:"preemptiondelaytimer,omitempty"`
 	Priority             int     `json:"priority,omitempty"`
 	Sharing              string  `json:"sharing,omitempty"`
 	State                int     `json:"state,omitempty"`
-	Trackifnumpriority   int     `json:"trackifnumpriority,omitempty"`
+	TrackIFNumPriority   int     `json:"trackifnumpriority,omitempty"`
 	Tracking             string  `json:"tracking,omitempty"`
 	TypeField            string  `json:"type,omitempty"`
 }
 
-type NetbridgeNsip6Binding struct {
-	Ipaddress string `json:"ipaddress,omitempty"`
+type NetBridgeNSIP6Binding struct {
+	IPAddress string `json:"ipaddress,omitempty"`
 	Name      string `json:"name,omitempty"`
 	Netmask   string `json:"netmask,omitempty"`
 }
 
-type Inat struct {
-	Connfailover       string  `json:"connfailover,omitempty"`
+type INAT struct {
+	ConnFailover       string  `json:"connfailover,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
 	Flags              int     `json:"flags,omitempty"`
-	Ftp                string  `json:"ftp,omitempty"`
+	FTP                string  `json:"ftp,omitempty"`
 	Mode               string  `json:"mode,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Privateip          string  `json:"privateip,omitempty"`
-	Proxyip            string  `json:"proxyip,omitempty"`
-	Publicip           string  `json:"publicip,omitempty"`
-	Tcpproxy           string  `json:"tcpproxy,omitempty"`
-	Td                 int     `json:"td,omitempty"`
-	Tftp               string  `json:"tftp,omitempty"`
-	Useproxyport       string  `json:"useproxyport,omitempty"`
-	Usip               string  `json:"usip,omitempty"`
-	Usnip              string  `json:"usnip,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	PrivateIP          string  `json:"privateip,omitempty"`
+	ProxyIP            string  `json:"proxyip,omitempty"`
+	PublicIP           string  `json:"publicip,omitempty"`
+	TCPProxy           string  `json:"tcpproxy,omitempty"`
+	TD                 int     `json:"td,omitempty"`
+	TFTP               string  `json:"tftp,omitempty"`
+	UseProxyPort       string  `json:"useproxyport,omitempty"`
+	USIP               string  `json:"usip,omitempty"`
+	USNIP              string  `json:"usnip,omitempty"`
 }
 
-type RnatRetainsourceportsetBinding struct {
+type RNATRetainSourcePortSetBinding struct {
 	Name                  string `json:"name,omitempty"`
-	Retainsourceportrange string `json:"retainsourceportrange,omitempty"`
+	RetainSourcePortRange string `json:"retainsourceportrange,omitempty"`
 }
 
-type Vlan struct {
-	Aliasname          string  `json:"aliasname,omitempty"`
+type VLAN struct {
+	AliasName          string  `json:"aliasname,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
-	Dynamicrouting     string  `json:"dynamicrouting,omitempty"`
-	Id                 int     `json:"id,omitempty"`
+	DynamicRouting     string  `json:"dynamicrouting,omitempty"`
+	ID                 int     `json:"id,omitempty"`
 	Ifaces             string  `json:"ifaces,omitempty"`
-	Ifnum              string  `json:"ifnum,omitempty"`
-	Ipv6dynamicrouting string  `json:"ipv6dynamicrouting,omitempty"`
-	Linklocalipv6addr  string  `json:"linklocalipv6addr,omitempty"`
-	Lsbitmap           int     `json:"lsbitmap,omitempty"`
-	Lstagbitmap        int     `json:"lstagbitmap,omitempty"`
-	Mtu                int     `json:"mtu,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Partitionname      string  `json:"partitionname,omitempty"`
-	Portbitmap         int     `json:"portbitmap,omitempty"`
-	Rnat               bool    `json:"rnat,omitempty"`
-	Sdxvlan            string  `json:"sdxvlan,omitempty"`
+	IFNum              string  `json:"ifnum,omitempty"`
+	IPv6DynamicRouting string  `json:"ipv6dynamicrouting,omitempty"`
+	LinkLocalIPv6Addr  string  `json:"linklocalipv6addr,omitempty"`
+	LSBitmap           int     `json:"lsbitmap,omitempty"`
+	LSTagBitmap        int     `json:"lstagbitmap,omitempty"`
+	MTU                int     `json:"mtu,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	PartitionName      string  `json:"partitionname,omitempty"`
+	PortBitmap         int     `json:"portbitmap,omitempty"`
+	RNAT               bool    `json:"rnat,omitempty"`
+	SDXVLAN            string  `json:"sdxvlan,omitempty"`
 	Sharing            string  `json:"sharing,omitempty"`
-	Tagbitmap          int     `json:"tagbitmap,omitempty"`
+	TagBitmap          int     `json:"tagbitmap,omitempty"`
 	Tagged             bool    `json:"tagged,omitempty"`
-	Tagifaces          string  `json:"tagifaces,omitempty"`
-	Vlantd             int     `json:"vlantd,omitempty"`
-	Vxlan              int     `json:"vxlan,omitempty"`
+	TagIfaces          string  `json:"tagifaces,omitempty"`
+	VLANTD             int     `json:"vlantd,omitempty"`
+	VXLAN              int     `json:"vxlan,omitempty"`
 }
 
-type Portallocation struct {
+type PortAllocation struct {
 	Count              float64 `json:"__count,omitempty"`
-	Destip             string  `json:"destip,omitempty"`
-	Destport           int     `json:"destport,omitempty"`
-	Freeports          int     `json:"freeports,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Nodeid             int     `json:"nodeid,omitempty"`
+	DestIP             string  `json:"destip,omitempty"`
+	DestPort           int     `json:"destport,omitempty"`
+	FreePorts          int     `json:"freeports,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	NodeID             int     `json:"nodeid,omitempty"`
 	Protocol           int     `json:"protocol,omitempty"`
-	Srcip              string  `json:"srcip,omitempty"`
+	SrcIP              string  `json:"srcip,omitempty"`
 }
 
-type Rnatparam struct {
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
-	Srcippersistency   string `json:"srcippersistency,omitempty"`
-	Tcpproxy           string `json:"tcpproxy,omitempty"`
+type RNATParam struct {
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
+	SrcIPPersistency   string `json:"srcippersistency,omitempty"`
+	TCPProxy           string `json:"tcpproxy,omitempty"`
 }
 
-type Vrid6Nsip6Binding struct {
+type VRID6NSIP6Binding struct {
 	Flags     int    `json:"flags,omitempty"`
-	Id        int    `json:"id,omitempty"`
-	Ipaddress string `json:"ipaddress,omitempty"`
+	ID        int    `json:"id,omitempty"`
+	IPAddress string `json:"ipaddress,omitempty"`
 }
 
-type VxlanNsip6Binding struct {
-	Id        int    `json:"id,omitempty"`
-	Ipaddress string `json:"ipaddress,omitempty"`
+type VXLANNSIP6Binding struct {
+	ID        int    `json:"id,omitempty"`
+	IPAddress string `json:"ipaddress,omitempty"`
 	Netmask   string `json:"netmask,omitempty"`
 }
 
-type VlanBinding struct {
-	Id                   int           `json:"id,omitempty"`
-	VlanChannelBinding   []interface{} `json:"vlan_channel_binding,omitempty"`
-	VlanInterfaceBinding []interface{} `json:"vlan_interface_binding,omitempty"`
-	VlanLinksetBinding   []interface{} `json:"vlan_linkset_binding,omitempty"`
-	VlanNsip6Binding     []interface{} `json:"vlan_nsip6_binding,omitempty"`
-	VlanNsipBinding      []interface{} `json:"vlan_nsip_binding,omitempty"`
+type VLANBinding struct {
+	ID                   int           `json:"id,omitempty"`
+	VLANChannelBinding   []interface{} `json:"vlan_channel_binding,omitempty"`
+	VLANInterfaceBinding []interface{} `json:"vlan_interface_binding,omitempty"`
+	VLANLinkSetBinding   []interface{} `json:"vlan_linkset_binding,omitempty"`
+	VLANNSIP6Binding     []interface{} `json:"vlan_nsip6_binding,omitempty"`
+	VLANNSIPBinding      []interface{} `json:"vlan_nsip_binding,omitempty"`
 }
 
-type RnatBinding struct {
+type RNATBinding struct {
 	Name                           string        `json:"name,omitempty"`
-	RnatNsipBinding                []interface{} `json:"rnat_nsip_binding,omitempty"`
-	RnatRetainsourceportsetBinding []interface{} `json:"rnat_retainsourceportset_binding,omitempty"`
+	RNATNSIPBinding                []interface{} `json:"rnat_nsip_binding,omitempty"`
+	RNATRetainSourcePortSetBinding []interface{} `json:"rnat_retainsourceportset_binding,omitempty"`
 }
 
-type NetbridgeVlanBinding struct {
+type NetBridgeVLANBinding struct {
 	Name string `json:"name,omitempty"`
-	Vlan int    `json:"vlan,omitempty"`
+	VLAN int    `json:"vlan,omitempty"`
 }
 
 type Interface struct {
-	Actduplex                 string   `json:"actduplex,omitempty"`
-	Actflowctl                string   `json:"actflowctl,omitempty"`
-	Actmedia                  string   `json:"actmedia,omitempty"`
-	Actspeed                  string   `json:"actspeed,omitempty"`
-	Actthroughput             int      `json:"actthroughput,omitempty"`
-	Actualmtu                 int      `json:"actualmtu,omitempty"`
-	Actualringsize            int      `json:"actualringsize,omitempty"`
+	ActDuplex                 string   `json:"actduplex,omitempty"`
+	ActFlowCtl                string   `json:"actflowctl,omitempty"`
+	ActMedia                  string   `json:"actmedia,omitempty"`
+	ActSpeed                  string   `json:"actspeed,omitempty"`
+	ActThroughput             int      `json:"actthroughput,omitempty"`
+	ActualMTU                 int      `json:"actualmtu,omitempty"`
+	ActualRingSize            int      `json:"actualringsize,omitempty"`
 	Autoneg                   string   `json:"autoneg,omitempty"`
-	Autonegresult             int      `json:"autonegresult,omitempty"`
+	AutonegResult             int      `json:"autonegresult,omitempty"`
 	Backplane                 string   `json:"backplane,omitempty"`
-	Bandwidthhigh             int      `json:"bandwidthhigh,omitempty"`
-	Bandwidthnormal           int      `json:"bandwidthnormal,omitempty"`
-	Bdgmacmoved               int      `json:"bdgmacmoved,omitempty"`
-	Bdgmuted                  int      `json:"bdgmuted,omitempty"`
-	Cleartime                 int      `json:"cleartime,omitempty"`
+	BandwidthHigh             int      `json:"bandwidthhigh,omitempty"`
+	BandwidthNormal           int      `json:"bandwidthnormal,omitempty"`
+	BdgMacMoved               int      `json:"bdgmacmoved,omitempty"`
+	BdgMuted                  int      `json:"bdgmuted,omitempty"`
+	ClearTime                 int      `json:"cleartime,omitempty"`
 	Count                     float64  `json:"__count,omitempty"`
 	Description               string   `json:"description,omitempty"`
-	Devicename                string   `json:"devicename,omitempty"`
+	DeviceName                string   `json:"devicename,omitempty"`
 	Downtime                  int      `json:"downtime,omitempty"`
 	Duplex                    string   `json:"duplex,omitempty"`
-	Fctls                     int      `json:"fctls,omitempty"`
+	FCtls                     int      `json:"fctls,omitempty"`
 	Flags                     int      `json:"flags,omitempty"`
-	Flowctl                   string   `json:"flowctl,omitempty"`
-	Haheartbeat               string   `json:"haheartbeat,omitempty"`
-	Hamonitor                 string   `json:"hamonitor,omitempty"`
-	Hangdetect                int      `json:"hangdetect,omitempty"`
-	Hangreset                 int      `json:"hangreset,omitempty"`
+	FlowCtl                   string   `json:"flowctl,omitempty"`
+	HAHeartbeat               string   `json:"haheartbeat,omitempty"`
+	HAMonitor                 string   `json:"hamonitor,omitempty"`
+	HangDetect                int      `json:"hangdetect,omitempty"`
+	HangReset                 int      `json:"hangreset,omitempty"`
 	Hangs                     int      `json:"hangs,omitempty"`
-	Id                        string   `json:"id,omitempty"`
-	Ifalias                   string   `json:"ifalias,omitempty"`
-	Ifnum                     []string `json:"ifnum,omitempty"`
-	Indisc                    int      `json:"indisc,omitempty"`
-	Intfstate                 int      `json:"intfstate,omitempty"`
-	Intftype                  string   `json:"intftype,omitempty"`
-	Lacpactoraggregation      string   `json:"lacpactoraggregation,omitempty"`
-	Lacpactorcollecting       string   `json:"lacpactorcollecting,omitempty"`
-	Lacpactordistributing     string   `json:"lacpactordistributing,omitempty"`
-	Lacpactorinsync           string   `json:"lacpactorinsync,omitempty"`
-	Lacpactormode             string   `json:"lacpactormode,omitempty"`
-	Lacpactorportno           int      `json:"lacpactorportno,omitempty"`
-	Lacpactorpriority         int      `json:"lacpactorpriority,omitempty"`
-	Lacpactortimeout          string   `json:"lacpactortimeout,omitempty"`
-	Lacpkey                   int      `json:"lacpkey,omitempty"`
-	Lacpmode                  string   `json:"lacpmode,omitempty"`
-	Lacppartneraggregation    string   `json:"lacppartneraggregation,omitempty"`
-	Lacppartnercollecting     string   `json:"lacppartnercollecting,omitempty"`
-	Lacppartnerdefaulted      string   `json:"lacppartnerdefaulted,omitempty"`
-	Lacppartnerdistributing   string   `json:"lacppartnerdistributing,omitempty"`
-	Lacppartnerexpired        string   `json:"lacppartnerexpired,omitempty"`
-	Lacppartnerinsync         string   `json:"lacppartnerinsync,omitempty"`
-	Lacppartnerkey            int      `json:"lacppartnerkey,omitempty"`
-	Lacppartnerportno         int      `json:"lacppartnerportno,omitempty"`
-	Lacppartnerpriority       int      `json:"lacppartnerpriority,omitempty"`
-	Lacppartnerstate          string   `json:"lacppartnerstate,omitempty"`
-	Lacppartnersystemmac      string   `json:"lacppartnersystemmac,omitempty"`
-	Lacppartnersystempriority int      `json:"lacppartnersystempriority,omitempty"`
-	Lacppartnertimeout        string   `json:"lacppartnertimeout,omitempty"`
-	Lacpportmuxstate          string   `json:"lacpportmuxstate,omitempty"`
-	Lacpportrxstat            string   `json:"lacpportrxstat,omitempty"`
-	Lacpportselectstate       string   `json:"lacpportselectstate,omitempty"`
-	Lacppriority              int      `json:"lacppriority,omitempty"`
-	Lacptimeout               string   `json:"lacptimeout,omitempty"`
-	Lagtype                   string   `json:"lagtype,omitempty"`
-	Linkredundancy            string   `json:"linkredundancy,omitempty"`
-	Linkstate                 int      `json:"linkstate,omitempty"`
-	Lldpmode                  string   `json:"lldpmode,omitempty"`
-	Lractiveintf              int      `json:"lractiveintf,omitempty"`
-	Lrsetpriority             int      `json:"lrsetpriority,omitempty"`
-	Mac                       string   `json:"mac,omitempty"`
+	ID                        string   `json:"id,omitempty"`
+	IFAlias                   string   `json:"ifalias,omitempty"`
+	IFNum                     []string `json:"ifnum,omitempty"`
+	InDisc                    int      `json:"indisc,omitempty"`
+	IntfState                 int      `json:"intfstate,omitempty"`
+	IntfType                  string   `json:"intftype,omitempty"`
+	LACPActorAggregation      string   `json:"lacpactoraggregation,omitempty"`
+	LACPActorCollecting       string   `json:"lacpactorcollecting,omitempty"`
+	LACPActorDistributing     string   `json:"lacpactordistributing,omitempty"`
+	LACPActorInSync           string   `json:"lacpactorinsync,omitempty"`
+	LACPActorMode             string   `json:"lacpactormode,omitempty"`
+	LACPActorPortNo           int      `json:"lacpactorportno,omitempty"`
+	LACPActorPriority         int      `json:"lacpactorpriority,omitempty"`
+	LACPActorTimeout          string   `json:"lacpactortimeout,omitempty"`
+	LACPKey                   int      `json:"lacpkey,omitempty"`
+	LACPMode                  string   `json:"lacpmode,omitempty"`
+	LACPPartnerAggregation    string   `json:"lacppartneraggregation,omitempty"`
+	LACPPartnerCollecting     string   `json:"lacppartnercollecting,omitempty"`
+	LACPPartnerDefaulted      string   `json:"lacppartnerdefaulted,omitempty"`
+	LACPPartnerDistributing   string   `json:"lacppartnerdistributing,omitempty"`
+	LACPPartnerExpired        string   `json:"lacppartnerexpired,omitempty"`
+	LACPPartnerInSync         string   `json:"lacppartnerinsync,omitempty"`
+	LACPPartnerKey            int      `json:"lacppartnerkey,omitempty"`
+	LACPPartnerPortNo         int      `json:"lacppartnerportno,omitempty"`
+	LACPPartnerPriority       int      `json:"lacppartnerpriority,omitempty"`
+	LACPPartnerState          string   `json:"lacppartnerstate,omitempty"`
+	LACPPartnerSystemMAC      string   `json:"lacppartnersystemmac,omitempty"`
+	LACPPartnerSystemPriority int      `json:"lacppartnersystempriority,omitempty"`
+	LACPPartnerTimeout        string   `json:"lacppartnertimeout,omitempty"`
+	LACPPortMuxState          string   `json:"lacpportmuxstate,omitempty"`
+	LACPPortRxStat            string   `json:"lacpportrxstat,omitempty"`
+	LACPPortSelectState       string   `json:"lacpportselectstate,omitempty"`
+	LACPPriority              int      `json:"lacppriority,omitempty"`
+	LACPTimeout               string   `json:"lacptimeout,omitempty"`
+	LAGType                   string   `json:"lagtype,omitempty"`
+	LinkRedundancy            string   `json:"linkredundancy,omitempty"`
+	LinkState                 int      `json:"linkstate,omitempty"`
+	LLDPMode                  string   `json:"lldpmode,omitempty"`
+	LRActiveIntf              int      `json:"lractiveintf,omitempty"`
+	LRSetPriority             int      `json:"lrsetpriority,omitempty"`
+	MAC                       string   `json:"mac,omitempty"`
+	MACDistr                  string   `json:"macdistr,omitempty"`
+	Media                     string   `json:"media,omitempty"`
 	Mode                      string   `json:"mode,omitempty"`
-	Mtu                       int      `json:"mtu,omitempty"`
-	Nextgenapiresource        string   `json:"_nextgenapiresource,omitempty"`
-	Outdisc                   int      `json:"outdisc,omitempty"`
-	Reqduplex                 string   `json:"reqduplex,omitempty"`
-	Reqflowcontrol            string   `json:"reqflowcontrol,omitempty"`
-	Reqmedia                  string   `json:"reqmedia,omitempty"`
-	Reqspeed                  string   `json:"reqspeed,omitempty"`
-	Reqthroughput             int      `json:"reqthroughput,omitempty"`
-	Ringsize                  int      `json:"ringsize,omitempty"`
-	Ringtype                  string   `json:"ringtype,omitempty"`
-	Rxbytes                   int      `json:"rxbytes,omitempty"`
-	Rxdrops                   int      `json:"rxdrops,omitempty"`
-	Rxerrors                  int      `json:"rxerrors,omitempty"`
-	Rxpackets                 int      `json:"rxpackets,omitempty"`
-	Rxstalls                  int      `json:"rxstalls,omitempty"`
-	Slaveduplex               int      `json:"slaveduplex,omitempty"`
-	Slaveflowctl              int      `json:"slaveflowctl,omitempty"`
-	Slavemedia                int      `json:"slavemedia,omitempty"`
-	Slavespeed                int      `json:"slavespeed,omitempty"`
-	Slavestate                int      `json:"slavestate,omitempty"`
-	Slavetime                 int      `json:"slavetime,omitempty"`
+	MTU                       int      `json:"mtu,omitempty"`
+	NextGenAPIResource        string   `json:"_nextgenapiresource,omitempty"`
+	OutDisc                   int      `json:"outdisc,omitempty"`
+	ReqDuplex                 string   `json:"reqduplex,omitempty"`
+	ReqFlowControl            string   `json:"reqflowcontrol,omitempty"`
+	ReqMedia                  string   `json:"reqmedia,omitempty"`
+	ReqSpeed                  string   `json:"reqspeed,omitempty"`
+	ReqThroughput             int      `json:"reqthroughput,omitempty"`
+	RingSize                  int      `json:"ringsize,omitempty"`
+	RingType                  string   `json:"ringtype,omitempty"`
+	RxBytes                   int      `json:"rxbytes,omitempty"`
+	RxDrops                   int      `json:"rxdrops,omitempty"`
+	RxErrors                  int      `json:"rxerrors,omitempty"`
+	RxPackets                 int      `json:"rxpackets,omitempty"`
+	RxStalls                  int      `json:"rxstalls,omitempty"`
+	SlaveDuplex               int      `json:"slaveduplex,omitempty"`
+	SlaveFlowCtl              int      `json:"slaveflowctl,omitempty"`
+	SlaveMedia                int      `json:"slavemedia,omitempty"`
+	SlaveSpeed                int      `json:"slavespeed,omitempty"`
+	SlaveState                int      `json:"slavestate,omitempty"`
+	SlaveTime                 int      `json:"slavetime,omitempty"`
 	Speed                     string   `json:"speed,omitempty"`
 	State                     string   `json:"state,omitempty"`
-	Stsstalls                 int      `json:"stsstalls,omitempty"`
-	Svmcmd                    int      `json:"svmcmd,omitempty"`
-	Tagall                    string   `json:"tagall,omitempty"`
+	StsStalls                 int      `json:"stsstalls,omitempty"`
+	SVMCmd                    int      `json:"svmcmd,omitempty"`
+	TagAll                    string   `json:"tagall,omitempty"`
 	Tagged                    int      `json:"tagged,omitempty"`
-	Taggedany                 int      `json:"taggedany,omitempty"`
-	Taggedautolearn           int      `json:"taggedautolearn,omitempty"`
+	TaggedAny                 int      `json:"taggedany,omitempty"`
+	TaggedAutoLearn           int      `json:"taggedautolearn,omitempty"`
 	Throughput                int      `json:"throughput,omitempty"`
 	Trunk                     string   `json:"trunk,omitempty"`
-	Trunkallowedvlan          []string `json:"trunkallowedvlan,omitempty"`
-	Trunkmode                 string   `json:"trunkmode,omitempty"`
-	Txbytes                   int      `json:"txbytes,omitempty"`
-	Txdrops                   int      `json:"txdrops,omitempty"`
-	Txerrors                  int      `json:"txerrors,omitempty"`
-	Txpackets                 int      `json:"txpackets,omitempty"`
-	Txstalls                  int      `json:"txstalls,omitempty"`
+	TrunkAllowedVLAN          []string `json:"trunkallowedvlan,omitempty"`
+	TrunkMode                 string   `json:"trunkmode,omitempty"`
+	TxBytes                   int      `json:"txbytes,omitempty"`
+	TxDrops                   int      `json:"txdrops,omitempty"`
+	TxErrors                  int      `json:"txerrors,omitempty"`
+	TxPackets                 int      `json:"txpackets,omitempty"`
+	TxStalls                  int      `json:"txstalls,omitempty"`
 	Unit                      int      `json:"unit,omitempty"`
 	Uptime                    int      `json:"uptime,omitempty"`
-	Vlan                      int      `json:"vlan,omitempty"`
-	Vmac                      string   `json:"vmac,omitempty"`
-	Vmac6                     string   `json:"vmac6,omitempty"`
+	VLAN                      int      `json:"vlan,omitempty"`
+	VMAC                      string   `json:"vmac,omitempty"`
+	VMAC6                     string   `json:"vmac6,omitempty"`
 }
 
-type Nd6 struct {
+type ND6 struct {
 	Channel            int     `json:"channel,omitempty"`
-	Controlplane       bool    `json:"controlplane,omitempty"`
+	ControlPlane       bool    `json:"controlplane,omitempty"`
 	Count              float64 `json:"__count,omitempty"`
 	Flags              int     `json:"flags,omitempty"`
-	Ifnum              string  `json:"ifnum,omitempty"`
-	Mac                string  `json:"mac,omitempty"`
+	IFNum              string  `json:"ifnum,omitempty"`
+	MAC                string  `json:"mac,omitempty"`
 	Neighbor           string  `json:"neighbor,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Nodeid             int     `json:"nodeid,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	NodeID             int     `json:"nodeid,omitempty"`
 	State              string  `json:"state,omitempty"`
-	Td                 int     `json:"td,omitempty"`
+	TD                 int     `json:"td,omitempty"`
 	Timeout            int     `json:"timeout,omitempty"`
-	Vlan               int     `json:"vlan,omitempty"`
-	Vtep               string  `json:"vtep,omitempty"`
-	Vxlan              int     `json:"vxlan,omitempty"`
+	VLAN               int     `json:"vlan,omitempty"`
+	VTEP               string  `json:"vtep,omitempty"`
+	VXLAN              int     `json:"vxlan,omitempty"`
 }
 
-type Interfacepair struct {
+type InterfacePair struct {
 	Count              float64  `json:"__count,omitempty"`
-	Id                 int      `json:"id,omitempty"`
+	ID                 int      `json:"id,omitempty"`
 	Ifaces             string   `json:"ifaces,omitempty"`
-	Ifnum              []string `json:"ifnum,omitempty"`
-	Nextgenapiresource string   `json:"_nextgenapiresource,omitempty"`
+	IFNum              []string `json:"ifnum,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
 }
 
-type Mapbmr struct {
+type MapBMR struct {
 	Count              float64 `json:"__count,omitempty"`
-	Eabitlength        int     `json:"eabitlength,omitempty"`
+	EABitLength        int     `json:"eabitlength,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Psidlength         int     `json:"psidlength,omitempty"`
-	Psidoffset         int     `json:"psidoffset,omitempty"`
-	Ruleipv6prefix     string  `json:"ruleipv6prefix,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	PSIDLength         int     `json:"psidlength,omitempty"`
+	PSIDOffset         int     `json:"psidoffset,omitempty"`
+	RuleIPv6Prefix     string  `json:"ruleipv6prefix,omitempty"`
 }
 
 type VxlanBinding struct {
-	Id                   int           `json:"id,omitempty"`
-	VxlanIptunnelBinding []interface{} `json:"vxlan_iptunnel_binding,omitempty"`
-	VxlanNsip6Binding    []interface{} `json:"vxlan_nsip6_binding,omitempty"`
-	VxlanNsipBinding     []interface{} `json:"vxlan_nsip_binding,omitempty"`
-	VxlanSrcipBinding    []interface{} `json:"vxlan_srcip_binding,omitempty"`
+	ID                   int           `json:"id,omitempty"`
+	VxlanIPTunnelBinding []interface{} `json:"vxlan_iptunnel_binding,omitempty"`
+	VxlanNSIP6Binding    []interface{} `json:"vxlan_nsip6_binding,omitempty"`
+	VxlanNSIPBinding     []interface{} `json:"vxlan_nsip_binding,omitempty"`
+	VxlanSrcIPBinding    []interface{} `json:"vxlan_srcip_binding,omitempty"`
 }
 
-type Fis struct {
+type FIS struct {
 	Count              float64 `json:"__count,omitempty"`
 	Ifaces             string  `json:"ifaces,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
-	Ownernode          int     `json:"ownernode,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	OwnerNode          int     `json:"ownernode,omitempty"`
 }
 
-type Linkset struct {
+type LinkSet struct {
 	Count              float64 `json:"__count,omitempty"`
-	Id                 string  `json:"id,omitempty"`
-	Ifnum              string  `json:"ifnum,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	ID                 string  `json:"id,omitempty"`
+	IFNum              string  `json:"ifnum,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 }
 
-type BridgegroupNsipBinding struct {
-	Id         int    `json:"id,omitempty"`
-	Ipaddress  string `json:"ipaddress,omitempty"`
+type BridgeGroupNSIPBinding struct {
+	ID         int    `json:"id,omitempty"`
+	IPAddress  string `json:"ipaddress,omitempty"`
 	Netmask    string `json:"netmask,omitempty"`
-	Ownergroup string `json:"ownergroup,omitempty"`
-	Rnat       bool   `json:"rnat,omitempty"`
-	Td         int    `json:"td,omitempty"`
+	OwnerGroup string `json:"ownergroup,omitempty"`
+	RNAT       bool   `json:"rnat,omitempty"`
+	TD         int    `json:"td,omitempty"`
 }
 
-type Onlinkipv6prefix struct {
-	Autonomusprefix          string  `json:"autonomusprefix,omitempty"`
+type OnLinkIPv6Prefix struct {
+	AutonomusPrefix          string  `json:"autonomusprefix,omitempty"`
 	Count                    float64 `json:"__count,omitempty"`
-	Decrementprefixlifetimes string  `json:"decrementprefixlifetimes,omitempty"`
-	Depricateprefix          string  `json:"depricateprefix,omitempty"`
-	Ipv6prefix               string  `json:"ipv6prefix,omitempty"`
-	Nextgenapiresource       string  `json:"_nextgenapiresource,omitempty"`
-	Onlinkprefix             string  `json:"onlinkprefix,omitempty"`
-	Prefixcurrpreferredlft   int     `json:"prefixcurrpreferredlft,omitempty"`
-	Prefixcurrvalidelft      int     `json:"prefixcurrvalidelft,omitempty"`
-	Prefixpreferredlifetime  int     `json:"prefixpreferredlifetime,omitempty"`
-	Prefixvalidelifetime     int     `json:"prefixvalidelifetime,omitempty"`
+	DecrementPrefixLifetimes string  `json:"decrementprefixlifetimes,omitempty"`
+	DepricatePrefix          string  `json:"depricateprefix,omitempty"`
+	IPv6Prefix               string  `json:"ipv6prefix,omitempty"`
+	NextGenAPIResource       string  `json:"_nextgenapiresource,omitempty"`
+	OnLinkPrefix             string  `json:"onlinkprefix,omitempty"`
+	PrefixCurrPreferredLft   int     `json:"prefixcurrpreferredlft,omitempty"`
+	PrefixCurrValidLft       int     `json:"prefixcurrvalidelft,omitempty"`
+	PrefixPreferredLifetime  int     `json:"prefixpreferredlifetime,omitempty"`
+	PrefixValidLifetime      int     `json:"prefixvalidelifetime,omitempty"`
 }
 
-type Vrid6NsipBinding struct {
+type VRID6NSIPBinding struct {
 	Flags     int    `json:"flags,omitempty"`
-	Id        int    `json:"id,omitempty"`
-	Ipaddress string `json:"ipaddress,omitempty"`
+	ID        int    `json:"id,omitempty"`
+	IPAddress string `json:"ipaddress,omitempty"`
 }
 
-type Ci struct {
+type CI struct {
 	Count              float64 `json:"__count,omitempty"`
 	Ifaces             string  `json:"ifaces,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 }
 
-type Ipv6 struct {
-	Basereachtime        int     `json:"basereachtime,omitempty"`
+type IPv6 struct {
+	BaseReachTime        int     `json:"basereachtime,omitempty"`
 	Count                float64 `json:"__count,omitempty"`
-	Dodad                string  `json:"dodad,omitempty"`
-	Natprefix            string  `json:"natprefix,omitempty"`
-	Ndbasereachtime      int     `json:"ndbasereachtime,omitempty"`
-	Ndreachtime          int     `json:"ndreachtime,omitempty"`
-	Ndretransmissiontime int     `json:"ndretransmissiontime,omitempty"`
-	Nextgenapiresource   string  `json:"_nextgenapiresource,omitempty"`
-	Ralearning           string  `json:"ralearning,omitempty"`
-	Reachtime            int     `json:"reachtime,omitempty"`
-	Retransmissiontime   int     `json:"retransmissiontime,omitempty"`
-	Routerredirection    string  `json:"routerredirection,omitempty"`
-	Td                   int     `json:"td,omitempty"`
-	Usipnatprefix        string  `json:"usipnatprefix,omitempty"`
+	DODAD                string  `json:"dodad,omitempty"`
+	NatPrefix            string  `json:"natprefix,omitempty"`
+	NDBaseReachTime      int     `json:"ndbasereachtime,omitempty"`
+	NDReachTime          int     `json:"ndreachtime,omitempty"`
+	NDRetransmissionTime int     `json:"ndretransmissiontime,omitempty"`
+	NextGenAPIResource   string  `json:"_nextgenapiresource,omitempty"`
+	RALearning           string  `json:"ralearning,omitempty"`
+	ReachTime            int     `json:"reachtime,omitempty"`
+	RetransmissionTime   int     `json:"retransmissiontime,omitempty"`
+	RouterRedirection    string  `json:"routerredirection,omitempty"`
+	TD                   int     `json:"td,omitempty"`
+	USIPNatPrefix        string  `json:"usipnatprefix,omitempty"`
 }
 
-type LinksetBinding struct {
-	Id                      string        `json:"id,omitempty"`
-	LinksetChannelBinding   []interface{} `json:"linkset_channel_binding,omitempty"`
-	LinksetInterfaceBinding []interface{} `json:"linkset_interface_binding,omitempty"`
+type LinkSetBinding struct {
+	ID                      string        `json:"id,omitempty"`
+	LinkSetChannelBinding   []interface{} `json:"linkset_channel_binding,omitempty"`
+	LinkSetInterfaceBinding []interface{} `json:"linkset_interface_binding,omitempty"`
 }
 
-type Vrid6InterfaceBinding struct {
+type VRID6InterfaceBinding struct {
 	Flags int    `json:"flags,omitempty"`
-	Id    int    `json:"id,omitempty"`
-	Ifnum string `json:"ifnum,omitempty"`
-	Vlan  int    `json:"vlan,omitempty"`
+	ID    int    `json:"id,omitempty"`
+	IFNum string `json:"ifnum,omitempty"`
+	VLAN  int    `json:"vlan,omitempty"`
 }
 
-type RnatglobalBinding struct {
-	RnatglobalAuditsyslogpolicyBinding []interface{} `json:"rnatglobal_auditsyslogpolicy_binding,omitempty"`
+type RNATGlobalBinding struct {
+	RNATGlobalAuditSyslogPolicyBinding []interface{} `json:"rnatglobal_auditsyslogpolicy_binding,omitempty"`
 }
 
-type FisChannelBinding struct {
-	Ifnum     string `json:"ifnum,omitempty"`
+type FISChannelBinding struct {
+	IFNum     string `json:"ifnum,omitempty"`
 	Name      string `json:"name,omitempty"`
-	Ownernode int    `json:"ownernode,omitempty"`
+	OwnerNode int    `json:"ownernode,omitempty"`
 }
 
-type MapdomainBinding struct {
-	MapdomainMapbmrBinding []interface{} `json:"mapdomain_mapbmr_binding,omitempty"`
+type MapDomainBinding struct {
+	MapDomainMapBMRBinding []interface{} `json:"mapdomain_mapbmr_binding,omitempty"`
 	Name                   string        `json:"name,omitempty"`
 }
 
-type MapdomainMapbmrBinding struct {
-	Mapbmrname string `json:"mapbmrname,omitempty"`
+type MapDomainMapBMRBinding struct {
+	MapBMRName string `json:"mapbmrname,omitempty"`
 	Name       string `json:"name,omitempty"`
 }

@@ -1,19 +1,19 @@
 package models
 
 // smpp configuration structs
-type Smppparam struct {
-	Addrnpi            int    `json:"addrnpi,omitempty"`
-	Addrrange          string `json:"addrrange,omitempty"`
-	Addrton            int    `json:"addrton,omitempty"`
-	Clientmode         string `json:"clientmode,omitempty"`
-	Msgqueue           string `json:"msgqueue,omitempty"`
-	Msgqueuesize       int    `json:"msgqueuesize,omitempty"`
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+type SMPPParam struct {
+	AddrNPI            int    `json:"addrnpi,omitempty"`
+	AddrRange          string `json:"addrrange,omitempty"`
+	AddrTON            int    `json:"addrton,omitempty"`
+	ClientMode         string `json:"clientmode,omitempty"`
+	MsgQueue           string `json:"msgqueue,omitempty"`
+	MsgQueueSize       int    `json:"msgqueuesize,omitempty"`
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
 }
 
-type Smppuser struct {
+type SMPPUser struct {
 	Count              float64 `json:"__count,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 	Password           string  `json:"password,omitempty"`
 	Username           string  `json:"username,omitempty"`
 }

@@ -1,588 +1,588 @@
 package models
 
 // gslb configuration structs
-type GslbservicegroupBinding struct {
-	GslbservicegroupGslbservicegroupmemberBinding        []interface{} `json:"gslbservicegroup_gslbservicegroupmember_binding,omitempty"`
-	GslbservicegroupLbmonitorBinding                     []interface{} `json:"gslbservicegroup_lbmonitor_binding,omitempty"`
-	GslbservicegroupServicegroupentitymonbindingsBinding []interface{} `json:"gslbservicegroup_servicegroupentitymonbindings_binding,omitempty"`
-	Servicegroupname                                     string        `json:"servicegroupname,omitempty"`
+type GSLBServiceGroupBinding struct {
+	GSLBServiceGroupGSLBServiceGroupMemberBinding        []interface{} `json:"gslbservicegroup_gslbservicegroupmember_binding,omitempty"`
+	GSLBServiceGroupLBMonitorBinding                     []interface{} `json:"gslbservicegroup_lbmonitor_binding,omitempty"`
+	GSLBServiceGroupServiceGroupEntityMonBindingsBinding []interface{} `json:"gslbservicegroup_servicegroupentitymonbindings_binding,omitempty"`
+	ServiceGroupName                                     string        `json:"servicegroupname,omitempty"`
 }
 
-type Gslbservicegroup struct {
-	Appflowlog                 string  `json:"appflowlog,omitempty"`
-	Autodelayedtrofs           string  `json:"autodelayedtrofs,omitempty"`
-	Autoscale                  string  `json:"autoscale,omitempty"`
-	Cip                        string  `json:"cip,omitempty"`
-	Cipheader                  string  `json:"cipheader,omitempty"`
-	Clmonowner                 int     `json:"clmonowner,omitempty"`
-	Clmonview                  int     `json:"clmonview,omitempty"`
-	Clttimeout                 int     `json:"clttimeout,omitempty"`
+type GSLBServiceGroup struct {
+	AppFlowLog                 string  `json:"appflowlog,omitempty"`
+	AutoDelayedTROFS           string  `json:"autodelayedtrofs,omitempty"`
+	AutoScale                  string  `json:"autoscale,omitempty"`
+	CIP                        string  `json:"cip,omitempty"`
+	CIPHeader                  string  `json:"cipheader,omitempty"`
+	ClMonOwner                 int     `json:"clmonowner,omitempty"`
+	ClMonView                  int     `json:"clmonview,omitempty"`
+	CltTimeout                 int     `json:"clttimeout,omitempty"`
 	Comment                    string  `json:"comment,omitempty"`
 	Count                      float64 `json:"__count,omitempty"`
 	Delay                      int     `json:"delay,omitempty"`
-	Downstateflush             string  `json:"downstateflush,omitempty"`
+	DownStateFlush             string  `json:"downstateflush,omitempty"`
 	DupWeight                  int     `json:"dup_weight,omitempty"`
 	Graceful                   string  `json:"graceful,omitempty"`
-	Groupcount                 int     `json:"groupcount,omitempty"`
-	Gslb                       string  `json:"gslb,omitempty"`
-	Hashid                     int     `json:"hashid,omitempty"`
-	Healthmonitor              string  `json:"healthmonitor,omitempty"`
-	Includemembers             bool    `json:"includemembers,omitempty"`
-	Ip                         string  `json:"ip,omitempty"`
-	Maxbandwidth               int     `json:"maxbandwidth,omitempty"`
-	Maxclient                  int     `json:"maxclient,omitempty"`
+	GroupCount                 int     `json:"groupcount,omitempty"`
+	GSLB                       string  `json:"gslb,omitempty"`
+	HashID                     int     `json:"hashid,omitempty"`
+	HealthMonitor              string  `json:"healthmonitor,omitempty"`
+	IncludeMembers             bool    `json:"includemembers,omitempty"`
+	IP                         string  `json:"ip,omitempty"`
+	MaxBandwidth               int     `json:"maxbandwidth,omitempty"`
+	MaxClient                  int     `json:"maxclient,omitempty"`
 	MonitorNameSvc             string  `json:"monitor_name_svc,omitempty"`
-	Monstatcode                int     `json:"monstatcode,omitempty"`
-	Monstatparam1              int     `json:"monstatparam1,omitempty"`
-	Monstatparam2              int     `json:"monstatparam2,omitempty"`
-	Monstatparam3              int     `json:"monstatparam3,omitempty"`
-	Monthreshold               int     `json:"monthreshold,omitempty"`
-	Newname                    string  `json:"newname,omitempty"`
-	Nextgenapiresource         string  `json:"_nextgenapiresource,omitempty"`
-	Nodefaultbindings          string  `json:"nodefaultbindings,omitempty"`
-	Numofconnections           int     `json:"numofconnections,omitempty"`
+	MonStatCode                int     `json:"monstatcode,omitempty"`
+	MonStatParam1              int     `json:"monstatparam1,omitempty"`
+	MonStatParam2              int     `json:"monstatparam2,omitempty"`
+	MonStatParam3              int     `json:"monstatparam3,omitempty"`
+	MonThreshold               int     `json:"monthreshold,omitempty"`
+	NewName                    string  `json:"newname,omitempty"`
+	NextGenAPIResource         string  `json:"_nextgenapiresource,omitempty"`
+	NoDefaultBindings          string  `json:"nodefaultbindings,omitempty"`
+	NumOfConnections           int     `json:"numofconnections,omitempty"`
 	Order                      int     `json:"order,omitempty"`
 	Port                       int     `json:"port,omitempty"`
-	Publicip                   string  `json:"publicip,omitempty"`
-	Publicport                 int     `json:"publicport,omitempty"`
-	Servername                 string  `json:"servername,omitempty"`
-	Serviceconftype            bool    `json:"serviceconftype,omitempty"`
-	Servicegroupeffectivestate string  `json:"servicegroupeffectivestate,omitempty"`
-	Servicegroupname           string  `json:"servicegroupname,omitempty"`
-	Serviceipstr               string  `json:"serviceipstr,omitempty"`
-	Servicetype                string  `json:"servicetype,omitempty"`
-	Sitename                   string  `json:"sitename,omitempty"`
-	Sitepersistence            string  `json:"sitepersistence,omitempty"`
-	Siteprefix                 string  `json:"siteprefix,omitempty"`
+	PublicIP                   string  `json:"publicip,omitempty"`
+	PublicPort                 int     `json:"publicport,omitempty"`
+	ServerName                 string  `json:"servername,omitempty"`
+	ServiceConfType            bool    `json:"serviceconftype,omitempty"`
+	ServiceGroupEffectiveState string  `json:"servicegroupeffectivestate,omitempty"`
+	ServiceGroupName           string  `json:"servicegroupname,omitempty"`
+	ServiceIPStr               string  `json:"serviceipstr,omitempty"`
+	ServiceType                string  `json:"servicetype,omitempty"`
+	SiteName                   string  `json:"sitename,omitempty"`
+	SitePersistence            string  `json:"sitepersistence,omitempty"`
+	SitePrefix                 string  `json:"siteprefix,omitempty"`
 	State                      string  `json:"state,omitempty"`
-	Statechangetimemsec        int     `json:"statechangetimemsec,omitempty"`
-	Stateupdatereason          int     `json:"stateupdatereason,omitempty"`
-	Svreffgslbstate            string  `json:"svreffgslbstate,omitempty"`
-	Svrstate                   string  `json:"svrstate,omitempty"`
-	Svrtimeout                 int     `json:"svrtimeout,omitempty"`
+	StateChangeTimeMsec        int     `json:"statechangetimemsec,omitempty"`
+	StateUpdateReason          int     `json:"stateupdatereason,omitempty"`
+	SvrEffGSLBState            string  `json:"svreffgslbstate,omitempty"`
+	SvrState                   string  `json:"svrstate,omitempty"`
+	SvrTimeout                 int     `json:"svrtimeout,omitempty"`
 	Value                      string  `json:"value,omitempty"`
 	Weight                     int     `json:"weight,omitempty"`
 }
 
-type Gslbldnsentries struct {
+type GSLBLDNSEntries struct {
 	Count              float64       `json:"__count,omitempty"`
-	Ipaddress          string        `json:"ipaddress,omitempty"`
+	IPAddress          string        `json:"ipaddress,omitempty"`
 	Name               string        `json:"name,omitempty"`
-	Nextgenapiresource string        `json:"_nextgenapiresource,omitempty"`
-	Nodeid             int           `json:"nodeid,omitempty"`
-	Numsites           int           `json:"numsites,omitempty"`
-	Rtt                []interface{} `json:"rtt,omitempty"`
-	Sitename           string        `json:"sitename,omitempty"`
-	Ttl                int           `json:"ttl,omitempty"`
+	NextGenAPIResource string        `json:"_nextgenapiresource,omitempty"`
+	NodeID             int           `json:"nodeid,omitempty"`
+	NumSites           int           `json:"numsites,omitempty"`
+	RTT                []interface{} `json:"rtt,omitempty"`
+	SiteName           string        `json:"sitename,omitempty"`
+	TTL                int           `json:"ttl,omitempty"`
 }
 
-type GslbservicegroupServicegroupentitymonbindingsBinding struct {
-	Hashid                     int    `json:"hashid,omitempty"`
-	Lastresponse               string `json:"lastresponse,omitempty"`
+type GSLBServiceGroupServiceGroupEntityMonBindingsBinding struct {
+	HashID                     int    `json:"hashid,omitempty"`
+	LastResponse               string `json:"lastresponse,omitempty"`
 	MonitorName                string `json:"monitor_name,omitempty"`
 	MonitorState               string `json:"monitor_state,omitempty"`
-	Monitorcurrentfailedprobes int    `json:"monitorcurrentfailedprobes,omitempty"`
-	Monitortotalfailedprobes   int    `json:"monitortotalfailedprobes,omitempty"`
-	Monitortotalprobes         int    `json:"monitortotalprobes,omitempty"`
+	MonitorCurrentFailedProbes int    `json:"monitorcurrentfailedprobes,omitempty"`
+	MonitorTotalFailedProbes   int    `json:"monitortotalfailedprobes,omitempty"`
+	MonitorTotalProbes         int    `json:"monitortotalprobes,omitempty"`
 	Order                      int    `json:"order,omitempty"`
 	Passive                    bool   `json:"passive,omitempty"`
 	Port                       int    `json:"port,omitempty"`
-	Publicip                   string `json:"publicip,omitempty"`
-	Publicport                 int    `json:"publicport,omitempty"`
-	Servicegroupentname2       string `json:"servicegroupentname2,omitempty"`
-	Servicegroupname           string `json:"servicegroupname,omitempty"`
-	Siteprefix                 string `json:"siteprefix,omitempty"`
+	PublicIP                   string `json:"publicip,omitempty"`
+	PublicPort                 int    `json:"publicport,omitempty"`
+	ServiceGroupEntName2       string `json:"servicegroupentname2,omitempty"`
+	ServiceGroupName           string `json:"servicegroupname,omitempty"`
+	SitePrefix                 string `json:"siteprefix,omitempty"`
 	State                      string `json:"state,omitempty"`
 	Weight                     int    `json:"weight,omitempty"`
 }
 
-type GslbvserverLbpolicyBinding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type GSLBVServerLBPolicyBinding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Order                  int    `json:"order,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 }
 
-type Gslbvserver struct {
-	Activeservices            int     `json:"activeservices,omitempty"`
-	Appflowlog                string  `json:"appflowlog,omitempty"`
-	Backupip                  string  `json:"backupip,omitempty"`
-	Backuplbmethod            string  `json:"backuplbmethod,omitempty"`
-	Backupsessiontimeout      int     `json:"backupsessiontimeout,omitempty"`
-	Backupvserver             string  `json:"backupvserver,omitempty"`
+type GSLBVServer struct {
+	ActiveServices            int     `json:"activeservices,omitempty"`
+	AppFlowLog                string  `json:"appflowlog,omitempty"`
+	BackupIP                  string  `json:"backupip,omitempty"`
+	BackupLBMethod            string  `json:"backuplbmethod,omitempty"`
+	BackupSessionTimeout      int     `json:"backupsessiontimeout,omitempty"`
+	BackupVServer             string  `json:"backupvserver,omitempty"`
 	Comment                   string  `json:"comment,omitempty"`
-	Considereffectivestate    string  `json:"considereffectivestate,omitempty"`
+	ConsiderEffectiveState    string  `json:"considereffectivestate,omitempty"`
 	CookieDomain              string  `json:"cookie_domain,omitempty"`
-	Cookietimeout             int     `json:"cookietimeout,omitempty"`
+	CookieTimeout             int     `json:"cookietimeout,omitempty"`
 	Count                     float64 `json:"__count,omitempty"`
-	Currentactiveorder        string  `json:"currentactiveorder,omitempty"`
-	Curstate                  string  `json:"curstate,omitempty"`
-	Disableprimaryondown      string  `json:"disableprimaryondown,omitempty"`
-	Dnsrecordtype             string  `json:"dnsrecordtype,omitempty"`
-	Domainname                string  `json:"domainname,omitempty"`
-	Dynamicweight             string  `json:"dynamicweight,omitempty"`
-	Ecs                       string  `json:"ecs,omitempty"`
-	Ecsaddrvalidation         string  `json:"ecsaddrvalidation,omitempty"`
-	Edr                       string  `json:"edr,omitempty"`
-	Gotopriorityexpression    string  `json:"gotopriorityexpression,omitempty"`
+	CurrentActiveOrder        string  `json:"currentactiveorder,omitempty"`
+	CurState                  string  `json:"curstate,omitempty"`
+	DisablePrimaryOnDown      string  `json:"disableprimaryondown,omitempty"`
+	DNSRecordType             string  `json:"dnsrecordtype,omitempty"`
+	DomainName                string  `json:"domainname,omitempty"`
+	DynamicWeight             string  `json:"dynamicweight,omitempty"`
+	ECS                       string  `json:"ecs,omitempty"`
+	ECSAddrValidation         string  `json:"ecsaddrvalidation,omitempty"`
+	EDR                       string  `json:"edr,omitempty"`
+	GotoPriorityExpression    string  `json:"gotopriorityexpression,omitempty"`
 	Health                    int     `json:"health,omitempty"`
-	Iptype                    string  `json:"iptype,omitempty"`
-	Iscname                   string  `json:"iscname,omitempty"`
-	Lbmethod                  string  `json:"lbmethod,omitempty"`
-	Lbrrreason                int     `json:"lbrrreason,omitempty"`
-	Mir                       string  `json:"mir,omitempty"`
+	IPType                    string  `json:"iptype,omitempty"`
+	ISCName                   string  `json:"iscname,omitempty"`
+	LBMethod                  string  `json:"lbmethod,omitempty"`
+	LBRRReason                int     `json:"lbrrreason,omitempty"`
+	MIR                       string  `json:"mir,omitempty"`
 	Name                      string  `json:"name,omitempty"`
 	Netmask                   string  `json:"netmask,omitempty"`
-	Newname                   string  `json:"newname,omitempty"`
-	Nextgenapiresource        string  `json:"_nextgenapiresource,omitempty"`
-	Nodefaultbindings         string  `json:"nodefaultbindings,omitempty"`
+	NewName                   string  `json:"newname,omitempty"`
+	NextGenAPIResource        string  `json:"_nextgenapiresource,omitempty"`
+	NoDefaultBindings         string  `json:"nodefaultbindings,omitempty"`
 	Order                     int     `json:"order,omitempty"`
-	Orderthreshold            int     `json:"orderthreshold,omitempty"`
-	Persistenceid             int     `json:"persistenceid,omitempty"`
-	Persistencetype           string  `json:"persistencetype,omitempty"`
-	Persistmask               string  `json:"persistmask,omitempty"`
-	Policyname                string  `json:"policyname,omitempty"`
+	OrderThreshold            int     `json:"orderthreshold,omitempty"`
+	PersistenceID             int     `json:"persistenceid,omitempty"`
+	PersistenceType           string  `json:"persistencetype,omitempty"`
+	PersistMask               string  `json:"persistmask,omitempty"`
+	PolicyName                string  `json:"policyname,omitempty"`
 	Priority                  int     `json:"priority,omitempty"`
 	Rule                      string  `json:"rule,omitempty"`
-	Servername                string  `json:"servername,omitempty"`
-	Servicegroupname          string  `json:"servicegroupname,omitempty"`
-	Servicename               string  `json:"servicename,omitempty"`
-	Servicetype               string  `json:"servicetype,omitempty"`
-	Sitedomainttl             int     `json:"sitedomainttl,omitempty"`
-	Sitepersistence           string  `json:"sitepersistence,omitempty"`
-	Sobackupaction            string  `json:"sobackupaction,omitempty"`
-	Somethod                  string  `json:"somethod,omitempty"`
-	Sopersistence             string  `json:"sopersistence,omitempty"`
-	Sopersistencetimeout      int     `json:"sopersistencetimeout,omitempty"`
-	Sothreshold               int     `json:"sothreshold,omitempty"`
+	ServerName                string  `json:"servername,omitempty"`
+	ServiceGroupName          string  `json:"servicegroupname,omitempty"`
+	ServiceName               string  `json:"servicename,omitempty"`
+	ServiceType               string  `json:"servicetype,omitempty"`
+	SiteDomainTTL             int     `json:"sitedomainttl,omitempty"`
+	SitePersistence           string  `json:"sitepersistence,omitempty"`
+	SOBackupAction            string  `json:"sobackupaction,omitempty"`
+	SOMethod                  string  `json:"somethod,omitempty"`
+	SOPersistence             string  `json:"sopersistence,omitempty"`
+	SOPersistenceTimeout      int     `json:"sopersistencetimeout,omitempty"`
+	SOThreshold               int     `json:"sothreshold,omitempty"`
 	State                     string  `json:"state,omitempty"`
-	Statechangetimemsec       int     `json:"statechangetimemsec,omitempty"`
-	Statechangetimesec        string  `json:"statechangetimesec,omitempty"`
+	StateChangeTimeMsec       int     `json:"statechangetimemsec,omitempty"`
+	StateChangeTimeSec        string  `json:"statechangetimesec,omitempty"`
 	Status                    int     `json:"status,omitempty"`
-	Tickssincelaststatechange int     `json:"tickssincelaststatechange,omitempty"`
+	TicksSinceLastStateChange int     `json:"tickssincelaststatechange,omitempty"`
 	Timeout                   int     `json:"timeout,omitempty"`
-	Toggleorder               string  `json:"toggleorder,omitempty"`
+	ToggleOrder               string  `json:"toggleorder,omitempty"`
 	Tolerance                 int     `json:"tolerance,omitempty"`
-	Totalservices             int     `json:"totalservices,omitempty"`
-	Ttl                       int     `json:"ttl,omitempty"`
+	TotalServices             int     `json:"totalservices,omitempty"`
+	TTL                       int     `json:"ttl,omitempty"`
 	TypeField                 string  `json:"type,omitempty"`
-	V6netmasklen              int     `json:"v6netmasklen,omitempty"`
-	V6persistmasklen          int     `json:"v6persistmasklen,omitempty"`
-	Vsvrbindsvcip             string  `json:"vsvrbindsvcip,omitempty"`
-	Vsvrbindsvcport           int     `json:"vsvrbindsvcport,omitempty"`
+	V6NetmaskLen              int     `json:"v6netmasklen,omitempty"`
+	V6PersistMaskLen          int     `json:"v6persistmasklen,omitempty"`
+	VSvrBindSvcIP             string  `json:"vsvrbindsvcip,omitempty"`
+	VSvrBindSvcPort           int     `json:"vsvrbindsvcport,omitempty"`
 	Weight                    int     `json:"weight,omitempty"`
 }
 
-type GslbdomainLbmonitorBinding struct {
-	Customheaders              string `json:"customheaders,omitempty"`
-	Grpchealthcheck            string `json:"grpchealthcheck,omitempty"`
-	Grpcservicename            string `json:"grpcservicename,omitempty"`
-	Grpcstatuscode             int    `json:"grpcstatuscode,omitempty"`
-	Httprequest                string `json:"httprequest,omitempty"`
-	Iptunnel                   string `json:"iptunnel,omitempty"`
-	Lastresponse               string `json:"lastresponse,omitempty"`
-	Monitorcurrentfailedprobes int    `json:"monitorcurrentfailedprobes,omitempty"`
-	Monitorname                string `json:"monitorname,omitempty"`
-	Monitortotalfailedprobes   int    `json:"monitortotalfailedprobes,omitempty"`
-	Monitortotalprobes         int    `json:"monitortotalprobes,omitempty"`
-	Monstatcode                int    `json:"monstatcode,omitempty"`
-	Monstate                   string `json:"monstate,omitempty"`
+type GSLBDomainLBMonitorBinding struct {
+	CustomHeaders              string `json:"customheaders,omitempty"`
+	GRPCHealthCheck            string `json:"grpchealthcheck,omitempty"`
+	GRPCServiceName            string `json:"grpcservicename,omitempty"`
+	GRPCStatusCode             int    `json:"grpcstatuscode,omitempty"`
+	HTTPRequest                string `json:"httprequest,omitempty"`
+	IPTunnel                   string `json:"iptunnel,omitempty"`
+	LastResponse               string `json:"lastresponse,omitempty"`
+	MonitorCurrentFailedProbes int    `json:"monitorcurrentfailedprobes,omitempty"`
+	MonitorName                string `json:"monitorname,omitempty"`
+	MonitorTotalFailedProbes   int    `json:"monitortotalfailedprobes,omitempty"`
+	MonitorTotalProbes         int    `json:"monitortotalprobes,omitempty"`
+	MonStatCode                int    `json:"monstatcode,omitempty"`
+	MonState                   string `json:"monstate,omitempty"`
 	Name                       string `json:"name,omitempty"`
-	Respcode                   string `json:"respcode,omitempty"`
-	Responsetime               int    `json:"responsetime,omitempty"`
-	Servicename                string `json:"servicename,omitempty"`
-	Vservername                string `json:"vservername,omitempty"`
+	RespCode                   string `json:"respcode,omitempty"`
+	ResponseTime               int    `json:"responsetime,omitempty"`
+	ServiceName                string `json:"servicename,omitempty"`
+	VServerName                string `json:"vservername,omitempty"`
 }
 
-type Gslbparameter struct {
-	Automaticconfigsync         string   `json:"automaticconfigsync,omitempty"`
+type GSLBParameter struct {
+	AutomaticConfigSync         string   `json:"automaticconfigsync,omitempty"`
 	Builtin                     []string `json:"builtin,omitempty"`
-	Dropldnsreq                 string   `json:"dropldnsreq,omitempty"`
+	DropLDNSReq                 string   `json:"dropldnsreq,omitempty"`
 	Feature                     string   `json:"feature,omitempty"`
 	Flags                       int      `json:"flags,omitempty"`
-	Gslbconfigsyncmonitor       string   `json:"gslbconfigsyncmonitor,omitempty"`
-	Gslbsvcstatedelaytime       int      `json:"gslbsvcstatedelaytime,omitempty"`
-	Gslbsyncinterval            int      `json:"gslbsyncinterval,omitempty"`
-	Gslbsynclocfiles            string   `json:"gslbsynclocfiles,omitempty"`
-	Gslbsyncmode                string   `json:"gslbsyncmode,omitempty"`
-	Gslbsyncsaveconfigcommand   string   `json:"gslbsyncsaveconfigcommand,omitempty"`
+	GSLBConfigSyncMonitor       string   `json:"gslbconfigsyncmonitor,omitempty"`
+	GSLBSvcStateDelayTime       int      `json:"gslbsvcstatedelaytime,omitempty"`
+	GSLBSyncInterval            int      `json:"gslbsyncinterval,omitempty"`
+	GSLBSyncLocFiles            string   `json:"gslbsynclocfiles,omitempty"`
+	GSLBSyncMode                string   `json:"gslbsyncmode,omitempty"`
+	GSLBSyncSaveConfigCommand   string   `json:"gslbsyncsaveconfigcommand,omitempty"`
 	Incarnation                 int      `json:"incarnation,omitempty"`
-	Ldnsentrytimeout            int      `json:"ldnsentrytimeout,omitempty"`
-	Ldnsmask                    string   `json:"ldnsmask,omitempty"`
-	Ldnsprobeorder              []string `json:"ldnsprobeorder,omitempty"`
-	Mepkeepalivetimeout         int      `json:"mepkeepalivetimeout,omitempty"`
-	Nextgenapiresource          string   `json:"_nextgenapiresource,omitempty"`
-	Overridepersistencyfororder string   `json:"overridepersistencyfororder,omitempty"`
-	Rtttolerance                int      `json:"rtttolerance,omitempty"`
-	Svcstatelearningtime        int      `json:"svcstatelearningtime,omitempty"`
-	Undefaction                 string   `json:"undefaction,omitempty"`
-	V6ldnsmasklen               int      `json:"v6ldnsmasklen,omitempty"`
+	LDNSEntryTimeout            int      `json:"ldnsentrytimeout,omitempty"`
+	LDNSMask                    string   `json:"ldnsmask,omitempty"`
+	LDNSProbeOrder              []string `json:"ldnsprobeorder,omitempty"`
+	MEPKeepaliveTimeout         int      `json:"mepkeepalivetimeout,omitempty"`
+	NextGenAPIResource          string   `json:"_nextgenapiresource,omitempty"`
+	OverridePersistencyForOrder string   `json:"overridepersistencyfororder,omitempty"`
+	RTTTolerance                int      `json:"rtttolerance,omitempty"`
+	SvcStateLearningTime        int      `json:"svcstatelearningtime,omitempty"`
+	UndefAction                 string   `json:"undefaction,omitempty"`
+	V6LDNSMaskLen               int      `json:"v6ldnsmasklen,omitempty"`
 }
 
-type GslbvserverSpilloverpolicyBinding struct {
-	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
+type GSLBVServerSpilloverPolicyBinding struct {
+	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
 	Name                   string `json:"name,omitempty"`
 	Order                  int    `json:"order,omitempty"`
-	Policyname             string `json:"policyname,omitempty"`
+	PolicyName             string `json:"policyname,omitempty"`
 	Priority               int    `json:"priority,omitempty"`
 	TypeField              string `json:"type,omitempty"`
 }
 
-type GslbvserverBinding struct {
-	GslbvserverGslbdomainBinding             []interface{} `json:"gslbvserver_gslbdomain_binding,omitempty"`
-	GslbvserverGslbserviceBinding            []interface{} `json:"gslbvserver_gslbservice_binding,omitempty"`
-	GslbvserverGslbservicegroupBinding       []interface{} `json:"gslbvserver_gslbservicegroup_binding,omitempty"`
-	GslbvserverGslbservicegroupmemberBinding []interface{} `json:"gslbvserver_gslbservicegroupmember_binding,omitempty"`
-	GslbvserverLbpolicyBinding               []interface{} `json:"gslbvserver_lbpolicy_binding,omitempty"`
-	GslbvserverSpilloverpolicyBinding        []interface{} `json:"gslbvserver_spilloverpolicy_binding,omitempty"`
+type GSLBVServerBinding struct {
+	GSLBVServerGSLBDomainBinding             []interface{} `json:"gslbvserver_gslbdomain_binding,omitempty"`
+	GSLBVServerGSLBServiceBinding            []interface{} `json:"gslbvserver_gslbservice_binding,omitempty"`
+	GSLBVServerGSLBServiceGroupBinding       []interface{} `json:"gslbvserver_gslbservicegroup_binding,omitempty"`
+	GSLBVServerGSLBServiceGroupMemberBinding []interface{} `json:"gslbvserver_gslbservicegroupmember_binding,omitempty"`
+	GSLBVServerLBPolicyBinding               []interface{} `json:"gslbvserver_lbpolicy_binding,omitempty"`
+	GSLBVServerSpilloverPolicyBinding        []interface{} `json:"gslbvserver_spilloverpolicy_binding,omitempty"`
 	Name                                     string        `json:"name,omitempty"`
 }
 
-type GslbserviceDnsviewBinding struct {
-	Servicename string `json:"servicename,omitempty"`
-	Viewip      string `json:"viewip,omitempty"`
-	Viewname    string `json:"viewname,omitempty"`
+type GSLBServiceDNSViewBinding struct {
+	ServiceName string `json:"servicename,omitempty"`
+	ViewIP      string `json:"viewip,omitempty"`
+	ViewName    string `json:"viewname,omitempty"`
 }
 
-type GslbservicegroupGslbservicegroupmemberBinding struct {
+type GSLBServiceGroupGSLBServiceGroupMemberBinding struct {
 	Delay                     int    `json:"delay,omitempty"`
 	Graceful                  string `json:"graceful,omitempty"`
-	Gslbthreshold             int    `json:"gslbthreshold,omitempty"`
-	Hashid                    int    `json:"hashid,omitempty"`
-	Ip                        string `json:"ip,omitempty"`
+	GSLBThreshold             int    `json:"gslbthreshold,omitempty"`
+	HashID                    int    `json:"hashid,omitempty"`
+	IP                        string `json:"ip,omitempty"`
 	Order                     int    `json:"order,omitempty"`
-	Orderstr                  string `json:"orderstr,omitempty"`
+	OrderStr                  string `json:"orderstr,omitempty"`
 	Port                      int    `json:"port,omitempty"`
-	Preferredlocation         string `json:"preferredlocation,omitempty"`
-	Publicip                  string `json:"publicip,omitempty"`
-	Publicport                int    `json:"publicport,omitempty"`
-	Servername                string `json:"servername,omitempty"`
-	Servicegroupname          string `json:"servicegroupname,omitempty"`
-	Siteprefix                string `json:"siteprefix,omitempty"`
+	PreferredLocation         string `json:"preferredlocation,omitempty"`
+	PublicIP                  string `json:"publicip,omitempty"`
+	PublicPort                int    `json:"publicport,omitempty"`
+	ServerName                string `json:"servername,omitempty"`
+	ServiceGroupName          string `json:"servicegroupname,omitempty"`
+	SitePrefix                string `json:"siteprefix,omitempty"`
 	State                     string `json:"state,omitempty"`
-	Statechangetimesec        string `json:"statechangetimesec,omitempty"`
-	Svrstate                  string `json:"svrstate,omitempty"`
+	StateChangeTimeSec        string `json:"statechangetimesec,omitempty"`
+	SvrState                  string `json:"svrstate,omitempty"`
 	Threshold                 string `json:"threshold,omitempty"`
-	Tickssincelaststatechange int    `json:"tickssincelaststatechange,omitempty"`
-	Trofsdelay                int    `json:"trofsdelay,omitempty"`
+	TicksSinceLastStateChange int    `json:"tickssincelaststatechange,omitempty"`
+	TROFSDelay                int    `json:"trofsdelay,omitempty"`
 	Weight                    int    `json:"weight,omitempty"`
 }
 
-type GslbdomainGslbservicegroupBinding struct {
+type GSLBDomainGSLBServiceGroupBinding struct {
 	Name             string `json:"name,omitempty"`
 	Order            int    `json:"order,omitempty"`
-	Servicegroupname string `json:"servicegroupname,omitempty"`
+	ServiceGroupName string `json:"servicegroupname,omitempty"`
 }
 
-type Gslbdomain struct {
+type GSLBDomain struct {
 	Count              float64 `json:"__count,omitempty"`
 	Name               string  `json:"name,omitempty"`
-	Nextgenapiresource string  `json:"_nextgenapiresource,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
 }
 
-type GslbvserverGslbservicegroupmemberBinding struct {
-	Curstate           string `json:"curstate,omitempty"`
-	Dynamicweight      string `json:"dynamicweight,omitempty"`
-	Gslbthreshold      int    `json:"gslbthreshold,omitempty"`
-	Ipaddress          string `json:"ipaddress,omitempty"`
+type GSLBVServerGSLBServiceGroupMemberBinding struct {
+	CurState           string `json:"curstate,omitempty"`
+	DynamicWeight      string `json:"dynamicweight,omitempty"`
+	GSLBThreshold      int    `json:"gslbthreshold,omitempty"`
+	IPAddress          string `json:"ipaddress,omitempty"`
 	Name               string `json:"name,omitempty"`
 	Order              int    `json:"order,omitempty"`
-	Orderstr           string `json:"orderstr,omitempty"`
+	OrderStr           string `json:"orderstr,omitempty"`
 	Port               int    `json:"port,omitempty"`
-	Preferredlocation  string `json:"preferredlocation,omitempty"`
-	Servicegroupname   string `json:"servicegroupname,omitempty"`
-	Servicetype        string `json:"servicetype,omitempty"`
-	Sitepersistcookie  string `json:"sitepersistcookie,omitempty"`
-	Svcsitepersistence string `json:"svcsitepersistence,omitempty"`
-	Svreffgslbstate    string `json:"svreffgslbstate,omitempty"`
-	Thresholdvalue     int    `json:"thresholdvalue,omitempty"`
+	PreferredLocation  string `json:"preferredlocation,omitempty"`
+	ServiceGroupName   string `json:"servicegroupname,omitempty"`
+	ServiceType        string `json:"servicetype,omitempty"`
+	SitePersistCookie  string `json:"sitepersistcookie,omitempty"`
+	SvcSitePersistence string `json:"svcsitepersistence,omitempty"`
+	SvrEffGSLBState    string `json:"svreffgslbstate,omitempty"`
+	ThresholdValue     int    `json:"thresholdvalue,omitempty"`
 	Weight             int    `json:"weight,omitempty"`
 }
 
-type GslbsiteGslbserviceBinding struct {
-	Cnameentry  string `json:"cnameentry,omitempty"`
-	Ipaddress   string `json:"ipaddress,omitempty"`
+type GSLBSiteGSLBServiceBinding struct {
+	CnameEntry  string `json:"cnameentry,omitempty"`
+	IPAddress   string `json:"ipaddress,omitempty"`
 	Port        int    `json:"port,omitempty"`
-	Servicename string `json:"servicename,omitempty"`
-	Servicetype string `json:"servicetype,omitempty"`
-	Sitename    string `json:"sitename,omitempty"`
+	ServiceName string `json:"servicename,omitempty"`
+	ServiceType string `json:"servicetype,omitempty"`
+	SiteName    string `json:"sitename,omitempty"`
 	State       string `json:"state,omitempty"`
 }
 
-type GslbsiteGslbservicegroupmemberBinding struct {
-	Ipaddress        string `json:"ipaddress,omitempty"`
+type GSLBSiteGSLBServiceGroupMemberBinding struct {
+	IPAddress        string `json:"ipaddress,omitempty"`
 	Port             int    `json:"port,omitempty"`
-	Servicegroupname string `json:"servicegroupname,omitempty"`
-	Servicetype      string `json:"servicetype,omitempty"`
-	Sitename         string `json:"sitename,omitempty"`
+	ServiceGroupName string `json:"servicegroupname,omitempty"`
+	ServiceType      string `json:"servicetype,omitempty"`
+	SiteName         string `json:"sitename,omitempty"`
 	State            string `json:"state,omitempty"`
 }
 
-type GslbsiteBinding struct {
-	GslbsiteGslbserviceBinding            []interface{} `json:"gslbsite_gslbservice_binding,omitempty"`
-	GslbsiteGslbservicegroupBinding       []interface{} `json:"gslbsite_gslbservicegroup_binding,omitempty"`
-	GslbsiteGslbservicegroupmemberBinding []interface{} `json:"gslbsite_gslbservicegroupmember_binding,omitempty"`
-	Sitename                              string        `json:"sitename,omitempty"`
+type GSLBSiteBinding struct {
+	GSLBSiteGSLBServiceBinding            []interface{} `json:"gslbsite_gslbservice_binding,omitempty"`
+	GSLBSiteGSLBServiceGroupBinding       []interface{} `json:"gslbsite_gslbservicegroup_binding,omitempty"`
+	GSLBSiteGSLBServiceGroupMemberBinding []interface{} `json:"gslbsite_gslbservicegroupmember_binding,omitempty"`
+	SiteName                              string        `json:"sitename,omitempty"`
 }
 
-type GslbdomainGslbserviceBinding struct {
-	Cnameentry       string `json:"cnameentry,omitempty"`
-	Cumulativeweight int    `json:"cumulativeweight,omitempty"`
-	Dynamicconfwt    int    `json:"dynamicconfwt,omitempty"`
-	Gslbthreshold    int    `json:"gslbthreshold,omitempty"`
-	Ipaddress        string `json:"ipaddress,omitempty"`
+type GSLBDomainGSLBServiceBinding struct {
+	CnameEntry       string `json:"cnameentry,omitempty"`
+	CumulativeWeight int    `json:"cumulativeweight,omitempty"`
+	DynamicConfWt    int    `json:"dynamicconfwt,omitempty"`
+	GSLBThreshold    int    `json:"gslbthreshold,omitempty"`
+	IPAddress        string `json:"ipaddress,omitempty"`
 	Name             string `json:"name,omitempty"`
 	Order            int    `json:"order,omitempty"`
 	Port             int    `json:"port,omitempty"`
-	Servicename      string `json:"servicename,omitempty"`
-	Servicetype      string `json:"servicetype,omitempty"`
+	ServiceName      string `json:"servicename,omitempty"`
+	ServiceType      string `json:"servicetype,omitempty"`
 	State            string `json:"state,omitempty"`
-	Svreffgslbstate  string `json:"svreffgslbstate,omitempty"`
-	Vservername      string `json:"vservername,omitempty"`
+	SvrEffGSLBState  string `json:"svreffgslbstate,omitempty"`
+	VServerName      string `json:"vservername,omitempty"`
 	Weight           int    `json:"weight,omitempty"`
 }
 
-type GslbvserverGslbservicegroupBinding struct {
+type GSLBVServerGSLBServiceGroupBinding struct {
 	Name             string `json:"name,omitempty"`
 	Order            int    `json:"order,omitempty"`
-	Servicegroupname string `json:"servicegroupname,omitempty"`
+	ServiceGroupName string `json:"servicegroupname,omitempty"`
 }
 
-type GslbsiteGslbservicegroupBinding struct {
-	Servicegroupname string `json:"servicegroupname,omitempty"`
-	Servicetype      string `json:"servicetype,omitempty"`
-	Sitename         string `json:"sitename,omitempty"`
+type GSLBSiteGSLBServiceGroupBinding struct {
+	ServiceGroupName string `json:"servicegroupname,omitempty"`
+	ServiceType      string `json:"servicetype,omitempty"`
+	SiteName         string `json:"sitename,omitempty"`
 }
 
-type GslbservicegroupLbmonitorBinding struct {
-	Hashid           int    `json:"hashid,omitempty"`
+type GSLBServiceGroupLBMonitorBinding struct {
+	HashID           int    `json:"hashid,omitempty"`
 	MonitorName      string `json:"monitor_name,omitempty"`
-	Monstate         string `json:"monstate,omitempty"`
-	Monweight        int    `json:"monweight,omitempty"`
+	MonState         string `json:"monstate,omitempty"`
+	MonWeight        int    `json:"monweight,omitempty"`
 	Order            int    `json:"order,omitempty"`
 	Passive          bool   `json:"passive,omitempty"`
 	Port             int    `json:"port,omitempty"`
-	Publicip         string `json:"publicip,omitempty"`
-	Publicport       int    `json:"publicport,omitempty"`
-	Servicegroupname string `json:"servicegroupname,omitempty"`
-	Siteprefix       string `json:"siteprefix,omitempty"`
+	PublicIP         string `json:"publicip,omitempty"`
+	PublicPort       int    `json:"publicport,omitempty"`
+	ServiceGroupName string `json:"servicegroupname,omitempty"`
+	SitePrefix       string `json:"siteprefix,omitempty"`
 	State            string `json:"state,omitempty"`
 	Weight           int    `json:"weight,omitempty"`
 }
 
-type GslbvserverDomainBinding struct {
-	Backupip         string `json:"backupip,omitempty"`
-	Backupipflag     bool   `json:"backupipflag,omitempty"`
+type GSLBVServerDomainBinding struct {
+	BackupIP         string `json:"backupip,omitempty"`
+	BackupIPFlag     bool   `json:"backupipflag,omitempty"`
 	CookieDomain     string `json:"cookie_domain,omitempty"`
-	CookieDomainflag bool   `json:"cookie_domainflag,omitempty"`
-	Cookietimeout    int    `json:"cookietimeout,omitempty"`
-	Domainname       string `json:"domainname,omitempty"`
+	CookieDomainFlag bool   `json:"cookie_domainflag,omitempty"`
+	CookieTimeout    int    `json:"cookietimeout,omitempty"`
+	DomainName       string `json:"domainname,omitempty"`
 	Name             string `json:"name,omitempty"`
 	Order            int    `json:"order,omitempty"`
-	Sitedomainttl    int    `json:"sitedomainttl,omitempty"`
-	Ttl              int    `json:"ttl,omitempty"`
+	SiteDomainTTL    int    `json:"sitedomainttl,omitempty"`
+	TTL              int    `json:"ttl,omitempty"`
 }
 
-type GslbdomainBinding struct {
-	GslbdomainGslbserviceBinding            []interface{} `json:"gslbdomain_gslbservice_binding,omitempty"`
-	GslbdomainGslbservicegroupBinding       []interface{} `json:"gslbdomain_gslbservicegroup_binding,omitempty"`
-	GslbdomainGslbservicegroupmemberBinding []interface{} `json:"gslbdomain_gslbservicegroupmember_binding,omitempty"`
-	GslbdomainGslbvserverBinding            []interface{} `json:"gslbdomain_gslbvserver_binding,omitempty"`
-	GslbdomainLbmonitorBinding              []interface{} `json:"gslbdomain_lbmonitor_binding,omitempty"`
+type GSLBDomainBinding struct {
+	GSLBDomainGSLBServiceBinding            []interface{} `json:"gslbdomain_gslbservice_binding,omitempty"`
+	GSLBDomainGSLBServiceGroupBinding       []interface{} `json:"gslbdomain_gslbservicegroup_binding,omitempty"`
+	GSLBDomainGSLBServiceGroupMemberBinding []interface{} `json:"gslbdomain_gslbservicegroupmember_binding,omitempty"`
+	GSLBDomainGSLBVServerBinding            []interface{} `json:"gslbdomain_gslbvserver_binding,omitempty"`
+	GSLBDomainLBMonitorBinding              []interface{} `json:"gslbdomain_lbmonitor_binding,omitempty"`
 	Name                                    string        `json:"name,omitempty"`
 }
 
-type GslbserviceBinding struct {
-	GslbserviceDnsviewBinding   []interface{} `json:"gslbservice_dnsview_binding,omitempty"`
-	GslbserviceLbmonitorBinding []interface{} `json:"gslbservice_lbmonitor_binding,omitempty"`
-	Servicename                 string        `json:"servicename,omitempty"`
+type GSLBServiceBinding struct {
+	GSLBServiceDNSViewBinding   []interface{} `json:"gslbservice_dnsview_binding,omitempty"`
+	GSLBServiceLBMonitorBinding []interface{} `json:"gslbservice_lbmonitor_binding,omitempty"`
+	ServiceName                 string        `json:"servicename,omitempty"`
 }
 
-type GslbserviceLbmonitorBinding struct {
-	Failedprobes               int    `json:"failedprobes,omitempty"`
-	Lastresponse               string `json:"lastresponse,omitempty"`
+type GSLBServiceLBMonitorBinding struct {
+	FailedProbes               int    `json:"failedprobes,omitempty"`
+	LastResponse               string `json:"lastresponse,omitempty"`
 	MonitorName                string `json:"monitor_name,omitempty"`
 	MonitorState               string `json:"monitor_state,omitempty"`
-	Monitorcurrentfailedprobes int    `json:"monitorcurrentfailedprobes,omitempty"`
-	Monitortotalfailedprobes   int    `json:"monitortotalfailedprobes,omitempty"`
-	Monitortotalprobes         int    `json:"monitortotalprobes,omitempty"`
-	Monstatcode                int    `json:"monstatcode,omitempty"`
-	Monstate                   string `json:"monstate,omitempty"`
-	Monstatparam1              int    `json:"monstatparam1,omitempty"`
-	Monstatparam2              int    `json:"monstatparam2,omitempty"`
-	Monstatparam3              int    `json:"monstatparam3,omitempty"`
-	Responsetime               int    `json:"responsetime,omitempty"`
-	Servicename                string `json:"servicename,omitempty"`
-	Totalfailedprobes          int    `json:"totalfailedprobes,omitempty"`
+	MonitorCurrentFailedProbes int    `json:"monitorcurrentfailedprobes,omitempty"`
+	MonitorTotalFailedProbes   int    `json:"monitortotalfailedprobes,omitempty"`
+	MonitorTotalProbes         int    `json:"monitortotalprobes,omitempty"`
+	MonStatCode                int    `json:"monstatcode,omitempty"`
+	MonState                   string `json:"monstate,omitempty"`
+	MonStatParam1              int    `json:"monstatparam1,omitempty"`
+	MonStatParam2              int    `json:"monstatparam2,omitempty"`
+	MonStatParam3              int    `json:"monstatparam3,omitempty"`
+	ResponseTime               int    `json:"responsetime,omitempty"`
+	ServiceName                string `json:"servicename,omitempty"`
+	TotalFailedProbes          int    `json:"totalfailedprobes,omitempty"`
 	Weight                     int    `json:"weight,omitempty"`
 }
 
-type GslbdomainGslbservicegroupmemberBinding struct {
-	Gslbthreshold    int    `json:"gslbthreshold,omitempty"`
-	Ipaddress        string `json:"ipaddress,omitempty"`
+type GSLBDomainGSLBServiceGroupMemberBinding struct {
+	GSLBThreshold    int    `json:"gslbthreshold,omitempty"`
+	IPAddress        string `json:"ipaddress,omitempty"`
 	Name             string `json:"name,omitempty"`
 	Order            int    `json:"order,omitempty"`
 	Port             int    `json:"port,omitempty"`
-	Servicegroupname string `json:"servicegroupname,omitempty"`
-	Servicetype      string `json:"servicetype,omitempty"`
-	Svreffgslbstate  string `json:"svreffgslbstate,omitempty"`
+	ServiceGroupName string `json:"servicegroupname,omitempty"`
+	ServiceType      string `json:"servicetype,omitempty"`
+	SvrEffGSLBState  string `json:"svreffgslbstate,omitempty"`
 	Weight           int    `json:"weight,omitempty"`
 }
 
-type Gslbservice struct {
-	Appflowlog                string  `json:"appflowlog,omitempty"`
-	Cip                       string  `json:"cip,omitempty"`
-	Cipheader                 string  `json:"cipheader,omitempty"`
-	Clmonowner                int     `json:"clmonowner,omitempty"`
-	Clmonview                 int     `json:"clmonview,omitempty"`
-	Clttimeout                int     `json:"clttimeout,omitempty"`
-	Cnameentry                string  `json:"cnameentry,omitempty"`
+type GSLBService struct {
+	AppFlowLog                string  `json:"appflowlog,omitempty"`
+	CIP                       string  `json:"cip,omitempty"`
+	CIPHeader                 string  `json:"cipheader,omitempty"`
+	ClMonOwner                int     `json:"clmonowner,omitempty"`
+	ClMonView                 int     `json:"clmonview,omitempty"`
+	CltTimeout                int     `json:"clttimeout,omitempty"`
+	CnameEntry                string  `json:"cnameentry,omitempty"`
 	Comment                   string  `json:"comment,omitempty"`
-	Cookietimeout             int     `json:"cookietimeout,omitempty"`
+	CookieTimeout             int     `json:"cookietimeout,omitempty"`
 	Count                     float64 `json:"__count,omitempty"`
-	Downstateflush            string  `json:"downstateflush,omitempty"`
-	Glsbsvchealthdescr        string  `json:"glsbsvchealthdescr,omitempty"`
-	Gslb                      string  `json:"gslb,omitempty"`
-	Gslbsvchealth             int     `json:"gslbsvchealth,omitempty"`
-	Gslbsvcstats              int     `json:"gslbsvcstats,omitempty"`
-	Gslbthreshold             int     `json:"gslbthreshold,omitempty"`
-	Hashid                    int     `json:"hashid,omitempty"`
-	Healthmonitor             string  `json:"healthmonitor,omitempty"`
-	Ip                        string  `json:"ip,omitempty"`
-	Ipaddress                 string  `json:"ipaddress,omitempty"`
-	Maxaaausers               int     `json:"maxaaausers,omitempty"`
-	Maxbandwidth              int     `json:"maxbandwidth,omitempty"`
-	Maxclient                 int     `json:"maxclient,omitempty"`
+	DownStateFlush            string  `json:"downstateflush,omitempty"`
+	GLSBSvcHealthDescr        string  `json:"glsbsvchealthdescr,omitempty"`
+	GSLB                      string  `json:"gslb,omitempty"`
+	GSLBSvcHealth             int     `json:"gslbsvchealth,omitempty"`
+	GSLBSvcStats              int     `json:"gslbsvcstats,omitempty"`
+	GSLBThreshold             int     `json:"gslbthreshold,omitempty"`
+	HashID                    int     `json:"hashid,omitempty"`
+	HealthMonitor             string  `json:"healthmonitor,omitempty"`
+	IP                        string  `json:"ip,omitempty"`
+	IPAddress                 string  `json:"ipaddress,omitempty"`
+	MaxAAAUsers               int     `json:"maxaaausers,omitempty"`
+	MaxBandwidth              int     `json:"maxbandwidth,omitempty"`
+	MaxClient                 int     `json:"maxclient,omitempty"`
 	MonitorNameSvc            string  `json:"monitor_name_svc,omitempty"`
 	MonitorState              string  `json:"monitor_state,omitempty"`
-	Monstate                  string  `json:"monstate,omitempty"`
-	Monthreshold              int     `json:"monthreshold,omitempty"`
-	Naptrdomainttl            int     `json:"naptrdomainttl,omitempty"`
-	Naptrorder                int     `json:"naptrorder,omitempty"`
-	Naptrpreference           int     `json:"naptrpreference,omitempty"`
-	Naptrreplacement          string  `json:"naptrreplacement,omitempty"`
-	Naptrservices             string  `json:"naptrservices,omitempty"`
-	Newname                   string  `json:"newname,omitempty"`
-	Nextgenapiresource        string  `json:"_nextgenapiresource,omitempty"`
-	Nodefaultbindings         string  `json:"nodefaultbindings,omitempty"`
+	MonState                  string  `json:"monstate,omitempty"`
+	MonThreshold              int     `json:"monthreshold,omitempty"`
+	NAPTRDomainTTL            int     `json:"naptrdomainttl,omitempty"`
+	NAPTROrder                int     `json:"naptrorder,omitempty"`
+	NAPTRPreference           int     `json:"naptrpreference,omitempty"`
+	NAPTRReplacement          string  `json:"naptrreplacement,omitempty"`
+	NAPTRServices             string  `json:"naptrservices,omitempty"`
+	NewName                   string  `json:"newname,omitempty"`
+	NextGenAPIResource        string  `json:"_nextgenapiresource,omitempty"`
+	NoDefaultBindings         string  `json:"nodefaultbindings,omitempty"`
 	Port                      int     `json:"port,omitempty"`
-	Preferredlocation         string  `json:"preferredlocation,omitempty"`
-	Publicip                  string  `json:"publicip,omitempty"`
-	Publicport                int     `json:"publicport,omitempty"`
-	Servername                string  `json:"servername,omitempty"`
-	Servicename               string  `json:"servicename,omitempty"`
-	Servicetype               string  `json:"servicetype,omitempty"`
-	Sitename                  string  `json:"sitename,omitempty"`
-	Sitepersistence           string  `json:"sitepersistence,omitempty"`
-	Siteprefix                string  `json:"siteprefix,omitempty"`
+	PreferredLocation         string  `json:"preferredlocation,omitempty"`
+	PublicIP                  string  `json:"publicip,omitempty"`
+	PublicPort                int     `json:"publicport,omitempty"`
+	ServerName                string  `json:"servername,omitempty"`
+	ServiceName               string  `json:"servicename,omitempty"`
+	ServiceType               string  `json:"servicetype,omitempty"`
+	SiteName                  string  `json:"sitename,omitempty"`
+	SitePersistence           string  `json:"sitepersistence,omitempty"`
+	SitePrefix                string  `json:"siteprefix,omitempty"`
 	State                     string  `json:"state,omitempty"`
-	Statechangetimesec        string  `json:"statechangetimesec,omitempty"`
-	Svreffgslbstate           string  `json:"svreffgslbstate,omitempty"`
-	Svrstate                  string  `json:"svrstate,omitempty"`
-	Svrtimeout                int     `json:"svrtimeout,omitempty"`
+	StateChangeTimeSec        string  `json:"statechangetimesec,omitempty"`
+	SvrEffGSLBState           string  `json:"svreffgslbstate,omitempty"`
+	SvrState                  string  `json:"svrstate,omitempty"`
+	SvrTimeout                int     `json:"svrtimeout,omitempty"`
 	Threshold                 string  `json:"threshold,omitempty"`
-	Tickssincelaststatechange int     `json:"tickssincelaststatechange,omitempty"`
-	Viewip                    string  `json:"viewip,omitempty"`
-	Viewname                  string  `json:"viewname,omitempty"`
+	TicksSinceLastStateChange int     `json:"tickssincelaststatechange,omitempty"`
+	ViewIP                    string  `json:"viewip,omitempty"`
+	ViewName                  string  `json:"viewname,omitempty"`
 	Weight                    int     `json:"weight,omitempty"`
 }
 
-type Gslbconfig struct {
+type GSLBConfig struct {
 	Command    string `json:"command,omitempty"`
 	Debug      bool   `json:"debug,omitempty"`
-	Forcesync  string `json:"forcesync,omitempty"`
-	Nowarn     bool   `json:"nowarn,omitempty"`
+	ForceSync  string `json:"forcesync,omitempty"`
+	NoWarn     bool   `json:"nowarn,omitempty"`
 	Preview    bool   `json:"preview,omitempty"`
-	Saveconfig bool   `json:"saveconfig,omitempty"`
+	SaveConfig bool   `json:"saveconfig,omitempty"`
 }
 
-type Gslbrunningconfig struct {
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+type GSLBRunningConfig struct {
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
 	Response           string `json:"response,omitempty"`
 }
 
-type Gslbsite struct {
-	Backupparentlist       []string `json:"backupparentlist,omitempty"`
-	Clip                   string   `json:"clip,omitempty"`
+type GSLBSite struct {
+	BackupParentList       []string `json:"backupparentlist,omitempty"`
+	CLIP                   string   `json:"clip,omitempty"`
 	Count                  float64  `json:"__count,omitempty"`
-	Curbackupparentip      string   `json:"curbackupparentip,omitempty"`
-	Metricexchange         string   `json:"metricexchange,omitempty"`
-	Naptrreplacementsuffix string   `json:"naptrreplacementsuffix,omitempty"`
-	Newname                string   `json:"newname,omitempty"`
-	Nextgenapiresource     string   `json:"_nextgenapiresource,omitempty"`
-	Nwmetricexchange       string   `json:"nwmetricexchange,omitempty"`
-	Oldname                string   `json:"oldname,omitempty"`
-	Parentsite             string   `json:"parentsite,omitempty"`
-	Persistencemepstatus   string   `json:"persistencemepstatus,omitempty"`
-	Publicclip             string   `json:"publicclip,omitempty"`
-	Publicip               string   `json:"publicip,omitempty"`
-	Sessionexchange        string   `json:"sessionexchange,omitempty"`
-	Siteipaddress          string   `json:"siteipaddress,omitempty"`
-	Sitename               string   `json:"sitename,omitempty"`
-	Sitepassword           string   `json:"sitepassword,omitempty"`
-	Sitestate              string   `json:"sitestate,omitempty"`
-	Sitetype               string   `json:"sitetype,omitempty"`
+	CurBackupParentIP      string   `json:"curbackupparentip,omitempty"`
+	MetricExchange         string   `json:"metricexchange,omitempty"`
+	NAPTRReplacementSuffix string   `json:"naptrreplacementsuffix,omitempty"`
+	NewName                string   `json:"newname,omitempty"`
+	NextGenAPIResource     string   `json:"_nextgenapiresource,omitempty"`
+	NWMetricExchange       string   `json:"nwmetricexchange,omitempty"`
+	OldName                string   `json:"oldname,omitempty"`
+	ParentSite             string   `json:"parentsite,omitempty"`
+	PersistenceMEPStatus   string   `json:"persistencemepstatus,omitempty"`
+	PublicCLIP             string   `json:"publicclip,omitempty"`
+	PublicIP               string   `json:"publicip,omitempty"`
+	SessionExchange        string   `json:"sessionexchange,omitempty"`
+	SiteIPAddress          string   `json:"siteipaddress,omitempty"`
+	SiteName               string   `json:"sitename,omitempty"`
+	SitePassword           string   `json:"sitepassword,omitempty"`
+	SiteState              string   `json:"sitestate,omitempty"`
+	SiteType               string   `json:"sitetype,omitempty"`
 	Status                 string   `json:"status,omitempty"`
-	Triggermonitor         string   `json:"triggermonitor,omitempty"`
+	TriggerMonitor         string   `json:"triggermonitor,omitempty"`
 	Version                int      `json:"version,omitempty"`
 }
 
-type Gslbsyncstatus struct {
-	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+type GSLBSyncStatus struct {
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
 	Response           string `json:"response,omitempty"`
 	Summary            bool   `json:"summary,omitempty"`
 }
 
-type Gslbldnsentry struct {
-	Ipaddress string `json:"ipaddress,omitempty"`
+type GSLBLDNSEntry struct {
+	IPAddress string `json:"ipaddress,omitempty"`
 }
 
-type GslbvserverGslbserviceBinding struct {
-	Cnameentry         string `json:"cnameentry,omitempty"`
-	Cumulativeweight   int    `json:"cumulativeweight,omitempty"`
-	Curstate           string `json:"curstate,omitempty"`
-	Domainname         string `json:"domainname,omitempty"`
-	Dynamicconfwt      int    `json:"dynamicconfwt,omitempty"`
-	Gslbboundsvctype   string `json:"gslbboundsvctype,omitempty"`
-	Gslbthreshold      int    `json:"gslbthreshold,omitempty"`
-	Ipaddress          string `json:"ipaddress,omitempty"`
-	Iscname            string `json:"iscname,omitempty"`
+type GSLBVServerGSLBServiceBinding struct {
+	CnameEntry         string `json:"cnameentry,omitempty"`
+	CumulativeWeight   int    `json:"cumulativeweight,omitempty"`
+	CurState           string `json:"curstate,omitempty"`
+	DomainName         string `json:"domainname,omitempty"`
+	DynamicConfWt      int    `json:"dynamicconfwt,omitempty"`
+	GSLBBoundSvcType   string `json:"gslbboundsvctype,omitempty"`
+	GSLBThreshold      int    `json:"gslbthreshold,omitempty"`
+	IPAddress          string `json:"ipaddress,omitempty"`
+	ISCName            string `json:"iscname,omitempty"`
 	Name               string `json:"name,omitempty"`
 	Order              int    `json:"order,omitempty"`
-	Orderstr           string `json:"orderstr,omitempty"`
+	OrderStr           string `json:"orderstr,omitempty"`
 	Port               int    `json:"port,omitempty"`
-	Preferredlocation  string `json:"preferredlocation,omitempty"`
-	Servicename        string `json:"servicename,omitempty"`
-	Sitepersistcookie  string `json:"sitepersistcookie,omitempty"`
-	Svcsitepersistence string `json:"svcsitepersistence,omitempty"`
-	Svreffgslbstate    string `json:"svreffgslbstate,omitempty"`
-	Thresholdvalue     int    `json:"thresholdvalue,omitempty"`
+	PreferredLocation  string `json:"preferredlocation,omitempty"`
+	ServiceName        string `json:"servicename,omitempty"`
+	SitePersistCookie  string `json:"sitepersistcookie,omitempty"`
+	SvcSitePersistence string `json:"svcsitepersistence,omitempty"`
+	SvrEffGSLBState    string `json:"svreffgslbstate,omitempty"`
+	ThresholdValue     int    `json:"thresholdvalue,omitempty"`
 	Weight             int    `json:"weight,omitempty"`
 }
 
-type GslbdomainGslbvserverBinding struct {
-	Backuplbmethod     string `json:"backuplbmethod,omitempty"`
-	Cip                string `json:"cip,omitempty"`
-	Customheaders      string `json:"customheaders,omitempty"`
-	Dnsrecordtype      string `json:"dnsrecordtype,omitempty"`
-	Dynamicweight      string `json:"dynamicweight,omitempty"`
-	Edr                string `json:"edr,omitempty"`
-	Lbmethod           string `json:"lbmethod,omitempty"`
-	Mir                string `json:"mir,omitempty"`
+type GSLBDomainGSLBVServerBinding struct {
+	BackupLBMethod     string `json:"backuplbmethod,omitempty"`
+	CIP                string `json:"cip,omitempty"`
+	CustomHeaders      string `json:"customheaders,omitempty"`
+	DNSRecordType      string `json:"dnsrecordtype,omitempty"`
+	DynamicWeight      string `json:"dynamicweight,omitempty"`
+	EDR                string `json:"edr,omitempty"`
+	LBMethod           string `json:"lbmethod,omitempty"`
+	MIR                string `json:"mir,omitempty"`
 	Name               string `json:"name,omitempty"`
 	Netmask            string `json:"netmask,omitempty"`
-	Persistenceid      int    `json:"persistenceid,omitempty"`
-	Persistencetype    string `json:"persistencetype,omitempty"`
-	Persistmask        string `json:"persistmask,omitempty"`
-	Servicetype        string `json:"servicetype,omitempty"`
-	Sitename           string `json:"sitename,omitempty"`
-	Sitepersistence    string `json:"sitepersistence,omitempty"`
-	Siteprefix         string `json:"siteprefix,omitempty"`
+	PersistenceID      int    `json:"persistenceid,omitempty"`
+	PersistenceType    string `json:"persistencetype,omitempty"`
+	PersistMask        string `json:"persistmask,omitempty"`
+	ServiceType        string `json:"servicetype,omitempty"`
+	SiteName           string `json:"sitename,omitempty"`
+	SitePersistence    string `json:"sitepersistence,omitempty"`
+	SitePrefix         string `json:"siteprefix,omitempty"`
 	State              string `json:"state,omitempty"`
-	Statechangetimesec string `json:"statechangetimesec,omitempty"`
-	V6netmasklen       int    `json:"v6netmasklen,omitempty"`
-	V6persistmasklen   int    `json:"v6persistmasklen,omitempty"`
-	Vservername        string `json:"vservername,omitempty"`
+	StateChangeTimeSec string `json:"statechangetimesec,omitempty"`
+	V6NetmaskLen       int    `json:"v6netmasklen,omitempty"`
+	V6PersistMaskLen   int    `json:"v6persistmasklen,omitempty"`
+	VServerName        string `json:"vservername,omitempty"`
 }
