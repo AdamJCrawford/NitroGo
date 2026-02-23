@@ -108,7 +108,7 @@ type LBVServer struct {
 	ToggleOrder                        string `json:"toggleorder,omitempty"`
 	TOSID                              int    `json:"tosid,omitempty"`
 	TROFSPersistence                   string `json:"trofspersistence,omitempty"`
-	V6NetMaskLen                       int    `json:"v6netmasklen,omitempty"`
+	V6NetMaskLen                       string `json:"v6netmasklen,omitempty"`
 	V6PersistMaskLen                   string `json:"v6persistmasklen,omitempty"`
 	VIPHeader                          string `json:"vipheader,omitempty"`
 	Weight                             int    `json:"weight,omitempty"`
