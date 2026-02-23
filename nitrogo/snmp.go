@@ -1,5 +1,21 @@
 package nitrogo
 
+const (
+	snmpAlarmURL               = "/nitro/v1/config/snmpalarm"
+	snmpCommunityURL           = "/nitro/v1/config/snmpcommunity"
+	snmpEngineIdURL            = "/nitro/v1/config/snmpengineid"
+	snmpGroupURL               = "/nitro/v1/config/snmpgroup"
+	snmpManagerURL             = "/nitro/v1/config/snmpmanager"
+	snmpMIBURL                 = "/nitro/v1/config/snmpmib"
+	snmpOIDURL                 = "/nitro/v1/config/snmpoid"
+	snmpOptionURL              = "/nitro/v1/config/snmpoption"
+	snmpTrapURL                = "/nitro/v1/config/snmptrap"
+	snmpTrapBindingURL         = "/nitro/v1/config/snmptrap_binding"
+	snmpTrapSNMPUserBindingURL = "/nitro/v1/config/snmptrap_snmpuser_binding"
+	snmpUserURL                = "/nitro/v1/config/snmpuser"
+	snmpViewURL                = "/nitro/v1/config/snmpview"
+)
+
 // SNMP(Simple Network Management Protocol) configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/snmp/snmp
 type SNMPService struct {

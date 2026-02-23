@@ -1,5 +1,18 @@
 package nitrogo
 
+const (
+	haFilesURL                               = "/nitro/v1/config/hafiles"
+	haNodeURL                                = "/nitro/v1/config/hanode"
+	haNodeBindingURL                         = "/nitro/v1/config/hanode_binding"
+	haNodeCIBindingURL                       = "/nitro/v1/config/hanode_ci_binding"
+	haNodeFISBindingURL                      = "/nitro/v1/config/hanode_fis_binding"
+	haNodePartialFailureInterfacesBindingURL = "/nitro/v1/config/hanode_partialfailureinterfaces_binding"
+	haNodeRouteMonitor6BindingURL            = "/nitro/v1/config/hanode_routemonitor6_binding"
+	haNodeRouteMonitorBindingURL             = "/nitro/v1/config/hanode_routemonitor_binding"
+	haSyncURL                                = "/nitro/v1/config/hasync"
+	haSyncFailuresURL                        = "/nitro/v1/config/hasyncfailures"
+)
+
 // Configuration for failover resource.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/ha/hafailover
 type HAService struct {

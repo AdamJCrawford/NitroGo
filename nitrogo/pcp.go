@@ -1,5 +1,11 @@
 package nitrogo
 
+const (
+	pcpMapURL     = "/nitro/v1/config/pcpmap"
+	pcpProfileURL = "/nitro/v1/config/pcpprofile"
+	pcpServerURL  = "/nitro/v1/config/pcpserver"
+)
+
 // Port Control Protocol Configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/pcp/pcp
 type PCPService struct {

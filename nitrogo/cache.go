@@ -1,5 +1,25 @@
 package nitrogo
 
+const (
+	cacheContentGroupURL                    = "/nitro/v1/config/cachecontentgroup"
+	cacheForwardProxyURL                    = "/nitro/v1/config/cacheforwardproxy"
+	cacheGlobalBindingURL                   = "/nitro/v1/config/cacheglobal_binding"
+	cacheGlobalCachePolicyBindingURL        = "/nitro/v1/config/cacheglobal_cachepolicy_binding"
+	cacheObjectURL                          = "/nitro/v1/config/cacheobject"
+	cacheParameterURL                       = "/nitro/v1/config/cacheparameter"
+	cachePolicyURL                          = "/nitro/v1/config/cachepolicy"
+	cachePolicyBindingURL                   = "/nitro/v1/config/cachepolicy_binding"
+	cachePolicyCacheGlobalBindingURL        = "/nitro/v1/config/cachepolicy_cacheglobal_binding"
+	cachePolicyCachePolicyLabelBindingURL   = "/nitro/v1/config/cachepolicy_cachepolicylabel_binding"
+	cachePolicyCSVServerBindingURL          = "/nitro/v1/config/cachepolicy_csvserver_binding"
+	cachePolicyLBVServerBindingURL          = "/nitro/v1/config/cachepolicy_lbvserver_binding"
+	cachePolicyLabelURL                     = "/nitro/v1/config/cachepolicylabel"
+	cachePolicyLabelBindingURL              = "/nitro/v1/config/cachepolicylabel_binding"
+	cachePolicyLabelCachePolicyBindingURL   = "/nitro/v1/config/cachepolicylabel_cachepolicy_binding"
+	cachePolicyLabelPolicyBindingBindingURL = "/nitro/v1/config/cachepolicylabel_policybinding_binding"
+	cacheSelectorURL                        = "/nitro/v1/config/cacheselector"
+)
+
 // Integrated Caching Configuration. The Integrated Caching feature is used to cache static and dynamic web application data.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/cache/cache
 type CacheService struct {

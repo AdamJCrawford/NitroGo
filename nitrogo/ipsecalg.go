@@ -1,5 +1,10 @@
 package nitrogo
 
+const (
+	ipsecALGProfileURL = "/nitro/v1/config/ipsecalgprofile"
+	ipsecALGSessionURL = "/nitro/v1/config/ipsecalgsession"
+)
+
 // IPSECALG configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/ipsecalg/ipsecalg
 type IPSECALGService struct {

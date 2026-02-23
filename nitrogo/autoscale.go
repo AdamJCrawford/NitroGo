@@ -1,5 +1,13 @@
 package nitrogo
 
+const (
+	autoscaleActionURL               = "/nitro/v1/config/autoscaleaction"
+	autoscalePolicyURL               = "/nitro/v1/config/autoscalepolicy"
+	autoscalePolicyBindingURL        = "/nitro/v1/config/autoscalepolicy_binding"
+	autoscalePolicyNSTimerBindingURL = "/nitro/v1/config/autoscalepolicy_nstimer_binding"
+	autoscaleProfileURL              = "/nitro/v1/config/autoscaleprofile"
+)
+
 // AutoScale configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/autoscale/autoscale
 type AutoscaleService struct {

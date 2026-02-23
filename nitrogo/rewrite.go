@@ -1,5 +1,23 @@
 package nitrogo
 
+const (
+	rewriteActionURL                          = "/nitro/v1/config/rewriteaction"
+	rewriteGlobalBindingURL                   = "/nitro/v1/config/rewriteglobal_binding"
+	rewriteGlobalRewritePolicyBindingURL      = "/nitro/v1/config/rewriteglobal_rewritepolicy_binding"
+	rewriteParamURL                           = "/nitro/v1/config/rewriteparam"
+	rewritePolicyURL                          = "/nitro/v1/config/rewritepolicy"
+	rewritePolicyLabelURL                     = "/nitro/v1/config/rewritepolicylabel"
+	rewritePolicyLabelBindingURL              = "/nitro/v1/config/rewritepolicylabel_binding"
+	rewritePolicyLabelPolicyBindingBindingURL = "/nitro/v1/config/rewritepolicylabel_policybinding_binding"
+	rewritePolicyLabelRewritePolicyBindingURL = "/nitro/v1/config/rewritepolicylabel_rewritepolicy_binding"
+	rewritePolicyBindingURL                   = "/nitro/v1/config/rewritepolicy_binding"
+	rewritePolicyCSVServerBindingURL          = "/nitro/v1/config/rewritepolicy_csvserver_binding"
+	rewritePolicyLBVServerBindingURL          = "/nitro/v1/config/rewritepolicy_lbvserver_binding"
+	rewritePolicyRewriteGlobalBindingURL      = "/nitro/v1/config/rewritepolicy_rewriteglobal_binding"
+	rewritePolicyRewritePolicyLabelBindingURL = "/nitro/v1/config/rewritepolicy_rewritepolicylabel_binding"
+	rewritePolicyVPNVServerBindingURL         = "/nitro/v1/config/rewritepolicy_vpnvserver_binding"
+)
+
 // Rewrite configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/rewrite/rewrite
 type RewriteService struct {

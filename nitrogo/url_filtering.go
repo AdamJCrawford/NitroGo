@@ -1,5 +1,12 @@
 package nitrogo
 
+const (
+	urlFilteringCategoriesURL     = "/nitro/v1/config/urlfilteringcategories"
+	urlFilteringCategorizationURL = "/nitro/v1/config/urlfilteringcategorization"
+	urlFilteringCategoryGroupsURL = "/nitro/v1/config/urlfilteringcategorygroups"
+	urlFilteringParameterURL      = "/nitro/v1/config/urlfilteringparameter"
+)
+
 // URL Filtering feature is used control access to webpages based on category.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/urlfiltering/urlfiltering
 type URLFilteringService struct {

@@ -1,5 +1,25 @@
 package nitrogo
 
+const (
+	appFlowActionURL                          = "/nitro/v1/config/appflowaction"
+	appFlowActionAnalyticsProfileBindingURL   = "/nitro/v1/config/appflowaction_analyticsprofile_binding"
+	appFlowActionBindingURL                   = "/nitro/v1/config/appflowaction_binding"
+	appFlowCollectorURL                       = "/nitro/v1/config/appflowcollector"
+	appFlowGlobalAppFlowPolicyBindingURL      = "/nitro/v1/config/appflowglobal_appflowpolicy_binding"
+	appFlowGlobalBindingURL                   = "/nitro/v1/config/appflowglobal_binding"
+	appFlowParamURL                           = "/nitro/v1/config/appflowparam"
+	appFlowPolicyURL                          = "/nitro/v1/config/appflowpolicy"
+	appFlowPolicyAppFlowGlobalBindingURL      = "/nitro/v1/config/appflowpolicy_appflowglobal_binding"
+	appFlowPolicyAppFlowPolicyLabelBindingURL = "/nitro/v1/config/appflowpolicy_appflowpolicylabel_binding"
+	appFlowPolicyBindingURL                   = "/nitro/v1/config/appflowpolicy_binding"
+	appFlowPolicyCSVServerBindingURL          = "/nitro/v1/config/appflowpolicy_csvserver_binding"
+	appFlowPolicyLBVServerBindingURL          = "/nitro/v1/config/appflowpolicy_lbvserver_binding"
+	appFlowPolicyVPNVServerBindingURL         = "/nitro/v1/config/appflowpolicy_vpnvserver_binding"
+	appFlowPolicyLabelURL                     = "/nitro/v1/config/appflowpolicylabel"
+	appFlowPolicyLabelAppFlowPolicyBindingURL = "/nitro/v1/config/appflowpolicylabel_appflowpolicy_binding"
+	appFlowPolicyLabelBindingURL              = "/nitro/v1/config/appflowpolicylabel_binding"
+)
+
 // AppFlow configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/appflow/appflow
 type AppFlowService struct {

@@ -1,8 +1,312 @@
-// Derived from Citrix ADC Nitro Go SDK (https://github.com/netscaler/adc-nitro-go)
-// Originally licensed under the Apache License, Version 2.0
-// Modifications by Adam Crawford, 2025
-
 package models
+
+// system configuration structs
+type SystemGlobalAuthenticationLDAPPolicyBinding struct {
+	Builtin                []string `json:"builtin,omitempty"`
+	Feature                string   `json:"feature,omitempty"`
+	GlobalBindType         string   `json:"globalbindtype,omitempty"`
+	GotoPriorityExpression string   `json:"gotopriorityexpression,omitempty"`
+	NextFactor             string   `json:"nextfactor,omitempty"`
+	PolicyName             string   `json:"policyname,omitempty"`
+	Priority               int      `json:"priority,omitempty"`
+}
+
+type SystemUserSystemCmdPolicyBinding struct {
+	PolicyName string `json:"policyname,omitempty"`
+	Priority   int    `json:"priority,omitempty"`
+	Username   string `json:"username,omitempty"`
+}
+
+type SystemGlobalAuditSyslogPolicyBinding struct {
+	Builtin                []string `json:"builtin,omitempty"`
+	Feature                string   `json:"feature,omitempty"`
+	GlobalBindType         string   `json:"globalbindtype,omitempty"`
+	GotoPriorityExpression string   `json:"gotopriorityexpression,omitempty"`
+	NextFactor             string   `json:"nextfactor,omitempty"`
+	PolicyName             string   `json:"policyname,omitempty"`
+	Priority               int      `json:"priority,omitempty"`
+}
+
+type SystemHWError struct {
+	DiskCheck    bool   `json:"diskcheck,omitempty"`
+	HWErrorCount int    `json:"hwerrorcount,omitempty"`
+	Response     string `json:"response,omitempty"`
+}
+
+type SystemParameter struct {
+	AllowDefaultPartition   string   `json:"allowdefaultpartition,omitempty"`
+	BasicAuth               string   `json:"basicauth,omitempty"`
+	CLILogLevel             string   `json:"cliloglevel,omitempty"`
+	DaysToExpire            int      `json:"daystoexpire,omitempty"`
+	Doppler                 string   `json:"doppler,omitempty"`
+	FIPSUserMode            string   `json:"fipsusermode,omitempty"`
+	ForcePasswordChange     string   `json:"forcepasswordchange,omitempty"`
+	GoogleAnalytics         string   `json:"googleanalytics,omitempty"`
+	LocalAuth               string   `json:"localauth,omitempty"`
+	MaxClient               int      `json:"maxclient,omitempty"`
+	MaxSessionPerUser       int      `json:"maxsessionperuser,omitempty"`
+	MinPasswordLen          int      `json:"minpasswordlen,omitempty"`
+	NATPCBForceFlushLimit   int      `json:"natpcbforceflushlimit,omitempty"`
+	NATPCBRstOnTimeout      string   `json:"natpcbrstontimeout,omitempty"`
+	NextGenAPIResource      string   `json:"_nextgenapiresource,omitempty"`
+	PasswordHistoryControl  string   `json:"passwordhistorycontrol,omitempty"`
+	PromptString            string   `json:"promptstring,omitempty"`
+	PwdHistoryCount         int      `json:"pwdhistorycount,omitempty"`
+	RBAOnResponse           string   `json:"rbaonresponse,omitempty"`
+	ReAuthOnAuthParamChange string   `json:"reauthonauthparamchange,omitempty"`
+	RemoveSensitiveFiles    string   `json:"removesensitivefiles,omitempty"`
+	RestrictedTimeout       string   `json:"restrictedtimeout,omitempty"`
+	StrongPassword          string   `json:"strongpassword,omitempty"`
+	Timeout                 int      `json:"timeout,omitempty"`
+	TotalAuthTimeout        int      `json:"totalauthtimeout,omitempty"`
+	WAFProtection           []string `json:"wafprotection,omitempty"`
+	WarnPriorNDays          int      `json:"warnpriorndays,omitempty"`
+}
+
+type SystemGroupSystemCmdPolicyBinding struct {
+	GroupName  string `json:"groupname,omitempty"`
+	PolicyName string `json:"policyname,omitempty"`
+	Priority   int    `json:"priority,omitempty"`
+}
+
+type SystemGlobalAuthenticationLocalPolicyBinding struct {
+	Builtin                []string `json:"builtin,omitempty"`
+	Feature                string   `json:"feature,omitempty"`
+	GlobalBindType         string   `json:"globalbindtype,omitempty"`
+	GotoPriorityExpression string   `json:"gotopriorityexpression,omitempty"`
+	NextFactor             string   `json:"nextfactor,omitempty"`
+	PolicyName             string   `json:"policyname,omitempty"`
+	Priority               int      `json:"priority,omitempty"`
+}
+
+type SystemADMUserInfo struct {
+	Username string `json:"username,omitempty"`
+}
+
+type SystemSession struct {
+	All                   bool    `json:"all,omitempty"`
+	ClientIPAddress       string  `json:"clientipaddress,omitempty"`
+	ClientType            string  `json:"clienttype,omitempty"`
+	Count                 float64 `json:"__count,omitempty"`
+	CurrentConn           bool    `json:"currentconn,omitempty"`
+	ExpiryTime            int     `json:"expirytime,omitempty"`
+	LastActivityTime      string  `json:"lastactivitytime,omitempty"`
+	LastActivityTimeLocal string  `json:"lastactivitytimelocal,omitempty"`
+	LoginTime             string  `json:"logintime,omitempty"`
+	LoginTimeLocal        string  `json:"logintimelocal,omitempty"`
+	NextGenAPIResource    string  `json:"_nextgenapiresource,omitempty"`
+	NumOfConnections      int     `json:"numofconnections,omitempty"`
+	PartitionName         string  `json:"partitionname,omitempty"`
+	SID                   int     `json:"sid,omitempty"`
+	Username              string  `json:"username,omitempty"`
+}
+
+type SystemAutoRestoreFeature struct {
+}
+
+type SystemGlobalBinding struct {
+	SystemGlobalAuditNSLogPolicyBinding           []interface{} `json:"systemglobal_auditnslogpolicy_binding,omitempty"`
+	SystemGlobalAuditSyslogPolicyBinding          []interface{} `json:"systemglobal_auditsyslogpolicy_binding,omitempty"`
+	SystemGlobalAuthenticationLDAPPolicyBinding   []interface{} `json:"systemglobal_authenticationldappolicy_binding,omitempty"`
+	SystemGlobalAuthenticationLocalPolicyBinding  []interface{} `json:"systemglobal_authenticationlocalpolicy_binding,omitempty"`
+	SystemGlobalAuthenticationPolicyBinding       []interface{} `json:"systemglobal_authenticationpolicy_binding,omitempty"`
+	SystemGlobalAuthenticationRADIUSPolicyBinding []interface{} `json:"systemglobal_authenticationradiuspolicy_binding,omitempty"`
+	SystemGlobalAuthenticationTACACSPolicyBinding []interface{} `json:"systemglobal_authenticationtacacspolicy_binding,omitempty"`
+}
+
+type SystemKEK struct {
+	Level string `json:"level,omitempty"`
+}
+
+type SystemCPUParam struct {
+	Count              float64 `json:"__count,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	PEMode             string  `json:"pemode,omitempty"`
+}
+
+type SystemRestorePoint struct {
+	BackupFileName     string  `json:"backupfilename,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	CreatedBy          string  `json:"createdby,omitempty"`
+	CreationTime       string  `json:"creationtime,omitempty"`
+	FileName           string  `json:"filename,omitempty"`
+	IPAddress          string  `json:"ipaddress,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	TechSuprtName      string  `json:"techsuprtname,omitempty"`
+	Version            string  `json:"version,omitempty"`
+}
+
+type SystemGlobalAuditNSLogPolicyBinding struct {
+	Builtin                []string `json:"builtin,omitempty"`
+	Feature                string   `json:"feature,omitempty"`
+	GlobalBindType         string   `json:"globalbindtype,omitempty"`
+	GotoPriorityExpression string   `json:"gotopriorityexpression,omitempty"`
+	NextFactor             string   `json:"nextfactor,omitempty"`
+	PolicyName             string   `json:"policyname,omitempty"`
+	Priority               int      `json:"priority,omitempty"`
+}
+
+type SystemGroup struct {
+	AllowedManagementInterface []string `json:"allowedmanagementinterface,omitempty"`
+	Count                      float64  `json:"__count,omitempty"`
+	DaysToExpire               int      `json:"daystoexpire,omitempty"`
+	GroupName                  string   `json:"groupname,omitempty"`
+	NextGenAPIResource         string   `json:"_nextgenapiresource,omitempty"`
+	PromptString               string   `json:"promptstring,omitempty"`
+	Timeout                    int      `json:"timeout,omitempty"`
+	WarnPriorNDays             int      `json:"warnpriorndays,omitempty"`
+}
+
+type SystemGlobalAuthenticationRADIUSPolicyBinding struct {
+	Builtin                []string `json:"builtin,omitempty"`
+	Feature                string   `json:"feature,omitempty"`
+	GlobalBindType         string   `json:"globalbindtype,omitempty"`
+	GotoPriorityExpression string   `json:"gotopriorityexpression,omitempty"`
+	NextFactor             string   `json:"nextfactor,omitempty"`
+	PolicyName             string   `json:"policyname,omitempty"`
+	Priority               int      `json:"priority,omitempty"`
+}
+
+type SystemGroupSystemUserBinding struct {
+	GroupName string `json:"groupname,omitempty"`
+	Username  string `json:"username,omitempty"`
+}
+
+type SystemGlobalAuthenticationTACACSPolicyBinding struct {
+	Builtin                []string `json:"builtin,omitempty"`
+	Feature                string   `json:"feature,omitempty"`
+	GlobalBindType         string   `json:"globalbindtype,omitempty"`
+	GotoPriorityExpression string   `json:"gotopriorityexpression,omitempty"`
+	NextFactor             string   `json:"nextfactor,omitempty"`
+	PolicyName             string   `json:"policyname,omitempty"`
+	Priority               int      `json:"priority,omitempty"`
+}
+
+type SystemUserSystemGroupBinding struct {
+	GroupName string `json:"groupname,omitempty"`
+	Username  string `json:"username,omitempty"`
+}
+
+type SystemFIPSStatus struct {
+	FIPSStatus                                       string `json:"fipsstatus,omitempty"`
+	IntelHWCryptographicAcceleratorVersion           string `json:"intelhwcryptographicacceleratorversion,omitempty"`
+	NetScalerControlPlaneCryptographicLibraryVersion string `json:"netscalercontrolplanecryptographiclibraryversion,omitempty"`
+	NetScalerCrytographicModuleVersion               string `json:"netscalercrytographicmoduleversion,omitempty"`
+	NetScalerDataPlaneCryptographicLibraryVersion    string `json:"netscalerdataplanecryptographiclibraryversion,omitempty"`
+	NetScalerJitterEntropySourceVersion              string `json:"netscalerjitterentropysourceversion,omitempty"`
+	NextGenAPIResource                               string `json:"_nextgenapiresource,omitempty"`
+}
+
+type SystemSignedExeReport struct {
+	Message string `json:"message,omitempty"`
+}
+
+type SystemNSBTracing struct {
+	ConfiguredState    string `json:"configuredstate,omitempty"`
+	EffectiveState     string `json:"effectivestate,omitempty"`
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
+	NodeID             int    `json:"nodeid,omitempty"`
+}
+
+type SystemCmdPolicy struct {
+	Action             string   `json:"action,omitempty"`
+	Builtin            []string `json:"builtin,omitempty"`
+	CmdSpec            string   `json:"cmdspec,omitempty"`
+	Count              float64  `json:"__count,omitempty"`
+	Feature            string   `json:"feature,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
+	PolicyName         string   `json:"policyname,omitempty"`
+}
+
+type SystemGroupNSPartitionBinding struct {
+	GroupName     string `json:"groupname,omitempty"`
+	PartitionName string `json:"partitionname,omitempty"`
+}
+
+type SystemGlobalAuthenticationPolicyBinding struct {
+	Builtin                []string `json:"builtin,omitempty"`
+	Feature                string   `json:"feature,omitempty"`
+	GlobalBindType         string   `json:"globalbindtype,omitempty"`
+	GotoPriorityExpression string   `json:"gotopriorityexpression,omitempty"`
+	NextFactor             string   `json:"nextfactor,omitempty"`
+	PolicyName             string   `json:"policyname,omitempty"`
+	Priority               int      `json:"priority,omitempty"`
+}
+
+type SystemGroupBinding struct {
+	GroupName                         string        `json:"groupname,omitempty"`
+	SystemGroupNSPartitionBinding     []interface{} `json:"systemgroup_nspartition_binding,omitempty"`
+	SystemGroupSystemCmdPolicyBinding []interface{} `json:"systemgroup_systemcmdpolicy_binding,omitempty"`
+	SystemGroupSystemUserBinding      []interface{} `json:"systemgroup_systemuser_binding,omitempty"`
+}
+
+type SystemBackup struct {
+	Comment            string  `json:"comment,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	CreatedBy          string  `json:"createdby,omitempty"`
+	CreationTime       string  `json:"creationtime,omitempty"`
+	FileName           string  `json:"filename,omitempty"`
+	IncludeKernel      string  `json:"includekernel,omitempty"`
+	IPAddress          string  `json:"ipaddress,omitempty"`
+	Level              string  `json:"level,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	Size               int     `json:"size,omitempty"`
+	SkipBackup         bool    `json:"skipbackup,omitempty"`
+	UseLocalTimezone   bool    `json:"uselocaltimezone,omitempty"`
+	Version            string  `json:"version,omitempty"`
+}
+
+type SystemSSHKey struct {
+	Name               string `json:"name,omitempty"`
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
+	Src                string `json:"src,omitempty"`
+	SSHKeyType         string `json:"sshkeytype,omitempty"`
+}
+
+type SystemUser struct {
+	AllowedManagementInterface     []string `json:"allowedmanagementinterface,omitempty"`
+	AllowedManagementInterfaceKind string   `json:"allowedmanagementinterfacekind,omitempty"`
+	Count                          float64  `json:"__count,omitempty"`
+	DaysToExpireKind               string   `json:"daystoexpirekind,omitempty"`
+	Encrypted                      bool     `json:"encrypted,omitempty"`
+	ExternalAuth                   string   `json:"externalauth,omitempty"`
+	HashMethod                     string   `json:"hashmethod,omitempty"`
+	LastPwdChangeTimestamp         int      `json:"lastpwdchangetimestamp,omitempty"`
+	Logging                        string   `json:"logging,omitempty"`
+	MaxSession                     int      `json:"maxsession,omitempty"`
+	NextGenAPIResource             string   `json:"_nextgenapiresource,omitempty"`
+	Password                       string   `json:"password,omitempty"`
+	PromptInheritedFrom            string   `json:"promptinheritedfrom,omitempty"`
+	PromptString                   string   `json:"promptstring,omitempty"`
+	Timeout                        int      `json:"timeout,omitempty"`
+	TimeoutKind                    string   `json:"timeoutkind,omitempty"`
+	Username                       string   `json:"username,omitempty"`
+}
+
+type SystemUserBinding struct {
+	SystemUserNSPartitionBinding     []interface{} `json:"systemuser_nspartition_binding,omitempty"`
+	SystemUserSystemCmdPolicyBinding []interface{} `json:"systemuser_systemcmdpolicy_binding,omitempty"`
+	SystemUserSystemGroupBinding     []interface{} `json:"systemuser_systemgroup_binding,omitempty"`
+	Username                         string        `json:"username,omitempty"`
+}
+
+type SystemFile struct {
+	Count              float64  `json:"__count,omitempty"`
+	FileAccessTime     string   `json:"fileaccesstime,omitempty"`
+	FileContent        string   `json:"filecontent,omitempty"`
+	FileEncoding       string   `json:"fileencoding,omitempty"`
+	FileLocation       string   `json:"filelocation,omitempty"`
+	FileMode           []string `json:"filemode,omitempty"`
+	FileModifiedTime   string   `json:"filemodifiedtime,omitempty"`
+	FileName           string   `json:"filename,omitempty"`
+	FileSize           int      `json:"filesize,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
+}
+
+type SystemUserNSPartitionBinding struct {
+	PartitionName string `json:"partitionname,omitempty"`
+	Username      string `json:"username,omitempty"`
+}
 
 type SystemStatus struct {
 	AddiMgmtCPUUsagePcnt float64 `json:"addimgmtcpuusagepcnt,omitempty"`
@@ -19,10 +323,10 @@ type SystemStatus struct {
 	AuxVolt6             float64 `json:"auxvolt6,omitempty"`
 	AuxVolt7             float64 `json:"auxvolt7,omitempty"`
 	ClearStats           string  `json:"clearstats,omitempty"`
-	Cpu0Temp             int     `json:"cpu0temp,omitempty"`
-	Cpu1Temp             int     `json:"cpu1temp,omitempty"`
-	CpuFan0Apeed         int     `json:"cpufan0speed,omitempty"`
-	CpuFan1Apeed         int     `json:"cpufan1speed,omitempty"`
+	CPU0Temp             int     `json:"cpu0temp,omitempty"`
+	CPU1Temp             int     `json:"cpu1temp,omitempty"`
+	CPUFan0Speed         int     `json:"cpufan0speed,omitempty"`
+	CPUFan1Speed         int     `json:"cpufan1speed,omitempty"`
 	CPUUsage             string  `json:"cpuusage,omitempty"`
 	CPUUsagePcnt         float64 `json:"cpuusagepcnt,omitempty"`
 	Disk0Avail           int     `json:"disk0avail,omitempty"`
@@ -30,7 +334,7 @@ type SystemStatus struct {
 	Disk0Size            int     `json:"disk0size,omitempty"`
 	Disk0Used            int     `json:"disk0used,omitempty"`
 	Disk1Avail           int     `json:"disk1avail,omitempty"`
-	Disk1perUsage        int     `json:"disk1perusage,omitempty"`
+	Disk1PerUsage        int     `json:"disk1perusage,omitempty"`
 	Disk1Size            int     `json:"disk1size,omitempty"`
 	Disk1Used            int     `json:"disk1used,omitempty"`
 	Fan0Speed            int     `json:"fan0speed,omitempty"`
@@ -45,7 +349,7 @@ type SystemStatus struct {
 	MemUsagePcnt         float64 `json:"memusagepcnt,omitempty"`
 	MemUseInMB           string  `json:"memuseinmb,omitempty"`
 	MgmtCPU0UsagePcnt    float64 `json:"mgmtcpu0usagepcnt,omitempty"`
-	MgmtCPUUsageCcnt     float64 `json:"mgmtcpuusagepcnt,omitempty"`
+	MgmtCPUUsagePcnt     float64 `json:"mgmtcpuusagepcnt,omitempty"`
 	NumCPUs              string  `json:"numcpus,omitempty"`
 	PktCPUUsagePcnt      float64 `json:"pktcpuusagepcnt,omitempty"`
 	PowerSupply1Status   string  `json:"powersupply1status,omitempty"`
@@ -59,13 +363,13 @@ type SystemStatus struct {
 	StartTimeLocal       string  `json:"starttimelocal,omitempty"`
 	SystemFanSpeed       int     `json:"systemfanspeed,omitempty"`
 	TimeSinceStart       string  `json:"timesincestart,omitempty"`
-	VoltageV12n          float64 `json:"voltagev12n,omitempty"`
-	VoltageV12p          float64 `json:"voltagev12p,omitempty"`
+	VoltageV12N          float64 `json:"voltagev12n,omitempty"`
+	VoltageV12P          float64 `json:"voltagev12p,omitempty"`
 	VoltageV33Main       float64 `json:"voltagev33main,omitempty"`
 	VoltageV33Stby       float64 `json:"voltagev33stby,omitempty"`
-	VoltageV5n           float64 `json:"voltagev5n,omitempty"`
-	VoltageV5p           float64 `json:"voltagev5p,omitempty"`
-	VoltageV5sb          float64 `json:"voltagev5sb,omitempty"`
+	VoltageV5N           float64 `json:"voltagev5n,omitempty"`
+	VoltageV5P           float64 `json:"voltagev5p,omitempty"`
+	VoltageV5SB          float64 `json:"voltagev5sb,omitempty"`
 	VoltageVBat          float64 `json:"voltagevbat,omitempty"`
 	VoltageVCC0          float64 `json:"voltagevcc0,omitempty"`
 	VoltageVCC1          float64 `json:"voltagevcc1,omitempty"`
@@ -74,7 +378,7 @@ type SystemStatus struct {
 }
 
 type SystemExtraMgmtCPU struct {
-	Nodeid             int    `json:"nodeid,omitempty"`
+	NodeID             int    `json:"nodeid,omitempty"`
 	ConfiguredState    string `json:"configuredstate,omitempty"`
 	EffectiveState     string `json:"effectivestate,omitempty"`
 	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`

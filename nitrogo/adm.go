@@ -1,5 +1,9 @@
 package nitrogo
 
+const (
+	admParameterURL = "/nitro/v1/config/admparameter"
+)
+
 // ADM related configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/adm/adm
 type ADMService struct {

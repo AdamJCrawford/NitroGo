@@ -1,5 +1,10 @@
 package nitrogo
 
+const (
+	ipsecParameterURL = "/nitro/v1/config/ipsecparameter"
+	ipsecProfileURL   = "/nitro/v1/config/ipsecprofile"
+)
+
 // IPSEC configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/ipsec/ipsec
 type IPSECService struct {

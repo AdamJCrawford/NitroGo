@@ -1,5 +1,9 @@
 package nitrogo
 
+const (
+	reputationSettingsURL = "/nitro/v1/config/reputationsettings"
+)
+
 // Reputation services configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/reputation/reputation
 type ReputationService struct {

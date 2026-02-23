@@ -1,5 +1,10 @@
 package nitrogo
 
+const (
+	lldpNeighborsURL = "/nitro/v1/config/lldpneighbors"
+	lldpParamURL     = "/nitro/v1/config/lldpparam"
+)
+
 // Link Layer Discovery Protocol.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/lldp/lldp
 type LLDPService struct {

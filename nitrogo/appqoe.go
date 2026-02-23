@@ -1,5 +1,14 @@
 package nitrogo
 
+const (
+	appQOEActionURL                 = "/nitro/v1/config/appqoeaction"
+	appQOECustomRespURL             = "/nitro/v1/config/appqoecustomresp"
+	appQOEParameterURL              = "/nitro/v1/config/appqoeparameter"
+	appQOEPolicyURL                 = "/nitro/v1/config/appqoepolicy"
+	appQOEPolicyBindingURL          = "/nitro/v1/config/appqoepolicy_binding"
+	appQOEPolicyLBVServerBindingURL = "/nitro/v1/config/appqoepolicy_lbvserver_binding"
+)
+
 // Application Level Quality of Experience configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/appqoe/appqoe
 type AppQOEService struct {
@@ -20,11 +29,11 @@ func (s *AppQOEService) CountAppQOEAction()  {}
 // appqoecustomerresp
 // Configuration for AppQoE custom response page resource.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/appqoe/appqoecustomresp
-func (s *AppQOEService) ImportAppQOECustomerResp() {}
-func (s *AppQOEService) DeleteAppQOECustomerResp() {}
-func (s *AppQOEService) GetAllAppQOECustomerResp() {}
-func (s *AppQOEService) CountAppQOECustomerResp()  {}
-func (s *AppQOEService) ChangeAppQOECustomerResp() {}
+func (s *AppQOEService) ImportAppQOECustomResp() {}
+func (s *AppQOEService) DeleteAppQOECustomResp() {}
+func (s *AppQOEService) GetAllAppQOECustomResp() {}
+func (s *AppQOEService) CountAppQOECustomResp()  {}
+func (s *AppQOEService) ChangeAppQOECustomResp() {}
 
 // appqoeparameter
 // Configuration for QOS parameter resource.

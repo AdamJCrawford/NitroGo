@@ -1,5 +1,119 @@
 package nitrogo
 
+const (
+	authenticationADFSProxyProfileURL                              = "/nitro/v1/config/authenticationadfsproxyprofile"
+	authenticationAuthnProfileURL                                  = "/nitro/v1/config/authenticationauthnprofile"
+	authenticationAzureKeyVaultURL                                 = "/nitro/v1/config/authenticationazurekeyvault"
+	authenticationCaptchaActionURL                                 = "/nitro/v1/config/authenticationcaptchaaction"
+	authenticationCertActionURL                                    = "/nitro/v1/config/authenticationcertaction"
+	authenticationCertPolicyURL                                    = "/nitro/v1/config/authenticationcertpolicy"
+	authenticationCertPolicyAuthenticationVServerBindingURL        = "/nitro/v1/config/authenticationcertpolicy_authenticationvserver_binding"
+	authenticationCertPolicyBindingURL                             = "/nitro/v1/config/authenticationcertpolicy_binding"
+	authenticationCertPolicyVPNGlobalBindingURL                    = "/nitro/v1/config/authenticationcertpolicy_vpnglobal_binding"
+	authenticationCertPolicyVPNVServerBindingURL                   = "/nitro/v1/config/authenticationcertpolicy_vpnvserver_binding"
+	authenticationCitrixAuthActionURL                              = "/nitro/v1/config/authenticationcitrixauthaction"
+	authenticationDFAActionURL                                     = "/nitro/v1/config/authenticationdfaaction"
+	authenticationDFAPolicyURL                                     = "/nitro/v1/config/authenticationdfapolicy"
+	authenticationDFAPolicyBindingURL                              = "/nitro/v1/config/authenticationdfapolicy_binding"
+	authenticationDFAPolicyVPNVServerBindingURL                    = "/nitro/v1/config/authenticationdfapolicy_vpnvserver_binding"
+	authenticationEmailActionURL                                   = "/nitro/v1/config/authenticationemailaction"
+	authenticationEPAActionURL                                     = "/nitro/v1/config/authenticationepaaction"
+	authenticationLDAPActionURL                                    = "/nitro/v1/config/authenticationldapaction"
+	authenticationLDAPPolicyURL                                    = "/nitro/v1/config/authenticationldappolicy"
+	authenticationLDAPPolicyAuthenticationVServerBindingURL        = "/nitro/v1/config/authenticationldappolicy_authenticationvserver_binding"
+	authenticationLDAPPolicyBindingURL                             = "/nitro/v1/config/authenticationldappolicy_binding"
+	authenticationLDAPPolicySystemGlobalBindingURL                 = "/nitro/v1/config/authenticationldappolicy_systemglobal_binding"
+	authenticationLDAPPolicyVPNGlobalBindingURL                    = "/nitro/v1/config/authenticationldappolicy_vpnglobal_binding"
+	authenticationLDAPPolicyVPNVServerBindingURL                   = "/nitro/v1/config/authenticationldappolicy_vpnvserver_binding"
+	authenticationLocalPolicyURL                                   = "/nitro/v1/config/authenticationlocalpolicy"
+	authenticationLocalPolicyAuthenticationVServerBindingURL       = "/nitro/v1/config/authenticationlocalpolicy_authenticationvserver_binding"
+	authenticationLocalPolicyBindingURL                            = "/nitro/v1/config/authenticationlocalpolicy_binding"
+	authenticationLocalPolicySystemGlobalBindingURL                = "/nitro/v1/config/authenticationlocalpolicy_systemglobal_binding"
+	authenticationLocalPolicyVPNGlobalBindingURL                   = "/nitro/v1/config/authenticationlocalpolicy_vpnglobal_binding"
+	authenticationLocalPolicyVPNVServerBindingURL                  = "/nitro/v1/config/authenticationlocalpolicy_vpnvserver_binding"
+	authenticationLoginSchemaURL                                   = "/nitro/v1/config/authenticationloginschema"
+	authenticationLoginSchemaPolicyURL                             = "/nitro/v1/config/authenticationloginschemapolicy"
+	authenticationLoginSchemaPolicyAuthenticationVServerBindingURL = "/nitro/v1/config/authenticationloginschemapolicy_authenticationvserver_binding"
+	authenticationLoginSchemaPolicyBindingURL                      = "/nitro/v1/config/authenticationloginschemapolicy_binding"
+	authenticationLoginSchemaPolicyVPNVServerBindingURL            = "/nitro/v1/config/authenticationloginschemapolicy_vpnvserver_binding"
+	authenticationNegotiateActionURL                               = "/nitro/v1/config/authenticationnegotiateaction"
+	authenticationNegotiatePolicyURL                               = "/nitro/v1/config/authenticationnegotiatepolicy"
+	authenticationNegotiatePolicyAuthenticationVServerBindingURL   = "/nitro/v1/config/authenticationnegotiatepolicy_authenticationvserver_binding"
+	authenticationNegotiatePolicyBindingURL                        = "/nitro/v1/config/authenticationnegotiatepolicy_binding"
+	authenticationNegotiatePolicyVPNGlobalBindingURL               = "/nitro/v1/config/authenticationnegotiatepolicy_vpnglobal_binding"
+	authenticationNegotiatePolicyVPNVServerBindingURL              = "/nitro/v1/config/authenticationnegotiatepolicy_vpnvserver_binding"
+	authenticationNoAuthActionURL                                  = "/nitro/v1/config/authenticationnoauthaction"
+	authenticationOAuthActionURL                                   = "/nitro/v1/config/authenticationoauthaction"
+	authenticationOAuthIdPPolicyURL                                = "/nitro/v1/config/authenticationoauthidppolicy"
+	authenticationOAuthIdPPolicyAuthenticationVServerBindingURL    = "/nitro/v1/config/authenticationoauthidppolicy_authenticationvserver_binding"
+	authenticationOAuthIdPPolicyBindingURL                         = "/nitro/v1/config/authenticationoauthidppolicy_binding"
+	authenticationOAuthIdPPolicyVPNVServerBindingURL               = "/nitro/v1/config/authenticationoauthidppolicy_vpnvserver_binding"
+	authenticationOAuthIdPProfileURL                               = "/nitro/v1/config/authenticationoauthidpprofile"
+	authenticationPolicyURL                                        = "/nitro/v1/config/authenticationpolicy"
+	authenticationPolicyLabelURL                                   = "/nitro/v1/config/authenticationpolicylabel"
+	authenticationPolicyLabelAuthenticationPolicyBindingURL        = "/nitro/v1/config/authenticationpolicylabel_authenticationpolicy_binding"
+	authenticationPolicyLabelBindingURL                            = "/nitro/v1/config/authenticationpolicylabel_binding"
+	authenticationPolicyAuthenticationPolicyLabelBindingURL        = "/nitro/v1/config/authenticationpolicy_authenticationpolicylabel_binding"
+	authenticationPolicyAuthenticationVServerBindingURL            = "/nitro/v1/config/authenticationpolicy_authenticationvserver_binding"
+	authenticationPolicyBindingURL                                 = "/nitro/v1/config/authenticationpolicy_binding"
+	authenticationPolicySystemGlobalBindingURL                     = "/nitro/v1/config/authenticationpolicy_systemglobal_binding"
+	authenticationPushServiceURL                                   = "/nitro/v1/config/authenticationpushservice"
+	authenticationRADIUSActionURL                                  = "/nitro/v1/config/authenticationradiusaction"
+	authenticationRADIUSPolicyURL                                  = "/nitro/v1/config/authenticationradiuspolicy"
+	authenticationRADIUSPolicyAuthenticationVServerBindingURL      = "/nitro/v1/config/authenticationradiuspolicy_authenticationvserver_binding"
+	authenticationRADIUSPolicyBindingURL                           = "/nitro/v1/config/authenticationradiuspolicy_binding"
+	authenticationRADIUSPolicySystemGlobalBindingURL               = "/nitro/v1/config/authenticationradiuspolicy_systemglobal_binding"
+	authenticationRADIUSPolicyVPNGlobalBindingURL                  = "/nitro/v1/config/authenticationradiuspolicy_vpnglobal_binding"
+	authenticationRADIUSPolicyVPNVServerBindingURL                 = "/nitro/v1/config/authenticationradiuspolicy_vpnvserver_binding"
+	authenticationSAMLActionURL                                    = "/nitro/v1/config/authenticationsamlaction"
+	authenticationSAMLIdPPolicyURL                                 = "/nitro/v1/config/authenticationsamlidppolicy"
+	authenticationSAMLIdPPolicyAuthenticationVServerBindingURL     = "/nitro/v1/config/authenticationsamlidppolicy_authenticationvserver_binding"
+	authenticationSAMLIdPPolicyBindingURL                          = "/nitro/v1/config/authenticationsamlidppolicy_binding"
+	authenticationSAMLIdPPolicyVPNVServerBindingURL                = "/nitro/v1/config/authenticationsamlidppolicy_vpnvserver_binding"
+	authenticationSAMLIdPProfileURL                                = "/nitro/v1/config/authenticationsamlidpprofile"
+	authenticationSAMLPolicyURL                                    = "/nitro/v1/config/authenticationsamlpolicy"
+	authenticationSAMLPolicyAuthenticationVServerBindingURL        = "/nitro/v1/config/authenticationsamlpolicy_authenticationvserver_binding"
+	authenticationSAMLPolicyBindingURL                             = "/nitro/v1/config/authenticationsamlpolicy_binding"
+	authenticationSAMLPolicyVPNGlobalBindingURL                    = "/nitro/v1/config/authenticationsamlpolicy_vpnglobal_binding"
+	authenticationSAMLPolicyVPNVServerBindingURL                   = "/nitro/v1/config/authenticationsamlpolicy_vpnvserver_binding"
+	authenticationStoreFrontAuthActionURL                          = "/nitro/v1/config/authenticationstorefrontauthaction"
+	authenticationTACACSActionURL                                  = "/nitro/v1/config/authenticationtacacsaction"
+	authenticationTACACSPolicyURL                                  = "/nitro/v1/config/authenticationtacacspolicy"
+	authenticationTACACSPolicyAuthenticationVServerBindingURL      = "/nitro/v1/config/authenticationtacacspolicy_authenticationvserver_binding"
+	authenticationTACACSPolicyBindingURL                           = "/nitro/v1/config/authenticationtacacspolicy_binding"
+	authenticationTACACSPolicySystemGlobalBindingURL               = "/nitro/v1/config/authenticationtacacspolicy_systemglobal_binding"
+	authenticationTACACSPolicyVPNGlobalBindingURL                  = "/nitro/v1/config/authenticationtacacspolicy_vpnglobal_binding"
+	authenticationTACACSPolicyVPNVServerBindingURL                 = "/nitro/v1/config/authenticationtacacspolicy_vpnvserver_binding"
+	authenticationVServerURL                                       = "/nitro/v1/config/authenticationvserver"
+	authenticationVServerAuditNSLogPolicyBindingURL                = "/nitro/v1/config/authenticationvserver_auditnslogpolicy_binding"
+	authenticationVServerAuditSyslogPolicyBindingURL               = "/nitro/v1/config/authenticationvserver_auditsyslogpolicy_binding"
+	authenticationVServerAuthenticationCertPolicyBindingURL        = "/nitro/v1/config/authenticationvserver_authenticationcertpolicy_binding"
+	authenticationVServerAuthenticationLDAPPolicyBindingURL        = "/nitro/v1/config/authenticationvserver_authenticationldappolicy_binding"
+	authenticationVServerAuthenticationLocalPolicyBindingURL       = "/nitro/v1/config/authenticationvserver_authenticationlocalpolicy_binding"
+	authenticationVServerAuthenticationLoginSchemaPolicyBindingURL = "/nitro/v1/config/authenticationvserver_authenticationloginschemapolicy_binding"
+	authenticationVServerAuthenticationNegotiatePolicyBindingURL   = "/nitro/v1/config/authenticationvserver_authenticationnegotiatepolicy_binding"
+	authenticationVServerAuthenticationOAuthIdPPolicyBindingURL    = "/nitro/v1/config/authenticationvserver_authenticationoauthidppolicy_binding"
+	authenticationVServerAuthenticationPolicyBindingURL            = "/nitro/v1/config/authenticationvserver_authenticationpolicy_binding"
+	authenticationVServerAuthenticationRADIUSPolicyBindingURL      = "/nitro/v1/config/authenticationvserver_authenticationradiuspolicy_binding"
+	authenticationVServerAuthenticationSAMLIdPPolicyBindingURL     = "/nitro/v1/config/authenticationvserver_authenticationsamlidppolicy_binding"
+	authenticationVServerAuthenticationSAMLPolicyBindingURL        = "/nitro/v1/config/authenticationvserver_authenticationsamlpolicy_binding"
+	authenticationVServerAuthenticationTACACSPolicyBindingURL      = "/nitro/v1/config/authenticationvserver_authenticationtacacspolicy_binding"
+	authenticationVServerAuthenticationWebAuthPolicyBindingURL     = "/nitro/v1/config/authenticationvserver_authenticationwebauthpolicy_binding"
+	authenticationVServerBindingURL                                = "/nitro/v1/config/authenticationvserver_binding"
+	authenticationVServerCachePolicyBindingURL                     = "/nitro/v1/config/authenticationvserver_cachepolicy_binding"
+	authenticationVServerCSPolicyBindingURL                        = "/nitro/v1/config/authenticationvserver_cspolicy_binding"
+	authenticationVServerResponderPolicyBindingURL                 = "/nitro/v1/config/authenticationvserver_responderpolicy_binding"
+	authenticationVServerTMSessionPolicyBindingURL                 = "/nitro/v1/config/authenticationvserver_tmsessionpolicy_binding"
+	authenticationVServerVPNPortalThemeBindingURL                  = "/nitro/v1/config/authenticationvserver_vpnportaltheme_binding"
+	authenticationWebAuthActionURL                                 = "/nitro/v1/config/authenticationwebauthaction"
+	authenticationWebAuthPolicyURL                                 = "/nitro/v1/config/authenticationwebauthpolicy"
+	authenticationWebAuthPolicyAuthenticationVServerBindingURL     = "/nitro/v1/config/authenticationwebauthpolicy_authenticationvserver_binding"
+	authenticationWebAuthPolicyBindingURL                          = "/nitro/v1/config/authenticationwebauthpolicy_binding"
+	authenticationWebAuthPolicySystemGlobalBindingURL              = "/nitro/v1/config/authenticationwebauthpolicy_systemglobal_binding"
+	authenticationWebAuthPolicyVPNGlobalBindingURL                 = "/nitro/v1/config/authenticationwebauthpolicy_vpnglobal_binding"
+	authenticationWebAuthPolicyVPNVServerBindingURL                = "/nitro/v1/config/authenticationwebauthpolicy_vpnvserver_binding"
+)
+
 // Authentication configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/authentication/authentication
 type AuthenticationService struct {
@@ -265,19 +379,19 @@ func (s *AuthenticationService) GetAllAuthenticationLocalPolicyVPNVServerBinding
 func (s *AuthenticationService) GetAuthenticationLocalPolicyVPNVServerBinding()    {}
 func (s *AuthenticationService) CountAuthenticationLocalPolicyVPNVServerBinding()  {}
 
-// authenticationloginscheme
-// Configuration for 0 resource.
+// authenticationloginschema
+// Configuration for Login Schema resource.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/authentication/authenticationloginschema
-func (s *AuthenticationService) AddAuthenticationLoginScheme()    {}
-func (s *AuthenticationService) DeleteAuthenticationLoginScheme() {}
-func (s *AuthenticationService) UpdateAuthenticationLoginScheme() {}
-func (s *AuthenticationService) UnsetAuthenticationLoginScheme()  {}
-func (s *AuthenticationService) GetAllAuthenticationLoginScheme() {}
-func (s *AuthenticationService) GetAuthenticationLoginScheme()    {}
-func (s *AuthenticationService) CountAuthenticationLoginScheme()  {}
+func (s *AuthenticationService) AddAuthenticationLoginSchema()    {}
+func (s *AuthenticationService) DeleteAuthenticationLoginSchema() {}
+func (s *AuthenticationService) UpdateAuthenticationLoginSchema() {}
+func (s *AuthenticationService) UnsetAuthenticationLoginSchema()  {}
+func (s *AuthenticationService) GetAllAuthenticationLoginSchema() {}
+func (s *AuthenticationService) GetAuthenticationLoginSchema()    {}
+func (s *AuthenticationService) CountAuthenticationLoginSchema()  {}
 
 // authenticationloginschemapolicy
-// Configuration for 0 resource.
+// Configuration for Login Schema Policy resource.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/authentication/authenticationloginschemapolicy
 func (s *AuthenticationService) AddAuthenticationLoginSchemaPolicy()    {}
 func (s *AuthenticationService) DeleteAuthenticationLoginSchemaPolicy() {}
@@ -333,9 +447,9 @@ func (s *AuthenticationService) CountAuthenticationNegotiatePolicy()  {}
 // authenticationnegotiatepolicy_authenticationvserver_binding
 // Binding object showing the authenticationvserver that can be bound to authenticationnegotiatepolicy.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/authentication/authenticationnegotiatepolicy_authenticationvserver_binding
-func (s *AuthenticationService) GetAllAuthenticationNegotiatePolicyAuthencationVServerBinding() {}
-func (s *AuthenticationService) GetAuthenticationNegotiatePolicyAuthencationVServerBinding()    {}
-func (s *AuthenticationService) CountAuthenticationNegotiatePolicyAuthencationVServerBinding()  {}
+func (s *AuthenticationService) GetAllAuthenticationNegotiatePolicyAuthenticationVServerBinding() {}
+func (s *AuthenticationService) GetAuthenticationNegotiatePolicyAuthenticationVServerBinding()    {}
+func (s *AuthenticationService) CountAuthenticationNegotiatePolicyAuthenticationVServerBinding()  {}
 
 // authenticationnegotiatepolicy_binding
 // Binding object which returns the resources bound to authenticationnegotiatepolicy.
@@ -708,9 +822,9 @@ func (s *AuthenticationService) CountAuthenticationTACACSPolicyVPNGlobalBinding(
 // authenticationtacacspolicy_vpnvserver_binding
 // Binding object showing the vpnvserver that can be bound to authenticationtacacspolicy.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/authentication/authenticationtacacspolicy_vpnvserver_binding
-func (s *AuthenticationService) GetAllAuthenticationTACACSPolicyVPNVserverBinding() {}
-func (s *AuthenticationService) GetAuthenticationTACACSPolicyVPNVserverBinding()    {}
-func (s *AuthenticationService) CountAuthenticationTACACSPolicyVPNVserverBinding()  {}
+func (s *AuthenticationService) GetAllAuthenticationTACACSPolicyVPNVServerBinding() {}
+func (s *AuthenticationService) GetAuthenticationTACACSPolicyVPNVServerBinding()    {}
+func (s *AuthenticationService) CountAuthenticationTACACSPolicyVPNVServerBinding()  {}
 
 // authenticaitonvserver
 // Configuration for authentication virtual server resource.

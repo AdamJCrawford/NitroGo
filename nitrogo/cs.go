@@ -1,5 +1,42 @@
 package nitrogo
 
+const (
+	csActionURL                                = "/nitro/v1/config/csaction"
+	csParameterURL                             = "/nitro/v1/config/csparameter"
+	csPolicyURL                                = "/nitro/v1/config/cspolicy"
+	csPolicyLabelURL                           = "/nitro/v1/config/cspolicylabel"
+	csPolicyLabelBindingURL                    = "/nitro/v1/config/cspolicylabel_binding"
+	csPolicyLabelCSPolicyBindingURL            = "/nitro/v1/config/cspolicylabel_cspolicy_binding"
+	csPolicyBindingURL                         = "/nitro/v1/config/cspolicy_binding"
+	csPolicyCRVServerBindingURL                = "/nitro/v1/config/cspolicy_crvserver_binding"
+	csPolicyCSPolicyLabelBindingURL            = "/nitro/v1/config/cspolicy_cspolicylabel_binding"
+	csPolicyCSVServerBindingURL                = "/nitro/v1/config/cspolicy_csvserver_binding"
+	csVServerURL                               = "/nitro/v1/config/csvserver"
+	csVServerAnalyticsProfileBindingURL        = "/nitro/v1/config/csvserver_analyticsprofile_binding"
+	csVServerAppFlowPolicyBindingURL           = "/nitro/v1/config/csvserver_appflowpolicy_binding"
+	csVServerAppFWPolicyBindingURL             = "/nitro/v1/config/csvserver_appfwpolicy_binding"
+	csVServerAppQOEPolicyBindingURL            = "/nitro/v1/config/csvserver_appqoepolicy_binding"
+	csVServerAuditNSLogPolicyBindingURL        = "/nitro/v1/config/csvserver_auditnslogpolicy_binding"
+	csVServerAuditSyslogPolicyBindingURL       = "/nitro/v1/config/csvserver_auditsyslogpolicy_binding"
+	csVServerAuthorizationPolicyBindingURL     = "/nitro/v1/config/csvserver_authorizationpolicy_binding"
+	csVServerBindingURL                        = "/nitro/v1/config/csvserver_binding"
+	csVServerBotPolicyBindingURL               = "/nitro/v1/config/csvserver_botpolicy_binding"
+	csVServerCachePolicyBindingURL             = "/nitro/v1/config/csvserver_cachepolicy_binding"
+	csVServerCMPPolicyBindingURL               = "/nitro/v1/config/csvserver_cmppolicy_binding"
+	csVServerContentInspectionPolicyBindingURL = "/nitro/v1/config/csvserver_contentinspectionpolicy_binding"
+	csVServerCSPolicyBindingURL                = "/nitro/v1/config/csvserver_cspolicy_binding"
+	csVServerDomainBindingURL                  = "/nitro/v1/config/csvserver_domain_binding"
+	csVServerFEOPolicyBindingURL               = "/nitro/v1/config/csvserver_feopolicy_binding"
+	csVServerGSLBVServerBindingURL             = "/nitro/v1/config/csvserver_gslbvserver_binding"
+	csVServerLBVServerBindingURL               = "/nitro/v1/config/csvserver_lbvserver_binding"
+	csVServerResponderPolicyBindingURL         = "/nitro/v1/config/csvserver_responderpolicy_binding"
+	csVServerRewritePolicyBindingURL           = "/nitro/v1/config/csvserver_rewritepolicy_binding"
+	csVServerSpilloverPolicyBindingURL         = "/nitro/v1/config/csvserver_spilloverpolicy_binding"
+	csVServerTMTrafficPolicyBindingURL         = "/nitro/v1/config/csvserver_tmtrafficpolicy_binding"
+	csVServerTransformPolicyBindingURL         = "/nitro/v1/config/csvserver_transformpolicy_binding"
+	csVServerVPNVServerBindingURL              = "/nitro/v1/config/csvserver_vpnvserver_binding"
+)
+
 // Content Switching configuration. Content Switching feature that enables you to direct traffic to servers on the basis of content.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/cs/cs
 type CSService struct {
@@ -177,11 +214,11 @@ func (s *CSService) GetCSVServerDomainBinding()    {}
 func (s *CSService) CountCSVServerDomainBinding()  {}
 
 // csvserver_feopolicy_binding
-func (s *CSService) AddCSVServerFeoPolicyBinding()    {}
-func (s *CSService) DeleteCSVServerFeoPolicyBinding() {}
-func (s *CSService) GetAllCSVServerFeoPolicyBinding() {}
-func (s *CSService) GetCSVServerFeoPolicyBinding()    {}
-func (s *CSService) CountCSVServerFeoPolicyBinding()  {}
+func (s *CSService) AddCSVServerFEOPolicyBinding()    {}
+func (s *CSService) DeleteCSVServerFEOPolicyBinding() {}
+func (s *CSService) GetAllCSVServerFEOPolicyBinding() {}
+func (s *CSService) GetCSVServerFEOPolicyBinding()    {}
+func (s *CSService) CountCSVServerFEOPolicyBinding()  {}
 
 // csvserver_gslbvserver_binding
 func (s *CSService) AddCSVServerGSLBVServerBinding()    {}

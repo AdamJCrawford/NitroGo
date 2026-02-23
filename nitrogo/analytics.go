@@ -1,5 +1,11 @@
 package nitrogo
 
+const (
+	analyticsProfileURL                       = "/nitro/v1/config/analyticsprofile"
+	analyticsGlobalAnalyticsProfileBindingURL = "/nitro/v1/config/analyticsglobal_analyticsprofile_binding"
+	analyticsGlobalBindingURL                 = "/nitro/v1/config/analyticsglobal_binding"
+)
+
 // Analytics configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/analytics/analytics
 type AnalyticsService struct {
@@ -9,10 +15,10 @@ type AnalyticsService struct {
 // analyticsglobal_analyticsprofile_binding
 // Binding object showing the analyticsprofile that can be bound to analyticsglobal.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/analytics/analyticsglobal_analyticsprofile_binding
-func (s *AnalyticsService) AddAnalyticsGlobalAnalyticsProfile()    {}
-func (s *AnalyticsService) DeleteAnalyticsGlobalAnalyticsProfile() {}
-func (s *AnalyticsService) GetAnalyticsGlobalAnalyticsProfile()    {}
-func (s *AnalyticsService) CountAnalyticsGlobalAnalyticsProfile()  {}
+func (s *AnalyticsService) AddAnalyticsGlobalAnalyticsProfileBinding()    {}
+func (s *AnalyticsService) DeleteAnalyticsGlobalAnalyticsProfileBinding() {}
+func (s *AnalyticsService) GetAnalyticsGlobalAnalyticsProfileBinding()    {}
+func (s *AnalyticsService) CountAnalyticsGlobalAnalyticsProfileBinding()  {}
 
 // analyticsglobal_binding
 // Binding object which returns the resources bound to analyticsglobal.

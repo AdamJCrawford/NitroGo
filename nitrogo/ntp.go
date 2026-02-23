@@ -1,5 +1,12 @@
 package nitrogo
 
+const (
+	ntpParamURL  = "/nitro/v1/config/ntpparam"
+	ntpServerURL = "/nitro/v1/config/ntpserver"
+	ntpStatusURL = "/nitro/v1/config/ntpstatus"
+	ntpSyncURL   = "/nitro/v1/config/ntpsync"
+)
+
 // NTP configuration.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/ntp/ntp
 type NTPService struct {

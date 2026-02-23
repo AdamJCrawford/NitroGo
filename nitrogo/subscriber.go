@@ -1,5 +1,13 @@
 package nitrogo
 
+const (
+	subscriberGxInterfaceURL     = "/nitro/v1/config/subscribergxinterface"
+	subscriberParamURL           = "/nitro/v1/config/subscriberparam"
+	subscriberProfileURL         = "/nitro/v1/config/subscriberprofile"
+	subscriberRADIUSInterfaceURL = "/nitro/v1/config/subscriberradiusinterface"
+	subscriberSessionsURL        = "/nitro/v1/config/subscribersessions"
+)
+
 // Subscriber configuration
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/subscriber/subscriber
 type SubscriberService struct {
@@ -30,7 +38,7 @@ func (s *SubscriberService) UnsetSubscriberProfile()  {}
 func (s *SubscriberService) GetAllSubscriberProfile() {}
 func (s *SubscriberService) CountSubscriberProfile()  {}
 
-// subscriverradiusinterface
+// subscriberradiusinterface
 // Configuration for RADIUS interface Parameters resource.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/subscriber/subscriberradiusinterface
 func (s *SubscriberService) UpdateSubscriberRADIUSInterface() {}

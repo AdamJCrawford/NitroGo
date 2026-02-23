@@ -6,7 +6,13 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"strings"
 	"time"
+)
+
+const (
+	loginURL  = "/nitro/v1/config/login"
+	logoutURL = "/nitro/v1/config/logout"
 )
 
 type Credential struct {
@@ -19,8 +25,8 @@ type Client struct {
 	hostname   string
 	proxiedURL string
 
-	credential     Credential
-	sessionid      string
+	credential Credential
+	sessionid  string
 
 	httpClient *http.Client
 
@@ -49,7 +55,7 @@ type Client struct {
 	DB                *DBService
 	DNS               *DNSService
 	FEO               *FEOService
-	GLSB              *GLSBService
+	GSLB              *GSLBService
 	HA                *HAService
 	ICA               *ICAService
 	IPSEC             *IPSECService
@@ -86,11 +92,12 @@ type Client struct {
 	VPN               *VPNService
 }
 
-func NewNitroClient(username, password string, options ...ClientOptionFunc) (*Client, error) {
+func NewNitroClient(host, username, password string, options ...ClientOptionFunc) (*Client, error) {
 	c := &Client{
 		httpClient: &http.Client{
-			Timeout: 5 * time.Second,
+			Timeout: 10 * time.Second,
 		},
+		baseURL: strings.TrimRight(host, "/"),
 	}
 
 	for _, opt := range options {
@@ -124,7 +131,7 @@ func NewNitroClient(username, password string, options ...ClientOptionFunc) (*Cl
 	c.DB = &DBService{client: c}
 	c.DNS = &DNSService{client: c}
 	c.FEO = &FEOService{client: c}
-	c.GLSB = &GLSBService{client: c}
+	c.GSLB = &GSLBService{client: c}
 	c.HA = &HAService{client: c}
 	c.ICA = &ICAService{client: c}
 	c.IPSEC = &IPSECService{client: c}
@@ -168,7 +175,7 @@ func NewNitroClient(username, password string, options ...ClientOptionFunc) (*Cl
 
 // NewRequest - creates the http.Request and applies the relevant authorization
 func (c *Client) NewRequest(method, path string, body io.Reader) (*http.Request, error) {
-	url := fmt.Sprintf("%s/%s", c.baseURL, path)
+	url := fmt.Sprintf("%s/%s", c.baseURL, strings.TrimLeft(path, "/"))
 	req, err := http.NewRequest(method, url, body)
 	if err != nil {
 		return nil, fmt.Errorf("failed to make new HTTP request: %w", err)
@@ -192,12 +199,11 @@ func (c *Client) NewRequest(method, path string, body io.Reader) (*http.Request,
 	return req, nil
 }
 
-// Do - executes the HTTP request and unmarshals the result into r.
-func (c *Client) Do(req *http.Request) (map[string]any, error) {
-	v := map[string]any{}
+// Do - executes the HTTP request and returns the response body.
+func (c *Client) Do(req *http.Request) ([]byte, error) {
 	resp, err := c.httpClient.Do(req)
 	if err != nil {
-		return v, err
+		return nil, err
 	}
 
 	defer func() {
@@ -207,26 +213,21 @@ func (c *Client) Do(req *http.Request) (map[string]any, error) {
 
 	respByte, err := io.ReadAll(resp.Body)
 	if err != nil {
-		return v, fmt.Errorf("failed to read response body: %w", err)
+		return nil, fmt.Errorf("failed to read response body: %w", err)
 	}
 
 	if resp.StatusCode < 200 || resp.StatusCode > 299 {
-		return v, fmt.Errorf("request returned non-200 status code: %s", string(respByte))
+		return nil, fmt.Errorf("request returned non-200 status code: %s", string(respByte))
 	}
 
-	if len(respByte) == 0 {
-		return v, nil
-	}
-
-	return v, json.Unmarshal(respByte, &v)
+	return respByte, nil
 }
 
+// Login - creates a session for the current NetScaler
 func (c *Client) Login() error {
-	u := "nitro/v1/config/login"
-
 	login := fmt.Appendf(nil, `{"login": {"username":"%s","password":"%s"}}`, c.credential.username, c.credential.password)
 
-	req, err := c.NewRequest(http.MethodPost, u, bytes.NewBuffer(login))
+	req, err := c.NewRequest(http.MethodPost, loginURL, bytes.NewBuffer(login))
 	if err != nil {
 		return err
 	}
@@ -235,9 +236,14 @@ func (c *Client) Login() error {
 	req.Header.Del("X-Nitro-Pass")
 	req.Header.Del("Set-Cookie")
 
-	resp, err := c.Do(req)
+	respByte, err := c.Do(req)
 	if err != nil {
 		return err
+	}
+
+	var resp map[string]any
+	if err := json.Unmarshal(respByte, &resp); err != nil {
+		return fmt.Errorf("failed to unmarshal login response: %w", err)
 	}
 
 	var ok bool
@@ -249,12 +255,11 @@ func (c *Client) Login() error {
 	return nil
 }
 
+// Logout - Ends the on going session with the NetScaler
 func (c *Client) Logout() error {
-	u := "nitro/v1/config/logout"
-
 	logout := fmt.Appendf(nil, `{"logout": {}}`)
 
-	req, err := c.NewRequest(http.MethodPost, u, bytes.NewBuffer(logout))
+	req, err := c.NewRequest(http.MethodPost, logoutURL, bytes.NewBuffer(logout))
 	if err != nil {
 		return err
 	}
@@ -265,11 +270,6 @@ func (c *Client) Logout() error {
 	}
 
 	return nil
-}
-
-// Credential - getter for client's credentials
-func (c *Client) Credential() Credential {
-	return c.credential
 }
 
 // Hostname - getter for client's hostname.
@@ -287,10 +287,12 @@ func (c *Client) URL() string {
 	return c.baseURL
 }
 
-// SetCredential - setter for client's credential. Handles clearing and creating a new Nitro token if present.
-func (c *Client) SetCredential(cred Credential) error {
-	c.credential = cred
-	return nil
+// SetCredential - setter for client's credential.
+func (c *Client) SetCredential(username, password string) {
+	c.credential = Credential{
+		username: username,
+		password: password,
+	}
 }
 
 // SetHostname - getter for clients's hostname
@@ -298,12 +300,12 @@ func (c *Client) SetHostname(hostname string) {
 	c.hostname = hostname
 }
 
-// SetProxiedURL - setter for client's proxy URL. Handles clearing and creating a new Nitro token if present.
+// SetProxiedURL - setter for client's proxy URL.
 func (c *Client) SetProxiedURL(proxy string) {
 	c.proxiedURL = proxy
 }
 
 // SetURL - setter for the client's baseURL
 func (c *Client) SetURL(url string) {
-	c.baseURL = url
+	c.baseURL = strings.TrimRight(url, "/")
 }

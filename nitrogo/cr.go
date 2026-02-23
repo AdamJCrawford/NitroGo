@@ -1,5 +1,29 @@
 package nitrogo
 
+const (
+	crActionURL                         = "/nitro/v1/config/craction"
+	crPolicyURL                         = "/nitro/v1/config/crpolicy"
+	crPolicyBindingURL                  = "/nitro/v1/config/crpolicy_binding"
+	crPolicyCRVServerBindingURL         = "/nitro/v1/config/crpolicy_crvserver_binding"
+	crVServerURL                        = "/nitro/v1/config/crvserver"
+	crVServerAnalyticsProfileBindingURL = "/nitro/v1/config/crvserver_analyticsprofile_binding"
+	crVServerAppFlowPolicyBindingURL    = "/nitro/v1/config/crvserver_appflowpolicy_binding"
+	crVServerAppFWPolicyBindingURL      = "/nitro/v1/config/crvserver_appfwpolicy_binding"
+	crVServerAppQOEPolicyBindingURL     = "/nitro/v1/config/crvserver_appqoepolicy_binding"
+	crVServerBindingURL                 = "/nitro/v1/config/crvserver_binding"
+	crVServerCachePolicyBindingURL      = "/nitro/v1/config/crvserver_cachepolicy_binding"
+	crVServerCMPPolicyBindingURL        = "/nitro/v1/config/crvserver_cmppolicy_binding"
+	crVServerCRPolicyBindingURL         = "/nitro/v1/config/crvserver_crpolicy_binding"
+	crVServerCSPolicyBindingURL         = "/nitro/v1/config/crvserver_cspolicy_binding"
+	crVServerFEOPolicyBindingURL        = "/nitro/v1/config/crvserver_feopolicy_binding"
+	crVServerICAPolicyBindingURL        = "/nitro/v1/config/crvserver_icapolicy_binding"
+	crVServerLBVServerBindingURL        = "/nitro/v1/config/crvserver_lbvserver_binding"
+	crVServerPolicyMapBindingURL        = "/nitro/v1/config/crvserver_policymap_binding"
+	crVServerResponderPolicyBindingURL  = "/nitro/v1/config/crvserver_responderpolicy_binding"
+	crVServerRewritePolicyBindingURL    = "/nitro/v1/config/crvserver_rewritepolicy_binding"
+	crVServerSpilloverPolicyBindingURL  = "/nitro/v1/config/crvserver_spilloverpolicy_binding"
+)
+
 // Cache redirection configuration. The cache redirection feature can transparently redirect cacheable HTTP
 // requests to a cache and send non-cacheable or dynamic HTTP requests to the origin server. A cache stores
 // or caches frequently requested web content and serves such web content to a client on behalf of the origin
@@ -141,11 +165,11 @@ func (s *CRService) GetCRVServerResponderPolicyBinding()    {}
 func (s *CRService) CountCRVServerResponderPolicyBinding()  {}
 
 // crvserver_rewritepolicy_binding
-func (s *CRService) AddCRVServerRewritePolcyBinding()    {}
-func (s *CRService) DeleteCRVServerRewritePolcyBinding() {}
-func (s *CRService) GetAllCRVServerRewritePolcyBinding() {}
-func (s *CRService) GetCRVServerRewritePolcyBinding()    {}
-func (s *CRService) CountCRVServerRewritePolcyBinding()  {}
+func (s *CRService) AddCRVServerRewritePolicyBinding()    {}
+func (s *CRService) DeleteCRVServerRewritePolicyBinding() {}
+func (s *CRService) GetAllCRVServerRewritePolicyBinding() {}
+func (s *CRService) GetCRVServerRewritePolicyBinding()    {}
+func (s *CRService) CountCRVServerRewritePolicyBinding()  {}
 
 // crvserver_spilloverpolicy_binding
 func (s *CRService) AddCRVServerSpilloverPolicyBinding()    {}

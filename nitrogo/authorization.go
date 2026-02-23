@@ -1,5 +1,19 @@
 package nitrogo
 
+const (
+	authorizationActionURL                                = "/nitro/v1/config/authorizationaction"
+	authorizationPolicyURL                                = "/nitro/v1/config/authorizationpolicy"
+	authorizationPolicyAAAGroupBindingURL                 = "/nitro/v1/config/authorizationpolicy_aaagroup_binding"
+	authorizationPolicyAAAUserBindingURL                  = "/nitro/v1/config/authorizationpolicy_aaauser_binding"
+	authorizationPolicyLabelAuthorizationPolicyBindingURL = "/nitro/v1/config/authorizationpolicylabel_authorizationpolicy_binding"
+	authorizationPolicyLabelBindingURL                    = "/nitro/v1/config/authorizationpolicylabel_binding"
+	authorizationPolicyCSVServerBindingURL                = "/nitro/v1/config/authorizationpolicy_csvserver_binding"
+	authorizationPolicyLBVServerBindingURL                = "/nitro/v1/config/authorizationpolicy_lbvserver_binding"
+	authorizationPolicyLabelURL                           = "/nitro/v1/config/authorizationpolicylabel"
+	authorizationPolicyAuthorizationPolicyLabelBindingURL = "/nitro/v1/config/authorizationpolicy_authorizationpolicylabel_binding"
+	authorizationPolicyBindingURL                         = "/nitro/v1/config/authorizationpolicy_binding"
+)
+
 // Authorization configuration. Authorization services check which resources users are authorized to access, and grant permissions accordingly.
 // https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release/configuration/authorization/authorization
 type AuthorizationService struct {
