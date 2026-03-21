@@ -43,11 +43,11 @@ type APIProfile struct {
 }
 
 type APIProfileBinding struct {
-	APIProfileAPISpecBinding []interface{} `json:"apiprofile_apispec_binding,omitempty"`
-	Name                     string        `json:"name,omitempty"`
+	APIProfileAPISpecBinding []any  `json:"apiprofile_apispec_binding,omitempty"`
+	Name                     string `json:"name,omitempty"`
 }
 
 type APISpecBinding struct {
-	APISpecSpecEndpointBinding []interface{} `json:"apispec_specendpoint_binding,omitempty"`
-	Name                       string        `json:"name,omitempty"`
+	APISpecSpecEndpointBinding []any  `json:"apispec_specendpoint_binding,omitempty"`
+	Name                       string `json:"name,omitempty"`
 }

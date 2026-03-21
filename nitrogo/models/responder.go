@@ -130,9 +130,9 @@ type ResponderPolicyLabelResponderPolicyBinding struct {
 }
 
 type ResponderPolicyLabelBinding struct {
-	LabelName                                  string        `json:"labelname,omitempty"`
-	ResponderPolicyLabelPolicyBindingBinding   []interface{} `json:"responderpolicylabel_policybinding_binding,omitempty"`
-	ResponderPolicyLabelResponderPolicyBinding []interface{} `json:"responderpolicylabel_responderpolicy_binding,omitempty"`
+	LabelName                                  string `json:"labelname,omitempty"`
+	ResponderPolicyLabelPolicyBindingBinding   []any  `json:"responderpolicylabel_policybinding_binding,omitempty"`
+	ResponderPolicyLabelResponderPolicyBinding []any  `json:"responderpolicylabel_responderpolicy_binding,omitempty"`
 }
 
 type ResponderPolicy struct {
@@ -169,15 +169,15 @@ type ResponderParam struct {
 }
 
 type ResponderPolicyBinding struct {
-	Name                                       string        `json:"name,omitempty"`
-	ResponderPolicyCRVServerBinding            []interface{} `json:"responderpolicy_crvserver_binding,omitempty"`
-	ResponderPolicyCSVServerBinding            []interface{} `json:"responderpolicy_csvserver_binding,omitempty"`
-	ResponderPolicyLBVServerBinding            []interface{} `json:"responderpolicy_lbvserver_binding,omitempty"`
-	ResponderPolicyResponderGlobalBinding      []interface{} `json:"responderpolicy_responderglobal_binding,omitempty"`
-	ResponderPolicyResponderPolicyLabelBinding []interface{} `json:"responderpolicy_responderpolicylabel_binding,omitempty"`
-	ResponderPolicyVPNVServerBinding           []interface{} `json:"responderpolicy_vpnvserver_binding,omitempty"`
+	Name                                       string `json:"name,omitempty"`
+	ResponderPolicyCRVServerBinding            []any  `json:"responderpolicy_crvserver_binding,omitempty"`
+	ResponderPolicyCSVServerBinding            []any  `json:"responderpolicy_csvserver_binding,omitempty"`
+	ResponderPolicyLBVServerBinding            []any  `json:"responderpolicy_lbvserver_binding,omitempty"`
+	ResponderPolicyResponderGlobalBinding      []any  `json:"responderpolicy_responderglobal_binding,omitempty"`
+	ResponderPolicyResponderPolicyLabelBinding []any  `json:"responderpolicy_responderpolicylabel_binding,omitempty"`
+	ResponderPolicyVPNVServerBinding           []any  `json:"responderpolicy_vpnvserver_binding,omitempty"`
 }
 
 type ResponderGlobalBinding struct {
-	ResponderGlobalResponderPolicyBinding []interface{} `json:"responderglobal_responderpolicy_binding,omitempty"`
+	ResponderGlobalResponderPolicyBinding []any `json:"responderglobal_responderpolicy_binding,omitempty"`
 }

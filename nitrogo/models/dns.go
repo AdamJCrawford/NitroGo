@@ -38,9 +38,9 @@ type DNSZone struct {
 }
 
 type DNSPolicyLabelBinding struct {
-	DNSPolicyLabelDNSPolicyBinding     []interface{} `json:"dnspolicylabel_dnspolicy_binding,omitempty"`
-	DNSPolicyLabelPolicyBindingBinding []interface{} `json:"dnspolicylabel_policybinding_binding,omitempty"`
-	LabelName                          string        `json:"labelname,omitempty"`
+	DNSPolicyLabelDNSPolicyBinding     []any  `json:"dnspolicylabel_dnspolicy_binding,omitempty"`
+	DNSPolicyLabelPolicyBindingBinding []any  `json:"dnspolicylabel_policybinding_binding,omitempty"`
+	LabelName                          string `json:"labelname,omitempty"`
 }
 
 type DNSDSFile struct {
@@ -90,9 +90,9 @@ type DNSZoneDomainBinding struct {
 }
 
 type DNSZoneBinding struct {
-	DNSZoneDNSKeyBinding     []interface{} `json:"dnszone_dnskey_binding,omitempty"`
-	DNSZoneGSLBDomainBinding []interface{} `json:"dnszone_gslbdomain_binding,omitempty"`
-	ZoneName                 string        `json:"zonename,omitempty"`
+	DNSZoneDNSKeyBinding     []any  `json:"dnszone_dnskey_binding,omitempty"`
+	DNSZoneGSLBDomainBinding []any  `json:"dnszone_gslbdomain_binding,omitempty"`
+	ZoneName                 string `json:"zonename,omitempty"`
 }
 
 type DNSGlobalDNSPolicyBinding struct {
@@ -150,9 +150,9 @@ type DNSSrvRec struct {
 }
 
 type DNSViewBinding struct {
-	DNSViewDNSPolicyBinding   []interface{} `json:"dnsview_dnspolicy_binding,omitempty"`
-	DNSViewGSLBServiceBinding []interface{} `json:"dnsview_gslbservice_binding,omitempty"`
-	ViewName                  string        `json:"viewname,omitempty"`
+	DNSViewDNSPolicyBinding   []any  `json:"dnsview_dnspolicy_binding,omitempty"`
+	DNSViewGSLBServiceBinding []any  `json:"dnsview_gslbservice_binding,omitempty"`
+	ViewName                  string `json:"viewname,omitempty"`
 }
 
 type DNSPolicyLabel struct {
@@ -235,7 +235,7 @@ type DNSAction struct {
 }
 
 type DNSGlobalBinding struct {
-	DNSGlobalDNSPolicyBinding []interface{} `json:"dnsglobal_dnspolicy_binding,omitempty"`
+	DNSGlobalDNSPolicyBinding []any `json:"dnsglobal_dnspolicy_binding,omitempty"`
 }
 
 type DNSSOARec struct {
@@ -257,22 +257,22 @@ type DNSSOARec struct {
 }
 
 type DNSPolicy64Binding struct {
-	DNSPolicy64LBVServerBinding []interface{} `json:"dnspolicy64_lbvserver_binding,omitempty"`
-	Name                        string        `json:"name,omitempty"`
+	DNSPolicy64LBVServerBinding []any  `json:"dnspolicy64_lbvserver_binding,omitempty"`
+	Name                        string `json:"name,omitempty"`
 }
 
 type DNSPolicyBinding struct {
-	DNSPolicyDNSGlobalBinding      []interface{} `json:"dnspolicy_dnsglobal_binding,omitempty"`
-	DNSPolicyDNSPolicyLabelBinding []interface{} `json:"dnspolicy_dnspolicylabel_binding,omitempty"`
-	Name                           string        `json:"name,omitempty"`
+	DNSPolicyDNSGlobalBinding      []any  `json:"dnspolicy_dnsglobal_binding,omitempty"`
+	DNSPolicyDNSPolicyLabelBinding []any  `json:"dnspolicy_dnspolicylabel_binding,omitempty"`
+	Name                           string `json:"name,omitempty"`
 }
 
 type DNSZoneDNSKeyBinding struct {
-	Expires          int           `json:"expires,omitempty"`
-	KeyName          []string      `json:"keyname,omitempty"`
-	SigInceptionTime []interface{} `json:"siginceptiontime,omitempty"`
-	Signed           int           `json:"signed,omitempty"`
-	ZoneName         string        `json:"zonename,omitempty"`
+	Expires          int      `json:"expires,omitempty"`
+	KeyName          []string `json:"keyname,omitempty"`
+	SigInceptionTime []any    `json:"siginceptiontime,omitempty"`
+	Signed           int      `json:"signed,omitempty"`
+	ZoneName         string   `json:"zonename,omitempty"`
 }
 
 type DNSPolicy64LBVServerBinding struct {

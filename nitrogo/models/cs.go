@@ -79,29 +79,29 @@ type CSPolicy struct {
 }
 
 type CSVServerBinding struct {
-	CSVServerAnalyticsProfileBinding        []interface{} `json:"csvserver_analyticsprofile_binding,omitempty"`
-	CSVServerAppFlowPolicyBinding           []interface{} `json:"csvserver_appflowpolicy_binding,omitempty"`
-	CSVServerAppFWPolicyBinding             []interface{} `json:"csvserver_appfwpolicy_binding,omitempty"`
-	CSVServerAppQOEPolicyBinding            []interface{} `json:"csvserver_appqoepolicy_binding,omitempty"`
-	CSVServerAuditNSLogPolicyBinding        []interface{} `json:"csvserver_auditnslogpolicy_binding,omitempty"`
-	CSVServerAuditSyslogPolicyBinding       []interface{} `json:"csvserver_auditsyslogpolicy_binding,omitempty"`
-	CSVServerAuthorizationPolicyBinding     []interface{} `json:"csvserver_authorizationpolicy_binding,omitempty"`
-	CSVServerBotPolicyBinding               []interface{} `json:"csvserver_botpolicy_binding,omitempty"`
-	CSVServerCachePolicyBinding             []interface{} `json:"csvserver_cachepolicy_binding,omitempty"`
-	CSVServerCMPPolicyBinding               []interface{} `json:"csvserver_cmppolicy_binding,omitempty"`
-	CSVServerContentInspectionPolicyBinding []interface{} `json:"csvserver_contentinspectionpolicy_binding,omitempty"`
-	CSVServerCSPolicyBinding                []interface{} `json:"csvserver_cspolicy_binding,omitempty"`
-	CSVServerFEOPolicyBinding               []interface{} `json:"csvserver_feopolicy_binding,omitempty"`
-	CSVServerGSLBDomainBinding              []interface{} `json:"csvserver_gslbdomain_binding,omitempty"`
-	CSVServerGSLBVServerBinding             []interface{} `json:"csvserver_gslbvserver_binding,omitempty"`
-	CSVServerLBVServerBinding               []interface{} `json:"csvserver_lbvserver_binding,omitempty"`
-	CSVServerResponderPolicyBinding         []interface{} `json:"csvserver_responderpolicy_binding,omitempty"`
-	CSVServerRewritePolicyBinding           []interface{} `json:"csvserver_rewritepolicy_binding,omitempty"`
-	CSVServerSpilloverPolicyBinding         []interface{} `json:"csvserver_spilloverpolicy_binding,omitempty"`
-	CSVServerTMTrafficPolicyBinding         []interface{} `json:"csvserver_tmtrafficpolicy_binding,omitempty"`
-	CSVServerTransformPolicyBinding         []interface{} `json:"csvserver_transformpolicy_binding,omitempty"`
-	CSVServerVPNVServerBinding              []interface{} `json:"csvserver_vpnvserver_binding,omitempty"`
-	Name                                    string        `json:"name,omitempty"`
+	CSVServerAnalyticsProfileBinding        []any  `json:"csvserver_analyticsprofile_binding,omitempty"`
+	CSVServerAppFlowPolicyBinding           []any  `json:"csvserver_appflowpolicy_binding,omitempty"`
+	CSVServerAppFWPolicyBinding             []any  `json:"csvserver_appfwpolicy_binding,omitempty"`
+	CSVServerAppQOEPolicyBinding            []any  `json:"csvserver_appqoepolicy_binding,omitempty"`
+	CSVServerAuditNSLogPolicyBinding        []any  `json:"csvserver_auditnslogpolicy_binding,omitempty"`
+	CSVServerAuditSyslogPolicyBinding       []any  `json:"csvserver_auditsyslogpolicy_binding,omitempty"`
+	CSVServerAuthorizationPolicyBinding     []any  `json:"csvserver_authorizationpolicy_binding,omitempty"`
+	CSVServerBotPolicyBinding               []any  `json:"csvserver_botpolicy_binding,omitempty"`
+	CSVServerCachePolicyBinding             []any  `json:"csvserver_cachepolicy_binding,omitempty"`
+	CSVServerCMPPolicyBinding               []any  `json:"csvserver_cmppolicy_binding,omitempty"`
+	CSVServerContentInspectionPolicyBinding []any  `json:"csvserver_contentinspectionpolicy_binding,omitempty"`
+	CSVServerCSPolicyBinding                []any  `json:"csvserver_cspolicy_binding,omitempty"`
+	CSVServerFEOPolicyBinding               []any  `json:"csvserver_feopolicy_binding,omitempty"`
+	CSVServerGSLBDomainBinding              []any  `json:"csvserver_gslbdomain_binding,omitempty"`
+	CSVServerGSLBVServerBinding             []any  `json:"csvserver_gslbvserver_binding,omitempty"`
+	CSVServerLBVServerBinding               []any  `json:"csvserver_lbvserver_binding,omitempty"`
+	CSVServerResponderPolicyBinding         []any  `json:"csvserver_responderpolicy_binding,omitempty"`
+	CSVServerRewritePolicyBinding           []any  `json:"csvserver_rewritepolicy_binding,omitempty"`
+	CSVServerSpilloverPolicyBinding         []any  `json:"csvserver_spilloverpolicy_binding,omitempty"`
+	CSVServerTMTrafficPolicyBinding         []any  `json:"csvserver_tmtrafficpolicy_binding,omitempty"`
+	CSVServerTransformPolicyBinding         []any  `json:"csvserver_transformpolicy_binding,omitempty"`
+	CSVServerVPNVServerBinding              []any  `json:"csvserver_vpnvserver_binding,omitempty"`
+	Name                                    string `json:"name,omitempty"`
 }
 
 type CSPolicyCSVServerBinding struct {
@@ -267,8 +267,8 @@ type CSPolicyCRVServerBinding struct {
 }
 
 type CSPolicyLabelBinding struct {
-	CSPolicyLabelCSPolicyBinding []interface{} `json:"cspolicylabel_cspolicy_binding,omitempty"`
-	LabelName                    string        `json:"labelname,omitempty"`
+	CSPolicyLabelCSPolicyBinding []any  `json:"cspolicylabel_cspolicy_binding,omitempty"`
+	LabelName                    string `json:"labelname,omitempty"`
 }
 
 type CSVServerContentInspectionPolicyBinding struct {
@@ -482,10 +482,10 @@ type CSVServer struct {
 }
 
 type CSPolicyBinding struct {
-	CSPolicyCRVServerBinding     []interface{} `json:"cspolicy_crvserver_binding,omitempty"`
-	CSPolicyCSPolicyLabelBinding []interface{} `json:"cspolicy_cspolicylabel_binding,omitempty"`
-	CSPolicyCSVServerBinding     []interface{} `json:"cspolicy_csvserver_binding,omitempty"`
-	PolicyName                   string        `json:"policyname,omitempty"`
+	CSPolicyCRVServerBinding     []any  `json:"cspolicy_crvserver_binding,omitempty"`
+	CSPolicyCSPolicyLabelBinding []any  `json:"cspolicy_cspolicylabel_binding,omitempty"`
+	CSPolicyCSVServerBinding     []any  `json:"cspolicy_csvserver_binding,omitempty"`
+	PolicyName                   string `json:"policyname,omitempty"`
 }
 
 type CSVServerLBVServerBinding struct {

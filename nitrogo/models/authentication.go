@@ -2,8 +2,8 @@ package models
 
 // authentication configuration structs
 type AuthenticationDFAPolicyBinding struct {
-	AuthenticationDFAPolicyVPNVServerBinding []interface{} `json:"authenticationdfapolicy_vpnvserver_binding,omitempty"`
-	Name                                     string        `json:"name,omitempty"`
+	AuthenticationDFAPolicyVPNVServerBinding []any  `json:"authenticationdfapolicy_vpnvserver_binding,omitempty"`
+	Name                                     string `json:"name,omitempty"`
 }
 
 type AuthenticationWebAuthPolicy struct {
@@ -15,27 +15,29 @@ type AuthenticationWebAuthPolicy struct {
 }
 
 type AuthenticationLDAPPolicyBinding struct {
-	AuthenticationLDAPPolicyAuthenticationVServerBinding []interface{} `json:"authenticationldappolicy_authenticationvserver_binding,omitempty"`
-	AuthenticationLDAPPolicySystemGlobalBinding          []interface{} `json:"authenticationldappolicy_systemglobal_binding,omitempty"`
-	AuthenticationLDAPPolicyVPNGlobalBinding             []interface{} `json:"authenticationldappolicy_vpnglobal_binding,omitempty"`
-	AuthenticationLDAPPolicyVPNVServerBinding            []interface{} `json:"authenticationldappolicy_vpnvserver_binding,omitempty"`
-	Name                                                 string        `json:"name,omitempty"`
+	AuthenticationLDAPPolicyAuthenticationVServerBinding []any  `json:"authenticationldappolicy_authenticationvserver_binding,omitempty"`
+	AuthenticationLDAPPolicySystemGlobalBinding          []any  `json:"authenticationldappolicy_systemglobal_binding,omitempty"`
+	AuthenticationLDAPPolicyVPNGlobalBinding             []any  `json:"authenticationldappolicy_vpnglobal_binding,omitempty"`
+	AuthenticationLDAPPolicyVPNVServerBinding            []any  `json:"authenticationldappolicy_vpnvserver_binding,omitempty"`
+	Name                                                 string `json:"name,omitempty"`
 }
 
 type AuthenticationWebAuthPolicyVPNVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationPolicySystemGlobalBinding struct {
-	ActivePolicy           int    `json:"activepolicy,omitempty"`
-	BoundTo                string `json:"boundto,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	ActivePolicy           int     `json:"activepolicy,omitempty"`
+	BoundTo                string  `json:"boundto,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
 }
 
 type AuthenticationNegotiatePolicy struct {
@@ -47,10 +49,11 @@ type AuthenticationNegotiatePolicy struct {
 }
 
 type AuthenticationCertPolicyAuthenticationVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationLDAPPolicy struct {
@@ -70,17 +73,18 @@ type AuthenticationSmartAccessProfile struct {
 }
 
 type AuthenticationLocalPolicySystemGlobalBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationPushService struct {
+	Count                 float64 `json:"__count,omitempty"`
 	CertEndpoint          string  `json:"certendpoint,omitempty"`
 	ClientID              string  `json:"clientid,omitempty"`
 	ClientSecret          string  `json:"clientsecret,omitempty"`
-	Count                 float64 `json:"__count,omitempty"`
 	CustomerID            string  `json:"customerid,omitempty"`
 	HubName               string  `json:"hubname,omitempty"`
 	Name                  string  `json:"name,omitempty"`
@@ -108,25 +112,27 @@ type AuthenticationStoreFrontAuthAction struct {
 }
 
 type AuthenticationWebAuthPolicyBinding struct {
-	AuthenticationWebAuthPolicyAuthenticationVServerBinding []interface{} `json:"authenticationwebauthpolicy_authenticationvserver_binding,omitempty"`
-	AuthenticationWebAuthPolicySystemGlobalBinding          []interface{} `json:"authenticationwebauthpolicy_systemglobal_binding,omitempty"`
-	AuthenticationWebAuthPolicyVPNGlobalBinding             []interface{} `json:"authenticationwebauthpolicy_vpnglobal_binding,omitempty"`
-	AuthenticationWebAuthPolicyVPNVServerBinding            []interface{} `json:"authenticationwebauthpolicy_vpnvserver_binding,omitempty"`
-	Name                                                    string        `json:"name,omitempty"`
+	AuthenticationWebAuthPolicyAuthenticationVServerBinding []any  `json:"authenticationwebauthpolicy_authenticationvserver_binding,omitempty"`
+	AuthenticationWebAuthPolicySystemGlobalBinding          []any  `json:"authenticationwebauthpolicy_systemglobal_binding,omitempty"`
+	AuthenticationWebAuthPolicyVPNGlobalBinding             []any  `json:"authenticationwebauthpolicy_vpnglobal_binding,omitempty"`
+	AuthenticationWebAuthPolicyVPNVServerBinding            []any  `json:"authenticationwebauthpolicy_vpnvserver_binding,omitempty"`
+	Name                                                    string `json:"name,omitempty"`
 }
 
 type AuthenticationLocalPolicyAuthenticationVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationWebAuthPolicyAuthenticationVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationSmartAccessPolicy struct {
@@ -140,9 +146,9 @@ type AuthenticationSmartAccessPolicy struct {
 }
 
 type AuthenticationSAMLIDPPolicyBinding struct {
-	AuthenticationSAMLIDPPolicyAuthenticationVServerBinding []interface{} `json:"authenticationsamlidppolicy_authenticationvserver_binding,omitempty"`
-	AuthenticationSAMLIDPPolicyVPNVServerBinding            []interface{} `json:"authenticationsamlidppolicy_vpnvserver_binding,omitempty"`
-	Name                                                    string        `json:"name,omitempty"`
+	AuthenticationSAMLIDPPolicyAuthenticationVServerBinding []any  `json:"authenticationsamlidppolicy_authenticationvserver_binding,omitempty"`
+	AuthenticationSAMLIDPPolicyVPNVServerBinding            []any  `json:"authenticationsamlidppolicy_vpnvserver_binding,omitempty"`
+	Name                                                    string `json:"name,omitempty"`
 }
 
 type AuthenticationOAuthIDPPolicy struct {
@@ -160,71 +166,74 @@ type AuthenticationOAuthIDPPolicy struct {
 }
 
 type AuthenticationVServerBinding struct {
-	AuthenticationVServerAuditNSLogPolicyBinding                []interface{} `json:"authenticationvserver_auditnslogpolicy_binding,omitempty"`
-	AuthenticationVServerAuditSyslogPolicyBinding               []interface{} `json:"authenticationvserver_auditsyslogpolicy_binding,omitempty"`
-	AuthenticationVServerAuthenticationCertPolicyBinding        []interface{} `json:"authenticationvserver_authenticationcertpolicy_binding,omitempty"`
-	AuthenticationVServerAuthenticationLDAPPolicyBinding        []interface{} `json:"authenticationvserver_authenticationldappolicy_binding,omitempty"`
-	AuthenticationVServerAuthenticationLocalPolicyBinding       []interface{} `json:"authenticationvserver_authenticationlocalpolicy_binding,omitempty"`
-	AuthenticationVServerAuthenticationLoginSchemaPolicyBinding []interface{} `json:"authenticationvserver_authenticationloginschemapolicy_binding,omitempty"`
-	AuthenticationVServerAuthenticationNegotiatePolicyBinding   []interface{} `json:"authenticationvserver_authenticationnegotiatepolicy_binding,omitempty"`
-	AuthenticationVServerAuthenticationOAuthIDPPolicyBinding    []interface{} `json:"authenticationvserver_authenticationoauthidppolicy_binding,omitempty"`
-	AuthenticationVServerAuthenticationPolicyBinding            []interface{} `json:"authenticationvserver_authenticationpolicy_binding,omitempty"`
-	AuthenticationVServerAuthenticationRADIUSPolicyBinding      []interface{} `json:"authenticationvserver_authenticationradiuspolicy_binding,omitempty"`
-	AuthenticationVServerAuthenticationSAMLIDPPolicyBinding     []interface{} `json:"authenticationvserver_authenticationsamlidppolicy_binding,omitempty"`
-	AuthenticationVServerAuthenticationSAMLPolicyBinding        []interface{} `json:"authenticationvserver_authenticationsamlpolicy_binding,omitempty"`
-	AuthenticationVServerAuthenticationSmartAccessPolicyBinding []interface{} `json:"authenticationvserver_authenticationsmartaccesspolicy_binding,omitempty"`
-	AuthenticationVServerAuthenticationTACACSPolicyBinding      []interface{} `json:"authenticationvserver_authenticationtacacspolicy_binding,omitempty"`
-	AuthenticationVServerAuthenticationWebAuthPolicyBinding     []interface{} `json:"authenticationvserver_authenticationwebauthpolicy_binding,omitempty"`
-	AuthenticationVServerCachePolicyBinding                     []interface{} `json:"authenticationvserver_cachepolicy_binding,omitempty"`
-	AuthenticationVServerCSPolicyBinding                        []interface{} `json:"authenticationvserver_cspolicy_binding,omitempty"`
-	AuthenticationVServerResponderPolicyBinding                 []interface{} `json:"authenticationvserver_responderpolicy_binding,omitempty"`
-	AuthenticationVServerRewritePolicyBinding                   []interface{} `json:"authenticationvserver_rewritepolicy_binding,omitempty"`
-	AuthenticationVServerTMSessionPolicyBinding                 []interface{} `json:"authenticationvserver_tmsessionpolicy_binding,omitempty"`
-	AuthenticationVServerVPNPortalThemeBinding                  []interface{} `json:"authenticationvserver_vpnportaltheme_binding,omitempty"`
-	Name                                                        string        `json:"name,omitempty"`
+	AuthenticationVServerAuditNSLogPolicyBinding                []any  `json:"authenticationvserver_auditnslogpolicy_binding,omitempty"`
+	AuthenticationVServerAuditSyslogPolicyBinding               []any  `json:"authenticationvserver_auditsyslogpolicy_binding,omitempty"`
+	AuthenticationVServerAuthenticationCertPolicyBinding        []any  `json:"authenticationvserver_authenticationcertpolicy_binding,omitempty"`
+	AuthenticationVServerAuthenticationLDAPPolicyBinding        []any  `json:"authenticationvserver_authenticationldappolicy_binding,omitempty"`
+	AuthenticationVServerAuthenticationLocalPolicyBinding       []any  `json:"authenticationvserver_authenticationlocalpolicy_binding,omitempty"`
+	AuthenticationVServerAuthenticationLoginSchemaPolicyBinding []any  `json:"authenticationvserver_authenticationloginschemapolicy_binding,omitempty"`
+	AuthenticationVServerAuthenticationNegotiatePolicyBinding   []any  `json:"authenticationvserver_authenticationnegotiatepolicy_binding,omitempty"`
+	AuthenticationVServerAuthenticationOAuthIDPPolicyBinding    []any  `json:"authenticationvserver_authenticationoauthidppolicy_binding,omitempty"`
+	AuthenticationVServerAuthenticationPolicyBinding            []any  `json:"authenticationvserver_authenticationpolicy_binding,omitempty"`
+	AuthenticationVServerAuthenticationRADIUSPolicyBinding      []any  `json:"authenticationvserver_authenticationradiuspolicy_binding,omitempty"`
+	AuthenticationVServerAuthenticationSAMLIDPPolicyBinding     []any  `json:"authenticationvserver_authenticationsamlidppolicy_binding,omitempty"`
+	AuthenticationVServerAuthenticationSAMLPolicyBinding        []any  `json:"authenticationvserver_authenticationsamlpolicy_binding,omitempty"`
+	AuthenticationVServerAuthenticationSmartAccessPolicyBinding []any  `json:"authenticationvserver_authenticationsmartaccesspolicy_binding,omitempty"`
+	AuthenticationVServerAuthenticationTACACSPolicyBinding      []any  `json:"authenticationvserver_authenticationtacacspolicy_binding,omitempty"`
+	AuthenticationVServerAuthenticationWebAuthPolicyBinding     []any  `json:"authenticationvserver_authenticationwebauthpolicy_binding,omitempty"`
+	AuthenticationVServerCachePolicyBinding                     []any  `json:"authenticationvserver_cachepolicy_binding,omitempty"`
+	AuthenticationVServerCSPolicyBinding                        []any  `json:"authenticationvserver_cspolicy_binding,omitempty"`
+	AuthenticationVServerResponderPolicyBinding                 []any  `json:"authenticationvserver_responderpolicy_binding,omitempty"`
+	AuthenticationVServerRewritePolicyBinding                   []any  `json:"authenticationvserver_rewritepolicy_binding,omitempty"`
+	AuthenticationVServerTMSessionPolicyBinding                 []any  `json:"authenticationvserver_tmsessionpolicy_binding,omitempty"`
+	AuthenticationVServerVPNPortalThemeBinding                  []any  `json:"authenticationvserver_vpnportaltheme_binding,omitempty"`
+	Name                                                        string `json:"name,omitempty"`
 }
 
 type AuthenticationLocalPolicyBinding struct {
-	AuthenticationLocalPolicyAuthenticationVServerBinding []interface{} `json:"authenticationlocalpolicy_authenticationvserver_binding,omitempty"`
-	AuthenticationLocalPolicySystemGlobalBinding          []interface{} `json:"authenticationlocalpolicy_systemglobal_binding,omitempty"`
-	AuthenticationLocalPolicyVPNGlobalBinding             []interface{} `json:"authenticationlocalpolicy_vpnglobal_binding,omitempty"`
-	AuthenticationLocalPolicyVPNVServerBinding            []interface{} `json:"authenticationlocalpolicy_vpnvserver_binding,omitempty"`
-	Name                                                  string        `json:"name,omitempty"`
+	AuthenticationLocalPolicyAuthenticationVServerBinding []any  `json:"authenticationlocalpolicy_authenticationvserver_binding,omitempty"`
+	AuthenticationLocalPolicySystemGlobalBinding          []any  `json:"authenticationlocalpolicy_systemglobal_binding,omitempty"`
+	AuthenticationLocalPolicyVPNGlobalBinding             []any  `json:"authenticationlocalpolicy_vpnglobal_binding,omitempty"`
+	AuthenticationLocalPolicyVPNVServerBinding            []any  `json:"authenticationlocalpolicy_vpnvserver_binding,omitempty"`
+	Name                                                  string `json:"name,omitempty"`
 }
 
 type AuthenticationSmartAccessPolicyBinding struct {
-	AuthenticationSmartAccessPolicyAuthenticationVServerBinding []interface{} `json:"authenticationsmartaccesspolicy_authenticationvserver_binding,omitempty"`
-	Name                                                        string        `json:"name,omitempty"`
+	AuthenticationSmartAccessPolicyAuthenticationVServerBinding []any  `json:"authenticationsmartaccesspolicy_authenticationvserver_binding,omitempty"`
+	Name                                                        string `json:"name,omitempty"`
 }
 
 type AuthenticationVServerAuthenticationWebAuthPolicyBinding struct {
-	ActType                int    `json:"acttype,omitempty"`
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	ActType                int     `json:"acttype,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationVServerAuditSyslogPolicyBinding struct {
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationRADIUSPolicyAuthenticationVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationSAMLIDPPolicy struct {
@@ -242,12 +251,12 @@ type AuthenticationSAMLIDPPolicy struct {
 }
 
 type AuthenticationRADIUSAction struct {
+	Count                      float64 `json:"__count,omitempty"`
 	Accounting                 string  `json:"accounting,omitempty"`
 	Authentication             string  `json:"authentication,omitempty"`
 	AuthServRetry              int     `json:"authservretry,omitempty"`
 	AuthTimeout                int     `json:"authtimeout,omitempty"`
 	CallingStationID           string  `json:"callingstationid,omitempty"`
-	Count                      float64 `json:"__count,omitempty"`
 	DefaultAuthenticationGroup string  `json:"defaultauthenticationgroup,omitempty"`
 	Failure                    int     `json:"failure,omitempty"`
 	IPAddress                  string  `json:"ipaddress,omitempty"`
@@ -276,10 +285,10 @@ type AuthenticationRADIUSAction struct {
 }
 
 type AuthenticationAzureKeyVault struct {
+	Count                      float64 `json:"__count,omitempty"`
 	Authentication             string  `json:"authentication,omitempty"`
 	ClientID                   string  `json:"clientid,omitempty"`
 	ClientSecret               string  `json:"clientsecret,omitempty"`
-	Count                      float64 `json:"__count,omitempty"`
 	DefaultAuthenticationGroup string  `json:"defaultauthenticationgroup,omitempty"`
 	Name                       string  `json:"name,omitempty"`
 	NextGenAPIResource         string  `json:"_nextgenapiresource,omitempty"`
@@ -307,14 +316,15 @@ type AuthenticationEmailAction struct {
 }
 
 type AuthenticationVServerTMSessionPolicyBinding struct {
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationTACACSPolicy struct {
@@ -326,17 +336,18 @@ type AuthenticationTACACSPolicy struct {
 }
 
 type AuthenticationLDAPPolicyAuthenticationVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationNegotiatePolicyBinding struct {
-	AuthenticationNegotiatePolicyAuthenticationVServerBinding []interface{} `json:"authenticationnegotiatepolicy_authenticationvserver_binding,omitempty"`
-	AuthenticationNegotiatePolicyVPNGlobalBinding             []interface{} `json:"authenticationnegotiatepolicy_vpnglobal_binding,omitempty"`
-	AuthenticationNegotiatePolicyVPNVServerBinding            []interface{} `json:"authenticationnegotiatepolicy_vpnvserver_binding,omitempty"`
-	Name                                                      string        `json:"name,omitempty"`
+	AuthenticationNegotiatePolicyAuthenticationVServerBinding []any  `json:"authenticationnegotiatepolicy_authenticationvserver_binding,omitempty"`
+	AuthenticationNegotiatePolicyVPNGlobalBinding             []any  `json:"authenticationnegotiatepolicy_vpnglobal_binding,omitempty"`
+	AuthenticationNegotiatePolicyVPNVServerBinding            []any  `json:"authenticationnegotiatepolicy_vpnvserver_binding,omitempty"`
+	Name                                                      string `json:"name,omitempty"`
 }
 
 type AuthenticationSmartAccessPolicyAuthenticationVServerBinding struct {
@@ -347,23 +358,26 @@ type AuthenticationSmartAccessPolicyAuthenticationVServerBinding struct {
 }
 
 type AuthenticationLoginSchemaPolicyVPNVServerBinding struct {
-	ActivePolicy           int    `json:"activepolicy,omitempty"`
-	BoundTo                string `json:"boundto,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	LabelName              string `json:"labelname,omitempty"`
-	LabelType              string `json:"labeltype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	ActivePolicy           int     `json:"activepolicy,omitempty"`
+	BoundTo                string  `json:"boundto,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	LabelName              string  `json:"labelname,omitempty"`
+	LabelType              string  `json:"labeltype,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
 }
 
 type AuthenticationNegotiatePolicyAuthenticationVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationSAMLAction struct {
+	Count                          float64  `json:"__count,omitempty"`
 	ArtifactResolutionServiceURL   string   `json:"artifactresolutionserviceurl,omitempty"`
 	Attribute1                     string   `json:"attribute1,omitempty"`
 	Attribute10                    string   `json:"attribute10,omitempty"`
@@ -385,7 +399,6 @@ type AuthenticationSAMLAction struct {
 	Attributes                     string   `json:"attributes,omitempty"`
 	Audience                       string   `json:"audience,omitempty"`
 	AuthnCtxClassRef               []string `json:"authnctxclassref,omitempty"`
-	Count                          float64  `json:"__count,omitempty"`
 	CustomAuthnCtxClassRef         string   `json:"customauthnctxclassref,omitempty"`
 	DefaultAuthenticationGroup     string   `json:"defaultauthenticationgroup,omitempty"`
 	DigestMethod                   string   `json:"digestmethod,omitempty"`
@@ -419,23 +432,25 @@ type AuthenticationSAMLAction struct {
 }
 
 type AuthenticationVServerVPNPortalThemeBinding struct {
-	ActType     int    `json:"acttype,omitempty"`
-	Name        string `json:"name,omitempty"`
-	PortalTheme string `json:"portaltheme,omitempty"`
+	Count       float64 `json:"__count,omitempty"`
+	ActType     int     `json:"acttype,omitempty"`
+	Name        string  `json:"name,omitempty"`
+	PortalTheme string  `json:"portaltheme,omitempty"`
 }
 
 type AuthenticationLocalPolicyVPNGlobalBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationLoginSchemaPolicy struct {
+	Count              float64  `json:"__count,omitempty"`
 	Action             string   `json:"action,omitempty"`
 	Builtin            []string `json:"builtin,omitempty"`
 	Comment            string   `json:"comment,omitempty"`
-	Count              float64  `json:"__count,omitempty"`
 	Feature            string   `json:"feature,omitempty"`
 	Hits               int      `json:"hits,omitempty"`
 	LogAction          string   `json:"logaction,omitempty"`
@@ -448,9 +463,9 @@ type AuthenticationLoginSchemaPolicy struct {
 }
 
 type AuthenticationLoginSchemaPolicyBinding struct {
-	AuthenticationLoginSchemaPolicyAuthenticationVServerBinding []interface{} `json:"authenticationloginschemapolicy_authenticationvserver_binding,omitempty"`
-	AuthenticationLoginSchemaPolicyVPNVServerBinding            []interface{} `json:"authenticationloginschemapolicy_vpnvserver_binding,omitempty"`
-	Name                                                        string        `json:"name,omitempty"`
+	AuthenticationLoginSchemaPolicyAuthenticationVServerBinding []any  `json:"authenticationloginschemapolicy_authenticationvserver_binding,omitempty"`
+	AuthenticationLoginSchemaPolicyVPNVServerBinding            []any  `json:"authenticationloginschemapolicy_vpnvserver_binding,omitempty"`
+	Name                                                        string `json:"name,omitempty"`
 }
 
 type AuthenticationProtectedUserAction struct {
@@ -462,22 +477,25 @@ type AuthenticationProtectedUserAction struct {
 }
 
 type AuthenticationPolicyAuthenticationVServerBinding struct {
-	ActivePolicy           int    `json:"activepolicy,omitempty"`
-	BoundTo                string `json:"boundto,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	ActivePolicy           int     `json:"activepolicy,omitempty"`
+	BoundTo                string  `json:"boundto,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
 }
 
 type AuthenticationSAMLPolicyVPNGlobalBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationTACACSAction struct {
+	Count                      float64 `json:"__count,omitempty"`
 	Accounting                 string  `json:"accounting,omitempty"`
 	Attribute1                 string  `json:"attribute1,omitempty"`
 	Attribute10                string  `json:"attribute10,omitempty"`
@@ -499,7 +517,6 @@ type AuthenticationTACACSAction struct {
 	AuditFailedCmds            string  `json:"auditfailedcmds,omitempty"`
 	Authorization              string  `json:"authorization,omitempty"`
 	AuthTimeout                int     `json:"authtimeout,omitempty"`
-	Count                      float64 `json:"__count,omitempty"`
 	DefaultAuthenticationGroup string  `json:"defaultauthenticationgroup,omitempty"`
 	Failure                    int     `json:"failure,omitempty"`
 	GroupAttrName              string  `json:"groupattrname,omitempty"`
@@ -512,65 +529,72 @@ type AuthenticationTACACSAction struct {
 }
 
 type AuthenticationCertPolicyVPNVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationVServerAuthenticationLoginSchemaPolicyBinding struct {
-	ActType                int    `json:"acttype,omitempty"`
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	ActType                int     `json:"acttype,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationSAMLIDPPolicyAuthenticationVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationNegotiatePolicyVPNGlobalBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationSAMLPolicyBinding struct {
-	AuthenticationSAMLPolicyAuthenticationVServerBinding []interface{} `json:"authenticationsamlpolicy_authenticationvserver_binding,omitempty"`
-	AuthenticationSAMLPolicyVPNGlobalBinding             []interface{} `json:"authenticationsamlpolicy_vpnglobal_binding,omitempty"`
-	AuthenticationSAMLPolicyVPNVServerBinding            []interface{} `json:"authenticationsamlpolicy_vpnvserver_binding,omitempty"`
-	Name                                                 string        `json:"name,omitempty"`
+	AuthenticationSAMLPolicyAuthenticationVServerBinding []any  `json:"authenticationsamlpolicy_authenticationvserver_binding,omitempty"`
+	AuthenticationSAMLPolicyVPNGlobalBinding             []any  `json:"authenticationsamlpolicy_vpnglobal_binding,omitempty"`
+	AuthenticationSAMLPolicyVPNVServerBinding            []any  `json:"authenticationsamlpolicy_vpnvserver_binding,omitempty"`
+	Name                                                 string `json:"name,omitempty"`
 }
 
 type AuthenticationVServerAuthenticationLocalPolicyBinding struct {
-	ActType                int    `json:"acttype,omitempty"`
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	ActType                int     `json:"acttype,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationRADIUSPolicySystemGlobalBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationVServer struct {
+	Count                float64 `json:"__count,omitempty"`
 	AppFlowLog           string  `json:"appflowlog,omitempty"`
 	Authentication       string  `json:"authentication,omitempty"`
 	AuthenticationDomain string  `json:"authenticationdomain,omitempty"`
@@ -581,7 +605,6 @@ type AuthenticationVServer struct {
 	CertKeyNames         string  `json:"certkeynames,omitempty"`
 	CltTimeout           int     `json:"clttimeout,omitempty"`
 	Comment              string  `json:"comment,omitempty"`
-	Count                float64 `json:"__count,omitempty"`
 	CurAAAUsers          int     `json:"curaaausers,omitempty"`
 	CurState             string  `json:"curstate,omitempty"`
 	DisablePrimaryOnDown string  `json:"disableprimaryondown,omitempty"`
@@ -633,25 +656,27 @@ type AuthenticationNoAuthAction struct {
 }
 
 type AuthenticationNegotiatePolicyVPNVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationSAMLPolicyVPNVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationAuthNProfile struct {
+	Count                float64 `json:"__count,omitempty"`
 	AuthenticationDomain string  `json:"authenticationdomain,omitempty"`
 	AuthenticationHost   string  `json:"authenticationhost,omitempty"`
 	AuthenticationLevel  int     `json:"authenticationlevel,omitempty"`
 	AuthNVSName          string  `json:"authnvsname,omitempty"`
-	Count                float64 `json:"__count,omitempty"`
 	Name                 string  `json:"name,omitempty"`
 	NextGenAPIResource   string  `json:"_nextgenapiresource,omitempty"`
 }
@@ -668,19 +693,19 @@ type AuthenticationCaptchaAction struct {
 }
 
 type AuthenticationRADIUSPolicyBinding struct {
-	AuthenticationRADIUSPolicyAuthenticationVServerBinding []interface{} `json:"authenticationradiuspolicy_authenticationvserver_binding,omitempty"`
-	AuthenticationRADIUSPolicySystemGlobalBinding          []interface{} `json:"authenticationradiuspolicy_systemglobal_binding,omitempty"`
-	AuthenticationRADIUSPolicyVPNGlobalBinding             []interface{} `json:"authenticationradiuspolicy_vpnglobal_binding,omitempty"`
-	AuthenticationRADIUSPolicyVPNVServerBinding            []interface{} `json:"authenticationradiuspolicy_vpnvserver_binding,omitempty"`
-	Name                                                   string        `json:"name,omitempty"`
+	AuthenticationRADIUSPolicyAuthenticationVServerBinding []any  `json:"authenticationradiuspolicy_authenticationvserver_binding,omitempty"`
+	AuthenticationRADIUSPolicySystemGlobalBinding          []any  `json:"authenticationradiuspolicy_systemglobal_binding,omitempty"`
+	AuthenticationRADIUSPolicyVPNGlobalBinding             []any  `json:"authenticationradiuspolicy_vpnglobal_binding,omitempty"`
+	AuthenticationRADIUSPolicyVPNVServerBinding            []any  `json:"authenticationradiuspolicy_vpnvserver_binding,omitempty"`
+	Name                                                   string `json:"name,omitempty"`
 }
 
 type AuthenticationTACACSPolicyBinding struct {
-	AuthenticationTACACSPolicyAuthenticationVServerBinding []interface{} `json:"authenticationtacacspolicy_authenticationvserver_binding,omitempty"`
-	AuthenticationTACACSPolicySystemGlobalBinding          []interface{} `json:"authenticationtacacspolicy_systemglobal_binding,omitempty"`
-	AuthenticationTACACSPolicyVPNGlobalBinding             []interface{} `json:"authenticationtacacspolicy_vpnglobal_binding,omitempty"`
-	AuthenticationTACACSPolicyVPNVServerBinding            []interface{} `json:"authenticationtacacspolicy_vpnvserver_binding,omitempty"`
-	Name                                                   string        `json:"name,omitempty"`
+	AuthenticationTACACSPolicyAuthenticationVServerBinding []any  `json:"authenticationtacacspolicy_authenticationvserver_binding,omitempty"`
+	AuthenticationTACACSPolicySystemGlobalBinding          []any  `json:"authenticationtacacspolicy_systemglobal_binding,omitempty"`
+	AuthenticationTACACSPolicyVPNGlobalBinding             []any  `json:"authenticationtacacspolicy_vpnglobal_binding,omitempty"`
+	AuthenticationTACACSPolicyVPNVServerBinding            []any  `json:"authenticationtacacspolicy_vpnvserver_binding,omitempty"`
+	Name                                                   string `json:"name,omitempty"`
 }
 
 type AuthenticationSAMLPolicy struct {
@@ -692,17 +717,19 @@ type AuthenticationSAMLPolicy struct {
 }
 
 type AuthenticationLDAPPolicyVPNVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationWebAuthPolicyVPNGlobalBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationLocalPolicy struct {
@@ -714,58 +741,64 @@ type AuthenticationLocalPolicy struct {
 }
 
 type AuthenticationVServerAuthenticationRADIUSPolicyBinding struct {
-	ActType                int    `json:"acttype,omitempty"`
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	ActType                int     `json:"acttype,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationLoginSchemaPolicyAuthenticationVServerBinding struct {
-	ActivePolicy           int    `json:"activepolicy,omitempty"`
-	BoundTo                string `json:"boundto,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	LabelName              string `json:"labelname,omitempty"`
-	LabelType              string `json:"labeltype,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	ActivePolicy           int     `json:"activepolicy,omitempty"`
+	BoundTo                string  `json:"boundto,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	LabelName              string  `json:"labelname,omitempty"`
+	LabelType              string  `json:"labeltype,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
 }
 
 type AuthenticationLocalPolicyVPNVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationVServerAuthenticationSAMLPolicyBinding struct {
-	ActType                int    `json:"acttype,omitempty"`
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	ActType                int     `json:"acttype,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationSAMLIDPPolicyVPNVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationOAuthIDPPolicyAuthenticationVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationCitrixAuthAction struct {
@@ -777,20 +810,21 @@ type AuthenticationCitrixAuthAction struct {
 }
 
 type AuthenticationVServerAuthenticationCertPolicyBinding struct {
-	ActType                int    `json:"acttype,omitempty"`
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	ActType                int     `json:"acttype,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationPolicyLabelBinding struct {
-	AuthenticationPolicyLabelAuthenticationPolicyBinding []interface{} `json:"authenticationpolicylabel_authenticationpolicy_binding,omitempty"`
-	LabelName                                            string        `json:"labelname,omitempty"`
+	AuthenticationPolicyLabelAuthenticationPolicyBinding []any  `json:"authenticationpolicylabel_authenticationpolicy_binding,omitempty"`
+	LabelName                                            string `json:"labelname,omitempty"`
 }
 
 type AuthenticationDFAPolicy struct {
@@ -802,38 +836,41 @@ type AuthenticationDFAPolicy struct {
 }
 
 type AuthenticationTACACSPolicyVPNVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationRADIUSPolicyVPNGlobalBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationVServerAuthenticationLDAPPolicyBinding struct {
-	ActType                int    `json:"acttype,omitempty"`
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	ActType                int     `json:"acttype,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationOAuthIDPProfile struct {
+	Count                      float64 `json:"__count,omitempty"`
 	Attributes                 string  `json:"attributes,omitempty"`
 	Audience                   string  `json:"audience,omitempty"`
 	ClientID                   string  `json:"clientid,omitempty"`
 	ClientSecret               string  `json:"clientsecret,omitempty"`
 	ConfigService              string  `json:"configservice,omitempty"`
-	Count                      float64 `json:"__count,omitempty"`
 	DefaultAuthenticationGroup string  `json:"defaultauthenticationgroup,omitempty"`
 	EncryptToken               string  `json:"encrypttoken,omitempty"`
 	Issuer                     string  `json:"issuer,omitempty"`
@@ -850,10 +887,11 @@ type AuthenticationOAuthIDPProfile struct {
 }
 
 type AuthenticationTACACSPolicySystemGlobalBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationEPAAction struct {
@@ -869,24 +907,26 @@ type AuthenticationEPAAction struct {
 }
 
 type AuthenticationPolicyBinding struct {
-	AuthenticationPolicyAuthenticationPolicyLabelBinding []interface{} `json:"authenticationpolicy_authenticationpolicylabel_binding,omitempty"`
-	AuthenticationPolicyAuthenticationVServerBinding     []interface{} `json:"authenticationpolicy_authenticationvserver_binding,omitempty"`
-	AuthenticationPolicySystemGlobalBinding              []interface{} `json:"authenticationpolicy_systemglobal_binding,omitempty"`
-	Name                                                 string        `json:"name,omitempty"`
+	AuthenticationPolicyAuthenticationPolicyLabelBinding []any  `json:"authenticationpolicy_authenticationpolicylabel_binding,omitempty"`
+	AuthenticationPolicyAuthenticationVServerBinding     []any  `json:"authenticationpolicy_authenticationvserver_binding,omitempty"`
+	AuthenticationPolicySystemGlobalBinding              []any  `json:"authenticationpolicy_systemglobal_binding,omitempty"`
+	Name                                                 string `json:"name,omitempty"`
 }
 
 type AuthenticationCertPolicyVPNGlobalBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationDFAPolicyVPNVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationWebAuthAction struct {
@@ -943,15 +983,16 @@ type AuthenticationRADIUSPolicy struct {
 }
 
 type AuthenticationVServerAuthenticationOAuthIDPPolicyBinding struct {
-	ActType                int    `json:"acttype,omitempty"`
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	ActType                int     `json:"acttype,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationVServerRewritePolicyBinding struct {
@@ -978,73 +1019,80 @@ type AuthenticationDFAAction struct {
 }
 
 type AuthenticationOAuthIDPPolicyBinding struct {
-	AuthenticationOAuthIDPPolicyAuthenticationVServerBinding []interface{} `json:"authenticationoauthidppolicy_authenticationvserver_binding,omitempty"`
-	AuthenticationOAuthIDPPolicyVPNVServerBinding            []interface{} `json:"authenticationoauthidppolicy_vpnvserver_binding,omitempty"`
-	Name                                                     string        `json:"name,omitempty"`
+	AuthenticationOAuthIDPPolicyAuthenticationVServerBinding []any  `json:"authenticationoauthidppolicy_authenticationvserver_binding,omitempty"`
+	AuthenticationOAuthIDPPolicyVPNVServerBinding            []any  `json:"authenticationoauthidppolicy_vpnvserver_binding,omitempty"`
+	Name                                                     string `json:"name,omitempty"`
 }
 
 type AuthenticationVServerCachePolicyBinding struct {
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationVServerAuthenticationNegotiatePolicyBinding struct {
-	ActType                int    `json:"acttype,omitempty"`
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	ActType                int     `json:"acttype,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationTACACSPolicyAuthenticationVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationTACACSPolicyVPNGlobalBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationVServerAuthenticationSAMLIDPPolicyBinding struct {
-	ActType                int    `json:"acttype,omitempty"`
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	ActType                int     `json:"acttype,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationVServerAuthenticationTACACSPolicyBinding struct {
-	ActType                int    `json:"acttype,omitempty"`
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	ActType                int     `json:"acttype,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationLDAPAction struct {
+	Count                      float64 `json:"__count,omitempty"`
 	AlternateEmailAttr         string  `json:"alternateemailattr,omitempty"`
 	Attribute1                 string  `json:"attribute1,omitempty"`
 	Attribute10                string  `json:"attribute10,omitempty"`
@@ -1066,7 +1114,6 @@ type AuthenticationLDAPAction struct {
 	Authentication             string  `json:"authentication,omitempty"`
 	AuthTimeout                int     `json:"authtimeout,omitempty"`
 	CloudAttributes            string  `json:"cloudattributes,omitempty"`
-	Count                      float64 `json:"__count,omitempty"`
 	DefaultAuthenticationGroup string  `json:"defaultauthenticationgroup,omitempty"`
 	Email                      string  `json:"email,omitempty"`
 	Failure                    int     `json:"failure,omitempty"`
@@ -1107,50 +1154,55 @@ type AuthenticationLDAPAction struct {
 }
 
 type AuthenticationVServerAuthenticationPolicyBinding struct {
-	ActType                int    `json:"acttype,omitempty"`
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	ActType                int     `json:"acttype,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationCertPolicyBinding struct {
-	AuthenticationCertPolicyAuthenticationVServerBinding []interface{} `json:"authenticationcertpolicy_authenticationvserver_binding,omitempty"`
-	AuthenticationCertPolicyVPNGlobalBinding             []interface{} `json:"authenticationcertpolicy_vpnglobal_binding,omitempty"`
-	AuthenticationCertPolicyVPNVServerBinding            []interface{} `json:"authenticationcertpolicy_vpnvserver_binding,omitempty"`
-	Name                                                 string        `json:"name,omitempty"`
+	AuthenticationCertPolicyAuthenticationVServerBinding []any  `json:"authenticationcertpolicy_authenticationvserver_binding,omitempty"`
+	AuthenticationCertPolicyVPNGlobalBinding             []any  `json:"authenticationcertpolicy_vpnglobal_binding,omitempty"`
+	AuthenticationCertPolicyVPNVServerBinding            []any  `json:"authenticationcertpolicy_vpnvserver_binding,omitempty"`
+	Name                                                 string `json:"name,omitempty"`
 }
 
 type AuthenticationWebAuthPolicySystemGlobalBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationVServerAuditNSLogPolicyBinding struct {
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationSAMLPolicyAuthenticationVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationOAuthAction struct {
+	Count                      float64  `json:"__count,omitempty"`
 	AllowedAlgorithms          []string `json:"allowedalgorithms,omitempty"`
 	Attribute1                 string   `json:"attribute1,omitempty"`
 	Attribute10                string   `json:"attribute10,omitempty"`
@@ -1176,7 +1228,6 @@ type AuthenticationOAuthAction struct {
 	CertFilePath               string   `json:"certfilepath,omitempty"`
 	ClientID                   string   `json:"clientid,omitempty"`
 	ClientSecret               string   `json:"clientsecret,omitempty"`
-	Count                      float64  `json:"__count,omitempty"`
 	DefaultAuthenticationGroup string   `json:"defaultauthenticationgroup,omitempty"`
 	GrantType                  string   `json:"granttype,omitempty"`
 	GraphEndpoint              string   `json:"graphendpoint,omitempty"`
@@ -1217,17 +1268,18 @@ type AuthenticationNegotiateAction struct {
 }
 
 type AuthenticationLDAPPolicySystemGlobalBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationLoginSchema struct {
+	Count                   float64  `json:"__count,omitempty"`
 	AuthenticationSchema    string   `json:"authenticationschema,omitempty"`
 	AuthenticationStrength  int      `json:"authenticationstrength,omitempty"`
 	Builtin                 []string `json:"builtin,omitempty"`
-	Count                   float64  `json:"__count,omitempty"`
 	Feature                 string   `json:"feature,omitempty"`
 	Name                    string   `json:"name,omitempty"`
 	NextGenAPIResource      string   `json:"_nextgenapiresource,omitempty"`
@@ -1239,18 +1291,20 @@ type AuthenticationLoginSchema struct {
 }
 
 type AuthenticationPolicyLabelAuthenticationPolicyBinding struct {
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	LabelName              string `json:"labelname,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	PolicyName             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	LabelName              string  `json:"labelname,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	PolicyName             string  `json:"policyname,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
 }
 
 type AuthenticationRADIUSPolicyVPNVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationCertAction struct {
@@ -1275,41 +1329,45 @@ type AuthenticationADFSProxyProfile struct {
 }
 
 type AuthenticationVServerResponderPolicyBinding struct {
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationVServerCSPolicyBinding struct {
-	BindPoint              string `json:"bindpoint,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	GroupExtraction        bool   `json:"groupextraction,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Policy                 string `json:"policy,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	Secondary              bool   `json:"secondary,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	BindPoint              string  `json:"bindpoint,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	GroupExtraction        bool    `json:"groupextraction,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Policy                 string  `json:"policy,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	Secondary              bool    `json:"secondary,omitempty"`
 }
 
 type AuthenticationPolicyAuthenticationPolicyLabelBinding struct {
-	ActivePolicy           int    `json:"activepolicy,omitempty"`
-	BoundTo                string `json:"boundto,omitempty"`
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	NextFactor             string `json:"nextfactor,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	ActivePolicy           int     `json:"activepolicy,omitempty"`
+	BoundTo                string  `json:"boundto,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	NextFactor             string  `json:"nextfactor,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
 }
 
 type AuthenticationOAuthIDPPolicyVPNVServerBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationPolicy struct {
@@ -1328,6 +1386,7 @@ type AuthenticationPolicy struct {
 }
 
 type AuthenticationSAMLIDPProfile struct {
+	Count                       float64 `json:"__count,omitempty"`
 	ACSURLRule                  string  `json:"acsurlrule,omitempty"`
 	AssertionConsumerServiceURL string  `json:"assertionconsumerserviceurl,omitempty"`
 	Attribute1                  string  `json:"attribute1,omitempty"`
@@ -1395,7 +1454,6 @@ type AuthenticationSAMLIDPProfile struct {
 	Attribute9Format            string  `json:"attribute9format,omitempty"`
 	Attribute9FriendlyName      string  `json:"attribute9friendlyname,omitempty"`
 	Audience                    string  `json:"audience,omitempty"`
-	Count                       float64 `json:"__count,omitempty"`
 	DefaultAuthenticationGroup  string  `json:"defaultauthenticationgroup,omitempty"`
 	DigestMethod                string  `json:"digestmethod,omitempty"`
 	EncryptAssertion            string  `json:"encryptassertion,omitempty"`
@@ -1426,10 +1484,11 @@ type AuthenticationSAMLIDPProfile struct {
 }
 
 type AuthenticationLDAPPolicyVPNGlobalBinding struct {
-	ActivePolicy int    `json:"activepolicy,omitempty"`
-	BoundTo      string `json:"boundto,omitempty"`
-	Name         string `json:"name,omitempty"`
-	Priority     int    `json:"priority,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	ActivePolicy int     `json:"activepolicy,omitempty"`
+	BoundTo      string  `json:"boundto,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	Priority     int     `json:"priority,omitempty"`
 }
 
 type AuthenticationVServerAuthenticationSmartAccessPolicyBinding struct {

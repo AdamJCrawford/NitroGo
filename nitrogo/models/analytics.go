@@ -6,7 +6,7 @@ type AnalyticsGlobalAnalyticsProfileBinding struct {
 }
 
 type AnalyticsGlobalBinding struct {
-	AnalyticsGlobalAnalyticsProfileBinding []interface{} `json:"analyticsglobal_analyticsprofile_binding,omitempty"`
+	AnalyticsGlobalAnalyticsProfileBinding []any `json:"analyticsglobal_analyticsprofile_binding,omitempty"`
 }
 
 type AnalyticsProfile struct {

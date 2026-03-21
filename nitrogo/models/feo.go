@@ -10,7 +10,7 @@ type FEOPolicyCSVServerBinding struct {
 }
 
 type FEOGlobalBinding struct {
-	FEOGlobalFEOPolicyBinding []interface{} `json:"feoglobal_feopolicy_binding,omitempty"`
+	FEOGlobalFEOPolicyBinding []any `json:"feoglobal_feopolicy_binding,omitempty"`
 }
 
 type FEOPolicyFEOGlobalBinding struct {
@@ -83,10 +83,10 @@ type FEOAction struct {
 }
 
 type FEOPolicyBinding struct {
-	FEOPolicyCSVServerBinding []interface{} `json:"feopolicy_csvserver_binding,omitempty"`
-	FEOPolicyFEOGlobalBinding []interface{} `json:"feopolicy_feoglobal_binding,omitempty"`
-	FEOPolicyLBVServerBinding []interface{} `json:"feopolicy_lbvserver_binding,omitempty"`
-	Name                      string        `json:"name,omitempty"`
+	FEOPolicyCSVServerBinding []any  `json:"feopolicy_csvserver_binding,omitempty"`
+	FEOPolicyFEOGlobalBinding []any  `json:"feopolicy_feoglobal_binding,omitempty"`
+	FEOPolicyLBVServerBinding []any  `json:"feopolicy_lbvserver_binding,omitempty"`
+	Name                      string `json:"name,omitempty"`
 }
 
 type FEOParameter struct {

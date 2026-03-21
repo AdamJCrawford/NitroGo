@@ -64,11 +64,11 @@ type SNMPCommunity struct {
 }
 
 type SNMPTrapBinding struct {
-	SNMPTrapSNMPUserBinding []interface{} `json:"snmptrap_snmpuser_binding,omitempty"`
-	TD                      int           `json:"td,omitempty"`
-	TrapClass               string        `json:"trapclass,omitempty"`
-	TrapDestination         string        `json:"trapdestination,omitempty"`
-	Version                 string        `json:"version,omitempty"`
+	SNMPTrapSNMPUserBinding []any  `json:"snmptrap_snmpuser_binding,omitempty"`
+	TD                      int    `json:"td,omitempty"`
+	TrapClass               string `json:"trapclass,omitempty"`
+	TrapDestination         string `json:"trapdestination,omitempty"`
+	Version                 string `json:"version,omitempty"`
 }
 
 type SNMPUser struct {

@@ -24,16 +24,16 @@ type CMPParameter struct {
 }
 
 type CMPGlobalBinding struct {
-	CMPGlobalCMPPolicyBinding []interface{} `json:"cmpglobal_cmppolicy_binding,omitempty"`
+	CMPGlobalCMPPolicyBinding []any `json:"cmpglobal_cmppolicy_binding,omitempty"`
 }
 
 type CMPPolicyBinding struct {
-	CMPPolicyCMPGlobalBinding      []interface{} `json:"cmppolicy_cmpglobal_binding,omitempty"`
-	CMPPolicyCMPPolicyLabelBinding []interface{} `json:"cmppolicy_cmppolicylabel_binding,omitempty"`
-	CMPPolicyCRVServerBinding      []interface{} `json:"cmppolicy_crvserver_binding,omitempty"`
-	CMPPolicyCSVServerBinding      []interface{} `json:"cmppolicy_csvserver_binding,omitempty"`
-	CMPPolicyLBVServerBinding      []interface{} `json:"cmppolicy_lbvserver_binding,omitempty"`
-	Name                           string        `json:"name,omitempty"`
+	CMPPolicyCMPGlobalBinding      []any  `json:"cmppolicy_cmpglobal_binding,omitempty"`
+	CMPPolicyCMPPolicyLabelBinding []any  `json:"cmppolicy_cmppolicylabel_binding,omitempty"`
+	CMPPolicyCRVServerBinding      []any  `json:"cmppolicy_crvserver_binding,omitempty"`
+	CMPPolicyCSVServerBinding      []any  `json:"cmppolicy_csvserver_binding,omitempty"`
+	CMPPolicyLBVServerBinding      []any  `json:"cmppolicy_lbvserver_binding,omitempty"`
+	Name                           string `json:"name,omitempty"`
 }
 
 type CMPPolicyLabelPolicyBindingBinding struct {
@@ -167,7 +167,7 @@ type CMPPolicyCSVServerBinding struct {
 }
 
 type CMPPolicyLabelBinding struct {
-	CMPPolicyLabelCMPPolicyBinding     []interface{} `json:"cmppolicylabel_cmppolicy_binding,omitempty"`
-	CMPPolicyLabelPolicyBindingBinding []interface{} `json:"cmppolicylabel_policybinding_binding,omitempty"`
-	LabelName                          string        `json:"labelname,omitempty"`
+	CMPPolicyLabelCMPPolicyBinding     []any  `json:"cmppolicylabel_cmppolicy_binding,omitempty"`
+	CMPPolicyLabelPolicyBindingBinding []any  `json:"cmppolicylabel_policybinding_binding,omitempty"`
+	LabelName                          string `json:"labelname,omitempty"`
 }

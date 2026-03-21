@@ -41,17 +41,17 @@ type TMGlobalTMTrafficPolicyBinding struct {
 }
 
 type TMGlobalBinding struct {
-	TMGlobalAuditNSLogPolicyBinding  []interface{} `json:"tmglobal_auditnslogpolicy_binding,omitempty"`
-	TMGlobalAuditSyslogPolicyBinding []interface{} `json:"tmglobal_auditsyslogpolicy_binding,omitempty"`
-	TMGlobalTMSessionPolicyBinding   []interface{} `json:"tmglobal_tmsessionpolicy_binding,omitempty"`
-	TMGlobalTMTrafficPolicyBinding   []interface{} `json:"tmglobal_tmtrafficpolicy_binding,omitempty"`
+	TMGlobalAuditNSLogPolicyBinding  []any `json:"tmglobal_auditnslogpolicy_binding,omitempty"`
+	TMGlobalAuditSyslogPolicyBinding []any `json:"tmglobal_auditsyslogpolicy_binding,omitempty"`
+	TMGlobalTMSessionPolicyBinding   []any `json:"tmglobal_tmsessionpolicy_binding,omitempty"`
+	TMGlobalTMTrafficPolicyBinding   []any `json:"tmglobal_tmtrafficpolicy_binding,omitempty"`
 }
 
 type TMTrafficPolicyBinding struct {
-	Name                            string        `json:"name,omitempty"`
-	TMTrafficPolicyCSVServerBinding []interface{} `json:"tmtrafficpolicy_csvserver_binding,omitempty"`
-	TMTrafficPolicyLBVServerBinding []interface{} `json:"tmtrafficpolicy_lbvserver_binding,omitempty"`
-	TMTrafficPolicyTMGlobalBinding  []interface{} `json:"tmtrafficpolicy_tmglobal_binding,omitempty"`
+	Name                            string `json:"name,omitempty"`
+	TMTrafficPolicyCSVServerBinding []any  `json:"tmtrafficpolicy_csvserver_binding,omitempty"`
+	TMTrafficPolicyLBVServerBinding []any  `json:"tmtrafficpolicy_lbvserver_binding,omitempty"`
+	TMTrafficPolicyTMGlobalBinding  []any  `json:"tmtrafficpolicy_tmglobal_binding,omitempty"`
 }
 
 type TMSessionPolicy struct {
@@ -123,11 +123,11 @@ type TMTrafficAction struct {
 }
 
 type TMSessionPolicyBinding struct {
-	Name                                        string        `json:"name,omitempty"`
-	TMSessionPolicyAAAGroupBinding              []interface{} `json:"tmsessionpolicy_aaagroup_binding,omitempty"`
-	TMSessionPolicyAAAUserBinding               []interface{} `json:"tmsessionpolicy_aaauser_binding,omitempty"`
-	TMSessionPolicyAuthenticationVServerBinding []interface{} `json:"tmsessionpolicy_authenticationvserver_binding,omitempty"`
-	TMSessionPolicyTMGlobalBinding              []interface{} `json:"tmsessionpolicy_tmglobal_binding,omitempty"`
+	Name                                        string `json:"name,omitempty"`
+	TMSessionPolicyAAAGroupBinding              []any  `json:"tmsessionpolicy_aaagroup_binding,omitempty"`
+	TMSessionPolicyAAAUserBinding               []any  `json:"tmsessionpolicy_aaauser_binding,omitempty"`
+	TMSessionPolicyAuthenticationVServerBinding []any  `json:"tmsessionpolicy_authenticationvserver_binding,omitempty"`
+	TMSessionPolicyTMGlobalBinding              []any  `json:"tmsessionpolicy_tmglobal_binding,omitempty"`
 }
 
 type TMSessionPolicyAAAGroupBinding struct {

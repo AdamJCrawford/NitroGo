@@ -247,33 +247,33 @@ type AuditSyslogPolicyTMGlobalBinding struct {
 }
 
 type AuditNSLogPolicyBinding struct {
-	AuditNSLogPolicyAAAGroupBinding              []interface{} `json:"auditnslogpolicy_aaagroup_binding,omitempty"`
-	AuditNSLogPolicyAAAUserBinding               []interface{} `json:"auditnslogpolicy_aaauser_binding,omitempty"`
-	AuditNSLogPolicyAppFWGlobalBinding           []interface{} `json:"auditnslogpolicy_appfwglobal_binding,omitempty"`
-	AuditNSLogPolicyAuditNSLogGlobalBinding      []interface{} `json:"auditnslogpolicy_auditnslogglobal_binding,omitempty"`
-	AuditNSLogPolicyAuthenticationVServerBinding []interface{} `json:"auditnslogpolicy_authenticationvserver_binding,omitempty"`
-	AuditNSLogPolicyCSVServerBinding             []interface{} `json:"auditnslogpolicy_csvserver_binding,omitempty"`
-	AuditNSLogPolicyLBVServerBinding             []interface{} `json:"auditnslogpolicy_lbvserver_binding,omitempty"`
-	AuditNSLogPolicySystemGlobalBinding          []interface{} `json:"auditnslogpolicy_systemglobal_binding,omitempty"`
-	AuditNSLogPolicyTMGlobalBinding              []interface{} `json:"auditnslogpolicy_tmglobal_binding,omitempty"`
-	AuditNSLogPolicyVPNGlobalBinding             []interface{} `json:"auditnslogpolicy_vpnglobal_binding,omitempty"`
-	AuditNSLogPolicyVPNVServerBinding            []interface{} `json:"auditnslogpolicy_vpnvserver_binding,omitempty"`
-	Name                                         string        `json:"name,omitempty"`
+	AuditNSLogPolicyAAAGroupBinding              []any  `json:"auditnslogpolicy_aaagroup_binding,omitempty"`
+	AuditNSLogPolicyAAAUserBinding               []any  `json:"auditnslogpolicy_aaauser_binding,omitempty"`
+	AuditNSLogPolicyAppFWGlobalBinding           []any  `json:"auditnslogpolicy_appfwglobal_binding,omitempty"`
+	AuditNSLogPolicyAuditNSLogGlobalBinding      []any  `json:"auditnslogpolicy_auditnslogglobal_binding,omitempty"`
+	AuditNSLogPolicyAuthenticationVServerBinding []any  `json:"auditnslogpolicy_authenticationvserver_binding,omitempty"`
+	AuditNSLogPolicyCSVServerBinding             []any  `json:"auditnslogpolicy_csvserver_binding,omitempty"`
+	AuditNSLogPolicyLBVServerBinding             []any  `json:"auditnslogpolicy_lbvserver_binding,omitempty"`
+	AuditNSLogPolicySystemGlobalBinding          []any  `json:"auditnslogpolicy_systemglobal_binding,omitempty"`
+	AuditNSLogPolicyTMGlobalBinding              []any  `json:"auditnslogpolicy_tmglobal_binding,omitempty"`
+	AuditNSLogPolicyVPNGlobalBinding             []any  `json:"auditnslogpolicy_vpnglobal_binding,omitempty"`
+	AuditNSLogPolicyVPNVServerBinding            []any  `json:"auditnslogpolicy_vpnvserver_binding,omitempty"`
+	Name                                         string `json:"name,omitempty"`
 }
 
 type AuditSyslogPolicyBinding struct {
-	AuditSyslogPolicyAAAGroupBinding              []interface{} `json:"auditsyslogpolicy_aaagroup_binding,omitempty"`
-	AuditSyslogPolicyAAAUserBinding               []interface{} `json:"auditsyslogpolicy_aaauser_binding,omitempty"`
-	AuditSyslogPolicyAuditSyslogGlobalBinding     []interface{} `json:"auditsyslogpolicy_auditsyslogglobal_binding,omitempty"`
-	AuditSyslogPolicyAuthenticationVServerBinding []interface{} `json:"auditsyslogpolicy_authenticationvserver_binding,omitempty"`
-	AuditSyslogPolicyCSVServerBinding             []interface{} `json:"auditsyslogpolicy_csvserver_binding,omitempty"`
-	AuditSyslogPolicyLBVServerBinding             []interface{} `json:"auditsyslogpolicy_lbvserver_binding,omitempty"`
-	AuditSyslogPolicyRNATGlobalBinding            []interface{} `json:"auditsyslogpolicy_rnatglobal_binding,omitempty"`
-	AuditSyslogPolicySystemGlobalBinding          []interface{} `json:"auditsyslogpolicy_systemglobal_binding,omitempty"`
-	AuditSyslogPolicyTMGlobalBinding              []interface{} `json:"auditsyslogpolicy_tmglobal_binding,omitempty"`
-	AuditSyslogPolicyVPNGlobalBinding             []interface{} `json:"auditsyslogpolicy_vpnglobal_binding,omitempty"`
-	AuditSyslogPolicyVPNVServerBinding            []interface{} `json:"auditsyslogpolicy_vpnvserver_binding,omitempty"`
-	Name                                          string        `json:"name,omitempty"`
+	AuditSyslogPolicyAAAGroupBinding              []any  `json:"auditsyslogpolicy_aaagroup_binding,omitempty"`
+	AuditSyslogPolicyAAAUserBinding               []any  `json:"auditsyslogpolicy_aaauser_binding,omitempty"`
+	AuditSyslogPolicyAuditSyslogGlobalBinding     []any  `json:"auditsyslogpolicy_auditsyslogglobal_binding,omitempty"`
+	AuditSyslogPolicyAuthenticationVServerBinding []any  `json:"auditsyslogpolicy_authenticationvserver_binding,omitempty"`
+	AuditSyslogPolicyCSVServerBinding             []any  `json:"auditsyslogpolicy_csvserver_binding,omitempty"`
+	AuditSyslogPolicyLBVServerBinding             []any  `json:"auditsyslogpolicy_lbvserver_binding,omitempty"`
+	AuditSyslogPolicyRNATGlobalBinding            []any  `json:"auditsyslogpolicy_rnatglobal_binding,omitempty"`
+	AuditSyslogPolicySystemGlobalBinding          []any  `json:"auditsyslogpolicy_systemglobal_binding,omitempty"`
+	AuditSyslogPolicyTMGlobalBinding              []any  `json:"auditsyslogpolicy_tmglobal_binding,omitempty"`
+	AuditSyslogPolicyVPNGlobalBinding             []any  `json:"auditsyslogpolicy_vpnglobal_binding,omitempty"`
+	AuditSyslogPolicyVPNVServerBinding            []any  `json:"auditsyslogpolicy_vpnvserver_binding,omitempty"`
+	Name                                          string `json:"name,omitempty"`
 }
 
 type AuditSyslogGlobalAuditSyslogPolicyBinding struct {
@@ -286,7 +286,7 @@ type AuditSyslogGlobalAuditSyslogPolicyBinding struct {
 }
 
 type AuditSyslogGlobalBinding struct {
-	AuditSyslogGlobalAuditSyslogPolicyBinding []interface{} `json:"auditsyslogglobal_auditsyslogpolicy_binding,omitempty"`
+	AuditSyslogGlobalAuditSyslogPolicyBinding []any `json:"auditsyslogglobal_auditsyslogpolicy_binding,omitempty"`
 }
 
 type AuditSyslogPolicyCSVServerBinding struct {
@@ -362,7 +362,7 @@ type AuditSyslogPolicyAAAUserBinding struct {
 }
 
 type AuditNSLogGlobalBinding struct {
-	AuditNSLogGlobalAuditNSLogPolicyBinding []interface{} `json:"auditnslogglobal_auditnslogpolicy_binding,omitempty"`
+	AuditNSLogGlobalAuditNSLogPolicyBinding []any `json:"auditnslogglobal_auditnslogpolicy_binding,omitempty"`
 }
 
 type AuditSyslogPolicyAuthenticationVServerBinding struct {

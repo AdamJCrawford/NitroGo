@@ -12,13 +12,13 @@ type PolicyPatsetPatternBinding struct {
 }
 
 type PolicyStringMapBinding struct {
-	Name                          string        `json:"name,omitempty"`
-	PolicyStringMapPatternBinding []interface{} `json:"policystringmap_pattern_binding,omitempty"`
+	Name                          string `json:"name,omitempty"`
+	PolicyStringMapPatternBinding []any  `json:"policystringmap_pattern_binding,omitempty"`
 }
 
 type PolicyDatasetBinding struct {
-	Name                      string        `json:"name,omitempty"`
-	PolicyDatasetValueBinding []interface{} `json:"policydataset_value_binding,omitempty"`
+	Name                      string `json:"name,omitempty"`
+	PolicyDatasetValueBinding []any  `json:"policydataset_value_binding,omitempty"`
 }
 
 type PolicyStringMapPatternBinding struct {
@@ -53,8 +53,8 @@ type PolicyStringMap struct {
 }
 
 type PolicyPatsetBinding struct {
-	Name                       string        `json:"name,omitempty"`
-	PolicyPatsetPatternBinding []interface{} `json:"policypatset_pattern_binding,omitempty"`
+	Name                       string `json:"name,omitempty"`
+	PolicyPatsetPatternBinding []any  `json:"policypatset_pattern_binding,omitempty"`
 }
 
 type PolicyDatasetValueBinding struct {
@@ -107,40 +107,40 @@ type PolicyURLSet struct {
 }
 
 type PolicyEvaluation struct {
-	Action                     string        `json:"action,omitempty"`
-	Count                      float64       `json:"__count,omitempty"`
-	Expression                 string        `json:"expression,omitempty"`
-	Input                      string        `json:"input,omitempty"`
-	IsTruncatedRefResult       bool          `json:"istruncatedrefresult,omitempty"`
-	NextGenAPIResource         string        `json:"_nextgenapiresource,omitempty"`
-	PitActionErrorResult       string        `json:"pitactionerrorresult,omitempty"`
-	PitActionEvalTime          int           `json:"pitactionevaltime,omitempty"`
-	PitBoolErrorResult         string        `json:"pitboolerrorresult,omitempty"`
-	PitBoolEvalTime            int           `json:"pitboolevaltime,omitempty"`
-	PitBoolResult              bool          `json:"pitboolresult,omitempty"`
-	PitDoubleErrorResult       string        `json:"pitdoubleerrorresult,omitempty"`
-	PitDoubleEvalTime          int           `json:"pitdoubleevaltime,omitempty"`
-	PitDoubleResult            float64       `json:"pitdoubleresult,omitempty"`
-	PitModifiedInputData       string        `json:"pitmodifiedinputdata,omitempty"`
-	PitNewOffsetArray          []interface{} `json:"pitnewoffsetarray,omitempty"`
-	PitNumErrorResult          string        `json:"pitnumerrorresult,omitempty"`
-	PitNumEvalTime             int           `json:"pitnumevaltime,omitempty"`
-	PitNumResult               int           `json:"pitnumresult,omitempty"`
-	PitOffsetErrorResult       string        `json:"pitoffseterrorresult,omitempty"`
-	PitOffsetEvalTime          int           `json:"pitoffsetevaltime,omitempty"`
-	PitOffsetLengthArray       []interface{} `json:"pitoffsetlengtharray,omitempty"`
-	PitOffsetNewLengthArray    []interface{} `json:"pitoffsetnewlengtharray,omitempty"`
-	PitOffsetResult            int           `json:"pitoffsetresult,omitempty"`
-	PitOffsetResultLen         int           `json:"pitoffsetresultlen,omitempty"`
-	PitOldOffsetArray          []interface{} `json:"pitoldoffsetarray,omitempty"`
-	PitOperationPerformerArray []string      `json:"pitoperationperformerarray,omitempty"`
-	PitRefErrorResult          string        `json:"pitreferrorresult,omitempty"`
-	PitRefEvalTime             int           `json:"pitrefevaltime,omitempty"`
-	PitRefResult               string        `json:"pitrefresult,omitempty"`
-	PitUlongErrorResult        string        `json:"pitulongerrorresult,omitempty"`
-	PitUlongEvalTime           int           `json:"pitulongevaltime,omitempty"`
-	PitUlongResult             int           `json:"pitulongresult,omitempty"`
-	TypeField                  string        `json:"type,omitempty"`
+	Action                     string   `json:"action,omitempty"`
+	Count                      float64  `json:"__count,omitempty"`
+	Expression                 string   `json:"expression,omitempty"`
+	Input                      string   `json:"input,omitempty"`
+	IsTruncatedRefResult       bool     `json:"istruncatedrefresult,omitempty"`
+	NextGenAPIResource         string   `json:"_nextgenapiresource,omitempty"`
+	PitActionErrorResult       string   `json:"pitactionerrorresult,omitempty"`
+	PitActionEvalTime          int      `json:"pitactionevaltime,omitempty"`
+	PitBoolErrorResult         string   `json:"pitboolerrorresult,omitempty"`
+	PitBoolEvalTime            int      `json:"pitboolevaltime,omitempty"`
+	PitBoolResult              bool     `json:"pitboolresult,omitempty"`
+	PitDoubleErrorResult       string   `json:"pitdoubleerrorresult,omitempty"`
+	PitDoubleEvalTime          int      `json:"pitdoubleevaltime,omitempty"`
+	PitDoubleResult            float64  `json:"pitdoubleresult,omitempty"`
+	PitModifiedInputData       string   `json:"pitmodifiedinputdata,omitempty"`
+	PitNewOffsetArray          []any    `json:"pitnewoffsetarray,omitempty"`
+	PitNumErrorResult          string   `json:"pitnumerrorresult,omitempty"`
+	PitNumEvalTime             int      `json:"pitnumevaltime,omitempty"`
+	PitNumResult               int      `json:"pitnumresult,omitempty"`
+	PitOffsetErrorResult       string   `json:"pitoffseterrorresult,omitempty"`
+	PitOffsetEvalTime          int      `json:"pitoffsetevaltime,omitempty"`
+	PitOffsetLengthArray       []any    `json:"pitoffsetlengtharray,omitempty"`
+	PitOffsetNewLengthArray    []any    `json:"pitoffsetnewlengtharray,omitempty"`
+	PitOffsetResult            int      `json:"pitoffsetresult,omitempty"`
+	PitOffsetResultLen         int      `json:"pitoffsetresultlen,omitempty"`
+	PitOldOffsetArray          []any    `json:"pitoldoffsetarray,omitempty"`
+	PitOperationPerformerArray []string `json:"pitoperationperformerarray,omitempty"`
+	PitRefErrorResult          string   `json:"pitreferrorresult,omitempty"`
+	PitRefEvalTime             int      `json:"pitrefevaltime,omitempty"`
+	PitRefResult               string   `json:"pitrefresult,omitempty"`
+	PitUlongErrorResult        string   `json:"pitulongerrorresult,omitempty"`
+	PitUlongEvalTime           int      `json:"pitulongevaltime,omitempty"`
+	PitUlongResult             int      `json:"pitulongresult,omitempty"`
+	TypeField                  string   `json:"type,omitempty"`
 }
 
 type PolicyHTTPCallout struct {

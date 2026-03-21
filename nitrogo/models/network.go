@@ -1,7 +1,7 @@
 package models
 
-// network configuration structs
 type ChannelInterfaceBinding struct {
+	Count        float64  `json:"__count,omitempty"`
 	ID           string   `json:"id,omitempty"`
 	IFNum        []string `json:"ifnum,omitempty"`
 	LAMode       string   `json:"lamode,omitempty"`
@@ -23,21 +23,23 @@ type MapDMR struct {
 }
 
 type RNAT6Binding struct {
-	Name              string        `json:"name,omitempty"`
-	RNAT6NSIP6Binding []interface{} `json:"rnat6_nsip6_binding,omitempty"`
+	Name              string `json:"name,omitempty"`
+	RNAT6NSIP6Binding []any  `json:"rnat6_nsip6_binding,omitempty"`
 }
 
 type VLANNSIP6Binding struct {
-	ID         int    `json:"id,omitempty"`
-	IPAddress  string `json:"ipaddress,omitempty"`
-	Netmask    string `json:"netmask,omitempty"`
-	OwnerGroup string `json:"ownergroup,omitempty"`
-	TD         int    `json:"td,omitempty"`
+	Count      float64 `json:"__count,omitempty"`
+	ID         int     `json:"id,omitempty"`
+	IPAddress  string  `json:"ipaddress,omitempty"`
+	Netmask    string  `json:"netmask,omitempty"`
+	OwnerGroup string  `json:"ownergroup,omitempty"`
+	TD         int     `json:"td,omitempty"`
 }
 
 type ND6RAVariablesOnLinkIPv6PrefixBinding struct {
-	IPv6Prefix string `json:"ipv6prefix,omitempty"`
-	VLAN       int    `json:"vlan,omitempty"`
+	Count      float64 `json:"__count,omitempty"`
+	IPv6Prefix string  `json:"ipv6prefix,omitempty"`
+	VLAN       int     `json:"vlan,omitempty"`
 }
 
 type PTP struct {
@@ -46,10 +48,11 @@ type PTP struct {
 }
 
 type RNATNSIPBinding struct {
-	Name       string `json:"name,omitempty"`
-	NatIP      string `json:"natip,omitempty"`
-	OwnerGroup string `json:"ownergroup,omitempty"`
-	TD         int    `json:"td,omitempty"`
+	Count      float64 `json:"__count,omitempty"`
+	Name       string  `json:"name,omitempty"`
+	NatIP      string  `json:"natip,omitempty"`
+	OwnerGroup string  `json:"ownergroup,omitempty"`
+	TD         int     `json:"td,omitempty"`
 }
 
 type VRID6 struct {
@@ -75,10 +78,11 @@ type VRID6 struct {
 }
 
 type NetProfileNATRuleBinding struct {
-	Name      string `json:"name,omitempty"`
-	NATRule   string `json:"natrule,omitempty"`
-	Netmask   string `json:"netmask,omitempty"`
-	RewriteIP string `json:"rewriteip,omitempty"`
+	Count     float64 `json:"__count,omitempty"`
+	Name      string  `json:"name,omitempty"`
+	NATRule   string  `json:"natrule,omitempty"`
+	Netmask   string  `json:"netmask,omitempty"`
+	RewriteIP string  `json:"rewriteip,omitempty"`
 }
 
 type IPTunnel struct {
@@ -107,8 +111,9 @@ type IPTunnel struct {
 }
 
 type NetProfileSrcPortSetBinding struct {
-	Name         string `json:"name,omitempty"`
-	SrcPortRange string `json:"srcportrange,omitempty"`
+	Count        float64 `json:"__count,omitempty"`
+	Name         string  `json:"name,omitempty"`
+	SrcPortRange string  `json:"srcportrange,omitempty"`
 }
 
 type L2Param struct {
@@ -132,8 +137,8 @@ type L2Param struct {
 }
 
 type ND6RAVariablesBinding struct {
-	ND6RAVariablesOnLinkIPv6PrefixBinding []interface{} `json:"nd6ravariables_onlinkipv6prefix_binding,omitempty"`
-	VLAN                                  int           `json:"vlan,omitempty"`
+	ND6RAVariablesOnLinkIPv6PrefixBinding []any `json:"nd6ravariables_onlinkipv6prefix_binding,omitempty"`
+	VLAN                                  int   `json:"vlan,omitempty"`
 }
 
 type BridgeGroup struct {
@@ -152,20 +157,22 @@ type BridgeGroup struct {
 }
 
 type IPSetNSIP6Binding struct {
-	IPAddress string `json:"ipaddress,omitempty"`
-	Name      string `json:"name,omitempty"`
+	Count     float64 `json:"__count,omitempty"`
+	IPAddress string  `json:"ipaddress,omitempty"`
+	Name      string  `json:"name,omitempty"`
 }
 
 type VRID6ChannelBinding struct {
-	Flags int    `json:"flags,omitempty"`
-	ID    int    `json:"id,omitempty"`
-	IFNum string `json:"ifnum,omitempty"`
-	VLAN  int    `json:"vlan,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	Flags int     `json:"flags,omitempty"`
+	ID    int     `json:"id,omitempty"`
+	IFNum string  `json:"ifnum,omitempty"`
+	VLAN  int     `json:"vlan,omitempty"`
 }
 
 type ChannelBinding struct {
-	ChannelInterfaceBinding []interface{} `json:"channel_interface_binding,omitempty"`
-	ID                      string        `json:"id,omitempty"`
+	ChannelInterfaceBinding []any  `json:"channel_interface_binding,omitempty"`
+	ID                      string `json:"id,omitempty"`
 }
 
 type RNAT6 struct {
@@ -181,18 +188,20 @@ type RNAT6 struct {
 }
 
 type BridgeGroupNSIP6Binding struct {
-	ID         int    `json:"id,omitempty"`
-	IPAddress  string `json:"ipaddress,omitempty"`
-	Netmask    string `json:"netmask,omitempty"`
-	OwnerGroup string `json:"ownergroup,omitempty"`
-	RNAT       bool   `json:"rnat,omitempty"`
-	TD         int    `json:"td,omitempty"`
+	Count      float64 `json:"__count,omitempty"`
+	ID         int     `json:"id,omitempty"`
+	IPAddress  string  `json:"ipaddress,omitempty"`
+	Netmask    string  `json:"netmask,omitempty"`
+	OwnerGroup string  `json:"ownergroup,omitempty"`
+	RNAT       bool    `json:"rnat,omitempty"`
+	TD         int     `json:"td,omitempty"`
 }
 
 type BridgeGroupVLANBinding struct {
-	ID   int  `json:"id,omitempty"`
-	RNAT bool `json:"rnat,omitempty"`
-	VLAN int  `json:"vlan,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	ID    int     `json:"id,omitempty"`
+	RNAT  bool    `json:"rnat,omitempty"`
+	VLAN  int     `json:"vlan,omitempty"`
 }
 
 type ND6RAVariables struct {
@@ -217,16 +226,18 @@ type ND6RAVariables struct {
 }
 
 type VRIDNSIPBinding struct {
-	Flags     int    `json:"flags,omitempty"`
-	ID        int    `json:"id,omitempty"`
-	IPAddress string `json:"ipaddress,omitempty"`
+	Count     float64 `json:"__count,omitempty"`
+	Flags     int     `json:"flags,omitempty"`
+	ID        int     `json:"id,omitempty"`
+	IPAddress string  `json:"ipaddress,omitempty"`
 }
 
 type VLANInterfaceBinding struct {
-	ID         int    `json:"id,omitempty"`
-	IFNum      string `json:"ifnum,omitempty"`
-	OwnerGroup string `json:"ownergroup,omitempty"`
-	Tagged     bool   `json:"tagged,omitempty"`
+	Count      float64 `json:"__count,omitempty"`
+	ID         int     `json:"id,omitempty"`
+	IFNum      string  `json:"ifnum,omitempty"`
+	OwnerGroup string  `json:"ownergroup,omitempty"`
+	Tagged     bool    `json:"tagged,omitempty"`
 }
 
 type IP6TunnelParam struct {
@@ -239,15 +250,17 @@ type IP6TunnelParam struct {
 }
 
 type VRID6TrackInterfaceBinding struct {
-	Flags      int    `json:"flags,omitempty"`
-	ID         int    `json:"id,omitempty"`
-	TrackIFNum string `json:"trackifnum,omitempty"`
+	Count      float64 `json:"__count,omitempty"`
+	Flags      int     `json:"flags,omitempty"`
+	ID         int     `json:"id,omitempty"`
+	TrackIFNum string  `json:"trackifnum,omitempty"`
 }
 
 type RNATGlobalAuditSyslogPolicyBinding struct {
-	All      bool   `json:"all,omitempty"`
-	Policy   string `json:"policy,omitempty"`
-	Priority int    `json:"priority,omitempty"`
+	Count    float64 `json:"__count,omitempty"`
+	All      bool    `json:"all,omitempty"`
+	Policy   string  `json:"policy,omitempty"`
+	Priority int     `json:"priority,omitempty"`
 }
 
 type ARPParam struct {
@@ -372,9 +385,10 @@ type NetProfile struct {
 }
 
 type VXLANNSIPBinding struct {
-	ID        int    `json:"id,omitempty"`
-	IPAddress string `json:"ipaddress,omitempty"`
-	Netmask   string `json:"netmask,omitempty"`
+	Count     float64 `json:"__count,omitempty"`
+	ID        int     `json:"id,omitempty"`
+	IPAddress string  `json:"ipaddress,omitempty"`
+	Netmask   string  `json:"netmask,omitempty"`
 }
 
 type RNAT struct {
@@ -412,16 +426,17 @@ type IPTunnelParam struct {
 }
 
 type VRIDNSIP6Binding struct {
-	Flags     int    `json:"flags,omitempty"`
-	ID        int    `json:"id,omitempty"`
-	IPAddress string `json:"ipaddress,omitempty"`
+	Count     float64 `json:"__count,omitempty"`
+	Flags     int     `json:"flags,omitempty"`
+	ID        int     `json:"id,omitempty"`
+	IPAddress string  `json:"ipaddress,omitempty"`
 }
 
 type BridgeGroupBinding struct {
-	BridgeGroupNSIP6Binding []interface{} `json:"bridgegroup_nsip6_binding,omitempty"`
-	BridgeGroupNSIPBinding  []interface{} `json:"bridgegroup_nsip_binding,omitempty"`
-	BridgeGroupVLANBinding  []interface{} `json:"bridgegroup_vlan_binding,omitempty"`
-	ID                      int           `json:"id,omitempty"`
+	BridgeGroupNSIP6Binding []any `json:"bridgegroup_nsip6_binding,omitempty"`
+	BridgeGroupNSIPBinding  []any `json:"bridgegroup_nsip_binding,omitempty"`
+	BridgeGroupVLANBinding  []any `json:"bridgegroup_vlan_binding,omitempty"`
+	ID                      int   `json:"id,omitempty"`
 }
 
 type IPSet struct {
@@ -573,36 +588,40 @@ type Route6 struct {
 }
 
 type VLANLinkSetBinding struct {
-	ID         int    `json:"id,omitempty"`
-	IFNum      string `json:"ifnum,omitempty"`
-	OwnerGroup string `json:"ownergroup,omitempty"`
-	Tagged     bool   `json:"tagged,omitempty"`
+	Count      float64 `json:"__count,omitempty"`
+	ID         int     `json:"id,omitempty"`
+	IFNum      string  `json:"ifnum,omitempty"`
+	OwnerGroup string  `json:"ownergroup,omitempty"`
+	Tagged     bool    `json:"tagged,omitempty"`
 }
 
 type VLANChannelBinding struct {
-	ID         int    `json:"id,omitempty"`
-	IFNum      string `json:"ifnum,omitempty"`
-	OwnerGroup string `json:"ownergroup,omitempty"`
-	Tagged     bool   `json:"tagged,omitempty"`
+	Count      float64 `json:"__count,omitempty"`
+	ID         int     `json:"id,omitempty"`
+	IFNum      string  `json:"ifnum,omitempty"`
+	OwnerGroup string  `json:"ownergroup,omitempty"`
+	Tagged     bool    `json:"tagged,omitempty"`
 }
 
 type FISBinding struct {
-	FISChannelBinding []interface{} `json:"fis_channel_binding,omitempty"`
-	Name              string        `json:"name,omitempty"`
+	FISChannelBinding []any  `json:"fis_channel_binding,omitempty"`
+	Name              string `json:"name,omitempty"`
 }
 
 type VXLANIPTunnelBinding struct {
-	ID     int    `json:"id,omitempty"`
-	Tunnel string `json:"tunnel,omitempty"`
+	Count  float64 `json:"__count,omitempty"`
+	ID     int     `json:"id,omitempty"`
+	Tunnel string  `json:"tunnel,omitempty"`
 }
 
 type NetProfileBinding struct {
-	Name                        string        `json:"name,omitempty"`
-	NetProfileNATRuleBinding    []interface{} `json:"netprofile_natrule_binding,omitempty"`
-	NetProfileSrcPortSetBinding []interface{} `json:"netprofile_srcportset_binding,omitempty"`
+	Name                        string `json:"name,omitempty"`
+	NetProfileNATRuleBinding    []any  `json:"netprofile_natrule_binding,omitempty"`
+	NetProfileSrcPortSetBinding []any  `json:"netprofile_srcportset_binding,omitempty"`
 }
 
 type VXLANVLANMapVXLANBinding struct {
+	Count float64  `json:"__count,omitempty"`
 	Name  string   `json:"name,omitempty"`
 	VLAN  []string `json:"vlan,omitempty"`
 	VXLAN int      `json:"vxlan,omitempty"`
@@ -623,14 +642,15 @@ type VRIDParam struct {
 }
 
 type VXLANSrcIPBinding struct {
-	ID    int    `json:"id,omitempty"`
-	SrcIP string `json:"srcip,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	ID    int     `json:"id,omitempty"`
+	SrcIP string  `json:"srcip,omitempty"`
 }
 
 type IPSetBinding struct {
-	IPSetNSIP6Binding []interface{} `json:"ipset_nsip6_binding,omitempty"`
-	IPSetNSIPBinding  []interface{} `json:"ipset_nsip_binding,omitempty"`
-	Name              string        `json:"name,omitempty"`
+	IPSetNSIP6Binding []any  `json:"ipset_nsip6_binding,omitempty"`
+	IPSetNSIPBinding  []any  `json:"ipset_nsip_binding,omitempty"`
+	Name              string `json:"name,omitempty"`
 }
 
 type NAT64 struct {
@@ -670,63 +690,70 @@ type FISInterfaceBinding struct {
 }
 
 type VRIDChannelBinding struct {
-	Flags int    `json:"flags,omitempty"`
-	ID    int    `json:"id,omitempty"`
-	IFNum string `json:"ifnum,omitempty"`
-	VLAN  int    `json:"vlan,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	Flags int     `json:"flags,omitempty"`
+	ID    int     `json:"id,omitempty"`
+	IFNum string  `json:"ifnum,omitempty"`
+	VLAN  int     `json:"vlan,omitempty"`
 }
 
 type VRIDBinding struct {
-	ID                        int           `json:"id,omitempty"`
-	VRIDChannelBinding        []interface{} `json:"vrid_channel_binding,omitempty"`
-	VRIDInterfaceBinding      []interface{} `json:"vrid_interface_binding,omitempty"`
-	VRIDNSIP6Binding          []interface{} `json:"vrid_nsip6_binding,omitempty"`
-	VRIDNSIPBinding           []interface{} `json:"vrid_nsip_binding,omitempty"`
-	VRIDTrackInterfaceBinding []interface{} `json:"vrid_trackinterface_binding,omitempty"`
+	ID                        int   `json:"id,omitempty"`
+	VRIDChannelBinding        []any `json:"vrid_channel_binding,omitempty"`
+	VRIDInterfaceBinding      []any `json:"vrid_interface_binding,omitempty"`
+	VRIDNSIP6Binding          []any `json:"vrid_nsip6_binding,omitempty"`
+	VRIDNSIPBinding           []any `json:"vrid_nsip_binding,omitempty"`
+	VRIDTrackInterfaceBinding []any `json:"vrid_trackinterface_binding,omitempty"`
 }
 
 type NetBridgeIPTunnelBinding struct {
-	Name   string `json:"name,omitempty"`
-	Tunnel string `json:"tunnel,omitempty"`
+	Count  float64 `json:"__count,omitempty"`
+	Name   string  `json:"name,omitempty"`
+	Tunnel string  `json:"tunnel,omitempty"`
 }
 
 type IPSetNSIPBinding struct {
-	IPAddress string `json:"ipaddress,omitempty"`
-	Name      string `json:"name,omitempty"`
+	Count     float64 `json:"__count,omitempty"`
+	IPAddress string  `json:"ipaddress,omitempty"`
+	Name      string  `json:"name,omitempty"`
 }
 
 type VLANNSIPBinding struct {
-	ID         int    `json:"id,omitempty"`
-	IPAddress  string `json:"ipaddress,omitempty"`
-	Netmask    string `json:"netmask,omitempty"`
-	OwnerGroup string `json:"ownergroup,omitempty"`
-	TD         int    `json:"td,omitempty"`
+	Count      float64 `json:"__count,omitempty"`
+	ID         int     `json:"id,omitempty"`
+	IPAddress  string  `json:"ipaddress,omitempty"`
+	Netmask    string  `json:"netmask,omitempty"`
+	OwnerGroup string  `json:"ownergroup,omitempty"`
+	TD         int     `json:"td,omitempty"`
 }
 
 type LinkSetInterfaceBinding struct {
-	ID    string `json:"id,omitempty"`
-	IFNum string `json:"ifnum,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	ID    string  `json:"id,omitempty"`
+	IFNum string  `json:"ifnum,omitempty"`
 }
 
 type VRIDTrackInterfaceBinding struct {
-	Flags      int    `json:"flags,omitempty"`
-	ID         int    `json:"id,omitempty"`
-	TrackIFNum string `json:"trackifnum,omitempty"`
+	Count      float64 `json:"__count,omitempty"`
+	Flags      int     `json:"flags,omitempty"`
+	ID         int     `json:"id,omitempty"`
+	TrackIFNum string  `json:"trackifnum,omitempty"`
 }
 
 type VRID6Binding struct {
-	ID                         int           `json:"id,omitempty"`
-	VRID6ChannelBinding        []interface{} `json:"vrid6_channel_binding,omitempty"`
-	VRID6InterfaceBinding      []interface{} `json:"vrid6_interface_binding,omitempty"`
-	VRID6NSIP6Binding          []interface{} `json:"vrid6_nsip6_binding,omitempty"`
-	VRID6NSIPBinding           []interface{} `json:"vrid6_nsip_binding,omitempty"`
-	VRID6TrackInterfaceBinding []interface{} `json:"vrid6_trackinterface_binding,omitempty"`
+	ID                         int   `json:"id,omitempty"`
+	VRID6ChannelBinding        []any `json:"vrid6_channel_binding,omitempty"`
+	VRID6InterfaceBinding      []any `json:"vrid6_interface_binding,omitempty"`
+	VRID6NSIP6Binding          []any `json:"vrid6_nsip6_binding,omitempty"`
+	VRID6NSIPBinding           []any `json:"vrid6_nsip_binding,omitempty"`
+	VRID6TrackInterfaceBinding []any `json:"vrid6_trackinterface_binding,omitempty"`
 }
 
 type NetBridgeNSIPBinding struct {
-	IPAddress string `json:"ipaddress,omitempty"`
-	Name      string `json:"name,omitempty"`
-	Netmask   string `json:"netmask,omitempty"`
+	Count     float64 `json:"__count,omitempty"`
+	IPAddress string  `json:"ipaddress,omitempty"`
+	Name      string  `json:"name,omitempty"`
+	Netmask   string  `json:"netmask,omitempty"`
 }
 
 type RSSKeyType struct {
@@ -735,16 +762,18 @@ type RSSKeyType struct {
 }
 
 type MapBMRBMRV4NetworkBinding struct {
-	Name    string `json:"name,omitempty"`
-	Netmask string `json:"netmask,omitempty"`
-	Network string `json:"network,omitempty"`
+	Count   float64 `json:"__count,omitempty"`
+	Name    string  `json:"name,omitempty"`
+	Netmask string  `json:"netmask,omitempty"`
+	Network string  `json:"network,omitempty"`
 }
 
 type RNAT6NSIP6Binding struct {
-	Name       string `json:"name,omitempty"`
-	NatIP6     string `json:"natip6,omitempty"`
-	OwnerGroup string `json:"ownergroup,omitempty"`
-	TD         int    `json:"td,omitempty"`
+	Count      float64 `json:"__count,omitempty"`
+	Name       string  `json:"name,omitempty"`
+	NatIP6     string  `json:"natip6,omitempty"`
+	OwnerGroup string  `json:"ownergroup,omitempty"`
+	TD         int     `json:"td,omitempty"`
 }
 
 type Route struct {
@@ -802,16 +831,17 @@ type Route struct {
 }
 
 type NetBridgeBinding struct {
-	Name                     string        `json:"name,omitempty"`
-	NetBridgeIPTunnelBinding []interface{} `json:"netbridge_iptunnel_binding,omitempty"`
-	NetBridgeNSIP6Binding    []interface{} `json:"netbridge_nsip6_binding,omitempty"`
-	NetBridgeNSIPBinding     []interface{} `json:"netbridge_nsip_binding,omitempty"`
-	NetBridgeVLANBinding     []interface{} `json:"netbridge_vlan_binding,omitempty"`
+	Name                     string `json:"name,omitempty"`
+	NetBridgeIPTunnelBinding []any  `json:"netbridge_iptunnel_binding,omitempty"`
+	NetBridgeNSIP6Binding    []any  `json:"netbridge_nsip6_binding,omitempty"`
+	NetBridgeNSIPBinding     []any  `json:"netbridge_nsip_binding,omitempty"`
+	NetBridgeVLANBinding     []any  `json:"netbridge_vlan_binding,omitempty"`
 }
 
 type LinkSetChannelBinding struct {
-	ID    string `json:"id,omitempty"`
-	IFNum string `json:"ifnum,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	ID    string  `json:"id,omitempty"`
+	IFNum string  `json:"ifnum,omitempty"`
 }
 
 type IP6Tunnel struct {
@@ -839,15 +869,16 @@ type VXLANVLANMap struct {
 }
 
 type MapBMRBinding struct {
-	MapBMRBMRV4NetworkBinding []interface{} `json:"mapbmr_bmrv4network_binding,omitempty"`
-	Name                      string        `json:"name,omitempty"`
+	MapBMRBMRV4NetworkBinding []any  `json:"mapbmr_bmrv4network_binding,omitempty"`
+	Name                      string `json:"name,omitempty"`
 }
 
 type VRIDInterfaceBinding struct {
-	Flags int    `json:"flags,omitempty"`
-	ID    int    `json:"id,omitempty"`
-	IFNum string `json:"ifnum,omitempty"`
-	VLAN  int    `json:"vlan,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	Flags int     `json:"flags,omitempty"`
+	ID    int     `json:"id,omitempty"`
+	IFNum string  `json:"ifnum,omitempty"`
+	VLAN  int     `json:"vlan,omitempty"`
 }
 
 type BridgeTable struct {
@@ -869,8 +900,8 @@ type BridgeTable struct {
 }
 
 type VXLANVLANMapBinding struct {
-	Name                     string        `json:"name,omitempty"`
-	VXLANVLANMapVXLANBinding []interface{} `json:"vxlanvlanmap_vxlan_binding,omitempty"`
+	Name                     string `json:"name,omitempty"`
+	VXLANVLANMapVXLANBinding []any  `json:"vxlanvlanmap_vxlan_binding,omitempty"`
 }
 
 type VRID struct {
@@ -895,9 +926,10 @@ type VRID struct {
 }
 
 type NetBridgeNSIP6Binding struct {
-	IPAddress string `json:"ipaddress,omitempty"`
-	Name      string `json:"name,omitempty"`
-	Netmask   string `json:"netmask,omitempty"`
+	Count     float64 `json:"__count,omitempty"`
+	IPAddress string  `json:"ipaddress,omitempty"`
+	Name      string  `json:"name,omitempty"`
+	Netmask   string  `json:"netmask,omitempty"`
 }
 
 type INAT struct {
@@ -920,8 +952,9 @@ type INAT struct {
 }
 
 type RNATRetainSourcePortSetBinding struct {
-	Name                  string `json:"name,omitempty"`
-	RetainSourcePortRange string `json:"retainsourceportrange,omitempty"`
+	Count                 float64 `json:"__count,omitempty"`
+	Name                  string  `json:"name,omitempty"`
+	RetainSourcePortRange string  `json:"retainsourceportrange,omitempty"`
 }
 
 type VLAN struct {
@@ -967,35 +1000,38 @@ type RNATParam struct {
 }
 
 type VRID6NSIP6Binding struct {
-	Flags     int    `json:"flags,omitempty"`
-	ID        int    `json:"id,omitempty"`
-	IPAddress string `json:"ipaddress,omitempty"`
+	Count     float64 `json:"__count,omitempty"`
+	Flags     int     `json:"flags,omitempty"`
+	ID        int     `json:"id,omitempty"`
+	IPAddress string  `json:"ipaddress,omitempty"`
 }
 
 type VXLANNSIP6Binding struct {
-	ID        int    `json:"id,omitempty"`
-	IPAddress string `json:"ipaddress,omitempty"`
-	Netmask   string `json:"netmask,omitempty"`
+	Count     float64 `json:"__count,omitempty"`
+	ID        int     `json:"id,omitempty"`
+	IPAddress string  `json:"ipaddress,omitempty"`
+	Netmask   string  `json:"netmask,omitempty"`
 }
 
 type VLANBinding struct {
-	ID                   int           `json:"id,omitempty"`
-	VLANChannelBinding   []interface{} `json:"vlan_channel_binding,omitempty"`
-	VLANInterfaceBinding []interface{} `json:"vlan_interface_binding,omitempty"`
-	VLANLinkSetBinding   []interface{} `json:"vlan_linkset_binding,omitempty"`
-	VLANNSIP6Binding     []interface{} `json:"vlan_nsip6_binding,omitempty"`
-	VLANNSIPBinding      []interface{} `json:"vlan_nsip_binding,omitempty"`
+	ID                   int   `json:"id,omitempty"`
+	VLANChannelBinding   []any `json:"vlan_channel_binding,omitempty"`
+	VLANInterfaceBinding []any `json:"vlan_interface_binding,omitempty"`
+	VLANLinkSetBinding   []any `json:"vlan_linkset_binding,omitempty"`
+	VLANNSIP6Binding     []any `json:"vlan_nsip6_binding,omitempty"`
+	VLANNSIPBinding      []any `json:"vlan_nsip_binding,omitempty"`
 }
 
 type RNATBinding struct {
-	Name                           string        `json:"name,omitempty"`
-	RNATNSIPBinding                []interface{} `json:"rnat_nsip_binding,omitempty"`
-	RNATRetainSourcePortSetBinding []interface{} `json:"rnat_retainsourceportset_binding,omitempty"`
+	Name                           string `json:"name,omitempty"`
+	RNATNSIPBinding                []any  `json:"rnat_nsip_binding,omitempty"`
+	RNATRetainSourcePortSetBinding []any  `json:"rnat_retainsourceportset_binding,omitempty"`
 }
 
 type NetBridgeVLANBinding struct {
-	Name string `json:"name,omitempty"`
-	VLAN int    `json:"vlan,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	Name  string  `json:"name,omitempty"`
+	VLAN  int     `json:"vlan,omitempty"`
 }
 
 type Interface struct {
@@ -1153,11 +1189,11 @@ type MapBMR struct {
 }
 
 type VxlanBinding struct {
-	ID                   int           `json:"id,omitempty"`
-	VxlanIPTunnelBinding []interface{} `json:"vxlan_iptunnel_binding,omitempty"`
-	VxlanNSIP6Binding    []interface{} `json:"vxlan_nsip6_binding,omitempty"`
-	VxlanNSIPBinding     []interface{} `json:"vxlan_nsip_binding,omitempty"`
-	VxlanSrcIPBinding    []interface{} `json:"vxlan_srcip_binding,omitempty"`
+	ID                   int   `json:"id,omitempty"`
+	VxlanIPTunnelBinding []any `json:"vxlan_iptunnel_binding,omitempty"`
+	VxlanNSIP6Binding    []any `json:"vxlan_nsip6_binding,omitempty"`
+	VxlanNSIPBinding     []any `json:"vxlan_nsip_binding,omitempty"`
+	VxlanSrcIPBinding    []any `json:"vxlan_srcip_binding,omitempty"`
 }
 
 type FIS struct {
@@ -1176,12 +1212,13 @@ type LinkSet struct {
 }
 
 type BridgeGroupNSIPBinding struct {
-	ID         int    `json:"id,omitempty"`
-	IPAddress  string `json:"ipaddress,omitempty"`
-	Netmask    string `json:"netmask,omitempty"`
-	OwnerGroup string `json:"ownergroup,omitempty"`
-	RNAT       bool   `json:"rnat,omitempty"`
-	TD         int    `json:"td,omitempty"`
+	Count      float64 `json:"__count,omitempty"`
+	ID         int     `json:"id,omitempty"`
+	IPAddress  string  `json:"ipaddress,omitempty"`
+	Netmask    string  `json:"netmask,omitempty"`
+	OwnerGroup string  `json:"ownergroup,omitempty"`
+	RNAT       bool    `json:"rnat,omitempty"`
+	TD         int     `json:"td,omitempty"`
 }
 
 type OnLinkIPv6Prefix struct {
@@ -1199,9 +1236,10 @@ type OnLinkIPv6Prefix struct {
 }
 
 type VRID6NSIPBinding struct {
-	Flags     int    `json:"flags,omitempty"`
-	ID        int    `json:"id,omitempty"`
-	IPAddress string `json:"ipaddress,omitempty"`
+	Count     float64 `json:"__count,omitempty"`
+	Flags     int     `json:"flags,omitempty"`
+	ID        int     `json:"id,omitempty"`
+	IPAddress string  `json:"ipaddress,omitempty"`
 }
 
 type CI struct {
@@ -1228,34 +1266,37 @@ type IPv6 struct {
 }
 
 type LinkSetBinding struct {
-	ID                      string        `json:"id,omitempty"`
-	LinkSetChannelBinding   []interface{} `json:"linkset_channel_binding,omitempty"`
-	LinkSetInterfaceBinding []interface{} `json:"linkset_interface_binding,omitempty"`
+	ID                      string `json:"id,omitempty"`
+	LinkSetChannelBinding   []any  `json:"linkset_channel_binding,omitempty"`
+	LinkSetInterfaceBinding []any  `json:"linkset_interface_binding,omitempty"`
 }
 
 type VRID6InterfaceBinding struct {
-	Flags int    `json:"flags,omitempty"`
-	ID    int    `json:"id,omitempty"`
-	IFNum string `json:"ifnum,omitempty"`
-	VLAN  int    `json:"vlan,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	Flags int     `json:"flags,omitempty"`
+	ID    int     `json:"id,omitempty"`
+	IFNum string  `json:"ifnum,omitempty"`
+	VLAN  int     `json:"vlan,omitempty"`
 }
 
 type RNATGlobalBinding struct {
-	RNATGlobalAuditSyslogPolicyBinding []interface{} `json:"rnatglobal_auditsyslogpolicy_binding,omitempty"`
+	RNATGlobalAuditSyslogPolicyBinding []any `json:"rnatglobal_auditsyslogpolicy_binding,omitempty"`
 }
 
 type FISChannelBinding struct {
-	IFNum     string `json:"ifnum,omitempty"`
-	Name      string `json:"name,omitempty"`
-	OwnerNode int    `json:"ownernode,omitempty"`
+	Count     float64 `json:"__count,omitempty"`
+	IFNum     string  `json:"ifnum,omitempty"`
+	Name      string  `json:"name,omitempty"`
+	OwnerNode int     `json:"ownernode,omitempty"`
 }
 
 type MapDomainBinding struct {
-	MapDomainMapBMRBinding []interface{} `json:"mapdomain_mapbmr_binding,omitempty"`
-	Name                   string        `json:"name,omitempty"`
+	MapDomainMapBMRBinding []any  `json:"mapdomain_mapbmr_binding,omitempty"`
+	Name                   string `json:"name,omitempty"`
 }
 
 type MapDomainMapBMRBinding struct {
-	MapBMRName string `json:"mapbmrname,omitempty"`
-	Name       string `json:"name,omitempty"`
+	Count      float64 `json:"__count,omitempty"`
+	MapBMRName string  `json:"mapbmrname,omitempty"`
+	Name       string  `json:"name,omitempty"`
 }

@@ -2,10 +2,10 @@ package models
 
 // gslb configuration structs
 type GSLBServiceGroupBinding struct {
-	GSLBServiceGroupGSLBServiceGroupMemberBinding        []interface{} `json:"gslbservicegroup_gslbservicegroupmember_binding,omitempty"`
-	GSLBServiceGroupLBMonitorBinding                     []interface{} `json:"gslbservicegroup_lbmonitor_binding,omitempty"`
-	GSLBServiceGroupServiceGroupEntityMonBindingsBinding []interface{} `json:"gslbservicegroup_servicegroupentitymonbindings_binding,omitempty"`
-	ServiceGroupName                                     string        `json:"servicegroupname,omitempty"`
+	GSLBServiceGroupGSLBServiceGroupMemberBinding        []any  `json:"gslbservicegroup_gslbservicegroupmember_binding,omitempty"`
+	GSLBServiceGroupLBMonitorBinding                     []any  `json:"gslbservicegroup_lbmonitor_binding,omitempty"`
+	GSLBServiceGroupServiceGroupEntityMonBindingsBinding []any  `json:"gslbservicegroup_servicegroupentitymonbindings_binding,omitempty"`
+	ServiceGroupName                                     string `json:"servicegroupname,omitempty"`
 }
 
 type GSLBServiceGroup struct {
@@ -65,15 +65,15 @@ type GSLBServiceGroup struct {
 }
 
 type GSLBLDNSEntries struct {
-	Count              float64       `json:"__count,omitempty"`
-	IPAddress          string        `json:"ipaddress,omitempty"`
-	Name               string        `json:"name,omitempty"`
-	NextGenAPIResource string        `json:"_nextgenapiresource,omitempty"`
-	NodeID             int           `json:"nodeid,omitempty"`
-	NumSites           int           `json:"numsites,omitempty"`
-	RTT                []interface{} `json:"rtt,omitempty"`
-	SiteName           string        `json:"sitename,omitempty"`
-	TTL                int           `json:"ttl,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	IPAddress          string  `json:"ipaddress,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	NodeID             int     `json:"nodeid,omitempty"`
+	NumSites           int     `json:"numsites,omitempty"`
+	RTT                []any   `json:"rtt,omitempty"`
+	SiteName           string  `json:"sitename,omitempty"`
+	TTL                int     `json:"ttl,omitempty"`
 }
 
 type GSLBServiceGroupServiceGroupEntityMonBindingsBinding struct {
@@ -231,13 +231,13 @@ type GSLBVServerSpilloverPolicyBinding struct {
 }
 
 type GSLBVServerBinding struct {
-	GSLBVServerGSLBDomainBinding             []interface{} `json:"gslbvserver_gslbdomain_binding,omitempty"`
-	GSLBVServerGSLBServiceBinding            []interface{} `json:"gslbvserver_gslbservice_binding,omitempty"`
-	GSLBVServerGSLBServiceGroupBinding       []interface{} `json:"gslbvserver_gslbservicegroup_binding,omitempty"`
-	GSLBVServerGSLBServiceGroupMemberBinding []interface{} `json:"gslbvserver_gslbservicegroupmember_binding,omitempty"`
-	GSLBVServerLBPolicyBinding               []interface{} `json:"gslbvserver_lbpolicy_binding,omitempty"`
-	GSLBVServerSpilloverPolicyBinding        []interface{} `json:"gslbvserver_spilloverpolicy_binding,omitempty"`
-	Name                                     string        `json:"name,omitempty"`
+	GSLBVServerGSLBDomainBinding             []any  `json:"gslbvserver_gslbdomain_binding,omitempty"`
+	GSLBVServerGSLBServiceBinding            []any  `json:"gslbvserver_gslbservice_binding,omitempty"`
+	GSLBVServerGSLBServiceGroupBinding       []any  `json:"gslbvserver_gslbservicegroup_binding,omitempty"`
+	GSLBVServerGSLBServiceGroupMemberBinding []any  `json:"gslbvserver_gslbservicegroupmember_binding,omitempty"`
+	GSLBVServerLBPolicyBinding               []any  `json:"gslbvserver_lbpolicy_binding,omitempty"`
+	GSLBVServerSpilloverPolicyBinding        []any  `json:"gslbvserver_spilloverpolicy_binding,omitempty"`
+	Name                                     string `json:"name,omitempty"`
 }
 
 type GSLBServiceDNSViewBinding struct {
@@ -321,10 +321,10 @@ type GSLBSiteGSLBServiceGroupMemberBinding struct {
 }
 
 type GSLBSiteBinding struct {
-	GSLBSiteGSLBServiceBinding            []interface{} `json:"gslbsite_gslbservice_binding,omitempty"`
-	GSLBSiteGSLBServiceGroupBinding       []interface{} `json:"gslbsite_gslbservicegroup_binding,omitempty"`
-	GSLBSiteGSLBServiceGroupMemberBinding []interface{} `json:"gslbsite_gslbservicegroupmember_binding,omitempty"`
-	SiteName                              string        `json:"sitename,omitempty"`
+	GSLBSiteGSLBServiceBinding            []any  `json:"gslbsite_gslbservice_binding,omitempty"`
+	GSLBSiteGSLBServiceGroupBinding       []any  `json:"gslbsite_gslbservicegroup_binding,omitempty"`
+	GSLBSiteGSLBServiceGroupMemberBinding []any  `json:"gslbsite_gslbservicegroupmember_binding,omitempty"`
+	SiteName                              string `json:"sitename,omitempty"`
 }
 
 type GSLBDomainGSLBServiceBinding struct {
@@ -386,18 +386,18 @@ type GSLBVServerDomainBinding struct {
 }
 
 type GSLBDomainBinding struct {
-	GSLBDomainGSLBServiceBinding            []interface{} `json:"gslbdomain_gslbservice_binding,omitempty"`
-	GSLBDomainGSLBServiceGroupBinding       []interface{} `json:"gslbdomain_gslbservicegroup_binding,omitempty"`
-	GSLBDomainGSLBServiceGroupMemberBinding []interface{} `json:"gslbdomain_gslbservicegroupmember_binding,omitempty"`
-	GSLBDomainGSLBVServerBinding            []interface{} `json:"gslbdomain_gslbvserver_binding,omitempty"`
-	GSLBDomainLBMonitorBinding              []interface{} `json:"gslbdomain_lbmonitor_binding,omitempty"`
-	Name                                    string        `json:"name,omitempty"`
+	GSLBDomainGSLBServiceBinding            []any  `json:"gslbdomain_gslbservice_binding,omitempty"`
+	GSLBDomainGSLBServiceGroupBinding       []any  `json:"gslbdomain_gslbservicegroup_binding,omitempty"`
+	GSLBDomainGSLBServiceGroupMemberBinding []any  `json:"gslbdomain_gslbservicegroupmember_binding,omitempty"`
+	GSLBDomainGSLBVServerBinding            []any  `json:"gslbdomain_gslbvserver_binding,omitempty"`
+	GSLBDomainLBMonitorBinding              []any  `json:"gslbdomain_lbmonitor_binding,omitempty"`
+	Name                                    string `json:"name,omitempty"`
 }
 
 type GSLBServiceBinding struct {
-	GSLBServiceDNSViewBinding   []interface{} `json:"gslbservice_dnsview_binding,omitempty"`
-	GSLBServiceLBMonitorBinding []interface{} `json:"gslbservice_lbmonitor_binding,omitempty"`
-	ServiceName                 string        `json:"servicename,omitempty"`
+	GSLBServiceDNSViewBinding   []any  `json:"gslbservice_dnsview_binding,omitempty"`
+	GSLBServiceLBMonitorBinding []any  `json:"gslbservice_lbmonitor_binding,omitempty"`
+	ServiceName                 string `json:"servicename,omitempty"`
 }
 
 type GSLBServiceLBMonitorBinding struct {

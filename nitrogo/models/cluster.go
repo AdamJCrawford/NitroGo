@@ -2,45 +2,45 @@ package models
 
 // cluster configuration structs
 type ClusterNodeBinding struct {
-	ClusterNodeRouteMonitorBinding []interface{} `json:"clusternode_routemonitor_binding,omitempty"`
-	NodeID                         int           `json:"nodeid,omitempty"`
+	ClusterNodeRouteMonitorBinding []any `json:"clusternode_routemonitor_binding,omitempty"`
+	NodeID                         int   `json:"nodeid,omitempty"`
 }
 
 type ClusterNode struct {
-	Backplane                  string        `json:"backplane,omitempty"`
-	CfgFlags                   int           `json:"cfgflags,omitempty"`
-	ClearNodeGroupConfig       string        `json:"clearnodegroupconfig,omitempty"`
-	ClusterHealth              string        `json:"clusterhealth,omitempty"`
-	Count                      float64       `json:"__count,omitempty"`
-	Delay                      int           `json:"delay,omitempty"`
-	DisabledIfaces             string        `json:"disabledifaces,omitempty"`
-	EffectiveState             string        `json:"effectivestate,omitempty"`
-	EnabledIfaces              string        `json:"enabledifaces,omitempty"`
-	Force                      bool          `json:"force,omitempty"`
-	HAMonIfaces                string        `json:"hamonifaces,omitempty"`
-	Health                     string        `json:"health,omitempty"`
-	IfacesList                 []string      `json:"ifaceslist,omitempty"`
-	IPAddress                  string        `json:"ipaddress,omitempty"`
-	IsConfigurationCoordinator bool          `json:"isconfigurationcoordinator,omitempty"`
-	IsLocalNode                bool          `json:"islocalnode,omitempty"`
-	MasterState                string        `json:"masterstate,omitempty"`
-	Name                       string        `json:"name,omitempty"`
-	Netmask                    string        `json:"netmask,omitempty"`
-	NextGenAPIResource         string        `json:"_nextgenapiresource,omitempty"`
-	NodeGroup                  string        `json:"nodegroup,omitempty"`
-	NodeID                     int           `json:"nodeid,omitempty"`
-	NodeJumboNotSupported      bool          `json:"nodejumbonotsupported,omitempty"`
-	NodeLicenseMismatch        bool          `json:"nodelicensemismatch,omitempty"`
-	NodeList                   []interface{} `json:"nodelist,omitempty"`
-	NodeRSSKeyMismatch         bool          `json:"nodersskeymismatch,omitempty"`
-	OperationalSyncState       string        `json:"operationalsyncstate,omitempty"`
-	PartialFailIfaces          string        `json:"partialfailifaces,omitempty"`
-	Priority                   int           `json:"priority,omitempty"`
-	RouteMonitor               string        `json:"routemonitor,omitempty"`
-	State                      string        `json:"state,omitempty"`
-	SyncFailureReason          string        `json:"syncfailurereason,omitempty"`
-	SyncState                  string        `json:"syncstate,omitempty"`
-	TunnelMode                 string        `json:"tunnelmode,omitempty"`
+	Backplane                  string   `json:"backplane,omitempty"`
+	CfgFlags                   int      `json:"cfgflags,omitempty"`
+	ClearNodeGroupConfig       string   `json:"clearnodegroupconfig,omitempty"`
+	ClusterHealth              string   `json:"clusterhealth,omitempty"`
+	Count                      float64  `json:"__count,omitempty"`
+	Delay                      int      `json:"delay,omitempty"`
+	DisabledIfaces             string   `json:"disabledifaces,omitempty"`
+	EffectiveState             string   `json:"effectivestate,omitempty"`
+	EnabledIfaces              string   `json:"enabledifaces,omitempty"`
+	Force                      bool     `json:"force,omitempty"`
+	HAMonIfaces                string   `json:"hamonifaces,omitempty"`
+	Health                     string   `json:"health,omitempty"`
+	IfacesList                 []string `json:"ifaceslist,omitempty"`
+	IPAddress                  string   `json:"ipaddress,omitempty"`
+	IsConfigurationCoordinator bool     `json:"isconfigurationcoordinator,omitempty"`
+	IsLocalNode                bool     `json:"islocalnode,omitempty"`
+	MasterState                string   `json:"masterstate,omitempty"`
+	Name                       string   `json:"name,omitempty"`
+	Netmask                    string   `json:"netmask,omitempty"`
+	NextGenAPIResource         string   `json:"_nextgenapiresource,omitempty"`
+	NodeGroup                  string   `json:"nodegroup,omitempty"`
+	NodeID                     int      `json:"nodeid,omitempty"`
+	NodeJumboNotSupported      bool     `json:"nodejumbonotsupported,omitempty"`
+	NodeLicenseMismatch        bool     `json:"nodelicensemismatch,omitempty"`
+	NodeList                   []any    `json:"nodelist,omitempty"`
+	NodeRSSKeyMismatch         bool     `json:"nodersskeymismatch,omitempty"`
+	OperationalSyncState       string   `json:"operationalsyncstate,omitempty"`
+	PartialFailIfaces          string   `json:"partialfailifaces,omitempty"`
+	Priority                   int      `json:"priority,omitempty"`
+	RouteMonitor               string   `json:"routemonitor,omitempty"`
+	State                      string   `json:"state,omitempty"`
+	SyncFailureReason          string   `json:"syncfailurereason,omitempty"`
+	SyncState                  string   `json:"syncstate,omitempty"`
+	TunnelMode                 string   `json:"tunnelmode,omitempty"`
 }
 
 type ClusterNodeGroupStreamIdentifierBinding struct {
@@ -104,18 +104,18 @@ type ClusterNodeGroupGSLBVServerBinding struct {
 }
 
 type ClusterNodeGroupBinding struct {
-	ClusterNodeGroupAuthenticationVServerBinding []interface{} `json:"clusternodegroup_authenticationvserver_binding,omitempty"`
-	ClusterNodeGroupClusterNodeBinding           []interface{} `json:"clusternodegroup_clusternode_binding,omitempty"`
-	ClusterNodeGroupCRVServerBinding             []interface{} `json:"clusternodegroup_crvserver_binding,omitempty"`
-	ClusterNodeGroupCSVServerBinding             []interface{} `json:"clusternodegroup_csvserver_binding,omitempty"`
-	ClusterNodeGroupGSLBSiteBinding              []interface{} `json:"clusternodegroup_gslbsite_binding,omitempty"`
-	ClusterNodeGroupGSLBVServerBinding           []interface{} `json:"clusternodegroup_gslbvserver_binding,omitempty"`
-	ClusterNodeGroupLBVServerBinding             []interface{} `json:"clusternodegroup_lbvserver_binding,omitempty"`
-	ClusterNodeGroupNSLimitIdentifierBinding     []interface{} `json:"clusternodegroup_nslimitidentifier_binding,omitempty"`
-	ClusterNodeGroupServiceBinding               []interface{} `json:"clusternodegroup_service_binding,omitempty"`
-	ClusterNodeGroupStreamIdentifierBinding      []interface{} `json:"clusternodegroup_streamidentifier_binding,omitempty"`
-	ClusterNodeGroupVPNVServerBinding            []interface{} `json:"clusternodegroup_vpnvserver_binding,omitempty"`
-	Name                                         string        `json:"name,omitempty"`
+	ClusterNodeGroupAuthenticationVServerBinding []any  `json:"clusternodegroup_authenticationvserver_binding,omitempty"`
+	ClusterNodeGroupClusterNodeBinding           []any  `json:"clusternodegroup_clusternode_binding,omitempty"`
+	ClusterNodeGroupCRVServerBinding             []any  `json:"clusternodegroup_crvserver_binding,omitempty"`
+	ClusterNodeGroupCSVServerBinding             []any  `json:"clusternodegroup_csvserver_binding,omitempty"`
+	ClusterNodeGroupGSLBSiteBinding              []any  `json:"clusternodegroup_gslbsite_binding,omitempty"`
+	ClusterNodeGroupGSLBVServerBinding           []any  `json:"clusternodegroup_gslbvserver_binding,omitempty"`
+	ClusterNodeGroupLBVServerBinding             []any  `json:"clusternodegroup_lbvserver_binding,omitempty"`
+	ClusterNodeGroupNSLimitIdentifierBinding     []any  `json:"clusternodegroup_nslimitidentifier_binding,omitempty"`
+	ClusterNodeGroupServiceBinding               []any  `json:"clusternodegroup_service_binding,omitempty"`
+	ClusterNodeGroupStreamIdentifierBinding      []any  `json:"clusternodegroup_streamidentifier_binding,omitempty"`
+	ClusterNodeGroupVPNVServerBinding            []any  `json:"clusternodegroup_vpnvserver_binding,omitempty"`
+	Name                                         string `json:"name,omitempty"`
 }
 
 type ClusterNodeGroupAuthenticationVServerBinding struct {
@@ -152,18 +152,18 @@ type ClusterNodeGroupServiceBinding struct {
 }
 
 type ClusterNodeGroup struct {
-	ActiveList               []interface{} `json:"activelist,omitempty"`
-	BackupList               []interface{} `json:"backuplist,omitempty"`
-	BackupNodeMask           int           `json:"backupnodemask,omitempty"`
-	BoundedEntitiesCntFromPE int           `json:"boundedentitiescntfrompe,omitempty"`
-	Count                    float64       `json:"__count,omitempty"`
-	CurrentNodeMask          int           `json:"currentnodemask,omitempty"`
-	Name                     string        `json:"name,omitempty"`
-	NextGenAPIResource       string        `json:"_nextgenapiresource,omitempty"`
-	Priority                 int           `json:"priority,omitempty"`
-	State                    string        `json:"state,omitempty"`
-	Sticky                   string        `json:"sticky,omitempty"`
-	Strict                   string        `json:"strict,omitempty"`
+	ActiveList               []any   `json:"activelist,omitempty"`
+	BackupList               []any   `json:"backuplist,omitempty"`
+	BackupNodeMask           int     `json:"backupnodemask,omitempty"`
+	BoundedEntitiesCntFromPE int     `json:"boundedentitiescntfrompe,omitempty"`
+	Count                    float64 `json:"__count,omitempty"`
+	CurrentNodeMask          int     `json:"currentnodemask,omitempty"`
+	Name                     string  `json:"name,omitempty"`
+	NextGenAPIResource       string  `json:"_nextgenapiresource,omitempty"`
+	Priority                 int     `json:"priority,omitempty"`
+	State                    string  `json:"state,omitempty"`
+	Sticky                   string  `json:"sticky,omitempty"`
+	Strict                   string  `json:"strict,omitempty"`
 }
 
 type ClusterNodeGroupClusterNodeBinding struct {
@@ -184,8 +184,8 @@ type ClusterPropStatus struct {
 }
 
 type ClusterInstanceBinding struct {
-	CLID                              int           `json:"clid,omitempty"`
-	ClusterInstanceClusterNodeBinding []interface{} `json:"clusterinstance_clusternode_binding,omitempty"`
+	CLID                              int   `json:"clid,omitempty"`
+	ClusterInstanceClusterNodeBinding []any `json:"clusterinstance_clusternode_binding,omitempty"`
 }
 
 type ClusterFiles struct {

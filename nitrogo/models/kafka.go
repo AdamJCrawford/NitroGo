@@ -12,8 +12,8 @@ type KafkaCluster struct {
 }
 
 type KafkaClusterBinding struct {
-	KafkaClusterServiceGroupBinding []interface{} `json:"kafkacluster_servicegroup_binding,omitempty"`
-	Name                            string        `json:"name,omitempty"`
+	KafkaClusterServiceGroupBinding []any  `json:"kafkacluster_servicegroup_binding,omitempty"`
+	Name                            string `json:"name,omitempty"`
 }
 
 type KafkaClusterServiceGroupBinding struct {

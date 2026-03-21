@@ -40,8 +40,8 @@ type CRVServerCachePolicyBinding struct {
 }
 
 type CRPolicyBinding struct {
-	CRPolicyCRVServerBinding []interface{} `json:"crpolicy_crvserver_binding,omitempty"`
-	PolicyName               string        `json:"policyname,omitempty"`
+	CRPolicyCRVServerBinding []any  `json:"crpolicy_crvserver_binding,omitempty"`
+	PolicyName               string `json:"policyname,omitempty"`
 }
 
 type CRVServerCMPPolicyBinding struct {
@@ -199,22 +199,22 @@ type CRPolicy struct {
 }
 
 type CRVServerBinding struct {
-	CRVServerAnalyticsProfileBinding []interface{} `json:"crvserver_analyticsprofile_binding,omitempty"`
-	CRVServerAppFlowPolicyBinding    []interface{} `json:"crvserver_appflowpolicy_binding,omitempty"`
-	CRVServerAppFWPolicyBinding      []interface{} `json:"crvserver_appfwpolicy_binding,omitempty"`
-	CRVServerAppQOEPolicyBinding     []interface{} `json:"crvserver_appqoepolicy_binding,omitempty"`
-	CRVServerCachePolicyBinding      []interface{} `json:"crvserver_cachepolicy_binding,omitempty"`
-	CRVServerCMPPolicyBinding        []interface{} `json:"crvserver_cmppolicy_binding,omitempty"`
-	CRVServerCRPolicyBinding         []interface{} `json:"crvserver_crpolicy_binding,omitempty"`
-	CRVServerCSPolicyBinding         []interface{} `json:"crvserver_cspolicy_binding,omitempty"`
-	CRVServerFEOPolicyBinding        []interface{} `json:"crvserver_feopolicy_binding,omitempty"`
-	CRVServerICAPolicyBinding        []interface{} `json:"crvserver_icapolicy_binding,omitempty"`
-	CRVServerLBVServerBinding        []interface{} `json:"crvserver_lbvserver_binding,omitempty"`
-	CRVServerPolicyMapBinding        []interface{} `json:"crvserver_policymap_binding,omitempty"`
-	CRVServerResponderPolicyBinding  []interface{} `json:"crvserver_responderpolicy_binding,omitempty"`
-	CRVServerRewritePolicyBinding    []interface{} `json:"crvserver_rewritepolicy_binding,omitempty"`
-	CRVServerSpilloverPolicyBinding  []interface{} `json:"crvserver_spilloverpolicy_binding,omitempty"`
-	Name                             string        `json:"name,omitempty"`
+	CRVServerAnalyticsProfileBinding []any  `json:"crvserver_analyticsprofile_binding,omitempty"`
+	CRVServerAppFlowPolicyBinding    []any  `json:"crvserver_appflowpolicy_binding,omitempty"`
+	CRVServerAppFWPolicyBinding      []any  `json:"crvserver_appfwpolicy_binding,omitempty"`
+	CRVServerAppQOEPolicyBinding     []any  `json:"crvserver_appqoepolicy_binding,omitempty"`
+	CRVServerCachePolicyBinding      []any  `json:"crvserver_cachepolicy_binding,omitempty"`
+	CRVServerCMPPolicyBinding        []any  `json:"crvserver_cmppolicy_binding,omitempty"`
+	CRVServerCRPolicyBinding         []any  `json:"crvserver_crpolicy_binding,omitempty"`
+	CRVServerCSPolicyBinding         []any  `json:"crvserver_cspolicy_binding,omitempty"`
+	CRVServerFEOPolicyBinding        []any  `json:"crvserver_feopolicy_binding,omitempty"`
+	CRVServerICAPolicyBinding        []any  `json:"crvserver_icapolicy_binding,omitempty"`
+	CRVServerLBVServerBinding        []any  `json:"crvserver_lbvserver_binding,omitempty"`
+	CRVServerPolicyMapBinding        []any  `json:"crvserver_policymap_binding,omitempty"`
+	CRVServerResponderPolicyBinding  []any  `json:"crvserver_responderpolicy_binding,omitempty"`
+	CRVServerRewritePolicyBinding    []any  `json:"crvserver_rewritepolicy_binding,omitempty"`
+	CRVServerSpilloverPolicyBinding  []any  `json:"crvserver_spilloverpolicy_binding,omitempty"`
+	Name                             string `json:"name,omitempty"`
 }
 
 type CRVServer struct {

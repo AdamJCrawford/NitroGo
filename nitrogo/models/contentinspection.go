@@ -108,9 +108,9 @@ type ContentInspectionParameter struct {
 }
 
 type ContentInspectionPolicyLabelBinding struct {
-	ContentInspectionPolicyLabelContentInspectionPolicyBinding []interface{} `json:"contentinspectionpolicylabel_contentinspectionpolicy_binding,omitempty"`
-	ContentInspectionPolicyLabelPolicyBindingBinding           []interface{} `json:"contentinspectionpolicylabel_policybinding_binding,omitempty"`
-	LabelName                                                  string        `json:"labelname,omitempty"`
+	ContentInspectionPolicyLabelContentInspectionPolicyBinding []any  `json:"contentinspectionpolicylabel_contentinspectionpolicy_binding,omitempty"`
+	ContentInspectionPolicyLabelPolicyBindingBinding           []any  `json:"contentinspectionpolicylabel_policybinding_binding,omitempty"`
+	LabelName                                                  string `json:"labelname,omitempty"`
 }
 
 type ContentInspectionAction struct {
@@ -144,7 +144,7 @@ type ContentInspectionPolicyLBVServerBinding struct {
 }
 
 type ContentInspectionGlobalBinding struct {
-	ContentInspectionGlobalContentInspectionPolicyBinding []interface{} `json:"contentinspectionglobal_contentinspectionpolicy_binding,omitempty"`
+	ContentInspectionGlobalContentInspectionPolicyBinding []any `json:"contentinspectionglobal_contentinspectionpolicy_binding,omitempty"`
 }
 
 type ContentInspectionPolicyContentInspectionPolicyLabelBinding struct {
@@ -158,11 +158,11 @@ type ContentInspectionPolicyContentInspectionPolicyLabelBinding struct {
 }
 
 type ContentInspectionPolicyBinding struct {
-	ContentInspectionPolicyContentInspectionGlobalBinding      []interface{} `json:"contentinspectionpolicy_contentinspectionglobal_binding,omitempty"`
-	ContentInspectionPolicyContentInspectionPolicyLabelBinding []interface{} `json:"contentinspectionpolicy_contentinspectionpolicylabel_binding,omitempty"`
-	ContentInspectionPolicyCSVServerBinding                    []interface{} `json:"contentinspectionpolicy_csvserver_binding,omitempty"`
-	ContentInspectionPolicyLBVServerBinding                    []interface{} `json:"contentinspectionpolicy_lbvserver_binding,omitempty"`
-	Name                                                       string        `json:"name,omitempty"`
+	ContentInspectionPolicyContentInspectionGlobalBinding      []any  `json:"contentinspectionpolicy_contentinspectionglobal_binding,omitempty"`
+	ContentInspectionPolicyContentInspectionPolicyLabelBinding []any  `json:"contentinspectionpolicy_contentinspectionpolicylabel_binding,omitempty"`
+	ContentInspectionPolicyCSVServerBinding                    []any  `json:"contentinspectionpolicy_csvserver_binding,omitempty"`
+	ContentInspectionPolicyLBVServerBinding                    []any  `json:"contentinspectionpolicy_lbvserver_binding,omitempty"`
+	Name                                                       string `json:"name,omitempty"`
 }
 
 type ContentInspectionPolicyLabelContentInspectionPolicyBinding struct {

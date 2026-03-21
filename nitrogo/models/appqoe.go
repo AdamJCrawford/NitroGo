@@ -47,8 +47,8 @@ type AppQOEAction struct {
 }
 
 type AppQOEPolicyBinding struct {
-	AppQOEPolicyLBVServerBinding []interface{} `json:"appqoepolicy_lbvserver_binding,omitempty"`
-	Name                         string        `json:"name,omitempty"`
+	AppQOEPolicyLBVServerBinding []any  `json:"appqoepolicy_lbvserver_binding,omitempty"`
+	Name                         string `json:"name,omitempty"`
 }
 
 type AppQOEPolicy struct {

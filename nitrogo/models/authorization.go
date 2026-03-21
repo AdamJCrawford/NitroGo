@@ -24,12 +24,12 @@ type AuthorizationPolicyCSVServerBinding struct {
 }
 
 type AuthorizationPolicyBinding struct {
-	AuthorizationPolicyAAAGroupBinding                 []interface{} `json:"authorizationpolicy_aaagroup_binding,omitempty"`
-	AuthorizationPolicyAAAUserBinding                  []interface{} `json:"authorizationpolicy_aaauser_binding,omitempty"`
-	AuthorizationPolicyAuthorizationPolicyLabelBinding []interface{} `json:"authorizationpolicy_authorizationpolicylabel_binding,omitempty"`
-	AuthorizationPolicyCSVServerBinding                []interface{} `json:"authorizationpolicy_csvserver_binding,omitempty"`
-	AuthorizationPolicyLBVServerBinding                []interface{} `json:"authorizationpolicy_lbvserver_binding,omitempty"`
-	Name                                               string        `json:"name,omitempty"`
+	AuthorizationPolicyAAAGroupBinding                 []any  `json:"authorizationpolicy_aaagroup_binding,omitempty"`
+	AuthorizationPolicyAAAUserBinding                  []any  `json:"authorizationpolicy_aaauser_binding,omitempty"`
+	AuthorizationPolicyAuthorizationPolicyLabelBinding []any  `json:"authorizationpolicy_authorizationpolicylabel_binding,omitempty"`
+	AuthorizationPolicyCSVServerBinding                []any  `json:"authorizationpolicy_csvserver_binding,omitempty"`
+	AuthorizationPolicyLBVServerBinding                []any  `json:"authorizationpolicy_lbvserver_binding,omitempty"`
+	Name                                               string `json:"name,omitempty"`
 }
 
 type AuthorizationPolicyLBVServerBinding struct {
@@ -79,8 +79,8 @@ type AuthorizationAction struct {
 }
 
 type AuthorizationPolicyLabelBinding struct {
-	AuthorizationPolicyLabelAuthorizationPolicyBinding []interface{} `json:"authorizationpolicylabel_authorizationpolicy_binding,omitempty"`
-	LabelName                                          string        `json:"labelname,omitempty"`
+	AuthorizationPolicyLabelAuthorizationPolicyBinding []any  `json:"authorizationpolicylabel_authorizationpolicy_binding,omitempty"`
+	LabelName                                          string `json:"labelname,omitempty"`
 }
 
 type AuthorizationPolicyAAAUserBinding struct {

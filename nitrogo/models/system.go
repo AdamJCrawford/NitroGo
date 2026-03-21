@@ -105,13 +105,13 @@ type SystemAutoRestoreFeature struct {
 }
 
 type SystemGlobalBinding struct {
-	SystemGlobalAuditNSLogPolicyBinding           []interface{} `json:"systemglobal_auditnslogpolicy_binding,omitempty"`
-	SystemGlobalAuditSyslogPolicyBinding          []interface{} `json:"systemglobal_auditsyslogpolicy_binding,omitempty"`
-	SystemGlobalAuthenticationLDAPPolicyBinding   []interface{} `json:"systemglobal_authenticationldappolicy_binding,omitempty"`
-	SystemGlobalAuthenticationLocalPolicyBinding  []interface{} `json:"systemglobal_authenticationlocalpolicy_binding,omitempty"`
-	SystemGlobalAuthenticationPolicyBinding       []interface{} `json:"systemglobal_authenticationpolicy_binding,omitempty"`
-	SystemGlobalAuthenticationRADIUSPolicyBinding []interface{} `json:"systemglobal_authenticationradiuspolicy_binding,omitempty"`
-	SystemGlobalAuthenticationTACACSPolicyBinding []interface{} `json:"systemglobal_authenticationtacacspolicy_binding,omitempty"`
+	SystemGlobalAuditNSLogPolicyBinding           []any `json:"systemglobal_auditnslogpolicy_binding,omitempty"`
+	SystemGlobalAuditSyslogPolicyBinding          []any `json:"systemglobal_auditsyslogpolicy_binding,omitempty"`
+	SystemGlobalAuthenticationLDAPPolicyBinding   []any `json:"systemglobal_authenticationldappolicy_binding,omitempty"`
+	SystemGlobalAuthenticationLocalPolicyBinding  []any `json:"systemglobal_authenticationlocalpolicy_binding,omitempty"`
+	SystemGlobalAuthenticationPolicyBinding       []any `json:"systemglobal_authenticationpolicy_binding,omitempty"`
+	SystemGlobalAuthenticationRADIUSPolicyBinding []any `json:"systemglobal_authenticationradiuspolicy_binding,omitempty"`
+	SystemGlobalAuthenticationTACACSPolicyBinding []any `json:"systemglobal_authenticationtacacspolicy_binding,omitempty"`
 }
 
 type SystemKEK struct {
@@ -234,10 +234,10 @@ type SystemGlobalAuthenticationPolicyBinding struct {
 }
 
 type SystemGroupBinding struct {
-	GroupName                         string        `json:"groupname,omitempty"`
-	SystemGroupNSPartitionBinding     []interface{} `json:"systemgroup_nspartition_binding,omitempty"`
-	SystemGroupSystemCmdPolicyBinding []interface{} `json:"systemgroup_systemcmdpolicy_binding,omitempty"`
-	SystemGroupSystemUserBinding      []interface{} `json:"systemgroup_systemuser_binding,omitempty"`
+	GroupName                         string `json:"groupname,omitempty"`
+	SystemGroupNSPartitionBinding     []any  `json:"systemgroup_nspartition_binding,omitempty"`
+	SystemGroupSystemCmdPolicyBinding []any  `json:"systemgroup_systemcmdpolicy_binding,omitempty"`
+	SystemGroupSystemUserBinding      []any  `json:"systemgroup_systemuser_binding,omitempty"`
 }
 
 type SystemBackup struct {
@@ -284,10 +284,10 @@ type SystemUser struct {
 }
 
 type SystemUserBinding struct {
-	SystemUserNSPartitionBinding     []interface{} `json:"systemuser_nspartition_binding,omitempty"`
-	SystemUserSystemCmdPolicyBinding []interface{} `json:"systemuser_systemcmdpolicy_binding,omitempty"`
-	SystemUserSystemGroupBinding     []interface{} `json:"systemuser_systemgroup_binding,omitempty"`
-	Username                         string        `json:"username,omitempty"`
+	SystemUserNSPartitionBinding     []any  `json:"systemuser_nspartition_binding,omitempty"`
+	SystemUserSystemCmdPolicyBinding []any  `json:"systemuser_systemcmdpolicy_binding,omitempty"`
+	SystemUserSystemGroupBinding     []any  `json:"systemuser_systemgroup_binding,omitempty"`
+	Username                         string `json:"username,omitempty"`
 }
 
 type SystemFile struct {
@@ -382,4 +382,83 @@ type SystemExtraMgmtCPU struct {
 	ConfiguredState    string `json:"configuredstate,omitempty"`
 	EffectiveState     string `json:"effectivestate,omitempty"`
 	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
+}
+
+type SystemCollectionParam struct {
+	CommunityName string `json:"communityname,omitempty"`
+	LogLevel      string `json:"loglevel,omitempty"`
+	DataPath      string `json:"datapath,omitempty"`
+}
+
+type SystemCore struct {
+	Datasource string `json:"datasource,omitempty"`
+	Response   string `json:"response,omitempty"`
+}
+
+type SystemCounterGroup struct {
+	Datasource string `json:"datasource,omitempty"`
+	Response   string `json:"response,omitempty"`
+}
+
+type SystemCounters struct {
+	CounterGroup string `json:"countergroup,omitempty"`
+	Datasource   string `json:"datasource,omitempty"`
+	Response     string `json:"response,omitempty"`
+}
+
+type SystemDataSource struct {
+	Datasource string `json:"datasource,omitempty"`
+	Response   string `json:"response,omitempty"`
+}
+
+type SystemEntity struct {
+	Type       string `json:"type,omitempty"`
+	Datasource string `json:"datasource,omitempty"`
+	Core       int    `json:"core,omitempty"`
+	Response   string `json:"response,omitempty"`
+}
+
+type SystemEntityData struct {
+	Type        string `json:"type,omitempty"`
+	Name        string `json:"name,omitempty"`
+	AllDeleted  string `json:"alldeleted,omitempty"`
+	AllInactive string `json:"allinactive,omitempty"`
+	Datasource  string `json:"datasource,omitempty"`
+	Core        int    `json:"core,omitempty"`
+	Counters    string `json:"counters,omitempty"`
+	StartTime   string `json:"starttime,omitempty"`
+	EndTime     string `json:"endtime,omitempty"`
+	Last        int    `json:"last,omitempty"`
+	Unit        string `json:"unit,omitempty"`
+	Response    string `json:"response,omitempty"`
+	StartUpdate string `json:"startupdate,omitempty"`
+	LastUpdate  string `json:"lastupdate,omitempty"`
+}
+
+type SystemEntityType struct {
+	Datasource string `json:"datasource,omitempty"`
+	Response   string `json:"response,omitempty"`
+}
+
+type SystemEventHistory struct {
+	StartTime  string `json:"starttime,omitempty"`
+	EndTime    string `json:"endtime,omitempty"`
+	Last       int    `json:"last,omitempty"`
+	Unit       string `json:"unit,omitempty"`
+	Datasource string `json:"datasource,omitempty"`
+	Response   string `json:"response,omitempty"`
+}
+
+type SystemGlobalData struct {
+	Counters     string  `json:"counters,omitempty"`
+	CounterGroup string  `json:"countergroup,omitempty"`
+	StartTime    string  `json:"starttime,omitempty"`
+	EndTime      string  `json:"endtime,omitempty"`
+	Last         int     `json:"last,omitempty"`
+	Unit         string  `json:"unit,omitempty"`
+	Datasource   string  `json:"datasource,omitempty"`
+	Core         int     `json:"core,omitempty"`
+	Response     string  `json:"response,omitempty"`
+	StartUpdate  float64 `json:"startupdate,omitempty"`
+	LastUpdate   float64 `json:"lastupdate,omitempty"`
 }

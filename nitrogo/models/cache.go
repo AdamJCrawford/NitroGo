@@ -12,7 +12,7 @@ type CachePolicyCSVServerBinding struct {
 }
 
 type CacheGlobalBinding struct {
-	CacheGlobalCachePolicyBinding []interface{} `json:"cacheglobal_cachepolicy_binding,omitempty"`
+	CacheGlobalCachePolicyBinding []any `json:"cacheglobal_cachepolicy_binding,omitempty"`
 }
 
 type CachePolicyCachePolicyLabelBinding struct {
@@ -92,11 +92,11 @@ type CachePolicyLabelPolicyBindingBinding struct {
 }
 
 type CachePolicyBinding struct {
-	CachePolicyCacheGlobalBinding      []interface{} `json:"cachepolicy_cacheglobal_binding,omitempty"`
-	CachePolicyCachePolicyLabelBinding []interface{} `json:"cachepolicy_cachepolicylabel_binding,omitempty"`
-	CachePolicyCSVServerBinding        []interface{} `json:"cachepolicy_csvserver_binding,omitempty"`
-	CachePolicyLBVServerBinding        []interface{} `json:"cachepolicy_lbvserver_binding,omitempty"`
-	PolicyName                         string        `json:"policyname,omitempty"`
+	CachePolicyCacheGlobalBinding      []any  `json:"cachepolicy_cacheglobal_binding,omitempty"`
+	CachePolicyCachePolicyLabelBinding []any  `json:"cachepolicy_cachepolicylabel_binding,omitempty"`
+	CachePolicyCSVServerBinding        []any  `json:"cachepolicy_csvserver_binding,omitempty"`
+	CachePolicyLBVServerBinding        []any  `json:"cachepolicy_lbvserver_binding,omitempty"`
+	PolicyName                         string `json:"policyname,omitempty"`
 }
 
 type CacheSelector struct {
@@ -218,9 +218,9 @@ type CacheObject struct {
 }
 
 type CachePolicyLabelBinding struct {
-	CachePolicyLabelCachePolicyBinding   []interface{} `json:"cachepolicylabel_cachepolicy_binding,omitempty"`
-	CachePolicyLabelPolicyBindingBinding []interface{} `json:"cachepolicylabel_policybinding_binding,omitempty"`
-	LabelName                            string        `json:"labelname,omitempty"`
+	CachePolicyLabelCachePolicyBinding   []any  `json:"cachepolicylabel_cachepolicy_binding,omitempty"`
+	CachePolicyLabelPolicyBindingBinding []any  `json:"cachepolicylabel_policybinding_binding,omitempty"`
+	LabelName                            string `json:"labelname,omitempty"`
 }
 
 type CachePolicyLabelCachePolicyBinding struct {

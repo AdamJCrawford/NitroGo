@@ -108,10 +108,10 @@ type ServiceGroupServiceGroupEntityMonBindingsBinding struct {
 }
 
 type ServiceGroupBinding struct {
-	ServiceGroupLBMonitorBinding                     []interface{} `json:"servicegroup_lbmonitor_binding,omitempty"`
-	ServiceGroupServiceGroupEntityMonBindingsBinding []interface{} `json:"servicegroup_servicegroupentitymonbindings_binding,omitempty"`
-	ServiceGroupServiceGroupMemberBinding            []interface{} `json:"servicegroup_servicegroupmember_binding,omitempty"`
-	ServiceGroupName                                 string        `json:"servicegroupname,omitempty"`
+	ServiceGroupLBMonitorBinding                     []any  `json:"servicegroup_lbmonitor_binding,omitempty"`
+	ServiceGroupServiceGroupEntityMonBindingsBinding []any  `json:"servicegroup_servicegroupentitymonbindings_binding,omitempty"`
+	ServiceGroupServiceGroupMemberBinding            []any  `json:"servicegroup_servicegroupmember_binding,omitempty"`
+	ServiceGroupName                                 string `json:"servicegroupname,omitempty"`
 }
 
 type ServiceGroupLBMonitorBinding struct {
@@ -132,8 +132,8 @@ type ServiceGroupLBMonitorBinding struct {
 }
 
 type ServiceBinding struct {
-	Name                    string        `json:"name,omitempty"`
-	ServiceLBMonitorBinding []interface{} `json:"service_lbmonitor_binding,omitempty"`
+	Name                    string `json:"name,omitempty"`
+	ServiceLBMonitorBinding []any  `json:"service_lbmonitor_binding,omitempty"`
 }
 
 type RADIUSNode struct {
@@ -191,31 +191,31 @@ type VServer struct {
 }
 
 type NSTrace struct {
-	CapDropPkt         string        `json:"capdroppkt,omitempty"`
-	CapSSLKeys         string        `json:"capsslkeys,omitempty"`
-	DoRuntimeCleanup   string        `json:"doruntimecleanup,omitempty"`
-	FileID             string        `json:"fileid,omitempty"`
-	FileName           string        `json:"filename,omitempty"`
-	FileSize           int           `json:"filesize,omitempty"`
-	Filter             string        `json:"filter,omitempty"`
-	InMemoryTrace      string        `json:"inmemorytrace,omitempty"`
-	Link               string        `json:"link,omitempty"`
-	Merge              string        `json:"merge,omitempty"`
-	Mode               []string      `json:"mode,omitempty"`
-	NextGenAPIResource string        `json:"_nextgenapiresource,omitempty"`
-	NF                 int           `json:"nf,omitempty"`
-	NodeID             int           `json:"nodeid,omitempty"`
-	Nodes              []interface{} `json:"nodes,omitempty"`
-	PerNIC             string        `json:"pernic,omitempty"`
-	Scope              string        `json:"scope,omitempty"`
-	Size               int           `json:"size,omitempty"`
-	SkipLocalSSH       string        `json:"skiplocalssh,omitempty"`
-	SkipRPC            string        `json:"skiprpc,omitempty"`
-	State              string        `json:"state,omitempty"`
-	Time               int           `json:"time,omitempty"`
-	TraceBuffers       int           `json:"tracebuffers,omitempty"`
-	TraceFormat        string        `json:"traceformat,omitempty"`
-	TraceLocation      string        `json:"tracelocation,omitempty"`
+	CapDropPkt         string   `json:"capdroppkt,omitempty"`
+	CapSSLKeys         string   `json:"capsslkeys,omitempty"`
+	DoRuntimeCleanup   string   `json:"doruntimecleanup,omitempty"`
+	FileID             string   `json:"fileid,omitempty"`
+	FileName           string   `json:"filename,omitempty"`
+	FileSize           int      `json:"filesize,omitempty"`
+	Filter             string   `json:"filter,omitempty"`
+	InMemoryTrace      string   `json:"inmemorytrace,omitempty"`
+	Link               string   `json:"link,omitempty"`
+	Merge              string   `json:"merge,omitempty"`
+	Mode               []string `json:"mode,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
+	NF                 int      `json:"nf,omitempty"`
+	NodeID             int      `json:"nodeid,omitempty"`
+	Nodes              []any    `json:"nodes,omitempty"`
+	PerNIC             string   `json:"pernic,omitempty"`
+	Scope              string   `json:"scope,omitempty"`
+	Size               int      `json:"size,omitempty"`
+	SkipLocalSSH       string   `json:"skiplocalssh,omitempty"`
+	SkipRPC            string   `json:"skiprpc,omitempty"`
+	State              string   `json:"state,omitempty"`
+	Time               int      `json:"time,omitempty"`
+	TraceBuffers       int      `json:"tracebuffers,omitempty"`
+	TraceFormat        string   `json:"traceformat,omitempty"`
+	TraceLocation      string   `json:"tracelocation,omitempty"`
 }
 
 type LocationFile struct {
@@ -465,11 +465,11 @@ type ServiceGroup struct {
 }
 
 type ServerBinding struct {
-	Name                          string        `json:"name,omitempty"`
-	ServerGSLBServiceBinding      []interface{} `json:"server_gslbservice_binding,omitempty"`
-	ServerGSLBServiceGroupBinding []interface{} `json:"server_gslbservicegroup_binding,omitempty"`
-	ServerServiceBinding          []interface{} `json:"server_service_binding,omitempty"`
-	ServerServiceGroupBinding     []interface{} `json:"server_servicegroup_binding,omitempty"`
+	Name                          string `json:"name,omitempty"`
+	ServerGSLBServiceBinding      []any  `json:"server_gslbservice_binding,omitempty"`
+	ServerGSLBServiceGroupBinding []any  `json:"server_gslbservicegroup_binding,omitempty"`
+	ServerServiceBinding          []any  `json:"server_service_binding,omitempty"`
+	ServerServiceGroupBinding     []any  `json:"server_servicegroup_binding,omitempty"`
 }
 
 type ServiceLBMonitorBinding struct {
@@ -496,9 +496,9 @@ type ServiceLBMonitorBinding struct {
 }
 
 type ServiceGroupServiceGroupMemberListBinding struct {
-	FailedMembers    []interface{} `json:"failedmembers,omitempty"`
-	Members          []interface{} `json:"members,omitempty"`
-	ServiceGroupName string        `json:"servicegroupname,omitempty"`
+	FailedMembers    []any  `json:"failedmembers,omitempty"`
+	Members          []any  `json:"members,omitempty"`
+	ServiceGroupName string `json:"servicegroupname,omitempty"`
 }
 
 type Server struct {
@@ -545,4 +545,8 @@ type Location struct {
 	Q4Label            string  `json:"q4label,omitempty"`
 	Q5Label            string  `json:"q5label,omitempty"`
 	Q6Label            string  `json:"q6label,omitempty"`
+}
+
+type Reporting struct {
+	State string `json:"state,omitempty"`
 }

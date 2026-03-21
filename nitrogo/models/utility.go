@@ -48,20 +48,20 @@ type Ping struct {
 }
 
 type TechSupport struct {
-	ADSS               bool          `json:"adss,omitempty"`
-	AuthToken          string        `json:"authtoken,omitempty"`
-	CaseNumber         string        `json:"casenumber,omitempty"`
-	Description        string        `json:"description,omitempty"`
-	File               string        `json:"file,omitempty"`
-	NextGenAPIResource string        `json:"_nextgenapiresource,omitempty"`
-	Nodes              []interface{} `json:"nodes,omitempty"`
-	PartitionName      string        `json:"partitionname,omitempty"`
-	Proxy              string        `json:"proxy,omitempty"`
-	Response           string        `json:"response,omitempty"`
-	Scope              string        `json:"scope,omitempty"`
-	ServerName         string        `json:"servername,omitempty"`
-	Time               string        `json:"time,omitempty"`
-	Upload             bool          `json:"upload,omitempty"`
+	ADSS               bool   `json:"adss,omitempty"`
+	AuthToken          string `json:"authtoken,omitempty"`
+	CaseNumber         string `json:"casenumber,omitempty"`
+	Description        string `json:"description,omitempty"`
+	File               string `json:"file,omitempty"`
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
+	Nodes              []any  `json:"nodes,omitempty"`
+	PartitionName      string `json:"partitionname,omitempty"`
+	Proxy              string `json:"proxy,omitempty"`
+	Response           string `json:"response,omitempty"`
+	Scope              string `json:"scope,omitempty"`
+	ServerName         string `json:"servername,omitempty"`
+	Time               string `json:"time,omitempty"`
+	Upload             bool   `json:"upload,omitempty"`
 }
 
 type Traceroute struct {

@@ -80,12 +80,12 @@ type HANodeFISBinding struct {
 }
 
 type HANodeBinding struct {
-	HANodeCIBinding                       []interface{} `json:"hanode_ci_binding,omitempty"`
-	HANodeFISBinding                      []interface{} `json:"hanode_fis_binding,omitempty"`
-	HANodePartialFailureInterfacesBinding []interface{} `json:"hanode_partialfailureinterfaces_binding,omitempty"`
-	HANodeRouteMonitor6Binding            []interface{} `json:"hanode_routemonitor6_binding,omitempty"`
-	HANodeRouteMonitorBinding             []interface{} `json:"hanode_routemonitor_binding,omitempty"`
-	ID                                    int           `json:"id,omitempty"`
+	HANodeCIBinding                       []any `json:"hanode_ci_binding,omitempty"`
+	HANodeFISBinding                      []any `json:"hanode_fis_binding,omitempty"`
+	HANodePartialFailureInterfacesBinding []any `json:"hanode_partialfailureinterfaces_binding,omitempty"`
+	HANodeRouteMonitor6Binding            []any `json:"hanode_routemonitor6_binding,omitempty"`
+	HANodeRouteMonitorBinding             []any `json:"hanode_routemonitor_binding,omitempty"`
+	ID                                    int   `json:"id,omitempty"`
 }
 
 type HANodePartialFailureInterfacesBinding struct {

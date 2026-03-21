@@ -25,12 +25,12 @@ type TunnelTrafficPolicy struct {
 }
 
 type TunnelGlobalBinding struct {
-	TunnelGlobalTunnelTrafficPolicyBinding []interface{} `json:"tunnelglobal_tunneltrafficpolicy_binding,omitempty"`
+	TunnelGlobalTunnelTrafficPolicyBinding []any `json:"tunnelglobal_tunneltrafficpolicy_binding,omitempty"`
 }
 
 type TunnelTrafficPolicyBinding struct {
-	Name                                   string        `json:"name,omitempty"`
-	TunnelTrafficPolicyTunnelGlobalBinding []interface{} `json:"tunneltrafficpolicy_tunnelglobal_binding,omitempty"`
+	Name                                   string `json:"name,omitempty"`
+	TunnelTrafficPolicyTunnelGlobalBinding []any  `json:"tunneltrafficpolicy_tunnelglobal_binding,omitempty"`
 }
 
 type TunnelTrafficPolicyTunnelGlobalBinding struct {

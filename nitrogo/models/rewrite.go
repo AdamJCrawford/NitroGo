@@ -2,7 +2,7 @@ package models
 
 // rewrite configuration structs
 type RewriteGlobalBinding struct {
-	RewriteGlobalRewritePolicyBinding []interface{} `json:"rewriteglobal_rewritepolicy_binding,omitempty"`
+	RewriteGlobalRewritePolicyBinding []any `json:"rewriteglobal_rewritepolicy_binding,omitempty"`
 }
 
 type RewritePolicy struct {
@@ -74,9 +74,9 @@ type RewritePolicyLabelRewritePolicyBinding struct {
 }
 
 type RewritePolicyLabelBinding struct {
-	LabelName                              string        `json:"labelname,omitempty"`
-	RewritePolicyLabelPolicyBindingBinding []interface{} `json:"rewritepolicylabel_policybinding_binding,omitempty"`
-	RewritePolicyLabelRewritePolicyBinding []interface{} `json:"rewritepolicylabel_rewritepolicy_binding,omitempty"`
+	LabelName                              string `json:"labelname,omitempty"`
+	RewritePolicyLabelPolicyBindingBinding []any  `json:"rewritepolicylabel_policybinding_binding,omitempty"`
+	RewritePolicyLabelRewritePolicyBinding []any  `json:"rewritepolicylabel_rewritepolicy_binding,omitempty"`
 }
 
 type RewritePolicyCSVServerBinding struct {
@@ -100,12 +100,12 @@ type RewritePolicyRewriteGlobalBinding struct {
 }
 
 type RewritePolicyBinding struct {
-	Name                                   string        `json:"name,omitempty"`
-	RewritePolicyCSVServerBinding          []interface{} `json:"rewritepolicy_csvserver_binding,omitempty"`
-	RewritePolicyLBVServerBinding          []interface{} `json:"rewritepolicy_lbvserver_binding,omitempty"`
-	RewritePolicyRewriteGlobalBinding      []interface{} `json:"rewritepolicy_rewriteglobal_binding,omitempty"`
-	RewritePolicyRewritePolicyLabelBinding []interface{} `json:"rewritepolicy_rewritepolicylabel_binding,omitempty"`
-	RewritePolicyVPNVServerBinding         []interface{} `json:"rewritepolicy_vpnvserver_binding,omitempty"`
+	Name                                   string `json:"name,omitempty"`
+	RewritePolicyCSVServerBinding          []any  `json:"rewritepolicy_csvserver_binding,omitempty"`
+	RewritePolicyLBVServerBinding          []any  `json:"rewritepolicy_lbvserver_binding,omitempty"`
+	RewritePolicyRewriteGlobalBinding      []any  `json:"rewritepolicy_rewriteglobal_binding,omitempty"`
+	RewritePolicyRewritePolicyLabelBinding []any  `json:"rewritepolicy_rewritepolicylabel_binding,omitempty"`
+	RewritePolicyVPNVServerBinding         []any  `json:"rewritepolicy_vpnvserver_binding,omitempty"`
 }
 
 type RewriteParam struct {

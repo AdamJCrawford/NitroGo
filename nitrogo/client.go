@@ -207,6 +207,7 @@ func (c *Client) Do(req *http.Request) ([]byte, error) {
 	}
 
 	defer func() {
+		// should do something with these errors
 		io.Copy(io.Discard, resp.Body)
 		resp.Body.Close()
 	}()

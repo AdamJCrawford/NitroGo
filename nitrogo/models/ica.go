@@ -58,7 +58,7 @@ type ICAPolicyVPNVServerBinding struct {
 }
 
 type ICAGlobalBinding struct {
-	ICAGlobalICAPolicyBinding []interface{} `json:"icaglobal_icapolicy_binding,omitempty"`
+	ICAGlobalICAPolicyBinding []any `json:"icaglobal_icapolicy_binding,omitempty"`
 }
 
 type ICAParameter struct {
@@ -99,10 +99,10 @@ type ICAPolicy struct {
 }
 
 type ICAPolicyBinding struct {
-	ICAPolicyCRVServerBinding  []interface{} `json:"icapolicy_crvserver_binding,omitempty"`
-	ICAPolicyICAGlobalBinding  []interface{} `json:"icapolicy_icaglobal_binding,omitempty"`
-	ICAPolicyVPNVServerBinding []interface{} `json:"icapolicy_vpnvserver_binding,omitempty"`
-	Name                       string        `json:"name,omitempty"`
+	ICAPolicyCRVServerBinding  []any  `json:"icapolicy_crvserver_binding,omitempty"`
+	ICAPolicyICAGlobalBinding  []any  `json:"icapolicy_icaglobal_binding,omitempty"`
+	ICAPolicyVPNVServerBinding []any  `json:"icapolicy_vpnvserver_binding,omitempty"`
+	Name                       string `json:"name,omitempty"`
 }
 
 type ICAAccessProfile struct {

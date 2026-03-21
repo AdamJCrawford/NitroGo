@@ -2,7 +2,7 @@ package models
 
 // videooptimization configuration structs
 type VideoOptimizationGlobalPacingBinding struct {
-	VideoOptimizationGlobalPacingVideoOptimizationPacingPolicyBinding []interface{} `json:"videooptimizationglobalpacing_videooptimizationpacingpolicy_binding,omitempty"`
+	VideoOptimizationGlobalPacingVideoOptimizationPacingPolicyBinding []any `json:"videooptimizationglobalpacing_videooptimizationpacingpolicy_binding,omitempty"`
 }
 
 type VideoOptimizationParameter struct {
@@ -12,9 +12,9 @@ type VideoOptimizationParameter struct {
 }
 
 type VideoOptimizationPacingPolicyLabelBinding struct {
-	LabelName                                                              string        `json:"labelname,omitempty"`
-	VideoOptimizationPacingPolicyLabelPolicyBindingBinding                 []interface{} `json:"videooptimizationpacingpolicylabel_policybinding_binding,omitempty"`
-	VideoOptimizationPacingPolicyLabelVideoOptimizationPacingPolicyBinding []interface{} `json:"videooptimizationpacingpolicylabel_videooptimizationpacingpolicy_binding,omitempty"`
+	LabelName                                                              string `json:"labelname,omitempty"`
+	VideoOptimizationPacingPolicyLabelPolicyBindingBinding                 []any  `json:"videooptimizationpacingpolicylabel_policybinding_binding,omitempty"`
+	VideoOptimizationPacingPolicyLabelVideoOptimizationPacingPolicyBinding []any  `json:"videooptimizationpacingpolicylabel_videooptimizationpacingpolicy_binding,omitempty"`
 }
 
 type VideoOptimizationPacingAction struct {
@@ -105,9 +105,9 @@ type VideoOptimizationDetectionPolicyLabelPolicyBindingBinding struct {
 }
 
 type VideoOptimizationDetectionPolicyBinding struct {
-	Name                                                                    string        `json:"name,omitempty"`
-	VideoOptimizationDetectionPolicyLBVServerBinding                        []interface{} `json:"videooptimizationdetectionpolicy_lbvserver_binding,omitempty"`
-	VideoOptimizationDetectionPolicyVideoOptimizationGlobalDetectionBinding []interface{} `json:"videooptimizationdetectionpolicy_videooptimizationglobaldetection_binding,omitempty"`
+	Name                                                                    string `json:"name,omitempty"`
+	VideoOptimizationDetectionPolicyLBVServerBinding                        []any  `json:"videooptimizationdetectionpolicy_lbvserver_binding,omitempty"`
+	VideoOptimizationDetectionPolicyVideoOptimizationGlobalDetectionBinding []any  `json:"videooptimizationdetectionpolicy_videooptimizationglobaldetection_binding,omitempty"`
 }
 
 type VideoOptimizationGlobalPacingVideoOptimizationPacingPolicyBinding struct {
@@ -123,19 +123,19 @@ type VideoOptimizationGlobalPacingVideoOptimizationPacingPolicyBinding struct {
 }
 
 type VideoOptimizationPacingPolicyBinding struct {
-	Name                                                              string        `json:"name,omitempty"`
-	VideoOptimizationPacingPolicyLBVServerBinding                     []interface{} `json:"videooptimizationpacingpolicy_lbvserver_binding,omitempty"`
-	VideoOptimizationPacingPolicyVideoOptimizationGlobalPacingBinding []interface{} `json:"videooptimizationpacingpolicy_videooptimizationglobalpacing_binding,omitempty"`
+	Name                                                              string `json:"name,omitempty"`
+	VideoOptimizationPacingPolicyLBVServerBinding                     []any  `json:"videooptimizationpacingpolicy_lbvserver_binding,omitempty"`
+	VideoOptimizationPacingPolicyVideoOptimizationGlobalPacingBinding []any  `json:"videooptimizationpacingpolicy_videooptimizationglobalpacing_binding,omitempty"`
 }
 
 type VideoOptimizationDetectionPolicyLabelBinding struct {
-	LabelName                                                                    string        `json:"labelname,omitempty"`
-	VideoOptimizationDetectionPolicyLabelPolicyBindingBinding                    []interface{} `json:"videooptimizationdetectionpolicylabel_policybinding_binding,omitempty"`
-	VideoOptimizationDetectionPolicyLabelVideoOptimizationDetectionPolicyBinding []interface{} `json:"videooptimizationdetectionpolicylabel_videooptimizationdetectionpolicy_binding,omitempty"`
+	LabelName                                                                    string `json:"labelname,omitempty"`
+	VideoOptimizationDetectionPolicyLabelPolicyBindingBinding                    []any  `json:"videooptimizationdetectionpolicylabel_policybinding_binding,omitempty"`
+	VideoOptimizationDetectionPolicyLabelVideoOptimizationDetectionPolicyBinding []any  `json:"videooptimizationdetectionpolicylabel_videooptimizationdetectionpolicy_binding,omitempty"`
 }
 
 type VideoOptimizationGlobalDetectionBinding struct {
-	VideoOptimizationGlobalDetectionVideoOptimizationDetectionPolicyBinding []interface{} `json:"videooptimizationglobaldetection_videooptimizationdetectionpolicy_binding,omitempty"`
+	VideoOptimizationGlobalDetectionVideoOptimizationDetectionPolicyBinding []any `json:"videooptimizationglobaldetection_videooptimizationdetectionpolicy_binding,omitempty"`
 }
 
 type VideoOptimizationPacingPolicyLabelPolicyBindingBinding struct {

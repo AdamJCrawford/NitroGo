@@ -107,9 +107,9 @@ type BotSettings struct {
 }
 
 type BotPolicyLabelBinding struct {
-	BotPolicyLabelBotPolicyBinding     []interface{} `json:"botpolicylabel_botpolicy_binding,omitempty"`
-	BotPolicyLabelPolicyBindingBinding []interface{} `json:"botpolicylabel_policybinding_binding,omitempty"`
-	LabelName                          string        `json:"labelname,omitempty"`
+	BotPolicyLabelBotPolicyBinding     []any  `json:"botpolicylabel_botpolicy_binding,omitempty"`
+	BotPolicyLabelPolicyBindingBinding []any  `json:"botpolicylabel_policybinding_binding,omitempty"`
+	LabelName                          string `json:"labelname,omitempty"`
 }
 
 type BotGlobalBotPolicyBinding struct {
@@ -126,11 +126,11 @@ type BotGlobalBotPolicyBinding struct {
 }
 
 type BotPolicyBinding struct {
-	BotPolicyBotGlobalBinding      []interface{} `json:"botpolicy_botglobal_binding,omitempty"`
-	BotPolicyBotPolicyLabelBinding []interface{} `json:"botpolicy_botpolicylabel_binding,omitempty"`
-	BotPolicyCSVServerBinding      []interface{} `json:"botpolicy_csvserver_binding,omitempty"`
-	BotPolicyLBVServerBinding      []interface{} `json:"botpolicy_lbvserver_binding,omitempty"`
-	Name                           string        `json:"name,omitempty"`
+	BotPolicyBotGlobalBinding      []any  `json:"botpolicy_botglobal_binding,omitempty"`
+	BotPolicyBotPolicyLabelBinding []any  `json:"botpolicy_botpolicylabel_binding,omitempty"`
+	BotPolicyCSVServerBinding      []any  `json:"botpolicy_csvserver_binding,omitempty"`
+	BotPolicyLBVServerBinding      []any  `json:"botpolicy_lbvserver_binding,omitempty"`
+	Name                           string `json:"name,omitempty"`
 }
 
 type BotProfileTrapInsertionURLBinding struct {
@@ -143,16 +143,16 @@ type BotProfileTrapInsertionURLBinding struct {
 }
 
 type BotProfileBinding struct {
-	BotProfileBlacklistBinding        []interface{} `json:"botprofile_blacklist_binding,omitempty"`
-	BotProfileCaptchaBinding          []interface{} `json:"botprofile_captcha_binding,omitempty"`
-	BotProfileIPReputationBinding     []interface{} `json:"botprofile_ipreputation_binding,omitempty"`
-	BotProfileKMDetectionExprBinding  []interface{} `json:"botprofile_kmdetectionexpr_binding,omitempty"`
-	BotProfileLogExpressionBinding    []interface{} `json:"botprofile_logexpression_binding,omitempty"`
-	BotProfileRateLimitBinding        []interface{} `json:"botprofile_ratelimit_binding,omitempty"`
-	BotProfileTPSBinding              []interface{} `json:"botprofile_tps_binding,omitempty"`
-	BotProfileTrapInsertionURLBinding []interface{} `json:"botprofile_trapinsertionurl_binding,omitempty"`
-	BotProfileWhitelistBinding        []interface{} `json:"botprofile_whitelist_binding,omitempty"`
-	Name                              string        `json:"name,omitempty"`
+	BotProfileBlacklistBinding        []any  `json:"botprofile_blacklist_binding,omitempty"`
+	BotProfileCaptchaBinding          []any  `json:"botprofile_captcha_binding,omitempty"`
+	BotProfileIPReputationBinding     []any  `json:"botprofile_ipreputation_binding,omitempty"`
+	BotProfileKMDetectionExprBinding  []any  `json:"botprofile_kmdetectionexpr_binding,omitempty"`
+	BotProfileLogExpressionBinding    []any  `json:"botprofile_logexpression_binding,omitempty"`
+	BotProfileRateLimitBinding        []any  `json:"botprofile_ratelimit_binding,omitempty"`
+	BotProfileTPSBinding              []any  `json:"botprofile_tps_binding,omitempty"`
+	BotProfileTrapInsertionURLBinding []any  `json:"botprofile_trapinsertionurl_binding,omitempty"`
+	BotProfileWhitelistBinding        []any  `json:"botprofile_whitelist_binding,omitempty"`
+	Name                              string `json:"name,omitempty"`
 }
 
 type BotPolicy struct {
@@ -193,7 +193,7 @@ type BotProfileWhitelistBinding struct {
 }
 
 type BotGlobalBinding struct {
-	BotGlobalBotPolicyBinding []interface{} `json:"botglobal_botpolicy_binding,omitempty"`
+	BotGlobalBotPolicyBinding []any `json:"botglobal_botpolicy_binding,omitempty"`
 }
 
 type BotProfileLogExpressionBinding struct {

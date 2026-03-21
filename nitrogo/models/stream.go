@@ -28,9 +28,9 @@ type StreamIdentifier struct {
 }
 
 type StreamIdentifierBinding struct {
-	Name                                    string        `json:"name,omitempty"`
-	StreamIdentifierAnalyticsProfileBinding []interface{} `json:"streamidentifier_analyticsprofile_binding,omitempty"`
-	StreamIdentifierStreamSessionBinding    []interface{} `json:"streamidentifier_streamsession_binding,omitempty"`
+	Name                                    string `json:"name,omitempty"`
+	StreamIdentifierAnalyticsProfileBinding []any  `json:"streamidentifier_analyticsprofile_binding,omitempty"`
+	StreamIdentifierStreamSessionBinding    []any  `json:"streamidentifier_streamsession_binding,omitempty"`
 }
 
 type StreamIdentifierAnalyticsProfileBinding struct {

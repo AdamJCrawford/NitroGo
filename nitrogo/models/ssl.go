@@ -36,10 +36,10 @@ type SSLPolicyCSVServerBinding struct {
 }
 
 type SSLCipherBinding struct {
-	CipherGroupName                  string        `json:"ciphergroupname,omitempty"`
-	SSLCipherIndividualCipherBinding []interface{} `json:"sslcipher_individualcipher_binding,omitempty"`
-	SSLCipherSSLCipherSuiteBinding   []interface{} `json:"sslcipher_sslciphersuite_binding,omitempty"`
-	SSLCipherSSLProfileBinding       []interface{} `json:"sslcipher_sslprofile_binding,omitempty"`
+	CipherGroupName                  string `json:"ciphergroupname,omitempty"`
+	SSLCipherIndividualCipherBinding []any  `json:"sslcipher_individualcipher_binding,omitempty"`
+	SSLCipherSSLCipherSuiteBinding   []any  `json:"sslcipher_sslciphersuite_binding,omitempty"`
+	SSLCipherSSLProfileBinding       []any  `json:"sslcipher_sslprofile_binding,omitempty"`
 }
 
 type SSLPolicySSLPolicyLabelBinding struct {
@@ -130,15 +130,15 @@ type SSLPolicySSLServiceBinding struct {
 }
 
 type SSLVServerBinding struct {
-	SSLVServerECCCurveBinding         []interface{} `json:"sslvserver_ecccurve_binding,omitempty"`
-	SSLVServerHashicorpBinding        []interface{} `json:"sslvserver_hashicorp_binding,omitempty"`
-	SSLVServerSSLCACertBundleBinding  []interface{} `json:"sslvserver_sslcacertbundle_binding,omitempty"`
-	SSLVServerSSLCertKeyBinding       []interface{} `json:"sslvserver_sslcertkey_binding,omitempty"`
-	SSLVServerSSLCertKeyBundleBinding []interface{} `json:"sslvserver_sslcertkeybundle_binding,omitempty"`
-	SSLVServerSSLCipherBinding        []interface{} `json:"sslvserver_sslcipher_binding,omitempty"`
-	SSLVServerSSLCipherSuiteBinding   []interface{} `json:"sslvserver_sslciphersuite_binding,omitempty"`
-	SSLVServerSSLPolicyBinding        []interface{} `json:"sslvserver_sslpolicy_binding,omitempty"`
-	VServerName                       string        `json:"vservername,omitempty"`
+	SSLVServerECCCurveBinding         []any  `json:"sslvserver_ecccurve_binding,omitempty"`
+	SSLVServerHashicorpBinding        []any  `json:"sslvserver_hashicorp_binding,omitempty"`
+	SSLVServerSSLCACertBundleBinding  []any  `json:"sslvserver_sslcacertbundle_binding,omitempty"`
+	SSLVServerSSLCertKeyBinding       []any  `json:"sslvserver_sslcertkey_binding,omitempty"`
+	SSLVServerSSLCertKeyBundleBinding []any  `json:"sslvserver_sslcertkeybundle_binding,omitempty"`
+	SSLVServerSSLCipherBinding        []any  `json:"sslvserver_sslcipher_binding,omitempty"`
+	SSLVServerSSLCipherSuiteBinding   []any  `json:"sslvserver_sslciphersuite_binding,omitempty"`
+	SSLVServerSSLPolicyBinding        []any  `json:"sslvserver_sslpolicy_binding,omitempty"`
+	VServerName                       string `json:"vservername,omitempty"`
 }
 
 type SSLECDSAKey struct {
@@ -170,8 +170,8 @@ type SSLHSMKey struct {
 }
 
 type SSLCACertGroupBinding struct {
-	CACertGroupName                 string        `json:"cacertgroupname,omitempty"`
-	SSLCACertGroupSSLCertKeyBinding []interface{} `json:"sslcacertgroup_sslcertkey_binding,omitempty"`
+	CACertGroupName                 string `json:"cacertgroupname,omitempty"`
+	SSLCACertGroupSSLCertKeyBinding []any  `json:"sslcacertgroup_sslcertkey_binding,omitempty"`
 }
 
 type SSLCipherSuite struct {
@@ -182,22 +182,22 @@ type SSLCipherSuite struct {
 }
 
 type SSLCRLBinding struct {
-	CRLName                   string        `json:"crlname,omitempty"`
-	SSLCRLSerialNumberBinding []interface{} `json:"sslcrl_serialnumber_binding,omitempty"`
+	CRLName                   string `json:"crlname,omitempty"`
+	SSLCRLSerialNumberBinding []any  `json:"sslcrl_serialnumber_binding,omitempty"`
 }
 
 type SSLPolicyLabelBinding struct {
-	LabelName                      string        `json:"labelname,omitempty"`
-	SSLPolicyLabelSSLPolicyBinding []interface{} `json:"sslpolicylabel_sslpolicy_binding,omitempty"`
+	LabelName                      string `json:"labelname,omitempty"`
+	SSLPolicyLabelSSLPolicyBinding []any  `json:"sslpolicylabel_sslpolicy_binding,omitempty"`
 }
 
 type SSLServiceGroupBinding struct {
-	ServiceGroupName                      string        `json:"servicegroupname,omitempty"`
-	SSLServiceGroupECCCurveBinding        []interface{} `json:"sslservicegroup_ecccurve_binding,omitempty"`
-	SSLServiceGroupSSLCACertBundleBinding []interface{} `json:"sslservicegroup_sslcacertbundle_binding,omitempty"`
-	SSLServiceGroupSSLCertKeyBinding      []interface{} `json:"sslservicegroup_sslcertkey_binding,omitempty"`
-	SSLServiceGroupSSLCipherBinding       []interface{} `json:"sslservicegroup_sslcipher_binding,omitempty"`
-	SSLServiceGroupSSLCipherSuiteBinding  []interface{} `json:"sslservicegroup_sslciphersuite_binding,omitempty"`
+	ServiceGroupName                      string `json:"servicegroupname,omitempty"`
+	SSLServiceGroupECCCurveBinding        []any  `json:"sslservicegroup_ecccurve_binding,omitempty"`
+	SSLServiceGroupSSLCACertBundleBinding []any  `json:"sslservicegroup_sslcacertbundle_binding,omitempty"`
+	SSLServiceGroupSSLCertKeyBinding      []any  `json:"sslservicegroup_sslcertkey_binding,omitempty"`
+	SSLServiceGroupSSLCipherBinding       []any  `json:"sslservicegroup_sslcipher_binding,omitempty"`
+	SSLServiceGroupSSLCipherSuiteBinding  []any  `json:"sslservicegroup_sslciphersuite_binding,omitempty"`
 }
 
 type SSLWrapKey struct {
@@ -267,9 +267,9 @@ type SSLCRL struct {
 }
 
 type SSLCertKeyBundleBinding struct {
-	CertKeyBundleName                            string        `json:"certkeybundlename,omitempty"`
-	SSLCertKeyBundleIntermediateCertLinksBinding []interface{} `json:"sslcertkeybundle_intermediatecertlinks_binding,omitempty"`
-	SSLCertKeyBundleSSLVServerBinding            []interface{} `json:"sslcertkeybundle_sslvserver_binding,omitempty"`
+	CertKeyBundleName                            string `json:"certkeybundlename,omitempty"`
+	SSLCertKeyBundleIntermediateCertLinksBinding []any  `json:"sslcertkeybundle_intermediatecertlinks_binding,omitempty"`
+	SSLCertKeyBundleSSLVServerBinding            []any  `json:"sslcertkeybundle_sslvserver_binding,omitempty"`
 }
 
 type SSLProfileSSLCipherBinding struct {
@@ -304,13 +304,13 @@ type SSLVServerSSLCACertBundleBinding struct {
 }
 
 type SSLProfileBinding struct {
-	Name                            string        `json:"name,omitempty"`
-	SSLProfileECCCurveBinding       []interface{} `json:"sslprofile_ecccurve_binding,omitempty"`
-	SSLProfileSSLCertKeyBinding     []interface{} `json:"sslprofile_sslcertkey_binding,omitempty"`
-	SSLProfileSSLCipherBinding      []interface{} `json:"sslprofile_sslcipher_binding,omitempty"`
-	SSLProfileSSLCipherSuiteBinding []interface{} `json:"sslprofile_sslciphersuite_binding,omitempty"`
-	SSLProfileSSLECHConfigBinding   []interface{} `json:"sslprofile_sslechconfig_binding,omitempty"`
-	SSLProfileSSLVServerBinding     []interface{} `json:"sslprofile_sslvserver_binding,omitempty"`
+	Name                            string `json:"name,omitempty"`
+	SSLProfileECCCurveBinding       []any  `json:"sslprofile_ecccurve_binding,omitempty"`
+	SSLProfileSSLCertKeyBinding     []any  `json:"sslprofile_sslcertkey_binding,omitempty"`
+	SSLProfileSSLCipherBinding      []any  `json:"sslprofile_sslcipher_binding,omitempty"`
+	SSLProfileSSLCipherSuiteBinding []any  `json:"sslprofile_sslciphersuite_binding,omitempty"`
+	SSLProfileSSLECHConfigBinding   []any  `json:"sslprofile_sslechconfig_binding,omitempty"`
+	SSLProfileSSLVServerBinding     []any  `json:"sslprofile_sslvserver_binding,omitempty"`
 }
 
 type SSLCertKeyServiceBinding struct {
@@ -703,8 +703,8 @@ type SSLCertKeyBundle struct {
 }
 
 type SSLCertChainBinding struct {
-	CertKeyName                   string        `json:"certkeyname,omitempty"`
-	SSLCertChainSSLCertKeyBinding []interface{} `json:"sslcertchain_sslcertkey_binding,omitempty"`
+	CertKeyName                   string `json:"certkeyname,omitempty"`
+	SSLCertChainSSLCertKeyBinding []any  `json:"sslcertchain_sslcertkey_binding,omitempty"`
 }
 
 type SSLCertificateChain struct {
@@ -880,13 +880,13 @@ type SSLZeroTouchParam struct {
 }
 
 type SSLPolicyBinding struct {
-	Name                           string        `json:"name,omitempty"`
-	SSLPolicyCSVServerBinding      []interface{} `json:"sslpolicy_csvserver_binding,omitempty"`
-	SSLPolicyLBVServerBinding      []interface{} `json:"sslpolicy_lbvserver_binding,omitempty"`
-	SSLPolicySSLGlobalBinding      []interface{} `json:"sslpolicy_sslglobal_binding,omitempty"`
-	SSLPolicySSLPolicyLabelBinding []interface{} `json:"sslpolicy_sslpolicylabel_binding,omitempty"`
-	SSLPolicySSLServiceBinding     []interface{} `json:"sslpolicy_sslservice_binding,omitempty"`
-	SSLPolicySSLVServerBinding     []interface{} `json:"sslpolicy_sslvserver_binding,omitempty"`
+	Name                           string `json:"name,omitempty"`
+	SSLPolicyCSVServerBinding      []any  `json:"sslpolicy_csvserver_binding,omitempty"`
+	SSLPolicyLBVServerBinding      []any  `json:"sslpolicy_lbvserver_binding,omitempty"`
+	SSLPolicySSLGlobalBinding      []any  `json:"sslpolicy_sslglobal_binding,omitempty"`
+	SSLPolicySSLPolicyLabelBinding []any  `json:"sslpolicy_sslpolicylabel_binding,omitempty"`
+	SSLPolicySSLServiceBinding     []any  `json:"sslpolicy_sslservice_binding,omitempty"`
+	SSLPolicySSLVServerBinding     []any  `json:"sslpolicy_sslvserver_binding,omitempty"`
 }
 
 type SSLPKCS12 struct {
@@ -944,7 +944,7 @@ type SSLDynamicClientCertCache struct {
 }
 
 type SSLGlobalBinding struct {
-	SSLGlobalSSLPolicyBinding []interface{} `json:"sslglobal_sslpolicy_binding,omitempty"`
+	SSLGlobalSSLPolicyBinding []any `json:"sslglobal_sslpolicy_binding,omitempty"`
 }
 
 type SSLServiceSSLCACertBundleBinding struct {
@@ -1115,18 +1115,18 @@ type SSLCertReq struct {
 }
 
 type SSLCACertBundleBinding struct {
-	CACertBundleName                             string        `json:"cacertbundlename,omitempty"`
-	SSLCACertBundleIntermediateCACertListBinding []interface{} `json:"sslcacertbundle_intermediatecacertlist_binding,omitempty"`
+	CACertBundleName                             string `json:"cacertbundlename,omitempty"`
+	SSLCACertBundleIntermediateCACertListBinding []any  `json:"sslcacertbundle_intermediatecacertlist_binding,omitempty"`
 }
 
 type SSLServiceBinding struct {
-	ServiceName                      string        `json:"servicename,omitempty"`
-	SSLServiceECCCurveBinding        []interface{} `json:"sslservice_ecccurve_binding,omitempty"`
-	SSLServiceSSLCACertBundleBinding []interface{} `json:"sslservice_sslcacertbundle_binding,omitempty"`
-	SSLServiceSSLCertKeyBinding      []interface{} `json:"sslservice_sslcertkey_binding,omitempty"`
-	SSLServiceSSLCipherBinding       []interface{} `json:"sslservice_sslcipher_binding,omitempty"`
-	SSLServiceSSLCipherSuiteBinding  []interface{} `json:"sslservice_sslciphersuite_binding,omitempty"`
-	SSLServiceSSLPolicyBinding       []interface{} `json:"sslservice_sslpolicy_binding,omitempty"`
+	ServiceName                      string `json:"servicename,omitempty"`
+	SSLServiceECCCurveBinding        []any  `json:"sslservice_ecccurve_binding,omitempty"`
+	SSLServiceSSLCACertBundleBinding []any  `json:"sslservice_sslcacertbundle_binding,omitempty"`
+	SSLServiceSSLCertKeyBinding      []any  `json:"sslservice_sslcertkey_binding,omitempty"`
+	SSLServiceSSLCipherBinding       []any  `json:"sslservice_sslcipher_binding,omitempty"`
+	SSLServiceSSLCipherSuiteBinding  []any  `json:"sslservice_sslciphersuite_binding,omitempty"`
+	SSLServiceSSLPolicyBinding       []any  `json:"sslservice_sslpolicy_binding,omitempty"`
 }
 
 type SSLCipher struct {
@@ -1146,12 +1146,12 @@ type SSLCertChain struct {
 }
 
 type SSLCertKeyBinding struct {
-	CertKey                           string        `json:"certkey,omitempty"`
-	SSLCertKeyCRLDistributionBinding  []interface{} `json:"sslcertkey_crldistribution_binding,omitempty"`
-	SSLCertKeyServiceBinding          []interface{} `json:"sslcertkey_service_binding,omitempty"`
-	SSLCertKeySSLOCSPResponderBinding []interface{} `json:"sslcertkey_sslocspresponder_binding,omitempty"`
-	SSLCertKeySSLProfileBinding       []interface{} `json:"sslcertkey_sslprofile_binding,omitempty"`
-	SSLCertKeySSLVServerBinding       []interface{} `json:"sslcertkey_sslvserver_binding,omitempty"`
+	CertKey                           string `json:"certkey,omitempty"`
+	SSLCertKeyCRLDistributionBinding  []any  `json:"sslcertkey_crldistribution_binding,omitempty"`
+	SSLCertKeyServiceBinding          []any  `json:"sslcertkey_service_binding,omitempty"`
+	SSLCertKeySSLOCSPResponderBinding []any  `json:"sslcertkey_sslocspresponder_binding,omitempty"`
+	SSLCertKeySSLProfileBinding       []any  `json:"sslcertkey_sslprofile_binding,omitempty"`
+	SSLCertKeySSLVServerBinding       []any  `json:"sslcertkey_sslvserver_binding,omitempty"`
 }
 
 type SSLPolicyLabel struct {

@@ -31,8 +31,8 @@ type AutoscalePolicyNSTimerBinding struct {
 }
 
 type AutoscalePolicyBinding struct {
-	AutoscalePolicyNSTimerBinding []interface{} `json:"autoscalepolicy_nstimer_binding,omitempty"`
-	Name                          string        `json:"name,omitempty"`
+	AutoscalePolicyNSTimerBinding []any  `json:"autoscalepolicy_nstimer_binding,omitempty"`
+	Name                          string `json:"name,omitempty"`
 }
 
 type AutoscalePolicy struct {

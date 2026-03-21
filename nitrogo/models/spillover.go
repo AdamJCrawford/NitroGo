@@ -36,10 +36,10 @@ type SpilloverPolicyLBVServerBinding struct {
 }
 
 type SpilloverPolicyBinding struct {
-	Name                              string        `json:"name,omitempty"`
-	SpilloverPolicyCSVServerBinding   []interface{} `json:"spilloverpolicy_csvserver_binding,omitempty"`
-	SpilloverPolicyGSLBVServerBinding []interface{} `json:"spilloverpolicy_gslbvserver_binding,omitempty"`
-	SpilloverPolicyLBVServerBinding   []interface{} `json:"spilloverpolicy_lbvserver_binding,omitempty"`
+	Name                              string `json:"name,omitempty"`
+	SpilloverPolicyCSVServerBinding   []any  `json:"spilloverpolicy_csvserver_binding,omitempty"`
+	SpilloverPolicyGSLBVServerBinding []any  `json:"spilloverpolicy_gslbvserver_binding,omitempty"`
+	SpilloverPolicyLBVServerBinding   []any  `json:"spilloverpolicy_lbvserver_binding,omitempty"`
 }
 
 type SpilloverAction struct {

@@ -12,16 +12,16 @@ type TransformPolicyCSVServerBinding struct {
 }
 
 type TransformProfileBinding struct {
-	Name                                   string        `json:"name,omitempty"`
-	TransformProfileTransformActionBinding []interface{} `json:"transformprofile_transformaction_binding,omitempty"`
+	Name                                   string `json:"name,omitempty"`
+	TransformProfileTransformActionBinding []any  `json:"transformprofile_transformaction_binding,omitempty"`
 }
 
 type TransformPolicyBinding struct {
-	Name                                       string        `json:"name,omitempty"`
-	TransformPolicyCSVServerBinding            []interface{} `json:"transformpolicy_csvserver_binding,omitempty"`
-	TransformPolicyLBVServerBinding            []interface{} `json:"transformpolicy_lbvserver_binding,omitempty"`
-	TransformPolicyTransformGlobalBinding      []interface{} `json:"transformpolicy_transformglobal_binding,omitempty"`
-	TransformPolicyTransformPolicyLabelBinding []interface{} `json:"transformpolicy_transformpolicylabel_binding,omitempty"`
+	Name                                       string `json:"name,omitempty"`
+	TransformPolicyCSVServerBinding            []any  `json:"transformpolicy_csvserver_binding,omitempty"`
+	TransformPolicyLBVServerBinding            []any  `json:"transformpolicy_lbvserver_binding,omitempty"`
+	TransformPolicyTransformGlobalBinding      []any  `json:"transformpolicy_transformglobal_binding,omitempty"`
+	TransformPolicyTransformPolicyLabelBinding []any  `json:"transformpolicy_transformpolicylabel_binding,omitempty"`
 }
 
 type TransformPolicyLabel struct {
@@ -130,13 +130,13 @@ type TransformAction struct {
 }
 
 type TransformPolicyLabelBinding struct {
-	LabelName                                  string        `json:"labelname,omitempty"`
-	TransformPolicyLabelPolicyBindingBinding   []interface{} `json:"transformpolicylabel_policybinding_binding,omitempty"`
-	TransformPolicyLabelTransformPolicyBinding []interface{} `json:"transformpolicylabel_transformpolicy_binding,omitempty"`
+	LabelName                                  string `json:"labelname,omitempty"`
+	TransformPolicyLabelPolicyBindingBinding   []any  `json:"transformpolicylabel_policybinding_binding,omitempty"`
+	TransformPolicyLabelTransformPolicyBinding []any  `json:"transformpolicylabel_transformpolicy_binding,omitempty"`
 }
 
 type TransformGlobalBinding struct {
-	TransformGlobalTransformPolicyBinding []interface{} `json:"transformglobal_transformpolicy_binding,omitempty"`
+	TransformGlobalTransformPolicyBinding []any `json:"transformglobal_transformpolicy_binding,omitempty"`
 }
 
 type TransformProfileTransformActionBinding struct {

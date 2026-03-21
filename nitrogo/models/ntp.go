@@ -14,11 +14,11 @@ type NTPServer struct {
 }
 
 type NTPParam struct {
-	Authentication     string        `json:"authentication,omitempty"`
-	AutoKeyLogSec      int           `json:"autokeylogsec,omitempty"`
-	NextGenAPIResource string        `json:"_nextgenapiresource,omitempty"`
-	RevokeLogSec       int           `json:"revokelogsec,omitempty"`
-	TrustedKey         []interface{} `json:"trustedkey,omitempty"`
+	Authentication     string `json:"authentication,omitempty"`
+	AutoKeyLogSec      int    `json:"autokeylogsec,omitempty"`
+	NextGenAPIResource string `json:"_nextgenapiresource,omitempty"`
+	RevokeLogSec       int    `json:"revokelogsec,omitempty"`
+	TrustedKey         []any  `json:"trustedkey,omitempty"`
 }
 
 type NTPSync struct {

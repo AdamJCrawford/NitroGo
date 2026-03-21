@@ -52,8 +52,9 @@ type NSPBR struct {
 }
 
 type NSTrafficDomainVXLANBinding struct {
-	TD    int `json:"td,omitempty"`
-	VXLAN int `json:"vxlan,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	TD    int     `json:"td,omitempty"`
+	VXLAN int     `json:"vxlan,omitempty"`
 }
 
 type NSPartition struct {
@@ -73,8 +74,8 @@ type NSPartition struct {
 }
 
 type NSExtensionBinding struct {
-	Name                                string        `json:"name,omitempty"`
-	NSExtensionExtensionFunctionBinding []interface{} `json:"nsextension_extensionfunction_binding,omitempty"`
+	Name                                string `json:"name,omitempty"`
+	NSExtensionExtensionFunctionBinding []any  `json:"nsextension_extensionfunction_binding,omitempty"`
 }
 
 type NSLicense struct {
@@ -333,8 +334,8 @@ type NSConfigView struct {
 }
 
 type NSTimerBinding struct {
-	Name                          string        `json:"name,omitempty"`
-	NSTimerAutoScalePolicyBinding []interface{} `json:"nstimer_autoscalepolicy_binding,omitempty"`
+	Name                          string `json:"name,omitempty"`
+	NSTimerAutoScalePolicyBinding []any  `json:"nstimer_autoscalepolicy_binding,omitempty"`
 }
 
 type NSDiameter struct {
@@ -347,8 +348,9 @@ type NSDiameter struct {
 }
 
 type NSTrafficDomainBridgeGroupBinding struct {
-	BridgeGroup int `json:"bridgegroup,omitempty"`
-	TD          int `json:"td,omitempty"`
+	BridgeGroup int     `json:"bridgegroup,omitempty"`
+	Count       float64 `json:"__count,omitempty"`
+	TD          int     `json:"td,omitempty"`
 }
 
 type NSRollbackCmd struct {
@@ -380,7 +382,8 @@ type NSLicenseProxyServer struct {
 }
 
 type NSLimitIdentifierNSLimitSessionsBinding struct {
-	LimitIdentifier string `json:"limitidentifier,omitempty"`
+	Count           float64 `json:"__count,omitempty"`
+	LimitIdentifier string  `json:"limitidentifier,omitempty"`
 }
 
 type NSPartitionMac struct {
@@ -397,15 +400,16 @@ type NSServicePath struct {
 }
 
 type NSPartitionBinding struct {
-	NSPartitionBridgeGroupBinding []interface{} `json:"nspartition_bridgegroup_binding,omitempty"`
-	NSPartitionVlanBinding        []interface{} `json:"nspartition_vlan_binding,omitempty"`
-	NSPartitionVxlanBinding       []interface{} `json:"nspartition_vxlan_binding,omitempty"`
-	PartitionName                 string        `json:"partitionname,omitempty"`
+	NSPartitionBridgeGroupBinding []any  `json:"nspartition_bridgegroup_binding,omitempty"`
+	NSPartitionVlanBinding        []any  `json:"nspartition_vlan_binding,omitempty"`
+	NSPartitionVxlanBinding       []any  `json:"nspartition_vxlan_binding,omitempty"`
+	PartitionName                 string `json:"partitionname,omitempty"`
 }
 
 type NSPartitionBridgeGroupBinding struct {
-	BridgeGroup   int    `json:"bridgegroup,omitempty"`
-	PartitionName string `json:"partitionname,omitempty"`
+	BridgeGroup   int     `json:"bridgegroup,omitempty"`
+	Count         float64 `json:"__count,omitempty"`
+	PartitionName string  `json:"partitionname,omitempty"`
 }
 
 type NSConnectionTable struct {
@@ -535,46 +539,48 @@ type NSConnectionTable struct {
 }
 
 type NSServicePathNSServiceFunctionBinding struct {
-	Index           int    `json:"index,omitempty"`
-	ServiceFunction string `json:"servicefunction,omitempty"`
-	ServicePathName string `json:"servicepathname,omitempty"`
+	Count           float64 `json:"__count,omitempty"`
+	Index           int     `json:"index,omitempty"`
+	ServiceFunction string  `json:"servicefunction,omitempty"`
+	ServicePathName string  `json:"servicepathname,omitempty"`
 }
 
 type NSParam struct {
-	AdvancedAnalyticsStats    string        `json:"advancedanalyticsstats,omitempty"`
-	AFTPAllowRandomSourcePort string        `json:"aftpallowrandomsourceport,omitempty"`
-	AutoScaleOption           int           `json:"autoscaleoption,omitempty"`
-	CIP                       string        `json:"cip,omitempty"`
-	CIPHeader                 string        `json:"cipheader,omitempty"`
-	CookieVersion             string        `json:"cookieversion,omitempty"`
-	CRPortRange               string        `json:"crportrange,omitempty"`
-	ExclusiveQuotaMaxClient   int           `json:"exclusivequotamaxclient,omitempty"`
-	ExclusiveQuotaSpillover   int           `json:"exclusivequotaspillover,omitempty"`
-	FTPPortRange              string        `json:"ftpportrange,omitempty"`
-	GrantQuotaMaxClient       int           `json:"grantquotamaxclient,omitempty"`
-	GrantQuotaSpillover       int           `json:"grantquotaspillover,omitempty"`
-	HTTPPort                  []interface{} `json:"httpport,omitempty"`
-	ICAPorts                  []interface{} `json:"icaports,omitempty"`
-	InternalUserLogin         string        `json:"internaluserlogin,omitempty"`
-	IPTTL                     int           `json:"ipttl,omitempty"`
-	MaxConn                   int           `json:"maxconn,omitempty"`
-	MaxReq                    int           `json:"maxreq,omitempty"`
-	MgmtHTTPPort              int           `json:"mgmthttpport,omitempty"`
-	MgmtHTTPSPort             int           `json:"mgmthttpsport,omitempty"`
-	NextGenAPIResource        string        `json:"_nextgenapiresource,omitempty"`
-	PMTUMin                   int           `json:"pmtumin,omitempty"`
-	PMTUTimeout               int           `json:"pmtutimeout,omitempty"`
-	ProxyProtocol             string        `json:"proxyprotocol,omitempty"`
-	SecureCookie              string        `json:"securecookie,omitempty"`
-	SecureICAPorts            []interface{} `json:"secureicaports,omitempty"`
-	ServicePathIngressVlan    int           `json:"servicepathingressvlan,omitempty"`
-	TCPCIP                    string        `json:"tcpcip,omitempty"`
-	TimeZone                  string        `json:"timezone,omitempty"`
-	UseProxyPort              string        `json:"useproxyport,omitempty"`
+	AdvancedAnalyticsStats    string `json:"advancedanalyticsstats,omitempty"`
+	AFTPAllowRandomSourcePort string `json:"aftpallowrandomsourceport,omitempty"`
+	AutoScaleOption           int    `json:"autoscaleoption,omitempty"`
+	CIP                       string `json:"cip,omitempty"`
+	CIPHeader                 string `json:"cipheader,omitempty"`
+	CookieVersion             string `json:"cookieversion,omitempty"`
+	CRPortRange               string `json:"crportrange,omitempty"`
+	ExclusiveQuotaMaxClient   int    `json:"exclusivequotamaxclient,omitempty"`
+	ExclusiveQuotaSpillover   int    `json:"exclusivequotaspillover,omitempty"`
+	FTPPortRange              string `json:"ftpportrange,omitempty"`
+	GrantQuotaMaxClient       int    `json:"grantquotamaxclient,omitempty"`
+	GrantQuotaSpillover       int    `json:"grantquotaspillover,omitempty"`
+	HTTPPort                  []any  `json:"httpport,omitempty"`
+	ICAPorts                  []any  `json:"icaports,omitempty"`
+	InternalUserLogin         string `json:"internaluserlogin,omitempty"`
+	IPTTL                     int    `json:"ipttl,omitempty"`
+	MaxConn                   int    `json:"maxconn,omitempty"`
+	MaxReq                    int    `json:"maxreq,omitempty"`
+	MgmtHTTPPort              int    `json:"mgmthttpport,omitempty"`
+	MgmtHTTPSPort             int    `json:"mgmthttpsport,omitempty"`
+	NextGenAPIResource        string `json:"_nextgenapiresource,omitempty"`
+	PMTUMin                   int    `json:"pmtumin,omitempty"`
+	PMTUTimeout               int    `json:"pmtutimeout,omitempty"`
+	ProxyProtocol             string `json:"proxyprotocol,omitempty"`
+	SecureCookie              string `json:"securecookie,omitempty"`
+	SecureICAPorts            []any  `json:"secureicaports,omitempty"`
+	ServicePathIngressVlan    int    `json:"servicepathingressvlan,omitempty"`
+	TCPCIP                    string `json:"tcpcip,omitempty"`
+	TimeZone                  string `json:"timezone,omitempty"`
+	UseProxyPort              string `json:"useproxyport,omitempty"`
 }
 
 type NSExtensionExtensionFunctionBinding struct {
 	ActiveExtensionFunction         int      `json:"activeextensionfunction,omitempty"`
+	Count                           float64  `json:"__count,omitempty"`
 	ExtensionFuncDescription        string   `json:"extensionfuncdescription,omitempty"`
 	ExtensionFunctionAllParams      []string `json:"extensionfunctionallparams,omitempty"`
 	ExtensionFunctionAllParamsCount int      `json:"extensionfunctionallparamscount,omitempty"`
@@ -599,6 +605,7 @@ type NSVersion struct {
 type NSHTTPParam struct {
 	Builtin                   []string `json:"builtin,omitempty"`
 	ConMultiplex              string   `json:"conmultiplex,omitempty"`
+	Count                     float64  `json:"__count,omitempty"`
 	DropInvalReqs             string   `json:"dropinvalreqs,omitempty"`
 	Feature                   string   `json:"feature,omitempty"`
 	HTTP2ServerSide           string   `json:"http2serverside,omitempty"`
@@ -659,8 +666,9 @@ type NSIP6 struct {
 }
 
 type NSPartitionVXLANBinding struct {
-	PartitionName string `json:"partitionname,omitempty"`
-	VXLAN         int    `json:"vxlan,omitempty"`
+	Count         float64 `json:"__count,omitempty"`
+	PartitionName string  `json:"partitionname,omitempty"`
+	VXLAN         int     `json:"vxlan,omitempty"`
 }
 
 type NSIP struct {
@@ -803,36 +811,37 @@ type NSRateControl struct {
 }
 
 type NSLimitSessions struct {
-	Count              float64       `json:"__count,omitempty"`
-	Detail             bool          `json:"detail,omitempty"`
-	Drop               int           `json:"drop,omitempty"`
-	Flag               int           `json:"flag,omitempty"`
-	Flags              int           `json:"flags,omitempty"`
-	Hits               int           `json:"hits,omitempty"`
-	LimitIdentifier    string        `json:"limitidentifier,omitempty"`
-	MaxBandwidth       int           `json:"maxbandwidth,omitempty"`
-	Name               string        `json:"name,omitempty"`
-	NextGenAPIResource string        `json:"_nextgenapiresource,omitempty"`
-	Number             []interface{} `json:"number,omitempty"`
-	ReferenceCount     int           `json:"referencecount,omitempty"`
-	SelectorIPv61      string        `json:"selectoripv61,omitempty"`
-	SelectorIPv62      string        `json:"selectoripv62,omitempty"`
-	Timeout            int           `json:"timeout,omitempty"`
-	Unit               int           `json:"unit,omitempty"`
+	Count              float64 `json:"__count,omitempty"`
+	Detail             bool    `json:"detail,omitempty"`
+	Drop               int     `json:"drop,omitempty"`
+	Flag               int     `json:"flag,omitempty"`
+	Flags              int     `json:"flags,omitempty"`
+	Hits               int     `json:"hits,omitempty"`
+	LimitIdentifier    string  `json:"limitidentifier,omitempty"`
+	MaxBandwidth       int     `json:"maxbandwidth,omitempty"`
+	Name               string  `json:"name,omitempty"`
+	NextGenAPIResource string  `json:"_nextgenapiresource,omitempty"`
+	Number             []any   `json:"number,omitempty"`
+	ReferenceCount     int     `json:"referencecount,omitempty"`
+	SelectorIPv61      string  `json:"selectoripv61,omitempty"`
+	SelectorIPv62      string  `json:"selectoripv62,omitempty"`
+	Timeout            int     `json:"timeout,omitempty"`
+	Unit               int     `json:"unit,omitempty"`
 }
 
 type NSTrafficDomainVLANBinding struct {
-	TD   int `json:"td,omitempty"`
-	VLAN int `json:"vlan,omitempty"`
+	Count float64 `json:"__count,omitempty"`
+	TD    int     `json:"td,omitempty"`
+	VLAN  int     `json:"vlan,omitempty"`
 }
 
 type NSSPParams struct {
-	BaseThreshold      int           `json:"basethreshold,omitempty"`
-	Builtin            []string      `json:"builtin,omitempty"`
-	Feature            string        `json:"feature,omitempty"`
-	NextGenAPIResource string        `json:"_nextgenapiresource,omitempty"`
-	Table0             []interface{} `json:"table0,omitempty"`
-	Throttle           string        `json:"throttle,omitempty"`
+	BaseThreshold      int      `json:"basethreshold,omitempty"`
+	Builtin            []string `json:"builtin,omitempty"`
+	Feature            string   `json:"feature,omitempty"`
+	NextGenAPIResource string   `json:"_nextgenapiresource,omitempty"`
+	Table0             []any    `json:"table0,omitempty"`
+	Throttle           string   `json:"throttle,omitempty"`
 }
 
 type NSACLs6 struct {
@@ -1460,20 +1469,21 @@ type NSTCPProfile struct {
 }
 
 type NSTrafficDomainBinding struct {
-	NSTrafficDomainBridgeGroupBinding []interface{} `json:"nstrafficdomain_bridgegroup_binding,omitempty"`
-	NSTrafficDomainVlanBinding        []interface{} `json:"nstrafficdomain_vlan_binding,omitempty"`
-	NSTrafficDomainVxlanBinding       []interface{} `json:"nstrafficdomain_vxlan_binding,omitempty"`
-	TD                                int           `json:"td,omitempty"`
+	NSTrafficDomainBridgeGroupBinding []any `json:"nstrafficdomain_bridgegroup_binding,omitempty"`
+	NSTrafficDomainVlanBinding        []any `json:"nstrafficdomain_vlan_binding,omitempty"`
+	NSTrafficDomainVxlanBinding       []any `json:"nstrafficdomain_vxlan_binding,omitempty"`
+	TD                                int   `json:"td,omitempty"`
 }
 
 type NSTimerAutoScalePolicyBinding struct {
-	GotoPriorityExpression string `json:"gotopriorityexpression,omitempty"`
-	Name                   string `json:"name,omitempty"`
-	PolicyName             string `json:"policyname,omitempty"`
-	Priority               int    `json:"priority,omitempty"`
-	SampleSize             int    `json:"samplesize,omitempty"`
-	Threshold              int    `json:"threshold,omitempty"`
-	VServer                string `json:"vserver,omitempty"`
+	Count                  float64 `json:"__count,omitempty"`
+	GotoPriorityExpression string  `json:"gotopriorityexpression,omitempty"`
+	Name                   string  `json:"name,omitempty"`
+	PolicyName             string  `json:"policyname,omitempty"`
+	Priority               int     `json:"priority,omitempty"`
+	SampleSize             int     `json:"samplesize,omitempty"`
+	Threshold              int     `json:"threshold,omitempty"`
+	VServer                string  `json:"vserver,omitempty"`
 }
 
 type NSMode struct {
@@ -1528,60 +1538,60 @@ type NSLASLicense struct {
 }
 
 type NSConfig struct {
-	All                     bool          `json:"all,omitempty"`
-	Async                   bool          `json:"Async,omitempty"`
-	ChangedPassword         bool          `json:"changedpassword,omitempty"`
-	CIP                     string        `json:"cip,omitempty"`
-	CIPHeader               string        `json:"cipheader,omitempty"`
-	Config                  string        `json:"config,omitempty"`
-	Config1                 string        `json:"config1,omitempty"`
-	Config2                 string        `json:"config2,omitempty"`
-	ConfigChanged           bool          `json:"configchanged,omitempty"`
-	ConfigFile              string        `json:"configfile,omitempty"`
-	CookieVersion           string        `json:"cookieversion,omitempty"`
-	CRPortRange             string        `json:"crportrange,omitempty"`
-	CurrentSystemTime       string        `json:"currentsytemtime,omitempty"`
-	ExclusiveQuotaMaxClient int           `json:"exclusivequotamaxclient,omitempty"`
-	ExclusiveQuotaSpillover int           `json:"exclusivequotaspillover,omitempty"`
-	Flags                   int           `json:"flags,omitempty"`
-	Force                   bool          `json:"force,omitempty"`
-	FTPPortRange            string        `json:"ftpportrange,omitempty"`
-	GrantQuotaMaxClient     int           `json:"grantquotamaxclient,omitempty"`
-	GrantQuotaSpillover     int           `json:"grantquotaspillover,omitempty"`
-	HTTPPort                []interface{} `json:"httpport,omitempty"`
-	ID                      int           `json:"id,omitempty"`
-	IFNum                   []string      `json:"ifnum,omitempty"`
-	IgnoreDeviceSpecific    bool          `json:"ignoredevicespecific,omitempty"`
-	IPAddress               string        `json:"ipaddress,omitempty"`
-	LastConfigChangedTime   string        `json:"lastconfigchangedtime,omitempty"`
-	LastConfigSaveTime      string        `json:"lastconfigsavetime,omitempty"`
-	Level                   string        `json:"level,omitempty"`
-	MappedIP                string        `json:"mappedip,omitempty"`
-	MaxConn                 int           `json:"maxconn,omitempty"`
-	MaxReq                  int           `json:"maxreq,omitempty"`
-	Message                 string        `json:"message,omitempty"`
-	Netmask                 string        `json:"netmask,omitempty"`
-	NextGenAPIResource      string        `json:"_nextgenapiresource,omitempty"`
-	NSVLAN                  int           `json:"nsvlan,omitempty"`
-	OutType                 string        `json:"outtype,omitempty"`
-	PMTUMin                 int           `json:"pmtumin,omitempty"`
-	PMTUTimeout             int           `json:"pmtutimeout,omitempty"`
-	PrimaryIP               string        `json:"primaryip,omitempty"`
-	PrimaryIP6              string        `json:"primaryip6,omitempty"`
-	Range                   int           `json:"range,omitempty"`
-	RBAConfig               string        `json:"rbaconfig,omitempty"`
-	Response                string        `json:"response,omitempty"`
-	ResponseFile            string        `json:"responsefile,omitempty"`
-	SecureCookie            string        `json:"securecookie,omitempty"`
-	SecureManagementTD      int           `json:"securemanagementtd,omitempty"`
-	SecureManagementTraffic string        `json:"securemanagementtraffic,omitempty"`
-	SVMCmd                  int           `json:"svmcmd,omitempty"`
-	SystemTime              int           `json:"systemtime,omitempty"`
-	SystemType              string        `json:"systemtype,omitempty"`
-	Tagged                  string        `json:"tagged,omitempty"`
-	Template                bool          `json:"template,omitempty"`
-	TimeZone                string        `json:"timezone,omitempty"`
-	WeakPassword            bool          `json:"weakpassword,omitempty"`
+	All                     bool     `json:"all,omitempty"`
+	Async                   bool     `json:"Async,omitempty"`
+	ChangedPassword         bool     `json:"changedpassword,omitempty"`
+	CIP                     string   `json:"cip,omitempty"`
+	CIPHeader               string   `json:"cipheader,omitempty"`
+	Config                  string   `json:"config,omitempty"`
+	Config1                 string   `json:"config1,omitempty"`
+	Config2                 string   `json:"config2,omitempty"`
+	ConfigChanged           bool     `json:"configchanged,omitempty"`
+	ConfigFile              string   `json:"configfile,omitempty"`
+	CookieVersion           string   `json:"cookieversion,omitempty"`
+	CRPortRange             string   `json:"crportrange,omitempty"`
+	CurrentSystemTime       string   `json:"currentsytemtime,omitempty"`
+	ExclusiveQuotaMaxClient int      `json:"exclusivequotamaxclient,omitempty"`
+	ExclusiveQuotaSpillover int      `json:"exclusivequotaspillover,omitempty"`
+	Flags                   int      `json:"flags,omitempty"`
+	Force                   bool     `json:"force,omitempty"`
+	FTPPortRange            string   `json:"ftpportrange,omitempty"`
+	GrantQuotaMaxClient     int      `json:"grantquotamaxclient,omitempty"`
+	GrantQuotaSpillover     int      `json:"grantquotaspillover,omitempty"`
+	HTTPPort                []any    `json:"httpport,omitempty"`
+	ID                      int      `json:"id,omitempty"`
+	IFNum                   []string `json:"ifnum,omitempty"`
+	IgnoreDeviceSpecific    bool     `json:"ignoredevicespecific,omitempty"`
+	IPAddress               string   `json:"ipaddress,omitempty"`
+	LastConfigChangedTime   string   `json:"lastconfigchangedtime,omitempty"`
+	LastConfigSaveTime      string   `json:"lastconfigsavetime,omitempty"`
+	Level                   string   `json:"level,omitempty"`
+	MappedIP                string   `json:"mappedip,omitempty"`
+	MaxConn                 int      `json:"maxconn,omitempty"`
+	MaxReq                  int      `json:"maxreq,omitempty"`
+	Message                 string   `json:"message,omitempty"`
+	Netmask                 string   `json:"netmask,omitempty"`
+	NextGenAPIResource      string   `json:"_nextgenapiresource,omitempty"`
+	NSVLAN                  int      `json:"nsvlan,omitempty"`
+	OutType                 string   `json:"outtype,omitempty"`
+	PMTUMin                 int      `json:"pmtumin,omitempty"`
+	PMTUTimeout             int      `json:"pmtutimeout,omitempty"`
+	PrimaryIP               string   `json:"primaryip,omitempty"`
+	PrimaryIP6              string   `json:"primaryip6,omitempty"`
+	Range                   int      `json:"range,omitempty"`
+	RBAConfig               string   `json:"rbaconfig,omitempty"`
+	Response                string   `json:"response,omitempty"`
+	ResponseFile            string   `json:"responsefile,omitempty"`
+	SecureCookie            string   `json:"securecookie,omitempty"`
+	SecureManagementTD      int      `json:"securemanagementtd,omitempty"`
+	SecureManagementTraffic string   `json:"securemanagementtraffic,omitempty"`
+	SVMCmd                  int      `json:"svmcmd,omitempty"`
+	SystemTime              int      `json:"systemtime,omitempty"`
+	SystemType              string   `json:"systemtype,omitempty"`
+	Tagged                  string   `json:"tagged,omitempty"`
+	Template                bool     `json:"template,omitempty"`
+	TimeZone                string   `json:"timezone,omitempty"`
+	WeakPassword            bool     `json:"weakpassword,omitempty"`
 }
 
 type NSAPTLicense struct {
@@ -1718,8 +1728,8 @@ type NSFeature struct {
 }
 
 type NSServicePathBinding struct {
-	NSServicePathNSServiceFunctionBinding []interface{} `json:"nsservicepath_nsservicefunction_binding,omitempty"`
-	ServicePathName                       string        `json:"servicepathname,omitempty"`
+	NSServicePathNSServiceFunctionBinding []any  `json:"nsservicepath_nsservicefunction_binding,omitempty"`
+	ServicePathName                       string `json:"servicepathname,omitempty"`
 }
 
 type NSLicenseParameters struct {
@@ -1779,8 +1789,9 @@ type NSTrafficDomain struct {
 }
 
 type NSPartitionVlanBinding struct {
-	PartitionName string `json:"partitionname,omitempty"`
-	VLAN          int    `json:"vlan,omitempty"`
+	Count         float64 `json:"__count,omitempty"`
+	PartitionName string  `json:"partitionname,omitempty"`
+	VLAN          int     `json:"vlan,omitempty"`
 }
 
 type NSCQAParam struct {
@@ -1812,6 +1823,6 @@ type NSStats struct {
 }
 
 type NSLimitIdentifierBinding struct {
-	LimitIdentifier                         string        `json:"limitidentifier,omitempty"`
-	NSLimitIdentifierNSLimitSessionsBinding []interface{} `json:"nslimitidentifier_nslimitsessions_binding,omitempty"`
+	LimitIdentifier                         string `json:"limitidentifier,omitempty"`
+	NSLimitIdentifierNSLimitSessionsBinding []any  `json:"nslimitidentifier_nslimitsessions_binding,omitempty"`
 }

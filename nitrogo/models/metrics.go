@@ -20,16 +20,16 @@ type MetricsProfileGSLBVServerBinding struct {
 }
 
 type MetricsProfileBinding struct {
-	MetricsProfileAuthenticationVServerBinding []interface{} `json:"metricsprofile_authenticationvserver_binding,omitempty"`
-	MetricsProfileCRVServerBinding             []interface{} `json:"metricsprofile_crvserver_binding,omitempty"`
-	MetricsProfileCSVServerBinding             []interface{} `json:"metricsprofile_csvserver_binding,omitempty"`
-	MetricsProfileGSLBVServerBinding           []interface{} `json:"metricsprofile_gslbvserver_binding,omitempty"`
-	MetricsProfileLBVServerBinding             []interface{} `json:"metricsprofile_lbvserver_binding,omitempty"`
-	MetricsProfileServiceBinding               []interface{} `json:"metricsprofile_service_binding,omitempty"`
-	MetricsProfileServiceGroupBinding          []interface{} `json:"metricsprofile_servicegroup_binding,omitempty"`
-	MetricsProfileUserVServerBinding           []interface{} `json:"metricsprofile_uservserver_binding,omitempty"`
-	MetricsProfileVPNVServerBinding            []interface{} `json:"metricsprofile_vpnvserver_binding,omitempty"`
-	Name                                       string        `json:"name,omitempty"`
+	MetricsProfileAuthenticationVServerBinding []any  `json:"metricsprofile_authenticationvserver_binding,omitempty"`
+	MetricsProfileCRVServerBinding             []any  `json:"metricsprofile_crvserver_binding,omitempty"`
+	MetricsProfileCSVServerBinding             []any  `json:"metricsprofile_csvserver_binding,omitempty"`
+	MetricsProfileGSLBVServerBinding           []any  `json:"metricsprofile_gslbvserver_binding,omitempty"`
+	MetricsProfileLBVServerBinding             []any  `json:"metricsprofile_lbvserver_binding,omitempty"`
+	MetricsProfileServiceBinding               []any  `json:"metricsprofile_service_binding,omitempty"`
+	MetricsProfileServiceGroupBinding          []any  `json:"metricsprofile_servicegroup_binding,omitempty"`
+	MetricsProfileUserVServerBinding           []any  `json:"metricsprofile_uservserver_binding,omitempty"`
+	MetricsProfileVPNVServerBinding            []any  `json:"metricsprofile_vpnvserver_binding,omitempty"`
+	Name                                       string `json:"name,omitempty"`
 }
 
 type MetricsProfile struct {

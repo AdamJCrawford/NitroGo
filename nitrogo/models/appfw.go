@@ -113,24 +113,24 @@ type AppFWProfileDenyURLBinding struct {
 }
 
 type AppFWSignatures struct {
-	Action                  []string      `json:"action,omitempty"`
-	AutoEnableNewSignatures string        `json:"autoenablenewsignatures,omitempty"`
-	Category                string        `json:"category,omitempty"`
-	Comment                 string        `json:"comment,omitempty"`
-	Enabled                 string        `json:"enabled,omitempty"`
-	EncryptedVersion        int           `json:"encryptedversion,omitempty"`
-	Merge                   bool          `json:"merge,omitempty"`
-	MergeDefault            bool          `json:"mergedefault,omitempty"`
-	Name                    string        `json:"name,omitempty"`
-	NextGenAPIResource      string        `json:"_nextgenapiresource,omitempty"`
-	Overwrite               bool          `json:"overwrite,omitempty"`
-	PreserveDefActions      bool          `json:"preservedefactions,omitempty"`
-	Response                string        `json:"response,omitempty"`
-	RuleID                  []interface{} `json:"ruleid,omitempty"`
-	SHA1                    string        `json:"sha1,omitempty"`
-	Src                     string        `json:"src,omitempty"`
-	VendorType              string        `json:"vendortype,omitempty"`
-	XSLT                    string        `json:"xslt,omitempty"`
+	Action                  []string `json:"action,omitempty"`
+	AutoEnableNewSignatures string   `json:"autoenablenewsignatures,omitempty"`
+	Category                string   `json:"category,omitempty"`
+	Comment                 string   `json:"comment,omitempty"`
+	Enabled                 string   `json:"enabled,omitempty"`
+	EncryptedVersion        int      `json:"encryptedversion,omitempty"`
+	Merge                   bool     `json:"merge,omitempty"`
+	MergeDefault            bool     `json:"mergedefault,omitempty"`
+	Name                    string   `json:"name,omitempty"`
+	NextGenAPIResource      string   `json:"_nextgenapiresource,omitempty"`
+	Overwrite               bool     `json:"overwrite,omitempty"`
+	PreserveDefActions      bool     `json:"preservedefactions,omitempty"`
+	Response                string   `json:"response,omitempty"`
+	RuleID                  []any    `json:"ruleid,omitempty"`
+	SHA1                    string   `json:"sha1,omitempty"`
+	Src                     string   `json:"src,omitempty"`
+	VendorType              string   `json:"vendortype,omitempty"`
+	XSLT                    string   `json:"xslt,omitempty"`
 }
 
 type AppFWProfileFieldFormatBinding struct {
@@ -332,41 +332,41 @@ type AppFWTransactionRecords struct {
 }
 
 type AppFWProfileBinding struct {
-	AppFWProfileAppFWConfidFieldBinding       []interface{} `json:"appfwprofile_appfwconfidfield_binding,omitempty"`
-	AppFWProfileBlockKeywordBinding           []interface{} `json:"appfwprofile_blockkeyword_binding,omitempty"`
-	AppFWProfileBypassListBinding             []interface{} `json:"appfwprofile_bypasslist_binding,omitempty"`
-	AppFWProfileCMDInjectionBinding           []interface{} `json:"appfwprofile_cmdinjection_binding,omitempty"`
-	AppFWProfileContentTypeBinding            []interface{} `json:"appfwprofile_contenttype_binding,omitempty"`
-	AppFWProfileCookieConsistencyBinding      []interface{} `json:"appfwprofile_cookieconsistency_binding,omitempty"`
-	AppFWProfileCreditCardNumberBinding       []interface{} `json:"appfwprofile_creditcardnumber_binding,omitempty"`
-	AppFWProfileCrossSiteScriptingBinding     []interface{} `json:"appfwprofile_crosssitescripting_binding,omitempty"`
-	AppFWProfileCSRFTagBinding                []interface{} `json:"appfwprofile_csrftag_binding,omitempty"`
-	AppFWProfileDenyListBinding               []interface{} `json:"appfwprofile_denylist_binding,omitempty"`
-	AppFWProfileDenyURLBinding                []interface{} `json:"appfwprofile_denyurl_binding,omitempty"`
-	AppFWProfileExcludeRESContentTypeBinding  []interface{} `json:"appfwprofile_excluderescontenttype_binding,omitempty"`
-	AppFWProfileFakeAccountBinding            []interface{} `json:"appfwprofile_fakeaccount_binding,omitempty"`
-	AppFWProfileFieldConsistencyBinding       []interface{} `json:"appfwprofile_fieldconsistency_binding,omitempty"`
-	AppFWProfileFieldFormatBinding            []interface{} `json:"appfwprofile_fieldformat_binding,omitempty"`
-	AppFWProfileFileUploadTypeBinding         []interface{} `json:"appfwprofile_fileuploadtype_binding,omitempty"`
-	AppFWProfileGRPCValidationBinding         []interface{} `json:"appfwprofile_grpcvalidation_binding,omitempty"`
-	AppFWProfileJSONBlockKeywordBinding       []interface{} `json:"appfwprofile_jsonblockkeyword_binding,omitempty"`
-	AppFWProfileJSONCMDURLBinding             []interface{} `json:"appfwprofile_jsoncmdurl_binding,omitempty"`
-	AppFWProfileJSONDOSURLBinding             []interface{} `json:"appfwprofile_jsondosurl_binding,omitempty"`
-	AppFWProfileJSONSQLURLBinding             []interface{} `json:"appfwprofile_jsonsqlurl_binding,omitempty"`
-	AppFWProfileJSONXSSURLBinding             []interface{} `json:"appfwprofile_jsonxssurl_binding,omitempty"`
-	AppFWProfileLogExpressionBinding          []interface{} `json:"appfwprofile_logexpression_binding,omitempty"`
-	AppFWProfileRESTValidationBinding         []interface{} `json:"appfwprofile_restvalidation_binding,omitempty"`
-	AppFWProfileSafeObjectBinding             []interface{} `json:"appfwprofile_safeobject_binding,omitempty"`
-	AppFWProfileSQLInjectionBinding           []interface{} `json:"appfwprofile_sqlinjection_binding,omitempty"`
-	AppFWProfileStartURLBinding               []interface{} `json:"appfwprofile_starturl_binding,omitempty"`
-	AppFWProfileTrustedLearningClientsBinding []interface{} `json:"appfwprofile_trustedlearningclients_binding,omitempty"`
-	AppFWProfileXMLAttachmentURLBinding       []interface{} `json:"appfwprofile_xmlattachmenturl_binding,omitempty"`
-	AppFWProfileXMLDOSURLBinding              []interface{} `json:"appfwprofile_xmldosurl_binding,omitempty"`
-	AppFWProfileXMLSQLInjectionBinding        []interface{} `json:"appfwprofile_xmlsqlinjection_binding,omitempty"`
-	AppFWProfileXMLValidationURLBinding       []interface{} `json:"appfwprofile_xmlvalidationurl_binding,omitempty"`
-	AppFWProfileXMLWSIURLBinding              []interface{} `json:"appfwprofile_xmlwsiurl_binding,omitempty"`
-	AppFWProfileXMLXSSBinding                 []interface{} `json:"appfwprofile_xmlxss_binding,omitempty"`
-	Name                                      string        `json:"name,omitempty"`
+	AppFWProfileAppFWConfidFieldBinding       []any  `json:"appfwprofile_appfwconfidfield_binding,omitempty"`
+	AppFWProfileBlockKeywordBinding           []any  `json:"appfwprofile_blockkeyword_binding,omitempty"`
+	AppFWProfileBypassListBinding             []any  `json:"appfwprofile_bypasslist_binding,omitempty"`
+	AppFWProfileCMDInjectionBinding           []any  `json:"appfwprofile_cmdinjection_binding,omitempty"`
+	AppFWProfileContentTypeBinding            []any  `json:"appfwprofile_contenttype_binding,omitempty"`
+	AppFWProfileCookieConsistencyBinding      []any  `json:"appfwprofile_cookieconsistency_binding,omitempty"`
+	AppFWProfileCreditCardNumberBinding       []any  `json:"appfwprofile_creditcardnumber_binding,omitempty"`
+	AppFWProfileCrossSiteScriptingBinding     []any  `json:"appfwprofile_crosssitescripting_binding,omitempty"`
+	AppFWProfileCSRFTagBinding                []any  `json:"appfwprofile_csrftag_binding,omitempty"`
+	AppFWProfileDenyListBinding               []any  `json:"appfwprofile_denylist_binding,omitempty"`
+	AppFWProfileDenyURLBinding                []any  `json:"appfwprofile_denyurl_binding,omitempty"`
+	AppFWProfileExcludeRESContentTypeBinding  []any  `json:"appfwprofile_excluderescontenttype_binding,omitempty"`
+	AppFWProfileFakeAccountBinding            []any  `json:"appfwprofile_fakeaccount_binding,omitempty"`
+	AppFWProfileFieldConsistencyBinding       []any  `json:"appfwprofile_fieldconsistency_binding,omitempty"`
+	AppFWProfileFieldFormatBinding            []any  `json:"appfwprofile_fieldformat_binding,omitempty"`
+	AppFWProfileFileUploadTypeBinding         []any  `json:"appfwprofile_fileuploadtype_binding,omitempty"`
+	AppFWProfileGRPCValidationBinding         []any  `json:"appfwprofile_grpcvalidation_binding,omitempty"`
+	AppFWProfileJSONBlockKeywordBinding       []any  `json:"appfwprofile_jsonblockkeyword_binding,omitempty"`
+	AppFWProfileJSONCMDURLBinding             []any  `json:"appfwprofile_jsoncmdurl_binding,omitempty"`
+	AppFWProfileJSONDOSURLBinding             []any  `json:"appfwprofile_jsondosurl_binding,omitempty"`
+	AppFWProfileJSONSQLURLBinding             []any  `json:"appfwprofile_jsonsqlurl_binding,omitempty"`
+	AppFWProfileJSONXSSURLBinding             []any  `json:"appfwprofile_jsonxssurl_binding,omitempty"`
+	AppFWProfileLogExpressionBinding          []any  `json:"appfwprofile_logexpression_binding,omitempty"`
+	AppFWProfileRESTValidationBinding         []any  `json:"appfwprofile_restvalidation_binding,omitempty"`
+	AppFWProfileSafeObjectBinding             []any  `json:"appfwprofile_safeobject_binding,omitempty"`
+	AppFWProfileSQLInjectionBinding           []any  `json:"appfwprofile_sqlinjection_binding,omitempty"`
+	AppFWProfileStartURLBinding               []any  `json:"appfwprofile_starturl_binding,omitempty"`
+	AppFWProfileTrustedLearningClientsBinding []any  `json:"appfwprofile_trustedlearningclients_binding,omitempty"`
+	AppFWProfileXMLAttachmentURLBinding       []any  `json:"appfwprofile_xmlattachmenturl_binding,omitempty"`
+	AppFWProfileXMLDOSURLBinding              []any  `json:"appfwprofile_xmldosurl_binding,omitempty"`
+	AppFWProfileXMLSQLInjectionBinding        []any  `json:"appfwprofile_xmlsqlinjection_binding,omitempty"`
+	AppFWProfileXMLValidationURLBinding       []any  `json:"appfwprofile_xmlvalidationurl_binding,omitempty"`
+	AppFWProfileXMLWSIURLBinding              []any  `json:"appfwprofile_xmlwsiurl_binding,omitempty"`
+	AppFWProfileXMLXSSBinding                 []any  `json:"appfwprofile_xmlxss_binding,omitempty"`
+	Name                                      string `json:"name,omitempty"`
 }
 
 type AppFWProfileCSRFTagBinding struct {
@@ -428,9 +428,9 @@ type AppFWGlobalAuditSyslogPolicyBinding struct {
 }
 
 type AppFWGlobalBinding struct {
-	AppFWGlobalAppFWPolicyBinding       []interface{} `json:"appfwglobal_appfwpolicy_binding,omitempty"`
-	AppFWGlobalAuditNSLogPolicyBinding  []interface{} `json:"appfwglobal_auditnslogpolicy_binding,omitempty"`
-	AppFWGlobalAuditSyslogPolicyBinding []interface{} `json:"appfwglobal_auditsyslogpolicy_binding,omitempty"`
+	AppFWGlobalAppFWPolicyBinding       []any `json:"appfwglobal_appfwpolicy_binding,omitempty"`
+	AppFWGlobalAuditNSLogPolicyBinding  []any `json:"appfwglobal_auditnslogpolicy_binding,omitempty"`
+	AppFWGlobalAuditSyslogPolicyBinding []any `json:"appfwglobal_auditsyslogpolicy_binding,omitempty"`
 }
 
 type AppFWProfileJSONXSSURLBinding struct {
@@ -489,12 +489,12 @@ type AppFWURLEncodedFormContentType struct {
 }
 
 type AppFWPolicyBinding struct {
-	AppFWPolicyAppFWGlobalBinding      []interface{} `json:"appfwpolicy_appfwglobal_binding,omitempty"`
-	AppFWPolicyAppFWPolicyLabelBinding []interface{} `json:"appfwpolicy_appfwpolicylabel_binding,omitempty"`
-	AppFWPolicyCSVServerBinding        []interface{} `json:"appfwpolicy_csvserver_binding,omitempty"`
-	AppFWPolicyLBVServerBinding        []interface{} `json:"appfwpolicy_lbvserver_binding,omitempty"`
-	AppFWPolicyVPNVServerBinding       []interface{} `json:"appfwpolicy_vpnvserver_binding,omitempty"`
-	Name                               string        `json:"name,omitempty"`
+	AppFWPolicyAppFWGlobalBinding      []any  `json:"appfwpolicy_appfwglobal_binding,omitempty"`
+	AppFWPolicyAppFWPolicyLabelBinding []any  `json:"appfwpolicy_appfwpolicylabel_binding,omitempty"`
+	AppFWPolicyCSVServerBinding        []any  `json:"appfwpolicy_csvserver_binding,omitempty"`
+	AppFWPolicyLBVServerBinding        []any  `json:"appfwpolicy_lbvserver_binding,omitempty"`
+	AppFWPolicyVPNVServerBinding       []any  `json:"appfwpolicy_vpnvserver_binding,omitempty"`
+	Name                               string `json:"name,omitempty"`
 }
 
 type AppFWProfileFieldConsistencyBinding struct {
@@ -909,9 +909,9 @@ type AppFWProfileDenyListBinding struct {
 }
 
 type AppFWPolicyLabelBinding struct {
-	AppFWPolicyLabelAppFWPolicyBinding   []interface{} `json:"appfwpolicylabel_appfwpolicy_binding,omitempty"`
-	AppFWPolicyLabelPolicyBindingBinding []interface{} `json:"appfwpolicylabel_policybinding_binding,omitempty"`
-	LabelName                            string        `json:"labelname,omitempty"`
+	AppFWPolicyLabelAppFWPolicyBinding   []any  `json:"appfwpolicylabel_appfwpolicy_binding,omitempty"`
+	AppFWPolicyLabelPolicyBindingBinding []any  `json:"appfwpolicylabel_policybinding_binding,omitempty"`
+	LabelName                            string `json:"labelname,omitempty"`
 }
 
 type AppFWProfile struct {

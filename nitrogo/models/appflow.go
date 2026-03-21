@@ -61,7 +61,7 @@ type AppFlowParam struct {
 }
 
 type AppFlowGlobalBinding struct {
-	AppFlowGlobalAppFlowPolicyBinding []interface{} `json:"appflowglobal_appflowpolicy_binding,omitempty"`
+	AppFlowGlobalAppFlowPolicyBinding []any `json:"appflowglobal_appflowpolicy_binding,omitempty"`
 }
 
 type AppFlowPolicyAppFlowGlobalBinding struct {
@@ -92,8 +92,8 @@ type AppFlowPolicyLabel struct {
 }
 
 type AppFlowPolicyLabelBinding struct {
-	AppFlowPolicyLabelAppFlowPolicyBinding []interface{} `json:"appflowpolicylabel_appflowpolicy_binding,omitempty"`
-	LabelName                              string        `json:"labelname,omitempty"`
+	AppFlowPolicyLabelAppFlowPolicyBinding []any  `json:"appflowpolicylabel_appflowpolicy_binding,omitempty"`
+	LabelName                              string `json:"labelname,omitempty"`
 }
 
 type AppFlowPolicyVPNVServerBinding struct {
@@ -130,8 +130,8 @@ type AppFlowPolicyAppFlowPolicyLabelBinding struct {
 }
 
 type AppFlowActionBinding struct {
-	AppFlowActionAnalyticsProfileBinding []interface{} `json:"appflowaction_analyticsprofile_binding,omitempty"`
-	Name                                 string        `json:"name,omitempty"`
+	AppFlowActionAnalyticsProfileBinding []any  `json:"appflowaction_analyticsprofile_binding,omitempty"`
+	Name                                 string `json:"name,omitempty"`
 }
 
 type AppFlowPolicyLabelAppFlowPolicyBinding struct {
@@ -145,12 +145,12 @@ type AppFlowPolicyLabelAppFlowPolicyBinding struct {
 }
 
 type AppFlowPolicyBinding struct {
-	AppFlowPolicyAppFlowGlobalBinding      []interface{} `json:"appflowpolicy_appflowglobal_binding,omitempty"`
-	AppFlowPolicyAppFlowPolicyLabelBinding []interface{} `json:"appflowpolicy_appflowpolicylabel_binding,omitempty"`
-	AppFlowPolicyCSVServerBinding          []interface{} `json:"appflowpolicy_csvserver_binding,omitempty"`
-	AppFlowPolicyLBVServerBinding          []interface{} `json:"appflowpolicy_lbvserver_binding,omitempty"`
-	AppFlowPolicyVPNVServerBinding         []interface{} `json:"appflowpolicy_vpnvserver_binding,omitempty"`
-	Name                                   string        `json:"name,omitempty"`
+	AppFlowPolicyAppFlowGlobalBinding      []any  `json:"appflowpolicy_appflowglobal_binding,omitempty"`
+	AppFlowPolicyAppFlowPolicyLabelBinding []any  `json:"appflowpolicy_appflowpolicylabel_binding,omitempty"`
+	AppFlowPolicyCSVServerBinding          []any  `json:"appflowpolicy_csvserver_binding,omitempty"`
+	AppFlowPolicyLBVServerBinding          []any  `json:"appflowpolicy_lbvserver_binding,omitempty"`
+	AppFlowPolicyVPNVServerBinding         []any  `json:"appflowpolicy_vpnvserver_binding,omitempty"`
+	Name                                   string `json:"name,omitempty"`
 }
 
 type AppFlowPolicyLBVServerBinding struct {
